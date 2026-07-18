@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 4 节：溶解与析出：颗粒如何进入水中？</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 4 节：溶解与析出：颗粒如何进入水中？</h1>
+<p class="subtitle">Lesson 4: Dissolving and Precipitation: How Particles Enter Water</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#一课程定位与学习目标" id="toc-一课程定位与学习目标">一、课程定位与学习目标</a></li>
+<li><a href="#二重要概念与中英文参考" id="toc-二重要概念与中英文参考">二、重要概念与中英文参考</a></li>
+<li><a href="#三实验材料" id="toc-三实验材料">三、实验材料</a></li>
+<li><a href="#四实验过程" id="toc-四实验过程">四、实验过程</a></li>
+<li><a href="#五板书与记录框架" id="toc-五板书与记录框架">五、板书与记录框架</a></li>
+<li><a href="#六课堂流程串讲" id="toc-六课堂流程串讲">六、课堂流程串讲</a></li>
+<li><a href="#七关键术语keyvocabulary" id="toc-七关键术语keyvocabulary">七、关键术语（Key vocabulary）</a></li>
+</ul>
+</nav>
+<section id="一课程定位与学习目标" class="level2">
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>主题</strong>：溶解与不溶解、过滤、析出/结晶与溶解时的温度变化 <em>Dissolving and insolubility, filtration, precipitation/crystallization, and temperature change during dissolving</em></li>
+<li><strong>建议课时</strong>：80–90 分钟</li>
+<li><strong>核心问题</strong>：有些固体为什么能溶进水里，有些为什么不能？已经溶解的物质为什么不能被普通滤纸滤出来？不同物质溶解时的温度变化相同吗？ <em>Why do some solids dissolve in water while others do not? Why can&#x27;t dissolved substances be separated by ordinary filter paper? Do different substances cause the same temperature change when they dissolve?</em></li>
+</ul>
+<p>本节分成两个大的实验任务，并建立两条证据链：</p>
+<ol type="1">
+<li>探究溶解与不溶解的差别：食盐溶于水后，组成食盐的钠离子和氯离子分散到水中；石英砂主要以较大的固体颗粒留在水中。过滤不能把已经分散到水中的离子截留下来，但能截留较大的不溶固体颗粒；蒸发滤液后可以重新得到晶体。</li>
+<li>探究溶解时的温度变化：在相同条件下，氯化钙、尿素和食盐溶解时的温度变化不同。</li>
+</ol>
+<p>学生应能区分溶质、溶剂、溶液和不溶物，能用“颗粒分散”“离子/分子”“过滤”“蒸发析出”和温度数据解释实验现象。</p>
+</section>
+<section id="二重要概念与中英文参考" class="level2">
+<h2>二、重要概念与中英文参考</h2>
+<ul>
+<li><strong>溶质（solute）</strong>：被溶解的物质，本课中是食盐、尿素或氯化钙。</li>
+<li><strong>溶剂（solvent）</strong>：用来溶解其他物质的物质，本课中是水。</li>
+<li><strong>溶液（solution）</strong>：溶质均匀分散在溶剂中形成的混合物。</li>
+<li><strong>溶解（dissolving / dissolution）</strong>：溶质的微粒离开原来的固体，均匀分散到溶剂中。像氯化钠这样的离子化合物溶于水时，主要以钠离子（Na⁺）和氯离子（Cl⁻）分散；像尿素这样的分子物质溶于水时，主要以尿素分子分散。</li>
+<li><strong>为什么会溶解</strong>：水分子有带部分正电和部分负电的两端，能吸引并包围某些离子或分子。当“水分子吸引并分散这些微粒”的作用足够强时，固体就能溶解。不是所有固体都会被水这样分散。</li>
+<li><strong>不溶物（insoluble solid）</strong>：在本实验条件下不能明显溶解在水中的固体，例如石英砂。它主要以较大的固体颗粒存在，会沉降，也可以被滤纸截留。</li>
+<li><strong>过滤（filtration）</strong>：滤纸像很细的筛网，可以截留较大的不溶性固体颗粒；已经溶解的离子或分子太小，并且和水一起通过滤纸，所以普通过滤不能把盐水中的食盐滤出来。</li>
+<li><strong>滤液（filtrate）</strong>：通过滤纸后收集到的液体。</li>
+<li><strong>蒸发（evaporation）与析出/结晶（precipitation / crystallization）</strong>：水逐渐离开溶液，能包围并分散溶质微粒的水变少；当溶液中溶质超过能稳定分散的量时，微粒会重新聚集成固体，从溶液中析出。形成规则晶体时也叫结晶。</li>
+<li><strong>放热溶解（exothermic dissolving）</strong>：溶液温度明显升高，例如无水氯化钙溶解。</li>
+<li><strong>吸热溶解（endothermic dissolving）</strong>：溶液温度明显降低，例如尿素溶解。</li>
+<li>温度变化是能量转移的证据，但温度不等于“能量的多少”。</li>
+</ul>
+</section>
+<section id="三实验材料" class="level2">
+<h2>三、实验材料</h2>
+<section id="试剂与耗材" class="level3">
+<h3>试剂与耗材</h3>
+<ul>
+<li>食盐/氯化钠（sodium chloride, NaCl）约 10 g</li>
+<li>石英砂/二氧化硅砂（quartz sand / silica sand, SiO₂）约 3 g，作为不溶物对比</li>
+<li>尿素（urea, CO(NH₂)₂）约 3 g</li>
+<li>成分和无水/水合状态明确的氯化钙（calcium chloride, CaCl₂）约 3 g；若为分装保存过的氯化钙，必须课前预检升温是否明显</li>
+<li>水（water, H₂O）约 300 mL；观察晶体时优先用蒸馏水（distilled water）或去离子水（deionized water）</li>
+<li>直径约 90 mm 的定性滤纸（qualitative filter paper）2 张</li>
+<li>称量纸（weighing paper）或称量舟（weighing boat）若干；没有时使用干燥表面皿</li>
+<li>标签纸（label paper）、记号笔（marker）和吸水纸（absorbent paper）</li>
+</ul>
+</section>
+<section id="器材" class="level3">
+<h3>器材</h3>
+<ul>
+<li>电子秤（electronic balance / digital scale）1 台，分度值 0.1 g 或更细</li>
+<li>25 mL 或 50 mL 量筒（graduated cylinder）1 支</li>
+<li>塑料药匙（plastic spatula / scoopula）4 把，每种固体专用 1 把</li>
+<li>表面皿（watch glass）1 个，没有称量纸或称量舟时用于称量</li>
+<li>100 mL 烧杯（beaker）4 个</li>
+<li>长颈漏斗或塑料漏斗（funnel）1 个</li>
+<li>玻璃搅拌棒（glass stirring rod）5 根</li>
+<li>瓷蒸发皿（porcelain evaporating dish）1 个</li>
+<li>酒精灯（alcohol burner / spirit lamp）1 盏</li>
+<li>铁架台（iron stand / ring stand）1 套，配匹配铁圈（iron ring）1 个：过滤时支撑漏斗，蒸发时支撑石棉网</li>
+<li>石棉网（wire gauze with ceramic center / asbestos wire gauze）1 张</li>
+<li>点火器（lighter）1 个、坩埚钳（crucible tongs）1 把、耐热垫（heat-resistant mat）1 块</li>
+<li>相同规格的 100 mL 双层保温杯（insulated cup / foam cup calorimeter）4 个，最好配带温度计孔的盖子</li>
+<li>无汞实验温度计（mercury-free laboratory thermometer）1 支，量程至少 0–100°C，分度值 1°C 或更细</li>
+<li>温度计夹（thermometer clamp）1 个；有带孔杯盖时可不用</li>
+<li>秒表（stopwatch）1 个</li>
+</ul>
+</section>
+</section>
+<section id="四实验过程" class="level2">
+<h2>四、实验过程</h2>
+<section id="实验1食盐溶解前后的总质量" class="level3">
+<h3>实验 1：食盐溶解前后的总质量</h3>
+<p><strong>用量</strong>：水 50.0 g，食盐 5.0 g。</p>
+<ol type="1">
+<li>将干燥的 100 mL 烧杯放在电子秤上，按去皮键归零。缓慢加入 50.0 g 水。</li>
+<li>记录“烧杯 + 水”的质量；若刚才使用了去皮功能，可先取下再重新称量一次作为记录。</li>
+<li>将干燥表面皿放在电子秤中央，按去皮键归零。用食盐专用药匙加入 5.0 g 食盐并记录。</li>
+<li>计算溶解前总质量：<code>烧杯 + 水</code> 的质量 + <code>食盐</code> 的质量。</li>
+<li>将表面皿中的食盐全部转入烧杯，用玻璃搅拌棒轻轻搅拌，直到看不见明显食盐晶粒。检查表面皿上是否有明显残留；如有残留，不开始比较，先完成全部转移。</li>
+<li>擦干烧杯外壁，用同一台秤称量“烧杯 + 盐水”，记为溶解后总质量。</li>
+<li>若需要短暂停放，可用表面皿临时盖在烧杯上，减少水滴溅出或灰尘落入。</li>
+<li>计算“溶解后总质量 - 溶解前总质量”。</li>
+</ol>
+<p><strong>预期结果</strong>：溶解前后读数应在电子秤的波动范围内接近。如果相差 0.1–0.2 g，先检查秤的读数波动、烧杯外壁水滴、搅拌棒或表面皿上的残留，不把小差值解释为化学变化。</p>
+</section>
+<section id="实验2过滤对比溶解的食盐与不溶的石英砂" class="level3">
+<h3>实验 2：过滤对比——溶解的食盐与不溶的石英砂</h3>
+<p><strong>用量</strong>：从实验 1 的盐水中取 15–20 mL；另取水 20.0 g，石英砂 2.0 g。</p>
+<ol type="1">
+<li>在一个烧杯中加入 20.0 g 水和 2.0 g 石英砂，搅拌 30 s。观察液体是否均一透明、静置后是否沉降。</li>
+<li>另取 15–20 mL 实验 1 得到的盐水，观察它是否均一透明。</li>
+<li>将第一张滤纸对折两次，打开成“一层对三层”的锥形，放入漏斗。滤纸上缘应低于漏斗口。</li>
+<li>用少量水润湿滤纸，使滤纸贴紧漏斗内壁。将漏斗固定在支架上，使漏斗颈下端贴住接液烧杯内壁。</li>
+<li>先过滤石英砂和水的混合物。一手持烧杯，一手持玻璃搅拌棒，使混合物沿搅拌棒缓慢流入漏斗。液面始终低于滤纸边缘，不用搅拌棒戳压滤纸。</li>
+<li>分别观察两处：
+<ul>
+<li><strong>滤纸上</strong>：是否截留了石英砂？</li>
+<li><strong>接液烧杯中</strong>：滤液是否明显变清？</li>
+</ul>
+</li>
+<li>更换干净滤纸和接液烧杯，按同样方法过滤 15–20 mL 盐水。</li>
+<li>再分别观察两处：
+<ul>
+<li><strong>滤纸上</strong>：有没有被截留的白色食盐晶粒？</li>
+<li><strong>接液烧杯中</strong>：滤液是否仍然清澈、无色？</li>
+</ul>
+</li>
+<li>保留盐水过滤后得到的滤液，供实验 3 蒸发结晶使用。石英砂滤纸和滤液不用于结晶实验。</li>
+</ol>
+<p><strong>预期结果</strong>：石英砂不能形成均一透明的溶液，静置后会沉降，过滤时被滤纸截留；盐水过滤后滤纸上没有明显白色晶粒，滤液仍然清澈、无色。这说明普通滤纸能截留较大的不溶固体颗粒，但不能把已经溶解并分散成 Na⁺ 和 Cl⁻ 的食盐从水中分离出来。滤液看起来清澈并不证明里面没有食盐；要证明食盐仍在滤液中，继续做实验 3。</p>
+</section>
+<section id="实验3蒸发滤液并观察晶体" class="level3">
+<h3>实验 3：蒸发滤液并观察晶体</h3>
+<p><strong>用量</strong>：滤液 5–10 mL。</p>
+<ol type="1">
+<li>在未点火时组装加热装置：将铁圈固定在铁架台上，把石棉网平稳放在铁圈上，再将蒸发皿放在石棉网中央，酒精灯放在下方。</li>
+<li>用量筒量取 5–10 mL 滤液，倒入蒸发皿。</li>
+<li>教师点燃酒精灯。学生在安全距离观察水量变化；教师用玻璃棒轻轻搅拌，避免局部过热和液滴飞溅。</li>
+<li>当蒸发皿边缘开始出现小晶体，或只剩少量液体时，教师用灯帽覆盖熄火；不用嘴吹灭。</li>
+<li>教师用坩埚钳将蒸发皿移到耐热垫上，待完全冷却后观察。不将溶液加热至完全干涸。</li>
+</ol>
+<p><strong>预期结果</strong>：水量减少后，蒸发皿中出现白色晶体。这说明食盐通过了滤纸，一直存在于滤液中。这里的“析出”（precipitation）指溶解在水中的微粒重新聚集成固体；如果形成有规则形状的晶体，也可以说发生了“结晶”（crystallization）。</p>
+</section>
+<section id="实验4比较不同物质溶解时的温度变化" class="level3">
+<h3>实验 4：比较不同物质溶解时的温度变化</h3>
+<p><strong>用量</strong>：每杯水 20.0 g；食盐、尿素和氯化钙各 2.0 g。</p>
+<p><strong>实验顺序</strong>：空白杯 → 食盐 → 尿素 → 氯化钙。</p>
+<ol type="1">
+<li>将水、三种固体、四个保温杯和温度计放在同一房间至少 30 分钟，使初始温度尽量相同。</li>
+<li>标记四个保温杯：空白、食盐、尿素、氯化钙。</li>
+<li>将干燥的称量专用表面皿放在电子秤上去皮，分别称取 2.0 g 食盐、2.0 g 尿素和 2.0 g 氯化钙。每称完一种都要将表面皿洗净、完全擦干后再称下一种。</li>
+<li>用电子秤或量筒分别向四个保温杯加入 20.0 g 水。若使用量筒，可近似取 20.0 mL 水。</li>
+<li>将温度计穿过杯盖或固定在温度计夹上，使感温泡完全浸入水中，但不接触杯底或杯壁。</li>
+<li>等待液柱稳定约 30 s。读数时视线与液柱顶端齐平，记录初温。</li>
+<li>空白杯不加固体。开始计时后用玻璃搅拌棒搅拌 30 s，在 30、60、90、120 和 180 s 读取温度。普通温度计有响应时间，不需要每 10 s 读取一次。</li>
+<li>洗净、擦干温度计，待读数回到室温附近，再测食盐杯。记录初温后，在 <code>t = 0</code> 时加入 2.0 g 食盐，立即搅拌 30 s，按相同时刻读数。</li>
+<li>按同样方法完成尿素杯。</li>
+<li>最后完成氯化钙杯。氯化钙由教师加入；学生读取温度，不触摸杯壁或溶液。</li>
+<li>每杯计算 <code>ΔT = 最高或最低温度 - 初温</code>，并与空白杯的温度波动比较。使用 1°C 分度的温度计时，变化至少达到 2°C 且超过空白杯波动，再判定为本装置可检出的吸热或放热。</li>
+</ol>
+<p><strong>预期结果</strong>：</p>
+<ul>
+<li>空白杯的温度只有小幅自然波动。</li>
+<li>食盐的温度变化可能小于 1°C，普通温度计可能检测不出。记录为“本装置未检出明显变化”，不写“完全没有吸放热”。</li>
+<li>尿素杯通常明显降温，20.0 g 水配 2.0 g 尿素时，课堂中常见降温约 3–5°C；若温度计响应慢，以 60–120 s 内的最低温作为主要数据。</li>
+<li>状态良好的氯化钙杯通常明显升温，20.0 g 水配 2.0 g 氯化钙时，课堂中常见升温约 5–15°C。若分装保存后的氯化钙已经明显吸水或水合，升温可能只剩 2–6°C，甚至不够明显；课前预检若升温不到约 3°C，建议更换新鲜氯化钙。</li>
+</ul>
+</section>
+</section>
+<section id="五板书与记录框架" class="level2">
+<h2>五、板书与记录框架</h2>
+<section id="板书主线" class="level3">
+<h3>板书主线</h3>
+<pre class="text"><code>问题 1：溶解和不溶解的微粒状态有什么不同？
+Question 1: What is different about particles in dissolving and insolubility?
+
+证据链：总质量接近 → 不溶颗粒可过滤、溶解的离子/分子不能被普通滤纸截留 → 蒸发后析出晶体
+Evidence: mass → filtration comparison → precipitation/crystallization
+
+问题 2：不同物质溶解时的温度变化相同吗？
+Question 2: Do different solutes cause the same temperature change?
+
+改变：溶质种类
+测量：温度随时间的变化
+保持不变：水量、固体质量、初温、容器、搅拌时间、读数时刻
+空白杯：判断环境造成的温度波动</code></pre>
+</section>
+<section id="记录1溶解前后质量" class="level3">
+<h3>记录 1：溶解前后质量</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align: right;">质量/g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>烧杯 + 水</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>食盐</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>溶解前总质量（上述两项相加）</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>溶解后总质量（烧杯 + 盐水）</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>前后差值</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="记录2过滤与结晶" class="level3">
+<h3>记录 2：过滤与结晶</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>观察</th>
+<th>说明什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>溶解后</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>石英砂加水并搅拌后</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>石英砂过滤后的滤纸</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>石英砂过滤后的滤液</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>盐水过滤后的滤纸</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>盐水过滤后的滤液</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>盐水滤液蒸发后</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="记录3温度随时间的变化" class="level3">
+<h3>记录 3：温度随时间的变化</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">时间/s</th>
+<th style="text-align: right;">空白/°C</th>
+<th style="text-align: right;">食盐/°C</th>
+<th style="text-align: right;">尿素/°C</th>
+<th style="text-align: right;">氯化钙/°C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>杯子</th>
+<th style="text-align: right;">初温/°C</th>
+<th style="text-align: right;">最高或最低温/°C</th>
+<th style="text-align: right;"><code>ΔT</code>/°C</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空白</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td>自然波动</td>
+</tr>
+<tr>
+<td>食盐</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>尿素</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>氯化钙</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="结论句式" class="level3">
+<h3>结论句式</h3>
+<pre class="text"><code>食盐溶解时，氯化钠晶体中的__________和__________分散到水中。
+普通滤纸能截留__________，但不能截留已经溶解的__________或__________。
+石英砂和食盐的过滤结果不同，说明__________和__________不是同一回事。
+水分减少后，溶液中的食盐重新形成晶体，这个过程可以叫__________或__________。
+
+在相同条件下，氯化钙溶解时__________，尿素溶解时__________，食盐__________。
+因此，不能说所有物质溶解时都__________。</code></pre>
+</section>
+</section>
+<section id="六课堂流程串讲" class="level2">
+<h2>六、课堂流程串讲</h2>
+<section id="08分钟导入" class="level3">
+<h3>0–8 分钟：导入</h3>
+<p>将一小勺食盐加入水中搅拌，再展示少量石英砂加水后的样子。让学生先用自己的话描述两杯水的差别：哪一杯均匀、哪一杯会沉降、哪一杯可能通过过滤分开。此时引入溶质、溶剂、溶液和不溶物，并提醒溶解不是食盐熔化成液体，而是微粒分散到水中。</p>
+</section>
+<section id="823分钟实验1总质量" class="level3">
+<h3>8–23 分钟：实验 1——总质量</h3>
+<p>按实验 1 分别称量烧杯与水、食盐，计算溶解前总质量，再与溶解后总质量比较。混合前让学生预测总质量会变大、变小还是接近不变。称量后追问：“如果食盐没有全部倒进去，或有水滴溅出，前后还能直接比较吗？”</p>
+</section>
+<section id="2342分钟实验2不溶物与过滤对比" class="level3">
+<h3>23–42 分钟：实验 2——不溶物与过滤对比</h3>
+<p>先让学生分别预测石英砂和盐水经过滤纸后会发生什么。先过滤石英砂和水的混合物，让学生看到不溶颗粒被滤纸截留；再过滤盐水，重点解释普通滤纸的孔远大于水中的离子或分子，因此过滤能分离“颗粒比较大的不溶物”，不能分离“已经以离子或分子分散的溶质”。</p>
+</section>
+<section id="4252分钟实验3蒸发结晶" class="level3">
+<h3>42–52 分钟：实验 3——蒸发结晶</h3>
+<p>学生完成未点火的装置识别和滤液量取；教师负责点火、加热、熄火和移动热蒸发皿。当晶体出现时，追问：“水变少以后，原来分散在水里的离子为什么会重新聚集？”引出析出/结晶：水少了，能稳定分散的溶质量减少，多出来的溶质微粒重新形成固体。</p>
+</section>
+<section id="5260分钟设计温度比较" class="level3">
+<h3>52–60 分钟：设计温度比较</h3>
+<p>展示三种白色固体：食盐、尿素和氯化钙。让学生预测哪一杯升温、降温或变化不明显。共同确认自变量、因变量、控制变量和空白杯的作用，完成第二部分板书。</p>
+</section>
+<section id="6078分钟实验4温度变化" class="level3">
+<h3>60–78 分钟：实验 4——温度变化</h3>
+<p>按既定顺序依次测量四杯，学生读温度并口述，教师可帮助在 30、60、90、120 和 180 s 记录。提醒学生普通温度计有响应时间，不需要每 10 s 读数；测食盐时强调“没有读出明显变化”只是当前仪器的结果，不是“绝对没有能量转移”。氯化钙由教师加料并放在最后。</p>
+</section>
+<section id="7888分钟数据与结论" class="level3">
+<h3>78–88 分钟：数据与结论</h3>
+<p>计算三种溶质的 <code>ΔT</code>，先与空白杯比较，再完成结论句式。追问：“石英砂和食盐进入水中后的微粒状态有什么不同？”“为什么盐水过滤后仍然可能含有食盐？”和“能不能说所有溶解都吸热或都放热？”</p>
+</section>
+<section id="8890分钟收尾" class="level3">
+<h3>88–90 分钟：收尾</h3>
+<p>回收试剂和溶液，清洗器材。让学生用一句话回答：“如果糖溶进水里，你会怎样从微粒角度解释它为什么过滤不出来？”</p>
+</section>
+</section>
+<section id="七关键术语keyvocabulary" class="level2">
+<h2>七、关键术语（Key vocabulary）</h2>
+<ul>
+<li>溶解：dissolution / dissolving</li>
+<li>溶解的：dissolved</li>
+<li>析出：precipitation</li>
+<li>溶质：solute</li>
+<li>溶剂：solvent</li>
+<li>溶液：solution</li>
+<li>不溶物：insoluble solid</li>
+<li>离子：ion</li>
+<li>分子：molecule</li>
+<li>钠离子：sodium ion, Na⁺</li>
+<li>氯离子：chloride ion, Cl⁻</li>
+<li>过滤：filtration</li>
+<li>滤纸：filter paper</li>
+<li>漏斗：funnel</li>
+<li>滤液：filtrate</li>
+<li>蒸发：evaporation</li>
+<li>晶体：crystal</li>
+<li>结晶：crystallization</li>
+<li>氯化钠/食盐：sodium chloride, NaCl</li>
+<li>氯化钙：calcium chloride, CaCl₂</li>
+<li>尿素：urea, CO(NH₂)₂</li>
+<li>石英砂/二氧化硅砂：quartz sand / silica sand, SiO₂</li>
+<li>烧杯：beaker</li>
+<li>量筒：graduated cylinder</li>
+<li>玻璃搅拌棒：glass stirring rod</li>
+<li>表面皿：watch glass</li>
+<li>蒸发皿：evaporating dish</li>
+<li>酒精灯：alcohol burner / spirit lamp</li>
+<li>铁架台：iron stand / ring stand</li>
+<li>铁圈：iron ring</li>
+<li>石棉网：wire gauze with ceramic center / asbestos wire gauze</li>
+<li>坩埚钳：crucible tongs</li>
+<li>放热：exothermic</li>
+<li>吸热：endothermic</li>
+<li>温度变化：temperature change</li>
+<li>初温：initial temperature</li>
+<li>能量转移：energy transfer</li>
+</ul>
+</section>
+</body>
+</html>

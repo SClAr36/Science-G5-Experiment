@@ -1,0 +1,14 @@
+# Temporary and generated work files
+tmp/
+output/
+*.tmp
+~$*
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第1节：摆钟会听谁的话？</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第1节：摆钟会听谁的话？</h1>
+<p class="subtitle">Lesson 1: What Determines the Period of a Simple
+Pendulum?</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#一课程定位与学习目标"
+id="toc-一课程定位与学习目标">一、课程定位与学习目标</a></li>
+<li><a href="#二重要概念与中英文参考"
+id="toc-二重要概念与中英文参考">二、重要概念与中英文参考</a></li>
+<li><a href="#三实验材料" id="toc-三实验材料">三、实验材料</a></li>
+<li><a href="#四实验过程" id="toc-四实验过程">四、实验过程</a></li>
+<li><a href="#五板书与记录框架"
+id="toc-五板书与记录框架">五、板书与记录框架</a></li>
+<li><a href="#六课堂流程串讲"
+id="toc-六课堂流程串讲">六、课堂流程串讲</a></li>
+<li><a href="#七教师参考周期表"
+id="toc-七教师参考周期表">七、教师参考周期表</a></li>
+<li><a href="#八关键术语key-vocabulary"
+id="toc-八关键术语key-vocabulary">八、关键术语（Key
+vocabulary）</a></li>
+</ul>
+</nav>
+<section id="一课程定位与学习目标" class="level2">
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>主题</strong>：单摆周期（period of a simple pendulum）</li>
+<li><strong>建议课时</strong>：80–90 分钟</li>
+<li><strong>核心问题</strong>：摆长、摆锤质量和释放角度中，哪些会影响单摆的周期？
+<em>Which factors—pendulum length, bob mass, and release angle—affect
+the period?</em></li>
+</ul>
+<p>本节是课程中的实验方法起点。学生对三个候选因素分别做对照实验，每次只改变一个因素，测量
+10 次完整摆动的总时间，重复 3 次，再由数据判断影响是否明显。</p>
+<p>学生应能识别自变量、因变量和控制变量，正确测量摆长和完整摆动，计算平均总时间与周期，并区分清晰趋势与测量波动。</p>
+</section>
+<section id="二重要概念与中英文参考" class="level2">
+<h2>二、重要概念与中英文参考</h2>
+<ul>
+<li><strong>单摆（simple
+pendulum）</strong>：由固定支点、摆线和摆锤组成。</li>
+<li><strong>支点（pivot）</strong>：摆线固定的位置。</li>
+<li><strong>摆长（pendulum
+length）</strong>：从支点量到摆锤中心，不是量到摆锤底部。</li>
+<li><strong>摆锤（pendulum bob）</strong>：摆线末端的重物。</li>
+<li><strong>周期（period）</strong>：完成一次完整往返摆动所需的时间。</li>
+<li><strong>完整摆动（one complete
+oscillation）</strong>：摆锤从某一位置出发，回到同一位置且运动方向相同。</li>
+<li><strong>释放角度（release
+angle）</strong>：摆线与竖直方向之间的起始夹角。</li>
+<li><strong>重复测量（repeated
+measurement）</strong>：在相同条件下多次测量，用来观察数据波动并计算平均值。</li>
+<li><strong>自变量（independent
+variable）</strong>：实验中主动改变的因素。</li>
+<li><strong>因变量（dependent
+variable）</strong>：实验中测量的结果，本课为单摆周期。</li>
+<li><strong>控制变量（controlled
+variable）</strong>：为了公平比较而保持不变的条件。</li>
+</ul>
+</section>
+<section id="三实验材料" class="level2">
+<h2>三、实验材料</h2>
+<ul>
+<li>稳定的铁架台、横杆和夹具 1 套</li>
+<li>不易伸长的细线约 2 m</li>
+<li>外形、大小和挂点位置相同，质量明显不同的摆锤 3 个</li>
+<li>卷尺或米尺 1 把</li>
+<li>量角器 1 个</li>
+<li>秒表 1 个</li>
+<li>电子秤 1 台，用于记录三个摆锤的质量</li>
+<li>美纹纸或记号贴，用于标记摆长和释放角度</li>
+<li>方格纸、铅笔和计算器</li>
+</ul>
+</section>
+<section id="四实验过程" class="level2">
+<h2>四、实验过程</h2>
+<section id="课前设置选择摆长" class="level3">
+<h3>课前设置：选择摆长</h3>
+<ol type="1">
+<li>测量支点到下方桌面或地面的有效净空。</li>
+<li>最长摆比有效净空短至少 8–10 cm，从下表选择一组长度。</li>
+<li>推荐优先使用 B 或 C：长度差足够明显，单次计时又不会太长。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th style="text-align: right;">支点下方有效净空</th>
+<th>摆长三档</th>
+<th>计时方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A：高支架</td>
+<td style="text-align: right;">≥ 90 cm</td>
+<td>20、50、80 cm</td>
+<td>10 次 × 3 次重复</td>
+</tr>
+<tr>
+<td>B：中高支架</td>
+<td style="text-align: right;">≥ 70 cm</td>
+<td>15、35、60 cm</td>
+<td>10 次 × 3 次重复</td>
+</tr>
+<tr>
+<td>C：桌面型支架</td>
+<td style="text-align: right;">≥ 55 cm</td>
+<td>15、30、45 cm</td>
+<td>10 次 × 3 次重复</td>
+</tr>
+<tr>
+<td>D：很矮的支架</td>
+<td style="text-align: right;">≥ 45 cm</td>
+<td>15、25、35 cm</td>
+<td>10 次 × 3 次重复</td>
+</tr>
+</tbody>
+</table>
+<p>四种方案都统一测量 10 次完整摆动，便于计算周期。</p>
+</section>
+<section id="统一测量方法" class="level3">
+<h3>统一测量方法</h3>
+<ol type="1">
+<li>学生和教师分工：一人释放摆锤、计数，一人计时和记录；每轮交换。</li>
+<li>将摆锤对准规定角度，不推、不甩，直接释放。</li>
+<li>摆锤第一次沿规定方向经过最低点时开始计时，这一次记作“0”。最低点位置固定，摆锤通过的时刻比在最高点转向的时刻更容易判断，也能避免把“释放摆锤”和“按下秒表”混成同一个动作。</li>
+<li>之后每次沿<strong>相同方向</strong>经过最低点，计为 1 次完整摆动；第 10 次同方向经过时停止计时，记录 10 次摆动的总时间。同一周期内摆锤会以相反方向两次经过最低点，因此不能把两个方向都计数。同一条件重复 3 次。</li>
+<li>如果释放时推了摆锤、计数错误或摆锤碰到支架，标记这次操作问题，再补测一次。</li>
+</ol>
+</section>
+<section id="实验-1改变摆长" class="level3">
+<h3>实验 1：改变摆长</h3>
+<ol type="1">
+<li>选用中等质量摆锤，将释放角度固定为 10°。</li>
+<li>依次设置选定方案中的短、中、长三档摆长。每次都从支点量到摆锤中心。</li>
+<li>每个摆长按统一方法计时，重复 3 次。</li>
+<li>计算每个摆长的平均总时间，再除以 10 得到周期。</li>
+</ol>
+<p><strong>预期结果</strong>：摆长越长，周期越长；数据不支持“摆长增加一倍，周期也一定增加一倍”。</p>
+</section>
+<section id="实验-2改变摆锤质量" class="level3">
+<h3>实验 2：改变摆锤质量</h3>
+<ol type="1">
+<li>用电子秤称量轻、中、重三个摆锤并记录。</li>
+<li>将摆长固定为长度方案的中间档，释放角度固定为 10°。</li>
+<li>每次更换摆锤后，重新确认支点到摆锤中心的长度相同。</li>
+<li>三个摆锤分别按统一方法计时，每个重复 3 次，计算周期。</li>
+</ol>
+<p><strong>预期结果</strong>：三种质量下的周期应比较接近，通常没有稳定且明显超过重复测量波动的差异。</p>
+</section>
+<section id="实验-3改变释放角度" class="level3">
+<h3>实验 3：改变释放角度</h3>
+<ol type="1">
+<li>将摆长固定为长度方案的中间档，使用中等质量摆锤。</li>
+<li>用量角器和标记贴设置 10°、25° 和 40° 三个释放位置。</li>
+<li>三个角度分别按统一方法计时，每个重复 3 次，计算周期。</li>
+</ol>
+<p><strong>预期结果</strong>：角度影响远小于摆长影响。人工计时可能测不出清晰差异，也可能看到
+40° 的周期稍长。只在差异能重复出现且超过同一条件下的波动时才下结论。</p>
+</section>
+</section>
+<section id="五板书与记录框架" class="level2">
+<h2>五、板书与记录框架</h2>
+<section id="板书主线" class="level3">
+<h3>板书主线</h3>
+<pre class="text"><code>核心问题：什么会影响单摆的周期？
+What affects the period of a simple pendulum?
+
+可能因素：摆长 / 摆锤质量 / 释放角度
+Possible factors: pendulum length / bob mass / release angle
+
+改变：自变量（independent variable）
+测量：因变量（dependent variable）
+保持不变：控制变量（controlled variables）
+
+周期 = 10 次摆动平均总时间 ÷ 10
+结论 = 趋势 + 数据 + 与测量波动的比较</code></pre>
+</section>
+<section id="记录-1摆长" class="level3">
+<h3>记录 1：摆长</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">摆长/cm</th>
+<th style="text-align: right;">10 次时间 1/s</th>
+<th style="text-align: right;">10 次时间 2/s</th>
+<th style="text-align: right;">10 次时间 3/s</th>
+<th style="text-align: right;">平均总时间/s</th>
+<th style="text-align: right;">周期/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">短：____</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">中：____</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">长：____</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="记录-2摆锤质量" class="level3">
+<h3>记录 2：摆锤质量</h3>
+<table>
+<thead>
+<tr>
+<th>摆锤</th>
+<th style="text-align: right;">质量/g</th>
+<th style="text-align: right;">摆长/cm</th>
+<th style="text-align: right;">释放角度</th>
+<th style="text-align: right;">10 次时间 1/s</th>
+<th style="text-align: right;">10 次时间 2/s</th>
+<th style="text-align: right;">10 次时间 3/s</th>
+<th style="text-align: right;">周期/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>轻</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10°</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>中</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10°</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>重</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10°</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="记录-3释放角度" class="level3">
+<h3>记录 3：释放角度</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">释放角度</th>
+<th style="text-align: right;">摆长/cm</th>
+<th style="text-align: right;">摆锤质量/g</th>
+<th style="text-align: right;">10 次时间 1/s</th>
+<th style="text-align: right;">10 次时间 2/s</th>
+<th style="text-align: right;">10 次时间 3/s</th>
+<th style="text-align: right;">周期/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">10°</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">25°</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">40°</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="结论句式" class="level3">
+<h3>结论句式</h3>
+<pre class="text"><code>关于摆长，我们发现__________，数据是__________。
+关于摆锤质量，我们发现__________，数据是__________。
+关于释放角度，我们发现__________，数据是__________。
+我们最有把握 / 最没有把握的判断是__________，因为__________。</code></pre>
+</section>
+</section>
+<section id="六课堂流程串讲" class="level2">
+<h2>六、课堂流程串讲</h2>
+<section id="08-分钟导入" class="level3">
+<h3>0–8 分钟：导入</h3>
+<p>同时释放一个短摆和一个长摆，只观察、不计时。让学生分别预测摆长、质量和释放角度是否影响周期，教师只记录，不提前判断。</p>
+</section>
+<section id="818-分钟统一测量方法" class="level3">
+<h3>8–18 分钟：统一测量方法</h3>
+<p>介绍摆长、周期和完整摆动。先慢速示范计时：第一次沿规定方向经过最低点时喊“开始、0”，以后只数同方向经过最低点的次数，数到 10 停表。</p>
+<p><strong>此时追问：</strong></p>
+<ul class="question-list">
+<li>为什么从最低点开始？</li>
+<li>为什么必须看方向？</li>
+</ul>
+<p>明确最低点的通过时刻容易判断，而两个方向都数会把半个周期误当成一个周期。再在板书上标明自变量、因变量和控制变量。</p>
+<p><strong>随后追问：</strong></p>
+<ul class="question-list">
+<li>为什么不只测 1 次？</li>
+<li>为什么同一条件要重复 3 次？</li>
+<li>摆长应该量到哪里？</li>
+</ul>
+</section>
+<section id="1840-分钟实验-1摆长" class="level3">
+<h3>18–40 分钟：实验 1——摆长</h3>
+<p>按选定方案测量三档摆长。每次改长度后重新从支点量到摆锤中心。完成数据后暂不公布理论结论，只让学生说出初步趋势。</p>
+</section>
+<section id="4053-分钟实验-2摆锤质量" class="level3">
+<h3>40–53 分钟：实验 2——摆锤质量</h3>
+<p>称量三个摆锤后进行对照。更换摆锤时重点检查摆长是否仍然相同。</p>
+<p><strong>追问：</strong></p>
+<ul class="question-list">
+<li>如果重摆锤的中心更低，我们是在测质量，还是同时改了摆长？</li>
+</ul>
+</section>
+<section id="5365-分钟实验-3释放角度" class="level3">
+<h3>53–65 分钟：实验 3——释放角度</h3>
+<p>比较 10°、25° 和
+40°。学生可能认为“拉得越高，摆得越快，周期就越短”，此时只提醒区分“最低点速度”与“完成一次往返的时间”，然后让数据回答。</p>
+</section>
+<section id="6580-分钟计算与作图" class="level3">
+<h3>65–80 分钟：计算与作图</h3>
+<p>计算每个条件的平均总时间和周期。三个实验各画一幅点图，纵轴都为周期。先比较同一条件的三次波动，再判断不同条件之间的差是否足够大。</p>
+<p><strong>追问：</strong></p>
+<ul class="question-list">
+<li>摆长趋势能否说明摆长和周期成正比？</li>
+</ul>
+</section>
+<section id="8090-分钟结论与收尾" class="level3">
+<h3>80–90 分钟：结论与收尾</h3>
+<p>完成三条结论句式。对质量或角度的微小差别进行追问。</p>
+<p><strong>追问：</strong></p>
+<ul class="question-list">
+<li>这个差异能不能在 3 次测量中稳定出现？</li>
+<li>它比同一条件下的波动大吗？</li>
+</ul>
+<p>最后让学生预测一个比已测最长摆再长 10 cm 的单摆，并说明如何实验检验。</p>
+</section>
+</section>
+<section id="七教师参考周期表" class="level2">
+<h2>七、教师参考周期表</h2>
+<p>下表根据理想小角度单摆估算，用于检查课堂数据是否大致合理，不在实验前给学生作为标准答案。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">摆长/cm</th>
+<th style="text-align: right;">参考周期/s</th>
+<th style="text-align: right;">10 次摆动参考时间/s</th>
+<th style="text-align: right;">20 次摆动参考时间/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">6.3</td>
+<td style="text-align: right;">12.7</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">7.8</td>
+<td style="text-align: right;">15.5</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">0.90</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">17.9</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">20.1</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">22.0</td>
+</tr>
+<tr>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">1.19</td>
+<td style="text-align: right;">11.9</td>
+<td style="text-align: right;">23.7</td>
+</tr>
+<tr>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">1.35</td>
+<td style="text-align: right;">13.5</td>
+<td style="text-align: right;">26.9</td>
+</tr>
+<tr>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">1.42</td>
+<td style="text-align: right;">14.2</td>
+<td style="text-align: right;">28.4</td>
+</tr>
+<tr>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">1.55</td>
+<td style="text-align: right;">15.5</td>
+<td style="text-align: right;">31.1</td>
+</tr>
+<tr>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">1.79</td>
+<td style="text-align: right;">17.9</td>
+<td style="text-align: right;">35.9</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="八关键术语key-vocabulary" class="level2">
+<h2>八、关键术语（Key vocabulary）</h2>
+<ul>
+<li>单摆：simple pendulum</li>
+<li>摆：pendulum</li>
+<li>支点：pivot</li>
+<li>悬挂点：point of suspension</li>
+<li>摆线：pendulum string</li>
+<li>摆锤：pendulum bob</li>
+<li>摆锤质量：bob mass</li>
+<li>摆长：pendulum length</li>
+<li>周期：period</li>
+<li>摆动：swing / oscillation</li>
+<li>完整摆动：one complete oscillation</li>
+<li>释放角度：release angle</li>
+<li>振幅：amplitude</li>
+<li>秒表：stopwatch</li>
+<li>自变量：independent variable</li>
+<li>因变量：dependent variable</li>
+<li>控制变量：controlled variable</li>
+<li>重复测量：repeated measurement</li>
+<li>平均值：mean / average</li>
+</ul>
+</section>
+</body>
+</html>

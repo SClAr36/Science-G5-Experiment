@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>实际第 3 节：蜡烛发生了两种变化吗？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">实际第 3 节：蜡烛发生了两种变化吗？</h1>
+</header>
+<main>
+<p><strong>Lesson 3: Did the Candle Undergo Two Different Kinds of Change?</strong></p>
+<p><strong>授课状态</strong>：待上；计划作为实际授课第 3 节。</p>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>主题</strong>：三态、相变、物理变化与化学变化<br />
+<em>States of matter, phase changes, physical changes, and chemical changes</em></li>
+<li><strong>建议课时</strong>：115–120 分钟</li>
+<li><strong>核心问题</strong>：看到物质发生变化时，怎样判断它只是改变了状态，还是形成了新物质？<br />
+<em>How can we tell whether matter has only changed its state or whether new substances have formed?</em></li>
+</ul>
+<p>本节从学生上次观察到的蜡烛现象出发：火焰附近的石蜡会熔化，蜡蒸气还会燃烧。前者是物理变化，后者是化学变化。课堂先用石蜡和水讲清楚三态和相变，再用大理石遇白醋、透明溶液产生白色固体以及铁生锈样品建立化学变化的证据链。</p>
+<p>实际第 2 节已经完成食盐/粗盐的溶解、过滤和结晶。本节只调用上次的记录、照片或晶体作为证据，<strong>不重复做粗盐溶解实验</strong>。</p>
+<p>学生应能：</p>
+<ol>
+<li>根据形状和体积概括固态、液态和气态的主要区别。</li>
+<li>正确连接熔化、凝固、汽化、凝结、升华和凝华的状态方向，并说出对应英文。</li>
+<li>说明相变属于物理变化：物质身份不变，改变的是粒子的排列、距离和运动。</li>
+<li>用“是否形成新物质”区分物理变化和化学变化，不把“能否恢复”当作本质标准。</li>
+<li>区分直接观察和根据证据作出的推论，知道气泡、沉淀和颜色变化只是可能的证据。</li>
+<li>用简单粒子模型表示：物理变化中粒子身份不变；化学变化中原子重新组合。</li>
+<li>说明开放容器中反应质量下降可能是气体离开所称量的系统，不是物质消失。</li>
+</ol>
+<h2>二、重要概念与中英文参考</h2>
+<ul>
+<li><strong>固态（solid state）</strong>：有固定形状和固定体积；粒子靠得较近，主要在固定位置附近振动。</li>
+<li><strong>液态（liquid state）</strong>：有较固定体积，没有固定形状；粒子仍靠得较近，但能相互滑动。</li>
+<li><strong>气态（gas state）</strong>：没有固定形状和固定体积；粒子相距较远，能独立运动。</li>
+<li><strong>相变（phase change / change of state）</strong>：同一种物质在不同状态之间变化，属于物理变化。</li>
+<li><strong>物理变化（physical change）</strong>：没有形成新物质；状态、形状、大小或分散方式可以改变。</li>
+<li><strong>化学变化（chemical change）</strong>：原有粒子中的原子重新组合，形成新物质。</li>
+<li><strong>观察（observation）</strong>：直接看到或测量到的结果，如“出现持续气泡”。</li>
+<li><strong>推论（inference）</strong>：根据观察和已有知识作出的解释，如“形成了气体”。</li>
+<li><strong>沉淀（precipitate）</strong>：溶液中形成的难溶固体。</li>
+<li><strong>开放系统（open system）</strong>：物质可以穿过系统边界进入或离开。本课二氧化碳会离开开放反应杯。</li>
+</ul>
+<h3>六种相变</h3>
+<table>
+<thead>
+<tr>
+<th>状态方向</th>
+<th>中文</th>
+<th>English</th>
+<th>能量方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固态 → 液态</td>
+<td>熔化</td>
+<td>melting</td>
+<td>吸收能量</td>
+</tr>
+<tr>
+<td>液态 → 固态</td>
+<td>凝固</td>
+<td>freezing / solidification</td>
+<td>释放能量</td>
+</tr>
+<tr>
+<td>液态 → 气态</td>
+<td>汽化</td>
+<td>vaporization / evaporation</td>
+<td>吸收能量</td>
+</tr>
+<tr>
+<td>气态 → 液态</td>
+<td>凝结/液化</td>
+<td>condensation</td>
+<td>释放能量</td>
+</tr>
+<tr>
+<td>固态 → 气态</td>
+<td>升华</td>
+<td>sublimation</td>
+<td>吸收能量</td>
+</tr>
+<tr>
+<td>气态 → 固态</td>
+<td>凝华</td>
+<td>deposition</td>
+<td>释放能量</td>
+</tr>
+</tbody>
+</table>
+<p>气泡、沉淀、颜色变化、温度变化或发光可以提示发生了化学变化，但它们不是定义。例如，水沸腾也有气泡，某些溶解也会造成温度变化。最终判断仍要回到“是否形成新物质”，并结合对照排除相变、溶解和简单混合。</p>
+<h2>三、实验材料与教师提前准备</h2>
+<h3>家长只需提前准备</h3>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th style="text-align:right">建议准备量</th>
+<th style="text-align:right">实际预计用量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通食品级白醋，约 5% 酸度</td>
+<td style="text-align:right">50 mL</td>
+<td style="text-align:right">约 35–40 mL</td>
+</tr>
+<tr>
+<td>新鲜食用小苏打</td>
+<td style="text-align:right">5 g</td>
+<td style="text-align:right">约 2–3 g</td>
+</tr>
+<tr>
+<td>普通冰块</td>
+<td style="text-align:right">约 200 g，约 8–12 块</td>
+<td style="text-align:right">视冰块大小和融化速度调整</td>
+</tr>
+</tbody>
+</table>
+<p>不需要家长准备醋酸、醋酸钠、气球或其他实验试剂。</p>
+<h3>实验室直接取用</h3>
+<ul>
+<li>编号 <code>17</code> 袋装石蜡 3–5 g；取用前和同编号瓶装葡萄糖核对</li>
+<li>编号 <code>89</code> 大理石小块，或编号 <code>59</code> 碳酸钙，两份各约 2.0 g</li>
+<li>新铁钉 1 枚及提前生锈的铁钉/钢丝绒样品 1 份</li>
+<li>烧杯、小金属瓶盖或铝箔小杯、金属盖/小金属碗</li>
+<li>量筒、滴管、药匙、玻璃棒、漏斗、滤纸、反应板或小试管</li>
+<li>电子秤、温度计、秒表、坩埚钳或试管夹</li>
+<li>托盘、护目镜、吸水布、标签纸</li>
+<li>约 70°C 热水和 50–60°C 温水，由教师准备</li>
+<li>两种颜色的积木、磁珠或纸圆片各 8–12 个，用于粒子模型</li>
+</ul>
+<blockquote>
+<p><strong>库存限制</strong>：氯化钙已经消耗，原剩余液体的浓度和含水量未知，本课不使用氯化钙。现有“无水醋酸钠/乙酸钠”是盐，不是醋酸，不能代替白醋。</p>
+</blockquote>
+<h3>教师课前准备 1：醋酸钙溶液</h3>
+<ol>
+<li>在开放烧杯中加入 15 mL 食品级白醋。</li>
+<li>分批加入洗净的大理石小块，先加入约 1.0 g；每次等明显冒泡减弱后再加下一小块。</li>
+<li>保持最后有少量大理石剩余，静置 10 分钟后不再持续冒泡。这表示白醋中的大部分酸已被消耗。</li>
+<li>过滤，收集澄清滤液，标记“实验用醋酸钙溶液，不得饮用”。</li>
+</ol>
+<p>教师参考反应：</p>
+<pre><code class="language-text">CaCO₃ + 2 CH₃COOH → Ca(CH₃COO)₂ + H₂O + CO₂↑
+</code></pre>
+<p>学生只需使用文字表达：</p>
+<pre><code class="language-text">碳酸钙 + 白醋中的酸 → 醋酸钙溶液 + 水 + 二氧化碳
+</code></pre>
+<h3>教师课前准备 2：小苏打溶液和预试</h3>
+<ol>
+<li>将 1.0 g 小苏打加入 20 mL 水，搅拌至看不见固体；必要时静置后取上层清液或过滤。</li>
+<li>分别预试：
+<ul>
+<li>2 mL 醋酸钙溶液 + 2 mL 水；</li>
+<li>2 mL 小苏打溶液 + 2 mL 水；</li>
+<li>2 mL 醋酸钙溶液 + 2 mL 小苏打溶液。</li>
+</ul>
+</li>
+<li>第三组应比两个对照明显浑浊，形成白色细小固体，并可能伴随少量气泡。</li>
+<li>如果第三组只有大量气泡而没有持续白色浑浊，醋酸钙溶液中可能还有较多酸；重新加入过量大理石处理并过滤。</li>
+<li>如果预试仍不清楚，课堂跳过该实验，使用铁锈样品作为第二条化学变化证据，不临时启用氯化钙或其他未知试剂。</li>
+</ol>
+<p>教师参考净变化：</p>
+<pre><code class="language-text">Ca²⁺ + 2 HCO₃⁻ → CaCO₃↓ + CO₂↑ + H₂O
+</code></pre>
+<h3>教师课前准备 3：已有证据</h3>
+<ul>
+<li>从实际第 2 节选取食盐结晶照片、记录表或保存的晶体，不重新做溶解实验。</li>
+<li>提前 5–7 天准备一份生锈铁钉或钢丝绒样品，并保留一枚未处理铁钉作对照。</li>
+</ul>
+<h2>四、实验过程</h2>
+<h3>实验 1：石蜡熔化和凝固——同一种物质能否改变状态？</h3>
+<ol>
+<li>观察固态石蜡，记录颜色、状态和是否有固定形状。</li>
+<li>将 3–5 g 石蜡放入小金属盖或铝箔小杯。</li>
+<li>教师把小杯稳定放入约 70°C 热水浴。水面低于小杯边缘，避免水进入石蜡。</li>
+<li>每隔约 1 分钟观察一次，记录“固体较多、固液共存、液体较多”三个阶段。</li>
+<li>石蜡基本变成液体后，由教师用夹具取出，放入冰水中冷却。</li>
+<li>待石蜡重新变硬后，比较熔化前和凝固后的颜色、触感和疏水性。</li>
+</ol>
+<p><strong>预期结果</strong>：石蜡由固态变为液态，再由液态变为固态；前后仍是石蜡，属于物理变化。</p>
+<p><strong>教师追问</strong>：</p>
+<ul>
+<li>熔化后的蜡油是不是另一种物质？依据是什么？</li>
+<li>液态石蜡为什么会随容器改变形状？</li>
+<li>上次蜡烛还发生了燃烧。熔化和燃烧能不能归为同一种变化？</li>
+</ul>
+<h3>实验 2：水的汽化和凝结——冷金属盖上的水从哪里来？</h3>
+<ol>
+<li>在透明烧杯中加入约 100 mL、50–60°C 的温水。</li>
+<li>向金属盖内放入冰块，把盖底彻底擦干。</li>
+<li>将金属盖悬在水面上方约 2–3 cm，不接触水面。</li>
+<li>约 1–3 分钟后观察盖底是否出现水滴。</li>
+<li>分别写下：
+<ul>
+<li><strong>观察</strong>：原来干燥的金属盖底出现液态水滴。</li>
+<li><strong>推论</strong>：部分液态水进入空气成为看不见的水蒸气，遇冷后凝结。</li>
+</ul>
+</li>
+</ol>
+<p><strong>预期结果</strong>：温水发生汽化，水蒸气在冷表面凝结。水蒸气本身看不见；白雾主要是已经凝结的微小液滴。</p>
+<h3>实验 3：大理石和白醋——气泡能否支持“形成了新物质”？</h3>
+<h4>对照设置</h4>
+<table>
+<thead>
+<tr>
+<th>组别</th>
+<th>固体</th>
+<th>液体</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>2.0 g 大理石</td>
+<td>10 mL 水</td>
+<td>判断大理石在水中是否自行冒泡</td>
+</tr>
+<tr>
+<td>B</td>
+<td>无</td>
+<td>10 mL 白醋</td>
+<td>判断白醋本身是否持续冒泡</td>
+</tr>
+<tr>
+<td>C</td>
+<td>2.0 g 大理石</td>
+<td>10 mL 白醋</td>
+<td>实验组</td>
+</tr>
+</tbody>
+</table>
+<h4>操作</h4>
+<ol>
+<li>先预测哪一组会出现持续气泡。</li>
+<li>完成 A、B 两组并观察 60 秒。</li>
+<li>把 C 组大理石放入反应杯，另用小塑料杯量取 10 mL 白醋。</li>
+<li>将反应杯和装有白醋的小塑料杯一起放在秤盘上，记录混合前总质量，作为 <code>t = 0</code>。</li>
+<li>将白醋全部倒入 C 组反应杯，再把空塑料杯放回秤盘。此后始终同时称量两个容器，每 30 秒记录一次质量，共记录 3–5 分钟。</li>
+<li>比较三组的气泡、大理石表面和质量变化。</li>
+</ol>
+<p><strong>预期结果</strong>：C 组出现持续气泡，大理石表面被侵蚀；开放系统的质量可能下降，因为二氧化碳离开秤盘上所称量的系统。A、B 两组不应出现相同的持续反应。</p>
+<p><strong>教师追问</strong>：</p>
+<ul>
+<li>仅凭气泡能否立即断定是化学变化？</li>
+<li>水对照和白醋对照分别排除了什么解释？</li>
+<li>秤上质量下降说明物质消失了吗？气体去了哪里？</li>
+</ul>
+<h3>实验 4：两种澄清溶液能否形成新的白色固体？</h3>
+<h4>对照设置</h4>
+<table>
+<thead>
+<tr>
+<th>组别</th>
+<th>液体 1</th>
+<th>液体 2</th>
+<th>预期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D</td>
+<td>2 mL 醋酸钙溶液</td>
+<td>2 mL 水</td>
+<td>保持较澄清</td>
+</tr>
+<tr>
+<td>E</td>
+<td>2 mL 小苏打溶液</td>
+<td>2 mL 水</td>
+<td>保持较澄清</td>
+</tr>
+<tr>
+<td>F</td>
+<td>2 mL 醋酸钙溶液</td>
+<td>2 mL 小苏打溶液</td>
+<td>形成白色浑浊/固体，可能伴随气泡</td>
+</tr>
+</tbody>
+</table>
+<h4>操作</h4>
+<ol>
+<li>先观察两种溶液是否澄清，再预测混合结果。</li>
+<li>使用专属滴管完成 D、E、F 三组，不交换滴管。</li>
+<li>并排观察 2–3 分钟，记录浑浊、白色固体、气泡和沉降情况。</li>
+<li>如果 F 组产生足够白色固体，将其过滤。</li>
+<li>把滤纸上的固体分成两小份：一份滴水，一份滴白醋；观察滴白醋的一份是否重新冒泡并逐渐减少。</li>
+</ol>
+<p><strong>预期结果</strong>：两种原本澄清的溶液混合后形成白色碳酸钙微粒。白色固体能够过滤，且遇白醋重新冒泡，为“形成了新物质”提供另一种证据。</p>
+<h3>快速观察：化学变化有快有慢</h3>
+<p>比较新铁钉和提前准备的铁锈样品，记录颜色和表面差异。这里只说明铁锈是铁与环境中的物质反应形成的新物质，不在本节完整研究生锈所需条件；控制变量实验留给后续“铁的氧化”课。</p>
+<h2>五、板书与记录框架</h2>
+<h3>板书主线</h3>
+<pre><code class="language-text">核心问题：只是换了状态，还是形成了新物质？
+Did it only change state, or did new substances form?
+
+固态 solid ──melting──→ 液态 liquid ──vaporization──→ 气态 gas
+固态 solid ←─freezing── 液态 liquid ←─condensation──── 气态 gas
+固态 solid ─────────────sublimation──────────────────→ 气态 gas
+固态 solid ←────────────deposition──────────────────── 气态 gas
+
+物理变化 physical change：没有形成新物质
+化学变化 chemical change：形成了新物质
+
+可能的证据：gas formation / precipitate / color change /
+temperature change / light
+
+证据不是定义：沸腾也有气泡；溶解也可能有温度变化。
+</code></pre>
+<h3>记录 1：三态和相变</h3>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>原状态</th>
+<th>新状态</th>
+<th>相变名称</th>
+<th>是否形成新物质</th>
+<th>分类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>石蜡受热</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>蜡油冷却</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>温水进入空气</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>冷金属盖出现水滴</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>记录 2：大理石和白醋</h3>
+<table>
+<thead>
+<tr>
+<th>组别</th>
+<th>是否持续冒泡</th>
+<th>固体表面是否变化</th>
+<th>能排除什么解释</th>
+<th>初步结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A：大理石 + 水</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B：白醋</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C：大理石 + 白醋</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间/s</th>
+<th style="text-align:right">C 组开放系统质量/g</th>
+<th>观察</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right"></td>
+<td>混合前总质量</td>
+</tr>
+<tr>
+<td style="text-align:right">30</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">90</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">120</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">180</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>记录 3：透明溶液混合</h3>
+<table>
+<thead>
+<tr>
+<th>组别</th>
+<th>是否保持澄清</th>
+<th>是否形成白色固体</th>
+<th>是否有气泡</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D：醋酸钙溶液 + 水</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>E：小苏打溶液 + 水</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>F：醋酸钙溶液 + 小苏打溶液</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>结论句式</h3>
+<pre><code class="language-text">我认为这是________变化，因为________。
+我的直接观察是________。
+我根据观察作出的推论是________。
+对照实验帮助我排除了________。
+</code></pre>
+<h2>六、课堂流程串讲</h2>
+<h3>0–10 分钟：从上次蜡烛现象导入</h3>
+<p>展示蜡烛或上次照片，分别记录“出现蜡油”和“发生燃烧”。提出本节核心问题：这两种现象只是状态改变，还是形成了新物质？先记录猜想，不立即给结论。</p>
+<h3>10–20 分钟：三态和粒子动作模型</h3>
+<p>用手势或圆片表示固体、液体和气体：固体粒子靠近并在固定位置附近振动；液体粒子仍靠近但能相互滑动；气体粒子相距较远并独立运动。</p>
+<h3>20–38 分钟：实验 1——石蜡熔化与凝固</h3>
+<p>学生观察固态石蜡，教师放入热水浴。石蜡受热期间画固态和液态粒子图；冷却后比较前后物质身份。</p>
+<h3>38–52 分钟：实验 2——汽化与凝结</h3>
+<p>先确认金属盖底干燥，再观察水滴形成。学生必须分别写一条观察和一条推论，不能写“我看见水蒸气跑上去”。</p>
+<h3>52–62 分钟：完成六种相变图</h3>
+<p>实验直接支持熔化、凝固、汽化和凝结；升华用冷冻室中冰块逐渐变小或干冰举例，凝华用冰箱霜或霜花举例。同时标注吸收或释放能量。</p>
+<h3>62–68 分钟：复习上节溶解证据并整理器材</h3>
+<p>展示上节记录或晶体，用一句话说明：“食盐溶解后仍可从滤液中重新得到，因此溶解是物理变化，但不是熔化，也不是相变。”不重复称量、过滤或蒸发。</p>
+<h3>68–73 分钟：建立判断标准</h3>
+<p>板书物理变化和化学变化的定义，说明“能否恢复”不是本质标准，气泡和沉淀只是证据。</p>
+<h3>73–91 分钟：实验 3——大理石和白醋</h3>
+<p>完成 A、B、C 三个对照及开放系统称量。先陈述观察，再根据对照判断是否有足够证据说明形成了气体和其他新物质。</p>
+<h3>91–108 分钟：实验 4——形成白色固体</h3>
+<p>完成 D、E、F 三组微量混合、过滤和白醋检验。若课前预试不明显，直接跳过，使用铁锈样品和粒子模型替代。</p>
+<h3>108–114 分钟：快反应与慢反应</h3>
+<p>比较大理石遇酸和铁生锈，说明化学变化可以很快，也可以需要数天。</p>
+<h3>114–120 分钟：粒子模型和离堂问题</h3>
+<p>用两种颜色圆片表示：物理变化中粒子身份不变；化学变化中原子重新组合。完成一句带证据和对照的结论。</p>
+<h2>七、预期结果与教师参考</h2>
+<h3>1. 相变为什么属于物理变化？</h3>
+<p>石蜡熔化前后仍由同类石蜡粒子组成，水凝结前后仍是 H₂O。改变的是粒子排列、距离、运动和能量，物质身份没有改变。石蜡是混合物，有一个熔化温度范围，不要求得到纯物质那样平坦的温度平台。</p>
+<h3>2. 大理石遇白醋为什么属于化学变化？</h3>
+<p>大理石中的碳酸钙和白醋中的酸发生反应，形成进入溶液的醋酸钙、水和二氧化碳。二氧化碳离开开放系统后，秤上质量可能下降；总物质并没有消失。</p>
+<h3>3. 为什么醋酸钙和小苏打会出现白色固体？</h3>
+<p>两种澄清溶液中的微粒重新组合，形成难溶的碳酸钙微粒，同时可能形成二氧化碳和水。使用澄清溶液及两个水对照，可以排除“原来就有未溶粉末”的主要干扰。</p>
+<h3>4. 上节食盐溶解为什么仍是物理变化？</h3>
+<p>食盐微粒分散到水中，普通滤纸不能截留；水蒸发后又能得到食盐晶体。这里没有足够证据说明形成了另一种物质。溶解也不是熔化，因为水作为溶剂仍然存在。</p>
+<h3>常见误区</h3>
+<ul>
+<li><strong>“能恢复就是物理变化。”</strong> 改问是否形成了新物质；玻璃破碎很难恢复，仍是物理变化。</li>
+<li><strong>“有气泡就是化学变化。”</strong> 比较水汽化和大理石遇酸，并使用对照判断气体来源。</li>
+<li><strong>“蜡油是另一种物质。”</strong> 冷却后重新得到固态蜡，说明同一种物质可以处于不同状态。</li>
+<li><strong>“食盐溶解就是熔化。”</strong> 调用上节结晶证据，强调溶质分散在溶剂中。</li>
+<li><strong>“秤上质量下降说明物质消失。”</strong> 画出系统边界，指出二氧化碳进入空气。</li>
+<li><strong>“水蒸气是白色的。”</strong> 水蒸气不可见，白雾已经是微小液滴。</li>
+</ul>
+<h2>八、安全、误差与备用方案</h2>
+<h3>安全</h3>
+<ul>
+<li>全程佩戴护目镜，所有湿实验在托盘内完成；实验物质不品尝。</li>
+<li>热水由教师准备和移动。石蜡采用热水浴，不用酒精灯直接加热，不让学生搬动热蜡。</li>
+<li>白醋只使用食品级低浓度产品；不用浓醋酸、醋酸钠或标签不清的酸。</li>
+<li>产气反应保持开放；禁止密封在刚性玻璃容器中。</li>
+<li>醋酸钙和小苏打进入实验器皿后统一标记“不得饮用”。</li>
+<li>不使用已消耗或已液化的氯化钙，不用旧过氧化氢或名称不清的试剂增加现象。</li>
+<li>石蜡冷却后装袋丢弃，不把蜡油倒入水槽。微量低风险反应液用大量清水稀释处理；白色固体连滤纸装袋丢弃，原标签另有要求时以标签为准。</li>
+</ul>
+<h3>主要误差</h3>
+<ul>
+<li>石蜡颗粒太大或水浴温度太低，会使熔化太慢。</li>
+<li>金属盖底没有事先擦干，无法证明水滴是在实验中形成。</li>
+<li>醋酸钙或小苏打溶液本身不澄清，会把原有颗粒误当作新沉淀。</li>
+<li>大理石块太大、表面太光滑，3–5 分钟内的质量变化可能小于电子秤分辨率。</li>
+<li>倒白醋后没有把空塑料杯放回秤盘，会把杯壁残留误当作气体损失。</li>
+</ul>
+<h3>备用方案</h3>
+<ul>
+<li><strong>石蜡熔化太慢</strong>：减小颗粒，使用薄壁铝箔小杯，把水浴保持在 70–75°C；不改为学生直接使用明火。</li>
+<li><strong>冷盖不出现水滴</strong>：增加冰量，把盖底重新擦干并靠近水面，但不接触温水。</li>
+<li><strong>醋酸钙与小苏打预试失败</strong>：跳过该实验，用新铁钉和提前生锈样品、照片及粒子模型完成第二条化学变化证据；不临时换用氯化钙。</li>
+<li><strong>电子秤看不出质量变化</strong>：保留气泡、对照和大理石表面变化作为定性证据，不增加酸量或密闭反应。</li>
+</ul>
+<h2>九、关键术语（Key vocabulary）</h2>
+<ul>
+<li>物质：matter</li>
+<li>状态：state of matter</li>
+<li>固态/固体：solid state / solid</li>
+<li>液态/液体：liquid state / liquid</li>
+<li>气态/气体：gas state / gas</li>
+<li>相变：phase change / change of state</li>
+<li>熔化：melting</li>
+<li>凝固：freezing / solidification</li>
+<li>汽化：vaporization / evaporation</li>
+<li>凝结、液化：condensation</li>
+<li>升华：sublimation</li>
+<li>凝华：deposition</li>
+<li>物理变化：physical change</li>
+<li>化学变化：chemical change</li>
+<li>物质身份：identity of a substance</li>
+<li>新物质：new substance</li>
+<li>反应物：reactant</li>
+<li>生成物：product</li>
+<li>观察：observation</li>
+<li>推论：inference</li>
+<li>证据：evidence</li>
+<li>对照：control</li>
+<li>沉淀：precipitate</li>
+<li>开放系统：open system</li>
+<li>系统边界：system boundary</li>
+<li>碳酸钙：calcium carbonate</li>
+<li>醋酸钙：calcium acetate</li>
+<li>二氧化碳：carbon dioxide</li>
+</ul>
+</main>
+</body>
+</html>
