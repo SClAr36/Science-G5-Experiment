@@ -4,6 +4,10 @@ output/
 *.tmp
 ~$*
 
+# Local agent workspace metadata
+.agent/
+.agents/
+
 # Python caches
 __pycache__/
 *.py[cod]
