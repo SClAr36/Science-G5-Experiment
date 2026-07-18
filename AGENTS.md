@@ -10,7 +10,7 @@
 4. 库存和安全判断必须以 `器材及试剂/试剂识别与保存状态评估.md` 的最新记录为准。
 5. 已经上过的实验只调用已有证据和结论，除非用户明确要求，不重复安排操作。
 6. 每次生成或更新教案时，必须同时生成同名 `.md` 和 `.html`；两者内容必须来自同一版 Markdown。
-7. HTML 沿用 `01-单摆周期.html` 的样式。Markdown 完成后运行：
+7. HTML 沿用 `01-单摆周期.html` 的样式，并加载 `styles/lesson-responsive.css`，确保电脑和 iPad 横竖屏可读。Markdown 完成后运行：
 
    ```bash
    python3 scripts/render_lesson_html.py \

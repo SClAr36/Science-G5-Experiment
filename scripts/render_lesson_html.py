@@ -29,6 +29,8 @@ def main() -> int:
 
     source = input_path.read_text(encoding="utf-8")
     template = template_path.read_text(encoding="utf-8")
+    responsive_path = Path(__file__).resolve().parents[1] / "styles" / "lesson-responsive.css"
+    responsive_css = responsive_path.read_text(encoding="utf-8")
 
     title_match = re.search(r"^#\s+(.+?)\s*$", source, flags=re.MULTILINE)
     if not title_match:
@@ -36,11 +38,19 @@ def main() -> int:
 
     title = title_match.group(1).strip()
     body_source = source[: title_match.start()] + source[title_match.end() :]
+    extracted_styles = re.findall(
+        r"<style(?:\s[^>]*)?>.*?</style>", template, flags=re.DOTALL
+    )
     style_blocks = "\n".join(
-        re.findall(r"<style(?:\s[^>]*)?>.*?</style>", template, flags=re.DOTALL)
+        block for block in extracted_styles if 'id="science-g5-responsive"' not in block
     )
     if not style_blocks:
         raise ValueError(f"No style blocks found in template {template_path}")
+    style_blocks += (
+        '\n<style id="science-g5-responsive">\n'
+        + responsive_css.rstrip()
+        + "\n</style>"
+    )
 
     renderer = MarkdownIt("commonmark", {"html": True, "typographer": False})
     renderer.enable("table")
