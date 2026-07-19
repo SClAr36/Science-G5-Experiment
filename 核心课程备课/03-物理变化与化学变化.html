@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>实际第 3 节：蜡烛发生了两种变化吗？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">实际第 3 节：蜡烛发生了两种变化吗？</h1>
+</header>
+<main>
+<p><strong>Lesson 3: Did the Candle Undergo Two Different Kinds of Change?</strong></p>
+<p><strong>授课状态</strong>：待上；计划作为实际授课第 3 节。</p>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>主题</strong>：三态、相变、物理变化与化学变化<br />
+<em>States of matter, phase changes, physical changes, and chemical changes</em></li>
+<li><strong>建议课时</strong>：115–120 分钟</li>
+<li><strong>核心问题</strong>：看到物质发生变化时，怎样判断它只是改变了状态，还是形成了新物质？<br />
+<em>How can we tell whether matter has only changed its state or whether new substances have formed?</em></li>
+</ul>
+<p>从上次的蜡烛现象出发：先讲熔化、凝固、汽化和凝结，再用碳酸钙与白醋讨论化学变化。反应后的滤液直接用于下一实验。</p>
+<p>实际第 2 节已经做过粗盐/食盐的溶解、过滤和结晶。本节只调用上次的记录、照片或晶体，<strong>不重复做粗盐溶解实验</strong>。</p>
+<p>学生应能：</p>
+<ol>
+<li>比较固、液、气三态，并说出六种相变（phase changes）。</li>
+<li>用“是否形成新物质”区分物理变化（physical change）和化学变化（chemical change）。</li>
+<li>区分观察（observation）、推论（inference）和证据（evidence）。</li>
+<li>用粒子模型说明：相变中粒子身份不变；化学反应（chemical reaction）中原子重新组合。</li>
+<li>认识原子（atom）、元素（element）、分子（molecule）、化合物（compound）、混合物（mixture）和简单化学式，不要求默写或配平。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">教师先掌握的核心问答 / Core Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：怎样判断只是状态改变，还是形成了新物质？</strong></p>
+<p><strong>参考回答：</strong> 没有新物质，是物理变化；形成新物质，是化学变化。气泡、沉淀等只是线索，要结合对照判断。</p>
+<p><strong>问题：蜡烛发生了两种变化吗？</strong></p>
+<p><strong>参考回答：</strong> 是。蜡熔化、凝固是物理变化；蜡蒸气燃烧是化学变化。</p>
+</div>
+</details>
+<h2>二、材料与课前准备</h2>
+<h3>家长只需提前准备</h3>
+<table>
+<thead>
+<tr>
+<th>材料 Material</th>
+<th style="text-align:right">建议准备量 Amount to prepare</th>
+<th style="text-align:right">主课预计用量 Expected core use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通食品级白醋 vinegar，约 5% 酸度</td>
+<td style="text-align:right">约 40 mL</td>
+<td style="text-align:right">约 32 mL</td>
+</tr>
+<tr>
+<td>新鲜食用小苏打 baking soda</td>
+<td style="text-align:right">约 3 g</td>
+<td style="text-align:right">约 1 g</td>
+</tr>
+<tr>
+<td>普通冰块 ice cubes</td>
+<td style="text-align:right">约 100 g，4–6 块</td>
+<td style="text-align:right">3–4 块</td>
+</tr>
+</tbody>
+</table>
+<p>不需要家长准备醋酸、醋酸钠、气球或其他实验试剂。</p>
+<h3>实验室直接取用</h3>
+<ul>
+<li>上节使用过的普通蜡烛、稳固烛台、点火器、灭烛罩或小金属盖</li>
+<li>编号 <code>59</code> 碳酸钙约 2.5 g；也可用编号 <code>89</code> 的洁净大理石小块</li>
+<li>透明烧杯、浅金属盖或小金属碗；可选有边沿的浅玻璃皿或表面皿</li>
+<li>量筒、滴管、药匙、玻璃棒、漏斗、滤纸、反应杯、小塑料杯、反应板或小试管</li>
+<li>电子秤、温度计、秒表、托盘、护目镜、吸水布、标签纸</li>
+<li>约 40–50°C 温水，由教师准备</li>
+<li>彩笔或写有 Ca、C、O、H、Na 的元素符号卡（element-symbol cards）</li>
+<li>实际第 2 节的结晶照片、记录表或保存的食盐晶体</li>
+</ul>
+<blockquote>
+<p><strong>库存限制</strong>：氯化钙已经消耗，本课不使用。现有“无水醋酸钠/乙酸钠”不是醋酸，不能代替白醋。本课不启用任何保存状态不明的试剂。</p>
+</blockquote>
+<h3>上课前摆放</h3>
+<ol>
+<li>蜡烛固定在耐热托盘上，旁边放好灭烛罩；清走周围纸张。</li>
+<li>把约 100 mL、40–50°C 的温水放在教师操作区，冰块暂不放上金属盖。</li>
+<li>将三个反应杯标为 A、B、C；将三个微量反应孔或小试管标为 D、E、F。</li>
+<li>备好 1.0 g 小苏打和 20 mL 水，但不必课前配成溶液。</li>
+<li>漏斗和滤纸放在 C 组旁边，方便反应后直接过滤 4–6 mL 滤液。</li>
+</ol>
+<h2>三、按时间推进的课堂脚本</h2>
+<h3>一眼速查（Quick timeline）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>做什么</th>
+<th>一句话结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–8</td>
+<td>点蜡烛，看蜡油</td>
+<td>熔化是物理变化；燃烧是化学变化</td>
+</tr>
+<tr>
+<td style="text-align:right">8–20</td>
+<td>三态粒子图，等蜡凝固</td>
+<td>固液靠近，气体粒子远；粒子都在运动</td>
+</tr>
+<tr>
+<td style="text-align:right">20–36</td>
+<td>冰盖 + 水</td>
+<td>汽化后遇冷凝结；水蒸气不可见</td>
+</tr>
+<tr>
+<td style="text-align:right">36–48</td>
+<td>六种相变图</td>
+<td>相变不产生新物质</td>
+</tr>
+<tr>
+<td style="text-align:right">48–53</td>
+<td>回看上节食盐</td>
+<td>溶解不是熔化，仍是物理变化</td>
+</tr>
+<tr>
+<td style="text-align:right">53–67</td>
+<td>atom、element 与两类变化</td>
+<td>化学变化重组原子，不改变元素</td>
+</tr>
+<tr>
+<td style="text-align:right">67–98</td>
+<td>碳酸钙 + 白醋</td>
+<td>对照支持发生化学变化</td>
+</tr>
+<tr>
+<td style="text-align:right">98–110</td>
+<td>醋酸钙滤液 + 小苏打</td>
+<td>澄清液可形成白色沉淀</td>
+</tr>
+<tr>
+<td style="text-align:right">110–120</td>
+<td>总结、离堂题、作业</td>
+<td>物理：身份不变；化学：原子重组</td>
+</tr>
+</tbody>
+</table>
+<h3>0–8 分钟：点燃同一支蜡烛，提出核心问题</h3>
+<h4>讲</h4>
+<ul>
+<li><strong>物质（matter）</strong>：组成物体的材料。</li>
+<li><strong>物质身份（identity of a substance）</strong>：这种物质“是什么”。</li>
+<li><strong>物理变化（physical change）</strong>：没有形成新物质。</li>
+<li><strong>化学变化（chemical change）</strong>：形成了新物质。</li>
+</ul>
+<h4>做：蜡烛上的蜡油</h4>
+<ol>
+<li>看未点燃蜡烛：蜡是固态。</li>
+<li>教师点燃，侧面观察 2–3 分钟。</li>
+<li>找到液态蜡油和固液边界。</li>
+<li>分开记录“蜡变成蜡油”和“燃烧”。</li>
+<li>教师熄灭；蜡烛留在原位，下一时段继续看凝固。</li>
+</ol>
+<p><strong>预期观察</strong>：火焰附近形成液态蜡池；熄灭后蜡油逐渐失去流动性并变硬。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：蜡油是不是另一种物质？</strong></p>
+<p><strong>参考回答：</strong> 不是。蜡油是液态蜡，冷却后又变回固态蜡。</p>
+</li>
+<li>
+<p><strong>问题：火焰本身能不能叫“熔化”？</strong></p>
+<p><strong>参考回答：</strong> 不能。熔化是固态变液态；火焰处是燃烧。</p>
+</li>
+<li>
+<p><strong>问题：为什么一支蜡烛可以同时发生两类变化？</strong></p>
+<p><strong>参考回答：</strong> 热量使蜡熔化；进入火焰的蜡蒸气发生燃烧。</p>
+</li>
+</ul>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">核心问题：只是换了状态，还是形成了新物质？
+Did it only change state, or did new substances form?
+
+蜡受热：固态蜡 → 液态蜡油
+Wax heated: solid wax → liquid wax
+
+蜡蒸气燃烧：反应物 → 新物质
+Wax vapor burns: reactants → new substances
+</code></pre>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>观察对象 Object</th>
+<th>直接观察 Observation</th>
+<th>是否可能形成新物质? New substance?</th>
+<th>暂时判断 Initial claim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>火焰附近的蜡</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>熄灭后的蜡油</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>火焰中的燃烧</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h3>8–20 分钟：用粒子动作理解三态，同时等待蜡油凝固</h3>
+<h4>讲</h4>
+<table>
+<thead>
+<tr>
+<th>状态 State</th>
+<th>形状 Shape</th>
+<th>体积 Volume</th>
+<th>简单粒子模型 Simple particle model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固态 solid state</td>
+<td>固定 fixed</td>
+<td>固定 fixed</td>
+<td>粒子靠近，在固定位置附近振动</td>
+</tr>
+<tr>
+<td>液态 liquid state</td>
+<td>随容器改变 takes container shape</td>
+<td>较固定 nearly fixed</td>
+<td>粒子仍靠近，但能相互滑动</td>
+</tr>
+<tr>
+<td>气态 gas state</td>
+<td>不固定 not fixed</td>
+<td>不固定 not fixed</td>
+<td>粒子相距较远，独立运动并充满空间</td>
+</tr>
+</tbody>
+</table>
+<h4>学校课堂三态粒子图（Classroom particle diagrams）</h4>
+<div class="state-particle-grid">
+  <figure>
+    <img src="assets/03-particles-solid-classroom.png" alt="固态粒子排列紧密而有序" />
+    <figcaption><strong>固态（solid）</strong><br />粒子紧密、有序；在固定位置附近振动。<br /><em>Closely packed and ordered; vibrate in place.</em></figcaption>
+  </figure>
+  <figure>
+    <img src="assets/03-particles-liquid-classroom.png" alt="液态粒子靠近但排列无序" />
+    <figcaption><strong>液态（liquid）</strong><br />粒子仍然靠近，但排列无序并能相互滑动。<br /><em>Still close together; disordered and able to slide past one another.</em></figcaption>
+  </figure>
+  <figure>
+    <img src="assets/03-particles-gas-classroom.png" alt="气态粒子间距较大并充满容器" />
+    <figcaption><strong>气态（gas）</strong><br />粒子相距很远，独立运动并充满容器。<br /><em>Far apart; move independently and fill the container.</em></figcaption>
+  </figure>
+</div>
+<blockquote>
+<p>学校 Unit 2 第 8–10 页课堂图。圆球是放大的粒子模型（particle model）；重点看**粒子间距（particle spacing）**和排列，不看真实大小。</p>
+</blockquote>
+<p>用身体或圆片模拟：固体靠近并原位振动；液体靠近但可滑动；气体距离大、自由运动。每隔约 1 分钟回看蜡油。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：液态蜡为什么会随蜡池形状改变？</strong></p>
+<p><strong>参考回答：</strong> 液体无固定形状，粒子能相互滑动。</p>
+</li>
+<li>
+<p><strong>问题：蜡油变硬时，蜡粒子变成了另一种粒子吗？</strong></p>
+<p><strong>参考回答：</strong> 没有。只改变排列、运动和能量，仍是蜡。</p>
+</li>
+<li>
+<p><strong>问题：“粒子不动”能不能用来描述固体？</strong></p>
+<p><strong>参考回答：</strong> 不能。固体粒子仍在原位振动。</p>
+</li>
+<li>
+<p><strong>问题：液体粒子是不是已经像气体粒子一样相距很远？</strong></p>
+<p><strong>参考回答：</strong> 不是。液体粒子仍靠近；气体粒子距离明显更大。</p>
+</li>
+<li>
+<p><strong>问题：相变时粒子本身会变大或变小吗？</strong></p>
+<p><strong>参考回答：</strong> 不会。主要改变的是间距、排列、运动和能量。</p>
+</li>
+</ul>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">固态 solid：固定形状 + 固定体积
+液态 liquid：无固定形状 + 较固定体积
+气态 gas：无固定形状 + 无固定体积
+
+蜡：固态 --熔化 melting--&gt; 液态
+蜡：液态 --凝固 freezing--&gt; 固态
+</code></pre>
+<p>把上一张记录表中“熄灭后的蜡油”补完整：液态 → 固态，凝固（freezing / solidification），没有形成新物质，因此是物理变化。</p>
+</div>
+</details>
+<h3>20–36 分钟：水的汽化与凝结——冷盖底面的水从哪里来？</h3>
+<p><img src="assets/03-water-condensation-setup.png" alt="汽化与凝结实验装置示意图" /></p>
+<h4>装置</h4>
+<ul>
+<li>透明烧杯 1 个</li>
+<li>常温水或 35–40°C 微温水约 100 mL</li>
+<li>有浅边沿的金属盖或小金属碗 1 个</li>
+<li>冰块 3–4 块</li>
+<li>吸水布 1 块</li>
+</ul>
+<p>金属盖凹面朝上装冰，擦干的底面朝向水。只观察<strong>盖底</strong>水滴，别让融冰水流下来。</p>
+<h4>做</h4>
+<ol>
+<li>烧杯加水约 100 mL。微温水现象更快；常温水也可。</li>
+<li>盖内放冰 3–4 块，彻底擦干盖底。</li>
+<li>盖子水平放在杯口，盖底距水面约 2–3 cm，不接触水。</li>
+<li>微温水观察 1–3 分钟；常温水可等 5–10 分钟。</li>
+<li>先写观察，再写推论。</li>
+</ol>
+<p><strong>预期结果</strong>：水汽化为不可见水蒸气；水蒸气遇冷凝结（condensation）成液滴。冷盖也会凝结室内原有水蒸气，因此本实验说明“遇冷凝结”，不证明水滴全部来自杯中。</p>
+<h4>玻璃替代</h4>
+<p>可用有边沿的浅玻璃皿或表面皿（shallow glass dish / watch glass）。不推荐无边平玻璃片：融冰水易流到底面。金属盖仍是首选。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：冷盖底面的水从哪里来？</strong></p>
+<p><strong>参考回答：</strong> 空气中的水蒸气遇冷，在盖底凝结成液滴；杯中水的汽化会补充水蒸气。</p>
+</li>
+<li>
+<p><strong>问题：怎么排除水滴是盖子原来残留的水？</strong></p>
+<p><strong>参考回答：</strong> 开始前擦干盖底，并确保不接触水面。</p>
+</li>
+<li>
+<p><strong>问题：怎么排除水滴是上方冰块融化后流下来的？</strong></p>
+<p><strong>参考回答：</strong> 用有边沿的盖子、保持水平，并检查边缘。</p>
+</li>
+<li>
+<p><strong>问题：我们真的“看见水蒸气上升”了吗？</strong></p>
+<p><strong>参考回答：</strong> 没有。看见的是液滴；水蒸气不可见。</p>
+</li>
+</ul>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">观察 observation：原来干燥的冷盖底面出现水滴。
+推论 inference：水先汽化为不可见水蒸气，再遇冷凝结。
+
+液态 water --汽化 vaporization--&gt; 气态 water vapor
+气态 water vapor --凝结 condensation--&gt; 液态 water
+</code></pre>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>项目 Item</th>
+<th>学生记录 Student record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>盖底实验前 Before</td>
+<td></td>
+</tr>
+<tr>
+<td>1–3 分钟后的直接观察 Observation</td>
+<td></td>
+</tr>
+<tr>
+<td>水的状态方向 State direction</td>
+<td></td>
+</tr>
+<tr>
+<td>根据观察作出的推论 Inference</td>
+<td></td>
+</tr>
+<tr>
+<td>是否形成新物质 New substance?</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h3>36–48 分钟：把六种相变放到同一张图里</h3>
+<h4>讲</h4>
+<p><strong>相变（phase change / change of state）</strong>：同一种物质改变状态；身份不变，所以是物理变化。</p>
+<table>
+<thead>
+<tr>
+<th>状态方向 Direction</th>
+<th>中文</th>
+<th>English</th>
+<th>能量方向 Energy transfer</th>
+<th>本课例子 Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固态 solid → 液态 liquid</td>
+<td>熔化</td>
+<td>melting</td>
+<td>吸收能量 absorbs energy</td>
+<td>蜡受热形成蜡油</td>
+</tr>
+<tr>
+<td>液态 liquid → 固态 solid</td>
+<td>凝固</td>
+<td>freezing / solidification</td>
+<td>释放能量 releases energy</td>
+<td>蜡油冷却变硬</td>
+</tr>
+<tr>
+<td>液态 liquid → 气态 gas</td>
+<td>汽化</td>
+<td>vaporization / evaporation</td>
+<td>吸收能量 absorbs energy</td>
+<td>温水进入空气</td>
+</tr>
+<tr>
+<td>气态 gas → 液态 liquid</td>
+<td>凝结/液化</td>
+<td>condensation</td>
+<td>释放能量 releases energy</td>
+<td>冷盖底面出现水滴</td>
+</tr>
+<tr>
+<td>固态 solid → 气态 gas</td>
+<td>升华</td>
+<td>sublimation</td>
+<td>吸收能量 absorbs energy</td>
+<td>冷冻室中的冰逐渐变小；干冰作生活例子</td>
+</tr>
+<tr>
+<td>气态 gas → 固态 solid</td>
+<td>凝华</td>
+<td>deposition</td>
+<td>释放能量 releases energy</td>
+<td>冰箱霜或冬季霜花</td>
+</tr>
+</tbody>
+</table>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：六种相变都形成新物质了吗？</strong></p>
+<p><strong>参考回答：</strong> 没有。物质身份不变。</p>
+</li>
+<li>
+<p><strong>问题：水蒸气变成液滴叫凝固吗？</strong></p>
+<p><strong>参考回答：</strong> 不叫。气→液是凝结；液→固才是凝固。</p>
+</li>
+<li>
+<p><strong>问题：“凝华”和“凝结”有什么不同？</strong></p>
+<p><strong>参考回答：</strong> 凝华是气态直接变固态；凝结是气态变液态。</p>
+</li>
+<li>
+<p><strong>问题：干冰升华以后还是二氧化碳吗？</strong></p>
+<p><strong>参考回答：</strong> 是。只是固态 CO₂ 变成气态 CO₂。</p>
+</li>
+</ul>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书与记录 / Board notes &amp; record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">固态 solid ──melting──→ 液态 liquid ──vaporization──→ 气态 gas
+固态 solid ←─freezing── 液态 liquid ←─condensation──── 气态 gas
+固态 solid ─────────────sublimation──────────────────→ 气态 gas
+固态 solid ←────────────deposition──────────────────── 气态 gas
+
+相变 phase change = 物理变化 physical change
+原因 reason：物质身份不变 identity stays the same
+</code></pre>
+<p>学生在上表中圈出本课直接观察到的四种相变：熔化、凝固、汽化和凝结；升华与凝华只用例子说明。</p>
+</div>
+</details>
+<h3>48–53 分钟：调用上节的食盐证据，不重复实验</h3>
+<p>展示实际第 2 节的结晶照片、记录或食盐晶体。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：食盐溶解是物理变化吗？</strong></p>
+<p><strong>参考回答：</strong> 是。食盐分散到水中，蒸发水后仍能得到食盐。</p>
+</li>
+<li>
+<p><strong>问题：食盐溶解是不是熔化？</strong></p>
+<p><strong>参考回答：</strong> 不是。溶解需要溶剂；熔化是固体本身变液体。</p>
+</li>
+<li>
+<p><strong>问题：“很难恢复”能不能作为化学变化的定义？</strong></p>
+<p><strong>参考回答：</strong> 不能。玻璃破碎难恢复，但仍是物理变化。</p>
+</li>
+</ul>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">溶解 dissolving ≠ 熔化 melting
+能否恢复 reversibility ≠ 判断本质 definition
+判断标准：是否形成新物质?
+Criterion: Did new substances form?
+</code></pre>
+</div>
+</details>
+<h3>53–67 分钟：对齐学校 notes——atom、element 与两类变化</h3>
+<h4>讲</h4>
+<ul>
+<li><strong>物质（matter）<strong>的基本单位是</strong>原子（atom）</strong>。</li>
+<li>不同种类的原子叫不同<strong>元素（element）</strong>，如 Ca、C、O、H、Na。</li>
+<li>原子结合可形成<strong>分子（molecule）</strong>；不同元素组成的纯物质可叫<strong>化合物（compound）</strong>。</li>
+<li>**混合物（mixture）**含多种物质，比例可变；白醋和蜡烛蜡都是混合物。</li>
+<li><strong>物理变化（physical change）</strong>：物质身份不变，不形成新物质。</li>
+<li><strong>化学变化（chemical change）</strong>：原子重新组合，形成新物质；元素种类不变。</li>
+</ul>
+<blockquote>
+<p>以上对应学校 Unit 2《Phases of Matter》课堂内容。主课到此为止；酸、碱、盐移到可选拓展。</p>
+</blockquote>
+<h4>桌面速看</h4>
+<table>
+<thead>
+<tr>
+<th>物质 Substance</th>
+<th>Formula</th>
+<th>元素 Elements</th>
+<th>只看什么 Key point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>白醋 vinegar</td>
+<td>无单一化学式</td>
+<td>多种</td>
+<td>mixture</td>
+</tr>
+<tr>
+<td>碳酸钙 calcium carbonate</td>
+<td>CaCO₃</td>
+<td>Ca、C、O</td>
+<td>compound</td>
+</tr>
+<tr>
+<td>二氧化碳 carbon dioxide</td>
+<td>CO₂</td>
+<td>C、O</td>
+<td>compound</td>
+</tr>
+<tr>
+<td>水 water</td>
+<td>H₂O</td>
+<td>H、O</td>
+<td>compound</td>
+</tr>
+</tbody>
+</table>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：atom 和 element 有什么关系？</strong></p>
+<p><strong>参考回答：</strong> atom 是物质的基本单位；不同类别的 atom 是不同 element。</p>
+</li>
+<li>
+<p><strong>问题：物理变化会改变 element 吗？</strong></p>
+<p><strong>参考回答：</strong> 不会，也不会形成新物质。</p>
+</li>
+<li>
+<p><strong>问题：化学变化会产生新的 element 吗？</strong></p>
+<p><strong>参考回答：</strong> 不会。原子只是重新组合，形成新的物质。</p>
+</li>
+<li>
+<p><strong>问题：气泡或温度变化能单独证明化学变化吗？</strong></p>
+<p><strong>参考回答：</strong> 不能。它们只是线索，还要看对照和是否形成新物质。</p>
+</li>
+</ul>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">物质 matter → 原子 atoms
+不同类别的 atom = 不同元素 elements
+
+物理变化 physical change：无新物质
+化学变化 chemical change：atoms rearrange → 新物质
+
+化学变化不改变元素种类。
+A chemical change does not change one element into another.
+</code></pre>
+</div>
+</details>
+<h3>67–98 分钟：碳酸钙和白醋——怎样把多条证据连起来？</h3>
+<h4>对照</h4>
+<table>
+<thead>
+<tr>
+<th>组别 Group</th>
+<th style="text-align:right">固体 Solid</th>
+<th style="text-align:right">液体 Liquid</th>
+<th>用途 Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align:right">1.0 g 碳酸钙</td>
+<td style="text-align:right">15 mL 水</td>
+<td>判断碳酸钙遇水是否自行持续冒泡</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align:right">无</td>
+<td style="text-align:right">15 mL 白醋</td>
+<td>判断白醋单独放置是否持续冒泡</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align:right">1.0 g 碳酸钙</td>
+<td style="text-align:right">15 mL 白醋</td>
+<td>实验组；滤液留给下一实验</td>
+</tr>
+</tbody>
+</table>
+<p>另备反应杯、小塑料量杯、电子秤、秒表、漏斗、滤纸、玻璃棒和吸水布。</p>
+<h4>做</h4>
+<ol>
+<li>预测哪组持续冒泡。</li>
+<li>做 A、B，观察 60 秒。</li>
+<li>C 组：反应杯装 1.0 g CaCO₃；小杯量 15 mL 白醋。</li>
+<li>两杯一起称量，记 <code>t = 0</code>。</li>
+<li>倒入白醋，空杯放回秤盘；每 30 秒记录，共 3–5 分钟。</li>
+<li>比较气泡、固体和质量。</li>
+<li>等待时配小苏打溶液：1.0 g + 20 mL 水；不清则取上层液。</li>
+<li>冒泡减弱后确保略有 CaCO₃ 剩余；否则补少量。</li>
+<li>过滤 4–6 mL：滤液含醋酸钙，留给下一实验。</li>
+</ol>
+<p><strong>预期结果</strong>：只有 C 持续冒泡，CaCO₃ 减少；开放系统（open system）质量可能下降；过滤得到含醋酸钙的滤液。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 1：现象与对照 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>组别 Group</th>
+<th>持续气泡 Continuous bubbles?</th>
+<th>固体变化 Solid change?</th>
+<th>排除的解释 Explanation ruled out</th>
+<th>初步结论 Initial claim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A：碳酸钙 + 水</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B：白醋</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C：碳酸钙 + 白醋</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 2：开放系统质量 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间 Time/s</th>
+<th style="text-align:right">C 组质量 Open-system mass/g</th>
+<th>直接观察 Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right"></td>
+<td>混合前总质量</td>
+</tr>
+<tr>
+<td style="text-align:right">30</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">90</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">120</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">180</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：仅凭气泡能否立即断定发生化学变化？</strong></p>
+<p><strong>参考回答：</strong> 不能。气泡只说明有气体；还要看对照、固体变化和后续滤液。</p>
+</li>
+<li>
+<p><strong>问题：A、B 对照分别排除了什么？</strong></p>
+<p><strong>参考回答：</strong> A 排除“遇水就冒泡”；B 排除“白醋自己冒泡”。</p>
+</li>
+<li>
+<p><strong>问题：秤上质量下降说明物质消失了吗？</strong></p>
+<p><strong>参考回答：</strong> 没有。生成的气体离开了称量系统。</p>
+</li>
+<li>
+<p><strong>问题：我们有没有用本装置独立确认气体就是二氧化碳？</strong></p>
+<p><strong>参考回答：</strong> 没有。气泡只说明有气体；根据“碳酸盐 + 酸”的已知规律，把主要气体写作 CO₂。</p>
+</li>
+<li>
+<p><strong>问题：能不能用熄灭火焰或指示剂变色来确认二氧化碳？</strong></p>
+<p><strong>参考回答：</strong> 不能。它们都不是 CO₂ 的专一证据。</p>
+</li>
+</ul>
+</div>
+</details>
+<h4>讲：化学反应中发生了什么？</h4>
+<pre><code class="language-text">反应物 Reactants:
+碳酸钙 calcium carbonate + 醋酸 acetic acid
+
+生成物 Products:
+醋酸钙 calcium acetate + 水 water + 二氧化碳 carbon dioxide
+
+CaCO₃ + 2 CH₃COOH → Ca(CH₃COO)₂ + H₂O + CO₂↑
+</code></pre>
+<ul>
+<li>左边是<strong>反应物（reactants）</strong>，右边是<strong>生成物（products）</strong>。</li>
+<li>化学反应让原子重新组合（rearrangement of atoms），不制造新元素。</li>
+<li>同色圈出两边的 Ca、C、O、H。</li>
+<li>只读方程式，不要求配平。</li>
+</ul>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">观察 observation：持续气泡、固体减少、质量可能下降
+对照 control：CaCO₃ + water / vinegar alone
+推论 inference：两种反应物相互作用并产生气体
+
+开放系统 open system：物质可穿过系统边界
+
+化学反应 chemical reaction：
+反应物 reactants → 原子重新组合 → 生成物 products
+</code></pre>
+</div>
+</details>
+<h3>98–110 分钟：让刚生成的醋酸钙继续反应</h3>
+<h4>对照</h4>
+<p>使用上一时段的醋酸钙滤液和小苏打溶液。</p>
+<table>
+<thead>
+<tr>
+<th>组别 Group</th>
+<th>液体 1 Liquid 1</th>
+<th>液体 2 Liquid 2</th>
+<th>用途与预期 Purpose and prediction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D</td>
+<td>2 mL 醋酸钙滤液</td>
+<td>2 mL 水</td>
+<td>水对照；保持较澄清</td>
+</tr>
+<tr>
+<td>E</td>
+<td>2 mL 小苏打溶液</td>
+<td>2 mL 水</td>
+<td>水对照；保持较澄清</td>
+</tr>
+<tr>
+<td>F</td>
+<td>2 mL 醋酸钙滤液</td>
+<td>2 mL 小苏打溶液</td>
+<td>实验组；可能形成白色浑浊或固体</td>
+</tr>
+</tbody>
+</table>
+<h4>做</h4>
+<ol>
+<li>看两种溶液是否澄清，预测 D、E、F。</li>
+<li>用专属滴管完成三组，观察 2–3 分钟。</li>
+<li>记录澄清、白色固体、气泡和沉降。</li>
+<li>固体够多才过滤；分两份，一份滴水，一份滴 1–2 mL 白醋。</li>
+<li>现象不清楚就如实记录，不换试剂。</li>
+</ol>
+<p><strong>预期结果</strong>：F 形成白色碳酸钙沉淀（precipitate）；D、E 保持较澄清。固体遇白醋可能再次冒泡。</p>
+<p>教师参考净变化：</p>
+<pre><code class="language-text">Ca²⁺ + 2 HCO₃⁻ → CaCO₃↓ + CO₂↑ + H₂O
+</code></pre>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：两种澄清溶液能形成新的白色固体吗？</strong></p>
+<p><strong>参考回答：</strong> 可以。钙离子与碳酸氢根相关粒子反应，形成难溶 CaCO₃。</p>
+</li>
+<li>
+<p><strong>问题：为什么需要 D、E 两个水对照？</strong></p>
+<p><strong>参考回答：</strong> 排除“原液已有粉末”或“加任何液体都会浑浊”。</p>
+</li>
+<li>
+<p><strong>问题：白色浑浊为什么比单纯气泡更有帮助？</strong></p>
+<p><strong>参考回答：</strong> 它显示两个较澄清液体中形成了可沉降、可过滤的固体。</p>
+</li>
+<li>
+<p><strong>问题：如果没有明显白色固体，是不是整节课失败了？</strong></p>
+<p><strong>参考回答：</strong> 不是。如实记录；前面的实验仍有证据。</p>
+</li>
+</ul>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>组别 Group</th>
+<th>保持澄清 Remains clear?</th>
+<th>白色固体 White solid?</th>
+<th>气泡 Bubbles?</th>
+<th>结论 Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D：醋酸钙滤液 + 水</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>E：小苏打溶液 + 水</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>F：醋酸钙滤液 + 小苏打溶液</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">沉淀 precipitate：溶液中形成的难溶固体
+
+clear solution + clear solution → white solid
+澄清溶液 + 澄清溶液 → 白色固体
+
+新性质 different properties → 支持形成新物质
+</code></pre>
+</div>
+</details>
+<h3>110–120 分钟：回到蜡烛，完成全课结论</h3>
+<h4>收束</h4>
+<ol>
+<li>蜡相变：粒子身份不变，只改排列与运动。</li>
+<li>化学反应：Ca、C、O、H 卡片重新组合。</li>
+<li><strong>原子守恒（conservation of atoms）</strong>：原子不凭空产生或消失。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：相变为什么是物理变化？</strong></p>
+<p><strong>参考回答：</strong> 只改变状态和粒子排列，没有新物质。</p>
+</li>
+<li>
+<p><strong>问题：蜡烛上哪一部分是物理变化？</strong></p>
+<p><strong>参考回答：</strong> 固态蜡熔化为蜡油、蜡油冷却凝固。</p>
+</li>
+<li>
+<p><strong>问题：哪一部分是化学变化？</strong></p>
+<p><strong>参考回答：</strong> 蜡蒸气在火焰中燃烧。</p>
+</li>
+<li>
+<p><strong>问题：为什么“有气泡”不是化学变化的定义？</strong></p>
+<p><strong>参考回答：</strong> 汽化和沸腾也有气泡；要继续判断是否有新物质。</p>
+</li>
+<li>
+<p><strong>问题：新物质是不是新元素？</strong></p>
+<p><strong>参考回答：</strong> 不是。只是原子重新组合，元素种类不变。</p>
+</li>
+</ul>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">物理变化 physical change：没有形成新物质
+化学变化 chemical change：形成了新物质
+
+物理变化：粒子身份不变，排列 / 距离 / 运动可改变
+Physical change: particle identity stays the same.
+
+化学变化：原子重新组合成生成物
+Chemical change: atoms rearrange to form products.
+
+证据链 evidence chain：
+观察 observation + 对照 control + 性质变化 property change
+</code></pre>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">离堂记录与参考答案 / Exit record &amp; answers</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">我认为________是物理 / 化学变化，因为________。
+I think ________ is a physical / chemical change because ________.
+
+我的直接观察是________。
+My direct observation is ________.
+
+我根据观察作出的推论是________。
+My inference from the observation is ________.
+
+对照实验帮助我排除了________。
+The control helped me rule out ________.
+</code></pre>
+<p><strong>参考答案示例</strong>：蜡熔化是物理变化，因为没有新物质；碳酸钙与白醋是化学变化，因为对照显示只有二者接触时持续冒泡、固体减少，滤液还能形成白色固体。</p>
+</div>
+</details>
+<h4>课后作业：寻找身边的变化（Homework: Changes around us）</h4>
+<p><strong>任务（task）</strong>：找 **2 个物理变化（physical changes）**和 <strong>2 个化学变化（chemical changes）</strong>。可拍照、画图或写字；下次选一个分享。只观察，不主动制造反应。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号 No.</th>
+<th>身边的现象 Everyday change</th>
+<th>我的直接观察 Observation</th>
+<th>是否形成新物质? New substance?</th>
+<th>分类 Classification</th>
+<th>判断理由 Evidence / reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>physical / chemical</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>physical / chemical</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>physical / chemical</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>physical / chemical</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>判断三问</strong>：看到了什么（observation）？有没有新物质（new substance）？证据是什么（evidence）？</p>
+<p><strong>下次课分享句式（sharing sentence frame）</strong>：</p>
+<pre><code class="language-text">我观察到________________。
+I observed ________________.
+
+我认为这是物理 / 化学变化，因为________________。
+I think it is a physical / chemical change because ________________.
+
+我最有把握的证据是________________。
+My strongest evidence is ________________.
+</code></pre>
+<p><strong>示范，不要求照抄</strong>：</p>
+<ul>
+<li>冰熔化（ice melting）：仍是 H₂O，物理变化。</li>
+<li>铁生锈（iron rusting）：形成锈，化学变化。</li>
+</ul>
+<p><strong>安全（safety）</strong>：不点火、不用炉灶、不混合清洁剂或药品、不品尝材料。只观察；火焰和电器必须由成人操作。</p>
+<p><strong>下节课处理</strong>：遇到模糊例子，先问“新物质证据是什么”；证据不足可答“暂时不能确定（not enough evidence yet）”。</p>
+<h2>四、如果提前完成：按剩余时间选择拓展</h2>
+<p>先完成主课，再选拓展。目标是“见过、会读”，不要求背诵或配平。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">剩余时间 Time available</th>
+<th>选择 Choice</th>
+<th>停止点 Stopping point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">约 5 分钟</td>
+<td>E：相变情境快问快答</td>
+<td>能说状态方向和相变名称</td>
+</tr>
+<tr>
+<td style="text-align:right">约 10 分钟</td>
+<td>A：元素与化学式侦探</td>
+<td>能认元素符号、下标并数简单原子</td>
+</tr>
+<tr>
+<td style="text-align:right">约 20 分钟</td>
+<td>A + B：读反应方程式</td>
+<td>能读反应物、生成物、箭头和系数</td>
+</tr>
+<tr>
+<td style="text-align:right">约 30 分钟</td>
+<td>A + B + C：酸、碱、盐名称游戏</td>
+<td>能用本课实物作初步分类</td>
+</tr>
+<tr>
+<td style="text-align:right">约 40 分钟以上</td>
+<td>A + B + C，再视材料选择 D</td>
+<td>D 只作可选微量实验</td>
+</tr>
+</tbody>
+</table>
+<h3>A. 元素与化学式侦探（Element and chemical-formula detective，8–10 分钟）</h3>
+<p>摆出 <code>H₂O</code>、<code>CO₂</code>、<code>CaCO₃</code>、<code>NaHCO₃</code> 四张卡，让学生圈出元素符号并数原子。</p>
+<ul>
+<li>**下标（subscript）**表示原子个数；没有下标按 1 计。</li>
+<li>元素符号首字母大写；<code>Ca</code> 是一个符号，不是 <code>C + a</code>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>化学式 Formula</th>
+<th>元素 Elements</th>
+<th>原子数 Atom count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H₂O</td>
+<td>H、O</td>
+<td>2 H，1 O</td>
+</tr>
+<tr>
+<td>CO₂</td>
+<td>C、O</td>
+<td>1 C，2 O</td>
+</tr>
+<tr>
+<td>CaCO₃</td>
+<td>Ca、C、O</td>
+<td>1 Ca，1 C，3 O</td>
+</tr>
+<tr>
+<td>NaHCO₃</td>
+<td>Na、H、C、O</td>
+<td>1 Na，1 H，1 C，3 O</td>
+</tr>
+</tbody>
+</table>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：<code>CO₂</code> 中有几个元素、几个原子？</strong></p>
+<p><strong>参考回答：</strong> 两种元素；共 3 个原子：1 C、2 O。</p>
+</li>
+<li>
+<p><strong>问题：白醋能写成 <code>CH₃COOH</code> 吗？</strong></p>
+<p><strong>参考回答：</strong> 不能。它是醋酸的化学式；白醋是混合物。</p>
+</li>
+</ul>
+</div>
+</details>
+<h3>B. 把方程式读成“化学短句”（Read a chemical equation，10–12 分钟）</h3>
+<pre><code class="language-text">CaCO₃ + 2 CH₃COOH → Ca(CH₃COO)₂ + H₂O + CO₂↑
+</code></pre>
+<ul>
+<li>**加号（plus sign, <code>+</code>）**读“和……反应”。</li>
+<li>**反应箭头（reaction arrow, <code>→</code>）**读作“生成（forms / yields）”，不是等号。</li>
+<li>**系数（coefficient）**写在化学式前，乘整个化学式。</li>
+<li>**括号（parentheses）**外的下标乘括号内整组。</li>
+<li><code>↑</code> 表示气体逸出（gas evolved）；<code>↓</code> 表示沉淀形成（precipitate formed）。</li>
+</ul>
+<p>共同核对原子数：</p>
+<table>
+<thead>
+<tr>
+<th>元素 Element</th>
+<th style="text-align:right">左边 Left</th>
+<th style="text-align:right">右边 Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ca</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align:right">1 + 2 × 2 = 5</td>
+<td style="text-align:right">4 + 1 = 5</td>
+</tr>
+<tr>
+<td>H</td>
+<td style="text-align:right">2 × 4 = 8</td>
+<td style="text-align:right">6 + 2 = 8</td>
+</tr>
+<tr>
+<td>O</td>
+<td style="text-align:right">3 + 2 × 2 = 7</td>
+<td style="text-align:right">4 + 1 + 2 = 7</td>
+</tr>
+</tbody>
+</table>
+<p>两边每种原子数相同，叫<strong>配平的化学方程式（balanced chemical equation）</strong>。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：为什么醋酸前写 2？</strong></p>
+<p><strong>参考回答：</strong> 使两边每种原子数相同。</p>
+</li>
+<li>
+<p><strong>问题：能不能把 <code>CO₂</code> 改成 <code>CO₃</code> 来凑数字？</strong></p>
+<p><strong>参考回答：</strong> 不能。改下标会改变物质；只能调系数。</p>
+</li>
+<li>
+<p><strong>问题：为什么原子数相同，物质却不同？</strong></p>
+<p><strong>参考回答：</strong> 原子组合方式改变了。</p>
+</li>
+<li>
+<p><strong>问题：学生需要自己配平吗？</strong></p>
+<p><strong>参考回答：</strong> 不需要，只要求会读并理解原子守恒。</p>
+</li>
+</ul>
+</div>
+</details>
+<h3>C. 酸、碱、盐名称游戏（Acid–base–salt naming game，8–10 分钟）</h3>
+<blockquote>
+<p><strong>可选内容（optional）</strong>：学校本单元主 notes 没有把酸、碱、盐作为本课核心；主课完成且时间充足时再讲。</p>
+</blockquote>
+<ul>
+<li><strong>酸（acid）</strong>：本课例子是白醋中的醋酸（acetic acid）。</li>
+<li><strong>碱（base）</strong>：本课只作概念认识；肥皂水可作碱性溶液（basic solution）的生活例子。</li>
+<li><strong>盐（salt）</strong>：由正、负离子组成；食盐只是盐类之一。</li>
+<li>小苏打是盐，但其水溶液略呈碱性；“组成分类”和“溶液性质”可以同时成立。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>卡片 Card</th>
+<th>放置位置 Placement</th>
+<th>教师说明 Teacher note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>醋酸 acetic acid</td>
+<td>酸 acid</td>
+<td>白醋中提供酸性的主要物质</td>
+</tr>
+<tr>
+<td>白醋 vinegar</td>
+<td>含酸混合物 acid-containing mixture</td>
+<td>不是纯醋酸</td>
+</tr>
+<tr>
+<td>碳酸钙 calcium carbonate</td>
+<td>盐 salt</td>
+<td>calcium + carbonate</td>
+</tr>
+<tr>
+<td>小苏打 sodium bicarbonate</td>
+<td>盐 salt</td>
+<td>盐的组成与溶液略呈碱性可同时成立</td>
+</tr>
+<tr>
+<td>醋酸钙 calcium acetate</td>
+<td>盐 salt</td>
+<td>本课现场生成</td>
+</tr>
+<tr>
+<td>肥皂水 soapy water</td>
+<td>碱性混合物 basic mixture</td>
+<td>只作生活例子，不作检测试剂</td>
+</tr>
+</tbody>
+</table>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：名字里没有“盐”字，为什么碳酸钙也是盐？</strong></p>
+<p><strong>参考回答：</strong> “盐”是化学分类，不看中文名字里有没有“盐”。</p>
+</li>
+<li>
+<p><strong>问题：酸和碱都很危险吗？</strong></p>
+<p><strong>参考回答：</strong> 不一定；风险取决于物质、浓度和用量。</p>
+</li>
+<li>
+<p><strong>问题：现在要不要讲 pH？</strong></p>
+<p><strong>参考回答：</strong> 只说 pH 标度（pH scale）表示酸碱程度；本课不测。</p>
+</li>
+</ul>
+</div>
+</details>
+<h3>D. 可选微量实验：小苏打也会与白醋反应（Optional microscale experiment，8–12 分钟）</h3>
+<p>主课完成且材料有剩余才做。</p>
+<table>
+<thead>
+<tr>
+<th>组别 Group</th>
+<th style="text-align:right">固体 Solid</th>
+<th style="text-align:right">液体 Liquid</th>
+<th>用途 Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td style="text-align:right">0.3 g 小苏打</td>
+<td style="text-align:right">5 mL 水</td>
+<td>水对照 water control</td>
+</tr>
+<tr>
+<td>J</td>
+<td style="text-align:right">0.3 g 小苏打</td>
+<td style="text-align:right">5 mL 白醋</td>
+<td>实验组 experimental group</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>两个开放小杯各加 0.3 g 小苏打。</li>
+<li>I 加水，J 加白醋；观察 60 秒，不密封。</li>
+<li>先记现象，再作推论。</li>
+</ol>
+<pre><code class="language-text">碳酸氢钠 + 醋酸 → 醋酸钠 + 水 + 二氧化碳
+sodium bicarbonate + acetic acid → sodium acetate + water + carbon dioxide
+
+NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂↑
+</code></pre>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<ul>
+<li>
+<p><strong>问题：为什么需要水对照？</strong></p>
+<p><strong>参考回答：</strong> 排除“小苏打遇任何液体都冒泡”。</p>
+</li>
+<li>
+<p><strong>问题：气泡是否独立确认了二氧化碳？</strong></p>
+<p><strong>参考回答：</strong> 没有。气泡只说明产生气体。</p>
+</li>
+</ul>
+</div>
+</details>
+<h3>E. 相变情境快问快答（Phase-change quick challenge，5 分钟）</h3>
+<table>
+<thead>
+<tr>
+<th>情境 Situation</th>
+<th>参考答案 Reference answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>蜡油冷却变硬 wax cools and hardens</td>
+<td>液态 → 固态；凝固 freezing；无新物质</td>
+</tr>
+<tr>
+<td>冰箱内壁结霜 frost forms in a freezer</td>
+<td>气态 → 固态；凝华 deposition；仍是水</td>
+</tr>
+<tr>
+<td>冷杯外出现水滴 droplets form outside a cold cup</td>
+<td>气态 → 液态；凝结 condensation；仍是水</td>
+</tr>
+<tr>
+<td>冷冻室冰块慢慢变小 an ice cube shrinks in a freezer</td>
+<td>固态 → 气态；升华 sublimation；仍是水</td>
+</tr>
+<tr>
+<td>干冰直接变成气体 dry ice changes into gas</td>
+<td>固态 → 气态；升华 sublimation；仍是二氧化碳</td>
+</tr>
+</tbody>
+</table>
+<p><strong>最后问题：为什么“出现气体”不能自动说明化学变化？</strong></p>
+<p><strong>参考回答：</strong> 汽化和升华也形成气态物质，但没有新物质。</p>
+<h2>五、教师科学边界与常见误区速查</h2>
+<h3>本课证据应怎样准确表述？</h3>
+<ol>
+<li>相变前后身份不变，是物理变化。</li>
+<li>气泡只说明有气体，不能确认气体身份。</li>
+<li>对照、固体减少、质量变化和后续滤液共同支持化学变化。</li>
+<li>根据“碳酸盐 + 酸”的已知规律写 CO₂；本课未独立鉴定。</li>
+<li>澄清液形成可过滤固体，是另一条证据。</li>
+</ol>
+<h3>本节讲到哪里就够了？</h3>
+<ul>
+<li>原子和元素：会说“元素是原子的种类”，能认 Ca、C、O、H、Na。</li>
+<li>化学式：认符号、读简单下标；不默写复杂式。</li>
+<li>酸碱盐：移到可选拓展；主课不要求。</li>
+<li>方程式：只读文字和箭头；不要求配平。</li>
+<li>不讲电子排布、玻尔模型和核反应。</li>
+</ul>
+<h3>常见误区</h3>
+<ul>
+<li><strong>“能恢复就是物理变化。”</strong> 改问有没有新物质；玻璃破碎仍是物理变化。</li>
+<li><strong>“有气泡就是化学变化。”</strong> 汽化也能产生气态物质，要看对照。</li>
+<li><strong>“熄灭火焰就是 CO₂。”</strong> 很多气体都不支持燃烧。</li>
+<li><strong>“白醋就是醋酸。”</strong> 白醋是含少量醋酸的混合物。</li>
+<li><strong>“小苏打呈碱性，所以不是盐。”</strong> 组成分类与酸碱性质可同时成立。</li>
+<li><strong>“新物质就是新元素。”</strong> 化学反应只重组原子。</li>
+<li><strong>“蜡油是另一种物质。”</strong> 蜡油是液态蜡，冷却后重新得到固态蜡。</li>
+<li><strong>“食盐溶解就是熔化。”</strong> 溶解需要溶剂；熔化不需要。</li>
+<li><strong>“秤上质量下降说明物质消失。”</strong> 气体离开了开放的称量系统。</li>
+<li><strong>“水蒸气是白色的。”</strong> 水蒸气不可见，白雾是微小液滴。</li>
+</ul>
+<h2>六、安全、误差与现场备用方案</h2>
+<h3>安全</h3>
+<ul>
+<li>全程佩戴护目镜，所有湿实验在托盘内完成；实验物质不品尝。</li>
+<li>蜡烛只由教师点燃和熄灭，放在稳固烛台和耐热托盘上；清走纸张，扎好长发。学生不触碰火焰、烛芯或液态蜡，不移动刚熄灭的蜡烛。</li>
+<li>温水由教师准备和移动；玻璃替代装置不直接经历冷冻到温热的骤变。</li>
+<li>白醋只用食品级低浓度产品；不用浓醋酸、醋酸钠或标签不清的酸。</li>
+<li>产气反应保持开放，禁止密封在刚性玻璃容器中。</li>
+<li>醋酸钙滤液和小苏打溶液统一标记“不得饮用”。</li>
+<li>不使用已消耗或已液化的氯化钙，不用旧过氧化氢或名称不清的试剂增加现象。</li>
+<li>蜡烛完全冷却后保留再用。微量低风险反应液用大量清水稀释处理；白色固体连滤纸装袋丢弃，原标签另有要求时以标签为准。</li>
+</ul>
+<h3>主要误差</h3>
+<ul>
+<li>蜡烛燃烧时间太短或烛芯太短，液态蜡池可能不明显。</li>
+<li>冷盖底面没有事先擦干，或融冰水从边缘流下，会干扰凝结判断。</li>
+<li>醋酸钙滤液或小苏打溶液本身不澄清，会把原有颗粒误当作新沉淀。</li>
+<li>大理石块太大或表面光滑时，3–5 分钟内质量变化可能小于电子秤分辨率；粉末状碳酸钙反应更快，但要防止泡沫溢出。</li>
+<li>倒完白醋后没有把空塑料杯放回秤盘，会把杯壁残留误当作气体损失。</li>
+</ul>
+<h3>现场备用方案</h3>
+<ul>
+<li><strong>蜡油不明显</strong>：教师再燃烧 1–2 分钟；仍不明显就调用上次观察或照片，不另做石蜡水浴。</li>
+<li><strong>冷盖不出现水滴</strong>：增加冰量，把盖底重新擦干并靠近水面，但不接触温水。</li>
+<li><strong>融冰水可能流到底面</strong>：立即停止并擦干，换有边沿的浅盖重新开始；这次水滴不能作为证据。</li>
+<li><strong>学生追问怎样确认二氧化碳</strong>：说明需要状态可靠的专用检验体系和清楚对照；本课只依据已知反应规律标注主要气体，不临时用熄灭火焰或指示剂变色替代。</li>
+<li><strong>醋酸钙滤液仍明显冒泡</strong>：再加少量碳酸钙，待明显冒泡停止后重新过滤少量液体。</li>
+<li><strong>醋酸钙与小苏打现象不明显</strong>：等待 3–5 分钟并在深色背景前比较；仍不明显就如实记录，不换用氯化钙。</li>
+<li><strong>电子秤看不出质量变化</strong>：保留气泡、对照和固体表面变化作为定性证据，不增加酸量或密闭反应。</li>
+<li><strong>主实验耗时超出计划</strong>：优先保留蜡烛、凝结实验、A/B/C 对照和最终结论；F 组过滤、化学式拓展和可选实验可以取消。</li>
+</ul>
+<h2>七、关键术语（Key vocabulary）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>物质</td>
+<td>matter</td>
+<td>状态</td>
+<td>state of matter</td>
+</tr>
+<tr>
+<td>固态</td>
+<td>solid state</td>
+<td>液态</td>
+<td>liquid state</td>
+</tr>
+<tr>
+<td>气态</td>
+<td>gas state</td>
+<td>相变</td>
+<td>phase change</td>
+</tr>
+<tr>
+<td>熔化</td>
+<td>melting</td>
+<td>凝固</td>
+<td>freezing / solidification</td>
+</tr>
+<tr>
+<td>汽化</td>
+<td>vaporization / evaporation</td>
+<td>凝结</td>
+<td>condensation</td>
+</tr>
+<tr>
+<td>升华</td>
+<td>sublimation</td>
+<td>凝华</td>
+<td>deposition</td>
+</tr>
+<tr>
+<td>物理变化</td>
+<td>physical change</td>
+<td>化学变化</td>
+<td>chemical change</td>
+</tr>
+<tr>
+<td>化学反应</td>
+<td>chemical reaction</td>
+<td>新物质</td>
+<td>new substance</td>
+</tr>
+<tr>
+<td>粒子</td>
+<td>particle</td>
+<td>原子</td>
+<td>atom</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>element</td>
+<td>元素符号</td>
+<td>element symbol / chemical symbol</td>
+</tr>
+<tr>
+<td>分子</td>
+<td>molecule</td>
+<td>化合物</td>
+<td>compound</td>
+</tr>
+<tr>
+<td>混合物</td>
+<td>mixture</td>
+<td>化学式</td>
+<td>chemical formula</td>
+</tr>
+<tr>
+<td>离子</td>
+<td>ion</td>
+<td>原子重新组合</td>
+<td>rearrangement of atoms</td>
+</tr>
+<tr>
+<td>原子守恒</td>
+<td>conservation of atoms</td>
+<td>酸 / 碱 / 盐</td>
+<td>acid / base / salt</td>
+</tr>
+<tr>
+<td>酸性 / 碱性</td>
+<td>acidic / basic</td>
+<td>pH 标度</td>
+<td>pH scale</td>
+</tr>
+<tr>
+<td>反应物</td>
+<td>reactant</td>
+<td>生成物</td>
+<td>product</td>
+</tr>
+<tr>
+<td>观察</td>
+<td>observation</td>
+<td>推论</td>
+<td>inference</td>
+</tr>
+<tr>
+<td>证据</td>
+<td>evidence</td>
+<td>对照</td>
+<td>control</td>
+</tr>
+<tr>
+<td>沉淀</td>
+<td>precipitate</td>
+<td>开放系统</td>
+<td>open system</td>
+</tr>
+<tr>
+<td>系统边界</td>
+<td>system boundary</td>
+<td>碳酸钙</td>
+<td>calcium carbonate</td>
+</tr>
+<tr>
+<td>醋酸</td>
+<td>acetic acid</td>
+<td>小苏打</td>
+<td>sodium bicarbonate / baking soda</td>
+</tr>
+<tr>
+<td>醋酸钙</td>
+<td>calcium acetate</td>
+<td>醋酸钠</td>
+<td>sodium acetate</td>
+</tr>
+<tr>
+<td>二氧化碳</td>
+<td>carbon dioxide</td>
+<td>下标 / 系数</td>
+<td>subscript / coefficient</td>
+</tr>
+<tr>
+<td>反应箭头</td>
+<td>reaction arrow</td>
+<td>化学方程式</td>
+<td>chemical equation</td>
+</tr>
+<tr>
+<td>配平方程式</td>
+<td>balancing a chemical equation</td>
+<td>食盐</td>
+<td>table salt / sodium chloride</td>
+</tr>
+</tbody>
+</table>
+</main>
+</body>
+</html>

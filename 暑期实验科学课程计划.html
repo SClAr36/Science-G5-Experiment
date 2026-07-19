@@ -3,27 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="四升五暑期实验科学课程计划：通过物理、化学与生命科学实验学习科学探究。">
-  <title>暑期实验科学课程｜在实验中发现科学</title>
+  <meta name="description" content="五年级实验科学课程计划：用11节两小时课程，在实验、展示和模型中复习五年级科学五个单元。">
+  <title>五年级实验科学课程计划｜在实验中复习全年重点</title>
   <style>
     :root {
-      --ink: #162726;
-      --muted: #5d6a67;
-      --paper: #f7f3ea;
+      --ink: #17302e;
+      --muted: #62716d;
+      --paper: #f5f0e7;
       --surface: #fffdf8;
-      --line: #d8ded7;
+      --line: #d9dfd8;
       --teal: #0f766e;
-      --teal-dark: #0a4f4a;
-      --teal-pale: #dff1ed;
-      --amber: #d88a24;
+      --teal-dark: #0b514d;
+      --teal-pale: #dff2ee;
+      --amber: #d98a27;
       --amber-pale: #fff0cf;
-      --coral: #d95f4b;
+      --coral: #d9604c;
       --coral-pale: #fbe6df;
-      --blue: #406a8d;
-      --blue-pale: #e5eef6;
-      --violet: #6f5f91;
+      --blue: #416f94;
+      --blue-pale: #e6eff7;
+      --violet: #6d5d90;
       --violet-pale: #eee9f5;
-      --shadow: 0 18px 50px rgba(27, 52, 48, 0.08);
+      --green: #557b52;
+      --green-pale: #e7f0df;
+      --shadow: 0 18px 48px rgba(25, 49, 46, .08);
       --radius: 22px;
     }
 
@@ -33,11 +35,11 @@
       margin: 0;
       color: var(--ink);
       background:
-        radial-gradient(circle at 8% 0%, rgba(216, 138, 36, .12), transparent 28rem),
-        radial-gradient(circle at 96% 18%, rgba(15, 118, 110, .11), transparent 32rem),
+        radial-gradient(circle at 6% 2%, rgba(217, 138, 39, .13), transparent 28rem),
+        radial-gradient(circle at 98% 19%, rgba(15, 118, 110, .12), transparent 32rem),
         var(--paper);
-      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+      line-height: 1.72;
     }
 
     a { color: inherit; }
@@ -48,1283 +50,612 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      border-bottom: 1px solid rgba(22, 39, 38, .08);
-      background: rgba(247, 243, 234, .9);
+      border-bottom: 1px solid rgba(23, 48, 46, .08);
+      background: rgba(245, 240, 231, .91);
       backdrop-filter: blur(16px);
     }
-
     .nav {
-      min-height: 60px;
+      min-height: 62px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 22px;
+      gap: 24px;
     }
-
-    .brand { font-weight: 800; letter-spacing: .08em; color: var(--teal-dark); }
-    .nav-actions { display: flex; align-items: center; gap: 18px; }
-    .navlinks { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; color: var(--muted); }
+    .brand { color: var(--teal-dark); font-size: 13px; font-weight: 900; letter-spacing: .13em; }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 20px; color: var(--muted); font-size: 13px; }
     .navlinks a { text-decoration: none; }
     .navlinks a:hover { color: var(--teal); }
-    .lang-toggle {
+
+    section { padding: 72px 0; }
+    .hero { padding: 94px 0 74px; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 62px; align-items: center; }
+    .eyebrow, .kicker {
+      margin: 0 0 12px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 0; max-width: 760px; font-size: clamp(45px, 7vw, 82px); line-height: 1.03; letter-spacing: -.045em; }
+    .hero-lead { margin: 26px 0 0; max-width: 760px; color: var(--muted); font-size: 18px; }
+    .hero-lead strong { color: var(--ink); }
+    .hero-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--amber);
+      border-radius: 0 16px 16px 0;
+      background: rgba(255, 253, 248, .72);
+      color: var(--teal-dark);
+      font-weight: 750;
+    }
+    .hero-panel {
+      padding: 28px;
+      border: 1px solid rgba(15, 118, 110, .18);
+      border-radius: 28px;
+      background: rgba(255, 253, 248, .84);
+      box-shadow: var(--shadow);
+    }
+    .hero-panel h2 { margin: 0 0 18px; font-size: 18px; }
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .stat { padding: 16px; border-radius: 16px; background: var(--teal-pale); }
+    .stat:nth-child(2) { background: var(--amber-pale); }
+    .stat:nth-child(3) { background: var(--blue-pale); }
+    .stat:nth-child(4) { background: var(--green-pale); }
+    .stat b { display: block; font-size: 26px; line-height: 1.1; }
+    .stat span { color: var(--muted); font-size: 12px; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 36px;
+      margin-bottom: 30px;
+    }
+    h2 { margin: 0; font-size: clamp(30px, 4vw, 46px); line-height: 1.15; letter-spacing: -.025em; }
+    .section-intro { max-width: 610px; margin: 0; color: var(--muted); }
+
+    .coverage { background: rgba(255, 253, 248, .68); border-top: 1px solid rgba(23, 48, 46, .07); border-bottom: 1px solid rgba(23, 48, 46, .07); }
+    .coverage-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 13px; }
+    .unit-tile {
+      min-height: 190px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+    }
+    .unit-code { display: inline-block; margin-bottom: 15px; padding: 4px 9px; border-radius: 99px; background: var(--teal-pale); color: var(--teal-dark); font-size: 11px; font-weight: 900; }
+    .unit-tile:nth-child(2) .unit-code { background: var(--amber-pale); color: #805011; }
+    .unit-tile:nth-child(3) .unit-code { background: var(--blue-pale); color: #315b7c; }
+    .unit-tile:nth-child(4) .unit-code { background: var(--green-pale); color: #3f673d; }
+    .unit-tile:nth-child(5) .unit-code { background: var(--violet-pale); color: #5a4a7a; }
+    .unit-tile h3 { margin: 0 0 8px; font-size: 18px; }
+    .unit-tile p { margin: 0; color: var(--muted); font-size: 13px; }
+    .original-name { display: block; margin: -8px 0 10px; color: var(--teal); font-size: 10px; font-weight: 900; letter-spacing: .055em; text-transform: uppercase; }
+    .unit-lessons { margin-top: 14px !important; color: var(--ink) !important; font-weight: 800; }
+
+    .syllabus-map { padding-top: 62px; background: #f0f4ef; }
+    .map-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .map-card { padding: 22px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+    .map-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 13px; }
+    .map-card h3 { margin: 0; font-size: 19px; }
+    .map-card-head span { color: var(--teal); font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+    .map-list { display: grid; gap: 8px; }
+    .map-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 9px 11px; border-radius: 11px; background: #f3f5f1; color: var(--muted); font-size: 12px; }
+    .map-row b { color: var(--ink); font-weight: 700; }
+    .lesson-link { padding: 3px 8px; border-radius: 99px; background: var(--teal-pale); color: var(--teal-dark); font-size: 10px; font-weight: 900; white-space: nowrap; }
+
+    .format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .format-card { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+    .format-num { display: grid; width: 36px; height: 36px; margin-bottom: 16px; place-items: center; border-radius: 12px; background: var(--teal-pale); color: var(--teal-dark); font-size: 13px; font-weight: 900; }
+    .format-card:nth-child(2) .format-num { background: var(--amber-pale); color: #805011; }
+    .format-card:nth-child(3) .format-num { background: var(--blue-pale); color: #315b7c; }
+    .format-card h3 { margin: 0 0 8px; font-size: 19px; }
+    .format-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .course { padding-top: 40px; }
+    .toolbar { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 18px; }
+    .tool-button {
       cursor: pointer;
-      min-width: 112px;
-      padding: 7px 13px;
-      border: 1px solid rgba(15, 118, 110, .24);
+      padding: 8px 14px;
+      border: 1px solid rgba(15, 118, 110, .23);
       border-radius: 999px;
       background: var(--surface);
       color: var(--teal-dark);
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: .03em;
     }
-    .lang-toggle:hover { border-color: var(--teal); background: var(--teal-pale); }
+    .tool-button:hover { background: var(--teal-pale); }
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 84px 0 72px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 380px;
-      height: 380px;
-      right: max(-140px, calc((100vw - 1160px) / 2 - 150px));
-      top: 15px;
-      border: 1px solid rgba(15, 118, 110, .2);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 48px rgba(15, 118, 110, .04),
-        0 0 0 106px rgba(216, 138, 36, .035);
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      margin: 0 0 16px;
-      color: var(--teal);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-
-    h1, h2, h3, p { margin-top: 0; }
-    h1 {
-      max-width: 850px;
-      margin-bottom: 20px;
-      font-family: "Songti SC", "STSong", serif;
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.08;
-      letter-spacing: -.035em;
-    }
-
-    .hero-lead {
-      max-width: 760px;
-      margin-bottom: 28px;
-      font-size: clamp(18px, 2.3vw, 23px);
-      color: #425553;
-    }
-
-    .hero-quote {
-      max-width: 820px;
-      padding: 18px 22px;
-      border-left: 4px solid var(--amber);
-      border-radius: 0 14px 14px 0;
-      background: rgba(255, 253, 248, .72);
-      font-family: "Songti SC", "STSong", serif;
-      font-size: 19px;
-    }
-
-    .pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-    .pill {
-      display: inline-flex;
+    .unit-block { margin-top: 48px; }
+    .unit-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
       align-items: center;
-      gap: 7px;
-      min-height: 34px;
-      padding: 5px 13px;
-      border: 1px solid rgba(15, 118, 110, .16);
-      border-radius: 999px;
-      background: var(--surface);
-      color: var(--teal-dark);
-      font-size: 13px;
-      font-weight: 700;
+      margin-bottom: 16px;
     }
-
-    section { padding: 62px 0; }
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, .7fr);
-      gap: 40px;
-      align-items: end;
-      margin-bottom: 32px;
-    }
-
-    .kicker { margin-bottom: 8px; color: var(--coral); font-weight: 800; letter-spacing: .12em; font-size: 12px; }
-    h2 {
-      margin-bottom: 0;
-      font-family: "Songti SC", "STSong", serif;
-      font-size: clamp(31px, 4vw, 48px);
-      line-height: 1.18;
-    }
-    .section-intro { margin-bottom: 0; color: var(--muted); }
-
-    .journey {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 16px;
-      align-items: start;
-    }
-    .phase {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-      box-shadow: 0 10px 32px rgba(25, 48, 44, .055);
-    }
-    .phase-header { padding: 25px; }
-    .phase-content {
-      padding: 22px 25px 25px;
-      border-top: 1px solid var(--line);
-      background: rgba(247, 243, 234, .32);
-    }
-    .phase-content .lesson-list { gap: 10px; }
-    .phase-content details.lesson,
-    .phase-content details.optional { box-shadow: none; }
-    .phase:nth-child(1) { border-top: 5px solid var(--teal); }
-    .phase:nth-child(2) { border-top: 5px solid var(--blue); }
-    .phase:nth-child(3) { border-top: 5px solid var(--amber); }
-    .phase:nth-child(4) { border-top: 5px solid var(--coral); }
-    .phase:nth-child(5) { border-top: 5px solid var(--violet); }
-    .phase:nth-child(6) { border-top: 5px solid var(--teal); }
-    .phase-major { grid-column: span 3; }
-    .phase-compact { grid-column: span 2; }
-    .phase-capstone { grid-column: 1 / -1; }
-    .phase-header > small { color: var(--muted); font-weight: 700; }
-    .phase-header > h3 { margin: 7px 0 10px; font-size: 18px; }
-    .phase-header > p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
-
-    .details-area { background: rgba(255,255,255,.32); }
-    .toolbar { display: flex; gap: 10px; margin: 0 0 20px; }
-    .tool-button {
-      cursor: pointer;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 15px;
-      background: var(--surface);
-      color: var(--teal-dark);
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .tool-button:hover { border-color: var(--teal); }
-
+    .unit-number { display: grid; width: 58px; height: 58px; place-items: center; border-radius: 18px; background: var(--teal); color: white; font-size: 12px; font-weight: 900; line-height: 1.1; text-align: center; }
+    .u2 .unit-number { background: var(--amber); }
+    .u3 .unit-number { background: var(--blue); }
+    .u4 .unit-number { background: var(--green); }
+    .u5 .unit-number { background: var(--violet); }
+    .unit-header h3 { margin: 0 0 3px; font-size: 25px; }
+    .unit-header p { margin: 0; color: var(--muted); font-size: 14px; }
+    .unit-original { display: block; margin-bottom: 3px; color: var(--teal); font-size: 10px; font-weight: 900; letter-spacing: .075em; text-transform: uppercase; }
     .lesson-list { display: grid; gap: 14px; }
     details.lesson {
       overflow: hidden;
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: var(--radius);
       background: var(--surface);
-      box-shadow: 0 8px 28px rgba(25, 48, 44, .045);
+      transition: border-color .2s ease, box-shadow .2s ease;
     }
-    details.lesson[open] { border-color: rgba(15, 118, 110, .38); box-shadow: var(--shadow); }
+    details.lesson[open] { border-color: rgba(15, 118, 110, .35); box-shadow: var(--shadow); }
     details.lesson summary {
       cursor: pointer;
       display: grid;
-      grid-template-columns: 54px minmax(0, 1fr) 34px;
-      gap: 16px;
+      grid-template-columns: 58px minmax(0, 1fr) auto 30px;
       align-items: center;
+      gap: 17px;
       padding: 20px 22px;
       list-style: none;
     }
     details.lesson summary::-webkit-details-marker { display: none; }
-    .lesson-no {
-      display: grid;
-      width: 48px;
-      height: 48px;
-      place-items: center;
-      border-radius: 15px;
-      background: var(--teal);
-      color: white;
-      font-weight: 900;
-    }
-    .lesson-title { margin: 0 0 4px; font-size: 19px; }
-    .lesson-thought { margin: 0; color: var(--muted); font-size: 13px; }
-    .chevron {
-      display: grid;
-      width: 30px;
-      height: 30px;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--teal-pale);
-      color: var(--teal-dark);
-      transition: transform .2s ease;
-    }
-    details.lesson[open] > summary .chevron { transform: rotate(45deg); }
-
-    .lesson-body {
-      padding: 0 22px 24px 92px;
-      border-top: 1px solid #edf0eb;
-    }
-    .question {
-      margin: 22px 0;
-      padding: 16px 18px;
-      border-radius: 14px;
+    .lesson-no { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 16px; background: #edf1ec; color: var(--teal-dark); font-size: 14px; font-weight: 900; }
+    .lesson-title { margin: 0 0 4px; font-size: 19px; line-height: 1.35; }
+    .lesson-line { margin: 0; color: var(--muted); font-size: 13px; }
+    .school-ref { margin: 4px 0 0; color: var(--blue); font-size: 10.5px; font-weight: 800; line-height: 1.45; }
+    .school-ref::before { content: "学校课程 · "; color: var(--muted); font-weight: 700; }
+    .status { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 99px; font-size: 11px; font-weight: 900; white-space: nowrap; }
+    .status.done { background: var(--teal-pale); color: var(--teal-dark); }
+    .status.done::before { content: "✓"; }
+    .status.next { background: #edf0ed; color: var(--muted); }
+    .status.next::before { content: "○"; }
+    .chevron { color: var(--teal); font-size: 22px; transition: transform .2s ease; }
+    details[open] .chevron { transform: rotate(45deg); }
+    .lesson-body { padding: 0 22px 24px 97px; }
+    .question { margin-bottom: 18px; padding: 13px 16px; border-radius: 14px; background: #f0f5f1; font-weight: 800; }
+    .question::before { content: "本节问题 · "; color: var(--teal); font-size: 12px; }
+    .two-lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .lane { padding: 19px; border: 1px solid var(--line); border-radius: 17px; background: #fbfaf6; }
+    .lane.knowledge { border-color: #efd19d; background: #fff9ea; }
+    .lane-label { margin: 0 0 8px; color: var(--teal); font-size: 11px; font-weight: 900; letter-spacing: .08em; }
+    .knowledge .lane-label { color: #9b6418; }
+    .lane h4 { margin: 0 0 9px; font-size: 17px; }
+    .lane ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: 13px; }
+    .lane li + li { margin-top: 5px; }
+    .school-focus { margin-top: 14px; padding: 16px 18px; border-radius: 16px; background: var(--teal-dark); color: white; }
+    .school-focus b { display: block; margin-bottom: 5px; color: #aee5db; font-size: 11px; letter-spacing: .08em; }
+    .school-focus p { margin: 0; font-size: 13px; }
+    .keywords { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+    .keyword { padding: 4px 9px; border: 1px solid rgba(15, 118, 110, .16); border-radius: 99px; background: var(--teal-pale); color: var(--teal-dark); font-size: 11px; font-weight: 750; }
+    .done-note { margin-top: 12px; color: var(--teal-dark); font-size: 12px; font-weight: 800; }
+    .catchup {
+      margin-top: 15px;
+      padding: 21px;
+      border: 1px dashed rgba(217, 138, 39, .55);
+      border-radius: 19px;
       background: var(--amber-pale);
-      font: 700 17px/1.65 "Songti SC", serif;
     }
-    .detail-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 26px;
-    }
-    .detail-grid h4, .optional-body h4 { margin: 0 0 9px; color: var(--teal-dark); font-size: 14px; letter-spacing: .06em; }
-    .detail-grid ul, .optional-body ul { margin: 0; padding-left: 1.15em; }
-    .detail-grid li, .optional-body li { margin: 5px 0; }
-    .main-idea {
-      padding: 18px;
-      border-radius: 15px;
-      background: var(--teal-pale);
-      color: var(--teal-dark);
-      font-weight: 750;
-    }
-    .main-idea p { margin: 0; }
-    .keywords { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
-    .keyword {
-      padding: 5px 9px;
-      border-radius: 8px;
-      background: var(--blue-pale);
-      color: #345873;
-      font-size: 12px;
-      font-weight: 700;
-    }
+    .catchup h4 { margin: 0 0 6px; color: #805011; font-size: 17px; }
+    .catchup > p { margin: 0; color: #765a30; font-size: 13px; }
+    .catchup-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; margin-top: 13px; }
+    .catchup-item { padding: 11px; border-radius: 12px; background: rgba(255,255,255,.58); font-size: 12px; }
+    .catchup-item b { display: block; color: #805011; }
 
-    .optional-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-    details.optional {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--surface);
-    }
-    details.optional[open] { border-color: rgba(111, 95, 145, .45); }
-    details.optional summary {
-      cursor: pointer;
-      min-height: 112px;
-      padding: 19px;
-      list-style: none;
-    }
-    details.optional summary::-webkit-details-marker { display: none; }
-    .optional-tag {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: var(--violet-pale);
-      color: var(--violet);
-      font-size: 11px;
-      font-weight: 800;
-    }
-    .optional-title { margin: 0 0 4px; font-size: 17px; }
-    .optional-line { margin: 0; color: var(--muted); font-size: 13px; }
-    .optional-body { padding: 0 19px 20px; border-top: 1px solid #edf0eb; font-size: 14px; }
-    .optional-body .main-idea { margin-top: 18px; background: var(--violet-pale); color: #554674; }
+    .timing { background: var(--teal-dark); color: white; }
+    .timing .kicker { color: #8fd6cc; }
+    .timing .section-intro { color: #c7d9d6; }
+    .timeline { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+    .time-step { padding: 18px 15px; border: 1px solid rgba(255,255,255,.15); border-radius: 17px; background: rgba(255,255,255,.07); }
+    .time-step b { display: block; margin-bottom: 7px; color: #f9c878; font-size: 12px; }
+    .time-step span { font-size: 13px; }
 
-    .chem-bio-area { background: rgba(229, 238, 246, .34); }
-    .safety-gate {
-      display: grid;
-      grid-template-columns: minmax(180px, .35fr) minmax(0, 1fr);
-      gap: 22px;
-      margin-bottom: 34px;
-      padding: 22px 24px;
-      border: 1px solid rgba(217, 95, 75, .25);
-      border-left: 5px solid var(--coral);
-      border-radius: 18px;
-      background: var(--coral-pale);
-    }
-    .safety-gate b { color: #923e31; font-size: 17px; }
-    .safety-gate span { color: #6d4841; }
-    .lab-group + .lab-group { margin-top: 44px; }
-    .lab-group-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 16px;
-    }
-    .lab-group-head h3 { margin: 0; font-size: 24px; }
-    .lab-group-head p { margin: 0; color: var(--muted); font-size: 13px; }
-    .lab-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    details.lab-card {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--teal);
-      border-radius: 18px;
-      background: var(--surface);
-      box-shadow: 0 8px 28px rgba(25, 48, 44, .045);
-    }
-    details.lab-card.bio { border-top-color: var(--coral); }
-    details.lab-card[open] { box-shadow: var(--shadow); }
-    details.lab-card summary {
-      cursor: pointer;
-      display: grid;
-      grid-template-columns: 48px minmax(0, 1fr) 28px;
-      gap: 13px;
-      align-items: center;
-      min-height: 112px;
-      padding: 18px;
-      list-style: none;
-    }
-    details.lab-card summary::-webkit-details-marker { display: none; }
-    .lab-code {
-      display: grid;
-      width: 44px;
-      height: 44px;
-      place-items: center;
-      border-radius: 13px;
-      background: var(--teal-pale);
-      color: var(--teal-dark);
-      font-size: 12px;
-      font-weight: 900;
-    }
-    .lab-card.bio .lab-code { background: var(--coral-pale); color: #9c4537; }
-    .lab-title { margin: 0 0 4px; font-size: 17px; }
-    .lab-line { margin: 0; color: var(--muted); font-size: 12px; }
-    .lab-body { padding: 0 18px 20px; border-top: 1px solid #edf0eb; font-size: 14px; }
-    .lab-question { margin: 16px 0; font: 700 15px/1.6 "Songti SC", serif; color: var(--teal-dark); }
-    .lab-card.bio .lab-question { color: #914539; }
-    .lab-body h4 { margin: 14px 0 7px; color: var(--teal-dark); font-size: 13px; }
-    .lab-card.bio .lab-body h4 { color: #914539; }
-    .lab-body ul { margin: 0; padding-left: 1.15em; }
-    .lab-body li { margin: 4px 0; }
-    .lab-explain { margin: 14px 0 0; padding: 13px 14px; border-radius: 12px; background: var(--teal-pale); }
-    .lab-card.bio .lab-explain { background: var(--coral-pale); }
-    .lab-facts { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
-    .lab-fact { padding: 4px 8px; border-radius: 999px; background: var(--blue-pale); color: #345873; font-size: 11px; font-weight: 750; }
-    .guide-link { margin: 28px 0 0; color: var(--teal-dark); font-weight: 750; }
-    .guide-link a { text-underline-offset: 3px; }
+    .outcome { margin: 72px auto; padding: 42px; border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
+    .outcome-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 24px; }
+    .outcome-item { padding: 18px; border-radius: 17px; background: #eff4f0; }
+    .outcome-item b { display: block; margin-bottom: 5px; }
+    .outcome-item span { color: var(--muted); font-size: 13px; }
 
-    /* Compact experiment rows inside each topic card */
-    .phase-content {
-      padding: 0 25px 12px;
-      background: var(--surface);
-    }
-    .phase-content .lesson-list { gap: 0; }
-    .phase-content details.lesson,
-    .phase-content details.optional,
-    .phase-content details.lesson[open],
-    .phase-content details.optional[open] {
-      overflow: visible;
-      border: 0;
-      border-bottom: 1px solid #e7ebe6;
-      border-radius: 0;
-      background: transparent;
-      box-shadow: none;
-    }
-    .phase-content .lesson-list > details:last-child { border-bottom: 0; }
-    .phase-content details.lesson summary {
-      grid-template-columns: 34px minmax(0, 1fr) 28px;
-      gap: 11px;
-      padding: 15px 0;
-    }
-    .phase-content .lesson-no {
-      width: 32px;
-      height: 32px;
-      border-radius: 9px;
-      background: var(--teal-pale);
-      color: var(--teal-dark);
-      font-size: 11px;
-    }
-    .phase-content .lesson-title { font-size: 16px; }
-    .phase-content .lesson-thought { font-size: 12px; line-height: 1.55; }
-    .phase-content .chevron { width: 26px; height: 26px; }
-    .phase-content .lesson-body {
-      padding: 0 0 22px 45px;
-      border-top: 0;
-    }
-    .phase-content .question { margin: 4px 0 18px; }
-    .phase-content details.optional summary {
-      position: relative;
-      display: grid;
-      grid-template-columns: 62px minmax(0, 1fr);
-      gap: 11px;
-      align-items: center;
-      min-height: 0;
-      padding: 15px 38px 15px 0;
-    }
-    .phase-content details.optional summary::after {
-      content: "+";
-      position: absolute;
-      top: 50%;
-      right: 1px;
-      display: grid;
-      width: 26px;
-      height: 26px;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--violet-pale);
-      color: var(--violet);
-      transform: translateY(-50%);
-      transition: transform .2s ease;
-    }
-    .phase-content details.optional[open] > summary::after {
-      transform: translateY(-50%) rotate(45deg);
-    }
-    .phase-content .optional-tag {
-      margin: 0;
-      white-space: nowrap;
-      justify-self: start;
-    }
-    .phase-content .optional-copy { min-width: 0; }
-    .phase-content .optional-title { font-size: 16px; }
-    .phase-content .optional-body {
-      padding: 0 0 20px 73px;
-      border-top: 0;
-    }
-    .phase-content .optional-body .main-idea { margin-top: 0; }
+    footer { padding: 26px 0 42px; color: var(--muted); font-size: 12px; text-align: center; }
 
-    .format-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 9px;
-      margin-top: 25px;
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .coverage-grid { grid-template-columns: repeat(2, 1fr); }
+      .format-grid, .outcome-grid, .map-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline { grid-template-columns: repeat(3, 1fr); }
     }
-    .format-step {
-      position: relative;
-      min-height: 112px;
-      padding: 15px 13px;
-      border-radius: 14px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-    }
-    .format-step b { display: block; margin-bottom: 6px; color: var(--teal-dark); }
-    .format-step span { color: var(--muted); font-size: 12px; }
-
-    .outcome {
-      margin-bottom: 72px;
-      padding: 36px;
-      border-radius: 26px;
-      color: #f7fffc;
-      background:
-        radial-gradient(circle at 90% 10%, rgba(255,255,255,.14), transparent 220px),
-        var(--teal-dark);
-      box-shadow: var(--shadow);
-    }
-    .outcome h2 { max-width: 760px; margin-bottom: 18px; }
-    .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .outcome-item { padding-top: 17px; border-top: 1px solid rgba(255,255,255,.24); }
-    .outcome-item b { display: block; margin-bottom: 6px; }
-    .outcome-item span { color: rgba(247,255,252,.74); font-size: 14px; }
-
-    footer { padding: 28px 0 42px; color: var(--muted); font-size: 13px; text-align: center; }
-
-    @media (max-width: 920px) {
-      .journey { grid-template-columns: 1fr; }
-      .phase-major, .phase-compact, .phase-capstone { grid-column: auto; }
-      .format-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    @media (max-width: 700px) {
-      .wrap { width: min(100% - 24px, 1160px); }
-      .topbar { position: static; }
-      .nav { align-items: flex-start; padding: 13px 0; }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 26px, 1160px); }
       .navlinks { display: none; }
-      .nav-actions { margin-left: auto; }
-      .lang-toggle { min-width: 96px; padding: 6px 10px; }
-      .hero { padding: 54px 0 42px; }
-      .hero::after { opacity: .45; }
-      .section-head { grid-template-columns: 1fr; gap: 14px; }
-      section { padding: 44px 0; }
-      .journey, .optional-grid, .outcome-grid, .lab-grid { grid-template-columns: 1fr; }
-      .safety-gate { grid-template-columns: 1fr; gap: 7px; }
-      .lab-group-head { display: block; }
-      .lab-group-head p { margin-top: 5px; }
-      .phase { border-top-width: 4px; }
-      .phase-header { padding: 20px; }
-      .phase-content { padding: 0 16px 8px; }
-      .phase-content .lesson-body { padding-left: 0; }
-      .phase-content .optional-body { padding-left: 0; }
-      details.lesson summary { grid-template-columns: 42px minmax(0, 1fr) 28px; gap: 11px; padding: 16px; }
-      .lesson-no { width: 40px; height: 40px; border-radius: 12px; }
-      .lesson-title { font-size: 16px; }
-      .lesson-body { padding: 0 16px 20px; }
-      .detail-grid { grid-template-columns: 1fr; }
-      .format-grid { grid-template-columns: repeat(2, 1fr); }
-      .outcome { padding: 26px 20px; }
+      section { padding: 52px 0; }
+      .hero { padding: 62px 0 48px; }
+      .section-head { display: block; }
+      .section-intro { margin-top: 12px; }
+      .coverage-grid, .format-grid, .outcome-grid, .timeline, .two-lanes, .catchup-grid, .map-grid { grid-template-columns: 1fr; }
+      .map-row { grid-template-columns: 1fr; gap: 5px; }
+      .lesson-link { justify-self: start; }
+      details.lesson summary { grid-template-columns: 46px minmax(0, 1fr) 24px; gap: 11px; padding: 16px; }
+      .lesson-no { width: 44px; height: 44px; border-radius: 13px; }
+      .status { grid-column: 2; justify-self: start; }
+      .chevron { grid-column: 3; grid-row: 1; }
+      .lesson-body { padding: 0 16px 18px; }
+      .outcome { padding: 26px; }
     }
-
     @media print {
       body { background: white; font-size: 10.5pt; }
       .topbar, .toolbar { display: none; }
-      .hero { padding: 30px 0; }
-      section { padding: 24px 0; break-inside: avoid; }
-      details { break-inside: avoid; box-shadow: none !important; }
+      section { padding: 24px 0; }
+      details { break-inside: avoid; }
       details > *:not(summary) { display: block !important; }
       .chevron { display: none; }
-      .outcome { margin-bottom: 20px; color: var(--ink); background: white; border: 1px solid var(--line); }
-      .outcome-item span { color: var(--muted); }
+      .timing { color: var(--ink); background: white; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .timing .section-intro { color: var(--muted); }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap nav">
-      <div class="brand">SUMMER SCIENCE LAB</div>
-      <div class="nav-actions">
-        <nav class="navlinks" aria-label="页面导航">
-          <a href="#process">科学思考</a>
-          <a href="#overview">课程概览</a>
-          <a href="#chem-bio" data-en="Chemistry &amp; Biology">化学与生物</a>
-        </nav>
-        <button class="lang-toggle" id="languageToggle" type="button" aria-label="Switch to English">EN · English</button>
-      </div>
+      <div class="brand">GRADE 5 SCIENCE LAB</div>
+      <nav class="navlinks" aria-label="页面导航">
+        <a href="#coverage">课程覆盖</a>
+        <a href="#syllabus-map">逐课对应</a>
+        <a href="#format">每节课怎么上</a>
+        <a href="#course">11 节课程</a>
+        <a href="#outcomes">学习结果</a>
+      </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">四升五 · 暑期实验科学</p>
-        <h1>在实验中<br>发现科学</h1>
-        <p class="hero-lead">课程以物理和化学实验为主。孩子会自己提出问题、作出猜想、控制变量、反复测量，并根据实验结果形成和修正科学解释。</p>
-        <div class="hero-quote">科学家怎样从不完全、会波动的实验数据中，发现能够解释和预测现象的规律？</div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">五年级 · 实验科学课程</p>
+          <h1>在实验中<br>复习全年重点</h1>
+          <p class="hero-lead">这不是把学校讲义再讲一遍，而是让孩子先看现象、做实验、记录证据，再用学校五年级科学的概念解释结果。<strong>11 节课完整走过 Unit 1–5；前 3 节已经完成，后续安排 8 节，每节约 2 小时。</strong></p>
+          <div class="hero-note">主实验负责“亲手发现”，知识补充负责“把实验做不到的课内难点讲清楚”。</div>
+        </div>
+        <aside class="hero-panel">
+          <h2>课程一览</h2>
+          <div class="stats">
+            <div class="stat"><b>11</b><span>节完整课程</span></div>
+            <div class="stat"><b>2h</b><span>每节课</span></div>
+            <div class="stat"><b>3</b><span>节已经上过</span></div>
+            <div class="stat"><b>5</b><span>个校内单元</span></div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section id="process">
+    <section id="coverage" class="coverage">
       <div class="wrap">
         <div class="section-head">
-          <div><p class="kicker">HOW SCIENTISTS THINK</p><h2>科学家怎样思考</h2></div>
-          <p class="section-intro">从提出可检验的问题，到用测量检验猜想、根据证据修改解释，每节课都会经历一次完整的科学探究。</p>
+          <div><p class="kicker">FULL YEAR COVERAGE</p><h2>五个单元，都过一遍</h2></div>
+          <p class="section-intro">不是平均分配时间，而是把课内最难、最容易混淆的地方放进实验、展示和模型中。</p>
+        </div>
+        <div class="coverage-grid">
+          <article class="unit-tile"><span class="unit-code">UNIT 1</span><h3>科学的本质</h3><small class="original-name">Nature of Science</small><p>控制变量、重复测量、定性与定量数据、根据证据修改想法。</p><p class="unit-lessons">第 1 节＋全程贯穿</p></article>
+          <article class="unit-tile"><span class="unit-code">UNIT 2</span><h3>物质的性质</h3><small class="original-name">Properties of Matter</small><p>混合物与溶液、物态与变化、原子结构、元素周期表和玻尔模型。</p><p class="unit-lessons">第 2–3 节＋课前短回顾</p></article>
+          <article class="unit-tile"><span class="unit-code">UNIT 3</span><h3>能量与运动</h3><small class="original-name">Energy and its Forms</small><p>能量形式、热和光、速率与方向、加速度、牛顿运动定律。</p><p class="unit-lessons">第 4–7 节</p></article>
+          <article class="unit-tile"><span class="unit-code">UNIT 4</span><h3>生命科学</h3><small class="original-name">Life Science</small><p>细胞、细胞器、植物运输、人体系统、生命层级与生物分类。</p><p class="unit-lessons">第 8–9 节</p></article>
+          <article class="unit-tile"><span class="unit-code">UNIT 5</span><h3>空间科学</h3><small class="original-name">Space Science</small><p>昼夜与季节、月相、恒星、小天体和系外行星的间接证据。</p><p class="unit-lessons">第 10–11 节</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="format">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">ONE LESSON · TWO LANES</p><h2>每节课都有两条线</h2></div>
+          <p class="section-intro">既保留动手实验的完整过程，又确保学校讲过但不容易做成实验的知识不会漏掉。</p>
         </div>
         <div class="format-grid">
-          <div class="format-step"><b>01 提出问题</b><span>从现象中找到可以通过观察、测量和比较回答的问题。</span></div>
-          <div class="format-step"><b>02 大胆猜想</b><span>先作出有理由、可以被检验的预测；猜想是实验的起点，不是必须证明的答案。</span></div>
-          <div class="format-step"><b>03 公平实验</b><span>一次只改变一个条件，保持其他条件一致，必要时设置对照组。</span></div>
-          <div class="format-step"><b>04 多次测量</b><span>按统一方法重复测量，诚实记录真实数据、误差和异常现象。</span></div>
-          <div class="format-step"><b>05 相信证据</b><span>用表格和图像判断结果；如果数据与猜想不同，就修改想法，而不是挑选数据。</span></div>
-          <div class="format-step"><b>06 解释并再检验</b><span>用测量追踪看不见的变化，再用模型解释和预测，并检查模型的适用范围。</span></div>
+          <article class="format-card"><span class="format-num">01</span><h3>主实验</h3><p>提出一个能测量的问题，先预测，再控制条件、记录数据，用结果判断原来的想法是否成立。</p></article>
+          <article class="format-card"><span class="format-num">02</span><h3>知识补充</h3><p>用一个简单展示、生活例子、模型或分类任务，讲清实验无法完整覆盖的课内知识。</p></article>
+          <article class="format-card"><span class="format-num">03</span><h3>课内对接</h3><p>最后用中英文关键词、辨析题和一小段证据解释，确认孩子不只“做得开心”，也真正理解。</p></article>
         </div>
       </div>
     </section>
 
-    <section id="overview">
+    <section id="course" class="course">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <p class="kicker">COURSE JOURNEY</p>
-            <h2>课程概览</h2>
-          </div>
-          <p class="section-intro">点击某个实验，即可查看它的核心问题、实验方法与主线思想。</p>
+          <div><p class="kicker">11 × 2 HOURS</p><h2>完整课程安排</h2></div>
+          <p class="section-intro">点击课程卡片，可查看主实验、知识补充和本节要解决的五年级重点。</p>
+        </div>
+        <div class="toolbar">
+          <button class="tool-button" type="button" data-action="open">全部展开</button>
+          <button class="tool-button" type="button" data-action="close">全部收起</button>
         </div>
 
-        <div class="journey">
-          <article class="phase phase-major" data-group="mechanics">
-            <div class="phase-header">
-              <small>MECHANICS</small>
-              <h3>力与运动</h3>
-              <p>用摆、弹簧、浮力和气体压力研究力怎样改变物体的运动、形变与平衡。</p>
+        <div class="unit-block u1">
+          <div class="unit-header"><span class="unit-number">UNIT<br>1</span><div><small class="unit-original">School Unit 1 · Nature of Science</small><h3>科学的本质</h3><p>先建立一套以后每节课都要继续使用的实验方法。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson" open>
+              <summary><span class="lesson-no">01</span><span><h4 class="lesson-title">摆钟会听谁的话？</h4><p class="lesson-line">怎样让一次实验比较公平、结果值得相信</p><p class="school-ref">Unit 1 Notes 01 Observation &amp; Inference · 02 Data · 03 Testable Questions</p></span><span class="status done">已上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">摆长、摆锤质量和放手角度，哪些会改变摆动一次所需的时间？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>单摆周期调查</h4><ul><li>一次只改变一个条件。</li><li>测量 10 次摆动，每种条件重复多次。</li><li>比较平均值、数据波动和明显趋势。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>一条好证据是怎样得到的</h4><ul><li>区分观察、推断和个人意见。</li><li>区分定性描述和定量测量。</li><li>练习自变量、因变量和控制变量。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>可检验问题、公平实验、重复测量、误差，以及“数据不同于猜想时应该修改想法”。</p></div>
+                <div class="keywords"><span class="keyword">observation</span><span class="keyword">inference</span><span class="keyword">independent variable</span><span class="keyword">fair test</span></div>
+                <p class="done-note">✓ 已完成：控制变量、重复测量与实验误差。</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="unit-block u2">
+          <div class="unit-header"><span class="unit-number">UNIT<br>2</span><div><small class="unit-original">School Unit 2 · Properties of Matter</small><h3>物质的性质</h3><p>从看得见的变化，走到看不见的粒子解释。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson">
+              <summary><span class="lesson-no">02</span><span><h4 class="lesson-title">盐真的消失了吗？</h4><p class="lesson-line">溶液、混合物与“看不见但仍然存在”的物质</p><p class="school-ref">Unit 2 Notes 02 Mixtures and Solutions</p></span><span class="status done">已上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">盐溶进水以后去了哪里？还能不能把它找回来？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>溶解、过滤与结晶</h4><ul><li>比较粗盐和食盐在水中的变化。</li><li>用过滤寻找不能通过滤纸的物质。</li><li>通过蒸发和结晶重新得到固体。</li><li>观察不同物质溶解时的温度变化。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>混合物家族</h4><ul><li>pure substance 和 mixture。</li><li>solution、suspension 和 colloid。</li><li>solute、solvent、solubility。</li><li>“溶得快”不等于“最终溶得多”。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>清澈不等于纯净；溶液是均一混合物；过滤不能分开已经溶解的盐和水。</p></div>
+                <div class="keywords"><span class="keyword">solution</span><span class="keyword">solute</span><span class="keyword">solvent</span><span class="keyword">mixture</span><span class="keyword">particle model</span></div>
+                <p class="done-note">✓ 已完成：溶解、过滤、结晶及相关温度变化。</p>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">03</span><span><h4 class="lesson-title">改变外形，还是变成了新物质？</h4><p class="lesson-line">用多条证据判断物理变化和化学变化</p><p class="school-ref">Unit 2 Notes 01 Phases of Matter · 03 Atoms and Period Square（粒子与变化）</p></span><span class="status done">已上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">出现气泡、变色或温度变化，就一定说明生成了新物质吗？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>变化证据站</h4><ul><li>比较熔化、溶解、混合和化学反应。</li><li>记录气体、温度、沉淀、颜色等变化。</li><li>用不止一条证据支持判断。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>宏观变化与粒子模型</h4><ul><li>物理性质和化学性质。</li><li>相变时物质身份不变。</li><li>化学变化中原子重新组合。</li><li>元素、分子和化合物的基本区别。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>判断关键不是“看起来变化很大”，而是有没有形成具有不同性质的新物质。</p></div>
+                <div class="keywords"><span class="keyword">physical change</span><span class="keyword">chemical change</span><span class="keyword">new substance</span><span class="keyword">property</span></div>
+                <p class="done-note">✓ 已完成：物理变化、化学变化与新物质证据。</p>
+              </div>
+            </details>
+          </div>
+          <aside class="catchup">
+            <h4>Unit 2 还需要补齐：4 次课前短回顾</h4>
+            <p>第 2、3 节已经完成物质变化实验；原子和周期表不容易设计成完整实验，因此放进第 4–7 节开头，每次约 10 分钟。</p>
+            <div class="catchup-grid">
+              <div class="catchup-item"><b>第 4 节课前</b>matter、atom、element、molecule、compound</div>
+              <div class="catchup-item"><b>第 5 节课前</b>proton、neutron、electron 与 atomic number</div>
+              <div class="catchup-item"><b>第 6 节课前</b>读元素格、group、period 与主要元素家族</div>
+              <div class="catchup-item"><b>第 7 节课前</b>前 20 号元素玻尔模型、valence electrons、ion、isotope</div>
             </div>
-            <div class="phase-content"><div class="lesson-list"></div></div>
-          </article>
-          <article class="phase phase-major" data-group="matter">
-            <div class="phase-header">
-              <small>MATTER &amp; ENERGY</small>
-              <h3>物质与能量</h3>
-              <p>研究物质在溶解、反应和氧化中的变化，同时测量温度、气体体积与质量。</p>
-            </div>
-            <div class="phase-content"><div class="lesson-list"></div></div>
-          </article>
-          <article class="phase phase-compact" data-group="light">
-            <div class="phase-header">
-              <small>LIGHT</small>
-              <h3>光</h3>
-              <p>研究光照角度与反射，用光的传播规律解释观察结果和季节模型。</p>
-            </div>
-            <div class="phase-content"><div class="lesson-list"></div></div>
-          </article>
-          <article class="phase phase-compact" data-group="electricity">
-            <div class="phase-header">
-              <small>ELECTRICITY &amp; MAGNETISM</small>
-              <h3>电与磁</h3>
-              <p>通过电磁铁研究电流、线圈和磁场强度之间的关系。</p>
-            </div>
-            <div class="phase-content"><div class="lesson-list"></div></div>
-          </article>
-          <article class="phase phase-compact" data-group="life">
-            <div class="phase-header">
-              <small>LIFE SCIENCE</small>
-              <h3>生命科学</h3>
-              <p>用测量研究酶反应与植物蒸腾，观察生命系统怎样受到温度和环境影响。</p>
-            </div>
-            <div class="phase-content"><div class="lesson-list"></div></div>
-          </article>
-          <article class="phase phase-capstone" data-group="capstone">
-            <div class="phase-header">
-              <small>CAPSTONE</small>
-              <h3>结课拓展</h3>
-              <p>由孩子选择问题、设计公平实验、记录数据并完成解释。</p>
-            </div>
-            <div class="phase-content"><div class="lesson-list"></div></div>
-          </article>
+          </aside>
+        </div>
+
+        <div class="unit-block u3">
+          <div class="unit-header"><span class="unit-number">UNIT<br>3</span><div><small class="unit-original">School Unit 3 · Energy and its Forms</small><h3>能量及其形式</h3><p>这是跨度最大的一单元，分成热、光、运动和力四节课完成。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson" open>
+              <summary><span class="lesson-no">04</span><span><h4 class="lesson-title">能量从哪里来，又去了哪里？</h4><p class="lesson-line">先辨认动能与势能，再研究热怎样传递</p><p class="school-ref">Unit 3 Notes 01 Energy Forms and Transfers · 02 Thermal Energy Transfer</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">物体运动、下落、弹回和变热时，能量发生了什么变化？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>传导、对流和辐射</h4><ul><li>比较金属、木材和塑料传热。</li><li>用有颜色的水观察暖水上升、冷水下沉。</li><li>比较黑色、白色和反光表面的升温。</li><li>判断热从哪里传到哪里。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">重点知识补充</p><h4>动能、重力势能和弹性势能</h4><ul><li>举高小球：储存 gravitational potential energy。</li><li>拉伸橡皮筋、压缩弹簧：储存 elastic potential energy。</li><li>释放后物体运动：转化为 kinetic energy。</li><li>用小球、弹簧小车和电池风扇画完整能量链。</li><li>区分“能量形式”和“能量怎样被转移”。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>能量不会凭空产生或消失；它会转移和转化。温度、热和热能不是同一个词，热总是从较热处传向较冷处。</p></div>
+                <div class="keywords"><span class="keyword">kinetic energy</span><span class="keyword">gravitational potential energy</span><span class="keyword">elastic potential energy</span><span class="keyword">energy transfer</span><span class="keyword">conduction</span><span class="keyword">convection</span><span class="keyword">radiation</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">05</span><span><h4 class="lesson-title">光遇到物质会发生什么？</h4><p class="lesson-line">反射、折射、透射、吸收与看不见的光</p><p class="school-ref">Unit 3 Notes 03 Electromagnetic Spectrum · Light Energy Book</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">一束光照到不同材料上，为什么有时反弹、有时穿过、有时改变方向？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>光的去向调查</h4><ul><li>用镜面观察反射。</li><li>用水和透明块观察折射。</li><li>测试透明、半透明和不透明材料。</li><li>用滤光片、彩色光或光栅研究颜色。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>电磁波谱与看不见的光</h4><ul><li>用手机摄像头观察遥控器的红外光。</li><li>排列无线电波到伽马射线的用途卡片。</li><li>理解波长越短，频率和能量通常越高。</li><li>简单认识白炽发光、冷发光和光子模型。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>物体的颜色来自进入眼睛的反射光；透明不等于没有颜色；可见光只是电磁波谱的一小部分。</p></div>
+                <div class="keywords"><span class="keyword">reflection</span><span class="keyword">refraction</span><span class="keyword">absorption</span><span class="keyword">transmission</span><span class="keyword">electromagnetic spectrum</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">06</span><span><h4 class="lesson-title">怎样说清楚一个物体的运动？</h4><p class="lesson-line">从小车数据理解速率、方向与加速度</p><p class="school-ref">Unit 3 Notes 04 Vectors, Velocity, Acceleration</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">只说“它跑得很快”，够不够准确地描述一次运动？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>小车运动测量</h4><ul><li>测量小车通过固定距离所需时间。</li><li>改变斜面高度，比较小车运动。</li><li>记录连续位置，画简单距离—时间图。</li><li>用数据说明“越来越快”。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>路线图里的速度和方向</h4><ul><li>用校园路线区分 distance 和 displacement。</li><li>用箭头表示大小与方向。</li><li>区分 speed、velocity 和 acceleration。</li><li>说明转弯、变慢也属于 velocity 改变。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>speed 只有快慢；velocity 还要说明方向；acceleration 是 velocity 的改变，不只意味着变快。</p></div>
+                <div class="keywords"><span class="keyword">speed</span><span class="keyword">velocity</span><span class="keyword">acceleration</span><span class="keyword">distance</span><span class="keyword">displacement</span><span class="keyword">vector</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">07</span><span><h4 class="lesson-title">力怎样改变运动？</h4><p class="lesson-line">用小车和气球理解牛顿三条运动定律</p><p class="school-ref">Unit 3 Notes 05–07 Newton’s Laws 1, 2 and 3</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">拉力变大或小车变重时，小车的运动会怎样改变？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>力、质量和加速度</h4><ul><li>保持质量相同，改变拉力。</li><li>保持拉力接近相同，增加小车质量。</li><li>比较不同表面的摩擦作用。</li><li>从数据归纳 force、mass 与 acceleration 的关系。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>惯性与相互作用力</h4><ul><li>用硬币和卡片展示 inertia。</li><li>解释现实物体为什么会因摩擦而停下。</li><li>用气球火箭或两车互推寻找作用力与反作用力。</li><li>标出每个力到底作用在哪个物体上。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>合力为零时物体不一定静止；第三定律的一对力作用在不同物体上，所以不会在同一个物体上互相抵消。</p></div>
+                <div class="keywords"><span class="keyword">inertia</span><span class="keyword">net force</span><span class="keyword">friction</span><span class="keyword">F = ma</span><span class="keyword">action–reaction</span></div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="unit-block u4">
+          <div class="unit-header"><span class="unit-number">UNIT<br>4</span><div><small class="unit-original">School Unit 4 · Life Science</small><h3>生命科学</h3><p>用“结构有什么用、物质怎样移动”串起大量生物词汇。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson">
+              <summary><span class="lesson-no">08</span><span><h4 class="lesson-title">显微镜下的生命是什么样？</h4><p class="lesson-line">观察细胞，再认识显微镜看不到的细胞器</p><p class="school-ref">Unit 4 Notes 01 Characteristics of Living Things · 02–03 Cell Structure</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">一片看起来光滑的植物组织，放大后是由什么组成的？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>植物细胞与动物细胞</h4><ul><li>观察洋葱表皮、水草叶片和动物细胞装片。</li><li>绘制科学观察图并标出实际看见的结构。</li><li>比较植物细胞和动物细胞。</li><li>区分观察结果与根据知识作出的推断。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>什么算生命，细胞怎样合作</h4><ul><li>用病毒、种子、火焰等例子讨论生命的共同特征。</li><li>排列“细胞制造并运送蛋白质”的结构卡。</li><li>认识 nucleus、ribosome、ER 和 Golgi。</li><li>比较 prokaryotic 和 eukaryotic cells。</li><li>说明 chloroplast 和 mitochondria 的不同作用。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>细胞是生命的基本单位；cell wall 和 cell membrane 不一样；叶绿体制造 glucose，线粒体帮助释放其中储存的化学能。</p></div>
+                <div class="keywords"><span class="keyword">cell theory</span><span class="keyword">organelle</span><span class="keyword">nucleus</span><span class="keyword">chloroplast</span><span class="keyword">mitochondria</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">09</span><span><h4 class="lesson-title">生物怎样把物质送到需要的地方？</h4><p class="lesson-line">从植物导管到人的呼吸和循环系统</p><p class="school-ref">Unit 4 Notes 04–11 Taxonomy, Plants, Body Organization &amp; Human Systems</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">水、糖和氧气怎样到达生物体内需要它们的位置？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>两套运输系统</h4><ul><li>观察色素水在芹菜或白花中的移动。</li><li>切开茎寻找被染色的运输结构。</li><li>测量安静和适量运动后的脉搏、呼吸频率。</li><li>画出氧气从空气到身体细胞的路线。</li><li>用运动后出汗和皮肤散热补充 integumentary system 与 homeostasis。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>给生物建立“分类地址”</h4><ul><li>用嵌套卡理解 Domain 到 Species。</li><li>认识科学名称的 Genus + species 格式。</li><li>比较 vascular / non-vascular plants。</li><li>比较 gymnosperms / angiosperms。</li><li>用一张食物网说明物种移除的连锁影响，并区分长期 adaptation 与个体短期反应。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>xylem 主要运水，phloem 主要运糖；呼吸、循环和皮肤系统协作维持稳态；cell → tissue → organ → system → organism。</p></div>
+                <div class="keywords"><span class="keyword">xylem</span><span class="keyword">phloem</span><span class="keyword">transpiration</span><span class="keyword">circulatory</span><span class="keyword">respiratory</span><span class="keyword">taxonomy</span></div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="unit-block u5">
+          <div class="unit-header"><span class="unit-number">UNIT<br>5</span><div><small class="unit-original">School Unit 5 · Space Science</small><h3>空间科学</h3><p>不能把天体搬进教室，就用模型、周期变化和留下的痕迹寻找证据。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson">
+              <summary><span class="lesson-no">10</span><span><h4 class="lesson-title">为什么会有昼夜、季节和月相？</h4><p class="lesson-line">用地球—月球—太阳模型纠正常见误区</p><p class="school-ref">Unit 5 Notes 01 Earth’s Movement · 02 Earth’s Moon</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">季节是不是因为地球有时离太阳近、有时离太阳远？月相是不是地球的影子？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>地球—月球—太阳模型</h4><ul><li>用灯和地球仪模拟自转、公转与昼夜。</li><li>保持地轴倾斜方向不变，比较南北半球光照。</li><li>从“地球”位置观察月球不同位置的受光部分。</li><li>对比普通月相和月食的位置关系。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>从月球证据到科学判断</h4><ul><li>认识大撞击假说、环形山和月球表面环境。</li><li>用同步转动模型理解 tidal locking。</li><li>区分约 27.3 天与约 29.5 天两种周期。</li><li>讨论潮汐和“满月影响行为”的证据质量。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>季节来自地轴倾斜和公转；月相来自我们看到的受光部分改变，不是地球影子遮挡。</p></div>
+                <div class="keywords"><span class="keyword">rotation</span><span class="keyword">revolution</span><span class="keyword">axial tilt</span><span class="keyword">lunar phases</span><span class="keyword">tidal locking</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">11</span><span><h4 class="lesson-title">看不见的天体，怎么证明它存在？</h4><p class="lesson-line">从撞击坑、恒星光变到系外行星</p><p class="school-ref">Unit 5 Notes 03 Asteroids/Meteors/Comets · 04 Stars · 05 Exoplanets</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">科学家不能直接触碰遥远天体，怎样知道它们是什么、怎样运动？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>太空留下的间接证据</h4><ul><li>让小球落入粉末表面，测量撞击坑。</li><li>区分 asteroid、meteoroid、meteor、meteorite 和 comet。</li><li>用小球从灯前经过，记录模拟恒星亮度变化。</li><li>从重复的亮度下降推断系外行星。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>恒星的一生与寻找行星</h4><ul><li>认识恒星中的 nuclear fusion，不把它说成普通燃烧。</li><li>区分 light-year 与 AU，以及 apparent / absolute magnitude。</li><li>理解蓝白恒星通常比红色恒星更热。</li><li>用恒星质量卡排列两条不同演化路线。</li><li>比较 transit、radial velocity、microlensing 和 pulsar timing。</li><li>说明 habitable zone 不等于已经发现生命。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>“不能直接看见”不等于“没有证据”；恒星亮度、颜色、运动和周期变化都能帮助科学家作出有根据的推断。</p></div>
+                <div class="keywords"><span class="keyword">nuclear fusion</span><span class="keyword">light-year</span><span class="keyword">star life cycle</span><span class="keyword">transit method</span><span class="keyword">exoplanet</span><span class="keyword">habitable zone</span></div>
+              </div>
+            </details>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="lessons" class="details-area">
+    <section id="syllabus-map" class="syllabus-map">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <p class="kicker">CORE LABS</p>
-            <h2>8 节核心实验</h2>
-          </div>
-          <p class="section-intro">点击课程卡片，查看核心问题、实验方法、主线思想与关键术语。</p>
+          <div><p class="kicker">SCHOOL NOTES → OUR LESSONS</p><h2>学校每一课，放在哪里讲</h2></div>
+          <p class="section-intro">以下名称直接沿用学校原 Notes。右侧标出对应的实验课；由主实验讲不完整的内容，会放在同一节的知识补充中。</p>
         </div>
-        <div class="toolbar" aria-label="折叠控制">
-          <button class="tool-button" type="button" data-action="open-core">全部展开</button>
-          <button class="tool-button" type="button" data-action="close-core">全部收起</button>
-        </div>
-
-        <div class="lesson-list">
-          <details class="lesson core-detail">
-            <summary>
-              <span class="lesson-no">01</span>
-              <span><h3 class="lesson-title">摆钟会听谁的话？</h3><p class="lesson-thought">可靠的实验结果来自控制条件、重复测量与误差分析</p></span>
-              <span class="chevron" aria-hidden="true">＋</span>
-            </summary>
-            <div class="lesson-body">
-              <div class="question">单摆摆动一次所需时间，主要由摆长、摆锤质量还是放手角度决定？</div>
-              <div class="detail-grid">
-                <div><h4>实验方法</h4><ul><li>设置约 20、40、60、80 cm 四种摆长。</li><li>每次测量摆动 10 次所需时间，每种长度重复 3 次。</li><li>保持摆锤、释放角度和计时方式一致。</li><li>绘制摆长—周期图，比较预测与数据。</li></ul></div>
-                <div><div class="main-idea"><p>单次观察不足以得出结论；控制条件、重复测量并分析误差，才能得到可靠的实验结果。</p></div><div class="keywords"><span class="keyword">pendulum</span><span class="keyword">period</span><span class="keyword">fair test</span><span class="keyword">measurement uncertainty</span></div></div>
-              </div>
+        <div class="map-grid">
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 1 · 科学的本质</h3><span>Nature of Science</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Observation and Inference</b><span class="lesson-link">第 1 节＋全程</span></div>
+              <div class="map-row"><b>02 Quantitative and Qualitative Data</b><span class="lesson-link">第 1 节＋全程</span></div>
+              <div class="map-row"><b>03 Testable Questions</b><span class="lesson-link">第 1 节＋全程</span></div>
             </div>
-          </details>
-
-          <details class="lesson core-detail">
-            <summary>
-              <span class="lesson-no">02</span>
-              <span><h3 class="lesson-title">一根弹簧能不能成为秤？</h3><p class="lesson-thought">从数据建立关系，用关系预测未知结果</p></span>
-              <span class="chevron" aria-hidden="true">＋</span>
-            </summary>
-            <div class="lesson-body">
-              <div class="question">增加拉力时，弹簧伸长量怎样变化？这个关系在什么范围内成立？</div>
-              <div class="detail-grid">
-                <div><h4>实验方法</h4><ul><li>依次增加相同砝码，记录弹簧总长度与伸长量。</li><li>绘制力—伸长量图，利用图线预测未知物体质量。</li><li>用电子秤检验预测结果。</li><li>比较橡皮筋数据，观察是否仍是同一种关系。</li></ul></div>
-                <div><div class="main-idea"><p>科学规律应当能够预测；规律也有适用范围，不能无限外推。</p></div><div class="keywords"><span class="keyword">elasticity</span><span class="keyword">Hooke’s law</span><span class="keyword">calibration</span><span class="keyword">range</span></div></div>
-              </div>
+          </article>
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 2 · 物质的性质</h3><span>Properties of Matter</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Phases of Matter</b><span class="lesson-link">第 3 节</span></div>
+              <div class="map-row"><b>02 Mixtures and Solutions</b><span class="lesson-link">第 2 节</span></div>
+              <div class="map-row"><b>03 Atoms and Period Square</b><span class="lesson-link">第 3 节＋第 4–7 节课前</span></div>
             </div>
-          </details>
-
-          <details class="lesson core-detail">
-            <summary>
-              <span class="lesson-no">03</span>
-              <span><h3 class="lesson-title">轻的就一定浮，重的就一定沉吗？</h3><p class="lesson-thought">寻找遗漏变量，用新证据修正原有模型</p></span>
-              <span class="chevron" aria-hidden="true">＋</span>
-            </summary>
-            <div class="lesson-body">
-              <div class="question">浮沉究竟由物体重量决定，还是由物体与排开水之间的关系决定？</div>
-              <div class="detail-grid">
-                <div><h4>实验方法</h4><ul><li>用溢水杯测量不同浮动物体排开水的质量。</li><li>比较物体质量与排开水质量。</li><li>把同一团橡皮泥做成实心球与空心船。</li><li>给橡皮泥船逐渐加载，记录沉没前最大载荷。</li></ul></div>
-                <div><div class="main-idea"><p>解释不了新现象时，需要寻找遗漏变量并修正模型，而不是只增加术语。</p></div><div class="keywords"><span class="keyword">buoyancy</span><span class="keyword">displacement</span><span class="keyword">average density</span><span class="keyword">model revision</span></div></div>
-              </div>
+          </article>
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 3 · 能量及其形式</h3><span>Energy and its Forms</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Energy Forms and Transfers</b><span class="lesson-link">第 4 节</span></div>
+              <div class="map-row"><b>02 Thermal Energy Transfer</b><span class="lesson-link">第 4 节</span></div>
+              <div class="map-row"><b>03 Electromagnetic Spectrum</b><span class="lesson-link">第 5 节</span></div>
+              <div class="map-row"><b>04 Vectors, Velocity, Acceleration</b><span class="lesson-link">第 6 节</span></div>
+              <div class="map-row"><b>05 Newton’s Laws 1</b><span class="lesson-link">第 7 节</span></div>
+              <div class="map-row"><b>06 Newton’s Laws 2</b><span class="lesson-link">第 7 节</span></div>
+              <div class="map-row"><b>07 Newton’s Laws 3</b><span class="lesson-link">第 7 节</span></div>
             </div>
-          </details>
-
-          <details class="lesson core-detail">
-            <summary>
-              <span class="lesson-no">04</span>
-              <span><h3 class="lesson-title">盐真的消失了吗？</h3><p class="lesson-thought">同时追踪溶解过程中的物质与能量</p></span>
-              <span class="chevron" aria-hidden="true">＋</span>
-            </summary>
-            <div class="lesson-body">
-              <div class="question">固体溶进水里以后去了哪里？为什么有些物质溶解时变热，有些变冷？</div>
-              <div class="detail-grid">
-                <div><h4>实验方法</h4><ul><li>测量食盐溶解前后的系统总质量。</li><li>过滤盐水，再通过蒸发重新获得晶体。</li><li>在相同条件下比较氯化钙、小苏打和食盐的温度—时间曲线。</li><li>用粒子与能量模型解释不同结果。</li></ul></div>
-                <div><div class="main-idea"><p>看不见不等于不存在；物质与能量都需要在明确的系统中被追踪。</p></div><div class="keywords"><span class="keyword">dissolving</span><span class="keyword">filtration</span><span class="keyword">crystallization</span><span class="keyword">exothermic / endothermic</span></div></div>
-              </div>
+          </article>
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 4 · 生命科学</h3><span>Life Science</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Characteristics of Living Things</b><span class="lesson-link">第 8 节</span></div>
+              <div class="map-row"><b>02 Cell Structure</b><span class="lesson-link">第 8 节</span></div>
+              <div class="map-row"><b>03 Cell Supplementary Notes</b><span class="lesson-link">第 8 节</span></div>
+              <div class="map-row"><b>04 Taxonomy</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>05 Plant and Animal Characteristics</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>06 Vascular and Non-Vascular Plants</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>07 Gymnosperms and Angiosperms</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>08 Body Organization</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>09 Circulatory System</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>10 Respiratory System</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>11 Integumentary System</b><span class="lesson-link">第 9 节知识补充</span></div>
             </div>
-          </details>
-
-          <details class="lesson core-detail">
-            <summary>
-              <span class="lesson-no">05</span>
-              <span><h3 class="lesson-title">升温会产生更多气体，还是只让反应更快？</h3><p class="lesson-thought">区分变化速度与最终产物总量</p></span>
-              <span class="chevron" aria-hidden="true">＋</span>
-            </summary>
-            <div class="lesson-body">
-              <div class="question">改变温度时，化学反应的速度和最终产物总量会怎样变化？</div>
-              <div class="detail-grid">
-                <div><h4>实验方法</h4><ul><li>让相同配比的柠檬酸与小苏打在约 10°C、25°C、40°C 水中反应。</li><li>每隔固定时间记录生成的 CO₂ 体积。</li><li>绘制气体体积—时间曲线。</li><li>比较达到固定体积所需时间与最终气体总量。</li></ul></div>
-                <div><div class="main-idea"><p>“更多”可能指单位时间更多，也可能指最终总量更多；科学问题必须先定义测量对象。</p></div><div class="keywords"><span class="keyword">chemical reaction</span><span class="keyword">reaction rate</span><span class="keyword">product</span><span class="keyword">collision</span></div></div>
-              </div>
+          </article>
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 5 · 空间科学</h3><span>Space Science</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Earth’s Movement</b><span class="lesson-link">第 10 节</span></div>
+              <div class="map-row"><b>02 Earth’s Moon</b><span class="lesson-link">第 10 节</span></div>
+              <div class="map-row"><b>03 Asteroids, Meteors and Comets</b><span class="lesson-link">第 11 节</span></div>
+              <div class="map-row"><b>04 Stars</b><span class="lesson-link">第 11 节</span></div>
+              <div class="map-row"><b>05 Exoplanets</b><span class="lesson-link">第 11 节</span></div>
             </div>
-          </details>
-
-          <details class="lesson core-detail">
-            <summary>
-              <span class="lesson-no">06</span>
-              <span><h3 class="lesson-title">铁为什么会慢慢生锈？</h3><p class="lesson-thought">用对照与时间序列研究缓慢变化</p></span>
-              <span class="chevron" aria-hidden="true">＋</span>
-            </summary>
-            <div class="lesson-body">
-              <div class="question">铁生锈需要哪些条件？盐是铁锈的材料，还是加快反应的条件？</div>
-              <div class="detail-grid">
-                <div><h4>实验方法</h4><ul><li>设置干燥空气、隔绝空气的水、普通水、盐水四种条件。</li><li>使用相同铁钉或钢丝绒，持续记录照片与锈蚀等级。</li><li>观察提前 5–7 天准备的平行样品。</li><li>在后续课程继续记录学生自己的样品。</li></ul></div>
-                <div><div class="main-idea"><p>慢反应同样可以实验；时间序列、对照组与持续记录构成证据。</p></div><div class="keywords"><span class="keyword">oxidation</span><span class="keyword">corrosion</span><span class="keyword">control</span><span class="keyword">time series</span></div></div>
-              </div>
-            </div>
-          </details>
-
-          <details class="lesson core-detail">
-            <summary>
-              <span class="lesson-no">07</span>
-              <span><h3 class="lesson-title">气体跑掉后，质量真的减少了吗？</h3><p class="lesson-thought">先确定系统边界，再解释质量增减</p></span>
-              <span class="chevron" aria-hidden="true">＋</span>
-            </summary>
-            <div class="lesson-body">
-              <div class="question">同一个产生气体的反应，在开放和封闭容器中称量，为什么会得到不同结果？</div>
-              <div class="detail-grid">
-                <div><h4>实验方法</h4><ul><li>用相同反应物设置开放组与封闭组。</li><li>测量反应前后整个装置的质量。</li><li>记录电子秤分度值与读数波动。</li><li>用 Claim–Evidence–Reasoning 解释两组结果。</li></ul></div>
-                <div><div class="main-idea"><p>物质穿过边界会改变秤的读数；质量守恒必须与系统边界一起理解。</p></div><div class="keywords"><span class="keyword">open system</span><span class="keyword">closed system</span><span class="keyword">system boundary</span><span class="keyword">conservation of mass</span></div></div>
-              </div>
-            </div>
-          </details>
-
-          <details class="lesson core-detail">
-            <summary>
-              <span class="lesson-no">08</span>
-              <span><h3 class="lesson-title">四季为什么变化？</h3><p class="lesson-thought">用可检验的小尺度模型解释巨大系统</p></span>
-              <span class="chevron" aria-hidden="true">＋</span>
-            </summary>
-            <div class="lesson-body">
-              <div class="question">同一束光斜着照与直着照，单位面积得到的能量为什么不同？</div>
-              <div class="detail-grid">
-                <div><h4>实验方法</h4><ul><li>固定光源、距离和时间，改变纸面受光角度。</li><li>描出光斑并统计覆盖方格数，条件允许时测量温升。</li><li>用倾斜 23.5° 的地球仪模拟公转。</li><li>解释南北半球季节相反及太阳高度变化。</li></ul></div>
-                <div><div class="main-idea"><p>模型保留关键关系、忽略次要细节；模型的价值在于解释和预测，也必须说明限制。</p></div><div class="keywords"><span class="keyword">model</span><span class="keyword">axial tilt</span><span class="keyword">angle of incidence</span><span class="keyword">energy per unit area</span></div></div>
-              </div>
-            </div>
-          </details>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="optional">
+    <section class="timing">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <p class="kicker">EXTENSION LABS</p>
-            <h2>拓展实验</h2>
-          </div>
-          <p class="section-intro">可根据课时、器材条件和学习兴趣，从相应领域中选择加入。</p>
+          <div><p class="kicker">120-MINUTE RHYTHM</p><h2>一节 2 小时怎么装进去</h2></div>
+          <p class="section-intro">实验仍然是主体，知识补充保持短、具体，并且紧接学校课程。</p>
         </div>
-        <div class="optional-grid">
-          <details class="optional" data-group="life" data-order="7">
-            <summary><span class="optional-tag">拓展 G</span><span class="optional-copy"><h3 class="optional-title">温度越高，生命反应一定越快吗？</h3><p class="optional-line">酵母过氧化氢酶 · 温度—产气量</p></span></summary>
-            <div class="optional-body"><div class="main-idea">反例促使模型增加条件：温度升高可加快速率，高温也可能使酶变性。</div><h4>实验</h4><ul><li>比较低温、室温、约 40°C 与高温处理后的酵母。</li><li>测量固定时间产生的氧气体积。</li><li>绘制温度—产气量图。</li></ul></div>
-          </details>
-          <details class="optional" data-group="capstone" data-order="9">
-            <summary><span class="optional-tag">拓展 I</span><span class="optional-copy"><h3 class="optional-title">这一次由你提出问题</h3><p class="optional-line">学生独立实验 · 从问题到证据</p></span></summary>
-            <div class="optional-body"><div class="main-idea">独立完成问题、变量、测量、图像、证据推理与实验改进。</div><h4>成果</h4><ul><li>一个可检验的问题与有理由的预测。</li><li>至少三个自变量水平与重复数据。</li><li>一张数据图和一份 CER 结论。</li></ul></div>
-          </details>
-          <details class="optional" data-group="electricity" data-order="6">
-            <summary><span class="optional-tag">拓展 F</span><span class="optional-copy"><h3 class="optional-title">怎样让电磁铁变得更强？</h3><p class="optional-line">线圈匝数 · 吸起质量</p></span></summary>
-            <div class="optional-body"><div class="main-idea">看不见的磁场可以通过可测作用研究；工程设计还需考虑发热、耗电与稳定性。</div><h4>实验</h4><ul><li>比较 20、40、60 匝线圈。</li><li>固定铁芯、电源和通电时间。</li><li>测量吸起回形针的数量或质量。</li></ul></div>
-          </details>
-          <details class="optional" data-group="matter" data-order="3">
-            <summary><span class="optional-tag">拓展 C</span><span class="optional-copy"><h3 class="optional-title">温暖的汽水为什么更容易冒气？</h3><p class="optional-line">气体溶解度 · 温度—逸气体积</p></span></summary>
-            <div class="optional-body"><div class="main-idea">平衡状态取决于条件；“溶解得少”“逸出得快”和“装置漏气”必须区分。</div><h4>实验</h4><ul><li>比较约 10°C、25°C、40°C 的碳酸水。</li><li>标准化搅动，收集并测量 CO₂。</li><li>讨论温度、压力与逸出过程。</li></ul></div>
-          </details>
-          <details class="optional" data-group="mechanics" data-order="1">
-            <summary><span class="optional-tag">拓展 A</span><span class="optional-copy"><h3 class="optional-title">空气真的能被压缩吗？</h3><p class="optional-line">密闭注射器 · 外力—体积关系</p></span></summary>
-            <div class="optional-body"><div class="main-idea">不能直接看见气体粒子，但可以从体积和力的关系推断内部变化。</div><h4>实验</h4><ul><li>逐步增加无针注射器活塞上的外力。</li><li>记录密闭空气体积并绘图。</li><li>与排尽气泡的水进行比较。</li></ul></div>
-          </details>
-          <details class="optional" data-group="light" data-order="5">
-            <summary><span class="optional-tag">拓展 E</span><span class="optional-copy"><h3 class="optional-title">镜子怎样把光送到指定位置？</h3><p class="optional-line">光的反射 · 入射角—反射角</p></span></summary>
-            <div class="optional-body"><div class="main-idea">通过起点、落点和反射位置重建看不见的光路，并用规律完成新预测。</div><h4>实验</h4><ul><li>测量多组入射角与反射角。</li><li>绘制角度关系图。</li><li>预测镜面角度，使光绕过挡板击中目标。</li></ul></div>
-          </details>
-          <details class="optional" data-group="matter" data-order="4">
-            <summary><span class="optional-tag">拓展 D</span><span class="optional-copy"><h3 class="optional-title">哪一种材料最适合保温？</h3><p class="optional-line">材料比较 · 温度—时间曲线</p></span></summary>
-            <div class="optional-body"><div class="main-idea">材料性能必须在相同水量、初温、厚度与时间条件下比较。</div><h4>实验</h4><ul><li>比较棉布、气泡膜、纸、铝箔或空气层。</li><li>记录温水随时间的温度变化。</li><li>依据数据改进保温容器。</li></ul></div>
-          </details>
-          <details class="optional" data-group="life" data-order="8">
-            <summary><span class="optional-tag">拓展 H</span><span class="optional-copy"><h3 class="optional-title">植物里的水走到哪里去了？</h3><p class="optional-line">植物蒸腾 · 风与叶面积</p></span></summary>
-            <div class="optional-body"><div class="main-idea">物质守恒与系统边界同样可以用于研究生命系统。</div><h4>实验</h4><ul><li>密封水面，比较静止空气、低速风和不同叶面积。</li><li>固定时间称量整套装置。</li><li>观察叶片散失后重新凝结的水。</li></ul></div>
-          </details>
-          <details class="optional" data-group="mechanics" data-order="2">
-            <summary><span class="optional-tag">拓展 B</span><span class="optional-copy"><h3 class="optional-title">运动为什么会停下来？</h3><p class="optional-line">伽利略斜面 · 摩擦、惯性与理想化</p></span></summary>
-            <div class="optional-body"><div class="main-idea">思想实验建立在真实趋势上：逐步减少干扰，并把有证据支持的关系推向理想极限。</div><h4>实验</h4><ul><li>比较小球在不同粗糙表面的停止距离。</li><li>改变第二斜面角度，测量最大高度和行进距离。</li><li>外推到无摩擦水平面，建立惯性思想。</li></ul></div>
-          </details>
+        <div class="timeline">
+          <div class="time-step"><b>0–10 分钟</b><span>回顾与英文词汇</span></div>
+          <div class="time-step"><b>10–20 分钟</b><span>现象、问题与预测</span></div>
+          <div class="time-step"><b>20–60 分钟</b><span>主实验与记录</span></div>
+          <div class="time-step"><b>60–70 分钟</b><span>休息、整理器材</span></div>
+          <div class="time-step"><b>70–90 分钟</b><span>数据、图表与解释</span></div>
+          <div class="time-step"><b>90–120 分钟</b><span>知识补充＋课内题</span></div>
         </div>
       </div>
     </section>
 
-    <section id="chem-bio" class="chem-bio-area">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="kicker">CHEMISTRY &amp; BIOLOGY LABS</p>
-            <h2 data-en="Chemistry &amp; Biology Lab Collection">化学与生物实验栏目</h2>
-          </div>
-          <p class="section-intro" data-en="Ten short investigations built around vivid changes and microscope evidence. Each can stand alone or be paired into a 60–90 minute lesson.">10 个围绕颜色、沉淀、分离、细胞和酶的短实验；可单独使用，也可两项组合成一节 60–90 分钟课程。</p>
+    <section id="outcomes">
+      <div class="wrap outcome">
+        <p class="kicker">LEARNING OUTCOMES</p>
+        <h2>课程结束时，孩子不只是“都听过”</h2>
+        <div class="outcome-grid">
+          <div class="outcome-item"><b>会做公平实验</b><span>能找出变量、重复测量，并诚实处理数据波动。</span></div>
+          <div class="outcome-item"><b>会辨认重点概念</b><span>能区分势能与动能、热的三种传递、速度与加速度等。</span></div>
+          <div class="outcome-item"><b>会用模型解释</b><span>能用粒子、能量、细胞和地月日模型解释看见的现象。</span></div>
+          <div class="outcome-item"><b>会根据证据表达</b><span>能用简单中英文术语完成“结论—证据—解释”。</span></div>
         </div>
-
-        <div class="safety-gate">
-          <b data-en="Read the label before opening the bottle">先看瓶签，再开实验</b>
-          <span data-en="The reagent names in the kit photo are unreadable. Never identify a chemical by color or appearance. Unlabeled materials, strong acids or bases, heavy-metal salts, oxidizers, flames, and rigid sealed gas reactions are outside this collection.">实验箱图片无法辨认试剂名称，绝不凭颜色或外观猜成分。无标签试剂、强酸强碱、重金属盐、强氧化剂、明火和刚性密闭产气反应都不进入本栏目。</span>
-        </div>
-
-        <div class="lab-group">
-          <div class="lab-group-head">
-            <h3 data-en="Chemistry: make invisible changes visible">化学：把看不见的变化变成证据</h3>
-            <p data-en="Food-grade materials first; one conditional microscale precipitation reaction">优先食品级材料；含 1 个有条件启用的微量沉淀反应</p>
-          </div>
-          <div class="lab-grid">
-            <details class="lab-card">
-              <summary><span class="lab-code">C1</span><span><h3 class="lab-title" data-en="Red-Cabbage Rainbow">紫甘蓝“彩虹”</h3><p class="lab-line" data-en="Indicator color · acids and bases">指示剂变色 · 酸与碱</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="How can one purple liquid reveal differences among clear liquids?">同一种紫色液体，怎样显示不同透明液体的差别？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="Prepare and cool cabbage extract; keep one untreated sample as the control.">成人制备并放凉紫甘蓝浸出液，保留一份原液作对照。</li><li data-en="Compare equal volumes of vinegar, lemon juice, water, and 1% baking-soda solution.">用等体积白醋、柠檬汁、清水和 1% 小苏打溶液比较颜色。</li><li data-en="Add vinegar dropwise to the baking-soda sample and record the color sequence.">向小苏打组逐滴加白醋，记录颜色怎样逐步变化。</li></ul>
-                <p class="lab-explain" data-en="Anthocyanin molecules change structure in acidic and basic surroundings, changing which colors of light they absorb. Color indicates a range, not an exact pH.">花青素分子在酸性和碱性环境中的结构略有变化，吸收的光随之改变；颜色表示范围，不是精确 pH。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level A">A 级</span><span class="lab-fact" data-en="40–50 min">40–50 分钟</span><span class="lab-fact" data-en="color change">变色</span></div>
-              </div>
-            </details>
-
-            <details class="lab-card">
-              <summary><span class="lab-code">C2</span><span><h3 class="lab-title" data-en="Vitamin C Detective">维生素 C 侦探</h3><p class="lab-line" data-en="Iodine–starch color · redox evidence">碘—淀粉褪色 · 氧化还原</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="Which clear sample uses fewer drops to remove the blue-black color?">哪种透明样品用更少滴数就能让蓝黑色消失？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="An adult prepares equal wells of dilute iodine and starch indicator.">成人用稀碘液和淀粉液准备相同的蓝紫色反应孔。</li><li data-en="Use water as a negative control and a known vitamin C solution as a positive control.">用清水作阴性对照、已知维生素 C 溶液作阳性对照。</li><li data-en="Count drops to the endpoint and repeat each sample three times.">逐滴加入透明果汁，记录刚好褪色的滴数，每种重复 3 次。</li></ul>
-                <p class="lab-explain" data-en="Iodine looks blue-black with starch. Vitamin C converts iodine into iodide, which does not make that color. Other juice ingredients may interfere, so conclusions apply only under the tested conditions.">碘与淀粉形成蓝黑色；维生素 C 把碘转变成不显色的碘离子。果汁的其他成分可能干扰，结论只适用于本实验条件。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level B">B 级</span><span class="lab-fact" data-en="45–60 min">45–60 分钟</span><span class="lab-fact" data-en="adult portions iodine">成人分装碘液</span></div>
-              </div>
-            </details>
-
-            <details class="lab-card">
-              <summary><span class="lab-code">C3</span><span><h3 class="lab-title" data-en="Call the Protein Out of Milk">把牛奶蛋白“叫出来”</h3><p class="lab-line" data-en="Curds · filtration · dry mass">絮状沉淀 · 过滤 · 干质量</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="How does the amount of vinegar affect the solid separated from milk?">白醋用量怎样影响牛奶中分离出的固体？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="An adult warms equal milk samples to 50–60°C and removes the heat source.">成人把等量牛奶温热到 50–60°C 后移开热源。</li><li data-en="Compare 0, 1, 2, and 3 mL of vinegar using the same mixing and settling time.">分别加 0、1、2、3 mL 白醋，搅拌和静置时间保持一致。</li><li data-en="Filter with pre-weighed paper; compare only after samples are fully dry.">用预先称量的滤纸过滤，完全干燥后才比较固体质量。</li></ul>
-                <p class="lab-explain" data-en="Acid changes the electrical conditions around casein particles, allowing them to clump into visible curds. This is protein aggregation, not exactly the same process as forming a new ionic solid in C4.">酸改变酪蛋白颗粒周围的电性，使它们聚成可见凝块；这与 C4 生成新的离子固体不完全相同。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level A">A 级</span><span class="lab-fact" data-en="50–60 min">50–60 分钟</span><span class="lab-fact" data-en="precipitation & filtration">沉淀与过滤</span></div>
-              </div>
-            </details>
-
-            <details class="lab-card">
-              <summary><span class="lab-code">C4</span><span><h3 class="lab-title" data-en="A White Cloud from Two Clear Liquids">两杯透明液体变“白云”</h3><p class="lab-line" data-en="Calcium carbonate · true precipitation">碳酸钙 · 真正的沉淀反应</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="Why does a new white solid appear when two clear solutions meet?">两种透明溶液混合后，为什么出现原来没有的白色固体？</p>
-                <h4 data-en="Enable only when labels are complete">仅在标签完整时启用</h4>
-                <ul><li data-en="An adult confirms calcium chloride (CaCl₂) and sodium carbonate (Na₂CO₃); baking soda is not sodium carbonate.">成人确认原标签分别为氯化钙 CaCl₂ 与碳酸钠 Na₂CO₃；小苏打不是碳酸钠。</li><li data-en="Compare two water controls with a microscale 1 mL + 1 mL reaction using 1% solutions.">设置两个加水对照，只用 1% 溶液各 1 mL 做微量反应。</li><li data-en="Filter the mixture to separate the white solid from the clear liquid.">过滤混合物，把白色固体与较清液体分开。</li></ul>
-                <p class="lab-explain" data-en="Calcium ions and carbonate ions recombine to form calcium carbonate particles that dissolve poorly: Ca²⁺ + CO₃²⁻ → CaCO₃↓.">钙离子和碳酸根离子重新组合成难溶的碳酸钙颗粒：Ca²⁺ + CO₃²⁻ → CaCO₃↓。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Conditional Level C">有条件 C 级</span><span class="lab-fact" data-en="35–45 min">35–45 分钟</span><span class="lab-fact" data-en="goggles & gloves">护目镜＋手套</span></div>
-              </div>
-            </details>
-
-            <details class="lab-card">
-              <summary><span class="lab-code">C5</span><span><h3 class="lab-title" data-en="Hidden Colors in Ink">墨水里藏着几种颜色</h3><p class="lab-line" data-en="Paper chromatography · mixture separation">纸色谱 · 混合物分离</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="Do two black water-based pens contain the same pigments?">两支看起来都黑的水性笔，颜料组成相同吗？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="Place a small ink spot on a pencil baseline 2 cm above the bottom of each filter-paper strip.">在滤纸底端上方 2 cm 画铅笔线，点一个小而集中的墨点。</li><li data-en="Hang strips with the spots above the water; remove before the water front reaches the top.">让墨点高于水面垂直展开，水前沿接近顶端前取出。</li><li data-en="Measure pigment travel and water-front travel, then compare their ratio.">测量色带与水前沿距离，比较两者的比值。</li></ul>
-                <p class="lab-explain" data-en="Pigments differ in how strongly they travel with water and cling to paper, so a mixture separates into bands. This is physical separation, not formation of new substances.">不同颜料跟随水移动、黏附纸纤维的程度不同，因此被分成色带；这是物理分离，不是生成新物质。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level A">A 级</span><span class="lab-fact" data-en="35–45 min">35–45 分钟</span><span class="lab-fact" data-en="separation">分离</span></div>
-              </div>
-            </details>
-          </div>
-        </div>
-
-        <div class="lab-group">
-          <div class="lab-group-head">
-            <h3 data-en="Biology: cells and life processes under investigation">生物：把细胞与生命过程放进实验</h3>
-            <p data-en="Four microscope investigations plus one visible enzyme-rate investigation">4 个显微镜观察＋1 个可量化的酶反应</p>
-          </div>
-          <div class="lab-grid">
-            <details class="lab-card bio">
-              <summary><span class="lab-code">B1</span><span><h3 class="lab-title" data-en="The Brick Wall in Onion Skin">洋葱表皮里的“砖墙”</h3><p class="lab-line" data-en="Plant cells · first wet mount">植物细胞 · 第一次水封装片</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="What is a smooth onion membrane made of when viewed under a microscope?">一片看起来光滑的洋葱薄膜，放大后由什么组成？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="Flatten a tiny inner-epidermis peel in one drop of water and lower the coverslip at an angle.">取一小片洋葱内表皮铺在水滴中，斜放盖玻片以减少气泡。</li><li data-en="Find the specimen with the lowest-power objective before moving to medium or high power.">先用最低倍物镜找到细胞，再转中倍或高倍。</li><li data-en="Draw adjacent cells and label the cell wall, cytoplasm, and large vacuole region.">画出相邻细胞，标出细胞壁、细胞质和大液泡区域。</li></ul>
-                <p class="lab-explain" data-en="The onion is built from cells. The clear rectangular boundaries are mainly cell walls; the membrane lies just inside and is often hard to distinguish. Underground onion scales usually lack visible chloroplasts.">洋葱由许多细胞构成；规则边界主要是细胞壁，细胞膜紧贴其内且常不易分辨。地下鳞片通常看不到叶绿体。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level B">B 级</span><span class="lab-fact" data-en="45–60 min">45–60 分钟</span><span class="lab-fact" data-en="microscope">显微镜</span></div>
-              </div>
-            </details>
-
-            <details class="lab-card bio">
-              <summary><span class="lab-code">B2</span><span><h3 class="lab-title" data-en="Onion Cells Shrink—and Return">紫皮洋葱细胞“缩水又复原”</h3><p class="lab-line" data-en="Osmosis · plasmolysis · reversibility">渗透 · 质壁分离 · 可逆变化</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="Where does water move when the salt concentration outside a plant cell changes?">细胞外盐浓度改变时，水会向哪里移动？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="Photograph purple onion epidermal cells mounted in water as the baseline.">先拍摄清水装片中的紫皮洋葱细胞作基线。</li><li data-en="Draw 10% salt solution under the coverslip and observe the same field every minute.">用吸水纸把 10% 食盐水引入盖玻片下，每分钟观察同一视野。</li><li data-en="Replace the salt solution with water and look for partial recovery.">再换回清水，观察细胞是否部分恢复。</li></ul>
-                <p class="lab-explain" data-en="Concentrated salt solution draws water out through the cell membrane. The vacuole shrinks and the living contents pull away from the rigid wall; water can reverse part of the change.">浓盐水使水通过细胞膜向外移动，液泡缩小，细胞内部从坚硬的细胞壁处缩回；换水可使部分变化逆转。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level B">B 级</span><span class="lab-fact" data-en="50–60 min">50–60 分钟</span><span class="lab-fact" data-en="count 20 cells">统计 20 个细胞</span></div>
-              </div>
-            </details>
-
-            <details class="lab-card bio">
-              <summary><span class="lab-code">B3</span><span><h3 class="lab-title" data-en="Green Factories in a Waterweed Leaf">水草叶里的绿色“小工厂”</h3><p class="lab-line" data-en="Chloroplasts · cytoplasmic streaming">叶绿体 · 细胞质流动</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="Is a leaf green because of material outside its cells or structures inside them?">叶片的绿色来自细胞外面，还是来自细胞内部的小结构？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="Make an unstained water mount from a thin young Elodea, Egeria, or Hydrilla leaf.">取黑藻、伊乐藻等沉水植物的嫩薄叶，制作不染色水封装片。</li><li data-en="Focus on a single cell layer near the edge and observe green particles inside each cell.">在叶缘单层细胞处对焦，观察每个细胞内部的绿色颗粒。</li><li data-en="Watch one cell for 2–3 minutes and distinguish chloroplast motion from movement of the entire slide.">固定观察一个细胞 2–3 分钟，区分叶绿体移动与整片装片漂动。</li></ul>
-                <p class="lab-explain" data-en="Chloroplasts contain chlorophyll and capture light energy. When they appear to travel around a cell, flowing cytoplasm is carrying them.">叶绿体含叶绿素并捕获光能；若看到它们沿细胞移动，主要是流动的细胞质带着它们运动。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level B">B 级</span><span class="lab-fact" data-en="40–50 min">40–50 分钟</span><span class="lab-fact" data-en="no unknown pond water">不用未知池水</span></div>
-              </div>
-            </details>
-
-            <details class="lab-card bio">
-              <summary><span class="lab-code">B4</span><span><h3 class="lab-title" data-en="Yeast Is Powder—and Cells">酵母既是“粉”也是细胞</h3><p class="lab-line" data-en="Single-celled fungi · budding · fermentation">单细胞真菌 · 出芽 · 发酵</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="How can we show that dry yeast contains living cells carrying out life processes?">怎样证明干酵母中有活细胞，而且正在进行生命活动？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="Compare yeast + sugar water, yeast + water, and sugar water without yeast at 30–35°C.">在 30–35°C 下比较“酵母＋糖水、酵母＋清水、糖水无酵母”三组。</li><li data-en="Record foam height or balloon circumference every five minutes; never use a rigid sealed bottle.">每 5 分钟记录泡沫高度或气球周长；绝不用刚性密闭瓶。</li><li data-en="Observe a drop at high power and look for oval cells and occasional buds.">显微镜高倍观察一滴悬液，寻找椭圆细胞和偶见的芽体。</li></ul>
-                <p class="lab-explain" data-en="Yeast is a single-celled fungus. It uses sugar and releases carbon dioxide; bubbles are visible evidence of an invisible metabolic process.">酵母是单细胞真菌，利用糖并释放二氧化碳；气泡是看不见的代谢过程留下的可见证据。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level A/B">A/B 级</span><span class="lab-fact" data-en="50–70 min">50–70 分钟</span><span class="lab-fact" data-en="same-day disposal">当天处理</span></div>
-              </div>
-            </details>
-
-            <details class="lab-card bio">
-              <summary><span class="lab-code">B5</span><span><h3 class="lab-title" data-en="Potato Foam Factory">土豆泡沫工厂</h3><p class="lab-line" data-en="Catalase · temperature · reaction rate">过氧化氢酶 · 温度 · 反应速率</p></span><span class="chevron" aria-hidden="true">＋</span></summary>
-              <div class="lab-body">
-                <p class="lab-question" data-en="Do equal potato pieces break down hydrogen peroxide at the same rate after different temperature treatments?">相同土豆块经不同温度处理后，分解过氧化氢的速度相同吗？</p>
-                <h4 data-en="What to do">怎么做</h4>
-                <ul><li data-en="An adult cuts equal potato pieces and portions pharmacy-grade 3% hydrogen peroxide.">成人切好等大土豆块，并分装药店 3% 过氧化氢。</li><li data-en="Compare ice-water, room-temperature, and 40°C treatments using equal reaction volumes.">比较冰水、室温和约 40°C 处理，反应液体积保持相同。</li><li data-en="Measure foam height at 30 and 60 seconds, with a no-potato control and three trials.">测量 30 秒、60 秒泡沫高度，设置无土豆对照并重复 3 次。</li></ul>
-                <p class="lab-explain" data-en="Potato catalase speeds the breakdown of hydrogen peroxide into water and oxygen. Low temperature slows enzyme action; excessive heat changes protein shape and can stop it working.">土豆中的过氧化氢酶加快过氧化氢分解成水和氧气；低温使反应变慢，过高温度会改变蛋白质形状。</p>
-                <div class="lab-facts"><span class="lab-fact" data-en="Level B">B 级</span><span class="lab-fact" data-en="45–60 min">45–60 分钟</span><span class="lab-fact" data-en="3% peroxide only">仅限 3% 过氧化氢</span></div>
-              </div>
-            </details>
-          </div>
-        </div>
-
-        <p class="guide-link"><a href="化学与生物实验栏目-详细方案.md" data-en="Open the detailed guide: exact preparation, teaching explanations, disposal, and a reagent-check table →">查看详细方案：准确准备、教学解释、废物处理与试剂核验表 →</a></p>
       </div>
     </section>
-
-    <div class="wrap outcome">
-      <p class="eyebrow" style="color:#aee5db">LEARNING OUTCOMES</p>
-      <h2>课程结束时，学生能够</h2>
-      <div class="outcome-grid">
-        <div class="outcome-item"><b>把好奇心变成问题</b><span>提出可以通过观察、测量与比较回答的问题。</span></div>
-        <div class="outcome-item"><b>用实验检验猜想</b><span>设计实验、控制变量，并根据测量结果判断证据是否支持猜想。</span></div>
-        <div class="outcome-item"><b>从数据中发现规律</b><span>整理并比较多组测量结果，发现变量之间的关系，并用这些规律预测新的实验结果。</span></div>
-      </div>
-    </div>
   </main>
 
-  <footer>
-    <div class="wrap">暑期实验科学课程 · Grade 4 → Grade 5</div>
-  </footer>
+  <footer><div class="wrap">五年级实验科学课程 · Unit 1–5 全年重点复习</div></footer>
 
   <script>
-    const phaseTargets = Object.fromEntries(
-      [...document.querySelectorAll('.phase[data-group]')].map(phase => [
-        phase.dataset.group,
-        phase.querySelector('.phase-content .lesson-list')
-      ])
-    );
-
-    [...document.querySelectorAll('#lessons .core-detail')].forEach(item => {
-      const lessonNumber = Number(item.querySelector('.lesson-no').textContent);
-      const group = lessonNumber <= 3 ? 'mechanics' : lessonNumber <= 7 ? 'matter' : 'light';
-      phaseTargets[group].append(item);
-    });
-
-    [...document.querySelectorAll('#optional .optional')]
-      .sort((a, b) => Number(a.dataset.order) - Number(b.dataset.order))
-      .forEach(item => phaseTargets[item.dataset.group].append(item));
-
-    document.getElementById('lessons').remove();
-    document.getElementById('optional').remove();
-
-    const translations = {
-      "科学思考": "Scientific Thinking",
-      "课程概览": "Course Overview",
-      "点击某个实验，即可查看它的核心问题、实验方法与主线思想。": "Open an investigation to explore its driving question, method, and central idea.",
-      "核心实验": "Core Labs",
-      "拓展实验": "Extension Labs",
-      "四升五 · 暑期实验科学": "GRADE 4 → 5 · SUMMER SCIENCE LAB",
-      "在实验中": "Discovering Science",
-      "发现科学": "Through Investigation",
-      "课程以物理和化学实验为主。孩子会自己提出问题、作出猜想、控制变量、反复测量，并根据实验结果形成和修正科学解释。": "Through hands-on physics and chemistry investigations, students formulate their own questions, make predictions, control variables, repeat measurements, and use experimental results to develop and revise scientific explanations.",
-      "科学家怎样从不完全、会波动的实验数据中，发现能够解释和预测现象的规律？": "How do scientists use incomplete, variable experimental data to discover patterns and relationships that help explain and predict natural phenomena?",
-      "8 节核心课程": "8 Core Lessons",
-      "2 节扩展课程": "2 Extension Lessons",
-      "7 个备选实验": "7 Optional Labs",
-      "每节 75–90 分钟": "75–90 Minutes Each",
-      "每节一个核心问题": "One Driving Question per Lesson",
-      "这门课会反复练习什么": "What Students Practice Throughout the Course",
-      "不同实验研究不同问题，但下面这些做法会在课堂里反复出现。": "Each investigation asks a different question, but these practices return throughout the course.",
-      "多测几次再下结论": "Measure More Than Once Before Concluding",
-      "单次结果可能受计时、读数或装置影响；摆和弹簧实验都要重复测量并比较误差。": "A single result may be affected by timing, reading, or apparatus errors; the pendulum and spring investigations both use repeated measurements and compare uncertainty.",
-      "一次只改变一个条件": "Change One Condition at a Time",
-      "比较摆长、拉力或温度时，其他条件尽量保持一致，才能知道是什么影响了结果。": "When comparing pendulum length, force, or temperature, keep the other conditions as constant as possible so the cause of a change can be identified.",
-      "把看不见的东西找回来": "Track What Cannot Be Seen Directly",
-      "用质量、温度、气体体积和锈蚀变化，追踪溶解的盐、生成的气体和空气中的氧。": "Use mass, temperature, gas volume, and corrosion to track dissolved salt, newly produced gases, and oxygen from the air.",
-      "猜想可以错，记录不能改": "Predictions Can Be Wrong; Records Must Be Honest",
-      "实验结果与预测不同时，根据数据修改解释，不挑选只支持原想法的结果。": "When results differ from a prediction, revise the explanation using the data rather than selecting only results that support the original idea.",
-      "用模型解释，也检查模型": "Use Models—and Test Their Limits",
-      "用粒子、能量和地球仪模型解释现象，再用新实验判断模型哪里适用、哪里需要修改。": "Use particle, energy, and globe models to explain observations, then test where each model works and where it needs revision.",
-      "核心": "Core",
-      "拓展": "Extension",
-      "力与运动": "Forces and Motion",
-      "用摆、弹簧、浮力和气体压力研究力怎样改变物体的运动、形变与平衡。": "Use pendulums, springs, buoyancy, and gas pressure to investigate how forces affect motion, deformation, and equilibrium.",
-      "空气压缩": "Compression of Air",
-      "外力、压力与气体体积": "Applied force, pressure, and gas volume",
-      "伽利略斜面": "Galileo’s Inclines",
-      "摩擦、惯性与理想化": "Friction, inertia, and idealization",
-      "物质与能量": "Matter and Energy",
-      "研究物质在溶解、反应和氧化中的变化，同时测量温度、气体体积与质量。": "Investigate changes in matter during dissolving, chemical reactions, and oxidation while measuring temperature, gas volume, and mass.",
-      "气体溶解度": "Gas Solubility",
-      "温度与二氧化碳逸出": "Temperature and CO₂ release",
-      "保温材料": "Thermal Insulation",
-      "材料与温度—时间曲线": "Materials and temperature–time curves",
-      "光": "Light",
-      "研究光照角度与反射，用光的传播规律解释观察结果和季节模型。": "Investigate illumination angle and reflection, using how light travels to explain observations and the seasons model.",
-      "光的反射": "Reflection of Light",
-      "入射角、反射角与光路": "Angles of incidence and reflection, and light paths",
-      "电与磁": "Electricity and Magnetism",
-      "通过电磁铁研究电流、线圈和磁场强度之间的关系。": "Use an electromagnet to investigate relationships among electric current, the number of coil turns, and magnetic field strength.",
-      "电磁铁": "Electromagnets",
-      "线圈匝数与吸起质量": "Number of coil turns and lifting capacity",
-      "生命科学": "Life Science",
-      "用测量研究酶反应与植物蒸腾，观察生命系统怎样受到温度和环境影响。": "Measure enzyme activity and plant transpiration to investigate how living systems respond to temperature and environmental conditions.",
-      "反应速率、最适范围与变性": "Reaction rate, optimum temperature range, and denaturation",
-      "植物蒸腾": "Plant Transpiration",
-      "风、叶面积与失水速度": "Airflow, leaf area, and rate of water loss",
-      "结课拓展": "Capstone Extension",
-      "由孩子选择问题、设计公平实验、记录数据并完成解释。": "The student selects a question, designs a fair test, records data, and develops an explanation.",
-      "TOPIC 01 · 第 1–3 节": "TOPIC 01 · LESSONS 1–3",
-      "怎样从测量中找到规律？": "How Do Measurements Reveal Patterns?",
-      "先用单摆练习测量和重复，再通过弹簧与浮力实验，看数据怎样揭示关系、修正原来的想法。": "Begin with repeated pendulum measurements, then use spring and buoyancy data to uncover relationships and revise initial ideas.",
-      "单摆周期": "Pendulum Period",
-      "长度、时间、重复与误差": "Length, time, repeated trials, and error",
-      "弹簧伸长": "Spring Extension",
-      "力、图像、校准与预测": "Force, graphs, calibration, and prediction",
-      "浮力与排水": "Buoyancy and Displacement",
-      "质量、形状与模型修正": "Mass, shape, and model revision",
-      "TOPIC 02 · 第 4–7 节": "TOPIC 02 · LESSONS 4–7",
-      "物质和能量去了哪里？": "Where Do Matter and Energy Go?",
-      "从盐的溶解、反应产气到铁生锈，连续追踪质量、温度、气体体积和反应条件。": "Track mass, temperature, gas volume, and reaction conditions across dissolving, gas-producing reactions, and rusting.",
-      "溶解调查": "Dissolving Investigation",
-      "质量、结晶与温度变化": "Mass, crystallization, and temperature change",
-      "反应速率": "Reaction Rate",
-      "温度、时间与气体体积": "Temperature, time, and gas volume",
-      "铁的氧化": "Oxidation of Iron",
-      "条件、对照与时间序列": "Conditions, controls, and time series",
-      "质量守恒": "Conservation of Mass",
-      "开放系统与封闭系统": "Open and closed systems",
-      "TOPIC 03 · 第 8–10 节": "TOPIC 03 · LESSONS 8–10",
-      "怎样用实验检验解释？": "How Can Experiments Test an Explanation?",
-      "用光照实验和地球仪解释季节，在酶反应中检验温度规律，最后由孩子独立设计实验。": "Use light-angle measurements and a globe to explain the seasons, test a temperature–rate relationship in an enzyme reaction, and finally design an independent investigation.",
-      "光照与季节": "Light Angle and Seasons",
-      "角度、单位面积能量与模型": "Angle, energy per unit area, and models",
-      "酶与温度": "Enzymes and Temperature",
-      "反应速率、最适范围与模型边界": "Reaction rate, optimum range, and model limits",
-      "独立实验": "Independent Investigation",
-      "问题、变量、数据与证据推理": "Questions, variables, data, and evidence-based reasoning",
-      "8 节核心实验": "Eight Core Labs",
-      "点击课程卡片，查看核心问题、实验方法、主线思想与关键术语。": "Open a lesson card to view its driving question, method, central idea, and key terminology.",
-      "全部展开": "Expand All",
-      "全部收起": "Collapse All",
-      "摆钟会听谁的话？": "What Controls a Pendulum?",
-      "可靠的实验结果来自控制条件、重复测量与误差分析": "Reliable experimental results depend on controlled conditions, repeated measurements, and uncertainty analysis",
-      "单摆摆动一次所需时间，主要由摆长、摆锤质量还是放手角度决定？": "Is a pendulum’s period mainly determined by its length, the bob’s mass, or the release angle?",
-      "实验方法": "Method",
-      "设置约 20、40、60、80 cm 四种摆长。": "Set pendulum lengths of approximately 20, 40, 60, and 80 cm.",
-      "每次测量摆动 10 次所需时间，每种长度重复 3 次。": "Time ten swings and repeat three trials at each length.",
-      "保持摆锤、释放角度和计时方式一致。": "Keep the bob, release angle, and timing method constant.",
-      "绘制摆长—周期图，比较预测与数据。": "Graph pendulum length against period and compare predictions with data.",
-      "单次观察不足以得出结论；控制条件、重复测量并分析误差，才能得到可靠的实验结果。": "A single observation is not enough to support a conclusion; controlled conditions, repeated measurements, and uncertainty analysis are needed to obtain reliable experimental results.",
-      "一根弹簧能不能成为秤？": "Can a Spring Become a Scale?",
-      "从数据建立关系，用关系预测未知结果": "Build a relationship from data and use it to predict an unknown",
-      "增加拉力时，弹簧伸长量怎样变化？这个关系在什么范围内成立？": "How does a spring’s extension change as force increases, and over what range does the relationship hold?",
-      "依次增加相同砝码，记录弹簧总长度与伸长量。": "Add equal masses in sequence and record total length and extension.",
-      "绘制力—伸长量图，利用图线预测未知物体质量。": "Graph force against extension and use the line to predict an unknown mass.",
-      "用电子秤检验预测结果。": "Check the prediction with an electronic scale.",
-      "比较橡皮筋数据，观察是否仍是同一种关系。": "Compare data from a rubber band and determine whether the same relationship holds.",
-      "科学规律应当能够预测；规律也有适用范围，不能无限外推。": "A scientific relationship should make predictions, but it also has a range beyond which it should not be extrapolated.",
-      "轻的就一定浮，重的就一定沉吗？": "Do Light Objects Always Float and Heavy Ones Sink?",
-      "寻找遗漏变量，用新证据修正原有模型": "Find missing variables and revise a model using new evidence",
-      "浮沉究竟由物体重量决定，还是由物体与排开水之间的关系决定？": "Is floating determined by weight alone, or by the relationship between an object and the water it displaces?",
-      "用溢水杯测量不同浮动物体排开水的质量。": "Use an overflow cup to measure the mass of water displaced by different floating objects.",
-      "比较物体质量与排开水质量。": "Compare the mass of each object with the mass of displaced water.",
-      "把同一团橡皮泥做成实心球与空心船。": "Shape the same piece of modeling clay into a solid ball and a hollow boat.",
-      "给橡皮泥船逐渐加载，记录沉没前最大载荷。": "Load the clay boat gradually and record the maximum load before it sinks.",
-      "解释不了新现象时，需要寻找遗漏变量并修正模型，而不是只增加术语。": "When an explanation fails, look for a missing variable and revise the model rather than merely adding terminology.",
-      "盐真的消失了吗？": "Did the Salt Really Disappear?",
-      "同时追踪溶解过程中的物质与能量": "Track both matter and energy during dissolving",
-      "固体溶进水里以后去了哪里？为什么有些物质溶解时变热，有些变冷？": "Where do solute particles go when a solid dissolves, and why does the solution temperature rise for some solutes and fall for others?",
-      "测量食盐溶解前后的系统总质量。": "Measure the system’s total mass before and after salt dissolves.",
-      "过滤盐水，再通过蒸发重新获得晶体。": "Filter the salt solution, then recover crystals through evaporation.",
-      "在相同条件下比较氯化钙、小苏打和食盐的温度—时间曲线。": "Compare temperature–time curves for calcium chloride, baking soda, and table salt under identical conditions.",
-      "用粒子与能量模型解释不同结果。": "Explain the different results with particle and energy models.",
-      "看不见不等于不存在；物质与能量都需要在明确的系统中被追踪。": "Invisible does not mean absent; matter and energy must both be tracked within a clearly defined system.",
-      "升温会产生更多气体，还是只让反应更快？": "Does Heating Make More Gas—or Just Make It Faster?",
-      "区分变化速度与最终产物总量": "Distinguish rate of change from final amount of product",
-      "改变温度时，化学反应的速度和最终产物总量会怎样变化？": "How does temperature affect the rate of a chemical reaction and the final amount of product?",
-      "让相同配比的柠檬酸与小苏打在约 10°C、25°C、40°C 水中反应。": "React the same measured quantities of citric acid and sodium bicarbonate in water at approximately 10°C, 25°C, and 40°C.",
-      "每隔固定时间记录生成的 CO₂ 体积。": "Record the volume of CO₂ produced at fixed time intervals.",
-      "绘制气体体积—时间曲线。": "Plot gas volume against time.",
-      "比较达到固定体积所需时间与最终气体总量。": "Compare the time needed to reach a fixed volume with the final total gas volume.",
-      "“更多”可能指单位时间更多，也可能指最终总量更多；科学问题必须先定义测量对象。": "“More” may mean more per unit time or a greater final amount; the measured quantity must be defined before the experiment begins.",
-      "铁为什么会慢慢生锈？": "Why Does Iron Rust Slowly?",
-      "用对照与时间序列研究缓慢变化": "Use controls and time-series evidence to study slow change",
-      "铁生锈需要哪些条件？盐是铁锈的材料，还是加快反应的条件？": "What conditions are required for rusting? Is salt part of the rust, or does it accelerate the reaction?",
-      "设置干燥空气、隔绝空气的水、普通水、盐水四种条件。": "Set up four conditions: dry air, deoxygenated water beneath an oil layer, tap water, and salt water.",
-      "使用相同铁钉或钢丝绒，持续记录照片与锈蚀等级。": "Use identical nails or steel wool and record photographs and corrosion ratings over time.",
-      "观察提前 5–7 天准备的平行样品。": "Examine parallel samples prepared 5–7 days in advance.",
-      "在后续课程继续记录学生自己的样品。": "Continue recording the student’s own samples in later lessons.",
-      "慢反应同样可以实验；时间序列、对照组与持续记录构成证据。": "Slow reactions can still be investigated: time series, controls, and sustained observation form the evidence.",
-      "气体跑掉后，质量真的减少了吗？": "When Gas Escapes, Is Mass Really Lost?",
-      "先确定系统边界，再解释质量增减": "Define the system boundary before explaining changes in mass",
-      "同一个产生气体的反应，在开放和封闭容器中称量，为什么会得到不同结果？": "Why does the same gas-producing reaction give different mass readings in open and closed containers?",
-      "用相同反应物设置开放组与封闭组。": "Use identical reactants to set up an open system and a closed system.",
-      "测量反应前后整个装置的质量。": "Measure the mass of the entire apparatus before and after the reaction.",
-      "记录电子秤分度值与读数波动。": "Record the scale resolution and natural variation in its readings.",
-      "用 Claim–Evidence–Reasoning 解释两组结果。": "Use Claim–Evidence–Reasoning to explain both sets of results.",
-      "物质穿过边界会改变秤的读数；质量守恒必须与系统边界一起理解。": "Matter crossing a boundary changes the scale reading; conservation of mass must be understood together with the system boundary.",
-      "四季为什么变化？": "Why Do the Seasons Change?",
-      "用可检验的小尺度模型解释巨大系统": "Use a testable small-scale model to explain a vast system",
-      "同一束光斜着照与直着照，单位面积得到的能量为什么不同？": "Why does the same beam deliver different energy per unit area when it strikes a surface directly or at an angle?",
-      "固定光源、距离和时间，改变纸面受光角度。": "Keep the light source, distance, and exposure time fixed while changing the surface angle.",
-      "描出光斑并统计覆盖方格数，条件允许时测量温升。": "Trace the illuminated area, count covered grid squares, and measure temperature rise when possible.",
-      "用倾斜 23.5° 的地球仪模拟公转。": "Model Earth’s revolution with a globe tilted by 23.5°.",
-      "解释南北半球季节相反及太阳高度变化。": "Explain opposite seasons in the two hemispheres and changes in solar elevation.",
-      "模型保留关键关系、忽略次要细节；模型的价值在于解释和预测，也必须说明限制。": "A model preserves key relationships and omits secondary detail; it should explain, predict, and state its limitations.",
-      "可根据课时、器材条件和学习兴趣，从相应领域中选择加入。": "Select extension labs from each subject area according to available time, equipment, and student interest.",
-      "拓展 G": "EXT. G",
-      "温度越高，生命反应一定越快吗？": "Does a Biological Reaction Always Speed Up as Temperature Rises?",
-      "酵母过氧化氢酶 · 温度—产气量": "Yeast catalase · temperature vs. oxygen production",
-      "反例促使模型增加条件：温度升高可加快速率，高温也可能使酶变性。": "Counterevidence refines a model: warming may increase rate, while excessive heat can denature the enzyme.",
-      "实验": "Investigation",
-      "比较低温、室温、约 40°C 与高温处理后的酵母。": "Compare yeast at low temperature, room temperature, approximately 40°C, and after high-temperature treatment.",
-      "测量固定时间产生的氧气体积。": "Measure the oxygen volume produced in a fixed time.",
-      "绘制温度—产气量图。": "Graph the oxygen volume produced in a fixed time against temperature.",
-      "拓展 I": "EXT. I",
-      "这一次由你提出问题": "This Time, You Ask the Question",
-      "学生独立实验 · 从问题到证据": "Independent investigation · from question to evidence",
-      "独立完成问题、变量、测量、图像、证据推理与实验改进。": "Independently develop a question, variables, measurements, graph, evidence-based reasoning, and an improved design.",
-      "成果": "Outcomes",
-      "一个可检验的问题与有理由的预测。": "A testable question and a reasoned prediction.",
-      "至少三个自变量水平与重复数据。": "At least three levels of the independent variable with repeated data.",
-      "一张数据图和一份 CER 结论。": "One data graph and one CER conclusion.",
-      "拓展 F": "EXT. F",
-      "怎样让电磁铁变得更强？": "How Can We Make an Electromagnet Stronger?",
-      "线圈匝数 · 吸起质量": "Coil turns · lifted mass",
-      "看不见的磁场可以通过可测作用研究；工程设计还需考虑发热、耗电与稳定性。": "An invisible magnetic field can be studied through measurable effects; engineering also considers heat, power use, and stability.",
-      "比较 20、40、60 匝线圈。": "Compare coils with 20, 40, and 60 turns.",
-      "固定铁芯、电源和通电时间。": "Keep the iron core, power supply, and energizing time constant.",
-      "测量吸起回形针的数量或质量。": "Measure the number or mass of paper clips lifted.",
-      "拓展 C": "EXT. C",
-      "温暖的汽水为什么更容易冒气？": "Why Does Warm Carbonated Water Lose CO₂ More Readily?",
-      "气体溶解度 · 温度—逸气体积": "Gas solubility · temperature vs. CO₂ released",
-      "平衡状态取决于条件；“溶解得少”“逸出得快”和“装置漏气”必须区分。": "Equilibrium depends on conditions; lower solubility, faster release, and leakage from the apparatus must be distinguished.",
-      "比较约 10°C、25°C、40°C 的碳酸水。": "Compare carbonated water at approximately 10°C, 25°C, and 40°C.",
-      "标准化搅动，收集并测量 CO₂。": "Standardize agitation, then collect and measure the CO₂.",
-      "讨论温度、压力与逸出过程。": "Relate temperature and pressure to the release process.",
-      "拓展 A": "EXT. A",
-      "空气真的能被压缩吗？": "Can Air Really Be Compressed?",
-      "密闭注射器 · 外力—体积关系": "Sealed syringe · force–volume relationship",
-      "不能直接看见气体粒子，但可以从体积和力的关系推断内部变化。": "Gas particles cannot be seen directly, but internal changes can be inferred from the relationship between force and volume.",
-      "逐步增加无针注射器活塞上的外力。": "Gradually increase the force on the plunger of a needle-free syringe.",
-      "记录密闭空气体积并绘图。": "Record and graph the volume of trapped air.",
-      "与排尽气泡的水进行比较。": "Compare with water from which air bubbles have been removed.",
-      "拓展 E": "EXT. E",
-      "镜子怎样把光送到指定位置？": "How Does a Mirror Direct Light to a Target?",
-      "光的反射 · 入射角—反射角": "Reflection · angle of incidence vs. angle of reflection",
-      "通过起点、落点和反射位置重建看不见的光路，并用规律完成新预测。": "Reconstruct an invisible light path from its start, endpoint, and reflection point, then use the pattern to make a new prediction.",
-      "测量多组入射角与反射角。": "Measure several pairs of incidence and reflection angles from the normal.",
-      "绘制角度关系图。": "Graph the relationship between the two angles.",
-      "预测镜面角度，使光绕过挡板击中目标。": "Predict the mirror angle needed to direct light around an obstacle to a target.",
-      "拓展 D": "EXT. D",
-      "哪一种材料最适合保温？": "Which Material Provides the Best Thermal Insulation?",
-      "材料比较 · 温度—时间曲线": "Material comparison · temperature–time curves",
-      "材料性能必须在相同水量、初温、厚度与时间条件下比较。": "Material performance must be compared using the same water mass, initial temperature, thickness, and time interval.",
-      "比较棉布、气泡膜、纸、铝箔或空气层。": "Compare cotton cloth, bubble wrap, paper, aluminum foil, and an air layer.",
-      "记录温水随时间的温度变化。": "Record how the water temperature changes over time.",
-      "依据数据改进保温容器。": "Improve an insulated container using the data.",
-      "拓展 H": "EXT. H",
-      "植物里的水走到哪里去了？": "Where Does Water Go Inside a Plant?",
-      "植物蒸腾 · 风与叶面积": "Transpiration · wind and leaf area",
-      "物质守恒与系统边界同样可以用于研究生命系统。": "Conservation of matter and system boundaries can also be used to study living systems.",
-      "密封水面，比较静止空气、低速风和不同叶面积。": "Seal the water surface and compare still air, a gentle airflow, and different leaf areas.",
-      "固定时间称量整套装置。": "Weigh the entire setup at fixed time intervals.",
-      "观察叶片散失后重新凝结的水。": "Observe water lost by leaves and then recondensed.",
-      "拓展 B": "EXT. B",
-      "运动为什么会停下来？": "Why Does Motion Stop?",
-      "伽利略斜面 · 摩擦、惯性与理想化": "Galileo’s inclines · friction, inertia, and idealization",
-      "思想实验建立在真实趋势上：逐步减少干扰，并把有证据支持的关系推向理想极限。": "A thought experiment begins with a real trend, removes interference step by step, and extends an evidence-based relationship toward an ideal limit.",
-      "比较小球在不同粗糙表面的停止距离。": "Compare stopping distances on surfaces of different roughness.",
-      "改变第二斜面角度，测量最大高度和行进距离。": "Change the second incline’s angle and measure maximum height and travel distance.",
-      "外推到无摩擦水平面，建立惯性思想。": "Extrapolate to a frictionless horizontal surface to develop the idea of inertia.",
-      "科学家怎样思考": "How Scientists Think",
-      "从提出可检验的问题，到用测量检验猜想、根据证据修改解释，每节课都会经历一次完整的科学探究。": "From framing a testable question to using measurements to test a hypothesis and revising an explanation in light of evidence, each lesson follows a complete cycle of scientific inquiry.",
-      "01 提出问题": "01 Ask a Question",
-      "从现象中找到可以通过观察、测量和比较回答的问题。": "Turn an observation into a question that can be answered through observation, measurement, and comparison.",
-      "02 大胆猜想": "02 Form a Hypothesis",
-      "先作出有理由、可以被检验的预测；猜想是实验的起点，不是必须证明的答案。": "Begin with a reasoned, testable prediction; a hypothesis is a starting point for investigation, not an answer that must be proved.",
-      "03 公平实验": "03 Design a Fair Test",
-      "一次只改变一个条件，保持其他条件一致，必要时设置对照组。": "Change one condition at a time, keep the others constant, and include a control group when needed.",
-      "04 多次测量": "04 Measure More Than Once",
-      "按统一方法重复测量，诚实记录真实数据、误差和异常现象。": "Repeat measurements using a consistent method, and record the data, uncertainty, and unexpected observations honestly.",
-      "05 相信证据": "05 Follow the Evidence",
-      "用表格和图像判断结果；如果数据与猜想不同，就修改想法，而不是挑选数据。": "Use tables and graphs to evaluate the results; if the data disagree with the hypothesis, revise the idea rather than selecting only favorable data.",
-      "06 解释并再检验": "06 Explain and Test Again",
-      "用测量追踪看不见的变化，再用模型解释和预测，并检查模型的适用范围。": "Use measurements to track changes that cannot be seen directly, then use models to explain and predict while testing their range of validity.",
-      "课程结束时，学生能够": "By the End of the Course, Students Can",
-      "把好奇心变成问题": "Turn Curiosity into a Question",
-      "提出可以通过观察、测量与比较回答的问题。": "Frame questions that can be answered through observation, measurement, and comparison.",
-      "用实验检验猜想": "Test a Hypothesis Through Investigation",
-      "设计实验、控制变量，并根据测量结果判断证据是否支持猜想。": "Design an investigation, control variables, and use measurements to determine whether the evidence supports the hypothesis.",
-      "从数据中发现规律": "Identify Patterns in Data",
-      "整理并比较多组测量结果，发现变量之间的关系，并用这些规律预测新的实验结果。": "Organize and compare repeated measurements, identify relationships between variables, and use those patterns to predict new results.",
-      "暑期实验科学课程 · Grade 4 → Grade 5": "Summer Science Lab · Grade 4 → Grade 5"
-    };
-
-    const translatedTextNodes = [];
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-    let textNode;
-    while ((textNode = walker.nextNode())) {
-      const key = textNode.nodeValue.trim();
-      const elementTranslation = textNode.parentElement?.dataset.en;
-      const englishText = translations[key] || elementTranslation;
-      if (!englishText) continue;
-      const leading = textNode.nodeValue.match(/^\s*/)[0];
-      const trailing = textNode.nodeValue.match(/\s*$/)[0];
-      translatedTextNodes.push({ node: textNode, zh: key, en: englishText, leading, trailing });
-    }
-
-    const languageToggle = document.getElementById('languageToggle');
-    const navElement = document.querySelector('.navlinks');
-    const foldControls = document.querySelector('.toolbar');
-    let currentLanguage = 'zh';
-
-    function setLanguage(language) {
-      currentLanguage = language;
-      translatedTextNodes.forEach(item => {
-        item.node.nodeValue = item.leading + item[language] + item.trailing;
-      });
-      const english = language === 'en';
-      document.documentElement.lang = english ? 'en' : 'zh-CN';
-      document.title = english
-        ? 'Summer Science Lab | Discovering Science Through Investigation'
-        : '暑期实验科学课程｜在实验中发现科学';
-      languageToggle.textContent = english ? '中 · 中文' : 'EN · English';
-      languageToggle.setAttribute('aria-label', english ? '切换到中文版' : 'Switch to English');
-      navElement.setAttribute('aria-label', english ? 'Page navigation' : '页面导航');
-      if (foldControls) foldControls.setAttribute('aria-label', english ? 'Expand and collapse controls' : '折叠控制');
-    }
-
-    languageToggle.addEventListener('click', () => {
-      setLanguage(currentLanguage === 'zh' ? 'en' : 'zh');
-    });
+    const lessons = [...document.querySelectorAll('details.lesson')];
+    document.querySelector('[data-action="open"]').addEventListener('click', () => lessons.forEach(item => item.open = true));
+    document.querySelector('[data-action="close"]').addEventListener('click', () => lessons.forEach(item => item.open = false));
   </script>
 </body>
 </html>
