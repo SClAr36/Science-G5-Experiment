@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Week 1 Science bilingual quick review">
+  <title>Week 1 Science — Quick Review</title>
+  <style>
+    :root {
+      --ink: #183153;
+      --muted: #64748b;
+      --paper: #ffffff;
+      --page: #eef6f4;
+      --line: #dbe8e4;
+      --english: #1d6a96;
+      --english-soft: #eaf6fd;
+      --chinese: #13795b;
+      --chinese-soft: #eaf8f2;
+      --accent: #f4a261;
+      --shadow: 0 18px 50px rgba(24, 49, 83, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(29, 106, 150, 0.10), transparent 24rem),
+        radial-gradient(circle at 92% 92%, rgba(19, 121, 91, 0.10), transparent 26rem),
+        var(--page);
+      font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 36px auto;
+      background: var(--paper);
+      border: 1px solid rgba(219, 232, 228, 0.9);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    header {
+      position: relative;
+      padding: 38px 42px 32px;
+      color: #fff;
+      background: linear-gradient(120deg, #173d66 0%, #1d6a96 52%, #13795b 100%);
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      right: -28px;
+      bottom: -64px;
+      width: 230px;
+      height: 230px;
+      border: 34px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.78;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      font-size: 1rem;
+      opacity: 0.88;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      padding: 28px;
+    }
+
+    section {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    section h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 16px 20px;
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+    }
+
+    section h2::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.7);
+    }
+
+    .english h2 {
+      color: var(--english);
+      background: var(--english-soft);
+    }
+
+    .chinese h2 {
+      color: var(--chinese);
+      background: var(--chinese-soft);
+    }
+
+    ul {
+      margin: 0;
+      padding: 8px 20px 16px;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding: 11px 6px 11px 22px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    li:last-child { border-bottom: 0; }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 1.35em;
+      width: 7px;
+      height: 7px;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      background: var(--accent);
+    }
+
+    strong { color: #102a43; }
+
+    .term-note {
+      color: var(--muted);
+      font-size: 0.76em;
+      font-weight: 500;
+    }
+
+    code {
+      padding: 0.15em 0.42em;
+      color: #8a3b12;
+      background: #fff3e8;
+      border: 1px solid #f8d7bd;
+      border-radius: 6px;
+      font-family: "Cascadia Code", Consolas, monospace;
+      font-size: 0.92em;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 0 28px 26px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    /* iPad portrait uses one comfortable column; landscape keeps two columns. */
+    @media (max-width: 900px) {
+      main {
+        width: min(100% - 20px, 680px);
+        margin: 10px auto;
+        border-radius: 18px;
+      }
+
+      header { padding: 30px 24px 26px; }
+      .review-grid { grid-template-columns: 1fr; padding: 16px; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 10mm; }
+
+      body { background: #fff; }
+
+      main {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      header {
+        padding: 20px 24px 18px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .review-grid {
+        gap: 14px;
+        padding: 16px 0 0;
+      }
+
+      section { break-inside: avoid; }
+      section h2 { padding: 11px 14px; }
+      ul { padding: 5px 13px 10px; }
+      li { padding-top: 7px; padding-bottom: 7px; font-size: 0.84rem; }
+      footer { padding: 12px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Science · Week 1</p>
+      <h1>Quick Review</h1>
+      <p class="subtitle">本周科学复习极简版 · Bilingual Study Sheet</p>
+    </header>
+
+    <div class="review-grid">
+      <section class="english" lang="en">
+        <h2>English</h2>
+        <ul>
+          <li><strong>Scientific method:</strong> Observation / Question → Research → Hypothesis → Experiment → Analyze Data → Conclusion</li>
+          <li><strong>Observation:</strong> information gathered with the senses</li>
+          <li><strong>Inference:</strong> a logical assumption based on observation and prior experience</li>
+          <li><strong>Data:</strong> qualitative = descriptions; quantitative = numbers / measurements</li>
+          <li><strong>Tools:</strong> graduated cylinder, ruler, balance, beaker</li>
+          <li><strong>SI / metric system (vs. customary units):</strong> <small class="term-note">SI = International System of Units.</small> Standard units help scientists compare, communicate, repeat, and check results</li>
+          <li><strong>Units:</strong> length—meter; mass—gram; volume—liter; temperature—kelvin</li>
+          <li><strong>Metric ruler:</strong> centimeter (cm) / millimeter (mm)</li>
+          <li><strong>Metric ladder:</strong> kilo → hecto → deka → unit → deci → centi → milli</li>
+          <li><strong>Conversion:</strong> smaller unit → decimal right; larger unit → decimal left; <code>4 km = 4000 m</code></li>
+        </ul>
+      </section>
+
+      <section class="chinese" lang="zh-CN">
+        <h2>中文版</h2>
+        <ul>
+          <li><strong>科学方法：</strong>观察 / 问题 → 研究 → 假设 → 实验 → 分析数据 → 结论</li>
+          <li><strong>观察：</strong>用感官收集的信息</li>
+          <li><strong>推断：</strong>根据观察和已有经验作出的合理假定</li>
+          <li><strong>数据：</strong>定性 = 描述；定量 = 数字 / 测量</li>
+          <li><strong>工具：</strong>量筒、尺、天平、烧杯</li>
+          <li><strong>SI / 公制（对应 customary units / 习惯单位制）：</strong><small class="term-note">SI = International System of Units（国际单位制）。</small> 统一单位便于科学家比较、交流、重复和检查结果</li>
+          <li><strong>单位：</strong>长度—米；质量—克；体积—升；温度—开尔文</li>
+          <li><strong>公制尺：</strong>厘米（cm）/ 毫米（mm）</li>
+          <li><strong>公制阶梯：</strong>kilo → hecto → deka → 基本单位 → deci → centi → milli</li>
+          <li><strong>换算：</strong>换成小单位 → 小数点右移；换成大单位 → 小数点左移；<code>4 km = 4000 m</code></li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>Week 1 Science · Quick Review</footer>
+  </main>
+</body>
+</html>

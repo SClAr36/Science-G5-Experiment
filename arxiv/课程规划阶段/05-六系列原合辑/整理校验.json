@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-07",
+  "sources": {
+    "五年级实验课_三个系列方案.md": {
+      "sha256": "c2325d406b345bef332c8bfa11127f09d2fa8356ae4e3289955ca27a0e0e855d",
+      "archive": "原合辑/五年级实验课_三个系列方案.md"
+    },
+    "五年级实验课_三个系列方案.html": {
+      "sha256": "fca359ef0aef8a314f2fe643c17e83f5723dcfa850f5d63ee1a25b3e7fd85157",
+      "archive": "原合辑/五年级实验课_三个系列方案.html"
+    },
+    "化学混合专题_DK与公开教案检索.md": {
+      "sha256": "94faf8d39415e1fca128394f8b011c85ddb7e062b8da4ac253bc0364b744d944",
+      "archive": "原合辑/化学混合专题_DK与公开教案检索.md"
+    },
+    "化学混合专题_DK与公开教案检索.html": {
+      "sha256": "02ab0ac10c44e786c8355301cce74eedcc28369fe65e7fa3f42c689faae489c2",
+      "archive": "原合辑/化学混合专题_DK与公开教案检索.html"
+    }
+  },
+  "series": {
+    "01-电化学_4课.md": {
+      "lesson_count": 4,
+      "body_sha256": "603d20edf2e7595ba96e896bc688dd82d75015166514de65922b6e42fddf0fcc"
+    },
+    "02-气体与膨胀_4课.md": {
+      "lesson_count": 4,
+      "body_sha256": "5fad73cbabe111decbff29e8ac2b7538571277782a478aaeebf55383e14b119f"
+    },
+    "03-声音_4课.md": {
+      "lesson_count": 4,
+      "body_sha256": "e7c7498084f707a955bf241f0b9fa79ea69b495970eb358814674041615559f0"
+    },
+    "04-颜色反应侦探_4课.md": {
+      "lesson_count": 4,
+      "body_sha256": "57c879b51ed37071364edd4ad109072d36841e33b79c010566feb77dc8561664"
+    },
+    "05-凝胶形成与拆解_4课.md": {
+      "lesson_count": 4,
+      "body_sha256": "0d03c1ace41d144d1465e1bdad300c9219940c57d00555ba91ac350e90453169"
+    },
+    "06-硬水与清洁_4课.md": {
+      "lesson_count": 4,
+      "body_sha256": "8d02cb8f412db3e0fccd10ec3d6e3764cda7cd194bd9b100907ce030401da567"
+    }
+  }
+}

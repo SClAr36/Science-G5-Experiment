@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 10 节：为什么会有昼夜、季节和月相？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 10 节：为什么会有昼夜、季节和月相？</h1>
+</header>
+<main>
+<p><strong>Lesson 10: Why Do We Have Day, Night, Seasons, and Moon Phases?</strong></p>
+<p><strong>授课状态</strong>：待上；对应实际第 10 节。</p>
+<h2>家长课前准备（Materials for Parents）</h2>
+<table>
+<thead>
+<tr>
+<th>材料 Material</th>
+<th style="text-align:right">建议数量 Amount</th>
+<th>具体要求与用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小地球仪 small globe</td>
+<td style="text-align:right">1 个</td>
+<td>能清楚看到倾斜地轴；若没有，用直径 10–15 cm 泡沫球和一根竹签制作</td>
+</tr>
+<tr>
+<td>白色泡沫球 white foam ball</td>
+<td style="text-align:right">1 个</td>
+<td>直径 5–8 cm，作月球；表面不反光</td>
+</tr>
+<tr>
+<td>未削尖铅笔或木筷 pencil / wooden stick</td>
+<td style="text-align:right">1 根</td>
+<td>插入泡沫球作手柄；尖端由成人处理</td>
+</tr>
+<tr>
+<td>稳定 LED 台灯 stable LED lamp</td>
+<td style="text-align:right">1 盏</td>
+<td>能向四周或单一方向稳定发光；不用发热的裸露白炽灯</td>
+</tr>
+<tr>
+<td>LED 手电筒 LED flashlight</td>
+<td style="text-align:right">1 个</td>
+<td>做入射角光斑实验；亮度档位固定</td>
+</tr>
+<tr>
+<td>硬纸板 cardboard</td>
+<td style="text-align:right">2 张</td>
+<td>一张开直径约 3 cm 圆孔；一张作角度支架</td>
+</tr>
+<tr>
+<td>方格纸 graph paper</td>
+<td style="text-align:right">4 张</td>
+<td>方格 5 mm 或 1 cm；描光斑并估算面积</td>
+</tr>
+<tr>
+<td>量角器 protractor</td>
+<td style="text-align:right">1 个</td>
+<td>固定受光纸面角度</td>
+</tr>
+<tr>
+<td>小圆点贴 dot stickers</td>
+<td style="text-align:right">12–16 枚</td>
+<td>在地球仪约 30°–40°N 和 30°–40°S 纬线上标位置</td>
+</tr>
+<tr>
+<td>美纹纸或可移除胶带 masking tape</td>
+<td style="text-align:right">约 1 m</td>
+<td>标地轴方向、固定纸板和地面位置</td>
+</tr>
+<tr>
+<td>深色房间可用的小夜灯</td>
+<td style="text-align:right">可选</td>
+<td>只用于安全照明，不直射模型</td>
+</tr>
+</tbody>
+</table>
+<p>不需要家长准备望远镜、激光笔、蜡烛、太阳滤镜或高温灯泡。本课绝不直视太阳，也不把放大镜或望远镜对准太阳。</p>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>对应学校单元</strong>：Unit 5 Space Science</li>
+<li><strong>对应课堂 Notes</strong>：01 Earth's Movement；02 Earth's Moon</li>
+<li><strong>建议课时</strong>：75 分钟</li>
+<li><strong>核心问题</strong>：季节是不是因为地球有时离太阳近、有时离太阳远？月相是不是地球影子遮住月球？<br />
+<em>Are seasons caused by changing Earth–Sun distance, and are moon phases Earth's shadow on the Moon?</em></li>
+</ul>
+<p>本课把三个看似不同的现象放进同一套模型：</p>
+<pre><code class="language-text">Earth rotates → day and night
+Earth revolves with a tilted axis → seasons
+Moon revolves around Earth → changing viewing angle → phases
+</code></pre>
+<h3>学生应能</h3>
+<ol>
+<li>区分自转（rotation）和公转（revolution），分别连接到日、年与轨道。</li>
+<li>用灯和地球仪解释昼夜交替，并说明太阳东升西落主要是地球自转造成的视运动。</li>
+<li>用光斑面积数据说明同一束光斜射时能量分布到更大面积。</li>
+<li>在地球公转模型中始终保持地轴指向同一方向，用光照角度和昼长解释南北半球季节相反。</li>
+<li>操作白球—灯模型，按顺序辨认八个月相，并区分 waxing / waning。</li>
+<li>解释普通月相不是地球影子；月食只在太阳—地球—月球接近排成一线时发生。</li>
+<li>用同步转动模型解释潮汐锁定（tidal locking）与月球“同一面朝向地球”。</li>
+<li>区分约 27.3 天的恒星月和约 29.5 天的朔望月。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">教师核心问答 / Core Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：北半球夏季时，南半球为什么不是也过夏季？</strong></p>
+<p><strong>参考回答：</strong> 地球两半球倾斜方向相反；北半球朝向太阳时，南半球背离太阳，所以季节相反。</p>
+<p><strong>问题：地球确实有时离太阳近、有时远，为什么距离不是四季主因？</strong></p>
+<p><strong>参考回答：</strong> 地球在北半球冬季附近反而较接近太阳；同一时刻南北半球季节相反。决定季节的主要因素是地轴倾斜带来的太阳高度和昼长变化。</p>
+<p><strong>问题：月球每时每刻是否总有一半被太阳照亮？</strong></p>
+<p><strong>参考回答：</strong> 除月食时外，太阳总照亮月球的一半；月相改变的是我们从地球看到这半个受光面中的多少。</p>
+</div>
+</details>
+<h2>二、重要概念与模型边界</h2>
+<table>
+<thead>
+<tr>
+<th>运动或现象</th>
+<th>准确定义</th>
+<th style="text-align:right">主要周期</th>
+<th>本课模型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地球自转 Earth rotation</td>
+<td>地球绕自身地轴旋转</td>
+<td style="text-align:right">约 24 h</td>
+<td>转动地球仪，固定灯</td>
+</tr>
+<tr>
+<td>地球公转 Earth revolution</td>
+<td>地球沿轨道绕太阳运动</td>
+<td style="text-align:right">约 365.25 d</td>
+<td>地球仪绕灯走四个位置</td>
+</tr>
+<tr>
+<td>地轴倾斜 axial tilt</td>
+<td>地轴相对公转轨道面法线倾斜约 23.5°</td>
+<td style="text-align:right">方向在一年内近似保持</td>
+<td>地轴箭头始终指向房间同一面墙</td>
+</tr>
+<tr>
+<td>月球恒星月 sidereal month</td>
+<td>月球相对远方恒星完成一圈</td>
+<td style="text-align:right">约 27.3 d</td>
+<td>白球绕学生一圈</td>
+</tr>
+<tr>
+<td>朔望月 synodic month</td>
+<td>从一个月相回到同一月相</td>
+<td style="text-align:right">约 29.5 d</td>
+<td>太阳—地球—月球相对位置再次相同</td>
+</tr>
+<tr>
+<td>潮汐锁定 tidal locking</td>
+<td>月球自转周期与绕地球公转周期相同</td>
+<td style="text-align:right">同步</td>
+<td>标记面始终朝向“地球”</td>
+</tr>
+</tbody>
+</table>
+<h3>模型不能按比例的地方</h3>
+<ul>
+<li>灯、地球仪和白球的大小与距离不按真实比例。</li>
+<li>光线在真实太阳—地球尺度上近似平行；台灯较近，光线会发散。</li>
+<li>地球轨道接近圆形但略呈椭圆；教室模型只强调地轴倾斜和相对位置。</li>
+<li>月球轨道相对地球公转轨道面约倾斜 5°，因此不是每次新月或满月都发生食。</li>
+</ul>
+<h2>三、实验室材料与课前准备</h2>
+<h3>实验室直接取用</h3>
+<ul>
+<li>铁架台和夹具 1 套；固定手电筒与开孔纸板</li>
+<li>直尺、卷尺、量角器、剪刀、记号笔、白色托盘</li>
+<li>记录纸、彩色铅笔、黑色卡纸</li>
+<li>可选红外温度计或两个相同温度传感器：只作入射角延伸，不作为核心数据</li>
+</ul>
+<h3>教师课前设置</h3>
+<ol>
+<li>选择能适度遮光的房间，清走模型周围障碍；保留安全小夜灯。</li>
+<li>用美纹纸在地面标出灯周围四个“地球位置”，形成十字：
+<ul>
+<li>A：北半球倾向灯</li>
+<li>B：春/秋过渡位置</li>
+<li>C：北半球背离灯</li>
+<li>D：另一过渡位置</li>
+</ul>
+</li>
+<li>在墙上贴一个“北极星方向 Polaris direction”箭头。地球仪移动到任何位置时，北端都指向该箭头。</li>
+<li>在地球仪约 35°N、35°S 各沿一圈贴 8 个等距小圆点，或用可移除胶带画出两条纬线并标 8 个位置。</li>
+<li>手电筒固定在铁架台；前方 10 cm 固定开孔纸板，形成稳定圆形光束。</li>
+<li>在光束中心线上距圆孔 25 cm 标一个中心点。方格纸以这个点为旋转中心，分别摆成与光束垂直和倾斜 45°。</li>
+<li>预试台灯与白球：学生在 1–1.5 m 处能清楚看见亮暗分界，灯不会烫手。</li>
+<li>在白色月球球面朝学生的一侧贴一个小黑点，供潮汐锁定演示使用。</li>
+</ol>
+<h2>四、按时间推进的课堂脚本</h2>
+<h3>一眼速查（Quick timeline）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>做什么</th>
+<th>一句话结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–8</td>
+<td>地球仪自转与昼夜</td>
+<td>自转让同一地点轮流朝向、背向太阳</td>
+</tr>
+<tr>
+<td style="text-align:right">8–22</td>
+<td>实验：直射与斜射光斑</td>
+<td>同一束光斜射时覆盖更大面积</td>
+</tr>
+<tr>
+<td style="text-align:right">22–38</td>
+<td>地球绕灯四站模型</td>
+<td>地轴倾斜改变太阳高度和昼长，南北季节相反</td>
+</tr>
+<tr>
+<td style="text-align:right">38–43</td>
+<td>季节误区判案</td>
+<td>地球—太阳距离不是四季主因</td>
+</tr>
+<tr>
+<td style="text-align:right">43–63</td>
+<td>学生绕出八个月相</td>
+<td>月相来自观察到的受光部分改变</td>
+</tr>
+<tr>
+<td style="text-align:right">63–69</td>
+<td>月相、月食与轨道倾角</td>
+<td>地球影子只在月食时遮到月球</td>
+</tr>
+<tr>
+<td style="text-align:right">69–73</td>
+<td>潮汐锁定与两个月周期</td>
+<td>月球每公转一圈也自转一圈</td>
+</tr>
+<tr>
+<td style="text-align:right">73–75</td>
+<td>离堂题</td>
+<td>用位置和光线解释，不靠背图</td>
+</tr>
+</tbody>
+</table>
+<h3>0–8 分钟：太阳真的每天绕地球一圈吗？</h3>
+<h4>做</h4>
+<ol>
+<li>台灯固定代表太阳，在地球仪上找到中国并贴点。</li>
+<li>灯亮时，慢慢从北极上方看地球逆时针自转。</li>
+<li>记录中国点进入亮面、位于亮面中央、离开亮面的顺序。</li>
+<li>把一个小箭头立在中国点，观察“太阳”在当地天空中的相对方向变化。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：同一时刻，地球是不是一半白天、一半黑夜？</strong></p>
+<p><strong>参考回答：</strong> 近似如此；朝向太阳的一半是白天，背向太阳的一半是黑夜，交界叫昼夜分界线。</p>
+<p><strong>问题：太阳东升西落说明太阳每天绕地球吗？</strong></p>
+<p><strong>参考回答：</strong> 不是。地球自西向东自转，使太阳看起来从东向西移动。</p>
+<p><strong>问题：rotation 和 revolution 有什么区别？</strong></p>
+<p><strong>参考回答：</strong> rotation 是绕自身轴转；revolution 是一个天体沿轨道绕另一天体运动。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">rotation 自转 → about 24 h → day and night
+revolution 公转 → about 365.25 d → one year
+</code></pre>
+</div>
+</details>
+<h3>8–22 分钟：同一束光，为什么斜着照会“摊得更开”？</h3>
+<h4>做：太阳入射角光斑实验</h4>
+<ol>
+<li>手电筒、开孔纸板和中心点位置全部固定；关掉其他直射灯。</li>
+<li><strong>条件 A：垂直受光</strong>。方格纸与光束近似垂直，中心点对准光束；描出最清楚的光斑边界。</li>
+<li>数光斑覆盖的完整方格；半格估作 0.5 格。重复描 2 次。</li>
+<li><strong>条件 B：45°斜受光</strong>。方格纸绕中心点倾斜 45°，仍让中心点对准同一束光；描边、数格，重复 2 次。</li>
+<li>可选条件 C：倾斜 60°；保持其他条件不变。</li>
+<li>比较“同一圆孔通过的光”覆盖面积。</li>
+</ol>
+<p><strong>预期结果</strong>：垂直受光时光斑较圆、面积较小；斜受光时光斑拉长、面积增大。同一束光能量分布到更大面积，每单位面积得到的能量较少。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：本实验怎样保证照到纸上的“光束数量”尽量相同？</strong></p>
+<p><strong>参考回答：</strong> 固定手电筒亮度、圆孔大小、圆孔到中心点距离，只改变受光纸面的角度。</p>
+<p><strong>问题：为什么不直接用“看起来更亮”作为唯一证据？</strong></p>
+<p><strong>参考回答：</strong> 眼睛会自动适应亮度；描面积和数方格提供可记录的定量证据。</p>
+<p><strong>问题：冬季太阳高度较低时，这个实验对应什么变化？</strong></p>
+<p><strong>参考回答：</strong> 阳光以较小角度照到地面，同样的光分布到更大面积，单位面积得到的能量较少。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>纸面相对光束</th>
+<th>光斑形状</th>
+<th style="text-align:right">面积 1/格</th>
+<th style="text-align:right">面积 2/格</th>
+<th style="text-align:right">平均面积/格</th>
+<th>每单位面积能量判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>90° 近似垂直</td>
+<td></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td>more / less</td>
+</tr>
+<tr>
+<td>45° 倾斜</td>
+<td></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td>more / less</td>
+</tr>
+<tr>
+<td>60° 可选</td>
+<td></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td>more / less</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">more direct sunlight
+→ same light over smaller area
+→ more energy per unit area
+
+lower Sun angle
+→ light spreads over larger area
+→ less energy per unit area
+</code></pre>
+</div>
+</details>
+<h3>22–38 分钟：地球绕太阳时，地轴不能跟着“转向太阳”</h3>
+<h4>做：四站季节模型</h4>
+<ol>
+<li>地球仪先放 A 站。北极端指向墙上同一个 Polaris 箭头。</li>
+<li>学生判断北半球向灯倾斜还是背离；比较 35°N 和 35°S 光线角度。</li>
+<li>缓慢自转地球一周，观察两条纬线上 8 个点有多少位于亮面，作为昼长的粗略模型。</li>
+<li>把地球仪依次移到 B、C、D 站；<strong>移动时地轴方向始终平行，不许把北极重新朝向灯</strong>。</li>
+<li>每站记录北半球与南半球的太阳高度趋势和亮面点数。</li>
+</ol>
+<p><strong>预期结果</strong>：</p>
+<ul>
+<li>A 站北半球倾向灯：35°N 光线较直接、亮面路径较长；35°S 相反。</li>
+<li>C 站北半球背离灯：35°N 光线较斜、亮面路径较短；南半球相反。</li>
+<li>B、D 两站两半球差异较小，对应春分/秋分附近。</li>
+</ul>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：为什么地轴方向必须始终指向房间同一方向？</strong></p>
+<p><strong>参考回答：</strong> 地球公转的一年中，地轴在空间中的指向近似保持不变；这才会让不同半球轮流倾向太阳。</p>
+<p><strong>问题：夏季只因为太阳照得更直吗？</strong></p>
+<p><strong>参考回答：</strong> 不只。该半球还经历更长的白昼，得到能量的时间也更长。</p>
+<p><strong>问题：赤道附近为什么四季温差通常比高纬度小？</strong></p>
+<p><strong>参考回答：</strong> 赤道全年太阳高度和昼长变化相对较小；高纬度受地轴倾斜影响更强。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>地球位置</th>
+<th>北半球朝向</th>
+<th>35°N 光线</th>
+<th style="text-align:right">35°N 亮面点数</th>
+<th>35°S 光线</th>
+<th>南北半球季节判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>toward / away</td>
+<td>direct / oblique</td>
+<td style="text-align:right"></td>
+<td>direct / oblique</td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td>neither strongly</td>
+<td></td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td>toward / away</td>
+<td>direct / oblique</td>
+<td style="text-align:right"></td>
+<td>direct / oblique</td>
+<td></td>
+</tr>
+<tr>
+<td>D</td>
+<td>neither strongly</td>
+<td></td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">seasons = axial tilt + revolution
+
+summer hemisphere:
+higher Sun angle + longer daylight
+
+winter hemisphere:
+lower Sun angle + shorter daylight
+</code></pre>
+</div>
+</details>
+<h3>38–43 分钟：季节误区判案</h3>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：如果距离是四季主因，南北半球在同一时刻应该怎样？</strong></p>
+<p><strong>参考回答：</strong> 它们应该同时变热或同时变冷；实际却季节相反，所以距离不能解释主要规律。</p>
+<p><strong>问题：北半球冬季附近，地球其实更靠近还是更远离太阳？</strong></p>
+<p><strong>参考回答：</strong> 地球通常在一月初经过近日点，北半球冬季反而较靠近太阳，这与“近就夏、远就冬”矛盾。</p>
+<p><strong>问题：地球轨道画成明显椭圆会造成什么误解？</strong></p>
+<p><strong>参考回答：</strong> 会夸大距离变化，让人误以为四季由远近决定。真实轨道接近圆形。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">证据 1：north / south hemispheres have opposite seasons
+证据 2：Earth is near perihelion in early January
+
+结论：distance is not the main cause of seasons
+</code></pre>
+</div>
+</details>
+<h3>43–63 分钟：把自己当作地球，绕出八个月相</h3>
+<h4>做</h4>
+<ol>
+<li>学生站在距台灯约 1–1.5 m 处，自己的头代表地球，台灯代表太阳。</li>
+<li>白球插在铅笔上，手臂伸直，球代表月球。眼睛只看球，不直盯灯。</li>
+<li>面向灯，从新月位置开始；球略高于灯—眼连线，避免真的挡住灯。</li>
+<li>学生身体逆时针每次转 45°，始终把白球举在面前；依次观察、画出亮面形状。</li>
+<li>到满月位置时把球举得略高，不让自己的头遮住灯；否则会制造“月食”。</li>
+<li>完成一圈后，把 8 张相位卡按实际观察顺序排列。</li>
+</ol>
+<p><strong>北半球观察顺序</strong>：</p>
+<pre><code class="language-text">new
+→ waxing crescent
+→ first quarter
+→ waxing gibbous
+→ full
+→ waning gibbous
+→ third / last quarter
+→ waning crescent
+→ new
+</code></pre>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：为什么 first quarter 看起来是半个月球，却叫“上弦/第一季度”而不是 half moon？</strong></p>
+<p><strong>参考回答：</strong> 名称指月球完成了约四分之一轨道；从地球看见的月面恰好约一半亮。</p>
+<p><strong>问题：waxing 和 waning 分别是什么意思？</strong></p>
+<p><strong>参考回答：</strong> waxing 表示从地球看见的亮面逐日增多；waning 表示亮面逐日减少。</p>
+<p><strong>问题：新月时月球有没有被太阳照亮？</strong></p>
+<p><strong>参考回答：</strong> 有，背向地球的那一半被照亮；朝向地球的一面较暗。</p>
+<p><strong>问题：白球每个位置是否都有一半表面被灯照亮？</strong></p>
+<p><strong>参考回答：</strong> 是。改变的是学生从“地球”位置看见受光半球的比例。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">位置角度</th>
+<th>相位中文</th>
+<th>Phase</th>
+<th>我看到的亮面草图</th>
+<th>亮面增/减</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0°</td>
+<td>新月</td>
+<td>new moon</td>
+<td></td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align:right">45°</td>
+<td>娥眉月</td>
+<td>waxing crescent</td>
+<td></td>
+<td>waxing</td>
+</tr>
+<tr>
+<td style="text-align:right">90°</td>
+<td>上弦月</td>
+<td>first quarter</td>
+<td></td>
+<td>waxing</td>
+</tr>
+<tr>
+<td style="text-align:right">135°</td>
+<td>盈凸月</td>
+<td>waxing gibbous</td>
+<td></td>
+<td>waxing</td>
+</tr>
+<tr>
+<td style="text-align:right">180°</td>
+<td>满月</td>
+<td>full moon</td>
+<td></td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align:right">225°</td>
+<td>亏凸月</td>
+<td>waning gibbous</td>
+<td></td>
+<td>waning</td>
+</tr>
+<tr>
+<td style="text-align:right">270°</td>
+<td>下弦月</td>
+<td>third / last quarter</td>
+<td></td>
+<td>waning</td>
+</tr>
+<tr>
+<td style="text-align:right">315°</td>
+<td>残月</td>
+<td>waning crescent</td>
+<td></td>
+<td>waning</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h3>63–69 分钟：月相不是月食</h3>
+<h4>做</h4>
+<ol>
+<li>回到满月位置，先把球举高，让灯照到整个朝向学生的一面：普通满月。</li>
+<li>再把球降到眼—灯直线上，让学生头部影子落到球上：模拟月食。</li>
+<li>回到新月位置，让球恰好遮住灯：模拟日食；随后把球稍微举高，恢复普通新月。</li>
+<li>把月球轨道卡倾斜约 5°，观察多数新月和满月时三者并不完全共线。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：普通满月时，地球的影子落在月球上吗？</strong></p>
+<p><strong>参考回答：</strong> 通常不会。月球轨道有倾角，满月大多从地球影子的上方或下方经过。</p>
+<p><strong>问题：月相与月食的核心区别是什么？</strong></p>
+<p><strong>参考回答：</strong> 月相是观察角度改变；月食是月球实际进入地球影子。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">moon phase 月相：
+view of the illuminated half changes
+
+lunar eclipse 月食：
+Moon enters Earth's shadow
+</code></pre>
+</div>
+</details>
+<h3>69–73 分钟：为什么我们总看见月球同一面？</h3>
+<h4>做</h4>
+<ol>
+<li>学生站中央代表地球，教师手持带黑点的月球球。</li>
+<li>第一次不自转地绕学生一圈：学生会看到月球不同表面。</li>
+<li>第二次始终让黑点朝向学生绕一圈：教师必须在公转一圈时也自转一圈。</li>
+<li>学生描述“同一面朝向地球”需要怎样的自转。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：总看见同一面是否表示月球不自转？</strong></p>
+<p><strong>参考回答：</strong> 恰恰相反。月球每绕地球公转一圈也自转一圈，才让同一面持续朝向地球。</p>
+<p><strong>问题：为什么有 27.3 天和 29.5 天两个周期？</strong></p>
+<p><strong>参考回答：</strong> 约 27.3 天是月球相对远方恒星绕地球一圈；地球同时也在绕太阳前进，月球还要多走一点才回到相同日—地—月位置，所以月相周期约 29.5 天。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">sidereal month ≈ 27.3 d
+synodic / phase cycle ≈ 29.5 d
+
+tidal locking:
+one rotation per one revolution
+</code></pre>
+</div>
+</details>
+<h3>73–75 分钟：离堂记录</h3>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">离堂记录与参考答案 / Exit record &amp; answers</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题 1：用两条证据反驳“地球离太阳近就是夏天”。</strong></p>
+<p><strong>参考答案：</strong> 南北半球同一时刻季节相反；北半球冬季的一月初地球反而接近近日点。</p>
+<p><strong>问题 2：为什么斜射光更不容易使同一面积升温？</strong></p>
+<p><strong>参考答案：</strong> 同一束光斜射时摊在更大面积，每单位面积得到的能量较少。</p>
+<p><strong>问题 3：月相为什么不是地球影子造成的？</strong></p>
+<p><strong>参考答案：</strong> 月球始终约有一半被太阳照亮；随着月球公转，地球观察者看到的受光部分比例改变。地球影子只在月食时真正落到月球上。</p>
+</div>
+</details>
+<h2>五、教师参考、预期结果与常见误区</h2>
+<h3>科学表述</h3>
+<ol>
+<li>地轴倾角常写约 23.5°；它同时影响太阳入射角和昼长。</li>
+<li>教室光斑实验只模拟单位面积能量趋势，不能复制大气、云、海陆热容量等气候因素。</li>
+<li>“月球的一半被照亮”指球面面积的一半；新月不是整个月球变暗。</li>
+<li>月球恒星自转/公转周期约 27.3 天；相同月相间隔约 29.5 天。</li>
+<li>月球远面不是永远黑暗的“dark side”；它和近面一样经历昼夜。</li>
+<li>地轴在一年中的指向近似平行，但在更长时间尺度会发生岁差；五年级本课不展开。</li>
+</ol>
+<h3>常见误区</h3>
+<ul>
+<li><strong>“夏天是地球靠近太阳。”</strong> 用半球相反季节与一月近日点反证。</li>
+<li><strong>“冬季太阳能量变弱了。”</strong> 主要是同一地区入射角更低、昼长更短。</li>
+<li><strong>“地球仪绕灯时北极要一直朝向灯。”</strong> 地轴应始终指向空间同一方向。</li>
+<li><strong>“月相是云或地球影子遮住。”</strong> 普通月相来自观察角度；地球影子对应月食。</li>
+<li><strong>“我们总见同一面，所以月球不自转。”</strong> 同面朝地要求自转与公转同步。</li>
+<li><strong>“上弦月是一整个月球的四分之一。”</strong> 月球仍是完整球体；名称指轨道位置。</li>
+</ul>
+<h2>六、安全、误差与现场备用方案</h2>
+<h3>安全</h3>
+<ul>
+<li>全程只用低温 LED 灯；不使用蜡烛、裸露高温灯泡或激光。</li>
+<li>不直视太阳、强光手电或台灯灯珠；观察白球时定期移开视线。</li>
+<li>房间调暗前清空地面，保留安全小夜灯；模型活动不奔跑。</li>
+<li>泡沫球手柄使用未削尖铅笔或圆头木棒；插球由成人完成。</li>
+<li>地球仪和台灯电线贴地固定，避免绊倒。</li>
+</ul>
+<h3>主要误差</h3>
+<ul>
+<li>方格纸倾斜时中心距离也改变，夸大或缩小光斑面积。</li>
+<li>手电自动变焦或亮度变化。</li>
+<li>台灯离地球仪太近，光线发散明显。</li>
+<li>地球仪移动时地轴偷偷转向灯，造成错误季节模型。</li>
+<li>白球被学生头部遮光，把普通满月误做成月食。</li>
+<li>房间杂散光太强，白球亮暗分界不清。</li>
+</ul>
+<h3>现场备用</h3>
+<ul>
+<li><strong>没有地球仪</strong>：用泡沫球穿竹签，贴 N/S 和中国位置；地轴固定倾斜约 23°。</li>
+<li><strong>光斑边界模糊</strong>：缩短圆孔到纸面距离、遮挡杂散光，用较小圆孔重新做全部条件。</li>
+<li><strong>数格差异太小</strong>：把倾角从 45°改到 60°，保持中心点距离不变。</li>
+<li><strong>月相不清楚</strong>：换更白的哑光球，拉开学生与灯距离，关闭侧面灯。</li>
+<li><strong>学生被自己的头挡光</strong>：球始终举到眼睛略上方；只有模拟月食时才故意共线。</li>
+<li><strong>课时被压缩到 60 分钟</strong>：保留昼夜、90°/45°光斑、A/C 两季节站、八个月相和月食辨析；潮汐锁定改为离堂延伸。</li>
+</ul>
+<h2>七、课堂材料依据与实验设计来源</h2>
+<h3>School Notes</h3>
+<ul>
+<li><code>School/02 Class Materials/Unit 5 Space Science/01 Notes/01 Earth's Movement.pdf</code></li>
+<li><code>School/02 Class Materials/Unit 5 Space Science/01 Notes/02 Earth's Moon.pdf</code></li>
+</ul>
+<h3>外部实验与视频来源</h3>
+<ul>
+<li><a href="https://spaceplace.nasa.gov/seasons/en/">NASA Space Place: What Causes the Seasons?</a>：用南北半球相反季节和地轴倾斜纠正“远近造成四季”。</li>
+<li><a href="https://science.nasa.gov/kids/earth/eo-kids/all-about-that-tilt-sun-and-seasons/">NASA EO Kids: All About That Tilt</a>：手电筒、量角器和地球模型的儿童活动。</li>
+<li><a href="https://science.nasa.gov/eclips/videos/what-causes-seasons/">NASA Spotlite: What Causes Seasons?</a>：可选 3–6 分钟概念诊断视频，适合课前或数据整理时播放。</li>
+<li><a href="https://www.jpl.nasa.gov/edu/resources/lesson-plan/moon-phases/">NASA/JPL Moon Phases Lesson</a>：学生作为地球、白球作为月球、灯作为太阳，亲自绕出八个月相。</li>
+<li><a href="https://www.jpl.nasa.gov/edu/resources/lesson-plan/when-do-lunar-eclipses-happen/">NASA/JPL When Do Lunar Eclipses Happen?</a>：用轨道倾角解释为什么不是每次满月都发生月食。</li>
+<li><a href="https://spaceplace.nasa.gov/all-about-the-moon/en/">NASA Space Place: All About the Moon</a>：月球同步自转与远面也获得阳光的解释。</li>
+</ul>
+<h2>八、关键术语（Key Vocabulary）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自转</td>
+<td>rotation</td>
+<td>公转</td>
+<td>revolution</td>
+</tr>
+<tr>
+<td>地轴</td>
+<td>axis</td>
+<td>地轴倾斜</td>
+<td>axial tilt</td>
+</tr>
+<tr>
+<td>轨道</td>
+<td>orbit</td>
+<td>椭圆</td>
+<td>ellipse</td>
+</tr>
+<tr>
+<td>昼夜</td>
+<td>day and night</td>
+<td>昼夜分界线</td>
+<td>terminator</td>
+</tr>
+<tr>
+<td>太阳高度</td>
+<td>Sun angle / solar elevation</td>
+<td>直射</td>
+<td>direct rays</td>
+</tr>
+<tr>
+<td>斜射</td>
+<td>oblique rays</td>
+<td>单位面积</td>
+<td>per unit area</td>
+</tr>
+<tr>
+<td>季节</td>
+<td>season</td>
+<td>春分/秋分</td>
+<td>equinox</td>
+</tr>
+<tr>
+<td>夏至/冬至</td>
+<td>solstice</td>
+<td>北半球</td>
+<td>Northern Hemisphere</td>
+</tr>
+<tr>
+<td>南半球</td>
+<td>Southern Hemisphere</td>
+<td>近日点</td>
+<td>perihelion</td>
+</tr>
+<tr>
+<td>月相</td>
+<td>lunar phase / moon phase</td>
+<td>新月</td>
+<td>new moon</td>
+</tr>
+<tr>
+<td>娥眉月</td>
+<td>waxing crescent</td>
+<td>上弦月</td>
+<td>first quarter</td>
+</tr>
+<tr>
+<td>盈凸月</td>
+<td>waxing gibbous</td>
+<td>满月</td>
+<td>full moon</td>
+</tr>
+<tr>
+<td>亏凸月</td>
+<td>waning gibbous</td>
+<td>下弦月</td>
+<td>third / last quarter</td>
+</tr>
+<tr>
+<td>残月</td>
+<td>waning crescent</td>
+<td>盈</td>
+<td>waxing</td>
+</tr>
+<tr>
+<td>亏</td>
+<td>waning</td>
+<td>月食</td>
+<td>lunar eclipse</td>
+</tr>
+<tr>
+<td>日食</td>
+<td>solar eclipse</td>
+<td>轨道倾角</td>
+<td>orbital inclination</td>
+</tr>
+<tr>
+<td>潮汐锁定</td>
+<td>tidal locking</td>
+<td>恒星月</td>
+<td>sidereal month</td>
+</tr>
+<tr>
+<td>朔望月</td>
+<td>synodic month</td>
+<td>远面</td>
+<td>far side</td>
+</tr>
+</tbody>
+</table>
+</main>
+</body>
+</html>

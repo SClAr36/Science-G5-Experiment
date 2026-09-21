@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 8 节：显微镜下的细胞——从直接证据到一颗发芽的种子</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 8 节：显微镜下的细胞——从直接证据到一颗发芽的种子</h1>
+</header>
+<main>
+<p><strong>Lesson 8: Cells Under the Microscope — From Direct Evidence to a Germinating Seed</strong></p>
+<p><strong>授课状态</strong>：已完成；实际授课第 8 节，共 105 分钟，含 5 分钟休息。孩子已有显微镜使用经验，本课不再安排练手任务，直接用真实样本完成观察、绘图、标注和一次质壁分离前后对照。装片与操作细节另见<a href="%E6%98%BE%E5%BE%AE%E9%95%9C%E8%A3%85%E7%89%87%E4%B8%8E%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">显微镜装片与操作指南</a>。</p>
+<h2>家长课前准备（Materials for Parents）</h2>
+<p>以下均为生活中容易获得的材料。显微镜与专用玻片由教师准备。</p>
+<table>
+<thead>
+<tr>
+<th>材料 Material</th>
+<th style="text-align:right">数量</th>
+<th>要求与用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新鲜白洋葱 fresh white onion</td>
+<td style="text-align:right">1 个</td>
+<td>取白色肉质鳞片的透明内表皮，观察一般植物细胞结构</td>
+</tr>
+<tr>
+<td>红／紫洋葱 red / purple onion</td>
+<td style="text-align:right">1 个</td>
+<td>取带紫红色的极薄表皮；利用天然色素观察质壁分离，不加染液</td>
+</tr>
+<tr>
+<td>食盐 table salt</td>
+<td style="text-align:right">约 10 g</td>
+<td>配制 5% 盐水；其中 5 g 加水至 100 mL，余量备用</td>
+</tr>
+<tr>
+<td>一次性无菌棉签 sterile cotton swabs</td>
+<td style="text-align:right">独立包装 2 支</td>
+<td>采集孩子自己的口腔上皮；1 支备用</td>
+</tr>
+<tr>
+<td>可发芽黄豆或芸豆 viable soybeans / beans</td>
+<td style="text-align:right">约 30 粒</td>
+<td>完整、未煮熟、未烘烤的生豆</td>
+</tr>
+<tr>
+<td>透明塑料杯 clear plastic cups</td>
+<td style="text-align:right">4 个</td>
+<td>杯壁平直，约 250–500 mL</td>
+</tr>
+<tr>
+<td>厨房纸或厚纸巾 paper towels</td>
+<td style="text-align:right">8–12 张</td>
+<td>做杯壁发芽床；无香、无印花</td>
+</tr>
+<tr>
+<td>浅盘 shallow tray</td>
+<td style="text-align:right">1 个</td>
+<td>承托四只杯，防止滴水</td>
+</tr>
+<tr>
+<td>自来水 tap water</td>
+<td style="text-align:right">约 450 mL</td>
+<td>制作清水装片、配制 5% 盐水、湿润纸巾和设置萌发对照</td>
+</tr>
+<tr>
+<td>科学笔记本、HB 铅笔、橡皮、直尺 science notebook / pencil / eraser / ruler</td>
+<td style="text-align:right">各 1</td>
+<td>画显微镜真实视野、用直线引线标注；直尺课后继续测根长</td>
+</tr>
+<tr>
+<td>黑色记号笔、标签纸 marker / labels</td>
+<td style="text-align:right">各 1</td>
+<td>给四只萌发杯编号</td>
+</tr>
+<tr>
+<td>手机或平板 phone / tablet</td>
+<td style="text-align:right">1 台</td>
+<td>每天从固定方向拍照</td>
+</tr>
+<tr>
+<td>无香纸巾、小密封袋 tissues / resealable bags</td>
+<td style="text-align:right">各 1 份</td>
+<td>吸引装片液、清理盐水或对比液，密封用过的棉签</td>
+</tr>
+</tbody>
+</table>
+<h3>教师课前确认并补齐</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">数量</th>
+<th>课前检查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复式光学显微镜 compound light microscope</td>
+<td style="text-align:right">1 台</td>
+<td>10×目镜；4×、10×、40×物镜；灯光、粗细准焦正常</td>
+</tr>
+<tr>
+<td>载玻片、盖玻片 slides / coverslips</td>
+<td style="text-align:right">各 4–6 片</td>
+<td>洁净、无缺口；另备 2 组</td>
+</tr>
+<tr>
+<td>可选细胞对比液 optional contrast stain</td>
+<td style="text-align:right">约 3 mL</td>
+<td>没有合适染液时用清水观察并调小光圈；若有真正 2% 药用碘酊，由成人按碘酊∶水＝1∶9预配成透明淡茶色。碘伏只作课前预试，不保证细胞核对比</td>
+</tr>
+<tr>
+<td>滴管、尖头镊子、解剖针 droppers / tweezers / needle</td>
+<td style="text-align:right">各 1–2</td>
+<td>清水、5% 盐水和可选对比液的滴管分开贴签</td>
+</tr>
+<tr>
+<td>镜头纸、白托盘、玻片回收盒</td>
+<td style="text-align:right">各 1</td>
+<td>镜片清洁、承接液滴、回收玻片</td>
+</tr>
+<tr>
+<td>护目镜、一次性手套 goggles / gloves</td>
+<td style="text-align:right">师生各 1 套</td>
+<td>染色和口腔样本阶段使用</td>
+</tr>
+</tbody>
+</table>
+<p><strong>教师提前检查</strong>：</p>
+<ol>
+<li>取同一袋豆 8–10 粒，用湿纸巾包裹，确认能吸水膨胀；正式萌发通常需要 2–5 天。</li>
+<li>按正式方案各做一张白洋葱与口腔预试片：若不用染液，确认调小光圈后仍能找到细胞；若用稀释碘酊，确认视野保持透明淡黄而非整片深褐。</li>
+<li>用红／紫洋葱表皮和 5% 盐水预试一次，确认 3–10 分钟内能看见有色细胞内容物缩离细胞壁。</li>
+<li>打开或打印<a href="%E6%98%BE%E5%BE%AE%E9%95%9C%E8%A3%85%E7%89%87%E4%B8%8E%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">显微镜装片与操作指南</a>放在实验台旁。</li>
+</ol>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>对应学校单元</strong>：Unit 4 Life Science</li>
+<li><strong>对应材料</strong>：01 Characteristics Notes；02 Cell Structure Notes；03 Cell Supplementary Notes；02 Cell Vocabulary；05 Study Guide for Biology Test</li>
+<li><strong>核心问题</strong>：肉眼看起来完全不同的洋葱、口腔和种子，能用哪些证据说明它们都由细胞构成并完成生命活动？
+<em>What evidence shows that onion tissue, cheek tissue, and a seed are made of cells and carry out life processes?</em></li>
+</ul>
+<p>本课只要求孩子掌握可观察、可解释的核心层，不追求背完学校课件中所有细胞器：</p>
+<pre><code class="language-text">显微镜直接证据
+洋葱植物细胞 ↔ 口腔动物细胞
+共同：细胞膜 cell membrane、细胞质 cytoplasm、细胞核 nucleus
+主要差异：植物细胞还有细胞壁 cell wall；成熟植物细胞常有大液泡 vacuole
+                 ↓
+红洋葱＋5%盐水：水经细胞膜移出，细胞内容物缩离细胞壁
+                 ↓
+细胞是生命的基本结构和功能单位
+                 ↓
+种子吸水后发芽：把“细胞完成生命活动”变成一周连续证据
+</code></pre>
+<h3>孩子应能</h3>
+<ol>
+<li>按“低倍找—居中—逐级放大—高倍细调”独立完成一次找像。</li>
+<li>制作洋葱内表皮和自己的口腔上皮临时装片，按“先看—自己画—再命名—用引线标注”完成两页显微镜科学绘图。</li>
+<li>能在口腔图上标注<strong>细胞膜（cell membrane）</strong>，在洋葱图上标注<strong>细胞壁（cell wall）</strong>，并在确实看见时标注<strong>细胞质（cytoplasm）</strong>、<strong>细胞核（nucleus）</strong> 和<strong>液泡（vacuole）</strong>；看不清的结构不凭想象补画。</li>
+<li>用自己的两张图比较植物细胞与动物细胞，并借用学校 Notes 的英文表述说明主要细胞结构的功能；能区分“学校学过的细胞器”和“本节显微镜能分辨的细胞器”。</li>
+<li>在同一红洋葱视野中比较清水与 5% 盐水处理前后，指出细胞壁不变而有色细胞内容物缩离细胞壁，并用渗透作用解释水的移动。</li>
+<li>建立有重复组和干燥对照的豆类萌发实验，连续记录 5–7 天。</li>
+</ol>
+<h2>二、课堂内容（按时间顺序）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>教学活动</th>
+<th>必须留下的证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–20</td>
+<td>实验 1：洋葱内表皮植物细胞</td>
+<td>笔记第 1 页：一张最佳视野图与结构标注</td>
+</tr>
+<tr>
+<td style="text-align:right">20–40</td>
+<td>实验 2：口腔上皮动物细胞</td>
+<td>笔记第 2 页：一张最佳视野图与结构标注</td>
+</tr>
+<tr>
+<td style="text-align:right">40–50</td>
+<td>用自己的两张图快速比较细胞，并判断哪些细胞器本节能看见</td>
+<td>能在图上指出共同结构与主要差异；不把课本模型当成观察结果</td>
+</tr>
+<tr>
+<td style="text-align:right">50–65</td>
+<td>实验 3：红洋葱细胞质壁分离</td>
+<td>同一视野盐水前后图；指出细胞壁不变、细胞内容物缩离</td>
+</tr>
+<tr>
+<td style="text-align:right">65–70</td>
+<td>休息；教师回收口腔玻片并清洁台面</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align:right">70–98</td>
+<td>实验 4：杯壁豆类萌发长期实验</td>
+<td>湿润重复组、干燥对照、Day 0 数据</td>
+</tr>
+<tr>
+<td style="text-align:right">98–105</td>
+<td>指图复述、细胞学说与课后任务</td>
+<td>看图指结构、解释质壁分离、一句证据结论与每日记录任务</td>
+</tr>
+</tbody>
+</table>
+<h2>三、105 分钟课堂脚本</h2>
+<h3>0–20 分钟：实验 1——洋葱内表皮植物细胞</h3>
+<p><strong>实验目的</strong>：亲手制作洋葱内表皮装片，先把显微镜中真实看到的排列画进笔记，再根据自己的图指认细胞壁、细胞质和可见的细胞核。</p>
+<p><strong>重要知识点</strong>：<strong>细胞（cell）</strong> 是生物体结构和功能的基本单位。洋葱表皮最清楚的方格边界主要来自<strong>细胞壁（cell wall）</strong>；清水装片即可观察细胞壁。可选对比液只能帮助增加反差，不能代替结构证据。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>洋葱内表皮</td>
+<td style="text-align:right">约 5 mm × 5 mm</td>
+<td>植物组织标本</td>
+</tr>
+<tr>
+<td>纯净水</td>
+<td style="text-align:right">1 小滴</td>
+<td>展平表皮</td>
+</tr>
+<tr>
+<td>清水或可选的淡碘对比液</td>
+<td style="text-align:right">1 小滴</td>
+<td>清水即可完成；稀释碘酊只用于增加对比</td>
+</tr>
+<tr>
+<td>吸水纸</td>
+<td style="text-align:right">1 小条</td>
+<td>从盖玻片另一侧引流</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>载玻片、盖玻片</td>
+<td style="text-align:right">各 1</td>
+<td>制作湿片</td>
+</tr>
+<tr>
+<td>镊子、解剖针、滴管</td>
+<td style="text-align:right">各 1</td>
+<td>取样、展平、滴液</td>
+</tr>
+<tr>
+<td>显微镜</td>
+<td style="text-align:right">1 台</td>
+<td>40×→100×→条件合适时400×</td>
+</tr>
+<tr>
+<td>护目镜、手套</td>
+<td style="text-align:right">各 1 套</td>
+<td>染色安全</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">侧视：
+        盖玻片
+           ／  缓慢放下
+          ／
+---------●--------- 载玻片
+      水滴＋薄表皮
+</code></pre>
+<ol>
+<li>在载玻片中央滴一滴水，放入并展平一小片透明洋葱内表皮，以 45° 缓慢盖上盖玻片。</li>
+<li>先观察清水片；需要增加对比时，从盖玻片一侧滴入一滴教师预试过的淡碘对比液，另一侧用吸水纸引流。</li>
+<li>从 4×物镜开始找像、居中，再观察 100×和400×，选择边界最清楚的一档。清水片太亮时调小光圈；始终找不到时换教师预试片。</li>
+<li>在笔记中画一张最佳视野图：画 3–6 个真实相邻细胞，并记录总放大倍数。</li>
+<li>先让孩子指出真实看到的区域，再用不交叉引线标注<strong>细胞壁（cell wall）</strong>；能分辨时再标<strong>细胞质（cytoplasm）</strong>、<strong>液泡（vacuole）<strong>和</strong>细胞核（nucleus）</strong>。</li>
+<li>看不清的结构写“未分辨”，不凭模型补画；洋葱鳞片通常看不到叶绿体，细胞膜也常因紧贴细胞壁而无法单独看清。</li>
+</ol>
+<p><strong>结果边界</strong>：标本厚度、对比液深浅和光圈都会改变清晰度。圆而亮的气泡不是细胞。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">笔记第 1 页：洋葱内表皮植物细胞
+日期：____  装片液：清水 / 稀释碘酊 / 其他____  总放大：____×
+
+只画一张最佳视野：3–6 个相邻细胞；铅笔单线；不涂色。
+引线不交叉，末端真正碰到所指结构。
+标注：细胞壁 cell wall / 细胞质 cytoplasm（能分辨时） /
+      细胞核 nucleus（只在看见时） / 液泡 vacuole（能分辨时）
+
+我直接看到：规则排列 / 清楚边界 / 较深区域 / 其他________
+未能单独分辨：细胞膜 cell membrane / 其他________
+</code></pre>
+</div>
+</details>
+<h3>20–40 分钟：实验 2——口腔上皮动物细胞</h3>
+<p><strong>实验目的</strong>：观察自己的口腔上皮细胞，独立完成第二张观察图和结构标注，再与洋葱细胞在同一放大倍数下作公平比较。</p>
+<p><strong>重要知识点</strong>：动物细胞有<strong>细胞膜（cell membrane）</strong>，没有细胞壁，所以形状通常比洋葱表皮更不规则；植物与动物细胞都属于有细胞核的<strong>真核细胞（eukaryotic cells）</strong>。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独立包装无菌棉签</td>
+<td style="text-align:right">1 支</td>
+<td>只采集孩子本人</td>
+</tr>
+<tr>
+<td>纯净水</td>
+<td style="text-align:right">1 小滴</td>
+<td>分散样本</td>
+</tr>
+<tr>
+<td>清水或可选的淡碘对比液</td>
+<td style="text-align:right">1 小滴</td>
+<td>清水可观察轮廓；稀释碘酊可能增加细胞核对比</td>
+</tr>
+<tr>
+<td>纸巾、密封袋</td>
+<td style="text-align:right">各 1</td>
+<td>清理与密封弃置</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>载玻片、盖玻片</td>
+<td style="text-align:right">各 1</td>
+<td>制作湿片</td>
+</tr>
+<tr>
+<td>滴管、镊子</td>
+<td style="text-align:right">各 1</td>
+<td>滴液、放盖玻片</td>
+</tr>
+<tr>
+<td>显微镜</td>
+<td style="text-align:right">1 台</td>
+<td>与洋葱使用相同倍率</td>
+</tr>
+<tr>
+<td>护目镜、手套、回收盒</td>
+<td style="text-align:right">各 1</td>
+<td>生物样本与玻璃安全</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">清水漱口 → 用棉头贴着口腔内壁滚擦10–15秒 → 小水滴中滚动8–10次
+          → 盖片 → 盖玻片一侧滴染液、另一侧用吸水纸引流 → 低倍找像
+</code></pre>
+<ol>
+<li>孩子用清水漱口，以无菌棉签的棉头贴着一侧口腔内壁轻轻滚擦 10–15 秒；不疼、不出血，不使用木杆一端。</li>
+<li>把棉头在载玻片的小水滴中轻压并滚动 8–10 次，随后立即密封弃置。</li>
+<li>以 45° 盖上盖玻片，先观察清水片；需要增加对比时，从盖玻片一侧滴入一滴教师预试过的淡碘对比液，另一侧用吸水纸引流。</li>
+<li>从 4×物镜开始按行扫描，再观察 100×和400×，选择细胞边界最清楚的一档。清水片太亮时调小光圈；始终找不到时换教师预试片。</li>
+<li>在笔记中画一张最佳视野图：画 2–4 个真实的分散细胞，并记录总放大倍数。</li>
+<li>用不交叉引线标注<strong>细胞膜（cell membrane）</strong>、<strong>细胞质（cytoplasm）<strong>和确实看到的</strong>细胞核（nucleus）</strong>；图下写“没有细胞壁 no cell wall”。</li>
+</ol>
+<p><strong>预期结果</strong>：细胞较分散，外形近圆或不规则多边形；通常能看见细胞膜围成的边界。使用有效的淡碘对比液时细胞核可能较深，清水片中看不到细胞核也保留真实记录。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">笔记第 2 页：口腔上皮动物细胞
+日期：____  装片液：清水 / 稀释碘酊 / 其他____  总放大：____×
+
+只画一张最佳视野：2–4 个分散细胞；铅笔单线；不涂色。
+引线不交叉，末端真正碰到所指结构。
+标注：细胞膜 cell membrane / 细胞质 cytoplasm /
+      细胞核 nucleus（只在看见时）
+图下写：口腔上皮细胞没有细胞壁 no cell wall
+
+我直接看到：分散 / 扁平 / 不规则边界 / 深色区域 / 其他________
+</code></pre>
+</div>
+</details>
+<h3>40–50 分钟：用自己的观察图快速比较细胞</h3>
+<p>孩子把两页图左右摊开，不再另填一张重复的结构表。下列英文尽量沿用学校 Notes；孩子不需要抄两张功能表。</p>
+<ol>
+<li>盖住术语，教师说出“细胞壁、细胞膜、细胞质、细胞核”，孩子直接在自己的图上指出；看不清就回答“未直接分辨”。</li>
+<li>孩子根据自己的图写两句差异，不抄标准细胞模型。</li>
+<li>教师用下表快速配对五个结构及其功能，孩子不抄表。</li>
+<li>口头把细胞器分为“通常能看见／可能看见或推断／普通课堂显微镜看不见”。</li>
+<li>读三句学校版 Cell Theory，并在两张图上圈出支持第一句的证据。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">洋葱细胞：排列较________，有清楚的________；细胞质贴近________内侧。
+口腔细胞：排列较________，外形较________，没有________。
+</code></pre>
+</div>
+</details>
+<h3>核心知识点：细胞结构、细胞器与细胞学说（必须保留）</h3>
+<p>以下内容沿用学校 Notes 的英文表述，属于本节必须保留的知识区，不随实验步骤精简而删除。</p>
+<p><strong>发音说明</strong>：以下统一采用英式 IPA。<code>ˈ</code> 后面的音节读主重音，<code>ˌ</code> 后面的音节读次重音；音节之间的点只帮助断开读。<strong>cell <span class="ipa">/sel/</span></strong> 与 <em>sell</em> 同音，复数 <strong>cells <span class="ipa">/selz/</span></strong>，不要读成字母 C 的音 <span class="ipa">/siː/</span>。</p>
+<h4>1. 细胞结构、细胞器、功能与本节可见性</h4>
+<table>
+<thead>
+<tr>
+<th>结构 Structure（英式 IPA）</th>
+<th>类别与出现位置</th>
+<th>功能或学校描述 Function / Description</th>
+<th>本节普通光学显微镜下</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>细胞膜 cell membrane <span class="ipa">/sel ˈmem.breɪn/</span></td>
+<td>重要细胞结构；植物、动物细胞都有</td>
+<td>控制物质进出细胞。 <em>Controls what goes in and out of the cell.</em></td>
+<td>口腔细胞通常能看见它围成的边界；洋葱细胞中常因紧贴细胞壁而无法单独分辨</td>
+</tr>
+<tr>
+<td>细胞质 cytoplasm <span class="ipa">/ˈsaɪ.tə.plæz.əm/</span></td>
+<td>细胞组成部分；植物、动物细胞都有</td>
+<td>由细胞质基质和细胞器组成；细胞质基质是化学反应发生处。 <em>Cytoplasm consists of cytosol and cell organelles. Cytosol is also where chemical reactions take place.</em></td>
+<td>可能看见或根据细胞内部区域推断，透明样本中不一定清楚</td>
+</tr>
+<tr>
+<td>细胞核 nucleus <span class="ipa">/ˈnjuː.kli.əs/</span></td>
+<td><strong>细胞器</strong>；洋葱和口腔细胞都有</td>
+<td>控制细胞内的化学反应和过程，并含有遗传物质。 <em>The nucleus controls chemical reactions and processes in the cell. The nucleus also contains the cell's genetic material (DNA molecules).</em></td>
+<td>使用有效的淡碘对比液时较容易看见；清水片中可能无法分辨</td>
+</tr>
+<tr>
+<td>细胞壁 cell wall <span class="ipa">/sel wɔːl/</span></td>
+<td>重要细胞结构；植物细胞有，动物细胞没有</td>
+<td>给植物细胞支撑和稳定，并帮助维持形状。 <em>Gives plant cell support and stability. Cell wall contains cellulose: helps to keep the shape of the plant cell.</em></td>
+<td>洋葱细胞中通常是最清楚的方格边界</td>
+</tr>
+<tr>
+<td>液泡 vacuole <span class="ipa">/ˈvæk.ju.əʊl/</span></td>
+<td><strong>细胞器</strong>；植物细胞中很重要，部分动物细胞也有较小液泡</td>
+<td>储存液体、食物、废物和其他物质；充盈的液泡帮助植物保持挺立。 <em>Stores liquid, food, waste and other materials. Full vacuoles help the plant stay rigid.</em></td>
+<td>洋葱细胞中央清亮区可能看见或推断，液泡膜通常不清楚</td>
+</tr>
+<tr>
+<td>线粒体 mitochondria <span class="ipa">/ˌmaɪ.təˈkɒn.dri.ə/</span></td>
+<td><strong>细胞器</strong>；植物、动物细胞都有</td>
+<td>细胞呼吸在这里发生，释放细胞可利用的能量（ATP）。 <em>Cellular respiration occurs here to release energy (ATP) for the cell to use.</em></td>
+<td>看不清</td>
+</tr>
+<tr>
+<td>叶绿体 chloroplast <span class="ipa">/ˈklɒr.ə.plɑːst/</span></td>
+<td><strong>细胞器</strong>；绿色植物细胞中有，洋葱鳞片通常没有</td>
+<td>含有叶绿素，使光合作用能够发生。 <em>Contains chlorophyll – enables photosynthesis to take place.</em></td>
+<td>洋葱鳞片通常没有；若另用薄的绿色水草叶可看见</td>
+</tr>
+<tr>
+<td>内质网 endoplasmic reticulum <span class="ipa">/ˌen.dəʊˌplæz.mɪk rəˈtɪk.jə.ləm/</span>（ER <span class="ipa">/ˌiːˈɑː/</span>）</td>
+<td><strong>细胞器</strong>；植物、动物细胞都有</td>
+<td>运输物质；粗面内质网制造蛋白质，光面内质网制造脂质。 <em>Transports materials. Rough ER makes proteins; smooth ER makes lipids.</em></td>
+<td>看不清</td>
+</tr>
+<tr>
+<td>核糖体 ribosome <span class="ipa">/ˈraɪ.bə.səʊm/</span></td>
+<td><strong>细胞器</strong>；植物、动物细胞都有</td>
+<td>构建蛋白质。 <em>Builds proteins.</em></td>
+<td>看不清</td>
+</tr>
+<tr>
+<td>高尔基体 Golgi apparatus <span class="ipa">/ˈɡɒl.dʒi ˌæp.əˈreɪ.təs/</span></td>
+<td><strong>细胞器</strong>；植物、动物细胞都有</td>
+<td>储存、修改并包装蛋白质。 <em>Stores, modifies and packages proteins.</em></td>
+<td>看不清</td>
+</tr>
+<tr>
+<td>溶酶体 lysosome <span class="ipa">/ˈlaɪ.sə.səʊm/</span></td>
+<td><strong>细胞器</strong>；属于学校 Notes 的细胞器范围</td>
+<td>含有能够分解废物的消化酶。 <em>Contains digestive enzymes that break down waste.</em></td>
+<td>看不清</td>
+</tr>
+<tr>
+<td>核仁 nucleolus <span class="ipa">/njuːˈkliː.ə.ləs/</span></td>
+<td>细胞核内部的结构</td>
+<td>学校 Notes 在此只给出位置描述：核仁位于细胞核内。 <em>Nucleolus is inside the nucleus.</em></td>
+<td>若细胞核内恰好出现更深的小点，可记作“可能的核仁”，但不作为本课必找目标</td>
+</tr>
+<tr>
+<td>纤毛／鞭毛 cilium <span class="ipa">/ˈsɪl.i.əm/</span>；flagellum <span class="ipa">/fləˈdʒel.əm/</span></td>
+<td>某些细胞具有的运动结构</td>
+<td>帮助单细胞生物移动。 <em>Help single-celled organisms move.</em></td>
+<td>需要合适的活体微生物样本；洋葱和口腔装片中不要求观察</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注—细胞器 organelle <span class="ipa">/ˌɔː.ɡəˈnel/</span></strong>：<em>Organelle = “little organ”. Each organelle has a special job that helps the cell function.</em>（细胞器像“小器官”，每个细胞器都有帮助细胞运作的特定工作）；细胞膜、细胞壁和细胞质不属于 organelles。</p>
+</blockquote>
+<h4>2. 真实观察图与教材完整模型对比</h4>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijg1MCIgdmlld0JveD0iMCAwIDE0MDAgODUwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+5pi+5b6u6ZWc55yf5a6e6KeC5a+f5Zu+5LiO5pWZ5p2Q5a6M5pW05qSN54mp57uG6IOe5qih5Z6L5a+55q+UPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5bem5L6n5piv55m95rSL6JGx6KGo55qu5Zyo5pmu6YCa5YWJ5a2m5pi+5b6u6ZWc5LiL5Y+v6IO955yL5Yiw55qE6KeE5YiZ57uG6IOe5o6S5YiX77yM5riF5qWa5pi+56S657uG6IOe5aOB77yM5bm25oqK57uG6IOe5qC45ZKM5ray5rOh5Yy65qCH5Li65Y+v6IO955yL6KeB5oiW5o6o5pat44CC5Y+z5L6n5piv5YW45Z6L57u/6Imy5qSN54mp57uG6IOe5pWZ5p2Q5qih5Z6L77yM5a6M5pW05qCH5Ye657uG6IOe5aOB44CB57uG6IOe6Iac44CB57uG6IOe6LSo44CB57uG6IOe5qC444CB5ray5rOh44CB5Y+257u/5L2T44CB57q/57KS5L2T44CB5YaF6LSo572R44CB6auY5bCU5Z+65L2T5ZKM5qC457OW5L2T44CC5bqV6YOo5by66LCD5a6e6aqM57uY5Zu+5Y+q55S75a6e6ZmF6KeC5a+f5Yiw55qE57uT5p6E44CCPC9kZXNjPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJwYWdlQmciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZjdmYmZhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2VlZjZmNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0ic2NvcGVCZyIgY3g9IjQ4JSIgY3k9IjQyJSIgcj0iNjIlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmZWY4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U4ZWNlOCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0idmFjdW9sZUZpbGwiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZWFmOGZjIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2NmZWFmMyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9InNoYWRvdyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICAgIDxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSI1IiBzdGREZXZpYXRpb249IjgiIGZsb29kLWNvbG9yPSIjMTgzMzNhIiBmbG9vZC1vcGFjaXR5PSIwLjEyIi8+CiAgICA8L2ZpbHRlcj4KICAgIDxjbGlwUGF0aCBpZD0ic2NvcGVDbGlwIj4KICAgICAgPGNpcmNsZSBjeD0iMzUwIiBjeT0iNDEwIiByPSIyMTQiLz4KICAgIDwvY2xpcFBhdGg+CiAgICA8bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjgiIG1hcmtlckhlaWdodD0iOCIgcmVmWD0iNyIgcmVmWT0iNCIgb3JpZW50PSJhdXRvIiBtYXJrZXJVbml0cz0ic3Ryb2tlV2lkdGgiPgogICAgICA8cGF0aCBkPSJNMCwwIEw4LDQgTDAsOCBaIiBmaWxsPSIjMzg1YzY1Ii8+CiAgICA8L21hcmtlcj4KICA8L2RlZnM+CiAgPHN0eWxlPgogICAgdGV4dHtmb250LWZhbWlseToiTm90byBTYW5zIFNDIiwiTWljcm9zb2Z0IFlhSGVpIiwiU2Vnb2UgVUkiLHNhbnMtc2VyaWY7ZmlsbDojMTcyYjMyfQogICAgLm1haW4tdGl0bGV7Zm9udC1zaXplOjMwcHg7Zm9udC13ZWlnaHQ6NzAwO2ZpbGw6IzE2NGQ1OH0KICAgIC5zdWJ0aXRsZXtmb250LXNpemU6MTdweDtmb250LXdlaWdodDo1MDA7ZmlsbDojNTg3MDc4fQogICAgLnBhbmVse2ZpbGw6I2ZmZmZmZjtzdHJva2U6I2M4ZDlkNjtzdHJva2Utd2lkdGg6Mn0KICAgIC5wYW5lbC10aXRsZXtmb250LXNpemU6MjRweDtmb250LXdlaWdodDo3MDA7ZmlsbDojMTY0ZDU4fQogICAgLnBhbmVsLXN1Yntmb250LXNpemU6MTZweDtmb250LXdlaWdodDo1MDA7ZmlsbDojNmE3ZTg0fQogICAgLmxhYmVse2ZvbnQtc2l6ZToxOHB4O2ZvbnQtd2VpZ2h0OjcwMH0KICAgIC5sYWJlbC1lbntmb250LXNpemU6MTRweDtmb250LXdlaWdodDo1MDA7ZmlsbDojNjU3NzdkfQogICAgLmNhbGxvdXR7ZmlsbDpub25lO3N0cm9rZTojMzg1YzY1O3N0cm9rZS13aWR0aDoyO21hcmtlci1lbmQ6dXJsKCNhcnJvdyl9CiAgICAuc21hbGwtbm90ZXtmb250LXNpemU6MTVweDtmb250LXdlaWdodDo1MDA7ZmlsbDojNTM2OTZmfQogICAgLmJhZGdle2ZpbGw6I2U2ZjNlZjtzdHJva2U6IzhiYjhhZDtzdHJva2Utd2lkdGg6MS41fQogICAgLmJhZGdlLXRleHR7Zm9udC1zaXplOjE3cHg7Zm9udC13ZWlnaHQ6NzAwO2ZpbGw6IzIwNTk0Zn0KICAgIC53YWxse2ZpbGw6I2ZmZjZkNztzdHJva2U6I2E4NzUzYztzdHJva2Utd2lkdGg6N30KICAgIC5jZWxsLWlubmVye2ZpbGw6I2ZiZmRmYztmaWxsLW9wYWNpdHk6Ljg4O3N0cm9rZTpub25lfQogICAgLm1vZGVsLXdhbGx7ZmlsbDojZGNlZWM4O3N0cm9rZTojNTM3YjNlO3N0cm9rZS13aWR0aDoxMX0KICAgIC5tb2RlbC1tZW1icmFuZXtmaWxsOiNmYmY4ZDk7c3Ryb2tlOiMzZDkwOTE7c3Ryb2tlLXdpZHRoOjV9CiAgICAub3JnYW5lbGxlLWxpbmV7ZmlsbDpub25lO3N0cm9rZS13aWR0aDozO3N0cm9rZS1saW5lY2FwOnJvdW5kfQogIDwvc3R5bGU+CgogIDxyZWN0IHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijg1MCIgZmlsbD0idXJsKCNwYWdlQmcpIi8+CiAgPHRleHQgeD0iNzAwIiB5PSI0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9Im1haW4tdGl0bGUiPuecn+WunuinguWvn+WbviDiiaAg5pWZ5p2Q5a6M5pW05qih5Z6LPC90ZXh0PgogIDx0ZXh0IHg9IjcwMCIgeT0iNzYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzdWJ0aXRsZSI+5bem6L655Zue562U4oCc6L+Z5LiA5qyh5oiR55yL6KeB5LqG5LuA5LmI4oCd77yM5Y+z6L655Zue562U4oCc5LiA5Liq5YW45Z6L5qSN54mp57uG6IOe6L+Y5YyF5ZCr5LuA5LmI4oCdPC90ZXh0PgoKICA8cmVjdCB4PSIyOCIgeT0iMTA1IiB3aWR0aD0iNjU2IiBoZWlnaHQ9IjY1MCIgcng9IjIyIiBjbGFzcz0icGFuZWwiIGZpbHRlcj0idXJsKCNzaGFkb3cpIi8+CiAgPHJlY3QgeD0iNzE2IiB5PSIxMDUiIHdpZHRoPSI2NTYiIGhlaWdodD0iNjUwIiByeD0iMjIiIGNsYXNzPSJwYW5lbCIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KCiAgPHRleHQgeD0iMzU2IiB5PSIxNDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJwYW5lbC10aXRsZSI+5pi+5b6u6ZWc55yf5a6e6KeC5a+f77ya55m95rSL6JGx6KGo55quPC90ZXh0PgogIDx0ZXh0IHg9IjM1NiIgeT0iMTc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0icGFuZWwtc3ViIj5vcmRpbmFyeSBsaWdodCBtaWNyb3Njb3BlIMK3IOe6piAxMDDDl+KAkzQwMMOXPC90ZXh0PgoKICA8Y2lyY2xlIGN4PSIzNTAiIGN5PSI0MTAiIHI9IjIyMSIgZmlsbD0idXJsKCNzY29wZUJnKSIgc3Ryb2tlPSIjNTk2OTZjIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8ZyBjbGlwLXBhdGg9InVybCgjc2NvcGVDbGlwKSI+CiAgICA8cmVjdCB4PSIxMTgiIHk9IjE4NSIgd2lkdGg9IjQ2NSIgaGVpZ2h0PSI0NTAiIGZpbGw9IiNmNWYwZGMiLz4KCiAgICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMiAzNTAgNDEwKSI+CiAgICAgIDxyZWN0IHg9IjEyNSIgeT0iMjIwIiB3aWR0aD0iMTQ1IiBoZWlnaHQ9IjExMiIgcng9IjEyIiBjbGFzcz0id2FsbCIvPgogICAgICA8cmVjdCB4PSIyNzAiIHk9IjIyMCIgd2lkdGg9IjE1NSIgaGVpZ2h0PSIxMTIiIHJ4PSIxMSIgY2xhc3M9IndhbGwiLz4KICAgICAgPHJlY3QgeD0iNDI1IiB5PSIyMjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMTEyIiByeD0iMTMiIGNsYXNzPSJ3YWxsIi8+CiAgICAgIDxyZWN0IHg9IjEyNSIgeT0iMzMyIiB3aWR0aD0iMTQ1IiBoZWlnaHQ9IjEyMCIgcng9IjEwIiBjbGFzcz0id2FsbCIvPgogICAgICA8cmVjdCB4PSIyNzAiIHk9IjMzMiIgd2lkdGg9IjE1NSIgaGVpZ2h0PSIxMjAiIHJ4PSIxMiIgY2xhc3M9IndhbGwiLz4KICAgICAgPHJlY3QgeD0iNDI1IiB5PSIzMzIiIHdpZHRoPSIxNTAiIGhlaWdodD0iMTIwIiByeD0iMTAiIGNsYXNzPSJ3YWxsIi8+CiAgICAgIDxyZWN0IHg9IjEyNSIgeT0iNDUyIiB3aWR0aD0iMTQ1IiBoZWlnaHQ9IjExOCIgcng9IjEzIiBjbGFzcz0id2FsbCIvPgogICAgICA8cmVjdCB4PSIyNzAiIHk9IjQ1MiIgd2lkdGg9IjE1NSIgaGVpZ2h0PSIxMTgiIHJ4PSIxMCIgY2xhc3M9IndhbGwiLz4KICAgICAgPHJlY3QgeD0iNDI1IiB5PSI0NTIiIHdpZHRoPSIxNTAiIGhlaWdodD0iMTE4IiByeD0iMTIiIGNsYXNzPSJ3YWxsIi8+CgogICAgICA8cmVjdCB4PSIxNDAiIHk9IjIzNiIgd2lkdGg9IjExNCIgaGVpZ2h0PSI4MCIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgogICAgICA8cmVjdCB4PSIyODYiIHk9IjIzNiIgd2lkdGg9IjEyMyIgaGVpZ2h0PSI4MCIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgogICAgICA8cmVjdCB4PSI0NDEiIHk9IjIzNiIgd2lkdGg9IjExOCIgaGVpZ2h0PSI4MCIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgogICAgICA8cmVjdCB4PSIxNDAiIHk9IjM0OCIgd2lkdGg9IjExNCIgaGVpZ2h0PSI4OCIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgogICAgICA8cmVjdCB4PSIyODYiIHk9IjM0OCIgd2lkdGg9IjEyMyIgaGVpZ2h0PSI4OCIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgogICAgICA8cmVjdCB4PSI0NDEiIHk9IjM0OCIgd2lkdGg9IjExOCIgaGVpZ2h0PSI4OCIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgogICAgICA8cmVjdCB4PSIxNDAiIHk9IjQ2OCIgd2lkdGg9IjExNCIgaGVpZ2h0PSI4NiIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgogICAgICA8cmVjdCB4PSIyODYiIHk9IjQ2OCIgd2lkdGg9IjEyMyIgaGVpZ2h0PSI4NiIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgogICAgICA8cmVjdCB4PSI0NDEiIHk9IjQ2OCIgd2lkdGg9IjExOCIgaGVpZ2h0PSI4NiIgcng9IjE4IiBjbGFzcz0iY2VsbC1pbm5lciIvPgoKICAgICAgPGcgZmlsbD0iIzhiNjY4YiIgb3BhY2l0eT0iMC42NiI+CiAgICAgICAgPGVsbGlwc2UgY3g9IjMxMCIgY3k9IjM5MyIgcng9IjEyIiByeT0iOSIvPgogICAgICAgIDxlbGxpcHNlIGN4PSI1MDEiIGN5PSIyOTIiIHJ4PSIxMSIgcnk9IjgiLz4KICAgICAgICA8ZWxsaXBzZSBjeD0iMjEwIiBjeT0iNTEwIiByeD0iMTAiIHJ5PSI4Ii8+CiAgICAgIDwvZz4KICAgICAgPGcgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC41NSI+CiAgICAgICAgPGVsbGlwc2UgY3g9IjIyNSIgY3k9IjM4NSIgcng9IjI4IiByeT0iNDAiLz4KICAgICAgICA8ZWxsaXBzZSBjeD0iMzY5IiBjeT0iNTEwIiByeD0iMzAiIHJ5PSIzOCIvPgogICAgICAgIDxlbGxpcHNlIGN4PSI1MDMiIGN5PSIzOTAiIHJ4PSIyNiIgcnk9IjQwIi8+CiAgICAgIDwvZz4KICAgIDwvZz4KICA8L2c+CgogIDxwYXRoIGQ9Ik0xMDIgMjM4IEMxNTAgMjQ1IDE2NyAyNzAgMTg4IDMwMCIgY2xhc3M9ImNhbGxvdXQiLz4KICA8dGV4dCB4PSI2MSIgeT0iMjE3IiBjbGFzcz0ibGFiZWwiPua4healmu+8mue7huiDnuWjgTwvdGV4dD4KICA8dGV4dCB4PSI2MSIgeT0iMjM4IiBjbGFzcz0ibGFiZWwtZW4iPmNlbGwgd2FsbDwvdGV4dD4KCiAgPHBhdGggZD0iTTExNSA2NDcgQzE3NSA2MTYgMjQyIDUyNiAzMDQgMzk5IiBjbGFzcz0iY2FsbG91dCIvPgogIDx0ZXh0IHg9IjU2IiB5PSI2NjQiIGNsYXNzPSJsYWJlbCI+5Y+v6IO977ya57uG6IOe5qC4PC90ZXh0PgogIDx0ZXh0IHg9IjU2IiB5PSI2ODYiIGNsYXNzPSJsYWJlbC1lbiI+bnVjbGV1c++8iOacieWvueavlOa2suaXtu+8iTwvdGV4dD4KCiAgPHBhdGggZD0iTTU4NSA2NDIgQzU1MyA2MTAgNTIyIDU0NSA1MDMgNDA1IiBjbGFzcz0iY2FsbG91dCIvPgogIDx0ZXh0IHg9IjQ3MCIgeT0iNjYzIiBjbGFzcz0ibGFiZWwiPuaOqOaWre+8muWkp+a2suazoeWMujwvdGV4dD4KICA8dGV4dCB4PSI0OTIiIHk9IjY4NSIgY2xhc3M9ImxhYmVsLWVuIj52YWN1b2xlIHJlZ2lvbjwvdGV4dD4KCiAgPHJlY3QgeD0iMTkyIiB5PSI3MDciIHdpZHRoPSIzMjYiIGhlaWdodD0iMzQiIHJ4PSIxNyIgY2xhc3M9ImJhZGdlIi8+CiAgPHRleHQgeD0iMzU1IiB5PSI3MzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJiYWRnZS10ZXh0Ij7nu4bog57ohpzpgJrluLjkuI3og73kuI7nu4bog57lo4HliIblvIDnnIvmuIU8L3RleHQ+CgogIDx0ZXh0IHg9IjEwNDQiIHk9IjE0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InBhbmVsLXRpdGxlIj7mlZnmnZDlrozmlbTmqKHlnovvvJrlhbjlnovnu7/oibLmpI3niannu4bog548L3RleHQ+CiAgPHRleHQgeD0iMTA0NCIgeT0iMTc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0icGFuZWwtc3ViIj5ub3Qgb25lIG1pY3Jvc2NvcGUgdmlldyDCtyDnu7zlkIjorrjlpJrnoJTnqbbor4Hmja48L3RleHQ+CgogIDxyZWN0IHg9IjgzOCIgeT0iMjI4IiB3aWR0aD0iNDIwIiBoZWlnaHQ9IjM0MCIgcng9Ijc0IiBjbGFzcz0ibW9kZWwtd2FsbCIvPgogIDxyZWN0IHg9Ijg1NiIgeT0iMjQ2IiB3aWR0aD0iMzg0IiBoZWlnaHQ9IjMwNCIgcng9IjYxIiBjbGFzcz0ibW9kZWwtbWVtYnJhbmUiLz4KCiAgPHJlY3QgeD0iOTcwIiB5PSIyOTIiIHdpZHRoPSIxNzgiIGhlaWdodD0iMjA1IiByeD0iNzAiIGZpbGw9InVybCgjdmFjdW9sZUZpbGwpIiBzdHJva2U9IiM2OWE5YmEiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxlbGxpcHNlIGN4PSI5MjAiIGN5PSIzNzgiIHJ4PSI1NiIgcnk9IjQ5IiBmaWxsPSIjYzhhZGQ1IiBzdHJva2U9IiM2ZDUyNzgiIHN0cm9rZS13aWR0aD0iNSIvPgogIDxjaXJjbGUgY3g9IjkyMCIgY3k9IjM3OCIgcj0iMTYiIGZpbGw9IiM3NjUxN2UiLz4KCiAgPGcgZmlsbD0iIzc4Yjg1ZCIgc3Ryb2tlPSIjMzg3NDQxIiBzdHJva2Utd2lkdGg9IjMiPgogICAgPGVsbGlwc2UgY3g9IjkyMSIgY3k9IjI4MyIgcng9IjM2IiByeT0iMTgiIHRyYW5zZm9ybT0icm90YXRlKC0xMiA5MjEgMjgzKSIvPgogICAgPGVsbGlwc2UgY3g9IjExODIiIGN5PSIyOTIiIHJ4PSIzNiIgcnk9IjE4IiB0cmFuc2Zvcm09InJvdGF0ZSgxNCAxMTgyIDI5MikiLz4KICAgIDxlbGxpcHNlIGN4PSIxMTk0IiBjeT0iNTA1IiByeD0iMzYiIHJ5PSIxOCIgdHJhbnNmb3JtPSJyb3RhdGUoLTE0IDExOTQgNTA1KSIvPgogICAgPGVsbGlwc2UgY3g9IjkxMCIgY3k9IjUwNiIgcng9IjM2IiByeT0iMTgiIHRyYW5zZm9ybT0icm90YXRlKDEwIDkxMCA1MDYpIi8+CiAgPC9nPgogIDxnIHN0cm9rZT0iI2Q3ZWZkMiIgc3Ryb2tlLXdpZHRoPSIzIj4KICAgIDxwYXRoIGQ9Ik04OTIgMjgyIFE5MjEgMjcwIDk1MCAyODIiLz4KICAgIDxwYXRoIGQ9Ik0xMTUzIDI5MiBRMTE4MiAyODAgMTIxMSAyOTIiLz4KICAgIDxwYXRoIGQ9Ik0xMTY1IDUwNSBRMTE5NCA0OTMgMTIyMyA1MDUiLz4KICAgIDxwYXRoIGQ9Ik04ODEgNTA2IFE5MTAgNDk0IDkzOSA1MDYiLz4KICA8L2c+CgogIDxnIGZpbGw9IiNlZmIxNmQiIHN0cm9rZT0iI2E4NWMyZCIgc3Ryb2tlLXdpZHRoPSIzIj4KICAgIDxwYXRoIGQ9Ik0xMTY0IDM0NyBDMTE5NSAzMjkgMTIyMyAzNDcgMTIxMCAzNzUgQzExOTYgNDAxIDExNTcgMzkwIDExNTcgMzY3IEMxMTU3IDM1OSAxMTU5IDM1MiAxMTY0IDM0NyBaIi8+CiAgICA8cGF0aCBkPSJNODc1IDQ0NyBDOTAzIDQyOSA5MzMgNDQ1IDkyMiA0NzIgQzkxMSA0OTcgODczIDQ5MiA4NjcgNDY4IEM4NjUgNDYwIDg2OCA0NTIgODc1IDQ0NyBaIi8+CiAgPC9nPgogIDxnIGNsYXNzPSJvcmdhbmVsbGUtbGluZSIgc3Ryb2tlPSIjYTg1YzJkIj4KICAgIDxwYXRoIGQ9Ik0xMTcwIDM2MCBRMTE4NiAzNDcgMTIwMSAzNjUgUTExODcgMzgwIDExNjggMzcwIi8+CiAgICA8cGF0aCBkPSJNODc4IDQ2MSBRODkyIDQ0NyA5MTAgNDY0IFE4OTUgNDgwIDg3NyA0NzAiLz4KICA8L2c+CgogIDxnIGNsYXNzPSJvcmdhbmVsbGUtbGluZSIgc3Ryb2tlPSIjOGI2NGExIj4KICAgIDxwYXRoIGQ9Ik05NDQgMzU2IEM5NjcgMzQzIDk4NyAzNDUgMTAwNCAzNTYiLz4KICAgIDxwYXRoIGQ9Ik05NDQgMzY4IEM5NjkgMzU2IDk5MCAzNTkgMTAwOCAzNzAiLz4KICAgIDxwYXRoIGQ9Ik05NDQgMzgxIEM5NjYgMzcxIDk4NyAzNzQgMTAwNCAzODYiLz4KICAgIDxwYXRoIGQ9Ik05NDMgMzk0IEM5NjMgMzg2IDk4MiAzODkgOTk4IDQwMCIvPgogIDwvZz4KICA8ZyBmaWxsPSIjNjg0Zjc4Ij4KICAgIDxjaXJjbGUgY3g9Ijk1NyIgY3k9IjM1MCIgcj0iMy41Ii8+PGNpcmNsZSBjeD0iOTc4IiBjeT0iMzUxIiByPSIzLjUiLz48Y2lyY2xlIGN4PSI5OTQiIGN5PSIzNjAiIHI9IjMuNSIvPgogICAgPGNpcmNsZSBjeD0iOTYxIiBjeT0iMzc0IiByPSIzLjUiLz48Y2lyY2xlIGN4PSI5ODgiIGN5PSIzODIiIHI9IjMuNSIvPjxjaXJjbGUgY3g9IjEwMDAiIGN5PSIzOTciIHI9IjMuNSIvPgogICAgPGNpcmNsZSBjeD0iMTA5MCIgY3k9IjI2NiIgcj0iNCIvPjxjaXJjbGUgY3g9IjExMTAiIGN5PSIyNzMiIHI9IjQiLz48Y2lyY2xlIGN4PSIxMTMwIiBjeT0iMjYwIiByPSI0Ii8+CiAgICA8Y2lyY2xlIGN4PSIxMTYwIiBjeT0iNTMxIiByPSI0Ii8+PGNpcmNsZSBjeD0iMTEzNCIgY3k9IjUyMCIgcj0iNCIvPgogIDwvZz4KCiAgPGcgY2xhc3M9Im9yZ2FuZWxsZS1saW5lIiBzdHJva2U9IiNjMjc2NzkiPgogICAgPHBhdGggZD0iTTExNTUgNDEzIEMxMTgyIDM5OCAxMjEwIDQwMSAxMjI4IDQxMiIvPgogICAgPHBhdGggZD0iTTExNTggNDI2IEMxMTg0IDQxMiAxMjEwIDQxNSAxMjI1IDQyNSIvPgogICAgPHBhdGggZD0iTTExNjEgNDM5IEMxMTg1IDQyNiAxMjA3IDQyOSAxMjIxIDQzOCIvPgogICAgPHBhdGggZD0iTTExNjUgNDUyIEMxMTg2IDQ0MSAxMjAzIDQ0MyAxMjE3IDQ1MSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjZDk5YTlhIj4KICAgIDxjaXJjbGUgY3g9IjEyMzYiIGN5PSI0MTAiIHI9IjYiLz48Y2lyY2xlIGN4PSIxMjMxIiBjeT0iNDMxIiByPSI1Ii8+PGNpcmNsZSBjeD0iMTIyNSIgY3k9IjQ1MiIgcj0iNSIvPgogIDwvZz4KCiAgPHBhdGggZD0iTTc5NCAyMDIgTDg0OCAyNDEiIGNsYXNzPSJjYWxsb3V0Ii8+CiAgPHRleHQgeD0iNzQ0IiB5PSIxOTQiIGNsYXNzPSJsYWJlbCI+57uG6IOe5aOBPC90ZXh0PgogIDx0ZXh0IHg9Ijc0NCIgeT0iMjE1IiBjbGFzcz0ibGFiZWwtZW4iPmNlbGwgd2FsbDwvdGV4dD4KCiAgPHBhdGggZD0iTTkzMiAyMDQgTDk1MiAyNjAiIGNsYXNzPSJjYWxsb3V0Ii8+CiAgPHRleHQgeD0iODk5IiB5PSIxOTQiIGNsYXNzPSJsYWJlbCI+57uG6IOe6LSoPC90ZXh0PgogIDx0ZXh0IHg9Ijg5OSIgeT0iMjE1IiBjbGFzcz0ibGFiZWwtZW4iPmN5dG9wbGFzbTwvdGV4dD4KCiAgPHBhdGggZD0iTTEyMTAgMjAzIEwxMTg3IDI3NiIgY2xhc3M9ImNhbGxvdXQiLz4KICA8dGV4dCB4PSIxMTc3IiB5PSIxOTQiIGNsYXNzPSJsYWJlbCI+5Y+257u/5L2TPC90ZXh0PgogIDx0ZXh0IHg9IjExNzciIHk9IjIxNSIgY2xhc3M9ImxhYmVsLWVuIj5jaGxvcm9wbGFzdDwvdGV4dD4KCiAgPHBhdGggZD0iTTgwMCAzNjIgTDg2OCAzNzIiIGNsYXNzPSJjYWxsb3V0Ii8+CiAgPHRleHQgeD0iNzM4IiB5PSIzMjciIGNsYXNzPSJsYWJlbCI+57uG6IOe5qC477yI5ZCr5qC45LuB77yJPC90ZXh0PgogIDx0ZXh0IHg9IjczOCIgeT0iMzQ4IiBjbGFzcz0ibGFiZWwtZW4iPm51Y2xldXMgKyBudWNsZW9sdXM8L3RleHQ+CgogIDxwYXRoIGQ9Ik03ODIgNDUwIEw5NDkgMzkwIiBjbGFzcz0iY2FsbG91dCIvPgogIDx0ZXh0IHg9IjczOCIgeT0iNDM3IiBjbGFzcz0ibGFiZWwiPuWGhei0qOe9kTwvdGV4dD4KICA8dGV4dCB4PSI3MzgiIHk9IjQ1OCIgY2xhc3M9ImxhYmVsLWVuIj5lbmRvcGxhc21pYyByZXRpY3VsdW08L3RleHQ+CgogIDxwYXRoIGQ9Ik03OTQgNTg2IEw4NjAgNTM2IiBjbGFzcz0iY2FsbG91dCIvPgogIDx0ZXh0IHg9IjczOSIgeT0iNTg0IiBjbGFzcz0ibGFiZWwiPue7huiDnuiGnDwvdGV4dD4KICA8dGV4dCB4PSI3MzkiIHk9IjYwNSIgY2xhc3M9ImxhYmVsLWVuIj5jZWxsIG1lbWJyYW5lPC90ZXh0PgoKICA8cGF0aCBkPSJNMTA1NiA2MDkgTDEwNTggNDg2IiBjbGFzcz0iY2FsbG91dCIvPgogIDx0ZXh0IHg9IjEwMjMiIHk9IjYzMyIgY2xhc3M9ImxhYmVsIj7lpKfmtrLms6E8L3RleHQ+CiAgPHRleHQgeD0iMTAyNCIgeT0iNjU0IiBjbGFzcz0ibGFiZWwtZW4iPmxhcmdlIHZhY3VvbGU8L3RleHQ+CgogIDxwYXRoIGQ9Ik0xMjg0IDM1MiBMMTIxMiAzNjMiIGNsYXNzPSJjYWxsb3V0Ii8+CiAgPHRleHQgeD0iMTI1NSIgeT0iMzMzIiBjbGFzcz0ibGFiZWwiPue6v+eykuS9kzwvdGV4dD4KICA8dGV4dCB4PSIxMjU1IiB5PSIzNTQiIGNsYXNzPSJsYWJlbC1lbiI+bWl0b2Nob25kcmlvbjwvdGV4dD4KCiAgPHBhdGggZD0iTTEyOTIgNDM4IEwxMjE3IDQzMyIgY2xhc3M9ImNhbGxvdXQiLz4KICA8dGV4dCB4PSIxMjYxIiB5PSI0MTkiIGNsYXNzPSJsYWJlbCI+6auY5bCU5Z+65L2TPC90ZXh0PgogIDx0ZXh0IHg9IjEyNjEiIHk9IjQ0MCIgY2xhc3M9ImxhYmVsLWVuIj5Hb2xnaSBhcHBhcmF0dXM8L3RleHQ+CgogIDxwYXRoIGQ9Ik0xMjkwIDUzMSBMMTEzNCA1MjAiIGNsYXNzPSJjYWxsb3V0Ii8+CiAgPHRleHQgeD0iMTI2MCIgeT0iNTEyIiBjbGFzcz0ibGFiZWwiPuaguOezluS9kzwvdGV4dD4KICA8dGV4dCB4PSIxMjYwIiB5PSI1MzMiIGNsYXNzPSJsYWJlbC1lbiI+cmlib3NvbWU8L3RleHQ+CgogIDx0ZXh0IHg9IjEwNDQiIHk9IjY5NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsLW5vdGUiPirlj7Plm77mmK/lhbjlnovnu7/oibLmpI3niannu4bog57vvJvmtIvokbHps57niYfnu4bog57pgJrluLjmsqHmnInlj7bnu7/kvZPjgII8L3RleHQ+CiAgPHJlY3QgeD0iODIwIiB5PSI3MTEiIHdpZHRoPSI0NDgiIGhlaWdodD0iMzQiIHJ4PSIxNyIgY2xhc3M9ImJhZGdlIi8+CiAgPHRleHQgeD0iMTA0NCIgeT0iNzM0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iYmFkZ2UtdGV4dCI+5qih5Z6L5bGV56S65a6M5pW057uT5p6E77yM5L2G5LiN5piv5LiA5qyh5pi+5b6u6ZWc6KeC5a+f57uT5p6cPC90ZXh0PgoKICA8cGF0aCBkPSJNODAgODA1IEgxMzIwIiBzdHJva2U9IiM5NGFhYTciIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjcwMCIgeT0iODMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPuWunumqjOiusOW9leWPqueUu+W3puWbvuS4reecn+ato+eci+WIsOeahOe7k+aehO+8m+WPs+WbvueUqOS6jueQhuino+e7huiDnueahOWujOaVtOe7hOaIkOOAgjwvdGV4dD4KPC9zdmc+Cg==" alt="白洋葱表皮细胞的真实显微镜观察图与典型绿色植物细胞完整模型并排对比；左图只标实际可见或可能推断的细胞壁、细胞核和液泡区，右图完整标出主要细胞结构与细胞器" /></p>
+<blockquote>
+<p><strong>画图规则</strong>：实验记录只画左图所代表的“这一次真正看见的结构”，看不清就写“未分辨”；右图是综合许多研究证据形成的教材模型，用于理解细胞的完整组成，不能照着它补画观察结果。右图代表典型绿色植物细胞，洋葱鳞片细胞通常没有叶绿体。</p>
+</blockquote>
+<h4>3. Cell Theory <span class="ipa">/ˈsel ˌθɪə.ri/</span> 细胞学说</h4>
+<pre><code class="language-text">Cell Theory 细胞学说（沿用学校 Notes）
+1. All living organisms are made of cells.
+   所有生物都由细胞构成。
+2. Cells are the basic unit of living things.
+   细胞是生物的基本单位。
+3. All cells come from other cells.
+   所有细胞都来自其他细胞。
+</code></pre>
+<h3>50–65 分钟：实验 3——红洋葱细胞质壁分离</h3>
+<p><strong>实验目的</strong>：在同一组红洋葱细胞中先观察清水状态，再从盖玻片边缘引入 5% 盐水，直接看见细胞壁轮廓保持不变，而有色细胞内容物缩离细胞壁。</p>
+<p><strong>重要知识点</strong>：盐水比细胞内部溶液更浓，水通过选择性透过的<strong>细胞膜（cell membrane）<strong>由细胞内向外移动，这种水的移动叫</strong>渗透作用（osmosis）</strong>。液泡和细胞质随之缩小，细胞膜与刚性的细胞壁分离，称为<strong>质壁分离（plasmolysis）</strong>。</p>
+<p>本实验使用红／紫洋葱的天然色素，不加亚甲蓝、碘酊、碘伏或食用色素。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>红／紫洋葱有色表皮</td>
+<td style="text-align:right">约 3–5 mm 见方</td>
+<td>天然紫红色帮助看见有色细胞内容物</td>
+</tr>
+<tr>
+<td>清水</td>
+<td style="text-align:right">2–3 小滴</td>
+<td>建立盐水前状态；必要时冲回盐水</td>
+</tr>
+<tr>
+<td>5% 食盐水</td>
+<td style="text-align:right">约 2 mL</td>
+<td>使水由细胞内移出</td>
+</tr>
+<tr>
+<td>吸水纸</td>
+<td style="text-align:right">2–3 小条</td>
+<td>把清水、盐水依次引过盖玻片下方</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5% 盐水配法</strong>：称取食盐 5 g，加水至总体积 100 mL并充分溶解；没有秤时可用约 1 平茶匙食盐加入 100 mL 水作家庭近似。贴“5% 盐水，不可饮用”标签。</p>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>载玻片、盖玻片</td>
+<td style="text-align:right">各 1</td>
+<td>制作活体清水装片</td>
+</tr>
+<tr>
+<td>镊子、滴管</td>
+<td style="text-align:right">各 1</td>
+<td>撕取表皮、分别滴清水和盐水</td>
+</tr>
+<tr>
+<td>显微镜、手机</td>
+<td style="text-align:right">各 1</td>
+<td>找同一视野并拍摄处理前后</td>
+</tr>
+<tr>
+<td>纸巾、白托盘</td>
+<td style="text-align:right">各 1</td>
+<td>引流并承接盐水</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">盖玻片左侧：滴 1–2 滴 5% 盐水
+                 ↓
+───────────盖玻片───────────
+      红洋葱表皮＋原来的清水
+──────────────────────────
+                               右侧：纸巾轻触并吸引 →
+</code></pre>
+<ol>
+<li>从红／紫洋葱有色肉质鳞片上撕一小片极薄表皮，在清水滴中展平并盖片；不加任何染液。</li>
+<li>在 100×下找到并居中一组 3–6 个颜色清楚的细胞，拍照或画 2–3 个相邻细胞，留下“盐水前”记录。</li>
+<li>保持盖玻片不动，在一侧滴 1–2 滴 5% 盐水，另一侧用纸巾轻触，让盐水穿过样本。</li>
+<li>先在 100×下连续观察 3–7 分钟；看见透明间隙后再用 400×细看。若视野移动，按照片中的细胞排列重新定位。</li>
+<li>画同一组细胞的“盐水后”状态，表示不变的细胞壁和缩小的有色内容物，并用箭头标出水向外移动。</li>
+</ol>
+<p><strong>预期结果</strong>：方形或长方形细胞壁轮廓基本不变；紫红色的液泡和周围细胞质向内收缩，原生质体边缘与细胞壁之间出现透明间隙。不同细胞开始变化的时间可能不同。</p>
+<p><strong>失败边界</strong>：</p>
+<ul>
+<li>只有白洋葱时也可尝试，但细胞内容物透明，必须调小光圈，现象较难判断。</li>
+<li>10 分钟仍无明显变化：再引流一次新鲜 5% 盐水；不要立刻使用饱和盐水。</li>
+<li>整片组织同时漂移或折叠，不算质壁分离证据，应重新固定表皮或换片。</li>
+<li>可选复原：若时间充足，从一侧连续滴清水、另一侧吸走盐水 2–3 次，等待 5–10 分钟，观察部分细胞是否重新贴近细胞壁，记作<strong>质壁分离复原（deplasmolysis）</strong>。</li>
+</ul>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">笔记第 3 页：红洋葱质壁分离 plasmolysis
+总放大：____×   盐水浓度：5%
+
+同一组细胞：
+清水中：细胞壁形状________；紫色区域________________。
+盐水后：细胞壁形状________；紫色区域________________；
+        细胞壁与有色内容物之间出现________________。
+
+标注：cell wall / protoplast boundary / vacuole /
+      transparent gap / water moves out
+说明：只看见整体边界时，不单独声称直接看清 cell membrane。
+
+The salt solution causes water to leave the cell by osmosis.
+The cell membrane and cell contents pull away from the cell wall.
+盐水使水通过渗透作用离开细胞，细胞膜和细胞内容物缩离细胞壁。
+</code></pre>
+</div>
+</details>
+<h3>65–70 分钟：休息与显微镜、生物样本收尾</h3>
+<p>孩子洗手、休息；教师密封弃置棉签，把口腔玻片和洋葱玻片放入带盖回收盒，擦净载物台。显微镜转回 4×物镜并关闭光源。</p>
+<h3>70–98 分钟：实验 4——杯壁豆类萌发长期实验</h3>
+<p><strong>实验目的</strong>：建立有重复组和干燥对照的长期观察，检验水是否是豆类种子开始萌发的必要条件之一。</p>
+<p><strong>重要知识点</strong>：<strong>萌发（germination）</strong> 是种子胚恢复生长的过程；通常需要水、适宜温度和氧气。先出现的白色结构是<strong>胚根（radicle）</strong>，之后可见<strong>胚芽（plumule）</strong>。水是自变量，是否萌发与根长是因变量。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可发芽豆类</td>
+<td style="text-align:right">24 粒</td>
+<td>每杯 6 粒，降低个别坏种影响</td>
+</tr>
+<tr>
+<td>厨房纸</td>
+<td style="text-align:right">每杯 2–3 张</td>
+<td>贴住杯壁形成发芽床</td>
+</tr>
+<tr>
+<td>水</td>
+<td style="text-align:right">约 150 mL</td>
+<td>湿润 A1、A2；B1、B2保持干燥</td>
+</tr>
+<tr>
+<td>标签纸</td>
+<td style="text-align:right">4 张</td>
+<td>标记组别、日期</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透明杯</td>
+<td style="text-align:right">4 个</td>
+<td>两个湿润重复组、两个干燥重复组</td>
+</tr>
+<tr>
+<td>浅盘</td>
+<td style="text-align:right">1 个</td>
+<td>防漏水</td>
+</tr>
+<tr>
+<td>量杯或同一小杯</td>
+<td style="text-align:right">1 个</td>
+<td>湿润组加入相同水量</td>
+</tr>
+<tr>
+<td>直尺、手机</td>
+<td style="text-align:right">各 1</td>
+<td>根长与固定角度照片</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">A1 湿润        A2 湿润        B1 干燥        B2 干燥
+│纸 豆 豆│     │纸 豆 豆│     │纸 豆 豆│     │纸 豆 豆│
+│豆     豆│     │豆     豆│     │豆     豆│     │豆     豆│
+└───────┘     └───────┘     └───────┘     └───────┘
+  重复组1        重复组2        对照重复1      对照重复2
+</code></pre>
+<ol>
+<li>四杯贴签：A1 湿润、A2 湿润、B1 干燥、B2 干燥。</li>
+<li>每杯沿内壁放入同样厚度纸巾，把 6 粒豆分散夹在纸巾与杯壁之间。</li>
+<li>A1、A2各加入同体积水，使纸巾完全湿润但杯底不积深水；B1、B2不加水。</li>
+<li>四杯放在同一浅盘、同一室温和散射光位置。不要密封，避免缺氧和霉菌。</li>
+<li>记录 Day 0：每杯豆粒数、已裂开数、最长根长，并从固定方向拍照。</li>
+<li>孩子写预测，并解释为什么两只湿润杯可能不同、为什么仍需要重复组。</li>
+<li>课后每天同一时间检查。湿润组将干未干时，每杯补相同少量水；干燥组始终不加水。</li>
+</ol>
+<p><strong>公平比较</strong>：豆的来源、数量、杯型、纸巾、温度、光照和观察时间相同；只改变是否加水。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">天数</th>
+<th style="text-align:right">A1 萌发数/6</th>
+<th style="text-align:right">A2 萌发数/6</th>
+<th style="text-align:right">B1 萌发数/6</th>
+<th style="text-align:right">B2 萌发数/6</th>
+<th style="text-align:right">湿润组最长根/mm</th>
+<th>照片编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">5–7</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">自变量 independent variable：是否加水
+因变量 dependent variables：萌发数、胚根长度
+重复 replicates：A1/A2 与 B1/B2
+水是萌发的必要条件之一，但不是唯一条件。
+</code></pre>
+</div>
+</details>
+<h3>98–105 分钟：指图复述，再把四类证据连起来</h3>
+<p>孩子先合上术语表，教师随机说出“细胞壁、细胞质、细胞核、细胞膜”中的一个；孩子必须在自己的观察图上指到相应位置，或准确说明“这张图中未直接分辨”。然后完成三句离堂记录：</p>
+<pre><code class="language-text">显微镜证据：洋葱和口腔组织都由重复的________构成；
+两类细胞共同有________________________________。
+
+质壁分离证据：加入 5% 盐水后，________形状基本不变，
+而________________缩离它，说明水通过细胞膜向________移动。
+
+长期实验预测：如果水是萌发的必要条件，那么到第____天，
+湿润组会________________，干燥组会________________。
+</code></pre>
+<p><strong>参考落点</strong>：显微镜让孩子直接看到两种组织的细胞单位；质壁分离把细胞膜控制物质移动、细胞壁维持形状变成动态证据；豆类实验再把“细胞会生长、分裂并完成生命活动”转化成几天内可追踪的证据。下一节先读取豆类数据，再拆开浸泡种子并研究植物分类、运输水和形成果实。</p>
+<h2>四、安全、误差与现场备用</h2>
+<ul>
+<li>口腔棉签只采集孩子本人；口腔溃疡、出血或不愿采样时，改用教师预制口腔装片。</li>
+<li>稀释碘酊仅由成人配制和滴加，远离火源，不入口、不接触眼睛和衣物；若没有合适对比液就用清水，不临时混用食用色素或不明染液。</li>
+<li>5% 盐水贴签并与清水滴管分开，不饮用；质壁分离装片不加入任何染液。</li>
+<li>玻片有裂口立即停用；盖玻片只用镊子取放。</li>
+<li>40×物镜下只用细准焦；胶带装片不使用40×物镜。</li>
+<li>豆杯出现明显霉斑或异味时戴手套密封丢弃，不凑近闻、不食用。</li>
+<li>洋葱片看不清：优先换更薄表皮、减少褶皱并调整光圈或对比液，而不是直接增加倍率。</li>
+<li>口腔片细胞太少：换到低倍按行扫描；太密则重新做薄涂片。</li>
+<li>豆不萌发：检查是否为熟豆、温度是否过低、纸巾是否过湿缺氧；保留失败记录并换新批次。</li>
+</ul>
+<h2>五、关键术语与英式音标（Key Vocabulary &amp; British IPA）</h2>
+<p><strong>读音约定</strong>：<code>ˈ</code> 表示其后的音节是主重音，<code>ˌ</code> 表示次重音，音节间的点只帮助断读。<strong>cell <span class="ipa">/sel/</span></strong> 与 <em>sell</em> 同音；<strong>cells <span class="ipa">/selz/</span></strong> 的词尾读 <span class="ipa">/z/</span>。</p>
+<h3>细胞、细胞结构与细胞器</h3>
+<ul>
+<li>细胞：cell <span class="ipa">/sel/</span>；复数 cells <span class="ipa">/selz/</span></li>
+<li>细胞学说：cell theory <span class="ipa">/ˈsel ˌθɪə.ri/</span></li>
+<li>植物细胞／动物细胞：plant cell <span class="ipa">/plɑːnt sel/</span>；animal cell <span class="ipa">/ˈæn.ɪ.məl sel/</span></li>
+<li>真核细胞：eukaryotic cell <span class="ipa">/ˌjuː.kær.iˈɒt.ɪk sel/</span></li>
+<li>细胞膜：cell membrane <span class="ipa">/sel ˈmem.breɪn/</span></li>
+<li>细胞质／细胞质基质：cytoplasm <span class="ipa">/ˈsaɪ.tə.plæz.əm/</span>；cytosol <span class="ipa">/ˈsaɪ.tə.sɒl/</span></li>
+<li>细胞核／核仁：nucleus <span class="ipa">/ˈnjuː.kli.əs/</span>；nucleolus <span class="ipa">/njuːˈkliː.ə.ləs/</span></li>
+<li>细胞壁：cell wall <span class="ipa">/sel wɔːl/</span></li>
+<li>液泡：vacuole <span class="ipa">/ˈvæk.ju.əʊl/</span></li>
+<li>线粒体：mitochondrion <span class="ipa">/ˌmaɪ.təˈkɒn.dri.ən/</span>（单数）；mitochondria <span class="ipa">/ˌmaɪ.təˈkɒn.dri.ə/</span>（复数）</li>
+<li>叶绿体：chloroplast <span class="ipa">/ˈklɒr.ə.plɑːst/</span></li>
+<li>内质网：endoplasmic reticulum <span class="ipa">/ˌen.dəʊˌplæz.mɪk rəˈtɪk.jə.ləm/</span>；ER <span class="ipa">/ˌiːˈɑː/</span></li>
+<li>核糖体：ribosome <span class="ipa">/ˈraɪ.bə.səʊm/</span></li>
+<li>高尔基体：Golgi apparatus <span class="ipa">/ˈɡɒl.dʒi ˌæp.əˈreɪ.təs/</span></li>
+<li>溶酶体：lysosome <span class="ipa">/ˈlaɪ.sə.səʊm/</span></li>
+<li>纤毛／鞭毛：cilium <span class="ipa">/ˈsɪl.i.əm/</span>；flagellum <span class="ipa">/fləˈdʒel.əm/</span></li>
+<li>细胞器：organelle <span class="ipa">/ˌɔː.ɡəˈnel/</span></li>
+</ul>
+<h3>本节功能句和实验中出现的生物学词汇</h3>
+<ul>
+<li>生物体：organism <span class="ipa">/ˈɔː.ɡən.ɪ.zəm/</span>；复数 organisms <span class="ipa">/ˈɔː.ɡən.ɪ.zəmz/</span></li>
+<li>上皮：epithelium <span class="ipa">/ˌep.ɪˈθiː.li.əm/</span></li>
+<li>遗传物质：genetic material <span class="ipa">/dʒəˈnet.ɪk məˈtɪə.ri.əl/</span></li>
+<li>脱氧核糖核酸：DNA <span class="ipa">/ˌdiː.enˈeɪ/</span></li>
+<li>分子：molecule <span class="ipa">/ˈmɒl.ɪ.kjuːl/</span></li>
+<li>纤维素：cellulose <span class="ipa">/ˈsel.jə.ləʊs/</span></li>
+<li>细胞呼吸：cellular respiration <span class="ipa">/ˈsel.jə.lə ˌres.pəˈreɪ.ʃən/</span></li>
+<li>三磷酸腺苷：ATP <span class="ipa">/ˌeɪ.tiːˈpiː/</span></li>
+<li>叶绿素：chlorophyll <span class="ipa">/ˈklɒr.ə.fɪl/</span></li>
+<li>光合作用：photosynthesis <span class="ipa">/ˌfəʊ.təʊˈsɪn.θə.sɪs/</span></li>
+<li>蛋白质／脂质：protein <span class="ipa">/ˈprəʊ.tiːn/</span>；lipid <span class="ipa">/ˈlɪp.ɪd/</span></li>
+<li>消化酶：digestive enzyme <span class="ipa">/daɪˈdʒes.tɪv ˈen.zaɪm/</span></li>
+<li>渗透作用：osmosis <span class="ipa">/ɒzˈməʊ.sɪs/</span></li>
+<li>质壁分离／质壁分离复原：plasmolysis <span class="ipa">/plæzˈmɒl.ə.sɪs/</span>；deplasmolysis <span class="ipa">/diːˌplæzˈmɒl.ə.sɪs/</span></li>
+<li>原生质体：protoplast <span class="ipa">/ˈprəʊ.tə.plɑːst/</span></li>
+<li>高浓度溶液：hypertonic solution <span class="ipa">/ˌhaɪ.pəˈtɒn.ɪk səˈluː.ʃən/</span></li>
+<li>萌发：germination <span class="ipa">/ˌdʒɜː.mɪˈneɪ.ʃən/</span></li>
+<li>胚根／胚芽：radicle <span class="ipa">/ˈræd.ɪ.kəl/</span>；plumule <span class="ipa">/ˈpluː.mjuːl/</span></li>
+<li>自变量／因变量：independent variable <span class="ipa">/ˌɪn.dɪˈpen.dənt ˈveə.ri.ə.bəl/</span>；dependent variable <span class="ipa">/dɪˈpen.dənt ˈveə.ri.ə.bəl/</span></li>
+<li>重复组：replicates <span class="ipa">/ˈrep.lɪ.kəts/</span></li>
+</ul>
+<h3>显微镜观察常用词</h3>
+<ul>
+<li>显微镜：microscope <span class="ipa">/ˈmaɪ.krə.skəʊp/</span></li>
+<li>标本：specimen <span class="ipa">/ˈspes.ɪ.mən/</span></li>
+<li>载玻片／盖玻片：slide <span class="ipa">/slaɪd/</span>；coverslip <span class="ipa">/ˈkʌv.ə.slɪp/</span></li>
+<li>物镜：objective lens <span class="ipa">/əbˈdʒek.tɪv lenz/</span></li>
+<li>放大倍数：magnification <span class="ipa">/ˌmæɡ.nɪ.fɪˈkeɪ.ʃən/</span></li>
+<li>染液／染色：stain <span class="ipa">/steɪn/</span></li>
+</ul>
+<h2>六、教师备课来源</h2>
+<ul>
+<li><a href="../School/02%20Class%20Materials/Unit%204%20Life%20Science/01%20Notes/01%20Characteristics%20of%20Living%20Things%20Notes.pdf">学校 01 Characteristics of Living Things Notes</a></li>
+<li><a href="../School/02%20Class%20Materials/Unit%204%20Life%20Science/01%20Notes/02%20Cell%20Structure%20Notes.pdf">学校 02 Cell Structure Notes</a></li>
+<li><a href="../School/02%20Class%20Materials/Unit%204%20Life%20Science/01%20Notes/03%20Cell%20Supplementary%20Notes.pdf">学校 03 Cell Supplementary Notes</a></li>
+<li><a href="../School/02%20Class%20Materials/Unit%204%20Life%20Science/03%20Homework/02%20Cell%20Vocabulary.pdf">学校 02 Cell Vocabulary</a></li>
+<li><a href="../School/02%20Class%20Materials/Unit%204%20Life%20Science/03%20Homework/05%20Study%20Guide%20for%20Biology%20Test.pdf">学校 05 Study Guide for Biology Test</a></li>
+<li><a href="https://www.stem.org.uk/system/files/elibrary-resources/2018/07/STEM_SECONDARY_09_v6_HIRES.pdf">STEM Learning: Plasmolysis in Plant Cells</a></li>
+<li><a href="https://www.scienceworld.ca/resource/bean-garden/">Science World: Bean Garden</a></li>
+<li><a href="https://extension.psu.edu/seed-and-seedling-biology">Penn State Extension: Seed and Seedling Biology</a></li>
+</ul>
+</main>
+</body>
+</html>

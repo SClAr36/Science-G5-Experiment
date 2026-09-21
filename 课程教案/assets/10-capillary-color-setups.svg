@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-labelledby="title desc">
+  <title id="title">彩色水过桥、毛细赛跑与圆形彩环装置</title>
+  <desc id="desc">三栏示意图。左栏是黄色水和蓝色水通过厨房纸进入中间杯。中栏是滤纸、厨房纸和打印纸同时浸入等量蓝色水。右栏是绿色食用色素和黑色水彩笔在圆形滤纸上由中心向外形成彩环。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#285a73"/>
+    </marker>
+    <style>
+      text { font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; fill:#17212b; }
+      .title { font-size:28px; font-weight:800; }
+      .label { font-size:20px; font-weight:700; }
+      .small { font-size:16px; }
+      .panel { fill:#f8fbfc; stroke:#b9cbd4; stroke-width:3; }
+      .cup { fill:#fff; fill-opacity:.72; stroke:#55798b; stroke-width:5; }
+      .paper { fill:#fff; stroke:#899aa3; stroke-width:4; }
+      .arrow { fill:none; stroke:#285a73; stroke-width:5; marker-end:url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1400" height="700" rx="26" fill="#eef5f7"/>
+  <text x="700" y="48" text-anchor="middle" class="title">水沿纸移动，颜色把移动过程显示出来</text>
+
+  <rect x="35" y="80" width="425" height="570" rx="22" class="panel"/>
+  <text x="248" y="120" text-anchor="middle" class="title">1 · 彩色水过桥</text>
+  <path d="M70 500L85 280Q95 250 125 250H195Q225 250 235 280L250 500Z" class="cup"/>
+  <path d="M95 390H225L232 495H88Z" fill="#f4d74f" opacity=".82"/>
+  <path d="M185 500L200 280Q210 250 240 250H310Q340 250 350 280L365 500Z" class="cup"/>
+  <path d="M300 500L315 280Q325 250 355 250H425Q445 250 450 280L455 500Z" class="cup"/>
+  <path d="M325 390H440L447 495H318Z" fill="#398bd4" opacity=".78"/>
+  <path d="M210 450H340L347 495H203Z" fill="#5aae62" opacity=".72"/>
+  <path d="M130 270C170 155 235 155 270 340" class="paper"/>
+  <path d="M390 270C350 155 285 155 270 340" class="paper"/>
+  <path d="M145 345C180 255 225 235 260 330" class="arrow"/>
+  <path d="M375 345C345 255 315 235 278 330" class="arrow"/>
+  <text x="160" y="535" text-anchor="middle" class="label">黄色水</text>
+  <text x="275" y="535" text-anchor="middle" class="label">空杯 → 绿色</text>
+  <text x="390" y="535" text-anchor="middle" class="label">蓝色水</text>
+  <text x="248" y="600" text-anchor="middle" class="small">厨房纸两端都要伸入杯中</text>
+
+  <rect x="488" y="80" width="425" height="570" rx="22" class="panel"/>
+  <text x="700" y="120" text-anchor="middle" class="title">2 · 三种纸毛细赛跑</text>
+  <path d="M525 520L540 330Q545 310 565 310H635Q655 310 660 330L675 520Z" class="cup"/>
+  <path d="M610 520L625 330Q630 310 650 310H720Q740 310 745 330L760 520Z" class="cup"/>
+  <path d="M695 520L710 330Q715 310 735 310H805Q825 310 830 330L845 520Z" class="cup"/>
+  <path d="M545 430H655L663 515H537Z" fill="#468fd0" opacity=".64"/>
+  <path d="M630 430H740L748 515H622Z" fill="#468fd0" opacity=".64"/>
+  <path d="M715 430H825L833 515H707Z" fill="#468fd0" opacity=".64"/>
+  <rect x="580" y="175" width="38" height="275" class="paper"/>
+  <rect x="665" y="175" width="38" height="275" class="paper"/>
+  <rect x="750" y="175" width="38" height="275" class="paper"/>
+  <rect x="582" y="310" width="34" height="95" fill="#73aee0" opacity=".65"/>
+  <rect x="667" y="245" width="34" height="160" fill="#73aee0" opacity=".65"/>
+  <rect x="752" y="350" width="34" height="55" fill="#73aee0" opacity=".65"/>
+  <line x1="572" y1="310" x2="626" y2="310" stroke="#1d6ba5" stroke-width="5"/>
+  <line x1="657" y1="245" x2="711" y2="245" stroke="#1d6ba5" stroke-width="5"/>
+  <line x1="742" y1="350" x2="796" y2="350" stroke="#1d6ba5" stroke-width="5"/>
+  <text x="599" y="560" text-anchor="middle" class="label">滤纸</text>
+  <text x="684" y="560" text-anchor="middle" class="label">厨房纸</text>
+  <text x="769" y="560" text-anchor="middle" class="label">打印纸</text>
+  <text x="700" y="600" text-anchor="middle" class="small">相同尺寸 · 相同水量 · 每分钟读数</text>
+
+  <rect x="940" y="80" width="425" height="570" rx="22" class="panel"/>
+  <text x="1152" y="120" text-anchor="middle" class="title">3 · 绿色与黑色彩环</text>
+  <path d="M995 500L1010 335Q1015 315 1035 315H1115Q1135 315 1140 335L1155 500Z" class="cup"/>
+  <path d="M1150 500L1165 335Q1170 315 1190 315H1270Q1290 315 1295 335L1310 500Z" class="cup"/>
+  <circle cx="1075" cy="300" r="98" fill="#fff" stroke="#899aa3" stroke-width="4"/>
+  <circle cx="1230" cy="300" r="98" fill="#fff" stroke="#899aa3" stroke-width="4"/>
+  <circle cx="1075" cy="300" r="72" fill="none" stroke="#efce42" stroke-width="22" opacity=".78"/>
+  <circle cx="1075" cy="300" r="42" fill="none" stroke="#438bd1" stroke-width="22" opacity=".78"/>
+  <circle cx="1075" cy="300" r="14" fill="#4e9656"/>
+  <circle cx="1230" cy="300" r="72" fill="none" stroke="#3d84bd" stroke-width="20" opacity=".75"/>
+  <circle cx="1230" cy="300" r="45" fill="none" stroke="#7551a6" stroke-width="20" opacity=".78"/>
+  <circle cx="1230" cy="300" r="15" fill="#25282d"/>
+  <path d="M1075 300L1135 250" class="arrow"/>
+  <path d="M1230 300L1290 250" class="arrow"/>
+  <text x="1075" y="545" text-anchor="middle" class="label">黄＋蓝 → 绿色</text>
+  <text x="1230" y="545" text-anchor="middle" class="label">黑色水彩笔</text>
+  <text x="1152" y="600" text-anchor="middle" class="small">从中心逐滴加水；比较出现的彩色圆环</text>
+</svg>

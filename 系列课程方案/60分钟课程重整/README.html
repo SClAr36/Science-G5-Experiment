@@ -1,0 +1,5617 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>60分钟课程重整：一节课完成一条实验链</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+<style id="science-g5-document-previews">
+.document-preview { display: none; }
+.document-preview:target, .document-preview:has(:target) { display: block; }
+body:has(.document-preview:target, .document-preview :target) > #title-block-header,
+body:has(.document-preview:target, .document-preview :target) > #lesson-content { display: none; }
+.document-preview-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .7rem 1rem;
+  margin: 0 0 1rem; padding: .8rem 1rem; border: 1px solid #d7e1df;
+  border-radius: .65rem; background: #f3f8f6;
+}
+.document-preview-bar a { font-weight: 600; }
+.document-preview-label { color: #536863; font-size: .9rem; }
+.document-preview-path { margin: 0 0 1.4rem; }
+.document-preview-path summary { cursor: pointer; color: #536863; }
+.document-preview-path code {
+  display: block; margin-top: .5rem; padding: .7rem;
+  white-space: pre-wrap; overflow-wrap: anywhere; user-select: all;
+}
+.document-preview article > h1:first-child { margin-top: 1rem; }
+@media print {
+  .document-preview-bar, .document-preview-path { display: none; }
+}
+</style>
+
+</head>
+<body data-document-preview-index="true">
+<header id="title-block-header">
+<h1 class="title">60分钟课程重整：一节课完成一条实验链</h1>
+</header>
+<main id="lesson-content" tabindex="-1">
+<p><strong>2026-09-07 新版排课稿｜五年级一对一｜12课基础候选＋1课可选发光专题。</strong></p>
+<p>原版 <code>系列课程方案/</code> 完整保留。本目录重新按实验操作、搭建和解释所需时间整合，不再默认一个实验占一节课，也不默认每个主题需要四节课。这里是可供选课的13个课时，不要求全部按编号连上。</p>
+<p>每课通常含 <strong>2–3组实验＋一个应用或关键对照</strong>；快的主题可有4项活动。复测、变造型、同一反应换条件都如实标为对照或应用，不重复宣称新实验。每个模块先给总问题和解释主线，再安排能逐步提供证据的实验。</p>
+<p><a href="#md-preview-58fd90694e2e" data-md-preview="md-preview-58fd90694e2e">看旧版怎样合并、哪些保留与后移</a> ／ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/00-%E9%87%8D%E6%95%B4%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8E%9F%E7%89%88%E5%AF%B9%E7%85%A7.html">HTML</a></p>
+<h2>直接选模块</h2>
+<p>Markdown列在本目录的HTML页面中直接预览正文；HTML列打开对应本地阅读版。每份正文都包含连续时间表、实际实验名称、材料与操作逻辑、现象、本质和儿童目标。</p>
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th style="text-align:right">新课时</th>
+<th>主线与每课实际内容</th>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 电路与电化学</td>
+<td style="text-align:right">2</td>
+<td>①闭合回路／材料测试、接触开关、串并联、两房控制；②水果电池、水电解、通电显色、显色图案</td>
+<td><a href="#md-preview-f4c9626cdc5f" data-md-preview="md-preview-f4c9626cdc5f">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/01-%E7%94%B5%E8%B7%AF%E4%B8%8E%E7%94%B5%E5%8C%96%E5%AD%A6_2%E8%AF%BE.html">HTML</a></td>
+</tr>
+<tr>
+<td>02 气体与膨胀</td>
+<td style="text-align:right">2</td>
+<td>①可乐释气、酵母催化双氧水、有无洗洁精留气；②面团发酵、面包孔洞与回弹、糖版法老之蛇</td>
+<td><a href="#md-preview-99b00ec9b413" data-md-preview="md-preview-99b00ec9b413">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/02-%E6%B0%94%E4%BD%93%E4%B8%8E%E8%86%A8%E8%83%80_2%E8%AF%BE.html">HTML</a></td>
+</tr>
+<tr>
+<td>03 声音与乐器</td>
+<td style="text-align:right">2</td>
+<td>①鼓面／音叉振动、线电话、秘密钟声；②直尺音高响度、鼓面消音、小拨弦乐器</td>
+<td><a href="#md-preview-be32de61bb5f" data-md-preview="md-preview-be32de61bb5f">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/03-%E5%A3%B0%E9%9F%B3%E4%B8%8E%E4%B9%90%E5%99%A8_2%E8%AF%BE.html">HTML</a></td>
+</tr>
+<tr>
+<td>04 颜色反应侦探</td>
+<td style="text-align:right">1</td>
+<td>碘淀粉显色→维生素C褪色→碘钟→编码样品识别</td>
+<td><a href="#md-preview-bda13a9c60cf" data-md-preview="md-preview-bda13a9c60cf">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/04-%E9%A2%9C%E8%89%B2%E5%8F%8D%E5%BA%94%E4%BE%A6%E6%8E%A2_1%E8%AF%BE.html">HTML</a></td>
+</tr>
+<tr>
+<td>05 凝胶制作与拆解</td>
+<td style="text-align:right">1</td>
+<td>滴珠／拉条→浸泡时间与性能→柠檬酸钠解胶；释放观察并入解胶</td>
+<td><a href="#md-preview-62981494e322" data-md-preview="md-preview-62981494e322">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/05-%E5%87%9D%E8%83%B6%E5%88%B6%E4%BD%9C%E4%B8%8E%E6%8B%86%E8%A7%A3_1%E8%AF%BE.html">HTML</a></td>
+</tr>
+<tr>
+<td>06 硬水检测与处理</td>
+<td style="text-align:right">1</td>
+<td>肥皂检测→换清洁材料对照→碳酸钠沉淀、分离、同法复测</td>
+<td><a href="#md-preview-ff2cf57725f1" data-md-preview="md-preview-ff2cf57725f1">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/06-%E7%A1%AC%E6%B0%B4%E6%A3%80%E6%B5%8B%E4%B8%8E%E5%A4%84%E7%90%86_1%E8%AF%BE.html">HTML</a></td>
+</tr>
+<tr>
+<td>07 浮力与造船</td>
+<td style="text-align:right">1</td>
+<td>测水的托力→配对排水重量→球改船→载重和稳定性挑战</td>
+<td><a href="#md-preview-cd1e60cd2cab" data-md-preview="md-preview-cd1e60cd2cab">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/07-%E6%B5%AE%E5%8A%9B%E4%B8%8E%E9%80%A0%E8%88%B9_1%E8%AF%BE.html">HTML</a></td>
+</tr>
+<tr>
+<td>08 结构与承重</td>
+<td style="text-align:right">2</td>
+<td>①纸梁、方框斜撑、纸拱侧挡；②接头对照、纸管失稳、小桥制作与改进</td>
+<td><a href="#md-preview-c625d3f67c95" data-md-preview="md-preview-c625d3f67c95">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/08-%E7%BB%93%E6%9E%84%E4%B8%8E%E6%89%BF%E9%87%8D_2%E8%AF%BE.html">HTML</a></td>
+</tr>
+<tr>
+<td>09 发光与能量</td>
+<td style="text-align:right">1，可选</td>
+<td>汤力水荧光→完整荧光棒温度对照→水性鲁米诺蓝光演示</td>
+<td><a href="#md-preview-f95fa7b53750" data-md-preview="md-preview-f95fa7b53750">预览</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/09-%E5%8F%91%E5%85%89%E4%B8%8E%E8%83%BD%E9%87%8F_1%E8%AF%BE.html">HTML</a></td>
+</tr>
+</tbody>
+</table>
+<h2>体系体现在哪里</h2>
+<p><strong>内容主线在模块内闭合。</strong> 例如颜色课的四项活动共用一个显色信号机制；浮力课用同一个排水规律连接测力、沉浮与造船。模块可以一课学完，也可以因确有新问题再深化；课数本身不是系统性的证据。</p>
+<p><strong>学习方法在模块之间积累。</strong> 每课都完成一次“预测—对照或测试—观察—解释—再验证”，但记录保持简短。一张关键对照表、一幅因果箭头或一张标注改动的照片就够，不用长篇填写占满操作时间。</p>
+<p><strong>完成目标可检验。</strong> 下课时孩子应能预测一个没做过的条件变化，并用本课证据说明原因。已经会了就前进；要延长系列，需要新增待解决的问题、不同材料体系或真正耗时的制作任务。</p>
+<h2>时间怎么理解</h2>
+<ul>
+<li><strong>60分钟是主版本</strong>：通常0–4分钟用于简短复习和预测，4–53/54分钟做实验、搭建、比较与随做随讲，最后6–7分钟提取结论并收拾。没有另外藏一段讨论或清理时间。</li>
+<li><strong>不是反应持续时间表</strong>：一次显色可能只需几秒，安排十几分钟是为了孩子分样、做对照、解释和再验证；不会因此单独排一整课。</li>
+<li><strong>等待尽量并行</strong>：水电解集气时做另一套显色，解胶等待时做胶条。面团发酵、糖蛇冷却使用明确标注时间的阶段样品；孩子自己刚做的样品不冒充已完成。</li>
+<li><strong>搭建仍由孩子完成</strong>：教师提前分装、裁危险部件、预试设备，孩子负责关键接线、混合、造船、制鼓、折梁与判断。不能靠教师预装全部成品把不现实的课表“做完”。</li>
+<li><strong>留有停止规则</strong>：每份写明哪些重复或装饰先缩减、装置异常时怎样保留真实记录。若当天只有45分钟，按该模块挑选两组核心实验和一项简短应用，另排45分钟时间表；不能宣称所有60分钟内容自动适用于45分钟。</li>
+</ul>
+<p>这些分钟数是依据步骤和装置条件作出的<strong>备课估算</strong>，尚未记录孩子实际完成时间。首次授课建议只记每个实验实际起止和卡住的位置，用真实数据调整下一次密度；不要再次以“四节看起来很完整”定课数。</p>
+<h2>根据兴趣怎样先选</h2>
+<p>喜欢mix与颜色，可先选 <strong>04颜色反应→05凝胶→02气体第一课</strong>，三节就能比较显色、材料成形和快速泡沫三种不同体系。每节都有自己的完整问题。</p>
+<p>想先看物理，可选 <strong>07浮力</strong> 或 <strong>08结构第一课</strong>：同一节内完成规律建立与小挑战。声音可先试 <strong>03第一课</strong>；09发光是另备材料后的可选课，不等所有试剂齐备才开始上课。</p>
+<p><strong>选课条件</strong>：依据现有库存记录，浓度未知的旧双氧水不用；氯化钙等已用完品需补充。各模块列的是所需材料，不等于现有库存。碘钟、凝胶、显色电解、发光工作液都要先用最终购得材料预试。酸＋小苏打、已授色散、已有小车与一般溶解活动不重新排入。</p>
+<h2>其他入口</h2>
+<ul>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">原版系列目录（保持原样）</a></li>
+<li><a href="#md-preview-b33563055168" data-md-preview="md-preview-b33563055168">项目总导航</a></li>
+<li><a href="#md-preview-8023dbf2f1bd" data-md-preview="md-preview-8023dbf2f1bd">现有器材与试剂状态</a></li>
+</ul>
+<p>本轮交付的是新的整合排课稿与对应HTML，尚未形成每项化学实验的定量操作规程，也未完成实物预试。来源链接放在各模块末尾，原资源时长和本次一对一估算分开说明。</p>
+</main>
+<main class="document-preview" id="md-preview-58fd90694e2e" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 00-重整说明与原版对照.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/00-%E9%87%8D%E6%95%B4%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8E%9F%E7%89%88%E5%AF%B9%E7%85%A7.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\00-重整说明与原版对照.md</code></details><article><h1>重整说明：哪些合并了，为什么这样排</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>旧版的主要问题是把概念顺序误当成课时顺序。</strong> “先发现，再解释，再应用”可以在同一节课发生；一个核心问题也可以由几组互相衔接的实验共同解决。原来不少45–60分钟的安排缺少对应的操作工作量。</p>
+<p>本轮先核对所有旧系列，再按一名孩子取放、搭建、操作、记录和整理的流程重排。原版十份方案及目录内另外两份浮力单课均保留，不改写、不移动、不删除。</p>
+<h2>原九条四课系列：36课重整为12课</h2>
+<table>
+<thead>
+<tr>
+<th>原版</th>
+<th style="text-align:right">原课时</th>
+<th style="text-align:right">新安排</th>
+<th>合并与调整的具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01电化学＋09电路</td>
+<td style="text-align:right">4＋4</td>
+<td style="text-align:right">2</td>
+<td>第一课完成接通、材料测试、开关、串并联与控制；第二课保留水果电池、水电解、显色与图案，利用集气等待做显色</td>
+</tr>
+<tr>
+<td>02气体与膨胀</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+<td>可乐、双氧水和液膜留气同课比较；面团、孔洞与糖蛇同课解释材料被气体撑起</td>
+</tr>
+<tr>
+<td>03声音</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+<td>振动和两种传播实验合成一课；音高响度、消音与乐器调整合成一课</td>
+</tr>
+<tr>
+<td>04颜色反应侦探</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">1</td>
+<td>显色、褪色、碘钟和样品识别连续完成；最后一项明确是应用</td>
+</tr>
+<tr>
+<td>05凝胶</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">1</td>
+<td>成胶、条件比较和解胶连续完成；彩色释放与解胶一起观察</td>
+</tr>
+<tr>
+<td>06硬水</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">1</td>
+<td>肥皂测试、清洁液比较、沉淀处理和复测合成完整解决任务；编码复用改为提前完成加测</td>
+</tr>
+<tr>
+<td>08浮力</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">1</td>
+<td>托力与排水配对测量、同材料球改船、载重改进同课完成</td>
+</tr>
+<tr>
+<td>10结构</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+<td>原三个短结构实验合在第一课；第二课加入接头、失稳测试，再造桥与改进</td>
+</tr>
+<tr>
+<td>合计</td>
+<td style="text-align:right">36</td>
+<td style="text-align:right">12</td>
+<td>不是统一打折课时，而是按活动密度与搭建量分别处理</td>
+</tr>
+</tbody>
+</table>
+<p>新文件名采用新的模块编号：<strong>07现在是浮力，08现在是结构，09现在是发光</strong>。原目录编号不变，查看时以所在目录为准。</p>
+<h2>原07强视觉专题怎样处理</h2>
+<p>它原本是候选库，没有正式四课，因此不计入上面的36课。新版保留明显效果，但不再为每个短演示都预留一小时。</p>
+<table>
+<thead>
+<tr>
+<th>原候选</th>
+<th>新版位置或状态</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水性鲁米诺蓝光</td>
+<td>新09发光课第三组实验，约14分钟含对照</td>
+<td>与荧光、荧光棒形成能量来源与供能快慢的主线</td>
+</tr>
+<tr>
+<td>可乐喷泉、大象牙膏</td>
+<td>新02第一课，分别进入释气与产气／留气比较</td>
+<td>具有不同来源的气体证据，能在一小时内连续研究</td>
+</tr>
+<tr>
+<td>糖版法老之蛇</td>
+<td>新02第二课，约18分钟教师演示；冷样观察另外6分钟</td>
+<td>同课用面团与孔洞解释膨胀，演示有上下文</td>
+</tr>
+<tr>
+<td>碘钟</td>
+<td>新04第三组实验，15分钟两次比较</td>
+<td>显色与褪色已有铺垫，不再另占一课</td>
+</tr>
+<tr>
+<td>靛蓝胭脂红交通灯</td>
+<td>保留在原库，暂不挤进这13课</td>
+<td>不是碘—淀粉同一信号机制；硬塞会打断当前颜色课模型。将来做“空气参与的可逆显色”模块时再采用</td>
+</tr>
+<tr>
+<td>硫酸铜—铝—氯化钠放热体系</td>
+<td>保留在原库，暂不新增独立课</td>
+<td>可以服务“金属反应的能量去向”，但当前电化学60分钟已满；不能因多一个效果再次空排整课</td>
+</tr>
+<tr>
+<td>醋酸钠热冰</td>
+<td>保留在原库，暂不新增独立课</td>
+<td>它是结晶，不能为凑体系塞进凝胶的长链连接模型；以后与成核、结晶生长一起安排</td>
+</tr>
+<tr>
+<td>钠遇水等高风险剧烈反应</td>
+<td>原库的专业演示定位保留；新课不排现场步骤</td>
+<td>新版的快速显色、泡沫、蓝光与糖蛇已有视觉入口；小钠块和距离不能单独构成可靠的风险控制</td>
+</tr>
+</tbody>
+</table>
+<p><strong>最终是12课基础候选＋1课可选发光＝13课。</strong> 未采用的旧候选只是暂未进入本轮课表，原文件依然能查到。</p>
+<h2>时间审查做了什么</h2>
+<ol>
+<li><strong>去掉虚长课时</strong>：不再给几次滴加、取下一只灯或轻推一下方框各分配一整课。</li>
+<li><strong>保留实际操作</strong>：做鼓、穿电话线、塑船、折桥和接电路仍由孩子完成，分钟数里包括搭建与调试。</li>
+<li><strong>区分独占与等待</strong>：配液水合课前做；集气、解胶设后台观察窗；发酵、冷却保留时间标签与真实阶段样品。</li>
+<li><strong>同一体系只讲一次底层解释</strong>：随做随讲，不在每组后重复长篇宏观总结；最后用一张图或一组数据收束。</li>
+<li><strong>快实验不等于每项都只给两分钟</strong>：取样、建立对照和判断都需要时间。已有技能不重复展开，真正首次搭建则保留预算。</li>
+<li><strong>不伪装成实测结果</strong>：ACS水果电池原活动标15–30分钟；本稿选15分钟端是因为已会接线且插口备好。其余一对一时段由具体步骤估算，不能拿班级教案标注的“一小时”直接证明可行或不可行。</li>
+</ol>
+<p>所有13课的时间表均从0连续到60分钟；复习、关键记录与清理已计入。化学工作液、尺寸和装置的实际稳定性仍需预试，不用预设时刻倒逼孩子完成，也不把临场卡住当作延长系列的理由。</p>
+<h2>后续怎样决定是否再开一课</h2>
+<p>如果孩子已能用证据解释并预测，就换下一个模块。如果他提出新的可检验问题，可以增加一课，但必须写出新增的实验或实际制作工作量。例如造船后研究“配重位置怎样影响抗倾覆”，须有不同偏载条件、临界倾斜比较和新设计测试；不能只是把同一艘船再加一次硬币。</p>
+<p><strong>更长的系列应来自新的问题链。</strong> 例如把颜色检测、凝胶材料和硬水处理作为mix方向的三种独立模块，逐步积累识别成分、改变结构、处理并复测的方法；不把它们硬说成同一个化学反应原理。</p>
+</article></main>
+<main class="document-preview" id="md-preview-f4c9626cdc5f" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 01-电路与电化学_2课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/01-%E7%94%B5%E8%B7%AF%E4%B8%8E%E7%94%B5%E5%8C%96%E5%AD%A6_2%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\01-电路与电化学_2课.md</code></details><article><h1>电路与电化学：接通、控制、改变物质（2课）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>总问题：怎样让电按设计的路径工作，它能带来哪些变化？</strong> 第一课解决通路与控制；第二课沿同样的通路观察化学能供电、电能改变物质。孩子用实物接线、箭头和前后对照解释，不以电子转移作为入门门槛。</p>
+<p>旧版电路四课与电化学四课合并为两课。第二课保留水果电池、通电显色、电解水、显色图案四项；显色图案明确是显色实验的应用。</p>
+<h2>第1课：从一盏灯到两间房独立亮灯</h2>
+<p><strong>核心问题：断开哪里，会让哪盏灯熄灭？</strong> 本课三组实验，最后把结果用于一个小型接线任务。</p>
+<p><strong>课前准备</strong>：备匹配的低压电池盒、带灯座的小灯泡、鳄鱼夹线、绝缘底板和已剪好的金属接触片。匹配电源和两灯，检查接触；不预接完整答案。另备金属片、塑料片、干木片三种测试材料。所有电路带负载，避免直接短接电池。</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要发现什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>简短复习；看一盏灯和一个断开的电路，画出猜想路线</td>
+<td>零件齐全未必构成通路</td>
+<td>从连接关系判断，不靠反复乱接</td>
+</tr>
+<tr>
+<td>4–14分钟</td>
+<td><strong>实验1：闭合回路与材料导电测试。</strong> 自己接亮灯；在一个缺口依次夹入三种材料，再断开验证</td>
+<td>导体能接通缺口，绝缘体不能使这套灯电路工作；这是导电与断路，无化学反应</td>
+<td>电流需要完整通路；灯不亮先检查缺口与接头</td>
+</tr>
+<tr>
+<td>14–24分钟</td>
+<td><strong>实验2：接触式开关。</strong> 在纸板上固定两片接触片，压下接通、放开断开；改变接触位置修正不稳定的开关</td>
+<td>机械接触控制电路通断</td>
+<td>开关的功能来自接触关系，不来自外壳</td>
+</tr>
+<tr>
+<td>24–40分钟</td>
+<td><strong>实验3：串联与并联的断灯对照。</strong> 用两只相同灯分别接成两种电路，每种都取下一灯并复原</td>
+<td>一条通路中断会使两灯都灭；独立支路断开后另一支路可继续工作</td>
+<td>从通路预测故障影响；实物摆成一排不等于串联</td>
+</tr>
+<tr>
+<td>40–53分钟</td>
+<td><strong>应用：两房照明板。</strong> 在刚完成的并联电路中加入分路开关和总开关，检验单亮、双亮、全灭</td>
+<td>分路开关控制一支路，总开关控制共用通路</td>
+<td>用四种实际工作状态检验设计；沿用原电路，不重新装修房屋模型</td>
+</tr>
+<tr>
+<td>53–60分钟</td>
+<td>画一张线路图，指出每个开关管哪里；拆电源、归类器材</td>
+<td>电源提供能量，用电器转化能量</td>
+<td>说出一个未实际试过的断路位置会影响谁</td>
+</tr>
+</tbody>
+</table>
+<p><strong>时间依据与删减顺序</strong>：前三组接线、测试与重接共36分钟，应用13分钟包含调试；做开关不含裁切厚材料。若初学接线较慢，保留串并联的断灯证据，将照明板降为两个分路开关，总开关只在图上预测；不再给“单灯接通”另排一整课。若已有熟练电路基础，可直接选第二课。</p>
+<h2>第2课：化学能供电，电也能使液体变色、产气</h2>
+<p><strong>核心问题：能量从哪里进入，变化出现在哪里？</strong> 三组实验＋一项显色应用。集气的等待时间与显色实验重叠，不将等待算作另一段独占课时。</p>
+<p><strong>课前准备</strong>：水果和铜锌电极、低电流LED、万用表；微型低压水电解装置、适宜电极、硫酸钠电解质；浅盘显色装置和溴百里酚蓝。水果预开安全插口，孩子插电极和接线。两套电解观察用独立匹配电源，托盘分开，避免为了省器材反复拆装。禁止用食盐替代电解质；收集气体不混合、不点燃。</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要发现什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>回看闭合回路，比较水果与普通电池</td>
+<td>先分清供电端与被供电的装置</td>
+<td>“材料→电”与“电→材料变化”是两条能量方向</td>
+</tr>
+<tr>
+<td>4–19分钟</td>
+<td><strong>实验1：铜锌水果电池。</strong> 插电极、连接经预试数量的单元，测电压并接低电流LED；断开再接回</td>
+<td>合适组合可发微光；锌参与反应，体系提供电能，果汁提供电解质环境</td>
+<td>水果和两种金属共同组成电池；仪表有电压与能带动灯是不同检查</td>
+</tr>
+<tr>
+<td>19–29分钟</td>
+<td><strong>实验2启动：水电解。</strong> 用预试的微型装置装液、排除集气管初始空气、通电，标记起点</td>
+<td>两极持续产气；电能驱动水分解</td>
+<td>冒气泡不必先烧开水；本次气体身份由已知体系解释，气泡本身不完成鉴定</td>
+</tr>
+<tr>
+<td>29–41分钟</td>
+<td><strong>实验3：通电显色。</strong> 在另一个浅盘的硫酸钠与指示剂工作液中通电，保留未通电对照，观察颜色起点。水电解继续在可见托盘中运行</td>
+<td>两极附近酸碱性改变而显不同颜色；硫酸钠帮助导电</td>
+<td>电能引起局部化学变化，颜色是变化位置的证据</td>
+</tr>
+<tr>
+<td>41–49分钟</td>
+<td><strong>应用：电化学显色图案。</strong> 在新小份工作液中改变电极位置，先画预计色区，再通电比较</td>
+<td>沿用上一步电极反应，扩散使色区边缘变宽</td>
+<td>位置可控不等于能精确“打印”；这是同一反应的设计应用</td>
+</tr>
+<tr>
+<td>49–54分钟</td>
+<td>回到水电解，断电读两侧气体量；用简单水分子积木解释</td>
+<td>适宜条件下氢、氧体积约2∶1；小装置可受漏气、溶解和副反应影响</td>
+<td>分开写“测到多少”与“理论预计多少”；偏差不改数</td>
+</tr>
+<tr>
+<td>54–60分钟</td>
+<td>完成两条能量箭头，断电、整理液体与器材</td>
+<td>水果电池与水电解不是同一反应直接倒放</td>
+<td>能解释哪个装置供电，哪个消耗电能改变物质</td>
+</tr>
+</tbody>
+</table>
+<p><strong>教师把握的本质</strong>：水电解总式为 <code>2H₂O → 2H₂＋O₂</code>；显色也来自两极的局部反应条件。孩子不背半反应式。</p>
+<p><strong>课时成立的条件</strong>：水果电池官方活动给出15–30分钟，本课采用已会接线、插口备好、只用一套材料组合的15分钟版本。微型电解装置必须预试在约20–25分钟观察窗内有可读差异；该时间是排课目标，不是现有器材的实测结果。LED未亮时用仪表和已预试的教师样机定位问题，最多排查3分钟，不临时无限增加水果。集气不理想时记录实际气泡，以标明来源的预试记录解释比例；下次选课前先修正装置，不用整节等气体。</p>
+<p><strong>来源与改编</strong>：<a href="https://www.acs.org/content/dam/acsorg/education/outreach/kidszone/kids-zone-build-a-lemon-battery.pdf">ACS水果电池（原活动15–30分钟）</a>、<a href="https://www.teachengineering.org/activities/cub_electricity_lesson06_activity1">TeachEngineering并联电路</a>、<a href="https://edu.rsc.org/experiments/electrolysis-using-a-microscale-hoffman-apparatus/541.article">RSC微型电解显色</a>。另见<a href="https://chem.washington.edu/lecture-demos/electrolysis-water">华盛顿大学水电解演示</a>，用于核对硫酸钠电解体系；具体显色工作液仍须预试。本文件的两课组合与分钟安排为一对一课程改编，并非照搬原资源总时长。</p>
+</article></main>
+<main class="document-preview" id="md-preview-99b00ec9b413" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 02-气体与膨胀_2课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/02-%E6%B0%94%E4%BD%93%E4%B8%8E%E8%86%A8%E8%83%80_2%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\02-气体与膨胀_2课.md</code></details><article><h1>气体与膨胀：气体从哪里来，又被什么留住（2课）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>总问题：同样看起来变大，气体的来源和去向是否相同？</strong> 第一课比较已有气体逸出与反应产气，第二课解释气体如何撑起材料、留下孔洞。原可乐、牙膏、面团、糖蛇四课合成两课；保留喷涌和生长效果。</p>
+<h2>第1课：喷泉和泡沫是怎样出现的</h2>
+<p><strong>核心问题：是先有气体再释放，还是混合后才生成气体？</strong> 两种产气／释气体系，三组实验；双氧水有无洗洁精是同一反应的对照，不另算新反应。</p>
+<p><strong>课前准备</strong>：同款新开封与充分跑气的碳酸饮料、曼妥思、透明杯；新购标签明确的3%双氧水、活性酵母、洗洁精、计时器、温度计、护目镜和托盘。室外桌旁完成本课，省去中途来回搬场地。饮料与反应液都保持敞口。</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要发现什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>预测两杯看起来相近的饮料哪杯更容易冒泡</td>
+<td>提取已学气体证据</td>
+<td>用比较找来源</td>
+</tr>
+<tr>
+<td>4–17分钟</td>
+<td><strong>实验1：新鲜／跑气饮料＋曼妥思。</strong> 先小杯同量比较，再看一次室外敞口瓶喷泉</td>
+<td>新鲜饮料明显释气，合适瓶中液体被推出；主要是已有溶解CO₂逸出</td>
+<td>喷涌不自动证明有新物质；跑气样品帮助追踪气体来源</td>
+</tr>
+<tr>
+<td>17–31分钟</td>
+<td><strong>实验2：双氧水有／无酵母对照。</strong> 同量工作液分别加入预定酵母悬液与等量水，观察气泡并测温</td>
+<td>酵母中的酶加快分解，产生氧气，可能可测升温</td>
+<td>这次产生新气体；温度和气泡是不同观察量</td>
+</tr>
+<tr>
+<td>31–45分钟</td>
+<td><strong>实验3：同一产气反应，有／无洗洁精。</strong> 控制双氧水、酵母和总液量，比较气泡逸散与泡沫保留</td>
+<td>液膜留下氧气形成泡沫；泡沫高度也受膜的稳定性影响</td>
+<td>“泡沫更多”不直接等于“总产气更多”</td>
+</tr>
+<tr>
+<td>45–53分钟</td>
+<td><strong>应用：预测一杯缺少酵母或洗洁精的混合物。</strong> 选一杯实际验证，画出气体进出路线</td>
+<td>用刚才的两个对照解释结果</td>
+<td>分开产气材料与留气材料，不盲目加量</td>
+</tr>
+<tr>
+<td>53–60分钟</td>
+<td>记录一张来源／去向表，处理泡沫与溅液、洗手</td>
+<td>共用模型：气体产生或释放后，会逸走或被留住</td>
+<td>能预测未做组合，不以喷得最高为唯一成功标准</td>
+</tr>
+</tbody>
+</table>
+<p><strong>教师本质</strong>：<code>2H₂O₂ → 2H₂O＋O₂</code>。酵母在此提供过氧化氢酶，不是靠发酵产生CO₂。3%版本重点是近距离可见的快速泡沫增长，不承诺网上高浓度柱状喷射效果。</p>
+<p><strong>时间与预试</strong>：瞬间喷涌只占几秒；13分钟包含两杯对照、投放和局部清理。酵母活性与双氧水效果课前检验，工作液分装，孩子仍负责取用与混合。旧的浓度未知双氧水不使用。</p>
+<h2>第2课：气体怎样把面团和“黑蛇”撑起来</h2>
+<p><strong>核心问题：气体相同或类似，为什么有时跑掉，有时留下多孔材料？</strong> 两组孩子操作探究＋一项糖版法老之蛇演示。不是连续做三种燃烧。</p>
+<p><strong>课前准备</strong>：面粉、面包酵母、水、糖、透明容器；同配方不同发酵时间的阶段面团、面包剖面。糖版法老之蛇使用选定标准方案的糖、小苏打及配套材料；燃料、加热和点火由教师在室外演示区管理。另备充分冷却的残留样品。整课安排在室外合适桌旁，热演示区域与孩子操作区域分开。</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要发现什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>回看液膜留气，预测面团如何变大</td>
+<td>从气泡转向材料内部空间</td>
+<td>有气体还需有能留下它的结构</td>
+</tr>
+<tr>
+<td>4–17分钟</td>
+<td><strong>实验1：小面团有／无酵母。</strong> 配两份、做体积标记；同时观察提前启动、时间已标明的同配方样品</td>
+<td>发酵逐渐产CO₂，面团网络留气；新做样品不保证当堂翻倍</td>
+<td>分开“我刚做的”和“早已开始的”样品，用时间序列看变化</td>
+</tr>
+<tr>
+<td>17–29分钟</td>
+<td><strong>实验2：面包孔洞与受压回弹。</strong> 用相近体积面团和面包剖面观察孔洞，按压面包再松开，比较压扁前后外形</td>
+<td>多孔结构内含空气；受压时孔隙与骨架共同变形，不是材料消失</td>
+<td>体积大不必意味着同样比例的物质更多；这是结构观察与力学测试</td>
+</tr>
+<tr>
+<td>29–47分钟</td>
+<td><strong>实验3：糖版法老之蛇教师演示。</strong> 记录生长方向、外形和时间；教师全程照看热装置，孩子在指定观察位置记录</td>
+<td>受热产气撑起含碳残留结构，黑色多孔物逐渐伸长</td>
+<td>用“产气—撑起—定形”解释强烈外观，不说凭空长出大量固体</td>
+</tr>
+<tr>
+<td>47–53分钟</td>
+<td>用夹具观察事先冷却样品，和面包孔洞对照；回看自己的面团起始标记</td>
+<td>结构相似不表示化学反应相同</td>
+<td>能指出共同的留气过程和不同的材料来源</td>
+</tr>
+<tr>
+<td>53–60分钟</td>
+<td>画两种材料的气体来源与孔洞，整理冷区；热区由教师继续看护到安全冷却</td>
+<td>课结束与热物完全冷却是不同时间</td>
+<td>用证据解释体积膨胀</td>
+</tr>
+</tbody>
+</table>
+<p><strong>教师本质</strong>：糖蛇涉及碳酸氢钠受热分解、糖的热分解及部分燃烧；不同于已做过多次的酸＋小苏打反应。面团依赖酵母生命活动，与上一课催化双氧水的作用不同。</p>
+<p><strong>时间与替换</strong>：阶段面团和冷蛇样品在课前准备，不拿孩子课堂时间等待发酵或冷却。糖蛇生长与场地效果先预试；不能满足明火演示条件时，这18分钟改用同一实验的完整录像、实物冷样与气孔记录，不临时换更强烈燃料。需要完整从零烘焙时另立食品制作课，本次不夹带烘焙任务。</p>
+<p><strong>来源与改编</strong>：<a href="https://www.acs.org/education/activities/unleashing-carbon-dioxide.html">ACS释出二氧化碳</a>、<a href="https://www.acs.org/middleschoolchemistry/lessonplans/chapter6/lesson5.html">ACS酵母催化双氧水</a>、<a href="https://annex.exploratorium.edu/cooking/bread/recipe-basicbread.html">Exploratorium面团与酵母</a>、<a href="https://www.sciencebuddies.org/stem-activities/make-a-fire-snake">Science Buddies糖版Fire Snake</a>。具体一对一时段为本次估算，尤其糖蛇演示与面团阶段样品须按场地、温度预试。</p>
+</article></main>
+<main class="document-preview" id="md-preview-be32de61bb5f" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 03-声音与乐器_2课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/03-%E5%A3%B0%E9%9F%B3%E4%B8%8E%E4%B9%90%E5%99%A8_2%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\03-声音与乐器_2课.md</code></details><article><h1>声音与乐器：找到振动，再改变听到的声音（2课）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>总问题：一个声音怎样产生、传过来，又怎样被调成想要的样子？</strong> 两课按“声源—传播—振动特征—乐器调整”展开。原四课合并为两课；每课约三组实际操作。与孩子打鼓的经历连接，先用第一课观察他对这一方向的兴趣。</p>
+<h2>第1课：看见振动，听见固体传来的声音</h2>
+<p><strong>核心问题：从发声物体到耳朵，中间发生了什么？</strong></p>
+<p><strong>课前准备</strong>：适合做小鼓的容器、薄膜和固定圈；音叉、水碗、少量米粒；预打孔纸杯、棉线、金属勺。保留孩子绷膜、穿线、打结与调试。用舒适音量，线与手指只接触耳外，不插耳道、不绕颈。</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要发现什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>敲一个固定节奏，指出可能振动的位置</td>
+<td>用熟悉动作进入新证据</td>
+<td>先区分看到与推测</td>
+</tr>
+<tr>
+<td>4–21分钟</td>
+<td><strong>实验1：小鼓米粒与音叉触水。</strong> 自己绷小鼓、敲击，再轻触鼓面；观察振动音叉引起的水面扰动</td>
+<td>鼓面振动带动米粒，抑制振动时声音衰减；音叉将振动传给水</td>
+<td>声音与振动相关；两种可见证据支持同一解释，不算两个独立大课</td>
+</tr>
+<tr>
+<td>21–37分钟</td>
+<td><strong>实验2：棉线电话。</strong> 穿线制电话，轮流说听，比较拉紧、松弛与捏住线</td>
+<td>杯底与线传振动，线的状态影响听到的声音</td>
+<td>声音也可沿固体传递；路径受干扰会改变效果</td>
+</tr>
+<tr>
+<td>37–49分钟</td>
+<td><strong>实验3：金属勺“秘密钟声”。</strong> 比较隔空气听轻敲勺子、经棉线接触耳外听同样轻敲</td>
+<td>固体路径与空气路径的传声、衰减和听感不同</td>
+<td>听感变了未必是敲击变重；先找传播路径</td>
+</tr>
+<tr>
+<td>49–54分钟</td>
+<td>选一个装置制造“有振动但听声变弱”的情况，解释改变了哪里</td>
+<td>复用轻触鼓面或松线</td>
+<td>区分改变声源和改变传播</td>
+</tr>
+<tr>
+<td>54–60分钟</td>
+<td>画声源→介质→耳朵，保存小鼓供下课使用，收线收水</td>
+<td>统一三个实验的因果链</td>
+<td>能根据路径预测声音变化</td>
+</tr>
+</tbody>
+</table>
+<p><strong>时间安排</strong>：小鼓17分钟、线电话16分钟包含孩子制作，金属勺12分钟含两种路径比较。不做复杂装饰；若打结较慢，最后的独立应用缩短，三组证据保留。</p>
+<h2>第2课：把音高、响度和尾音分开调</h2>
+<p><strong>核心问题：让声音更高、更响、停得更快，分别要改变什么？</strong> 两组新比较＋一个乐器设计任务。</p>
+<p><strong>课前准备</strong>：直尺和可靠桌沿、固定件；上一课小鼓、布垫或海绵；手机录音。另备简易橡皮筋拨弦底板与可移动支点供最终制作。直尺轻拨不弹向人；橡皮筋不过度拉伸。</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要发现什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>回看振动源；听相同节奏的不同声音</td>
+<td>节奏相同，声音特征仍不同</td>
+<td>本课分别研究三个可听特征</td>
+</tr>
+<tr>
+<td>4–19分钟</td>
+<td><strong>实验1：桌沿直尺的振动长度与拨动幅度。</strong> 固定同一把尺，比较两档伸出长度；再固定长度轻拨与稍重拨</td>
+<td>伸出部分较短通常振动更快、音高更高；同条件较大振幅通常更响</td>
+<td>音高关联频率，响度关联振幅；两轮各改一个因素</td>
+</tr>
+<tr>
+<td>19–34分钟</td>
+<td><strong>实验2：小鼓消音垫。</strong> 保持节奏、敲击位置与录音距离，比较无垫、有垫与不同接触位置的尾音</td>
+<td>接触改变振动与能量耗散，常使尾音缩短，也可能改音色和响度</td>
+<td>让振动快停下与把音调高不是同一件事</td>
+</tr>
+<tr>
+<td>34–50分钟</td>
+<td><strong>设计任务：两种音高的小拨弦乐器。</strong> 在简易底板上装橡皮筋，以可移动支点调振动长度，找出两种稳定音高；用它演奏同一短节奏</td>
+<td>调长度会改变音高，接触、张力也可能同时影响结果</td>
+<td>将前两组认识迁移到新乐器；预测和实听不一致时检查条件</td>
+</tr>
+<tr>
+<td>50–54分钟</td>
+<td>录同一节奏的两版声音，指出一次改动及结果</td>
+<td>普通录音用于相对比较</td>
+<td>用证据解释选择，不作精确声压测量</td>
+</tr>
+<tr>
+<td>54–60分钟</td>
+<td>保存一段录音和三条因果箭头，收拾器材</td>
+<td>振动快慢→音高；幅度→响度；衰减→尾音</td>
+<td>能分别提出三种调声音办法</td>
+</tr>
+</tbody>
+</table>
+<p><strong>教师把握</strong>：直尺有多个振动模态；只在本装置与相同固定方式下作定性比较。橡皮筋按拨弦方法使用，不混用吹奏式装置的操作与解释。</p>
+<p><strong>来源与改编</strong>：<a href="https://www.exploratorium.edu/snacks/secret-bells">Exploratorium Secret Bells</a>、<a href="https://annex.exploratorium.edu/science-explorer/ear_guitar.html">Exploratorium Ear Guitar</a>、<a href="https://annex.exploratorium.edu/wsw/participants/participants1997/susanb/tindrums.html">Exploratorium鼓的振动探究</a>。直尺两轮对照和两课组合为基于振动规律的课程改编，需验证现有尺子和小鼓能听到清楚差异。</p>
+</article></main>
+<main class="document-preview" id="md-preview-bda13a9c60cf" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 04-颜色反应侦探_1课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/04-%E9%A2%9C%E8%89%B2%E5%8F%8D%E5%BA%94%E4%BE%A6%E6%8E%A2_1%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\04-颜色反应侦探_1课.md</code></details><article><h1>颜色反应侦探：显色、褪色、延迟显色（1课）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>核心问题：看不见颜色，能不能说明什么都没发生？</strong> 旧版淀粉显色、维生素C褪色、碘钟、未知样品四课，合成60分钟。三组实验＋一个识别任务，贯穿同一个碘—淀粉可见信号模型。</p>
+<p><strong>主线</strong>：建立显色信号 → 找到能消去信号的材料 → 解释为何先等待再突然显色 → 用证据识别限定样品。延迟出现的颜色不是“反应到那一秒才开始”。</p>
+<h2>课前准备</h2>
+<p>教师选定一套维生素C型碘钟工作液方案，统一预配新鲜稀含碘材料、淀粉、维生素C和低浓度双氧水；编码水、淀粉样品、维生素C溶液。备白底托盘、各液专用滴管、透明小杯、计时器与护目镜。材料用量和酸性条件按同一验证配方，不拼接不同碘钟方案。</p>
+<p>必须先试出清楚显色、可靠褪色和约几十秒级的变色窗口，保证15分钟能做两次比较；这是选配方的目标，不是对现有旧试剂的效果保证。碘伏标签和颜色不能替代显色预试。孩子操作的是预分装工作液，不接触原试剂瓶。</p>
+<h2>60分钟课堂</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要学会什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>看水、糖水和淀粉样品，先写预测</td>
+<td>外观相近不代表成分相同</td>
+<td>先用已知样品建立测试规则</td>
+</tr>
+<tr>
+<td>4–15分钟</td>
+<td><strong>实验1：稀碘液检测淀粉。</strong> 对三份样品滴加相同工作液，做对照色卡；可在一小片淀粉涂层上显出图形</td>
+<td>淀粉与碘／多碘离子形成深色复合体系，水与糖水不出现同样深色</td>
+<td>颜色作为证据需要对照；图形只是同一显色的表现</td>
+</tr>
+<tr>
+<td>15–27分钟</td>
+<td><strong>实验2：维生素C使显色液褪色。</strong> 将一批显色液分两杯，加维生素C与等量水比较</td>
+<td>维生素C消耗显色所需的碘，颜色褪去；不说明淀粉被分解</td>
+<td>排除仅仅稀释；信号消失不等于目标材料消失</td>
+</tr>
+<tr>
+<td>27–42分钟</td>
+<td><strong>实验3：维生素C型碘钟。</strong> 混合预配工作液、计时；第二轮在总液量等条件相同下，比较预设的两种维生素C起始量</td>
+<td>生成的碘先被维生素C消耗；维生素C耗尽后才积累显色</td>
+<td>用“先消耗、再积累”的模型解释突然变蓝；等待更久不直接等于反应本身更慢</td>
+</tr>
+<tr>
+<td>42–53分钟</td>
+<td><strong>应用：三份编码模型样品识别。</strong> 候选仅为水、淀粉样品、维生素C液；选碘液或已显色液小量测试，记录判断依据</td>
+<td>使用显色与褪色两条已知规则，无新增反应</td>
+<td>将猜测变为可复查证据；结论只适用于给定候选范围</td>
+</tr>
+<tr>
+<td>53–60分钟</td>
+<td>画“显色材料还在／已被消耗”的两幅图，整理滴管与废液</td>
+<td>一套信号机制贯穿整课</td>
+<td>能解释一次假阴性，不把检测当猜颜色</td>
+</tr>
+</tbody>
+</table>
+<p><strong>时间为何够用</strong>：前三组混合现象本身很快，11–15分钟的时段已含预测、取样、两杯对照和口头解释。识别只设三份已知候选，不扩成全套食品营养检测。碘钟若临场超出预试窗口，记录失败条件并用预试短片解释，不反复试配占满后半课。</p>
+<p><strong>教师本质</strong>：淀粉显色为复合显色体系；维生素C与碘发生氧化还原；碘钟把碘生成、被消耗与最终显色耦合起来。孩子使用“哪种材料正在被消耗”的宏观解释即可。</p>
+<p><strong>来源与改编</strong>：<a href="https://www.acs.org/content/dam/acsorg/education/resources/k-8/science-activities/characteristicsofmaterials/food/starch-search.pdf">ACS Starch Search</a>、<a href="https://www.acs.org/content/dam/acsorg/education/outreach/kidszone/fruit-juice-sleuth.pdf">ACS Fruit Juice Sleuth</a>、<a href="https://teachchemistry.org/classroom-resources/starch-iodine-clock-reaction">AACT淀粉碘钟</a>。采用原理与对照思路，计时目标、候选样品与60分钟串联为本次设计。</p>
+</article></main>
+<main class="document-preview" id="md-preview-62981494e322" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 05-凝胶制作与拆解_1课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/05-%E5%87%9D%E8%83%B6%E5%88%B6%E4%BD%9C%E4%B8%8E%E6%8B%86%E8%A7%A3_1%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\05-凝胶制作与拆解_1课.md</code></details><article><h1>凝胶制作与拆解：把液体连成网，再让网松开（1课）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>核心问题：同一批液体为什么能成形，又为什么能散开？</strong> 旧版成胶、调软硬、解胶、释放四课合成一课。三组探究，彩色释放并入解胶观察，不重复占一课。</p>
+<p><strong>主线</strong>：成形需要合适配对 → 成形条件影响性质 → 改变连接使结构松散。孩子用“含水的网”解释；长链、钙离子交联与柠檬酸根结合钙留作教师知识。</p>
+<h2>课前准备</h2>
+<p>预先完成海藻酸钠水合和消泡，备同批彩色溶液、乳酸钙工作液、柠檬酸钠工作液、清水、滴管、漏勺、透明杯和托盘。成胶体系统一使用一种钙盐，避免配方与浸泡时间一起改变。海藻酸钠、乳酸钙与身份明确的柠檬酸钠均按需采购／核验，不假定旧分装瓶可直接使用。</p>
+<p>先用小珠或细条试出两档浸泡时间的性能差异，以及解胶后约10–20分钟内可辨的软化差异。若完整解体太慢，课堂目标设为保持形状能力的改变；另备注明开始时间的阶段样品。食用来源材料仍按实验材料处理，不品尝。</p>
+<h2>60分钟课堂</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要学会什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>看两杯液体，预测滴入后是散开还是成珠</td>
+<td>用形状变化提出问题</td>
+<td>材料配对影响结果</td>
+</tr>
+<tr>
+<td>4–18分钟</td>
+<td><strong>实验1：海藻酸钠＋乳酸钙成珠、拉条。</strong> 另滴入清水作对照，自己制作与捞取</td>
+<td>钙参与连接海藻酸盐长链，形成含水网络；清水不出现同样凝胶</td>
+<td>凝胶不是把水冻住，也不是随意混两杯水就能成形</td>
+</tr>
+<tr>
+<td>18–30分钟</td>
+<td><strong>实验2：同配方不同浸泡时间。</strong> 制作相近大小样品，按预设时间取出；以相同夹取或轻压方式比较</td>
+<td>成胶由表及里推进，保持形状、外层厚度或内部流动性可能不同</td>
+<td>比较性能要先规定方法，控制珠径与配方</td>
+</tr>
+<tr>
+<td>30–38分钟</td>
+<td><strong>实验3启动：柠檬酸钠解胶与清水对照。</strong> 同批相近样品进入两种外液，记录初态</td>
+<td>柠檬酸根结合钙，网络连接逐渐难以维持</td>
+<td>“拆连接”与把长链全部剪断是不同解释</td>
+</tr>
+<tr>
+<td>38–49分钟</td>
+<td><strong>应用：做一条能提起的彩色胶条。</strong> 按前两组证据选浸泡条件；在第43、48分钟回看解胶样品</td>
+<td>制作与解胶等待并行；清水杯也可能有色素扩散</td>
+<td>保持形状不等于完全密封；颜色出来不单独证明凝胶已解体</td>
+</tr>
+<tr>
+<td>49–54分钟</td>
+<td>同样倾斜或轻推两杯样品，比较完整性、碎片和外液颜色</td>
+<td>同时观察结构与释放，区分两种证据</td>
+<td>用结果支持“结构松了”，不只看颜色深浅</td>
+</tr>
+<tr>
+<td>54–60分钟</td>
+<td>画连接、加固、松开三幅简图，收集凝胶固体、整理工作液</td>
+<td>同一材料系统可以被制造与调整</td>
+<td>能解释一次成功制作和一次结构改变</td>
+</tr>
+</tbody>
+</table>
+<p><strong>时间安排</strong>：水合与长时间消泡不占课堂；等待解胶的16分钟覆盖胶条制作和定点回看。制作珠子与胶条是同一成胶过程的两种造型，不宣称新增反应。若慢于预试，使用标明时间的阶段样品完成比较，孩子自己那杯继续记录，不杜撰瞬间解胶效果。</p>
+<p><strong>来源与改编</strong>：<a href="https://www.acs.org/education/activities/goo-worms.html">ACS Goo Worms</a>、<a href="https://www.cmu.edu/gelfand/k12-educational-resources/polymers/polymer-architecture/gel-beads-and-worms.html">CMU Gel Beads and Worms</a>、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9954249/">ACS教育论文：凝胶与柠檬酸钠解体机制</a>。来源用于机制和材料选择；本课的乳酸钙配方、时间档与解胶窗口需针对购得材料验证。</p>
+</article></main>
+<main class="document-preview" id="md-preview-ff2cf57725f1" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 06-硬水检测与处理_1课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/06-%E7%A1%AC%E6%B0%B4%E6%A3%80%E6%B5%8B%E4%B8%8E%E5%A4%84%E7%90%86_1%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\06-硬水检测与处理_1课.md</code></details><article><h1>硬水检测与处理：混出固体，再分离和复测（1课）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>核心问题：看起来一样清的水，为什么与肥皂混合后的表现不同；怎样改善？</strong> 旧版四课合成一课，完成三组实验。编码识别是提前完成时的加测，不再单列一课。</p>
+<p><strong>主线</strong>：检测不同 → 改清洁材料或改水中成分 → 用同一测试验证效果。孩子能完成“测试—处理—复测”的完整过程，是本课的系统性。趣味来自白絮突然出现、清液变浑和处理后行为改变，视觉强度低于碘钟与凝胶，可按兴趣后选。</p>
+<h2>课前准备</h2>
+<p>备去离子水或合适软水、教师预配的氯化钙模型硬水、成分明确的皂基肥皂工作液、一种非皂基洗洁精工作液、稀碳酸钠工作液，透明小杯、滴管、小漏斗与滤纸。氯化钙库存记录为已用完，需补充；碳酸钠是Na₂CO₃，不是酸＋小苏打产气体系。</p>
+<p>课前试出可见皂垢、合适沉淀剂用量和分离办法。细颗粒穿过滤纸或过滤太慢时，准备同配方、注明处理时间的静置澄清样品；不能把浑浊滤液称为处理成功。再备软水经过同样碳酸钠处理的对照，用于辨认残余碱性的影响。孩子只混合已分装的指定工作液。</p>
+<h2>60分钟课堂</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要学会什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>预测两杯透明水加同样肥皂后的结果</td>
+<td>成分差异可能隐藏在清液里</td>
+<td>外观相同不等于性质相同</td>
+</tr>
+<tr>
+<td>4–16分钟</td>
+<td><strong>实验1：软水／模型硬水＋肥皂。</strong> 相同液量与摇动方式比较白絮、浑浊和泡沫</td>
+<td>钙与肥皂形成难溶钙皂</td>
+<td>先建立测试规则，不把泡沫多少当清洁能力排名</td>
+</tr>
+<tr>
+<td>16–29分钟</td>
+<td><strong>实验2：同一种硬水，肥皂与非皂基洗洁精对照。</strong> 两种清洁液各保留软水对照</td>
+<td>选定非皂基配方可能更少形成皂垢，取决于成分</td>
+<td>混合结果由双方材料共同决定；商品配方结论不推广到所有品牌</td>
+</tr>
+<tr>
+<td>29–38分钟</td>
+<td><strong>实验3启动：碳酸钠处理硬水。</strong> 在新份模型硬水中加入预设工作液，观察白色固体并开始过滤或按预试方式取澄清液</td>
+<td><code>CaCl₂＋Na₂CO₃ → CaCO₃↓＋2NaCl</code>；一部分钙转入固体</td>
+<td>可以先改变成分，再分出固体；出现白色不是水被“漂白”</td>
+</tr>
+<tr>
+<td>38–44分钟</td>
+<td>继续分离、标记样品来源；并列摆放未处理硬水、处理水、软水及处理过的软水</td>
+<td>分离需要时间，残余处理剂也是变量</td>
+<td>比较需要知道每杯经历了什么</td>
+</tr>
+<tr>
+<td>44–53分钟</td>
+<td><strong>实验3完成：同法肥皂复测。</strong> 使用与实验1一致的肥皂量、样品量和摇动方法比较</td>
+<td>处理后皂垢可能减少；残余碳酸钠也可能改变表现</td>
+<td>必须复测，不能看到沉淀就断言剩下的水已经合格</td>
+</tr>
+<tr>
+<td>53–60分钟</td>
+<td>写出哪条证据支持改善，收集固体、处理工作液并洗手</td>
+<td>定性结果有适用范围</td>
+<td>不能据此判断饮用安全，也不作精确硬度测定</td>
+</tr>
+</tbody>
+</table>
+<p><strong>提前完成时</strong>：用两份编码模型水验证检测方法，替换部分复述时间，总课时不加长。过滤若迟滞，记录孩子正在分离的样品，使用已注明来源的同配方澄清样品完成复测，不让等过滤消耗整节课。</p>
+<p><strong>来源与改编</strong>：<a href="https://www.acs.org/education/resources/k-8/inquiryinaction/fifth-grade/chapter-3/forming-a-precipitate.html">ACS五年级沉淀活动</a>、<a href="https://edu.rsc.org/experiments/how-can-hardness-in-water-be-removed/1734.article">RSC硬水处理</a>。ACS原活动部分使用镁盐；本课统一钙盐，是为连接后续碳酸钙分离。RSC页面本轮抓取受限，保留旧稿来源；只采用碳酸钠处理思路，具体工作液与过滤效果按实物预试。</p>
+</article></main>
+<main class="document-preview" id="md-preview-cd1e60cd2cab" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 07-浮力与造船_1课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/07-%E6%B5%AE%E5%8A%9B%E4%B8%8E%E9%80%A0%E8%88%B9_1%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\07-浮力与造船_1课.md</code></details><article><h1>浮力与造船：测托力、找排水规律、造载重船（1课）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>核心问题：同一份材料怎样让水托住它，还能托住更多配重？</strong> 原浮力四课合成60分钟：三组实验＋一次载重应用。排水测量只做能检验关系的少量状态，不把大量重复读数当作课时。</p>
+<p><strong>主线</strong>：水有托力 → 托力与排开水的重量有关 → 形状改变进水前可排开的体积 → 用这个规律设计船。孩子最终能解释“同样重的材料，为什么球沉船浮”，并能指出船失败是进水还是倾覆。</p>
+<h2>课前准备</h2>
+<p>备分度合适的弹簧测力计、不吸水且能悬挂的沉水物体、透明水槽、可靠溢水杯、接水杯与电子天平；油性不溶水橡皮泥或经预试的同份铝箔、相同小配重、托盘和毛巾。器材数量及材料均须核对，不能假定有库存。</p>
+<p>溢水杯漏水、量程和分辨率在课前检查，物体提前系好线但由孩子挂测和浸入。安排读数差异明显的一个物体、两个浸入状态；不要求孩子现做溢水杯。船材先验证可塑且不漏水。</p>
+<h2>60分钟课堂</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要学会什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>预测同份材料的球与船能否都浮；简短回看力的测量</td>
+<td>质量没有改变，沉浮仍可能改变</td>
+<td>把猜想与需要的证据连接起来</td>
+</tr>
+<tr>
+<td>4–14分钟</td>
+<td><strong>实验1：水中的“失重”读数。</strong> 测空气中、部分入水、完全入水的拉力，物体不碰底不碰壁</td>
+<td>水提供向上的浮力，测力计拉力变小；重力并未消失</td>
+<td>用空气读数减水中读数估计托力；比较的是力</td>
+</tr>
+<tr>
+<td>14–27分钟</td>
+<td><strong>实验2：托力与排水重量。</strong> 将溢水杯起始水位统一，选择两个入水状态分别收集排水、去皮称量，并配对相应拉力差</td>
+<td>浮力约等于排开液体的重量；装置误差可造成偏差</td>
+<td>克不能直接和牛顿比，按教师给出的换算把两者统一；先看到关系再命名阿基米德原理</td>
+</tr>
+<tr>
+<td>27–40分钟</td>
+<td><strong>实验3：同一团材料，球改成船。</strong> 保持材料质量，自己捏船、试浮并修补一个漏点或低边</td>
+<td>船形能在进水前排开更多水；合适形状可达到浮力与重力平衡</td>
+<td>不是材料变轻或水变强了，是可用排水体积改变</td>
+</tr>
+<tr>
+<td>40–53分钟</td>
+<td><strong>应用：载重与稳定性挑战。</strong> 逐步加相同小配重，记录吃水和首先失败方式；修正一项后复测</td>
+<td>配重增加使吃水加深；先漏水、进水或倾覆都可能限制载重</td>
+<td>区分排水余量和稳定性；不能只说船越大当时浮力就越大</td>
+</tr>
+<tr>
+<td>53–60分钟</td>
+<td>留一张读数记录和船形照片，解释改动，倒水收拾</td>
+<td>静止漂浮时浮力与总重力平衡</td>
+<td>预测偏放配重或降低船边会怎样</td>
+</tr>
+</tbody>
+</table>
+<p><strong>测量简化</strong>：小学只作数量级和接近程度比较；可用“约100克水对应约1牛顿重力”的近似换算，明确它是地球表面的近似值。两次收集前恢复同一溢水基准，移开接水杯后再取出物体，减少多余滴水进入结果。</p>
+<p><strong>时间与容量</strong>：前两组测量共23分钟，球改船与载重改进共26分钟。13分钟载重任务使用刚做好的小船，不从零另造大型作品。若排水测量慢，第二状态只核对一组代表读数，把时间留给造船；若船破损严重，改用新铝箔做一个简单替代船并注明换了材料，不把不同材料的结果冒充同质量对照。孩子喜欢造船并持续提出新问题时，再另约有明确目标的工程深化课。</p>
+<p><strong>来源与改编</strong>：<a href="https://www.teachengineering.org/activities/duk_boat_mary_act">TeachEngineering Buoyant Boats</a>、<a href="https://www.acs.org/education/resources/k-8/inquiryinaction/fifth-grade/substances-have-characteristic-properties/lesson-2-4--density-and-sinking-and-floating.html">ACS五年级沉浮</a>、<a href="https://www.sciencebuddies.org/science-fair-projects/project-ideas/Aero_p020/aerodynamics-hydrodynamics/how-much-weight-can-your-boat-float">Science Buddies载重船</a>。测力、排水和造船放入同一小时为本次改编，具体装置没有完成课堂实测。</p>
+</article></main>
+<main class="document-preview" id="md-preview-c625d3f67c95" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 08-结构与承重_2课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/08-%E7%BB%93%E6%9E%84%E4%B8%8E%E6%89%BF%E9%87%8D_2%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\08-结构与承重_2课.md</code></details><article><h1>结构与承重：先找稳固办法，再造桥检验（2课）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>总问题：有限材料怎样把载荷可靠地传到支撑处？</strong> 原纸梁、方框、纸拱三课合成第一课；第二课增加接头与失稳的两组短实验，再进行真正需要搭建时间的桥梁挑战。第二课不是只把一次压桥动作拉长到60分钟。</p>
+<p><strong>主线</strong>：构件的形状影响抗弯 → 连接与斜撑影响变形 → 支座承接载荷 → 找到全结构最薄弱的位置并改进。孩子用“重物→桥面→两端支座→桌面”的路径解释，不需要应力与力矩公式。</p>
+<h2>第1课：同样的纸，为什么有的结构很容易塌</h2>
+<p><strong>核心问题：除了增加材料，还有哪些办法让结构撑住重量？</strong> 三组实验＋一个快速预测验证。</p>
+<p><strong>课前准备</strong>：同规格纸、薄卡纸、吸管或纸条、能转动的连接件、低矮支座、小配重、加载托盘。接头孔与尖锐处课前处理，孩子折梁、连框、搭拱。加载高度低，配重落入托盘，不用人体或贵重物品压模型。</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要发现什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>看一张纸能否跨过两块支座，先画预测</td>
+<td>保持材料量，尝试改变形状</td>
+<td>不把多叠纸当成解释</td>
+</tr>
+<tr>
+<td>4–18分钟</td>
+<td><strong>实验1：平纸梁与槽形纸梁。</strong> 两张新纸、同跨度、中央同样加载，观察先弯的位置</td>
+<td>折形改变抗弯能力，纸的化学成分没变</td>
+<td>形状本身可以改变表现；受损试样不当新对照</td>
+</tr>
+<tr>
+<td>18–31分钟</td>
+<td><strong>实验2：可转动方框与斜撑。</strong> 自己连框、轻推，再加入斜撑比较</td>
+<td>四边形可改变角度，斜撑限制这种形变</td>
+<td>材料硬不等于框架稳；加斜撑也增加了材料，不能据此宣布绝对最省料</td>
+</tr>
+<tr>
+<td>31–45分钟</td>
+<td><strong>实验3：纸拱有／无侧挡。</strong> 保持拱形和加载位置近似一致，观察拱脚是否外滑</td>
+<td>拱把一部分作用传向两侧，侧挡影响承载</td>
+<td>支座也是结构的一部分，不只看桥面</td>
+</tr>
+<tr>
+<td>45–53分钟</td>
+<td><strong>应用：修一个已知薄弱处。</strong> 选中部弯、方框歪或拱脚滑的一例，先预测，再只改对应一处并测试</td>
+<td>使用刚得到的证据选择措施</td>
+<td>修哪里要有理由，不是到处加胶带</td>
+</tr>
+<tr>
+<td>53–60分钟</td>
+<td>画三种失败位置和对应措施，保存可复用部件、收配重</td>
+<td>构件、连接、支座共同影响稳定</td>
+<td>为第二课设计准备可调用的办法</td>
+</tr>
+</tbody>
+</table>
+<h2>第2课：接头会先开，还是桥面会先弯</h2>
+<p><strong>核心问题：我的桥最先从哪里失效，怎样改得更可靠？</strong> 两组短测试＋一项包含制作、测试和改进的工程实验。</p>
+<p><strong>课前准备</strong>：纸、薄卡条与纸管、胶带、相同支座和小配重。为两组短测试裁好同规格材料；桥梁主体由孩子制作。先确认约15–20厘米的小跨度能在有限材料内完成，不要求复杂桁架或精美外观。</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要发现什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>回看载荷路径，预测接头和长杆哪处易出问题</td>
+<td>从局部规律走向完整结构</td>
+<td>找出需要先测试的未知条件</td>
+</tr>
+<tr>
+<td>4–13分钟</td>
+<td><strong>实验1：端面对接与搭接。</strong> 用相同纸条、相同胶带长度做两类接头，轻载拉／弯比较先剥开的地方，支撑条件尽量相同</td>
+<td>连接几何改变力传递和胶带剥离方式</td>
+<td>胶带量相同仍可不同；记录连接形式带来的伴随变化，不称为材料强度精测</td>
+</tr>
+<tr>
+<td>13–22分钟</td>
+<td><strong>实验2：细长纸管的侧向失稳。</strong> 用同规格新纸管比较轻压时有／无中段侧向支撑的侧弯，支撑只限制横移、不承接竖向载荷</td>
+<td>压缩构件可能先侧弯失稳，侧向支撑可改变有效自由长度</td>
+<td>桥失败不只有材料被压碎，限制变形方向也是办法</td>
+</tr>
+<tr>
+<td>22–28分钟</td>
+<td><strong>工程实验设计：限材料小桥。</strong> 约定跨度、材料与配重位置，画一张包含接头、支座的草图</td>
+<td>先确定可检验目标</td>
+<td>设计必须说明载荷怎样走到支座</td>
+</tr>
+<tr>
+<td>28–44分钟</td>
+<td><strong>工程实验制作。</strong> 自己折梁、连桥面、设置必要支撑；只做一个小模型</td>
+<td>16分钟是实际制作预算</td>
+<td>将前两组证据用于接头与稳定设计</td>
+</tr>
+<tr>
+<td>44–54分钟</td>
+<td><strong>工程实验测试与一处改进。</strong> 缓慢加载到明显变形，标记薄弱处，修一处后复测</td>
+<td>修补后载荷与失效位置可能改变</td>
+<td>修复样品已有损伤，复测不能冒充全新材料的严格公平比赛</td>
+</tr>
+<tr>
+<td>54–60分钟</td>
+<td>留设计图、两轮结果和改动理由，回收配重与材料</td>
+<td>工程判断需要说明条件和局限</td>
+<td>下一版优先改哪个位置，并说明依据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>时间安排</strong>：第二课短测试18分钟，设计制作22分钟，加载改进10分钟，开场与收尾10分钟。若准备做复杂桥或装饰，另行选作品课；本课模型不扩规格。若制作快，可重新做一小段接头核验，不把等待凑成一课。</p>
+<p><strong>来源与改编</strong>：<a href="https://annex.exploratorium.edu/structures/paperbridges.html">Exploratorium Paper Bridges</a>、<a href="https://www.teachengineering.org/lessons/cub_trusses_lesson01">TeachEngineering Triangles &amp; Trusses</a>、<a href="https://www.teachengineering.org/activities/nyu_bridge_activity1">TeachEngineering Building Our Bridge to Fun</a>。<a href="https://casce.princeton.edu/teaching-resources/active-learning/demonstrating-buckling-pvc-pipe">普林斯顿压屈演示</a>提供自由长度与失稳的机制背景；新增接头、纸管侧向支撑为轻载模型改编，不照搬其大型装置；纸材、接头和安全加载范围须课前验证。</p>
+</article></main>
+<main class="document-preview" id="md-preview-f95fa7b53750" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 09-发光与能量_1课.md</span><a class="document-preview-html" href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/09-%E5%8F%91%E5%85%89%E4%B8%8E%E8%83%BD%E9%87%8F_1%E8%AF%BE.html">打开 HTML 阅读版</a></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\60分钟课程重整\09-发光与能量_1课.md</code></details><article><h1>发光与能量：光从哪里获得能量（1课，可选）</h1>
+<p><a href="#lesson-content">返回新目录</a></p>
+<p><strong>核心问题：都是亮起来，为什么有的关灯就不亮，有的混合后自己亮？</strong> 新增完整的一小时选题，把旧强视觉库的鲁米诺放到能量来源的解释中，并加入两组孩子能操作的观察。三组实验，不把一次蓝光闪现安排成一整课。</p>
+<p><strong>主线</strong>：外来光持续提供能量 → 化学反应提供能量 → 温度影响反应释放能量的快慢。孩子画能量箭头，区分“发光”和“溶液看起来有颜色”，不讲激发态计算。此前白光色散与紫甘蓝变色只作已有经验，不重新操作。</p>
+<h2>课前准备</h2>
+<p>备含奎宁的汤力水与清水对照、合适的低功率封闭观察灯箱（UVA光源由教师控制并遮挡直射）、三支同批完整荧光棒、冷水与温水杯、温度计。温水采用适合器材且不烫手的条件；不切开荧光棒。</p>
+<p>鲁米诺使用标签与说明完整的水性教学工作液，由教师按同一来源配液、演示，另备缺少配套氧化工作液的对照。配方中的氧化剂、碱性条件与废液要求按完整方案落实，不把家庭清洁剂自由混用。暗背景保持能看清桌面与路线。</p>
+<h2>60分钟课堂</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>实际做什么</th>
+<th>现象与本质</th>
+<th>孩子要学会什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4分钟</td>
+<td>预测“要照着才亮”和“自己继续亮”的区别</td>
+<td>光能量从哪里来是本课总线索</td>
+<td>先找持续的能量来源</td>
+</tr>
+<tr>
+<td>4–18分钟</td>
+<td><strong>实验1：汤力水荧光的开／关光源对照。</strong> 在遮光观察窗中比较汤力水与清水，教师切换光源，孩子记录</td>
+<td>奎宁吸收外来光并快速发出可见荧光，关光后发光很快停止</td>
+<td>荧光需要外部供能；液体亮不证明此时发生新化学反应</td>
+</tr>
+<tr>
+<td>18–34分钟</td>
+<td><strong>实验2：完整荧光棒的冷／温／室温比较。</strong> 同时启动三支，分别入水，比较亮度；交换冷温位置再看变化</td>
+<td>混合后的化学反应供能，温度改变反应快慢与即时亮度</td>
+<td>温度不是颜色颜料；交叉换杯帮助排除某根天生较亮</td>
+</tr>
+<tr>
+<td>34–48分钟</td>
+<td><strong>实验3：水性鲁米诺化学发光教师演示。</strong> 比较完整工作液与缺少配套氧化剂的对照，观察蓝光出现位置和衰减</td>
+<td>鲁米诺氧化过程产生发光产物；不是靠外来照射维持可见光</td>
+<td>指出启动反应需要哪些已验证条件；缺一种材料的对照比“哇”多提供一条证据</td>
+</tr>
+<tr>
+<td>48–54分钟</td>
+<td>再看三支荧光棒，画外来光→荧光与化学反应→光的两条箭头</td>
+<td>相同外观可有不同能量来源</td>
+<td>“现在更亮”与“总共亮得更久”要用不同时间跨度检验</td>
+</tr>
+<tr>
+<td>54–60分钟</td>
+<td>保存固定观察条件的照片或排序，收起灯箱和工作液</td>
+<td>比较亮度需要相近观察条件</td>
+<td>能预测切断照射或改变温度后的结果</td>
+</tr>
+</tbody>
+</table>
+<p><strong>时间与效果</strong>：不承诺一小时看完荧光棒寿命。持续时间由教师课后在相同条件下记录，下一次仅简短回看；不另设一节等它熄灭。鲁米诺蓝光的肉眼可见度先在实际房间预试；不能用长曝光照片代替现场效果。若工作液或灯箱未备妥，这课先不排进近期日程，选择已备齐的混合或物理课。</p>
+<p><strong>教师本质</strong>：荧光与化学发光的供能方式不同；荧光棒不是鲁米诺同配方。暖一些常使反应较快、当时更亮，但本课短时亮度对照本身不能测出完整发光寿命。</p>
+<p><strong>来源与改编</strong>：<a href="https://www.acs.org/education/activities/slow-the-glow.html">ACS Slow the Glow</a>、<a href="https://www.acs.org/education/activities/chemistry-that-glows.html">ACS Chemistry That Glows</a>、<a href="https://www.sciencebuddies.org/stem-activities/tonic-water-glows">Science Buddies汤力水荧光</a>。三组串联与课堂分钟数为本次设计；采用安全遮光观察形式，教师配液演示与孩子记录分工明确。</p>
+</article></main>
+<main class="document-preview" id="md-preview-b33563055168" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\README.md</code></details><article><h1>Science G5 项目导航</h1>
+<p>课程文件按用途和规划阶段存放。本轮按课堂容量重整的选课稿从“60分钟课程重整”进入；原版系列完整保留，历史构想和对照资料从“课程规划阶段”进入。</p>
+<table>
+<thead>
+<tr>
+<th>要找什么</th>
+<th>入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新版：60分钟内连续完成多组实验</td>
+<td><a href="#lesson-content">60分钟课程重整</a> ／ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/60%E5%88%86%E9%92%9F%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%95%B4/README.html">HTML阅读版</a></td>
+</tr>
+<tr>
+<td>原版系列课程（保持原样）</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">系列课程总目录</a> ／ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">HTML 阅读版</a></td>
+</tr>
+<tr>
+<td>已经使用的详细教案与授课进度</td>
+<td><a href="#md-preview-7ea41a2780b5" data-md-preview="md-preview-7ea41a2780b5">核心课程备课</a></td>
+</tr>
+<tr>
+<td>各阶段的规划稿、用户原稿和修订对照</td>
+<td><a href="#md-preview-05acb3ea7afe" data-md-preview="md-preview-05acb3ea7afe">课程规划阶段</a></td>
+</tr>
+<tr>
+<td>学校每周复习资料</td>
+<td><a href="#md-preview-7e9ef6040308" data-md-preview="md-preview-7e9ef6040308">每周内容目录</a></td>
+</tr>
+<tr>
+<td>学校课程参考</td>
+<td><a href="#md-preview-b854290a08e1" data-md-preview="md-preview-b854290a08e1">五年级科学学校材料参考大纲</a></td>
+</tr>
+<tr>
+<td>器材和试剂记录</td>
+<td><a href="#md-preview-8023dbf2f1bd" data-md-preview="md-preview-8023dbf2f1bd">试剂识别与保存状态评估</a> ／ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%99%A8%E6%9D%90%E5%8F%8A%E8%AF%95%E5%89%82/">器材及试剂目录</a></td>
+</tr>
+<tr>
+<td>试剂混合现象、原理与补充选择</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%99%A8%E6%9D%90%E5%8F%8A%E8%AF%95%E5%89%82/%E6%B7%B7%E5%90%88%E7%8E%B0%E8%B1%A1%E4%B8%8E%E5%8E%9F%E7%90%86_%E7%8E%B0%E6%9C%89%E5%8F%8A%E8%A1%A5%E5%85%85%E5%90%8E.html">现有及补充后：Markdown</a> ／ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%99%A8%E6%9D%90%E5%8F%8A%E8%AF%95%E5%89%82/%E6%B7%B7%E5%90%88%E7%8E%B0%E8%B1%A1%E4%B8%8E%E5%8E%9F%E7%90%86_%E7%8E%B0%E6%9C%89%E5%8F%8A%E8%A1%A5%E5%85%85%E5%90%8E.html">HTML 阅读版</a></td>
+</tr>
+<tr>
+<td>家长反馈文档</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%AE%B6%E9%95%BF%E5%8F%8D%E9%A6%88/">家长反馈目录</a></td>
+</tr>
+<tr>
+<td>其他旧教案和旧材料清单</td>
+<td><a href="#md-preview-e0ee5f31354b" data-md-preview="md-preview-e0ee5f31354b">历史资料总目录</a></td>
+</tr>
+</tbody>
+</table>
+<p>当前常规课为一对一、每次45–60分钟。各系列按对应文件维护；阶段归档保留形成时的内容与当时的设计前提。</p>
+<p>根目录只保留本导航、项目规则和必要配置。已归档的旧方案、重复副本及旧跳转文件不再留在根目录。</p>
+</article></main>
+<main class="document-preview" id="md-preview-8023dbf2f1bd" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 试剂识别与保存状态评估.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\器材及试剂\试剂识别与保存状态评估.md</code></details><article><h1>试剂识别与保存状态评估</h1>
+<h2>本次复核补充（2026-09-07）</h2>
+<p>用户确认：4 尿素、34 二氧化硅、41 氯化钠、42 氯化钙、48 硫酸铜均没有补充，继续按无库存处理。已完成基于原清单和公开资料的保存／混合用途复核，详见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%99%A8%E6%9D%90%E5%8F%8A%E8%AF%95%E5%89%82/%E7%8E%B0%E6%9C%89%E8%AF%95%E5%89%82%E6%B7%B7%E5%90%88%E7%AD%9B%E9%80%89_2026-09-07.html">现有试剂混合筛选</a>／<a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%99%A8%E6%9D%90%E5%8F%8A%E8%AF%95%E5%89%82/%E7%8E%B0%E6%9C%89%E8%AF%95%E5%89%82%E6%B7%B7%E5%90%88%E7%AD%9B%E9%80%89_2026-09-07.html">HTML</a>。<strong>本次未检查当前实物、未进行反应预试，没有新增任何“实测合格”状态。</strong></p>
+<p>下面保留原盘点，涉及以下事项时以本次补充为准：</p>
+<ul>
+<li>49 无水硫酸铜即使吸水变蓝，身份明确且无污染时，仍值得核验铜盐沉淀与铁置换用途；不能据此恢复“无水检水”资格。</li>
+<li>46 硫代硫酸钠加酸会在形成硫浑浊的同时产生二氧化硫，退出本次家庭儿童混合探索；32 亚硫酸钠同样不与酸自由配对。</li>
+<li>无编号旧双氧水的浓度未知，本次不用；不能靠催化冒泡试验确认它的安全浓度或可靠效力。</li>
+<li>碘伏仍棕色不是合格证明，须与新配淀粉实际显色；小苏打水未使酚酞明显变红，也不能单独判定酚酞失效。</li>
+<li>不尝、不闻瓶口来判断任何旧试剂。受潮、水合状态改变与真正成分失活应分开判断，但身份不明或疑似污染的样品不靠试反应来鉴定后交给孩子。</li>
+</ul>
+<p>评估条件：根据 <code>试剂1.jpg</code> 到 <code>试剂13.jpg</code> 的可读标签整理。默认这些试剂已经从原包装转移到普通小白分装瓶或小样品袋中，保存约半年；瓶子算是有盖密封，但密封性不按专业试剂瓶处理。</p>
+<p>重要限制：</p>
+<ul>
+<li>本表只根据照片标签和常见保存稳定性判断，不能替代原瓶标签、SDS 或实物检查。</li>
+<li>标签、浓度、状态、气味或颜色有任何一项不确定时，不用于学生动手实验。</li>
+<li>“还能用”只指微量、课堂定性实验；不指食品、医用、定量分析或开放加热。</li>
+<li>未清楚识别的编号：<code>1</code>、<code>3</code>、<code>29</code>、<code>30</code>、<code>31</code>、<code>53</code>、<code>54</code>、<code>55</code>、<code>57</code>、<code>58</code>、<code>61</code>、<code>67</code>、<code>72</code>、<code>73</code>、<code>74</code>、<code>77</code>、<code>78</code>、<code>79</code>、<code>82</code>、<code>88</code>、<code>94</code>。如实物存在，需要重新拍近照或直接核对瓶身。</li>
+</ul>
+<h2>最新盘点（2026-07-14）</h2>
+<p><strong>计数更正：<strong>照片中的样品按 <code>1–95</code> 编号，共有 <strong>95 个编号位</strong>。其中 <strong>74 个编号</strong>已至少读出名称，<strong>21 个编号</strong>尚未从照片中可靠读出；另有一瓶写着“过氧化氢”的样品</strong>未见编号</strong>。先前所写的“75 条记录”是把“74 个已识别编号”与“1 瓶无编号过氧化氢”合并后的索引数，<strong>不能理解为照片中只有 75 瓶/75 件</strong>。</p>
+<h3>待你协助确认的 21 个编号</h3>
+<p><code>1</code>、<code>3</code>、<code>29</code>、<code>30</code>、<code>31</code>、<code>53</code>、<code>54</code>、<code>55</code>、<code>57</code>、<code>58</code>、<code>61</code>、<code>67</code>、<code>72</code>、<code>73</code>、<code>74</code>、<code>77</code>、<code>78</code>、<code>79</code>、<code>82</code>、<code>88</code>、<code>94</code>。</p>
+<p>另有三处需要核对，但不计入上面 21 个“未识别编号”：</p>
+<ul>
+<li><code>17</code>：袋装标签为“石蜡”，瓶装标签为“葡萄糖”，出现同号重复；两种物品本身均已读出。</li>
+<li><code>22</code>：照片中可见一瓶为“过磷酸钙”，此前另有一处被读作“柠檬酸钠”，需核对是否贴错号或确有两个同号样品。</li>
+<li><code>69</code>：可读到“……酸钠”，但首字不清，不能据此确定具体物质。</li>
+</ul>
+<p>本次库存判断以“是否还能直接用于课堂”为准；标为“已用掉”的物品暂不计入可用库存。</p>
+<h3>上节课已用掉／不再作为现有库存</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>名称</th>
+<th>本次状态</th>
+<th>后续处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">48</td>
+<td>硫酸铜</td>
+<td>已用掉</td>
+<td>后续若做铜盐颜色、结晶或置换反应，再采购标签完整的硫酸铜。</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>尿素</td>
+<td>已用掉</td>
+<td>若还要做吸热溶解，补充新包装尿素；使用前做小样测温。</td>
+</tr>
+<tr>
+<td style="text-align:right">41</td>
+<td>氯化钠</td>
+<td>已用掉</td>
+<td>以食盐或标签明确的氯化钠补充；用于温度变化小的对照即可。</td>
+</tr>
+<tr>
+<td style="text-align:right">42</td>
+<td>氯化钙</td>
+<td>已用掉；上课时已呈液体</td>
+<td>不将剩余液体当作固体氯化钙使用。后续放热溶解实验应补充干燥、标签明确的固体氯化钙，并在课前预检。</td>
+</tr>
+<tr>
+<td style="text-align:right">34</td>
+<td>二氧化硅</td>
+<td>已用掉</td>
+<td>若要继续作颗粒/过滤介质观察，可补充石英砂或标签明确的二氧化硅；操作时防扬尘。</td>
+</tr>
+</tbody>
+</table>
+<p>**关于氯化钙变成液体：**这在储存不良或密封不严时是合理且常见的。氯化钙强烈吸湿、会潮解，吸收空气中的水分后可由固体变成浓氯化钙溶液；若原本买的就是氯化钙溶液，也可能本来就是液体。但无论是哪种情况，浓度和含水量都不能据此确认，<strong>不能再用于“固体溶于水放热”的课堂实验</strong>。液体再加水时的温度变化主要取决于未知浓度和稀释过程，结果不稳定；应改用新鲜、干燥、标签完整的固体氯化钙。</p>
+<h2>总体结论</h2>
+<h3>优先可继续使用</h3>
+<p>这些试剂在小白瓶里放半年，化学组成通常不会明显改变。使用前仍要看是否受潮、变色、霉变或污染。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>照片识别名称</th>
+<th>可靠性判断</th>
+<th>可用于哪些实验</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">2</td>
+<td>木炭</td>
+<td>稳定</td>
+<td>吸附、燃烧现象、材料性质观察</td>
+<td>不做食品或水净化用途</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>脱脂棉</td>
+<td>稳定，怕受潮污染</td>
+<td>过滤辅助、吸水、毛细现象</td>
+<td>变黄、发霉或有异味则丢弃</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>活性炭</td>
+<td>稳定</td>
+<td>吸附色素、过滤对比</td>
+<td>不作为饮水净化材料</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>聚乙烯</td>
+<td>稳定</td>
+<td>材料分类、密度/浮沉、热塑性演示</td>
+<td>不加热燃烧给学生闻气味</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>粗盐</td>
+<td>稳定</td>
+<td>溶解、过滤、结晶、盐水实验</td>
+<td>粗盐有杂质，做定量或清澈盐水时用氯化钠更好</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>石英砂</td>
+<td>稳定</td>
+<td>过滤层、沉降、颗粒观察</td>
+<td>避免扬尘</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td>石蜡（袋装）</td>
+<td>稳定</td>
+<td>熔化/凝固、密度、疏水性</td>
+<td>加热由教师完成</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td>葡萄糖（瓶装标签）</td>
+<td>基本稳定，可能轻微受潮</td>
+<td>溶解、还原糖演示的预实验</td>
+<td>与袋装“17 石蜡”编号冲突，使用前核对实物标签</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td>蔗糖</td>
+<td>稳定，可能吸潮结块</td>
+<td>溶解、结晶、糖水密度</td>
+<td>结块不影响普通溶解实验</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td>硼酸</td>
+<td>较稳定</td>
+<td>弱酸性观察、硼砂/硼酸对比演示</td>
+<td>不入口；儿童不直接接触粉末</td>
+</tr>
+<tr>
+<td style="text-align:right">23</td>
+<td>硼砂</td>
+<td>较稳定，可能轻微风化/结块</td>
+<td>溶解、硼砂晶体、黏液类演示</td>
+<td>不入口；避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">24</td>
+<td>淀粉</td>
+<td>较稳定，怕受潮霉变</td>
+<td>碘-淀粉显色、糊化</td>
+<td>有霉味、结块发黄则丢弃</td>
+</tr>
+<tr>
+<td style="text-align:right">25</td>
+<td>明矾</td>
+<td>较稳定</td>
+<td>溶解、结晶、絮凝演示</td>
+<td>晶体含水量可能变，别做精确定量</td>
+</tr>
+<tr>
+<td style="text-align:right">26</td>
+<td>凡士林</td>
+<td>稳定</td>
+<td>疏水性、防水层、密封对比</td>
+<td>不用于皮肤护理演示</td>
+</tr>
+<tr>
+<td style="text-align:right">34</td>
+<td>二氧化硅</td>
+<td>稳定</td>
+<td>固体性质、过滤介质对比</td>
+<td>避免扬尘</td>
+</tr>
+<tr>
+<td style="text-align:right">35</td>
+<td>二氧化锰</td>
+<td>稳定</td>
+<td>双氧水分解催化演示</td>
+<td>双氧水必须另行确认有效；粉末避免吸入</td>
+</tr>
+<tr>
+<td style="text-align:right">36</td>
+<td>三氧化二铁</td>
+<td>稳定</td>
+<td>氧化物、磁性/颜色观察</td>
+<td>避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">37</td>
+<td>氧化铜</td>
+<td>稳定</td>
+<td>氧化物颜色、还原演示（教师）</td>
+<td>不做学生加热还原</td>
+</tr>
+<tr>
+<td style="text-align:right">39</td>
+<td>氧化铝</td>
+<td>稳定</td>
+<td>氧化物、难溶性观察</td>
+<td>避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">40</td>
+<td>氯化钾</td>
+<td>稳定</td>
+<td>溶解、盐类对比</td>
+<td>不入口</td>
+</tr>
+<tr>
+<td style="text-align:right">41</td>
+<td>氯化钠</td>
+<td>稳定</td>
+<td>第 4 节溶解、过滤、结晶</td>
+<td>优先用于清澈盐水实验</td>
+</tr>
+<tr>
+<td style="text-align:right">47</td>
+<td>硫酸钠</td>
+<td>较稳定</td>
+<td>溶解、盐类对比</td>
+<td>可能含水量变化，不做称量-化学式计算</td>
+</tr>
+<tr>
+<td style="text-align:right">50</td>
+<td>硫酸镁</td>
+<td>较稳定，水合状态可能变化</td>
+<td>溶解、结晶、盐类对比</td>
+<td>不做“无水/水合物”定量</td>
+</tr>
+<tr>
+<td style="text-align:right">56</td>
+<td>硫酸锌</td>
+<td>较稳定，可能吸湿</td>
+<td>盐类溶解、沉淀演示（教师）</td>
+<td>避免学生接触</td>
+</tr>
+<tr>
+<td style="text-align:right">59</td>
+<td>碳酸钙</td>
+<td>稳定</td>
+<td>酸遇碳酸盐产气、岩石/矿物对比</td>
+<td>可用白醋或柠檬酸做微量产气</td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td>碳酸氢钠</td>
+<td>较稳定，可能结块</td>
+<td>酸碱反应产气、反应速率、溶解降温弱对比</td>
+<td>结块可压碎；不用于食品</td>
+</tr>
+<tr>
+<td style="text-align:right">63</td>
+<td>碱式碳酸铜</td>
+<td>稳定</td>
+<td>铜盐颜色、受热分解演示（教师）</td>
+<td>不做学生加热或接触</td>
+</tr>
+<tr>
+<td style="text-align:right">64</td>
+<td>石墨</td>
+<td>稳定</td>
+<td>导电性、材料性质</td>
+<td>粉末避免吸入</td>
+</tr>
+<tr>
+<td style="text-align:right">68</td>
+<td>四氧化三铁</td>
+<td>稳定</td>
+<td>磁性观察、氧化物对比</td>
+<td>避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">70</td>
+<td>溴化钾</td>
+<td>稳定</td>
+<td>盐类溶解、离子对比（教师）</td>
+<td>不入口；不与强氧化剂混用</td>
+</tr>
+<tr>
+<td style="text-align:right">71</td>
+<td>磷矿粉</td>
+<td>稳定</td>
+<td>矿物观察、难溶性对比</td>
+<td>避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">75</td>
+<td>硬脂酸</td>
+<td>稳定</td>
+<td>熔点、疏水性、酸性很弱的材料观察</td>
+<td>加热由教师完成</td>
+</tr>
+<tr>
+<td style="text-align:right">76</td>
+<td>氢氧化铝</td>
+<td>稳定</td>
+<td>难溶氢氧化物、两性演示（教师）</td>
+<td>不做入口类“胃药”演示</td>
+</tr>
+<tr>
+<td style="text-align:right">83</td>
+<td>硫酸锰</td>
+<td>较稳定</td>
+<td>盐类颜色、溶解观察（教师）</td>
+<td>避免学生接触</td>
+</tr>
+<tr>
+<td style="text-align:right">85</td>
+<td>磷酸二氢钾</td>
+<td>稳定</td>
+<td>溶解、盐类/肥料成分讨论</td>
+<td>不用于种植或食品</td>
+</tr>
+<tr>
+<td style="text-align:right">89</td>
+<td>大理石</td>
+<td>稳定</td>
+<td>酸遇碳酸盐产气、岩石观察</td>
+<td>表面脏污可冲洗</td>
+</tr>
+<tr>
+<td style="text-align:right">91</td>
+<td>滑石粉</td>
+<td>稳定</td>
+<td>粉体性质、润滑/疏水观察</td>
+<td>避免吸入</td>
+</tr>
+<tr>
+<td style="text-align:right">92</td>
+<td>高岭土</td>
+<td>稳定</td>
+<td>泥土/矿物、悬浊液、沉降</td>
+<td>避免吸入</td>
+</tr>
+<tr>
+<td style="text-align:right">95</td>
+<td>黄铜片</td>
+<td>稳定，可能表面氧化</td>
+<td>金属材料、导电性、密度/颜色观察</td>
+<td>表面氧化可轻擦，不做强酸反应</td>
+</tr>
+</tbody>
+</table>
+<h3>会出问题，但原化学性质部分还在，可有限使用</h3>
+<p>这类主要问题是吸水、水合状态变化、表面氧化、轻微风化、指示剂变淡或浓度不准。它们通常还可以做定性观察，但不能做依赖纯度、浓度、含水量、热效应大小或定量数据的实验。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>照片识别名称</th>
+<th>可能出的问题</th>
+<th>还能怎么用</th>
+<th>不建议怎么用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">4</td>
+<td>尿素</td>
+<td>轻微吸湿结块</td>
+<td>第 4 节吸热溶解；只要能称量、能溶解即可</td>
+<td>不做纯度或氮含量相关定量</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>还原铁粉</td>
+<td>表面氧化、吸潮，活性下降</td>
+<td>铁粉磁性、铁生锈、与酸反应的定性演示</td>
+<td>不做反应速率或还原性强弱定量</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>洋红</td>
+<td>染料可能褪色、污染瓶壁</td>
+<td>扩散、染色、色素吸附定性</td>
+<td>不做标准颜色或浓度判断</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>锌粒</td>
+<td>表面氧化，反应变慢</td>
+<td>与稀酸产氢的教师演示，先用砂纸或稀酸快速活化</td>
+<td>不做速率比较数据</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>硅酸钠</td>
+<td>若为溶液，可能吸收二氧化碳、胶化、浓度变</td>
+<td>“水玻璃”凝胶/黏度定性观察</td>
+<td>不做浓度、pH 或硅酸盐定量</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>石蕊</td>
+<td>指示剂可能褪色或受污染</td>
+<td>先用白醋和小苏打水测试，能变色再做酸碱识别</td>
+<td>不做精确 pH 判断</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td>品红</td>
+<td>可能褪色、被污染或吸湿</td>
+<td>扩散、吸附、染色观察</td>
+<td>不做标准颜色对照</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td>酚酞</td>
+<td>溶剂可能挥发，颜色反应变弱</td>
+<td>先用小苏打水/稀碱测试，能显粉红再用作酸碱指示</td>
+<td>不做精确 pH 或浓度判断</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td>碘伏</td>
+<td>有效碘降低、颜色变浅；活性随光和时间下降</td>
+<td>若仍棕色，可做淀粉显色的粗略演示</td>
+<td>不做碘钟、消毒效果或定量氧化还原</td>
+</tr>
+<tr>
+<td style="text-align:right">21</td>
+<td>柠檬酸</td>
+<td>可能吸潮结块</td>
+<td>与碳酸氢钠反应产气、酸味概念替代用语</td>
+<td>不入口；不做精确质量分数</td>
+</tr>
+<tr>
+<td style="text-align:right">22</td>
+<td>柠檬酸钠（照片可见）</td>
+<td>可能吸潮结块</td>
+<td>缓冲盐/盐类溶解讨论</td>
+<td>不做缓冲液精确 pH</td>
+</tr>
+<tr>
+<td style="text-align:right">22?</td>
+<td>过磷酸钙（照片有一瓶标签疑似，编号被遮挡）</td>
+<td>肥料混合物，本身成分不单一；会吸湿结块</td>
+<td>只能作“肥料/混合物/难溶与可溶部分”观察</td>
+<td>不做纯试剂实验；不与未知酸碱混合</td>
+</tr>
+<tr>
+<td style="text-align:right">27</td>
+<td>草酸</td>
+<td>可能含结晶水变化；有毒</td>
+<td>教师微量演示酸性或与钙盐沉淀</td>
+<td>不给学生动手；不加热；不入口</td>
+</tr>
+<tr>
+<td style="text-align:right">28</td>
+<td>蒸馏水</td>
+<td>开封分装后会吸收 CO2，可能有微生物或离子污染</td>
+<td>普通溶解、洗涤、对照水</td>
+<td>不作无菌水或高纯水</td>
+</tr>
+<tr>
+<td style="text-align:right">32</td>
+<td>无水亚硫酸钠</td>
+<td>会吸湿并被空气氧化成硫酸盐，还原性下降</td>
+<td>还原性演示需先预检；也可作“保存导致性质下降”案例</td>
+<td>不做定量还原剂、脱氧剂或标准溶液</td>
+</tr>
+<tr>
+<td style="text-align:right">33</td>
+<td>硫酸亚铁铵</td>
+<td>Fe(II) 会被空气氧化成 Fe(III)，颜色可能变黄褐</td>
+<td>铁盐颜色/氧化变质讨论；Fe(II) 反应需先预检</td>
+<td>不做 Fe(II) 定量或标准滴定</td>
+</tr>
+<tr>
+<td style="text-align:right">42</td>
+<td>氯化钙</td>
+<td>强吸湿，可能变成水合物或半潮湿颗粒，放热变弱</td>
+<td>第 4 节放热溶解可用，但必须课前用 1 g + 10 mL 水测温</td>
+<td>不把升温幅度当纯无水氯化钙数据</td>
+</tr>
+<tr>
+<td style="text-align:right">43</td>
+<td>氯化铵</td>
+<td>可能吸湿结块；与碱会放出氨味</td>
+<td>吸热溶解可作教师备选；盐类溶解</td>
+<td>不与碱混合给学生闻；不密闭加热</td>
+</tr>
+<tr>
+<td style="text-align:right">44</td>
+<td>无水乙酸钠</td>
+<td>会吸水变为水合乙酸钠，影响“热冰”结晶效果</td>
+<td>普通盐类溶解、乙酸盐讨论；热冰实验需重结晶/重配</td>
+<td>不直接做过饱和热冰，成功率不稳</td>
+</tr>
+<tr>
+<td style="text-align:right">45</td>
+<td>氯化锌</td>
+<td>很吸湿、可潮解，水溶液酸性且有腐蚀性</td>
+<td>仅教师用于盐类/腐蚀性讨论，必要时微量</td>
+<td>不给学生动手；不用于开放混合实验</td>
+</tr>
+<tr>
+<td style="text-align:right">46</td>
+<td>硫代硫酸钠</td>
+<td>常见为水合物，可能风化/吸湿；酸中会分解出硫浑浊</td>
+<td>与稀酸产生浑浊、还原碘的定性演示需预检</td>
+<td>不做浓度或反应速率精确实验</td>
+</tr>
+<tr>
+<td style="text-align:right">48</td>
+<td>硫酸铜</td>
+<td>若是蓝色水合物，通常还可用；若受潮/混入杂质会影响质量</td>
+<td>铜盐颜色、结晶、置换反应定性</td>
+<td>不用来计算水合数</td>
+</tr>
+<tr>
+<td style="text-align:right">49</td>
+<td>无水硫酸铜</td>
+<td>极易吸水变蓝，失去“无水检水”可靠性</td>
+<td>如果仍近白色，可预检后作水检测；若已蓝，只当普通硫酸铜用</td>
+<td>不把蓝色样品当无水干燥剂/检水剂</td>
+</tr>
+<tr>
+<td style="text-align:right">51</td>
+<td>硫酸亚铁</td>
+<td>Fe(II) 容易氧化成 Fe(III)，潮湿时更快</td>
+<td>铁盐氧化变质案例；Fe(II) 定性反应需预检</td>
+<td>不做定量或标准还原剂</td>
+</tr>
+<tr>
+<td style="text-align:right">52</td>
+<td>无水硫酸钠</td>
+<td>易吸水转为水合盐，干燥能力下降</td>
+<td>当普通硫酸钠盐类使用</td>
+<td>不作干燥剂或含水量实验</td>
+</tr>
+<tr>
+<td style="text-align:right">62</td>
+<td>碳酸氢铵</td>
+<td>会缓慢分解并放出氨、二氧化碳和水，量会减少、气味变</td>
+<td>可作“易分解盐/闻到氨味说明挥发”的教师演示；也可做吸热溶解预检</td>
+<td>不做定量产气；不让学生闻瓶口</td>
+</tr>
+<tr>
+<td style="text-align:right">65</td>
+<td>氢氧化钙</td>
+<td>会吸收 CO2 生成碳酸钙，碱性下降</td>
+<td>先测 pH；若仍显碱性，可配石灰水做 CO2 浑浊</td>
+<td>不作准确浓度碱液</td>
+</tr>
+<tr>
+<td style="text-align:right">80</td>
+<td>铁钉</td>
+<td>表面生锈</td>
+<td>铁生锈、金属材料、磁性观察</td>
+<td>不做“全新铁表面”对照</td>
+</tr>
+<tr>
+<td style="text-align:right">81</td>
+<td>铜丝</td>
+<td>表面氧化/硫化变暗</td>
+<td>导电性、金属颜色、简单材料观察</td>
+<td>不做表面洁净度要求高的反应</td>
+</tr>
+<tr>
+<td style="text-align:right">84</td>
+<td>硫酸铁</td>
+<td>可能吸湿、水解结块</td>
+<td>Fe(III) 盐颜色、与碱生成沉淀的教师演示</td>
+<td>不做标准溶液或定量</td>
+</tr>
+<tr>
+<td style="text-align:right">86</td>
+<td>无水醋酸钠</td>
+<td>同无水乙酸钠，吸水后热冰效果不稳</td>
+<td>普通乙酸盐溶解；重配后再尝试热冰</td>
+<td>不直接做过饱和结晶成功演示</td>
+</tr>
+<tr>
+<td style="text-align:right">87</td>
+<td>琼脂</td>
+<td>可能吸湿、结块、受微生物污染</td>
+<td>若干燥无霉味，可做凝胶材料演示</td>
+<td>不做微生物培养基或入口</td>
+</tr>
+<tr>
+<td style="text-align:right">90</td>
+<td>硬水</td>
+<td>成分随开封、蒸发、CO2 交换变化</td>
+<td>与肥皂/碳酸盐做定性硬水对比</td>
+<td>不作标准硬度水</td>
+</tr>
+<tr>
+<td style="text-align:right">93</td>
+<td>铁屑</td>
+<td>表面锈蚀、吸潮，反应活性变化</td>
+<td>磁性、铁氧化、材料观察</td>
+<td>不做定量还原或反应速率</td>
+</tr>
+</tbody>
+</table>
+<h3>问题严重或安全风险高，不建议用于学生动手</h3>
+<p>这类要么保存后有效成分很可能明显变化，要么即使没变也不适合五年级学生直接使用。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>照片识别名称</th>
+<th>主要问题</th>
+<th>处理建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">未见编号</td>
+<td>过氧化氢/双氧水</td>
+<td>分装透明小瓶半年后很可能分解，浓度不可知；受光、热、杂质影响会更快失效</td>
+<td>不用于定量或关键实验。若要用，只能课前滴加二氧化锰/酵母测试是否明显冒泡；效果弱就换新 3% 药店双氧水</td>
+</tr>
+<tr>
+<td style="text-align:right">38</td>
+<td>氧化钙</td>
+<td>会吸水、吸 CO2，逐渐变成氢氧化钙/碳酸钙；遇水强放热且腐蚀性强</td>
+<td>不用于学生动手，也不替代氯化钙做放热溶解。若保留，只作教师讲解“变质/吸水”的样品</td>
+</tr>
+<tr>
+<td style="text-align:right">66</td>
+<td>氢氧化钡</td>
+<td>强碱且钡盐有毒；会吸收 CO2 生成碳酸钡，状态不可靠</td>
+<td>不用于五年级学生实验；建议单独封存并贴“教师专用/不使用”</td>
+</tr>
+<tr>
+<td style="text-align:right">疑似未清晰编号</td>
+<td>氢氧化钾</td>
+<td>强碱，强吸湿/潮解，腐蚀性高；普通瓶保存后浓度和形态不可控</td>
+<td>不用于学生动手；不与铵盐混合</td>
+</tr>
+<tr>
+<td style="text-align:right">45</td>
+<td>氯化锌</td>
+<td>潮解后可能形成酸性腐蚀性液体；对皮肤和眼睛风险高</td>
+<td>不给学生动手；若瓶内已潮湿，按高风险试剂封存</td>
+</tr>
+<tr>
+<td style="text-align:right">69</td>
+<td>标签疑似“黄酸钠”或其他黄色钠盐，未能可靠识别</td>
+<td>名称不确定；若是含铬/铁氰络合物等，安全边界不同</td>
+<td>名称未确认前不使用</td>
+</tr>
+<tr>
+<td style="text-align:right">27</td>
+<td>草酸</td>
+<td>有毒，粉末和溶液均不适合学生随意接触</td>
+<td>只保留教师微量演示；优先用柠檬酸替代酸性实验</td>
+</tr>
+<tr>
+<td style="text-align:right">6/15/16/19</td>
+<td>洋红、品红、酚酞、碘伏等染料/指示剂</td>
+<td>虽不一定失效，但浓度、溶剂和染料稳定性不可控；有染色污染风险</td>
+<td>只能预检后微量使用，学生不直接分装</td>
+</tr>
+</tbody>
+</table>
+<h2>适合第 4 节“溶解吸热/放热/变化小”的建议</h2>
+<p>在现有保存条件下，建议使用：</p>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>推荐试剂</th>
+<th>理由</th>
+<th>课前预检</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>温度变化小</td>
+<td><code>41 氯化钠</code>（已用掉）</td>
+<td>需补充食盐或标签明确的氯化钠后再作对照</td>
+<td>2.0 g + 10 mL 水，温度变化应很小</td>
+</tr>
+<tr>
+<td>吸热</td>
+<td><code>4 尿素</code>（已用掉）</td>
+<td>需补充新包装尿素；它比小苏打更容易得到明显降温，且比氯化铵更适合五年级</td>
+<td>1.0 g + 10 mL 水应有可测降温</td>
+</tr>
+<tr>
+<td>放热</td>
+<td><code>42 氯化钙</code>（已用掉，原样已液化）</td>
+<td>必须补充干燥、标签完整的<strong>固体</strong>氯化钙；原来的液体不适合此实验</td>
+<td>1.0 g + 10 mL 水若升温不到约 2 °C，就换新鲜氯化钙</td>
+</tr>
+</tbody>
+</table>
+<p>不建议把 <code>43 氯化铵</code> 作为主方案给学生做吸热，因为它与碱类接触会放出氨味，课堂管理风险比尿素高。也不建议用 <code>38 氧化钙</code> 代替氯化钙做放热，虽然现象强，但腐蚀性和放热风险不适合五年级动手。</p>
+<h2>快速预检流程</h2>
+<ol>
+<li>看标签：名称、编号、危险性不清楚的直接不用。</li>
+<li>看外观：潮解成液体、明显变色、发霉、有强烈异味、瓶盖污染的直接不用。</li>
+<li>对溶解温度实验：每种先用 <code>1.0 g</code> 固体 + <code>10 mL</code> 水做教师预实验，记录 2 分钟内最高/最低温。</li>
+<li>对酸碱/指示剂：先用白醋和小苏打水各滴一滴测试，能稳定变色再上课。</li>
+<li>对双氧水：只用新买 3% 双氧水；旧双氧水即使冒泡，也不作为可靠试剂。</li>
+</ol>
+<h2>按照片识别到的试剂索引</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>名称</th>
+<th>状态归类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">2</td>
+<td>木炭</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>尿素</td>
+<td>已用掉，待补充</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>还原铁粉</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>洋红</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>锌粒</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>脱脂棉</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>硅酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>活性炭</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>聚乙烯</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>粗盐</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>石英砂</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>石蕊</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td>品红</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td>酚酞</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td>石蜡/葡萄糖（照片有编号冲突）</td>
+<td>需核对；两者本身都较稳定</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td>蔗糖</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td>碘伏</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td>硼酸</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">21</td>
+<td>柠檬酸</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">22</td>
+<td>柠檬酸钠；另有疑似过磷酸钙标签</td>
+<td>需核对</td>
+</tr>
+<tr>
+<td style="text-align:right">23</td>
+<td>硼砂</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">24</td>
+<td>淀粉</td>
+<td>可靠，需防霉</td>
+</tr>
+<tr>
+<td style="text-align:right">25</td>
+<td>明矾</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">26</td>
+<td>凡士林</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">27</td>
+<td>草酸</td>
+<td>高风险，教师专用</td>
+</tr>
+<tr>
+<td style="text-align:right">28</td>
+<td>蒸馏水</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">32</td>
+<td>无水亚硫酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">33</td>
+<td>硫酸亚铁铵</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">34</td>
+<td>二氧化硅</td>
+<td>已用掉，待补充</td>
+</tr>
+<tr>
+<td style="text-align:right">35</td>
+<td>二氧化锰</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">36</td>
+<td>三氧化二铁</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">37</td>
+<td>氧化铜</td>
+<td>可靠，教师专用更合适</td>
+</tr>
+<tr>
+<td style="text-align:right">38</td>
+<td>氧化钙</td>
+<td>不建议学生使用</td>
+</tr>
+<tr>
+<td style="text-align:right">39</td>
+<td>氧化铝</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">40</td>
+<td>氯化钾</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">41</td>
+<td>氯化钠</td>
+<td>已用掉，待补充</td>
+</tr>
+<tr>
+<td style="text-align:right">42</td>
+<td>氯化钙</td>
+<td>已用掉；原样已液化，不用于放热溶解实验</td>
+</tr>
+<tr>
+<td style="text-align:right">43</td>
+<td>氯化铵</td>
+<td>可有限使用，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">44</td>
+<td>无水乙酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">45</td>
+<td>氯化锌</td>
+<td>高风险，教师专用/不建议</td>
+</tr>
+<tr>
+<td style="text-align:right">46</td>
+<td>硫代硫酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">47</td>
+<td>硫酸钠</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">48</td>
+<td>硫酸铜</td>
+<td>已用掉，待补充</td>
+</tr>
+<tr>
+<td style="text-align:right">49</td>
+<td>无水硫酸铜</td>
+<td>可有限使用；检水需预检</td>
+</tr>
+<tr>
+<td style="text-align:right">50</td>
+<td>硫酸镁</td>
+<td>可靠但不做含水量定量</td>
+</tr>
+<tr>
+<td style="text-align:right">51</td>
+<td>硫酸亚铁</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">52</td>
+<td>无水硫酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">56</td>
+<td>硫酸锌</td>
+<td>可靠，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">59</td>
+<td>碳酸钙</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td>碳酸氢钠</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">62</td>
+<td>碳酸氢铵</td>
+<td>可有限使用，易分解</td>
+</tr>
+<tr>
+<td style="text-align:right">63</td>
+<td>碱式碳酸铜</td>
+<td>可靠，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">64</td>
+<td>石墨</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">65</td>
+<td>氢氧化钙</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">66</td>
+<td>氢氧化钡</td>
+<td>不建议学生使用</td>
+</tr>
+<tr>
+<td style="text-align:right">68</td>
+<td>四氧化三铁</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">69</td>
+<td>名称不清，疑似黄色钠盐</td>
+<td>不使用，待确认</td>
+</tr>
+<tr>
+<td style="text-align:right">70</td>
+<td>溴化钾</td>
+<td>可靠，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">71</td>
+<td>磷矿粉</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">75</td>
+<td>硬脂酸</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">76</td>
+<td>氢氧化铝</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">80</td>
+<td>铁钉</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">81</td>
+<td>铜丝</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">83</td>
+<td>硫酸锰</td>
+<td>可靠，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">84</td>
+<td>硫酸铁</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">85</td>
+<td>磷酸二氢钾</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">86</td>
+<td>无水醋酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">87</td>
+<td>琼脂</td>
+<td>可靠，需防霉</td>
+</tr>
+<tr>
+<td style="text-align:right">89</td>
+<td>大理石</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">90</td>
+<td>硬水</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">91</td>
+<td>滑石粉</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">92</td>
+<td>高岭土</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">93</td>
+<td>铁屑</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">95</td>
+<td>黄铜片</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">未见编号</td>
+<td>过氧化氢/双氧水</td>
+<td>问题严重，优先换新</td>
+</tr>
+</tbody>
+</table>
+</article></main>
+<main class="document-preview" id="md-preview-7ea41a2780b5" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\核心课程备课\README.md</code></details><article><h1>核心课程备课</h1>
+<p>本文件夹保留已经实际使用的第 1–9 节详细备课稿，以及下一阶段即将使用的新实验课。第一阶段课程总览见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/01-%E6%9A%91%E6%9C%9F%E4%B8%8E%E5%A4%87%E9%80%89%E8%A7%84%E5%88%92/%E6%9A%91%E6%9C%9F%E5%AE%9E%E9%AA%8C%E7%A7%91%E5%AD%A6%E8%AF%BE%E7%A8%8B%E8%AE%A1%E5%88%92.html">暑期实验科学课程计划</a>；早期备选思路见 <a href="#md-preview-05eb9dd1fc05" data-md-preview="md-preview-05eb9dd1fc05">五年级正课后备选实验课程库</a>。</p>
+<p>当前选课见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">系列课程方案</a>；规划历史见 <a href="#md-preview-05acb3ea7afe" data-md-preview="md-preview-05acb3ea7afe">阶段目录</a>。</p>
+<h2>实际授课进度</h2>
+<blockquote>
+<p>文件已按实际授课先后编号。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">实际顺序</th>
+<th>对应备课</th>
+<th>状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">第 1 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/01-%E5%8D%95%E6%91%86%E5%91%A8%E6%9C%9F.html">01-单摆周期.md</a></td>
+<td><strong>已上</strong></td>
+<td>实验方法、控制变量与重复测量</td>
+</tr>
+<tr>
+<td style="text-align:right">第 2 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/02-%E6%BA%B6%E8%A7%A3%E8%B0%83%E6%9F%A5.html">02-溶解调查.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/02-%E6%BA%B6%E8%A7%A3%E8%B0%83%E6%9F%A5.html">HTML</a></td>
+<td><strong>已上</strong></td>
+<td>已完成粗盐/食盐溶解、过滤、结晶及温度变化相关活动；相关耗材库存以最新评估为准</td>
+</tr>
+<tr>
+<td style="text-align:right">第 3 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/03-%E7%89%A9%E7%90%86%E5%8F%98%E5%8C%96%E4%B8%8E%E5%8C%96%E5%AD%A6%E5%8F%98%E5%8C%96.html">03 教案 MD</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/03-%E7%89%A9%E7%90%86%E5%8F%98%E5%8C%96%E4%B8%8E%E5%8C%96%E5%AD%A6%E5%8F%98%E5%8C%96.html">HTML</a></td>
+<td><strong>已上</strong></td>
+<td>已完成物理变化、化学变化与新物质证据；后续只复习判断标准，不重复同组实验</td>
+</tr>
+<tr>
+<td style="text-align:right">第 4 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/04-%E7%83%AD%E8%83%BD%E4%BC%A0%E9%80%92.html">04 教案 MD</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/04-%E7%83%AD%E8%83%BD%E4%BC%A0%E9%80%92.html">HTML</a></td>
+<td><strong>已上</strong></td>
+<td>已完成一般能量概念及传导、对流和辐射实验</td>
+</tr>
+<tr>
+<td style="text-align:right">第 5 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/05-%E5%85%89%E9%81%87%E5%88%B0%E7%89%A9%E8%B4%A8%E5%90%8E%E5%8E%BB%E4%BA%86%E5%93%AA%E9%87%8C.html">05 教案 MD</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/05-%E5%85%89%E9%81%87%E5%88%B0%E7%89%A9%E8%B4%A8%E5%90%8E%E5%8E%BB%E4%BA%86%E5%93%AA%E9%87%8C.html">HTML</a></td>
+<td><strong>已上</strong></td>
+<td>已完成白光组成、物体颜色、反射定律、折射与全反射实验</td>
+</tr>
+<tr>
+<td style="text-align:right">第 6 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/06-%E8%BF%90%E5%8A%A8%E4%B8%8E%E5%8A%9B.html">06 教案 MD</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/06-%E8%BF%90%E5%8A%A8%E4%B8%8E%E5%8A%9B.html">HTML</a></td>
+<td><strong>已上</strong></td>
+<td>已完成空瓶小车、运动测量、力与质量的比较及气球动力改装</td>
+</tr>
+<tr>
+<td style="text-align:right">第 7 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/07-%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E7%A9%BA%E6%B0%94%E6%80%8E%E6%A0%B7%E7%95%99%E4%B8%8B%E8%AF%81%E6%8D%AE.html">07 教案 MD</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/07-%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E7%A9%BA%E6%B0%94%E6%80%8E%E6%A0%B7%E7%95%99%E4%B8%8B%E8%AF%81%E6%8D%AE.html">HTML</a></td>
+<td><strong>已上</strong></td>
+<td>已完成空气证据链及紫甘蓝显色加餐</td>
+</tr>
+<tr>
+<td style="text-align:right">第 8 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/08-%E6%98%BE%E5%BE%AE%E9%95%9C%E4%B8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7.html">08 教案 MD</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/08-%E6%98%BE%E5%BE%AE%E9%95%9C%E4%B8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7.html">HTML</a></td>
+<td><strong>已上</strong></td>
+<td>已完成显微镜细胞观察并启动杯壁豆类萌发；因后续间隔两周且没有持续照料，豆苗已经死亡，不再作为第 9 节实验材料</td>
+</tr>
+<tr>
+<td style="text-align:right">第 9 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/09-%E7%94%9F%E7%89%A9%E6%80%8E%E6%A0%B7%E8%BF%90%E8%BE%93%E7%89%A9%E8%B4%A8.html">09 教案 MD</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/09-%E7%94%9F%E7%89%A9%E6%80%8E%E6%A0%B7%E8%BF%90%E8%BE%93%E7%89%A9%E8%B4%A8.html">HTML</a></td>
+<td><strong>已上</strong></td>
+<td>已完成植物水路、维管束、气孔与蒸腾证据</td>
+</tr>
+<tr>
+<td style="text-align:right">第 10 节</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/10-%E4%BC%9A%E7%88%AC%E7%9A%84%E6%B0%B4%E4%B8%8E%E5%A2%A8%E6%B0%B4%E6%8C%87%E7%BA%B9.html">10 教案 MD</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/10-%E4%BC%9A%E7%88%AC%E7%9A%84%E6%B0%B4%E4%B8%8E%E5%A2%A8%E6%B0%B4%E6%8C%87%E7%BA%B9.html">HTML</a></td>
+<td><strong>待上</strong></td>
+<td>约 40–45 分钟完成彩色水过桥、三种纸毛细赛跑和绿色食用色素、黑色水彩笔彩环</td>
+</tr>
+</tbody>
+</table>
+<p>第一阶段第 1–9 节均已完成；下一阶段从新的第 10 节“会爬的水与墨水指纹”开始。未采用的“人体系统工程”“昼夜、季节与月相”“撞击坑与系外行星证据”三份方案已移入 <code>arxiv/旧核心教案/</code>，不再作为当前排课。</p>
+<h2>下一阶段设计约束</h2>
+<ul>
+<li>每次课程共 <strong>45–60 分钟</strong>（2026-09-06 更新）。</li>
+<li>学校内容按当周需要简短复习，计入总课时，不再固定预留 15–30 分钟。</li>
+<li>每课提供 45 分钟可完整收束的基础版本，最多扩展至 60 分钟；包含孩子实际搭建、操作、解释、记录与收拾的时间。</li>
+<li>先确定总问题、核心模型和逐课概念依赖，再选择有趣且能提供证据的实验；每课说明对前后课的作用。</li>
+<li>连续系列通常用 4–5 节围绕一个总问题深入；每课写清核心问题、实验、孩子要发现的规律和原理关联。</li>
+<li>当前化学、物理与工程系列及强视觉化学专题统一见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">系列课程方案总目录</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">HTML 阅读版</a>。实际授课状态不变。</li>
+<li>01–06、08–10共九条四课系列，其中03声音、08浮力与船、09电路与开关、10结构与承重可作为物理主线。07为强视觉反应选题库，已注明复用关系。</li>
+<li>不再安排酸与小苏打的重复产气或测温实验。</li>
+<li>原稿、逐课实验与反应说明及修改记录见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/03-%E5%8E%9F%E7%A8%BF%E4%B8%8E%E4%BF%AE%E8%AE%A2%E5%AF%B9%E7%85%A7/README.html">课程方案对照</a>。</li>
+<li>DK 检索背景与额外食品化学素材见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/05-%E5%85%AD%E7%B3%BB%E5%88%97%E5%8E%9F%E5%90%88%E8%BE%91/%E5%8C%96%E5%AD%A6%E6%B7%B7%E5%90%88%E4%B8%93%E9%A2%98_DK%E4%B8%8E%E5%85%AC%E5%BC%80%E6%95%99%E6%A1%88%E6%A3%80%E7%B4%A2.html">混合专题原合辑</a>；日常选课与修改以总目录中的独立系列为准。</li>
+</ul>
+<h3>显微镜课启用清单</h3>
+<ul>
+<li>
+<p>独立查阅：<a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/%E6%98%BE%E5%BE%AE%E9%95%9C%E8%A3%85%E7%89%87%E4%B8%8E%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">显微镜装片与操作指南.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/%E6%98%BE%E5%BE%AE%E9%95%9C%E8%A3%85%E7%89%87%E4%B8%8E%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">HTML</a>。</p>
+</li>
+<li>
+<p>正式白洋葱装片可只用清水，必要时使用成人预配的淡碘对比液；记录规则细胞壁、淡色细胞质和中央清亮区域，细胞核看不清就写“未分辨”。</p>
+</li>
+<li>
+<p>正式口腔装片使用学生自己的口腔上皮、独立包装无菌棉签、清水或成人预配的淡碘对比液和带盖玻片回收盒；对比液只接触玻片上的样本，不接触口腔。</p>
+</li>
+<li>
+<p>质壁分离另用红／紫洋葱天然色素和 5% 盐水，不添加任何染液；记录同一细胞盐水前后的变化。</p>
+</li>
+<li>
+<p>显微镜配置 10×目镜与 4×、10×、40×物镜；课堂按低倍寻找、目标居中、高倍细调顺序操作。</p>
+</li>
+<li>
+<p>有盖玻片时，两张湿式装片分别在 100×完成整体观察，在 400×观察细胞核与边界；无盖玻片时用叶片表皮印迹练习，只观察到 100×。</p>
+</li>
+</ul>
+<h2>备课文件</h2>
+<h3>当前保留的详细教案</h3>
+<ol>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/01-%E5%8D%95%E6%91%86%E5%91%A8%E6%9C%9F.html">01-单摆周期.md</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/02-%E6%BA%B6%E8%A7%A3%E8%B0%83%E6%9F%A5.html">02-溶解调查.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/02-%E6%BA%B6%E8%A7%A3%E8%B0%83%E6%9F%A5.html">02-溶解调查.html</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/03-%E7%89%A9%E7%90%86%E5%8F%98%E5%8C%96%E4%B8%8E%E5%8C%96%E5%AD%A6%E5%8F%98%E5%8C%96.html">03-物理变化与化学变化.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/03-%E7%89%A9%E7%90%86%E5%8F%98%E5%8C%96%E4%B8%8E%E5%8C%96%E5%AD%A6%E5%8F%98%E5%8C%96.html">03-物理变化与化学变化.html</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/04-%E7%83%AD%E8%83%BD%E4%BC%A0%E9%80%92.html">04-热能传递.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/04-%E7%83%AD%E8%83%BD%E4%BC%A0%E9%80%92.html">04-热能传递.html</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/05-%E5%85%89%E9%81%87%E5%88%B0%E7%89%A9%E8%B4%A8%E5%90%8E%E5%8E%BB%E4%BA%86%E5%93%AA%E9%87%8C.html">05-光遇到物质后去了哪里.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/05-%E5%85%89%E9%81%87%E5%88%B0%E7%89%A9%E8%B4%A8%E5%90%8E%E5%8E%BB%E4%BA%86%E5%93%AA%E9%87%8C.html">05-光遇到物质后去了哪里.html</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/06-%E8%BF%90%E5%8A%A8%E4%B8%8E%E5%8A%9B.html">06-运动与力.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/06-%E8%BF%90%E5%8A%A8%E4%B8%8E%E5%8A%9B.html">06-运动与力.html</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/07-%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E7%A9%BA%E6%B0%94%E6%80%8E%E6%A0%B7%E7%95%99%E4%B8%8B%E8%AF%81%E6%8D%AE.html">07-看不见的空气怎样留下证据.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/07-%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E7%A9%BA%E6%B0%94%E6%80%8E%E6%A0%B7%E7%95%99%E4%B8%8B%E8%AF%81%E6%8D%AE.html">07-看不见的空气怎样留下证据.html</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/08-%E6%98%BE%E5%BE%AE%E9%95%9C%E4%B8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7.html">08-显微镜下的生命是什么样.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/08-%E6%98%BE%E5%BE%AE%E9%95%9C%E4%B8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7.html">08-显微镜下的生命是什么样.html</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/09-%E7%94%9F%E7%89%A9%E6%80%8E%E6%A0%B7%E8%BF%90%E8%BE%93%E7%89%A9%E8%B4%A8.html">09-生物怎样运输物质.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/09-%E7%94%9F%E7%89%A9%E6%80%8E%E6%A0%B7%E8%BF%90%E8%BE%93%E7%89%A9%E8%B4%A8.html">09-生物怎样运输物质.html</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/10-%E4%BC%9A%E7%88%AC%E7%9A%84%E6%B0%B4%E4%B8%8E%E5%A2%A8%E6%B0%B4%E6%8C%87%E7%BA%B9.html">10-会爬的水与墨水指纹.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/10-%E4%BC%9A%E7%88%AC%E7%9A%84%E6%B0%B4%E4%B8%8E%E5%A2%A8%E6%B0%B4%E6%8C%87%E7%BA%B9.html">10-会爬的水与墨水指纹.html</a></li>
+</ol>
+<h3>独立操作指南</h3>
+<ul>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/%E6%98%BE%E5%BE%AE%E9%95%9C%E8%A3%85%E7%89%87%E4%B8%8E%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">显微镜装片与操作指南.md</a> / <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/%E6%98%BE%E5%BE%AE%E9%95%9C%E8%A3%85%E7%89%87%E4%B8%8E%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html">显微镜装片与操作指南.html</a></li>
+</ul>
+<h3>已归档的旧方案</h3>
+<ul>
+<li>未采用的旧核心实验详细教案已移至 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E6%A0%B8%E5%BF%83%E6%95%99%E6%A1%88/"><code>../arxiv/旧核心教案/</code></a>，包括原计划的两份第 10 节和第 11 节。</li>
+<li>旧版 8–10 节总方案及化学、生物栏目稿已移至 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/"><code>../arxiv/旧课程方案/</code></a>。</li>
+<li>旧材料和采购清单已移至 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E6%9D%90%E6%96%99%E6%B8%85%E5%8D%95/"><code>../arxiv/旧材料清单/</code></a>。</li>
+<li>旧实验已去重整理到 <a href="#md-preview-05eb9dd1fc05" data-md-preview="md-preview-05eb9dd1fc05">五年级正课后备选实验课程库</a>，作为正课结束后的选课来源。</li>
+</ul>
+<h2>统一备课原则</h2>
+<ul>
+<li>每节课围绕一个可以检验的核心问题展开。</li>
+<li>先让学生作出有理由的猜想，再讨论怎样测量。</li>
+<li>不把实验变成只需照步骤操作的演示。</li>
+<li>明确自变量、因变量和需要控制的条件。</li>
+<li>尽量进行重复测量，保留真实的数据波动和异常现象。</li>
+<li>结论必须说明依据了哪些实验结果。</li>
+<li>猜想与结果不一致时，修改猜想或解释，不修改实验记录。</li>
+<li>公式和术语用于概括已经发现的规律，不作为课堂起点。</li>
+<li>重要科学概念在首次出现时同时标注准确的英文术语，便于国际学校课堂中进行中英文对应。</li>
+</ul>
+<h2>每份备课稿的结构</h2>
+<ol>
+<li>课程定位与核心问题</li>
+<li>学习目标和概念边界</li>
+<li>材料与教师提前准备</li>
+<li>课堂流程（原核心课通常 75–90 分钟，新增综合专题可为 120 分钟）</li>
+<li>学生数据表</li>
+<li>预期结果与科学解释</li>
+<li>中英对照板书、教师引导问题</li>
+<li>常见误区和实验误差</li>
+<li>课堂评价与离堂问题</li>
+<li>安全、备用方案、可选延伸与关键英文词汇</li>
+</ol>
+</article></main>
+<main class="document-preview" id="md-preview-05acb3ea7afe" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\课程规划阶段\README.md</code></details><article><h1>课程规划阶段</h1>
+<p><a href="#md-preview-b33563055168" data-md-preview="md-preview-b33563055168">返回项目导航</a> ｜ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">查看当前系列课程</a></p>
+<p>这里按形成阶段保留完整规划文件。目录编号表示讨论阶段，不是孩子的实际授课顺序；实际进度见 <a href="#md-preview-7ea41a2780b5" data-md-preview="md-preview-7ea41a2780b5">核心课程备课</a>。</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>保存内容</th>
+<th>入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 · 暑期与备选规划</td>
+<td>暑期课程总览、正课后备选实验库</td>
+<td><a href="#md-preview-0783fd99f2e9" data-md-preview="md-preview-0783fd99f2e9">查看</a></td>
+</tr>
+<tr>
+<td>02 · 新阶段初步构想</td>
+<td>最初围绕变化、材料和电化学整理的构想</td>
+<td><a href="#md-preview-68e7b1b54b75" data-md-preview="md-preview-68e7b1b54b75">查看</a></td>
+</tr>
+<tr>
+<td>03 · 用户原稿与修订对照</td>
+<td>用户原文、逐课实验与反应说明、修改对照</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/03-%E5%8E%9F%E7%A8%BF%E4%B8%8E%E4%BF%AE%E8%AE%A2%E5%AF%B9%E7%85%A7/README.html">查看</a></td>
+</tr>
+<tr>
+<td>04 · 电化学进阶备选</td>
+<td>铜的变化与电子转移五课稿，作为教师或未来进阶参考</td>
+<td><a href="#md-preview-c30c7517ef27" data-md-preview="md-preview-c30c7517ef27">查看</a></td>
+</tr>
+<tr>
+<td>05 · 六系列原合辑</td>
+<td>拆成独立系列之前的两份完整合辑，以及DK检索背景</td>
+<td><a href="#md-preview-7f84374165d6" data-md-preview="md-preview-7f84374165d6">查看</a></td>
+</tr>
+<tr>
+<td>当前阶段</td>
+<td>已拆分并继续扩展的化学、物理与工程系列</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">前往当前目录</a></td>
+</tr>
+</tbody>
+</table>
+<p>历史文件中的课数、时长、候选实验和当时的判断作为阶段记录保留。实际选课和后续修改以当前系列目录为准。</p>
+</article></main>
+<main class="document-preview" id="md-preview-7e9ef6040308" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\学校每周内容\README.md</code></details><article><h1>学校每周内容</h1>
+<p><a href="#md-preview-b33563055168" data-md-preview="md-preview-b33563055168">返回项目导航</a></p>
+<p>每周文件夹保存学校原始材料与对应复习卡。</p>
+<table>
+<thead>
+<tr>
+<th>周次</th>
+<th>复习卡Markdown</th>
+<th>HTML阅读版</th>
+<th>原始材料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Week 1</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%AD%A6%E6%A0%A1%E6%AF%8F%E5%91%A8%E5%86%85%E5%AE%B9/Week%201/%E6%9C%AC%E5%91%A8%E7%A7%91%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%9E%81%E7%AE%80%E7%89%88.html">查看</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%AD%A6%E6%A0%A1%E6%AF%8F%E5%91%A8%E5%86%85%E5%AE%B9/Week%201/%E6%9C%AC%E5%91%A8%E7%A7%91%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%9E%81%E7%AE%80%E7%89%88.html">查看</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%AD%A6%E6%A0%A1%E6%AF%8F%E5%91%A8%E5%86%85%E5%AE%B9/Week%201/">文件夹</a></td>
+</tr>
+<tr>
+<td>Week 2</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%AD%A6%E6%A0%A1%E6%AF%8F%E5%91%A8%E5%86%85%E5%AE%B9/Week%202/%E6%9C%AC%E5%91%A8%E7%A7%91%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%9E%81%E7%AE%80%E7%89%88.html">查看</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%AD%A6%E6%A0%A1%E6%AF%8F%E5%91%A8%E5%86%85%E5%AE%B9/Week%202/%E6%9C%AC%E5%91%A8%E7%A7%91%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%9E%81%E7%AE%80%E7%89%88.html">查看</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%AD%A6%E6%A0%A1%E6%AF%8F%E5%91%A8%E5%86%85%E5%AE%B9/Week%202/">文件夹</a></td>
+</tr>
+</tbody>
+</table>
+</article></main>
+<main class="document-preview" id="md-preview-b854290a08e1" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 五年级科学学校材料参考大纲.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\School\五年级科学学校材料参考大纲.md</code></details><article><h1>五年级科学学校材料参考大纲</h1>
+<h2>一、课程整体画像</h2>
+<p>这套材料是 BASIS Hangzhou 2025-2026 五年级科学课程资料。课程覆盖四个传统科学分支：化学基础、物理基础、生命科学与空间科学，并用“科学的本质”作为开篇。</p>
+<p>学校课程的主要学习载体是教师讲义（notes）、科学笔记本（Science Journal）和练习材料，而不是一本固定教材。学校强调科学方法（scientific method）、批判性思维（critical thinking）、合作解决问题（collaborative problem solving）、词汇与笔记能力。考核占比较高：测验和考试等评估占 60%，课堂作业占 30%，家庭作业占 10%；实验活动在课程说明中是“偶尔进行”（occasionally）。</p>
+<p>因此，这套资料很适合作为“知识范围地图”，但它本身不是一套实验探究型课程。材料整体覆盖面很广，部分内容已接近初中难度，例如玻尔原子模型、电磁波谱、矢量与牛顿定律、完整细胞器、分类阶元和恒星演化。</p>
+<hr />
+<h2>二、五个单元的内容大纲</h2>
+<h2>Unit 1：科学的本质（Nature of Science）</h2>
+<h3>1. 课堂文化与学习规范（Class Culture）</h3>
+<ul>
+<li>学校核心价值、课堂规则、尊重与责任。</li>
+<li>这一部分主要是班级管理与学习习惯，不属于科学概念主体。</li>
+</ul>
+<h3>2. 观察、推论与观点（Observation, Inference and Opinion）</h3>
+<ul>
+<li><strong>观察（observation）</strong>：用感官或工具获得直接证据。</li>
+<li><strong>推论（inference）</strong>：根据观察结果和已有知识作出的合理解释。</li>
+<li><strong>观点（opinion）</strong>：个人判断或偏好，不等同于可以验证的科学解释。</li>
+<li>强调详细观察、利用背景知识，以及说清楚“我的判断依据是什么”。</li>
+</ul>
+<h3>3. 定性与定量数据（Qualitative and Quantitative Data）</h3>
+<ul>
+<li><strong>定性数据（qualitative data）</strong>：颜色、形状、质地、气味等描述性信息。</li>
+<li><strong>定量数据（quantitative data）</strong>：长度、质量、时间、温度、速度、百分比等测量结果。</li>
+<li>学习判断什么数据与研究问题有关，以及如何用两类数据共同支持结论。</li>
+</ul>
+<h3>4. 可检验问题（Testable Questions）</h3>
+<ul>
+<li>科学问题需要能够通过观察、测量或实验获得证据。</li>
+<li>区分可检验问题（testable question）与不可检验问题（non-testable question）。</li>
+<li>引入<strong>自变量（independent variable）<strong>和</strong>因变量（dependent variable）</strong>。</li>
+<li>强调一次只改变一个因素，即控制变量的基本思想。</li>
+<li>常用问题结构：“改变 X 会如何影响 Y？”（How does X affect Y?）</li>
+</ul>
+<h3>单元核心</h3>
+<p>这是一整套课程中最重要的思维基础：<strong>先观察，再提问；用证据区分“我看到了什么”和“我认为发生了什么”；设计公平比较，最后用数据解释。</strong></p>
+<hr />
+<h2>Unit 2：物质的性质（Properties of Matter）</h2>
+<h3>1. 物质与物质状态（Matter and States of Matter）</h3>
+<ul>
+<li><strong>物质（matter）</strong>：有质量并占据空间的东西。</li>
+<li>用粒子模型理解物质：原子和分子不断运动，宏观性质来自大量粒子的相互作用。</li>
+<li><strong>物理性质（physical properties）</strong>：不改变物质身份即可观察的性质，如颜色、质量、体积、硬度、导电性、熔点和沸点。</li>
+<li><strong>化学性质（chemical properties）</strong>：只有发生化学变化时才能表现出的性质，如可燃性和反应性。</li>
+<li>三种主要状态：<strong>固体（solid）</strong>、<strong>液体（liquid）</strong>、<strong>气体（gas）</strong>；另外简单介绍<strong>等离子体（plasma）</strong>。</li>
+<li>用粒子的排列、运动和相互作用解释固定形状、固定体积与可压缩性。</li>
+<li><strong>相变（phase change / change of state）</strong>：熔化、凝固、汽化、凝结、升华与凝华。</li>
+<li>相变是物理变化；物质身份不变，改变的是粒子排列与能量。</li>
+</ul>
+<h3>2. 混合物与溶液（Mixtures and Solutions）</h3>
+<ul>
+<li>**纯净物（pure substance）**分为元素与化合物，不能通过物理方法分开。</li>
+<li><strong>均一混合物（homogeneous mixture）<strong>与</strong>非均一混合物（heterogeneous mixture）</strong>。</li>
+<li>区分<strong>溶液（solution）</strong>、<strong>悬浊液（suspension）<strong>和</strong>胶体（colloid）</strong>。</li>
+<li><strong>溶质（solute）</strong>、<strong>溶剂（solvent）<strong>与</strong>溶解度（solubility）</strong>。</li>
+<li>加热、搅拌和减小颗粒可以提高溶解速度；这里需要进一步区分“溶解得更快”和“最终能溶解得更多”。</li>
+</ul>
+<h3>3. 原子、元素与元素周期表（Atoms, Elements and the Periodic Table）</h3>
+<ul>
+<li>**元素（element）<strong>由同一种原子组成；元素用</strong>化学符号（chemical symbol）**表示。</li>
+<li>原子的基本结构：<strong>质子（proton）</strong>、<strong>中子（neutron）</strong>、<strong>电子（electron）<strong>和</strong>原子核（nucleus）</strong>。</li>
+<li>**原子序数（atomic number）**由质子数决定；改变质子数就会成为另一种元素。</li>
+<li>简介<strong>离子（ion）</strong>、<strong>同位素（isotope）</strong>、<strong>质量数（mass number）<strong>和</strong>相对原子质量（atomic mass）</strong>。</li>
+<li>阅读元素周期表中的信息，并为前 20 种元素画简化的<strong>玻尔模型（Bohr model）</strong>。</li>
+<li>用最外层电子（valence electrons）的简化模型初步解释原子为什么会形成化学键（chemical bond）。</li>
+</ul>
+<h3>单元核心</h3>
+<p>宏观上观察物质的性质和变化，微观上用“看不见的粒子模型”解释这些现象。对四年级暑假课程而言，物态、相变、混合与分离非常适合实验；离子、同位素和电子排布则应谨慎降阶，不宜变成术语记忆。</p>
+<hr />
+<h2>Unit 3：能量及其形式（Energy and Its Forms）</h2>
+<h3>1. 能量形式、储存与转化（Energy Forms, Stores and Transfers）</h3>
+<ul>
+<li>**能量（energy）**与做功（work）的基本关系。</li>
+<li>能量可以储存在不同“能量库”中：动能、热能、化学能、弹性势能、重力势能、磁能、核能等。</li>
+<li>能量可以通过机械做功、电流、加热和辐射等途径转移。</li>
+<li><strong>能量守恒定律（Law of Conservation of Energy）</strong>：能量不会凭空产生或消失，只会转移或转化。</li>
+<li>用蜡烛、电池风扇、滑动物体等系统追踪初始能量、转移路径和最终去向。</li>
+</ul>
+<h3>2. 热能传递（Thermal Energy Transfer）</h3>
+<ul>
+<li>热传递由温度差驱动，能量总是从较高温物体传向较低温物体，直到趋向热平衡（thermal equilibrium）。</li>
+<li><strong>传导（conduction）</strong>：通过物质内部粒子相互作用传热，固体中尤其明显。</li>
+<li><strong>对流（convection）</strong>：液体或气体因密度差产生整体运动并传热。</li>
+<li><strong>热辐射（thermal radiation）</strong>：以电磁波传递，不需要物质介质。</li>
+<li>课程用金属棒、热水、火山、烤箱、太阳与地球等情境辨认三种方式。</li>
+</ul>
+<h3>3. 电磁波谱与光（Electromagnetic Spectrum and Light）</h3>
+<ul>
+<li>可见光只是**电磁波谱（electromagnetic spectrum）**的一小部分。</li>
+<li>波长越短，频率越高，单个光子的能量通常越高。</li>
+<li>简介白炽发光（incandescence）、冷发光（luminescence）以及光的<strong>波粒二象性（wave-particle duality）</strong>。</li>
+<li>光与物质相互作用：<strong>反射（reflection）</strong>、<strong>吸收（absorption）</strong>、<strong>透射（transmission）<strong>和</strong>折射（refraction）</strong>。</li>
+<li>透明（transparent）、半透明（translucent）与不透明（opaque）。</li>
+<li>用光的反射波长解释颜色，用折射解释棱镜和彩虹。</li>
+</ul>
+<h3>4. 速度、矢量与加速度（Speed, Vectors and Acceleration）</h3>
+<ul>
+<li>**标量（scalar）**只有大小；**矢量（vector）**同时有大小和方向。</li>
+<li>**速率（speed）**表示运动快慢；**速度（velocity）**还包含方向。</li>
+<li>**加速度（acceleration）**是速度的变化，变快、变慢或改变方向都属于加速。</li>
+<li>引入位移、矢量箭头、速度和加速度公式。</li>
+<li>区分平衡力（balanced forces）和非平衡力（unbalanced forces）。</li>
+</ul>
+<h3>5. 牛顿运动定律（Newton’s Laws of Motion）</h3>
+<ul>
+<li><strong>第一定律</strong>：物体在合力为零时保持静止或匀速直线运动；引入<strong>惯性（inertia）</strong>、质量和<strong>动量（momentum）</strong>。</li>
+<li><strong>第二定律</strong>：合力、质量与加速度的关系，<code>F_net = ma</code>；讨论摩擦力和利用模拟实验改变力与质量。</li>
+<li><strong>第三定律</strong>：相互作用中的两个力大小相等、方向相反，同时作用在两个不同物体上；应用于走路、游泳、飞行和火箭。</li>
+</ul>
+<h3>单元核心</h3>
+<p>这是材料中内容最多、数学要求最高的单元。真正的概念主线是：<strong>观察变化—确定系统—找出相互作用—测量运动—追踪能量和力的作用。</strong> 热、光、运动和力都很适合实验，但不必过早追求公式计算。</p>
+<hr />
+<h2>Unit 4：生命科学（Life Science）</h2>
+<h3>1. 生物的共同特征（Characteristics of Living Things）</h3>
+<ul>
+<li>生物由一个或多个细胞组成，有组织结构。</li>
+<li>生物生长、繁殖、获取能量和营养、排出废物，并对环境作出反应。</li>
+<li><strong>稳态（homeostasis）</strong>：维持适合生命活动的内部条件。</li>
+<li>生物种群会在世代中适应和演化（adapt and evolve）。</li>
+</ul>
+<h3>2. 细胞理论与细胞结构（Cell Theory and Cell Structure）</h3>
+<ul>
+<li><strong>细胞理论（cell theory）</strong>：所有生物由细胞组成；细胞是生命的基本单位；细胞来自已有细胞。</li>
+<li><strong>原核细胞（prokaryotic cell）<strong>与</strong>真核细胞（eukaryotic cell）</strong>。</li>
+<li>主要结构和细胞器：细胞膜、细胞质、细胞核、线粒体、液泡、叶绿体、细胞壁、内质网、核糖体、高尔基体、溶酶体等。</li>
+<li>简介蛋白质（protein）、氨基酸（amino acid）和 DNA。</li>
+<li>比较植物细胞与动物细胞。</li>
+</ul>
+<h3>3. 生物分类（Taxonomy）</h3>
+<ul>
+<li>**分类学（taxonomy）**是对生物进行分类和命名。</li>
+<li>层级：域、界、门、纲、目、科、属、种（Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species）。</li>
+<li><strong>双名法（binomial nomenclature）</strong>：用属名和种名组成科学名称。</li>
+<li>三域系统、若干“界”的划分，以及所有生物具有共同祖先的“生命之树”（Tree of Life）思想。</li>
+</ul>
+<h3>4. 动物与植物（Animals and Plants）</h3>
+<ul>
+<li>动物和植物作为多细胞真核生物的共同点与区别。</li>
+<li>动物的运动、感觉、摄食与身体对称性（symmetry）。</li>
+<li>植物的细胞壁、叶绿体、光合作用和对环境的响应。</li>
+<li><strong>维管植物（vascular plants）<strong>与</strong>非维管植物（non-vascular plants）</strong>。</li>
+<li>**木质部（xylem）**运输水和矿物质；**韧皮部（phloem）**运输糖。</li>
+<li>蒸腾作用（transpiration）与水在植物体内的运动。</li>
+<li><strong>裸子植物（gymnosperms）<strong>与</strong>被子植物（angiosperms）</strong>；种子、子叶、花、果实、授粉和传播。</li>
+</ul>
+<h3>5. 身体组织与人体系统（Body Organization and Human Body Systems）</h3>
+<ul>
+<li>组织层次：细胞 → 组织 → 器官 → 器官系统 → 生物体（cell → tissue → organ → organ system → organism）。</li>
+<li><strong>循环系统（circulatory system）</strong>：心脏四腔、动脉、静脉、毛细血管、肺循环和体循环；运输氧、营养、废物、热和激素。</li>
+<li><strong>呼吸系统（respiratory system）</strong>：气管、支气管、细支气管、肺泡、膈肌；通气与肺泡中的气体交换。</li>
+<li><strong>皮肤系统（integumentary system）</strong>：皮肤、毛发、指甲；表皮、真皮、皮下组织及皮肤损伤。</li>
+</ul>
+<h3>单元核心</h3>
+<p>生命科学的核心不是背细胞器或分类阶元，而是理解：<strong>结构与功能相适应；小尺度结构组成大尺度系统；不同系统通过物质交换共同维持生命。</strong> 显微观察、植物运输、脉搏与呼吸测量都比单纯背名称更有价值。</p>
+<hr />
+<h2>Unit 5：空间科学（Space Science）</h2>
+<h3>1. 地球运动（Earth’s Movement）</h3>
+<ul>
+<li>地球**自转（rotation）**约 24 小时，产生昼夜变化。</li>
+<li>地球绕太阳**公转（revolution / orbit）**约 365.25 天。</li>
+<li>地轴（axis）倾斜约 23.5°。</li>
+<li>季节来自地轴倾斜与公转的共同作用，而不是地球离太阳远近。</li>
+<li>南北半球季节相反。</li>
+</ul>
+<h3>2. 月球（Earth’s Moon）</h3>
+<ul>
+<li>月球的大小、质量、表面重力、温度、环形山和稀薄大气等特征。</li>
+<li>月球形成的<strong>大撞击假说（Giant Impact Hypothesis）</strong>。</li>
+<li>月球的自转、公转和<strong>潮汐锁定（tidal locking）</strong>。</li>
+<li>月相（lunar phases）来自观察者看到的月球受光部分比例变化，不是地球影子造成。</li>
+<li>月球和太阳引力共同影响潮汐（tides）。</li>
+<li>月球探测史，并用证据讨论“满月影响人的行为”等伪科学（pseudoscience）说法。</li>
+</ul>
+<h3>3. 小天体、流星与彗星（Asteroids, Meteoroids and Comets）</h3>
+<ul>
+<li><strong>小行星（asteroid）</strong>：主要由岩石和金属组成，多数位于火星和木星之间的小行星带。</li>
+<li><strong>流星体（meteoroid）<strong>是太空中的小型岩石或金属体；进入大气发光是</strong>流星（meteor）</strong>；到达地面的是<strong>陨石（meteorite）</strong>。</li>
+<li>**彗星（comet）**含冰、岩石和尘埃，常有彗发和彗尾，沿高偏心率轨道运动。</li>
+<li>彗尾受太阳辐射与太阳风影响，方向总体背向太阳。</li>
+<li>简介柯伊伯带（Kuiper Belt）、奥尔特云（Oort Cloud）与太阳系形成残余物。</li>
+</ul>
+<h3>4. 恒星（Stars）</h3>
+<ul>
+<li>恒星是以氢和氦为主的高温等离子体球，通过**核聚变（nuclear fusion）**释放能量。</li>
+<li>距离单位：光年（light-year）和天文单位（astronomical unit, AU）。</li>
+<li>视星等与绝对星等（apparent and absolute magnitude）。</li>
+<li>恒星颜色与表面温度有关。</li>
+<li>恒星演化：星云 → 原恒星 → 主序星；之后根据质量不同，演化为红巨星/红超巨星、白矮星、中子星或黑洞，并可能经历超新星爆发。</li>
+</ul>
+<h3>5. 系外行星（Exoplanets）</h3>
+<ul>
+<li>**系外行星（exoplanet）**是太阳系之外的行星。</li>
+<li>为什么难以直接看见：行星小、暗，且被恒星强光淹没。</li>
+<li>主要探测方法：凌日法（transit method）、径向速度/多普勒法（radial velocity / Doppler method）、引力微透镜（gravitational microlensing）和脉冲星计时（pulsar timing）。</li>
+<li>**宜居带（circumstellar habitable zone）**只是寻找液态水的一个起点，不等于已经发现生命。</li>
+<li>讨论潮汐加热、放射性衰变和行星内部余热等其他液态水能量来源。</li>
+<li>文件夹中另有学生制作系外行星演示文稿，说明该主题可能配有项目式学习（project-based learning）。</li>
+</ul>
+<h3>单元核心</h3>
+<p>空间科学很难做“真实天体实验”，更适合用比例模型、光影模型、连续观察和数据分析。关键思维是：<strong>我们无法直接接触遥远天体，但可以从光、运动和周期性变化中获得间接证据。</strong></p>
+<hr />
+<h2>三、从实验型暑期课角度看，哪些最值得保留</h2>
+<h3>最适合作为课程骨架</h3>
+<ol>
+<li><strong>科学探究全过程</strong>：观察、提问、预测、公平测试、测量、记录、解释和改进。</li>
+<li><strong>物质与变化</strong>：物态、相变、溶解、混合与分离、物理变化与化学变化。</li>
+<li><strong>热、光、力与运动</strong>：热传递、反射与折射、摩擦、惯性、力和加速度的关系、能量转化。</li>
+<li><strong>生命系统</strong>：显微观察、植物水分运输、脉搏和呼吸、结构与功能。</li>
+<li><strong>地月日模型与观测</strong>：昼夜、季节、月相、影子变化，以及从数据推断看不见的天体。</li>
+</ol>
+<h3>适合点到为止，不宜作为背诵重点</h3>
+<ul>
+<li>离子、同位素、完整电子排布和前 20 个元素的玻尔模型。</li>
+<li>电磁波谱各波段的完整顺序、光子与波粒二象性的细节。</li>
+<li>大量细胞器比喻和分类阶元名称。</li>
+<li>恒星演化的所有分支、复杂人体解剖名词。</li>
+<li>公式化计算；公式应在孩子已经通过测量发现关系后再出现。</li>
+</ul>
+<hr />
+<h2>四、材料中需要修正或谨慎处理的地方</h2>
+<p>以下内容不应直接照讲：</p>
+<ol>
+<li><strong>相变的吸热/放热写反。</strong> Notes 写成“吸热时凝结、凝固、凝华；放热时熔化、汽化、升华”。正确关系相反：熔化、汽化、升华吸热；凝固、凝结、凝华放热。</li>
+<li><strong>植物细胞与动物细胞形状描述疑似写反。</strong> 植物细胞因细胞壁通常较规则、较方正；动物细胞没有细胞壁，形状通常更多样、不规则。</li>
+<li><strong>“静脉中的血是蓝色且没有氧”不准确。</strong> 人的血液始终是红色，只是含氧量不同导致颜色深浅不同；动脉和静脉按血流方向定义，肺动脉运送低氧血，肺静脉运送富氧血。</li>
+<li><strong>非维管植物并非不能借风传播孢子。</strong> 苔藓等繁殖过程需要水让精子到达卵细胞，但其孢子可以通过空气和风传播。</li>
+<li><strong>节肢动物门不包括分节蠕虫。</strong> 昆虫、蜘蛛和甲壳类属于节肢动物门（Arthropoda）；蚯蚓等属于环节动物门（Annelida）。</li>
+<li><strong>月球周期需要区分。</strong> 月球相对恒星自转/公转一周约 27.3 天；从一次相同月相到下一次约 29.5 天。Notes 直接把自转写为 29.5 天，容易混淆。</li>
+<li><strong>首批确认的系外行星不是“热木星”。</strong> 1992 年确认的脉冲星行星以类地质量行星为主；“热木星”更适合用于描述 1995 年发现的 51 Pegasi b 一类近恒星巨行星。</li>
+</ol>
+<p>此外，一些表述属于面向儿童的简化模型，例如“电子沿固定轨道绕原子核运行”“能量是一种东西，在不同物体里储存”等。可以使用模型，但应明确模型是帮助解释现象的工具，并不等于完整真实图景。</p>
+<hr />
+<h2>五、对后续自主课程设计的结论</h2>
+<p>这套学校材料可以提供“孩子可能在五年级接触哪些名词和主题”的边界，但不应决定暑期课的顺序。更适合的自主课程逻辑是：</p>
+<p><strong>真实现象或挑战 → 孩子先预测 → 动手实验 → 记录定量和定性证据 → 用模型解释 → 改变一个条件再次验证 → 最后才给术语和公式。</strong></p>
+<p>这样可以保留学校要求中的核心科学概念，同时把学习重点从“记住讲义”转成“能用证据解释、能设计检验、知道自己为什么相信这个结论”。</p>
+</article></main>
+<main class="document-preview" id="md-preview-e0ee5f31354b" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\README.md</code></details><article><h1>历史资料总目录</h1>
+<p><a href="#md-preview-b33563055168" data-md-preview="md-preview-b33563055168">返回项目导航</a> ｜ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">当前系列课程</a></p>
+<p>这里保存各阶段规划、退出当前路线的旧教案、旧材料清单及修改前备份。归档文件供查阅和回溯，当前教案与实际进度以 <a href="#md-preview-7ea41a2780b5" data-md-preview="md-preview-7ea41a2780b5">核心课程备课</a> 为准。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>内容</th>
+<th>入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>课程规划阶段</td>
+<td>暑期规划、新阶段初稿、原稿对照、进阶备选、六系列原合辑</td>
+<td><a href="#md-preview-05acb3ea7afe" data-md-preview="md-preview-05acb3ea7afe">阶段目录</a></td>
+</tr>
+<tr>
+<td>更早的课程方案</td>
+<td>旧版8–10节方案、化学与生物栏目及盘点后建议</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/">文件夹</a></td>
+</tr>
+<tr>
+<td>旧核心教案</td>
+<td>未采用或已被调整的专题备课</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E6%A0%B8%E5%BF%83%E6%95%99%E6%A1%88/">文件夹</a></td>
+</tr>
+<tr>
+<td>修改前快照</td>
+<td>从当前备课目录移出的原始备份源码</td>
+<td><a href="#md-preview-4c22f10f6c06" data-md-preview="md-preview-4c22f10f6c06">快照目录</a></td>
+</tr>
+<tr>
+<td>旧材料清单</td>
+<td>旧课程对应的采购和材料记录</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E6%9D%90%E6%96%99%E6%B8%85%E5%8D%95/">文件夹</a></td>
+</tr>
+</tbody>
+</table>
+<p>当前试剂判断见 <a href="#md-preview-8023dbf2f1bd" data-md-preview="md-preview-8023dbf2f1bd">最新评估</a>，不直接依据旧采购记录判断库存。</p>
+</article></main>
+<main class="document-preview" id="md-preview-05eb9dd1fc05" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 正课后备选实验课程.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\课程规划阶段\01-暑期与备选规划\正课后备选实验课程.md</code></details><article><h1>五年级正课后备选实验课程库</h1>
+<p><strong>用途</strong>：完成当前 11 节正课后，根据孩子兴趣、器材情况和需要加强的知识点选择。这里汇总旧版 8–10 节课程、原备选实验库、化学与生物栏目及试剂盘点后的课程建议。</p>
+<p><strong>整理原则</strong>：</p>
+<ul>
+<li>已上过的单摆、溶解调查、物理变化与化学变化保留在文末作记录，不再列为优先备选课。</li>
+<li>重复实验合并成一个主题，并把不同装置写成“简化版 / 定量版”。</li>
+<li>每个主题都写清楚要研究什么、对应什么知识、需要什么材料。</li>
+<li>只有标签、浓度和状态清楚的材料才能进入课堂；库存判断以 <code>器材及试剂/试剂识别与保存状态评估.md</code> 的最新记录为准。</li>
+<li>默认面向 1 名五年级学生和 1 名教师；多数课程为 60–90 分钟，带长期观察的实验需要提前样品或课后记录。</li>
+</ul>
+<h2>一、快速选课表</h2>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>编号</th>
+<th>实验主题</th>
+<th>最适合加强的内容</th>
+<th style="text-align:right">建议时长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>物理与工程</td>
+<td>P1</td>
+<td>弹簧能不能成为秤</td>
+<td>力、伸长量、图像与预测</td>
+<td style="text-align:right">75–90 分钟</td>
+</tr>
+<tr>
+<td>物理与工程</td>
+<td>P2</td>
+<td>橡皮泥船与排水</td>
+<td>浮力、排水、平均密度</td>
+<td style="text-align:right">75–90 分钟</td>
+</tr>
+<tr>
+<td>物理与工程</td>
+<td>P3</td>
+<td>怎样让电磁铁更强</td>
+<td>电流、磁场、工程权衡</td>
+<td style="text-align:right">60–75 分钟</td>
+</tr>
+<tr>
+<td>物理与工程</td>
+<td>P4</td>
+<td>空气能被压缩吗</td>
+<td>气体粒子、压力、间接证据</td>
+<td style="text-align:right">60–75 分钟</td>
+</tr>
+<tr>
+<td>物理与工程</td>
+<td>P5</td>
+<td>用镜子把光送到目标</td>
+<td>反射角、光路与预测</td>
+<td style="text-align:right">60–75 分钟</td>
+</tr>
+<tr>
+<td>物理与工程</td>
+<td>P6</td>
+<td>哪种材料最保温</td>
+<td>热传递、降温曲线、工程设计</td>
+<td style="text-align:right">75–90 分钟</td>
+</tr>
+<tr>
+<td>物理与工程</td>
+<td>P7</td>
+<td>运动为什么会停</td>
+<td>摩擦、惯性、理想化</td>
+<td style="text-align:right">75–90 分钟</td>
+</tr>
+<tr>
+<td>物理与工程</td>
+<td>P8</td>
+<td>哪些材料能导电</td>
+<td>物理性质、导体与绝缘体</td>
+<td style="text-align:right">45–60 分钟</td>
+</tr>
+<tr>
+<td>物理化学</td>
+<td>P9</td>
+<td>温暖汽水为什么更冒气</td>
+<td>气体溶解度、温度、逸出速度</td>
+<td style="text-align:right">60–75 分钟</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C1</td>
+<td>二氧化碳气球赛</td>
+<td>反应速率与最终产量</td>
+<td style="text-align:right">60–75 分钟</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C2</td>
+<td>铁为什么生锈</td>
+<td>氧化、对照组、长期观察</td>
+<td style="text-align:right">60 分钟＋5–7 天</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C3</td>
+<td>气体跑掉后质量少了吗</td>
+<td>质量守恒、开放和封闭系统</td>
+<td style="text-align:right">60–75 分钟</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C4</td>
+<td>紫甘蓝酸碱彩虹与中和</td>
+<td>酸碱、指示剂、中和</td>
+<td style="text-align:right">50–70 分钟</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C5</td>
+<td>维生素 C 侦探</td>
+<td>碘—淀粉、氧化还原、滴数比较</td>
+<td style="text-align:right">45–60 分钟</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C6</td>
+<td>把牛奶蛋白叫出来</td>
+<td>蛋白质聚集、过滤、干质量</td>
+<td style="text-align:right">50–60 分钟＋干燥</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C7</td>
+<td>两杯透明液体变白云</td>
+<td>真正沉淀、新固体证据</td>
+<td style="text-align:right">35–45 分钟</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C8</td>
+<td>墨水里藏着几种颜色</td>
+<td>纸色谱、混合物分离</td>
+<td style="text-align:right">35–45 分钟</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C9</td>
+<td>大理石里的气体从哪来</td>
+<td>碳酸盐反应、表面积与速率</td>
+<td style="text-align:right">60–75 分钟</td>
+</tr>
+<tr>
+<td>化学</td>
+<td>C10</td>
+<td>绿色粉末为什么变黑</td>
+<td>热分解、化学变化证据</td>
+<td style="text-align:right">30–40 分钟演示</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B1</td>
+<td>洋葱表皮里的砖墙</td>
+<td>植物细胞、显微镜操作</td>
+<td style="text-align:right">45–60 分钟</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B2</td>
+<td>洋葱细胞缩水又复原</td>
+<td>渗透、细胞膜、液泡</td>
+<td style="text-align:right">50–60 分钟</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B3</td>
+<td>水草叶里的绿色小工厂</td>
+<td>叶绿体、细胞质流动</td>
+<td style="text-align:right">40–50 分钟</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B4</td>
+<td>酵母既是粉也是细胞</td>
+<td>单细胞生物、发酵、对照</td>
+<td style="text-align:right">50–70 分钟</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B5</td>
+<td>土豆泡沫工厂</td>
+<td>酶、温度、反应速率</td>
+<td style="text-align:right">45–60 分钟</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B6</td>
+<td>酵母泡沫喷泉</td>
+<td>过氧化氢酶、气体与对照</td>
+<td style="text-align:right">40–55 分钟</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B7</td>
+<td>叶片的呼吸孔</td>
+<td>气孔、气体交换、计数</td>
+<td style="text-align:right">50–60 分钟</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B8</td>
+<td>芹菜的彩色水路</td>
+<td>木质部、蒸腾、植物运输</td>
+<td style="text-align:right">60 分钟＋提前观察</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B9</td>
+<td>风会让植物失水更快吗</td>
+<td>蒸腾、系统边界、质量变化</td>
+<td style="text-align:right">75–90 分钟</td>
+</tr>
+<tr>
+<td>生命科学</td>
+<td>B10</td>
+<td>香蕉 DNA 取丝</td>
+<td>细胞膜、DNA、溶解性</td>
+<td style="text-align:right">45–60 分钟</td>
+</tr>
+<tr>
+<td>地球与空间</td>
+<td>E1</td>
+<td>光照角度与季节深化</td>
+<td>入射角、单位面积能量、模型限制</td>
+<td style="text-align:right">60–75 分钟</td>
+</tr>
+<tr>
+<td>综合探究</td>
+<td>X1</td>
+<td>这一次由学生提出问题</td>
+<td>完整自主实验、数据和 CER</td>
+<td style="text-align:right">90–120 分钟</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>二、物理与工程实验</h2>
+<h3>P1 弹簧能不能成为秤</h3>
+<ul>
+<li><strong>实验主题</strong>：逐步增加相同砝码，测量弹簧伸长量；画出负载—伸长量图，用图预测未知物体质量，再用电子秤检验。</li>
+<li><strong>对应知识点</strong>：force、extension、elasticity、Hooke’s law、calibration、规律的适用范围。</li>
+<li><strong>主要材料</strong>：螺旋弹簧、铁架台和夹具、直尺、指针、挂钩、相同砝码或垫圈、未知物体、电子秤、橡皮筋、方格纸、护目镜。</li>
+<li><strong>适合作为备选的原因</strong>：数据稳定，适合继续训练作图、插值预测和“规律不能无限外推”。</li>
+<li><strong>安全与准备</strong>：教师先确定安全负载；不测试弹簧破坏极限；砝码下方放软垫或托盘。</li>
+</ul>
+<h3>P2 橡皮泥船与排水</h3>
+<ul>
+<li><strong>实验主题</strong>：测量漂浮物体排开水的质量；把同一团橡皮泥做成实心球和空心船；逐步加垫圈寻找最大载荷。</li>
+<li><strong>对应知识点</strong>：buoyancy、water displacement、平均密度、平衡、形状与排水能力。</li>
+<li><strong>主要材料</strong>：溢水杯或满水容器、接水盘、接水杯、量筒、电子秤、橡皮泥、相同垫圈、木块/瓶盖/塑料球等浮动物体、毛巾。</li>
+<li><strong>适合作为备选的原因</strong>：能直接纠正“重的一定沉、轻的一定浮”的直觉。</li>
+<li><strong>安全与准备</strong>：全程在托盘内操作；远离插座；教师提前测试橡皮泥船形和载荷范围。</li>
+</ul>
+<h3>P3 怎样让电磁铁更强</h3>
+<ul>
+<li><strong>实验主题</strong>：在相同铁芯上绕 20、40、60 匝线圈，比较短时通电后能吸起的回形针数量或质量。</li>
+<li><strong>对应知识点</strong>：electrical energy、magnetic effect、线圈匝数、自变量与因变量、工程中的强度/发热/耗电权衡。</li>
+<li><strong>主要材料</strong>：低压电池盒、开关、绝缘铜线、相同铁钉或铁芯、同规格回形针、电子秤、秒表、护目镜。</li>
+<li><strong>器材条件</strong>：最好提前做好三套相同铁芯、不同匝数的线圈；不以 LED 亮度代替磁力测量。</li>
+<li><strong>安全与准备</strong>：每次只通电 3–5 秒，立即断开冷却；不得把导线直接短接电池。</li>
+</ul>
+<h3>P4 空气看不见，它真的能被压缩吗</h3>
+<ul>
+<li><strong>实验主题</strong>：封住无针注射器出口，逐步增加外力并记录空气体积；再与排尽气泡的水作定性比较。</li>
+<li><strong>对应知识点</strong>：气体粒子间有较大空隙、pressure、volume、看不见的粒子可以从可测作用中推断。</li>
+<li><strong>主要材料</strong>：塑料无针注射器、可靠封帽、固定支架、数字测力计或已知质量砝码、水、托盘、护目镜。</li>
+<li><strong>适合作为备选的原因</strong>：材料简单，能把 Unit 2 粒子模型与 Unit 3 力联系起来。</li>
+<li><strong>安全与准备</strong>：不使用玻璃注射器；不猛压活塞；出口和活塞不得朝向脸。</li>
+</ul>
+<h3>P5 镜子怎样把光送到指定位置</h3>
+<ul>
+<li><strong>实验主题</strong>：测量不同入射角下的反射角；最后调整镜子，让光绕过挡板到达指定目标。</li>
+<li><strong>对应知识点</strong>：reflection、normal line、angle of incidence、angle of reflection、规律与预测。</li>
+<li><strong>主要材料</strong>：平面镜、带单缝的低亮度 LED 光线盒、白纸、铅笔、直尺、量角器、镜座、挡板、目标卡。</li>
+<li><strong>适合作为备选的原因</strong>：是新正课光学内容的定量深化和工程挑战。</li>
+<li><strong>安全与准备</strong>：优先使用光线盒；不把手持激光笔交给学生；任何光束都不能照向眼睛。</li>
+</ul>
+<h3>P6 哪一种材料最适合保温</h3>
+<ul>
+<li><strong>实验主题</strong>：用不同材料包裹相同容器，在固定时间测量温水降温；根据曲线改进一个保温容器。</li>
+<li><strong>对应知识点</strong>：conduction、convection、radiation、insulation、温度—时间曲线、公平比较。</li>
+<li><strong>主要材料</strong>：相同杯子、约 50°C 以下温水、量筒、温度探头、秒表、棉布、纸、气泡膜、铝箔、橡皮筋或胶带、托盘。</li>
+<li><strong>适合作为备选的原因</strong>：能把热传递知识变成材料选择和工程优化。</li>
+<li><strong>安全与准备</strong>：控制水温；所有杯子使用相同水量和初始温度；立即擦干泼洒的水。</li>
+</ul>
+<h3>P7 运动为什么会停下来</h3>
+<ul>
+<li><strong>实验主题</strong>：同一小球从相同高度释放，比较不同粗糙表面的停止距离；再用双斜面观察斜面变平时运动距离怎样改变。</li>
+<li><strong>对应知识点</strong>：friction、air resistance、inertia、Newton’s first law、idealization、extrapolation。</li>
+<li><strong>主要材料</strong>：可调斜面、低摩擦轨道、钢球或玻璃球、光滑/普通/粗糙表面、卷尺、量角器、软质挡球盒。</li>
+<li><strong>适合作为备选的原因</strong>：比单纯背第一定律更能解释“物体为何会停”。</li>
+<li><strong>安全与准备</strong>：轨道连接必须平顺；末端设置软挡板；小球不能滚向学生或掉落。</li>
+</ul>
+<h3>P8 为什么有些材料能导电</h3>
+<ul>
+<li><strong>实验主题</strong>：用低压电路或万用表比较石墨、铜丝、黄铜片、聚乙烯、石蜡等材料是否导通。</li>
+<li><strong>对应知识点</strong>：physical properties、conductor、insulator、electrical energy transfer、材料分类。</li>
+<li><strong>主要材料</strong>：低压电池盒、开关、导线、LED 和限流电阻或数字万用表；石墨、铜丝、黄铜片、聚乙烯、石蜡；记录表。</li>
+<li><strong>库存提示</strong>：石墨和黄铜片状态较可靠；铜丝表面可能氧化，使用前轻擦并检查导通。</li>
+<li><strong>安全与准备</strong>：只用低压电源；不短路；不用市电；石墨粉末避免扬尘。</li>
+</ul>
+<h3>P9 温暖的汽水为什么更容易冒气</h3>
+<ul>
+<li><strong>实验主题</strong>：把同品牌碳酸水平衡到约 10°C、25°C、40°C，标准化开瓶和搅动，测量逸出二氧化碳。</li>
+<li><strong>对应知识点</strong>：gas solubility、temperature、pressure、平衡、逸出速度与最终溶解量的区别。</li>
+<li><strong>主要材料</strong>：同批次碳酸水、冰水/室温/温水水浴、温度计、气体注射器或气球、软管和密封塞、秒表、电子秤（可选）。</li>
+<li><strong>器材条件</strong>：装置必须提前检漏；相同操作和相同搅动次数比“气泡看起来多”更可靠。</li>
+<li><strong>安全与准备</strong>：不加热未开封饮料；不剧烈摇晃后朝人开盖；不用玻璃瓶承受额外压力。</li>
+</ul>
+<hr />
+<h2>三、化学实验</h2>
+<h3>C1 二氧化碳气球赛——温度改变速度还是总量</h3>
+<ul>
+<li><strong>实验主题</strong>：让相同用量的小苏打与酸在不同温度下反应，记录气体体积—时间曲线。</li>
+<li><strong>对应知识点</strong>：chemical reaction、reaction rate、product、collision、速率与最终产量。</li>
+<li><strong>主要材料（定量版）</strong>：食品级柠檬酸、食用小苏打、水、电子秤、冷/室温/温水水浴、温度计、反应瓶、软管、气体注射器或排水集气装置、秒表、护目镜。</li>
+<li><strong>简化版</strong>：用相同小瓶、白醋、小苏打和气球，每 30 秒测气球周长；结果只能视为近似。</li>
+<li><strong>安全与准备</strong>：气体只能进入气球、软袋或气体注射器；不能使用刚性密闭玻璃容器。</li>
+</ul>
+<h3>C2 铁为什么生锈，怎样保护它</h3>
+<ul>
+<li><strong>实验主题</strong>：比较干燥空气、隔绝空气的水、普通水、盐水，以及凡士林涂层条件下的铁锈形成。</li>
+<li><strong>对应知识点</strong>：oxidation、corrosion、反应条件、control group、time series、工程防锈。</li>
+<li><strong>主要材料</strong>：相同铁钉或钢丝绒、透明小瓶、清水、食盐、煮沸冷却水、食用油、干燥剂、凡士林、标签、相机、手套、护目镜、托盘。</li>
+<li><strong>时间安排</strong>：课堂建立实验约 60 分钟；教师提前 5–7 天准备相同的时间平移样品，学生继续每日拍照。</li>
+<li><strong>库存提示</strong>：现有铁钉表面可能已经有锈，适合讨论真实材料，但若需要“全新表面”对照应另购相同新铁钉。</li>
+</ul>
+<h3>C3 气体跑掉后，质量真的减少了吗</h3>
+<ul>
+<li><strong>实验主题</strong>：同一个产气反应分别在开口杯和软质密封袋中进行，比较反应前后整个装置的质量。</li>
+<li><strong>对应知识点</strong>：conservation of mass、open system、closed system、system boundary、秤到底称到了什么。</li>
+<li><strong>主要材料</strong>：食品级柠檬酸、食用小苏打、水、0.1 g 或更细电子秤、开口塑料杯、约 1 L 结实软质密封袋、分隔反应物的小杯或纸包、量筒、托盘、护目镜。</li>
+<li><strong>适合作为备选的原因</strong>：能把“气体看不见”与“物质没有消失”连起来。</li>
+<li><strong>安全与准备</strong>：教师预试用量，保证袋子不过度鼓胀；不使用刚性密闭容器。</li>
+</ul>
+<h3>C4 紫甘蓝酸碱彩虹与中和接力</h3>
+<ul>
+<li><strong>实验主题</strong>：先用紫甘蓝指示液比较白醋、柠檬汁、清水和小苏打水，再逐滴加入酸或碱，使颜色回到紫色附近。</li>
+<li><strong>对应知识点</strong>：acid、base、indicator、neutralization、颜色表示范围而不是精确 pH。</li>
+<li><strong>主要材料</strong>：紫甘蓝 2–3 片、热水、透明小杯或反应板、白醋、柠檬汁、清水、食用小苏打、滴管、护目镜。</li>
+<li><strong>可测内容</strong>：固定指示液和酸的体积，记录第一次回到紫色附近所需的小苏打水滴数，重复 3 次。</li>
+<li><strong>安全与准备</strong>：热水和切菜由成人处理；只测试成分清楚的食品，不测试清洁剂。</li>
+</ul>
+<h3>C5 维生素 C 侦探</h3>
+<ul>
+<li><strong>实验主题</strong>：建立相同的碘—淀粉蓝紫色，用不同透明饮料或果汁逐滴消色，比较所需滴数。</li>
+<li><strong>对应知识点</strong>：starch–iodine test、vitamin C、redox、阴性/阳性对照、实验条件限制。</li>
+<li><strong>主要材料</strong>：玉米淀粉、热水、<strong>新购且标签清楚的稀碘液/碘伏</strong>、维生素 C 片、清水、透明果汁、滴管、反应板、护目镜、手套。</li>
+<li><strong>库存提示</strong>：旧碘伏有效成分和浓度不可靠，不用于正式比较；必须使用新购材料并课前预试。</li>
+<li><strong>安全与准备</strong>：成人分装碘液；实验材料不可饮用；防止染色并避免接触眼睛。</li>
+</ul>
+<h3>C6 把牛奶里的蛋白质叫出来</h3>
+<ul>
+<li><strong>实验主题</strong>：向等量温牛奶加入不同体积白醋，过滤凝块；完全干燥后比较固体质量。</li>
+<li><strong>对应知识点</strong>：protein aggregation、acid、filtration、湿质量与干质量、对照实验。</li>
+<li><strong>主要材料</strong>：牛奶、白醋、透明杯、滴管或量筒、漏斗、预先称量的滤纸、电子秤、50–60°C 水浴。</li>
+<li><strong>时间安排</strong>：课堂观察和过滤 50–60 分钟；准确比较质量还需 1–2 天完全干燥。</li>
+<li><strong>安全与准备</strong>：温热牛奶由成人处理；实验后不可食用，当天清理，避免发臭或长霉。</li>
+</ul>
+<h3>C7 两杯透明液体变“白云”</h3>
+<ul>
+<li><strong>实验主题</strong>：比较水＋氯化钙、水＋碳酸钠、氯化钙＋碳酸钠三组，过滤第三组得到白色固体。</li>
+<li><strong>对应知识点</strong>：precipitation、ions、新固体证据、<code>Ca²⁺ + CO₃²⁻ → CaCO₃↓</code>。</li>
+<li><strong>主要材料</strong>：<strong>新购、原标签完整</strong>的氯化钙和碳酸钠；由成人配制的 1% 溶液；滴管、反应板、试管、漏斗、滤纸、托盘、护目镜、手套。</li>
+<li><strong>库存提示</strong>：原氯化钙已用掉且剩余样品曾潮解；不能使用。碳酸氢钠（小苏打）不能代替碳酸钠。</li>
+<li><strong>安全与准备</strong>：只有名称、浓度和标签全部确认时才启用；只做 1 mL＋1 mL 微量反应。</li>
+</ul>
+<h3>C8 墨水里藏着几种颜色</h3>
+<ul>
+<li><strong>实验主题</strong>：用水展开不同品牌的黑色水性笔，比较分离出的色带颜色和移动距离。</li>
+<li><strong>对应知识点</strong>：paper chromatography、homogeneous mixture、physical separation、溶剂和纸对颜料移动的影响。</li>
+<li><strong>主要材料</strong>：滤纸、铅笔、两三种水性笔、透明杯、少量清水、夹子或玻璃棒、直尺。</li>
+<li><strong>可测内容</strong>：计算“色带移动距离 ÷ 水前沿距离”，比较不同墨水。</li>
+<li><strong>安全与准备</strong>：使用水性笔；墨点必须高于水面；及时标出水前沿。</li>
+</ul>
+<h3>C9 大理石里的气体从哪里来——表面积与反应速率</h3>
+<ul>
+<li><strong>实验主题</strong>：先比较白醋接触大理石/碳酸钙是否产气，再保持质量相同，只改变颗粒大小，记录产气速度。</li>
+<li><strong>对应知识点</strong>：carbonate、chemical change、surface area、reaction rate、控制变量。</li>
+<li><strong>主要材料</strong>：现有大理石或碳酸钙、新鲜白醋、电子秤、相同反应瓶、量筒、气球或气体注射器、秒表、筛分或研碎后的不同颗粒、护目镜。</li>
+<li><strong>库存提示</strong>：大理石和碳酸钙较稳定，可在核对外观后使用；白醋需新鲜、同一批次。</li>
+<li><strong>安全与准备</strong>：不让粉末扬起；产气只用柔性收集或敞口排水法；不刚性密封。</li>
+</ul>
+<h3>C10 绿色粉末为什么加热后变黑</h3>
+<ul>
+<li><strong>实验主题</strong>：成人微量加热碱式碳酸铜，学生从安全距离记录绿色固体变黑、试管内水雾和气体生成。</li>
+<li><strong>对应知识点</strong>：thermal decomposition、chemical change、多个生成物、观察与推断。</li>
+<li><strong>主要材料</strong>：现有碱式碳酸铜约 0.1 g、耐热试管、试管夹、热源、防护屏、白色背景、护目镜、通风条件。</li>
+<li><strong>课程性质</strong>：只作为教师展示，不作为学生动手实验。</li>
+<li><strong>安全与准备</strong>：成人称量、加热和收集残渣；学生不触碰粉末、热试管或产物；必须通风。</li>
+</ul>
+<hr />
+<h2>四、生命科学实验</h2>
+<h3>B1 洋葱表皮里的“砖墙”</h3>
+<ul>
+<li><strong>实验主题</strong>：制作洋葱内表皮水封装片，从低倍开始观察并绘制相邻植物细胞。</li>
+<li><strong>对应知识点</strong>：cell theory、plant cell、cell wall、cell membrane、cytoplasm、vacuole、科学绘图。</li>
+<li><strong>主要材料</strong>：显微镜、载玻片、盖玻片、滴管、镊子、洋葱内表皮、清水；可选新鲜稀碘液。</li>
+<li><strong>观察提醒</strong>：规则边界主要是细胞壁；细胞膜通常不容易单独看清；地下洋葱鳞片一般没有可见叶绿体。</li>
+<li><strong>安全与准备</strong>：双手搬显微镜；从低倍开始；高倍只用细准焦；破玻片由成人处理。</li>
+</ul>
+<h3>B2 紫皮洋葱细胞“缩水又复原”</h3>
+<ul>
+<li><strong>实验主题</strong>：先拍摄清水中的紫皮洋葱细胞，再引入 10% 食盐水，每分钟观察；最后换回清水看是否恢复。</li>
+<li><strong>对应知识点</strong>：osmosis、cell membrane、vacuole、plasmolysis、可逆变化。</li>
+<li><strong>主要材料</strong>：紫皮洋葱内表皮、清水、10% 食盐水、显微镜、载玻片、盖玻片、滴管、吸水纸、相机。</li>
+<li><strong>可测内容</strong>：统计同一视野 20 个细胞中明显质壁分离的比例，画时间—百分比图。</li>
+<li><strong>安全与准备</strong>：装片只用清水和食盐水；观察后当天清理。</li>
+</ul>
+<h3>B3 水草叶里的绿色“小工厂”</h3>
+<ul>
+<li><strong>实验主题</strong>：观察薄水草叶片中的叶绿体，并固定看一个细胞 2–3 分钟，寻找细胞质流动带来的叶绿体移动。</li>
+<li><strong>对应知识点</strong>：chloroplast、chlorophyll、photosynthesis、cytoplasmic streaming、结构与功能。</li>
+<li><strong>主要材料</strong>：干净黑藻/伊乐藻等薄叶沉水植物、显微镜、载玻片、盖玻片、滴管、清水。</li>
+<li><strong>观察提醒</strong>：要区分叶绿体在细胞内移动与整片玻片漂动。</li>
+<li><strong>安全与准备</strong>：只使用水族店或家养的干净水草，不采集或培养未知水样。</li>
+</ul>
+<h3>B4 酵母既是“粉”也是细胞</h3>
+<ul>
+<li><strong>实验主题</strong>：比较酵母＋糖水、酵母＋清水、糖水无酵母三组的泡沫或气球变化，同时观察酵母细胞和出芽。</li>
+<li><strong>对应知识点</strong>：single-celled fungus、living things、fermentation、metabolism、reproduction、control group。</li>
+<li><strong>主要材料</strong>：活性干酵母、5% 糖水、30–35°C 温水、透明小瓶、气球或排水集气装置、秒表；显微镜、载玻片、盖玻片。</li>
+<li><strong>可测内容</strong>：每 5 分钟记录泡沫高度或气球周长，共约 30 分钟。</li>
+<li><strong>安全与准备</strong>：不使用刚性密闭瓶；样品不可食用；当天清洗，不长期培养。</li>
+</ul>
+<h3>B5 土豆泡沫工厂</h3>
+<ul>
+<li><strong>实验主题</strong>：把相同土豆块分别置于冰水、室温水、约 40°C 温水，再加入相同体积新鲜 3% 过氧化氢，比较泡沫高度。</li>
+<li><strong>对应知识点</strong>：catalase、enzyme、reaction rate、temperature、protein denaturation、对照与重复。</li>
+<li><strong>主要材料</strong>：新鲜土豆、<strong>新购药店 3% 过氧化氢</strong>、相同试管、量筒、秒表、冰水/室温水/约 40°C 水浴、少量洗洁精、护目镜。</li>
+<li><strong>库存提示</strong>：旧分装双氧水状态和浓度不可靠，不能用于本课。</li>
+<li><strong>安全与准备</strong>：成人切土豆并分装双氧水；不用更高浓度；不密封试管；避免接触眼睛和皮肤。</li>
+</ul>
+<h3>B6 酵母泡沫喷泉</h3>
+<ul>
+<li><strong>实验主题</strong>：比较“新鲜 3% 过氧化氢＋酵母”和“新鲜 3% 过氧化氢＋清水”，记录 1 分钟内泡沫高度。</li>
+<li><strong>对应知识点</strong>：酵母中的 catalase、催化、oxygen、control group；也可比较冷/室温/约 35°C 预处理。</li>
+<li><strong>主要材料</strong>：<strong>新购药店 3% 过氧化氢</strong>、活性干酵母、温水、洗洁精、透明塑料瓶或量筒、食用色素、秒表、护目镜。</li>
+<li><strong>与 B5 的区别</strong>：B5 用土豆研究温度；B6 现象更明显，适合先认识酶和对照组。</li>
+<li><strong>安全与准备</strong>：成人分装双氧水；容器保持开放；泡沫不可接触眼睛。</li>
+</ul>
+<h3>B7 叶片的“呼吸孔”</h3>
+<ul>
+<li><strong>实验主题</strong>：分别拓印同一叶片正面和背面，每面选择 3 个视野计数气孔。</li>
+<li><strong>对应知识点</strong>：stomata、gas exchange、transpiration、取样与平均值、植物结构与功能。</li>
+<li><strong>主要材料</strong>：新鲜叶片、透明指甲油、透明胶带、显微镜、载玻片、记号笔。</li>
+<li><strong>可测内容</strong>：比较正面/背面每个视野的平均气孔数；不同植物结果可能不同。</li>
+<li><strong>安全与准备</strong>：指甲油由成人涂并完全晾干，保持通风，远离火源。</li>
+</ul>
+<h3>B8 芹菜的彩色水路</h3>
+<ul>
+<li><strong>实验主题</strong>：比较保留叶片和去掉大部分叶片的芹菜，记录色素上升高度；成人切横截面寻找被染色的木质部。</li>
+<li><strong>对应知识点</strong>：xylem、vascular plant、water transport、transpiration、结构与功能。</li>
+<li><strong>主要材料</strong>：粗细相近的芹菜或白菜叶柄、食用色素、透明杯、清水、直尺、小刀；显微镜、载玻片（可选）。</li>
+<li><strong>时间安排</strong>：每 30 分钟记录一次，持续 2–3 小时；教师可准备提前开始或隔夜样品。</li>
+<li><strong>安全与准备</strong>：切片全部由成人完成；使用相同水量和色素浓度。</li>
+</ul>
+<h3>B9 风会让植物失水更快吗</h3>
+<ul>
+<li><strong>实验主题</strong>：封住容器水面，比较静止空气、低速风和不同叶面积下整套装置的质量变化；透明袋收集凝结水作辅助证据。</li>
+<li><strong>对应知识点</strong>：transpiration、water loss、system boundary、mass change、变量控制。</li>
+<li><strong>主要材料</strong>：同种相近带叶枝条或幼苗、相同容器和水、保鲜膜/封口材料、0.01 g 电子秤、小风扇、透明袋、秒表、标签。</li>
+<li><strong>器材条件</strong>：需要较灵敏电子秤、重复样本和教师预试；短课应准备提前开始的样品。</li>
+<li><strong>安全与准备</strong>：只用干净植物；电器与水保持距离；避免强风造成机械损伤。</li>
+</ul>
+<h3>B10 香蕉 DNA 取丝</h3>
+<ul>
+<li><strong>实验主题</strong>：压碎香蕉，用盐和洗洁精处理、过滤，再沿杯壁加入冰冷酒精，在两层交界处卷起白色丝状物。</li>
+<li><strong>对应知识点</strong>：cell membrane、DNA、混合物分离、DNA 在冷酒精中不易溶解；肉眼看到的是含 DNA 的混合丝状物。</li>
+<li><strong>主要材料</strong>：熟香蕉、食盐、洗洁精、温水、滤纸、漏斗、透明杯、冰冷 75% 医用酒精、木签、密封废液容器。</li>
+<li><strong>适合作为备选的原因</strong>：现象明显，可衔接细胞和遗传物质，但不能把丝状物说成“纯 DNA”。</li>
+<li><strong>安全与准备</strong>：酒精由成人倒入并远离火源；实验材料不可食用；废液密封处理。</li>
+</ul>
+<hr />
+<h2>五、地球与空间实验</h2>
+<h3>E1 光照角度与季节深化</h3>
+<ul>
+<li><strong>实验主题</strong>：保持光源距离和照射时间不变，改变纸面角度，描出光斑并统计面积；再用倾斜地球仪解释南北半球季节。</li>
+<li><strong>对应知识点</strong>：angle of incidence、energy per unit area、axial tilt、season、model、模型限制。</li>
+<li><strong>主要材料</strong>：稳定 LED 灯、灯架、带孔黑纸板、方格纸、黑卡、可调角度支架、量角器、直尺、温度探头（可选）、地球仪、地点贴纸、23.5° 倾角参考卡。</li>
+<li><strong>作为正课后的用法</strong>：如果第 10 节主要做昼夜和月相，本课可以专门定量测量光照角度；如果第 10 节已经完整测过，则不重复。</li>
+<li><strong>安全与准备</strong>：不用激光笔；选择低温光源；先统一入射角的测量方式。</li>
+</ul>
+<hr />
+<h2>六、综合自主探究</h2>
+<h3>X1 这一次由学生提出问题</h3>
+<ul>
+<li><strong>课程任务</strong>：学生从已经熟悉的安全材料和装置中选择一个问题，自主确定变量、测量方法、重复次数和数据表达方式。</li>
+<li><strong>对应知识点</strong>：testable question、hypothesis、variables、data table、graph、Claim–Evidence–Reasoning、limitation。</li>
+<li><strong>可选实验平台</strong>：弹簧、橡皮泥船、保温材料、纸色谱、紫甘蓝指示剂、植物蒸腾、小车与摩擦。</li>
+<li><strong>通用材料</strong>：由所选平台决定；另需实验计划表、方格纸、铅笔、计时器、电子秤/温度计/直尺等测量工具。</li>
+<li><strong>最低成果要求</strong>：一个可检验问题；至少 3 个自变量水平；每个条件至少 2–3 次数据；一张图；一份 CER 结论；一个改进建议。</li>
+</ul>
+<hr />
+<h2>七、已上过的实验记录——不作为优先备选</h2>
+<h3>T1 单摆周期（已上）</h3>
+<ul>
+<li><strong>主题</strong>：改变摆长、摆锤质量和释放角度，练习控制变量、重复测量和误差处理。</li>
+<li><strong>主要材料</strong>：棉线、摆锤、铁架台、卷尺、量角器、秒表、电子秤、方格纸。</li>
+<li><strong>状态</strong>：实际第 1 节已完成；后续课程继续使用其中的实验方法，不重复完整操作。</li>
+</ul>
+<h3>T2 溶解、过滤与结晶（已上）</h3>
+<ul>
+<li><strong>主题</strong>：追踪粗盐/食盐溶解后的物质，通过过滤和结晶寻找证据，并观察相关温度变化。</li>
+<li><strong>主要材料</strong>：粗盐或食盐、水、电子秤、量筒、漏斗、滤纸、蒸发皿、温度计、加热设备、护目镜。</li>
+<li><strong>状态</strong>：实际第 2 节已完成；以后只调用结论，不重复整套实验。</li>
+</ul>
+<h3>T3 物理变化与化学变化（已上）</h3>
+<ul>
+<li><strong>主题</strong>：比较相变、溶解、混合和化学反应，用气体、温度、沉淀、颜色和新物质性质等多条证据判断变化类型。</li>
+<li><strong>主要材料</strong>：以已完成教案中的微量材料和展示样品为准；电子秤、温度计、反应板、滴管、护目镜等。</li>
+<li><strong>状态</strong>：实际第 3 节已完成；后续课程继续复习判断标准，不重复同组实验。</li>
+</ul>
+<hr />
+<h2>八、通用器材与采购优先级</h2>
+<h3>最值得长期保留的通用器材</h3>
+<ul>
+<li>电子秤：0.1 g；植物蒸腾如需定量，最好达到 0.01 g。</li>
+<li>数字温度计或温度探头、量筒、滴管、漏斗、滤纸。</li>
+<li>铁架台、夹具、直尺、卷尺、量角器、秒表。</li>
+<li>气体注射器、软管、可靠密封塞；气球和软质密封袋作简化替代。</li>
+<li>显微镜、载玻片、盖玻片、镊子、吸水纸。</li>
+<li>护目镜、手套、托盘、标签纸、记号笔、纸巾。</li>
+</ul>
+<h3>需要新购或重新确认后才能启用</h3>
+<ul>
+<li>药店新鲜 3% 过氧化氢：B5、B6。</li>
+<li>新鲜、标签清楚的稀碘液或碘伏：C5。</li>
+<li>原标签完整的氯化钙和碳酸钠：C7；原有氯化钙不能使用。</li>
+<li>低压电池盒、开关、绝缘铜线：P3、P8。</li>
+<li>食品级柠檬酸或新鲜白醋：C1、C9。</li>
+</ul>
+<h3>不进入学生动手备选课</h3>
+<ul>
+<li>氧化钙、氢氧化钡、疑似氢氧化钾、名称不明试剂。</li>
+<li>草酸、氯化锌及状态不明的金属盐。</li>
+<li>旧分装双氧水和浓度不明的指示剂。</li>
+<li>任何需要刚性密闭产气、学生直接加热未知化学品或闻气体的方案。</li>
+</ul>
+<h2>九、选课建议</h2>
+<ul>
+<li><strong>孩子喜欢机械和制作</strong>：P1 → P2 → P3 或 P6。</li>
+<li><strong>想加强 Unit 3 力、热和光</strong>：P5 → P6 → P7。</li>
+<li><strong>想加强物质变化与证据</strong>：C4 → C8 → C9 → C3。</li>
+<li><strong>想增加显微镜使用</strong>：B1 → B2 → B3 → B7。</li>
+<li><strong>想加强植物结构与运输</strong>：B7 → B8 → B9。</li>
+<li><strong>想做明显、短时间可见的现象</strong>：C4、C7、C8、B6、B10。</li>
+<li><strong>最后做自主研究</strong>：先选 2–3 节同类备选课，再进入 X1。</li>
+</ul>
+<h2>十、归档来源</h2>
+<p>以下旧稿保留完整步骤、教学解释和历史版本，现已归档，不再作为当前排课入口：</p>
+<ul>
+<li><a href="#md-preview-92c0f7180a95" data-md-preview="md-preview-92c0f7180a95">旧版 8–10 节实验科学暑期课程</a></li>
+<li><a href="#md-preview-cb12147085eb" data-md-preview="md-preview-cb12147085eb">化学与生物实验栏目详细方案</a></li>
+<li><a href="#md-preview-f4d2fcdcaec3" data-md-preview="md-preview-f4d2fcdcaec3">新增趣味化学与生物短课</a></li>
+<li><a href="#md-preview-baa1d41ea426" data-md-preview="md-preview-baa1d41ea426">试剂盘点后的化学与生命科学更新建议</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E6%A0%B8%E5%BF%83%E6%95%99%E6%A1%88/">旧核心实验详细教案目录</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E6%9D%90%E6%96%99%E6%B8%85%E5%8D%95/">旧材料与采购清单目录</a></li>
+</ul>
+</article></main>
+<main class="document-preview" id="md-preview-0783fd99f2e9" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\课程规划阶段\01-暑期与备选规划\README.md</code></details><article><h1>第一阶段：暑期与备选课程规划</h1>
+<p><a href="#md-preview-05acb3ea7afe" data-md-preview="md-preview-05acb3ea7afe">返回阶段目录</a></p>
+<ul>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/01-%E6%9A%91%E6%9C%9F%E4%B8%8E%E5%A4%87%E9%80%89%E8%A7%84%E5%88%92/%E6%9A%91%E6%9C%9F%E5%AE%9E%E9%AA%8C%E7%A7%91%E5%AD%A6%E8%AF%BE%E7%A8%8B%E8%AE%A1%E5%88%92.html">暑期实验科学课程计划（原HTML）</a></li>
+<li><a href="#md-preview-05eb9dd1fc05" data-md-preview="md-preview-05eb9dd1fc05">正课后备选实验课程库（Markdown）</a></li>
+</ul>
+<p>保留早期总体规划和实验备选。已授详细教案与真实进度见 <a href="#md-preview-7ea41a2780b5" data-md-preview="md-preview-7ea41a2780b5">核心课程备课</a>；当前45–60分钟系列见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">现行目录</a>。</p>
+</article></main>
+<main class="document-preview" id="md-preview-68e7b1b54b75" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\课程规划阶段\02-新阶段初步构想\README.md</code></details><article><h1>第二阶段：新阶段初步构想</h1>
+<p><a href="#md-preview-05acb3ea7afe" data-md-preview="md-preview-05acb3ea7afe">返回阶段目录</a></p>
+<ul>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/02-%E6%96%B0%E9%98%B6%E6%AE%B5%E5%88%9D%E6%AD%A5%E6%9E%84%E6%83%B3/%E6%96%B0%E9%98%B6%E6%AE%B5%E5%8C%96%E5%AD%A6%E5%AE%9E%E9%AA%8C%E7%B3%BB%E5%88%97%E6%9E%84%E6%83%B3.html">初步构想（Markdown）</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/02-%E6%96%B0%E9%98%B6%E6%AE%B5%E5%88%9D%E6%AD%A5%E6%9E%84%E6%83%B3/%E6%96%B0%E9%98%B6%E6%AE%B5%E5%8C%96%E5%AD%A6%E5%AE%9E%E9%AA%8C%E7%B3%BB%E5%88%97%E6%9E%84%E6%83%B3.html">初步构想（HTML阅读版）</a></li>
+</ul>
+<p>这里保留新阶段最初的主题分组、实验选择和原理讨论，供回看方案演进。当前选课入口是 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">系列课程方案</a>。</p>
+</article></main>
+<main class="document-preview" id="md-preview-c30c7517ef27" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\课程规划阶段\04-电化学进阶备选\README.md</code></details><article><h1>第四阶段：电化学进阶备选</h1>
+<p><a href="#md-preview-05acb3ea7afe" data-md-preview="md-preview-05acb3ea7afe">返回阶段目录</a></p>
+<ul>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/04-%E7%94%B5%E5%8C%96%E5%AD%A6%E8%BF%9B%E9%98%B6%E5%A4%87%E9%80%89/%E7%94%B5%E5%8C%96%E5%AD%A6%E7%B3%BB%E5%88%97_%E9%93%9C%E7%9A%84%E5%8F%98%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E8%BD%AC%E7%A7%BB.html">铜的变化与电子转移（Markdown）</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/04-%E7%94%B5%E5%8C%96%E5%AD%A6%E8%BF%9B%E9%98%B6%E5%A4%87%E9%80%89/%E7%94%B5%E5%8C%96%E5%AD%A6%E7%B3%BB%E5%88%97_%E9%93%9C%E7%9A%84%E5%8F%98%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E8%BD%AC%E7%A7%BB.html">铜的变化与电子转移（HTML阅读版）</a></li>
+</ul>
+<p>保留这一版较深入的五课构想，作为教师背景或未来进阶参考。当前五年级电化学仍是用户认可的四个活动，见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/01-%E7%94%B5%E5%8C%96%E5%AD%A6_4%E8%AF%BE.html">01 电化学</a>。</p>
+</article></main>
+<main class="document-preview" id="md-preview-7f84374165d6" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\课程规划阶段\05-六系列原合辑\README.md</code></details><article><h1>第五阶段：六系列原合辑</h1>
+<p><a href="#md-preview-05acb3ea7afe" data-md-preview="md-preview-05acb3ea7afe">返回阶段目录</a> ｜ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">查看拆分后的独立系列</a></p>
+<p>这里是拆分前的两份完整合辑，保留原文与当时的目录结构说明。后续改课请修改当前系列目录中的独立文件。</p>
+<table>
+<thead>
+<tr>
+<th>合辑</th>
+<th>Markdown</th>
+<th>HTML阅读版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电化学、气体与膨胀、声音</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/05-%E5%85%AD%E7%B3%BB%E5%88%97%E5%8E%9F%E5%90%88%E8%BE%91/%E4%BA%94%E5%B9%B4%E7%BA%A7%E5%AE%9E%E9%AA%8C%E8%AF%BE_%E4%B8%89%E4%B8%AA%E7%B3%BB%E5%88%97%E6%96%B9%E6%A1%88.html">查看</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/05-%E5%85%AD%E7%B3%BB%E5%88%97%E5%8E%9F%E5%90%88%E8%BE%91/%E4%BA%94%E5%B9%B4%E7%BA%A7%E5%AE%9E%E9%AA%8C%E8%AF%BE_%E4%B8%89%E4%B8%AA%E7%B3%BB%E5%88%97%E6%96%B9%E6%A1%88.html">查看</a></td>
+</tr>
+<tr>
+<td>颜色侦探、凝胶、硬水，以及DK和公开教案检索</td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/05-%E5%85%AD%E7%B3%BB%E5%88%97%E5%8E%9F%E5%90%88%E8%BE%91/%E5%8C%96%E5%AD%A6%E6%B7%B7%E5%90%88%E4%B8%93%E9%A2%98_DK%E4%B8%8E%E5%85%AC%E5%BC%80%E6%95%99%E6%A1%88%E6%A3%80%E7%B4%A2.html">查看</a></td>
+<td><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E8%AF%BE%E7%A8%8B%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5/05-%E5%85%AD%E7%B3%BB%E5%88%97%E5%8E%9F%E5%90%88%E8%BE%91/%E5%8C%96%E5%AD%A6%E6%B7%B7%E5%90%88%E4%B8%93%E9%A2%98_DK%E4%B8%8E%E5%85%AC%E5%BC%80%E6%95%99%E6%A1%88%E6%A3%80%E7%B4%A2.html">查看</a></td>
+</tr>
+</tbody>
+</table>
+<p>四份正文文件与原合辑逐字一致。原有“整理校验.json”也保留，记录首次拆分时的摘要和旧相对路径；现有文件按本目录同名文件查找。</p>
+</article></main>
+<main class="document-preview" id="md-preview-4c22f10f6c06" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · README.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\旧核心教案\修改前快照\README.md</code></details><article><h1>备课修改前快照</h1>
+<p>这里保留原始备份源码，供回溯，不作为当前教案入口。</p>
+<ul>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E6%A0%B8%E5%BF%83%E6%95%99%E6%A1%88/%E4%BF%AE%E6%94%B9%E5%89%8D%E5%BF%AB%E7%85%A7/09-%E7%94%9F%E7%89%A9%E6%80%8E%E6%A0%B7%E8%BF%90%E8%BE%93%E7%89%A9%E8%B4%A8.md.orig">第9课修改前文本</a></li>
+<li><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/arxiv/%E6%97%A7%E6%A0%B8%E5%BF%83%E6%95%99%E6%A1%88/%E4%BF%AE%E6%94%B9%E5%89%8D%E5%BF%AB%E7%85%A7/09-stomata-direct-wet-mount.svg.orig">直接观察气孔示意图的修改前源码</a></li>
+</ul>
+<p>备份源码内容原样保留，其中的路径仍反映备份时的写法。正式使用请打开 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B%E5%A4%87%E8%AF%BE/09-%E7%94%9F%E7%89%A9%E6%80%8E%E6%A0%B7%E8%BF%90%E8%BE%93%E7%89%A9%E8%B4%A8.html">当前第9课</a>。</p>
+</article></main>
+<main class="document-preview" id="md-preview-92c0f7180a95" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 8-10节实验科学暑期课程.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\旧课程方案\8-10节实验科学暑期课程.md</code></details><article><h1>8-10 节实验科学暑期课程整合-offsetof C</h1>
+<h2>从数据、规律到系统模型</h2>
+<h2>一、整合思路</h2>
+<h3>保留</h3>
+<ul>
+<li>单摆：作为全课程的实验方法起点；</li>
+<li>弹簧：学习如何从数据建立可预测的规律；</li>
+<li>浮力：用证据修正“重就沉、轻就浮”的错误直觉；</li>
+<li>固体溶解、吸热与放热：整合成一次完整的物质与能量调查；</li>
+<li>反应速率、氧化、质量守恒：形成连续的化学变化模块；</li>
+<li>地球—太阳模型：把“实验—模型—预测”的方法迁移到不能直接操纵的巨大系统；</li>
+<li>酶与自主实验：作为第 9、10 节扩展。</li>
+</ul>
+<h3>合并或降级</h3>
+<ul>
+<li>伽利略斜面与惯性思想移入备选实验库，不再附加在单摆课后；采用时应作为一个完整调查独立进行；</li>
+<li>冷热水混合不再单独成课，只作为理解温度、能量转移和实验基线的简短讨论；</li>
+<li>食盐溶解、过滤、结晶和溶解热合并到同一节，不再分散；</li>
+<li>同一个酸—碳酸氢盐反应连续用于“反应速率”和“质量守恒”，让孩子理解：研究问题不同，测量方法也不同。</li>
+</ul>
+<h3>从核心方案移除</h3>
+<ul>
+<li>电磁铁：实验本身很好，但需要电池盒、漆包线、相同铁芯和稳定的通断控制，而且会在八节课中单独开启一套电磁概念，和前后主线连接较弱；</li>
+<li>气体溶解度：它涉及温度、压力、成核和气液平衡，装置漏气也容易掩盖结果。若只有 8-10 节，不强行塞进固体溶解课；以后可以单独发展成一节更完整的专题。</li>
+</ul>
+<h3>独立增加：化学与生物实验栏目</h3>
+<p>在 8 节主线课程之外，增加 10 个可独立选择的短实验：</p>
+<ul>
+<li>化学：紫甘蓝酸碱变色、碘—淀粉与维生素 C、牛奶蛋白沉淀、碳酸钙微量沉淀、纸色谱；</li>
+<li>生物与显微镜：洋葱表皮细胞、紫皮洋葱质壁分离、水草叶绿体、酵母细胞与发酵、土豆过氧化氢酶。</li>
+</ul>
+<p>这些实验优先使用食品级或药店低浓度材料；只有看到完整原标签后，才启用氯化钙与碳酸钠沉淀反应。具体用量、安全边界、废物处理和 6 次推荐排课见 <a href="#md-preview-cb12147085eb" data-md-preview="md-preview-cb12147085eb">《化学与生物实验栏目：家庭微量实验方案》</a>。</p>
+<hr />
+<h2>二、整套课程的总问题</h2>
+<blockquote>
+<p><strong>科学家怎样从不完全、会波动的实验数据，建立能够解释和预测世界的规律与模型？</strong></p>
+</blockquote>
+<p>课程不是按“力学、化学、地理”分科排列，而是按科学思维逐层推进。</p>
+<h2>第一阶段：怎样得到可信的数据？</h2>
+<ul>
+<li>第 1 节单摆：学习测量、重复、误差和控制变量。</li>
+</ul>
+<h2>第二阶段：怎样从数据得到关系与规律？</h2>
+<ul>
+<li>第 2 节弹簧：把数据画成图，用规律预测未知结果，并发现规律有边界；</li>
+<li>第 3 节浮力：发现真正相关的变量，修正“只看重量”的简单解释。</li>
+</ul>
+<h2>第三阶段：怎样追踪看不见的物质与能量？</h2>
+<ul>
+<li>第 4 节溶解：物质看不见但没有消失，溶解还伴随能量变化；</li>
+<li>第 5 节反应速率：同样的物质可以以不同速度发生变化；</li>
+<li>第 6 节氧化：科学也能研究缓慢发生的变化；</li>
+<li>第 7 节质量守恒：系统边界决定我们怎样解释“增加”和“减少”。</li>
+</ul>
+<h2>第四阶段：怎样使用并检验模型？</h2>
+<ul>
+<li>第 8 节地球—太阳：用小尺度实验解释大尺度现象，同时认识模型的限制；</li>
+<li>第 9 节酶：把物理、化学方法迁移到生命系统；</li>
+<li>第 10 节自主实验：孩子独立完成一次从问题到证据的调查。</li>
+</ul>
+<hr />
+<h2>三、贯穿全课的五条主线思想</h2>
+<p>每节课只重点推进其中一两条，但课堂结束时都要明确指出它在整条主线中的位置。</p>
+<h3>主线 1：可靠证据不是“看一次”</h3>
+<p>科学证据来自明确的测量方法、对照、重复和对误差的诚实处理。</p>
+<h3>主线 2：规律描述的是变量之间的关系</h3>
+<p>不能只问“会不会发生”，还要问“改变多少 X，会怎样改变 Y”。图像是看见关系的重要工具。</p>
+<h3>主线 3：模型是解释和预测的工具</h3>
+<p>粒子、力、能量和地球仪都是模型。好模型必须能解释已有证据，并预测还没有做过的情况。</p>
+<h3>主线 4：系统边界决定“去了哪里”</h3>
+<p>物质和能量看似消失、增加或减少时，首先检查研究系统包含什么、排除了什么，以及是否有东西穿过边界。</p>
+<h3>主线 5：科学规律有条件，也有适用范围</h3>
+<p>弹簧并不会无限遵守胡克定律；升温也不一定永远让生命反应更快。理解边界比背一句规律更接近真正的科学。</p>
+<hr />
+<h2>四、每节课的固定结构</h2>
+<p>以下按 75-90 分钟设计：</p>
+<ol>
+<li>
+<p><strong>现象与预测：10 分钟</strong><br />
+孩子先写预测和理由，教师不公布答案。</p>
+</li>
+<li>
+<p><strong>设计测量：10-15 分钟</strong><br />
+明确自变量、因变量、控制变量、重复次数和安全边界。</p>
+</li>
+<li>
+<p><strong>实验与记录：25-35 分钟</strong><br />
+孩子承担主要操作和读数。</p>
+</li>
+<li>
+<p><strong>表格或图像：10-15 分钟</strong><br />
+寻找趋势、异常值和不确定性。</p>
+</li>
+<li>
+<p><strong>建立模型：10-15 分钟</strong><br />
+在证据之后引入术语、规律和必要的公式。</p>
+</li>
+<li>
+<p><strong>迁移与反思：5-10 分钟</strong><br />
+用模型预测新情况，并写出下一轮如何改进。</p>
+</li>
+</ol>
+<p>统一实验记录：</p>
+<p><strong>Question → Prediction → Variables → Method → Data → Claim → Evidence → Reasoning → Limitation / New Question</strong></p>
+<hr />
+<h2>五、8 节核心课程</h2>
+<h2>第 1 节：摆钟会听谁的话？——怎样让测量值得相信</h2>
+<h3>核心问题</h3>
+<p><strong>单摆摆动一次所需时间，主要由摆长、摆锤质量还是放手角度决定？</strong></p>
+<h3>主要实验</h3>
+<p>制作简易单摆，以摆长为主要自变量：</p>
+<ul>
+<li>摆长设置为约 20、40、60、80 cm；</li>
+<li>每次测量摆动 10 次所需时间；</li>
+<li>每种长度重复 3 次；</li>
+<li>质量和小角度只做少量对照，不同时改变多个条件；</li>
+<li>绘制摆长—周期图。</li>
+</ul>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 1：可靠证据不是看一次，而是把误差变小、把比较做公平。</strong></p>
+</blockquote>
+<p>孩子需要真正理解：</p>
+<ul>
+<li>为什么不只计时一次摆动；</li>
+<li>为什么每个条件要重复；</li>
+<li>为什么不能一边改长度、一边换摆锤；</li>
+<li>数据有波动不等于实验失败；</li>
+<li>平均值可以减少偶然误差，但不能修复错误的实验设计。</li>
+</ul>
+<h3>关键概念与英文</h3>
+<p>单摆（pendulum）、周期（period）、公平实验（fair test）、重复测量（repeated measurement）、误差（error）。</p>
+<h3>主要材料</h3>
+<p>棉线、相同摆锤、支架、卷尺、量角器和秒表。</p>
+<hr />
+<h2>第 2 节：一根弹簧能不能成为秤？——从数据建立规律</h2>
+<h3>核心问题</h3>
+<p><strong>增加拉力时，弹簧伸长量怎样变化？能否利用这个关系测量一个未知物体？</strong></p>
+<h3>主要实验</h3>
+<ul>
+<li>测量弹簧没有负载时的长度；</li>
+<li>依次增加相同砝码，记录总长度和伸长量；</li>
+<li>每个负载重复读数；</li>
+<li>绘制力—伸长量图；</li>
+<li>利用图线预测未知物体质量，再用电子秤检验；</li>
+<li>最后比较橡皮筋数据，观察它是否也形成同样的直线关系。</li>
+</ul>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 2 与 5：规律是变量之间可用来预测的关系，但规律只在一定条件下成立。</strong></p>
+</blockquote>
+<p>本节重点不是记 <code>F = kx</code>，而是让孩子经历：</p>
+<ol>
+<li>数据点形成趋势；</li>
+<li>趋势可以压缩成一个关系；</li>
+<li>关系可以预测未测物体；</li>
+<li>预测需要回到实验检验；</li>
+<li>弹簧与橡皮筋不同，说明“有弹性”不等于都严格遵守同一关系。</li>
+</ol>
+<h3>教学边界</h3>
+<ul>
+<li>只在安全弹性范围内加载，不让孩子寻找破坏极限；</li>
+<li>可以介绍胡克定律（Hooke’s law），但公式是数据关系的简写，不是课堂起点；</li>
+<li>如果没有标准牛顿砝码，可以先用“相同砝码个数”作为相对力单位。</li>
+</ul>
+<h3>关键概念与英文</h3>
+<p>弹性（elasticity）、伸长量（extension）、力（force）、正比关系（proportional relationship）、校准（calibration）、适用范围（range of validity）。</p>
+<h3>主要材料</h3>
+<p>螺旋弹簧、支架、直尺、相同砝码、未知质量物体、电子秤、橡皮筋、护目镜。</p>
+<hr />
+<h2>第 3 节：轻的就一定浮，重的就一定沉吗？——寻找真正相关的变量</h2>
+<h3>核心问题</h3>
+<p><strong>浮沉究竟由物体重量决定，还是由物体与排开水之间的关系决定？</strong></p>
+<h3>主要实验</h3>
+<p>实验分成一条连续证据链：</p>
+<ol>
+<li>用溢水杯测量不同浮动物体排开水的质量；</li>
+<li>比较浮动物体自身质量和排开水质量；</li>
+<li>用同一团橡皮泥做实心球和空心船，保持质量不变；</li>
+<li>给橡皮泥船逐渐加载，记录沉没前的最大载荷和排水量。</li>
+</ol>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 2 与 3：如果一个解释失败，不要只加术语；要寻找遗漏的变量并建立更好的模型。</strong></p>
+</blockquote>
+<p>本节要修正的不是一个定义，而是一种常见推理错误：</p>
+<ul>
+<li>“石头重，所以沉”解释不了比石头重得多的钢船；</li>
+<li>“木头轻，所以浮”也没有说明与水的比较关系；</li>
+<li>同一团橡皮泥质量没有变化，形状改变后却能浮，说明质量不是唯一变量；</li>
+<li>船体结构改变可排开的水量，因此改变水提供的浮力。</li>
+</ul>
+<h3>教学深度</h3>
+<p>不要求推导阿基米德原理。孩子应能用证据说出：漂浮时，物体必须排开足够多的水来获得向上的支持；形状会改变它在完全浸没前能够排开的水量。</p>
+<h3>关键概念与英文</h3>
+<p>浮力（buoyancy）、排水（displacement）、平均密度（average density）、模型修正（model revision）。</p>
+<h3>主要材料</h3>
+<p>溢水杯或满水容器、接水盘、电子秤、量筒、橡皮泥、垫圈、不同浮动物体。</p>
+<hr />
+<h2>第 4 节：盐真的消失了吗？——一次完整的溶解调查</h2>
+<h3>核心问题</h3>
+<p><strong>固体溶进水里以后，物质去了哪里？溶解时为什么有时变热、有时变冷？</strong></p>
+<p>这节把“质量、过滤、结晶、吸热与放热”放进同一个粒子与能量问题中，而不是做几个互不相关的小演示。</p>
+<h3>实验 A：物质还在吗？</h3>
+<ul>
+<li>称量容器、水和已知质量食盐；</li>
+<li>食盐完全溶解后再次称量整个系统；</li>
+<li>过滤盐水，观察滤纸是否截留食盐；</li>
+<li>蒸发已知比例的盐水，回收并称量晶体；</li>
+<li>教师准备相同配方的时间平移样品，保证课堂内能看到蒸发结果。</li>
+</ul>
+<h3>实验 B：溶解都伴随相同温度变化吗？</h3>
+<p>在相同保温杯中，用相同质量、同温度的水分别溶解相同质量的：</p>
+<ul>
+<li>氯化钙（明显升温）；</li>
+<li>碳酸氢钠（通常小幅降温）；</li>
+<li>氯化钠（变化较小，作为比较）。</li>
+</ul>
+<p>以固定时间间隔记录温度，绘制温度—时间曲线。</p>
+<p>这两个部分共同回答“溶解过程中，物质与能量分别发生了什么”，因此仍是一节完整调查，而不是两个主题。</p>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 3 与 4：看不见不等于不存在；物质和能量都要通过系统边界被追踪。</strong></p>
+</blockquote>
+<p>孩子应逐步形成以下模型：</p>
+<ul>
+<li>食盐没有被过滤掉，是因为它已经以非常小的粒子分散在水中；</li>
+<li>电子秤和重新得到的晶体说明盐仍然存在；</li>
+<li>溶解不是熔化，也不是所有情况下都会发生化学反应；</li>
+<li>不同粒子与水重新相互作用时，能量变化可以不同；</li>
+<li>说“溶解放热”时必须问：研究系统是什么，温度升高的是谁，能量流向哪里？</li>
+</ul>
+<h3>为什么不把气体溶解度也塞进本节</h3>
+<p>固体溶解、过滤和结晶主要回答“溶解物是否仍存在、怎样分离”；气体溶解度还受到压力、温度、搅动和成核影响，需要可靠的密封与集气装置。强行放在同一节会让一个清楚的粒子—能量主线变成现象拼盘，因此方案 C 暂不列入核心课。</p>
+<h3>关键概念与英文</h3>
+<p>溶解（dissolving）、溶质（solute）、溶剂（solvent）、过滤（filtration）、蒸发（evaporation）、结晶（crystallization）、放热（exothermic）、吸热（endothermic）、系统（system）。</p>
+<h3>安全与材料</h3>
+<p>食盐、成分明确的氯化钙、食用小苏打、水、电子秤、保温杯、温度探头、量筒、漏斗、滤纸、蒸发皿、低温电热板、护目镜和手套。加热由教师负责；所有实验物质不得品尝。CaO 不用于学生动手实验。</p>
+<hr />
+<h2>第 5 节：升温会产生更多气体，还是只让反应更快？</h2>
+<h3>核心问题</h3>
+<p><strong>改变温度时，化学反应的速度和最终产物总量会怎样变化？</strong></p>
+<h3>主要实验</h3>
+<p>使用相同质量和配比的柠檬酸与碳酸氢钠，在约 10°C、25°C 和 40°C 的相同体积水中反应：</p>
+<ul>
+<li>用气体注射器或排水法收集二氧化碳；</li>
+<li>每隔固定时间记录气体体积；</li>
+<li>绘制气体体积—时间曲线；</li>
+<li>比较达到 50 mL 等固定气体体积所需时间；</li>
+<li>比较反应结束后的总气体体积。</li>
+</ul>
+<h3>与第 4 节的连接</h3>
+<p>第 4 节研究粒子进入水后怎样分散以及伴随什么能量变化；第 5 节进一步问：当粒子在水中相遇并形成新物质时，温度会怎样影响相遇和反应速度？</p>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 2：讨论“更多”以前必须先定义，是单位时间更多，还是最终总量更多。</strong></p>
+</blockquote>
+<p>本节重点区分：</p>
+<ul>
+<li><strong>反应速率（reaction rate）</strong>：产生得有多快；</li>
+<li><strong>产物总量（total yield）</strong>：反应结束后一共得到多少；</li>
+<li>较高温度通常使这组反应更快，但相同反应物用量不应凭空产生更多物质；</li>
+<li>图线的斜率和最终平台回答的是两个不同问题。</li>
+</ul>
+<h3>关键概念与英文</h3>
+<p>化学反应（chemical reaction）、反应速率（reaction rate）、产物（product）、碰撞（collision）、变量定义（operational definition）。</p>
+<h3>安全与材料</h3>
+<p>柠檬酸、小苏打、恒温水浴、温度计、气体注射器或排水集气装置、秒表、护目镜。装置必须能释放或柔性容纳气体，不能密封在刚性玻璃瓶中。</p>
+<hr />
+<h2>第 6 节：铁为什么会慢慢生锈？——时间也是实验变量</h2>
+<h3>核心问题</h3>
+<p><strong>铁生锈需要哪些条件？盐是制造铁锈的材料，还是让反应变快的条件？</strong></p>
+<h3>主要实验</h3>
+<p>设置相同铁钉或钢丝绒的四种条件：</p>
+<ol>
+<li>干燥空气；</li>
+<li>煮沸、冷却并用油层隔绝空气的水；</li>
+<li>普通水和空气；</li>
+<li>盐水和空气。</li>
+</ol>
+<p>由于氧化较慢：</p>
+<ul>
+<li>教师提前 5-7 天准备完全相同的时间平移样品；</li>
+<li>孩子课堂上建立自己的四组实验；</li>
+<li>当天观察预制样品，记录锈斑面积、颜色等级和照片；</li>
+<li>第 7、8 节开头各用约 5 分钟继续记录孩子自己的样品。</li>
+</ul>
+<h3>与第 5 节的连接</h3>
+<p>第 5 节研究几秒或几分钟内发生的反应；第 6 节把尺度拉到数天。反应快慢不同，但提出问题、设置对照和收集证据的方法没有改变。</p>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 1 与 4：科学不只研究瞬间现象；慢变化需要时间序列、对照和持续记录。</strong></p>
+</blockquote>
+<p>孩子应能区分：</p>
+<ul>
+<li>反应物和反应条件不是一回事；</li>
+<li>铁锈中的氧来自空气或水中的氧；</li>
+<li>水和氧是常见锈蚀所需条件；</li>
+<li>盐通常加快腐蚀，但不是铁锈里铁或氧的来源；</li>
+<li>防锈方法的共同点是改变反应所需条件或降低速率。</li>
+</ul>
+<h3>关键概念与英文</h3>
+<p>氧化（oxidation）、腐蚀（corrosion）、反应条件（reaction condition）、时间序列（time series）、对照组（control）。</p>
+<h3>安全与材料</h3>
+<p>相同铁钉或钢丝绒、透明小瓶、盐、水、少量食用油、干燥剂、标签、手套。钢丝绒可能刺手；不采用点燃钢丝绒的方案。</p>
+<hr />
+<h2>第 7 节：气体跑掉后，质量真的减少了吗？——守恒必须先画边界</h2>
+<h3>核心问题</h3>
+<p><strong>同一个产生气体的反应，在开放和封闭容器中称量，为什么会得到不同结果？</strong></p>
+<h3>主要实验</h3>
+<p>重新使用第 5 节熟悉的柠檬酸—碳酸氢钠反应，但这次改变研究问题和测量工具：</p>
+<ul>
+<li>开放组：在开口容器中反应；</li>
+<li>封闭组：在软质密封袋或带气球的装置中反应；</li>
+<li>两组使用相同反应物用量；</li>
+<li>测量反应前后整个装置的质量；</li>
+<li>每组至少重复一次，并记录秤的分度值和自然波动。</li>
+</ul>
+<h3>与前面实验的连接</h3>
+<ul>
+<li>第 4 节：盐看不见，但总质量没有消失；</li>
+<li>第 5 节：反应产生气体，气体体积随时间增加；</li>
+<li>第 6 节：铁在开放环境中结合氧，质量可能增加；</li>
+<li>第 7 节：系统可以因物质穿过边界而显示增重或减重，但封闭系统的总质量守恒。</li>
+</ul>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 4：讨论“消失、增加、减少”之前，必须先说清楚系统边界画在哪里。</strong></p>
+</blockquote>
+<p>这是化学模块的概念收束：</p>
+<ul>
+<li>开放组质量下降，不是物质被毁灭，而是 CO₂ 离开称量系统；</li>
+<li>封闭组气球变大，但总质量在误差范围内不变；</li>
+<li>铁锈实验中铁可能增重，是外界氧进入了所称量的铁；</li>
+<li>**质量守恒（conservation of mass）**不是一句口号，而是一种先定义系统、再解释测量的思维方法。</li>
+</ul>
+<h3>结课表达</h3>
+<p>使用 <strong>Claim-Evidence-Reasoning（主张—证据—推理）</strong> 回答：开放组和封闭组是否都遵守质量守恒？为什么秤的读数不同？</p>
+<h3>关键概念与英文</h3>
+<p>开放系统（open system）、封闭系统（closed system）、系统边界（system boundary）、质量守恒（conservation of mass）、测量不确定性（measurement uncertainty）。</p>
+<h3>安全与材料</h3>
+<p>柠檬酸、小苏打、软质密封袋或气球、电子秤、量筒、护目镜。禁止用刚性玻璃瓶密封产气反应。</p>
+<hr />
+<h2>第 8 节：四季为什么变化？——模型不是玩具地球</h2>
+<h3>核心问题</h3>
+<p><strong>同一束光斜着照和直着照，单位面积得到的能量为什么不同？这能否解释季节？</strong></p>
+<h3>主要实验</h3>
+<p>实验先于地球仪演示：</p>
+<ol>
+<li>固定光源、距离和照射时间；</li>
+<li>让带方格的纸面分别以接近垂直和不同倾角接受光照；</li>
+<li>描出光斑并统计覆盖方格数；</li>
+<li>条件允许时，用相同黑色表面测固定时间内温升；</li>
+<li>比较相同光束分散到的面积。</li>
+</ol>
+<p>随后用灯代表太阳、地球仪代表地球：</p>
+<ul>
+<li>地轴保持约 23.5° 倾斜；</li>
+<li>公转过程中地轴方向保持大致不变；</li>
+<li>观察同一半球在不同位置的太阳高度、照射面积和昼长；</li>
+<li>用前半节得到的实验规律解释季节。</li>
+</ul>
+<h3>与整套课的连接</h3>
+<p>此前的实验可以直接操纵摆长、力、温度和反应物；真实地球却不能被搬进实验室。科学家需要选择一个能保留关键关系的模型，并先检验模型中最核心的物理机制。</p>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 3 与 5：模型不是缩小版真相，而是保留关键关系、忽略次要细节的解释工具。</strong></p>
+</blockquote>
+<p>孩子需要明确：</p>
+<ul>
+<li>地球仪和灯的大小、距离都不符合真实比例；</li>
+<li>但模型保留了地轴倾角、光照方向和公转位置的关系；</li>
+<li>季节主要不是地球离太阳远近造成的；</li>
+<li>同样的能量分散到更大面积时，单位面积接收得更少；</li>
+<li>好模型能作出南北半球季节相反等可检验预测。</li>
+</ul>
+<h3>关键概念与英文</h3>
+<p>模型（model）、地轴倾角（axial tilt）、公转（revolution）、光照角度（angle of incidence）、单位面积能量（energy per unit area）、模型限制（model limitation）。</p>
+<h3>主要材料</h3>
+<p>较稳定的灯、地球仪、支架、方格纸、量角器、黑色卡片、温度探头。</p>
+<hr />
+<h2>六、第 9、10 节扩展课程</h2>
+<h2>第 9 节：温度越高，生命反应一定越快吗？——酶与规律边界</h2>
+<h3>核心问题</h3>
+<p><strong>温度升高会一直加快酶反应，还是存在最适范围？</strong></p>
+<h3>主要实验</h3>
+<p>使用酵母中的过氧化氢酶分解 3% 过氧化氢：</p>
+<ul>
+<li>设置低温、室温、约 40°C 和高温处理后的酵母；</li>
+<li>固定酵母量、过氧化氢浓度和反应时间；</li>
+<li>用排水法或气体注射器测量产生的氧气体积；</li>
+<li>绘制温度—固定时间产气量图。</li>
+</ul>
+<h3>与整套课的连接</h3>
+<ul>
+<li>第 5 节建立“升温通常使反应更快”的粒子碰撞模型；</li>
+<li>第 9 节发现高温还会改变酶的结构，因此生命系统中的关系可能先上升再下降；</li>
+<li>这不是推翻前面的规律，而是发现模型遗漏了一个重要变量。</li>
+</ul>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>主线 5：科学规律总带着条件；遇到反例时，应修正模型，而不是忽略数据。</strong></p>
+</blockquote>
+<h3>关键概念与英文</h3>
+<p>酶（enzyme）、催化剂（catalyst）、反应速率（reaction rate）、最适温度（optimum temperature）、变性（denaturation）。</p>
+<h3>安全与材料</h3>
+<p>新鲜酵母、3% 过氧化氢、恒温水浴、试管、气体注射器或量筒、护目镜和手套。</p>
+<hr />
+<h2>第 10 节：这一次由你提出问题——独立实验</h2>
+<h3>课程任务</h3>
+<p>孩子从已经熟悉的实验平台中选择一个，提出一个新的、可以在课堂内回答的问题：</p>
+<ul>
+<li>单摆；</li>
+<li>弹簧或橡皮筋；</li>
+<li>橡皮泥船；</li>
+<li>固体溶解；</li>
+<li>反应速率；</li>
+<li>铁锈条件；</li>
+<li>光照角度；</li>
+<li>酶反应。</li>
+</ul>
+<h3>必须完成</h3>
+<ol>
+<li>提出可检验问题；</li>
+<li>写出有理由的预测；</li>
+<li>明确一个主要自变量和一个可测因变量；</li>
+<li>说明至少三个控制变量；</li>
+<li>设置至少三个自变量水平并尽量重复；</li>
+<li>经教师安全审核后实施；</li>
+<li>用表格和图表达数据；</li>
+<li>完成 Claim-Evidence-Reasoning；</li>
+<li>指出一个局限和下一轮改进。</li>
+</ol>
+<h3>本节强调的主线思想</h3>
+<blockquote>
+<p><strong>五条主线的最终检验：孩子能否在没有现成步骤时，自己把好奇心变成证据？</strong></p>
+</blockquote>
+<p>评价重点不是结论是否“正确”，而是问题能否检验、比较是否公平、数据是否诚实，以及推理有没有超过证据真正支持的范围。</p>
+<hr />
+<h2>七、课程之间怎样串联</h2>
+<table>
+<thead>
+<tr>
+<th>课次</th>
+<th>本节得到的工具</th>
+<th>下一节怎样继续使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 单摆</td>
+<td>控制变量、重复、误差</td>
+<td>第 2 节用更精确数据寻找变量关系</td>
+</tr>
+<tr>
+<td>2 弹簧</td>
+<td>图像、预测、规律边界</td>
+<td>第 3 节用模型修正“重量决定浮沉”的直觉</td>
+</tr>
+<tr>
+<td>3 浮力</td>
+<td>寻找遗漏变量、修正模型</td>
+<td>第 4 节转向肉眼看不见的粒子模型</td>
+</tr>
+<tr>
+<td>4 溶解</td>
+<td>追踪物质和能量、定义系统</td>
+<td>第 5 节研究粒子变化的速度</td>
+</tr>
+<tr>
+<td>5 反应速率</td>
+<td>区分快慢与总量</td>
+<td>第 6 节把研究尺度从分钟扩展到数天</td>
+</tr>
+<tr>
+<td>6 氧化</td>
+<td>时间序列、反应条件</td>
+<td>第 7 节解释开放系统为何能增重或减重</td>
+</tr>
+<tr>
+<td>7 质量守恒</td>
+<td>系统边界与守恒</td>
+<td>第 8 节把证据和模型方法迁移到地球系统</td>
+</tr>
+<tr>
+<td>8 地球模型</td>
+<td>模型预测与模型限制</td>
+<td>第 9、10 节迁移到生命或自主问题</td>
+</tr>
+</tbody>
+</table>
+<p>这张表是 C 版与前两版最重要的差别：每节课不仅有自己的知识点，还要把一种思维工具交给下一节。</p>
+<hr />
+<h2>八、8、9、10 节的使用方式</h2>
+<h3>只有 8 节</h3>
+<p>使用第 1-8 节：</p>
+<p><strong>可靠数据 → 变量关系 → 模型修正 → 物质与能量追踪 → 反应速率 → 慢反应 → 系统守恒 → 大尺度模型。</strong></p>
+<p>这已经是一套完整课程。</p>
+<h3>增加到 9 节</h3>
+<p>加入酶实验。它不是突然开启一个生物单元，而是检验“温度—反应速率”模型在生命系统中何时需要修正。</p>
+<h3>增加到 10 节</h3>
+<p>最后加入独立实验。第 10 节不增加大量新知识，但最能判断孩子是否真正学会科学探究。</p>
+<hr />
+<h2>九、课程概览</h2>
+<table>
+<thead>
+<tr>
+<th>课次</th>
+<th>实验主题</th>
+<th>主要测量</th>
+<th>最核心的主线思想</th>
+<th>关键英文术语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>单摆</td>
+<td>长度、时间</td>
+<td>可靠证据来自公平比较、重复和误差处理</td>
+<td>fair test, period, error</td>
+</tr>
+<tr>
+<td>2</td>
+<td>弹簧</td>
+<td>力、伸长量</td>
+<td>规律应能预测，而且有适用范围</td>
+<td>Hooke’s law, calibration, range</td>
+</tr>
+<tr>
+<td>3</td>
+<td>浮力</td>
+<td>质量、排水量、载荷</td>
+<td>解释失败时要寻找遗漏变量并修正模型</td>
+<td>buoyancy, displacement, density</td>
+</tr>
+<tr>
+<td>4</td>
+<td>溶解综合调查</td>
+<td>质量、温度、晶体质量</td>
+<td>看不见不等于不存在；同时追踪物质与能量</td>
+<td>dissolving, crystallization, exothermic</td>
+</tr>
+<tr>
+<td>5</td>
+<td>反应速率</td>
+<td>温度、时间、气体体积</td>
+<td>区分变化速度和最终总量</td>
+<td>reaction rate, product, collision</td>
+</tr>
+<tr>
+<td>6</td>
+<td>氧化</td>
+<td>时间、锈蚀程度</td>
+<td>慢现象需要时间序列和对照</td>
+<td>oxidation, corrosion, control</td>
+</tr>
+<tr>
+<td>7</td>
+<td>质量守恒</td>
+<td>反应前后质量</td>
+<td>先画系统边界，再解释增减</td>
+<td>system boundary, conservation of mass</td>
+</tr>
+<tr>
+<td>8</td>
+<td>光照角度与季节</td>
+<td>角度、光斑面积、温升</td>
+<td>模型保留关键关系，也有明确限制</td>
+<td>axial tilt, model, energy per unit area</td>
+</tr>
+<tr>
+<td>9</td>
+<td>酶与温度</td>
+<td>温度、氧气体积</td>
+<td>反例促使模型增加条件</td>
+<td>enzyme, optimum, denaturation</td>
+</tr>
+<tr>
+<td>10</td>
+<td>独立实验</td>
+<td>由学生定义</td>
+<td>把好奇心转化成可检验的证据</td>
+<td>investigation, evidence, reasoning</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>十、备选实验库</h2>
+<p>备选实验不是要求全部加入，而是用于应对课时、器材、学生兴趣和实验预试结果。替换时应保留原课程的思维递进，不能仅因为现象“好看”就插入一个没有前后联系的活动。</p>
+<h2>备选 A：怎样让电磁铁变得更强？</h2>
+<h3>核心问题</h3>
+<p><strong>在线圈、铁芯和电源等条件可控时，线圈匝数怎样影响电磁铁强度？</strong></p>
+<h3>主要实验</h3>
+<ul>
+<li>在相同铁钉上制作 20、40、60 匝线圈；</li>
+<li>使用相同电池、电线规格和通电时间；</li>
+<li>测量每次能吸起的相同回形针数量或总质量；</li>
+<li>每种匝数重复 3 次；</li>
+<li>绘制线圈匝数—吸起质量图；</li>
+<li>若条件允许，再检验加入或移除铁芯的区别。</li>
+</ul>
+<h3>强调的主线思想</h3>
+<blockquote>
+<p><strong>看不见的作用可以通过它造成的可测变化被研究；工程设计还要同时考虑强度、发热、耗电和稳定性。</strong></p>
+</blockquote>
+<p>它可以延续第 2 节弹簧的“变量—图像—预测”思路：孩子看不见磁场，但能用吸起质量作为操作性定义（operational definition）。</p>
+<h3>采用条件</h3>
+<ul>
+<li>有低压电池盒、开关、绝缘铜线、相同铁钉和足量同规格回形针；</li>
+<li>教师已经预试安全通电时间；</li>
+<li>最好能提前制作三套相同铁芯、不同匝数的线圈，避免课堂时间都花在绕线；</li>
+<li>不以“LED 看起来更亮”代替定量测量。</li>
+</ul>
+<h3>适合怎样加入</h3>
+<ul>
+<li>作为第 9 节增加；</li>
+<li>若没有地球仪或稳定光源，可替换第 8 节地球—太阳模型；</li>
+<li>若学生特别喜欢工程制作，也可在第 10 节自主实验中作为可选平台。</li>
+</ul>
+<h3>安全</h3>
+<p>每次只短时通电 3-5 秒，随后断开冷却；不把导线直接短接电池；发现电池或线圈明显发热立即停止。</p>
+<hr />
+<h2>备选 B：温暖的汽水为什么更容易冒气？</h2>
+<h3>核心问题</h3>
+<p><strong>温度怎样影响二氧化碳在水中的溶解与逸出？</strong></p>
+<h3>主要实验</h3>
+<p>准备同品牌、同批次、相同体积的碳酸水，分别平衡到约 10°C、25°C 和 40°C：</p>
+<ul>
+<li>使用相同操作打开并连接集气装置；</li>
+<li>标准化摇动或搅拌时间；</li>
+<li>用气体注射器、排水集气或气球周长测量释放的 CO₂；</li>
+<li>每个温度尽量重复；</li>
+<li>比较温度—逸出气体体积关系。</li>
+</ul>
+<p>设备允许时，可以进一步比较静置和相同次数搅动，讨论搅动改变的是逸出速度，还是平衡状态下可溶解的总量。</p>
+<h3>强调的主线思想</h3>
+<blockquote>
+<p><strong>平衡状态取决于条件；观察到更多气泡以前，必须区分“溶解得少”“逸出得快”和“测量时漏气”。</strong></p>
+</blockquote>
+<p>它与核心第 4、5 节形成自然连接：</p>
+<ul>
+<li>第 4 节：固体进入水中并分散；</li>
+<li>气体溶解度备选课：气体也能进入水中，但温度和压力的影响不同；</li>
+<li>第 5 节：气体由化学反应生成，要区分“原有溶解气体逸出”和“新物质产生气体”。</li>
+</ul>
+<h3>采用条件</h3>
+<ul>
+<li>必须有经过检漏的气体注射器、密封塞或可靠气球连接方案；</li>
+<li>最好有 0.01 g 电子秤作为质量差的辅助测量；</li>
+<li>教师需要提前用同品牌碳酸水预试，确认不同温度的差异明显大于装置漏气误差。</li>
+</ul>
+<h3>适合怎样加入</h3>
+<ul>
+<li>最适合插在第 4 节溶解与第 5 节反应速率之间；</li>
+<li>如果不便开展需要数天的铁锈实验，可用它替换第 6 节；</li>
+<li>若增加到 9 或 10 节，也可作为独立扩展课。</li>
+</ul>
+<h3>安全</h3>
+<p>不将未开封碳酸饮料加热到约 40°C 以上；不剧烈摇晃后对着人开盖；玻璃瓶不用于加压操作。</p>
+<hr />
+<h2>备选 C：空气看不见，它真的能被压缩吗？</h2>
+<h3>核心问题</h3>
+<p><strong>密闭空气体积变小时，对活塞的反作用怎样变化？水也会同样容易压缩吗？</strong></p>
+<h3>主要实验</h3>
+<ul>
+<li>封住无针注射器出口；</li>
+<li>逐步增加活塞上的外力，记录空气体积；</li>
+<li>用相同方法重复，绘制外力—体积图；</li>
+<li>再用排尽气泡的水装满注射器作定性比较。</li>
+</ul>
+<p>有数字测力计时直接测力；没有时可以竖直固定注射器，用已知质量砝码施力。</p>
+<h3>强调的主线思想</h3>
+<blockquote>
+<p><strong>不能直接看见气体粒子，但可以从体积和力的关系推断气体内部发生了什么。</strong></p>
+</blockquote>
+<p>这节适合强化粒子模型和“操作性证据”，但不要求正式推导波义耳定律。</p>
+<h3>适合怎样加入</h3>
+<ul>
+<li>可替换第 3 节浮力，形成“摆—弹簧—空气压力”的连续定量物理模块；</li>
+<li>也可插在第 4 节溶解之前，作为进入微观粒子模型的桥梁；</li>
+<li>材料比电磁铁容易获得，但固定装置和测力方式需要预试。</li>
+</ul>
+<h3>安全</h3>
+<p>只用无针注射器；出口封帽必须牢固；不猛压或将活塞对着脸；不使用可能破裂的玻璃注射器。</p>
+<hr />
+<h2>备选 D：镜子怎样把光送到指定位置？</h2>
+<h3>核心问题</h3>
+<p><strong>改变光射向镜子的角度，反射光的方向遵循什么关系？</strong></p>
+<h3>主要实验</h3>
+<ul>
+<li>在纸上固定平面镜并画出法线；</li>
+<li>用单缝光线盒设置 15°、30°、45°、60° 等入射角；</li>
+<li>标记入射和反射路径；</li>
+<li>测量入射角、反射角并绘图；</li>
+<li>最后预测镜子应摆在何处，才能让光绕过挡板击中目标。</li>
+</ul>
+<h3>强调的主线思想</h3>
+<blockquote>
+<p><strong>看不见完整光路时，可以利用起点、落点和反射位置重建路径；规律的价值在于指导一次新的成功预测。</strong></p>
+</blockquote>
+<h3>适合怎样加入</h3>
+<ul>
+<li>有光线盒但没有合适地球仪时，可替换第 8 节；</li>
+<li>也可以先做反射课，再将“光照方向与角度”迁移到地球—太阳模型；</li>
+<li>它比季节课更容易得到精确量化结果，但跨学科和模型讨论较少。</li>
+</ul>
+<h3>安全与材料</h3>
+<p>优先使用带狭缝的低亮度 LED 光线盒。若使用低功率激光，必须由教师固定，光束始终低于眼睛且不照向反光金属。</p>
+<hr />
+<h2>备选 E：哪一种材料最适合保温？</h2>
+<h3>核心问题</h3>
+<p><strong>材料、厚度和空气层会怎样影响热水降温速度？</strong></p>
+<h3>主要实验</h3>
+<ul>
+<li>使用相同容器、相同质量和初始温度的温水；</li>
+<li>分别包裹相同厚度的棉布、气泡膜、纸、铝箔或设置空气层；</li>
+<li>在固定时间间隔记录温度；</li>
+<li>绘制温度—时间曲线；</li>
+<li>用相同材料设计并改进一个保温容器。</li>
+</ul>
+<h3>强调的主线思想</h3>
+<blockquote>
+<p><strong>比较材料性能必须同时控制初始温度、水量、容器、包裹厚度和测量时间；工程结论来自完整降温曲线，而不是摸一下哪个更暖。</strong></p>
+</blockquote>
+<p>这节比单纯冷热水混合有更足的实验体量，也能结合传导、对流和辐射讨论，但不需要一次讲完三种传热定义。</p>
+<h3>适合怎样加入</h3>
+<ul>
+<li>如果第 4 节的溶解温度探头准备充分，可以把它作为后续工程扩展；</li>
+<li>可替换器材要求较高的气体溶解度实验；</li>
+<li>适合学生喜欢制作、而课程希望增加工程设计时采用。</li>
+</ul>
+<h3>安全</h3>
+<p>水温控制在约 50°C 以下；容器加盖防泼洒，但温度探头周围要保持一致；及时擦干桌面。</p>
+<hr />
+<h2>备选 F：植物里的水走到哪里去了？</h2>
+<h3>核心问题</h3>
+<p><strong>风和叶片面积会怎样影响植物失水速度？</strong></p>
+<h3>主要实验</h3>
+<ul>
+<li>选择同种、大小相近的带叶枝条或幼苗；</li>
+<li>将根部或切口放入相同质量的水中，并封住水面，防止容器直接蒸发；</li>
+<li>比较静止空气、低速风和不同叶片面积；</li>
+<li>以固定时间间隔称量整套装置；</li>
+<li>配合透明袋观察叶片散失后重新凝结的水。</li>
+</ul>
+<h3>强调的主线思想</h3>
+<blockquote>
+<p><strong>物质守恒和系统边界不仅适用于烧杯里的化学反应，也能用来研究生命系统。</strong></p>
+</blockquote>
+<h3>适合怎样加入</h3>
+<ul>
+<li>可替换第 9 节酶实验，作为生命科学扩展；</li>
+<li>若希望减少化学品使用，它也可作为第 9 节首选；</li>
+<li>需要 0.01 g 电子秤、重复样本和教师预试，短课时应准备提前开始的时间平移样品。</li>
+</ul>
+<hr />
+<h2>备选 G：运动为什么会停下来？——从真实斜面到伽利略思想实验</h2>
+<h3>核心问题</h3>
+<p><strong>运动物体最后停下，是因为运动会自然耗尽，还是因为有其他作用在改变它？</strong></p>
+<h3>主要实验</h3>
+<p>这节先获得真实数据，再进入思想实验。</p>
+<p>第一部分研究阻力：</p>
+<ul>
+<li>让同一小球从相同斜面、相同高度释放；</li>
+<li>分别进入光滑、普通和较粗糙的水平表面；</li>
+<li>测量停止距离，每种表面重复至少 3 次；</li>
+<li>比较表面粗糙程度与停止距离。</li>
+</ul>
+<p>第二部分研究双斜面：</p>
+<ul>
+<li>小球从第一斜面的固定高度释放；</li>
+<li>让它沿第二斜面向上运动；</li>
+<li>逐渐减小第二斜面的倾角；</li>
+<li>记录小球达到的最大竖直高度和沿斜面行进距离；</li>
+<li>观察倾角越小，为接近原来的高度，小球需要行进得越远。</li>
+</ul>
+<p>最后进行伽利略式理想化推理：</p>
+<ol>
+<li>如果轨道阻力越来越小，小球会怎样？</li>
+<li>如果第二个斜面越来越平，小球为了达到原来高度需要走多远？</li>
+<li>如果第二个斜面完全水平，而且没有摩擦，它有什么理由在某一点停下？</li>
+</ol>
+<h3>强调的主线思想</h3>
+<blockquote>
+<p><strong>思想实验不是脱离证据的想象，而是根据真实实验趋势，逐步移除干扰因素并推向理想极限。</strong></p>
+</blockquote>
+<p>这节真正要学习的是：</p>
+<ul>
+<li>现实中物体停下通常是因为摩擦和空气阻力在改变运动；</li>
+<li>力用于改变运动状态，而不是必须持续“供给运动”；</li>
+<li>理想化（idealization）能揭示被现实干扰遮住的关系；</li>
+<li>外推（extrapolation）必须有实验趋势支持，同时也要承认它超出了直接测量范围；</li>
+<li>由此可以进入惯性（inertia）与牛顿第一定律，但不要求先背定义。</li>
+</ul>
+<h3>采用条件</h3>
+<ul>
+<li>有两段倾角可调、连接平顺的轨道或柔性 U 形轨道；</li>
+<li>有滚动稳定的钢球或玻璃球；</li>
+<li>能可靠测量释放高度、最高点和水平停止距离；</li>
+<li>教师已经处理轨道接缝，避免碰撞损失盖过摩擦趋势；</li>
+<li>完整实施约需 60-75 分钟，不再作为单摆课后的附加活动。</li>
+</ul>
+<h3>适合怎样加入</h3>
+<ul>
+<li>若特别重视科学史、理想化和概念转变，可作为独立第 2 节；</li>
+<li>只有 8 节时，建议在弹簧和浮力中选择一节与它互换，避免前半段物理实验过多；</li>
+<li>有 9-10 节时，可以直接作为增加课，但仍应与单摆分开记录、分开提出核心问题；</li>
+<li>它也可以替换第 8 节地球模型：两者都强调模型与理想化，前者偏力学，后者偏跨学科。</li>
+</ul>
+<h3>安全与材料</h3>
+<p>可调斜面、低摩擦轨道、小球、卷尺、量角器、不同粗糙度表面材料和挡球盒。轨道末端必须设置软质挡板，不能让钢球滚向学生或掉落。</p>
+<hr />
+<h2>备选实验的替换参考</h2>
+<table>
+<thead>
+<tr>
+<th>现实条件或教学需求</th>
+<th>优先选择</th>
+<th>可替换/插入位置</th>
+<th>仍然保留的主线思想</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有成熟电学器材，学生喜欢制作</td>
+<td>电磁铁</td>
+<td>替换第 8 节或作为第 9 节</td>
+<td>不可见作用、变量关系、工程权衡</td>
+</tr>
+<tr>
+<td>有可靠密封和集气设备</td>
+<td>气体溶解度</td>
+<td>插在第 4、5 节之间或替换第 6 节</td>
+<td>条件、平衡、速率与总量区别</td>
+</tr>
+<tr>
+<td>器材希望尽量简单</td>
+<td>空气压缩</td>
+<td>替换第 3 节或插在第 4 节前</td>
+<td>粒子模型、间接证据</td>
+</tr>
+<tr>
+<td>有光线盒，希望定量结果稳定</td>
+<td>光的反射</td>
+<td>替换第 8 节</td>
+<td>规律、预测、看不见的路径</td>
+</tr>
+<tr>
+<td>希望增加工程设计</td>
+<td>保温材料</td>
+<td>第 4 节后增加或替换高风险装置课</td>
+<td>控制变量、时间曲线、优化</td>
+</tr>
+<tr>
+<td>希望增加生物、减少化学品</td>
+<td>植物蒸腾</td>
+<td>替换第 9 节酶实验</td>
+<td>系统边界、物质运输、长期测量</td>
+</tr>
+<tr>
+<td>重视科学史、惯性和理想化</td>
+<td>伽利略斜面</td>
+<td>独立加入；或替换弹簧、浮力、地球模型之一</td>
+<td>实验趋势、外推、理想化、模型边界</td>
+</tr>
+</tbody>
+</table>
+<p>选择备选实验时，优先问三个问题：</p>
+<ol>
+<li>现有器材能否产生稳定、可测、可重复的数据？</li>
+<li>它接在前后哪一节之间，孩子会继续使用哪一种已经学过的思维工具？</li>
+<li>为加入它，需要删掉什么？删掉以后课程主线是否仍然完整？</li>
+</ol>
+<hr />
+<h2>十一、备课时的现实检查</h2>
+<ol>
+<li><strong>单摆</strong>：提前确认支点稳定，摆锤不会松脱；</li>
+<li><strong>弹簧</strong>：先测安全负载和大致线性范围；</li>
+<li><strong>浮力</strong>：先确认溢水杯能稳定收集水，电子秤有足够精度；</li>
+<li><strong>溶解</strong>：提前测试氯化钙和小苏打用量，确保温差明显但安全；准备接近蒸干的时间平移样品；</li>
+<li><strong>反应速率</strong>：气体收集装置必须预先检漏；</li>
+<li><strong>氧化</strong>：必须提前准备一套相同样品，否则课堂无法当天获得结论；</li>
+<li><strong>质量守恒</strong>：选择足够灵敏且读数稳定的电子秤；</li>
+<li><strong>地球模型</strong>：灯的位置和纸面中心距离要固定，避免把距离变化误当角度效应；</li>
+<li><strong>酶</strong>：提前确认酵母活性和 3% 过氧化氢状态；</li>
+<li><strong>自主实验</strong>：教师准备有限的器材菜单和安全审批表，避免整节课耗在选题上。</li>
+</ol>
+<p>课程的真实质量主要取决于三件事：<strong>装置提前试做、测量指标清楚、讨论始终回到主线思想。</strong></p>
+</article></main>
+<main class="document-preview" id="md-preview-cb12147085eb" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 化学与生物实验栏目-详细方案.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\旧课程方案\化学与生物实验栏目-详细方案.md</code></details><article><h1>化学与生物实验栏目：家庭微量实验方案</h1>
+<p>面向 <strong>四年级升五年级、1 名学生、成人全程陪同</strong>。本栏目不是让孩子“照配方看热闹”，而是借颜色、沉淀、结晶、细胞和气泡练习：先预测，设置对照，只改变一个条件，记录证据，再用粒子或细胞模型解释。</p>
+<h2>一、现有实验箱能确认什么</h2>
+<p>根据 <code>化学器材.png</code>，图片明确写有“初中旗舰版、115 个器材、95 种试剂、可做 26 个实验”。能从图片确认的器材包括：</p>
+<ul>
+<li>护目镜、口罩、橡胶手套、防护服；</li>
+<li>试管与试管架、烧杯、量筒、锥形瓶、蒸馏烧瓶、集气瓶、滴瓶、广口瓶；</li>
+<li>塑料滴管、胶头滴管、玻璃导管、漏斗、滤纸、玻璃棒、表面皿、玻璃片；</li>
+<li>研钵、蒸发皿、坩埚、反应板、铁架台、试管夹、镊子、药匙、电子秤、温度计；</li>
+<li>酒精灯及灯芯、石棉网、燃烧匙等加热器材。</li>
+</ul>
+<p>图片中试剂瓶标签无法辨认，公开检索也未找到能与这张商品图可靠对应的完整试剂表。因此，<strong>不能根据瓶盖颜色、粉末外观或“初中实验箱”字样推断成分</strong>。以下方案把试剂分成三类：</p>
+<ol>
+<li>食品级材料：白醋、柠檬酸、小苏打、紫甘蓝、牛奶、玉米淀粉、食盐、干酵母等；</li>
+<li>成分明确的低风险用品：3% 过氧化氢、稀碘液/碘伏；</li>
+<li>必须核对原标签后才启用：氯化钙、碳酸钠。</li>
+</ol>
+<h2>二、先执行的安全规则</h2>
+<h3>孩子每次都要说出的六条规则</h3>
+<ol>
+<li>不尝、不舔，不把实验器皿再用于食物。</li>
+<li>不直接凑近闻；需要辨别气味时也只由成人按规范处理。</li>
+<li>不把不同试剂随意混合，不使用标签缺失或字迹模糊的瓶子。</li>
+<li>先戴护目镜，再打开试剂；长发扎起，桌面放托盘。</li>
+<li>滴管不入口，试剂瓶盖不互换，剩余液体不倒回原瓶。</li>
+<li>产气反应不放入刚性密闭容器；出现明显发热、刺激性气味或异常颜色，立刻停止并远离。</li>
+</ol>
+<h3>本栏目明确不用</h3>
+<ul>
+<li>浓酸、浓碱和标签不明的酸碱溶液；</li>
+<li>铜盐、银盐、铅盐、铬酸盐等重金属试剂；</li>
+<li>高锰酸钾、氯酸盐、硝酸盐等强氧化性或助燃性试剂；</li>
+<li>甲醇、无水乙醇等易燃溶剂；</li>
+<li>酒精灯、燃烧匙、蒸馏装置和任何未知物加热；</li>
+<li>细菌培养、霉菌培养、未知池塘水培养；</li>
+<li>人体体液、血液或多人共用的口腔细胞样本。</li>
+</ul>
+<h3>风险分级</h3>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>含义</th>
+<th>本栏目实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>食品级材料，成人陪同，仍需护目镜</td>
+<td>紫甘蓝、牛奶沉淀、色谱、酵母</td>
+</tr>
+<tr>
+<td>B</td>
+<td>药店低浓度用品或玻璃装片，成人负责分装</td>
+<td>碘—淀粉、3% 过氧化氢、显微镜装片</td>
+</tr>
+<tr>
+<td>C</td>
+<td>只有原标签完整且成人确认名称、浓度后才做</td>
+<td>氯化钙＋碳酸钠沉淀</td>
+</tr>
+</tbody>
+</table>
+<h2>三、化学实验</h2>
+<h2>C1 紫甘蓝“彩虹”——颜色怎样告诉我们酸碱性</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：A；40–50 分钟</li>
+<li><strong>核心问题</strong>：不同液体为什么会让同一种紫色汁液变成红、紫、蓝或绿色？</li>
+<li><strong>材料</strong>：紫甘蓝 2–3 片、约 200 mL 热水；透明小杯或反应板；白醋、柠檬汁、清水、食用小苏打；滴管。</li>
+<li><strong>成人提前准备</strong>：把紫甘蓝切碎，加入热水浸泡 10–15 分钟，过滤并完全放凉。不要让孩子处理热水或刀具。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>每孔加入 2 mL 紫甘蓝指示液。</li>
+<li>分别加入等体积的白醋、柠檬汁、清水和 1% 小苏打溶液。</li>
+<li>给颜色排序并拍照，保留一孔原指示液作对照。</li>
+<li>选一种成分明确、可食用的未知液体，先预测再测试。</li>
+<li>可把白醋逐滴加进小苏打组，记录颜色怎样一步步返回紫色附近；容器保持开放。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>紫甘蓝里的花青素像“会换外套的分子”。周围酸性或碱性不同时，它的结构略有改变，吸收和反射的光也不同，所以我们看见不同颜色。颜色说明的是一个范围，不是精确的 pH 数字。</p>
+<h3>可测变量</h3>
+<p>固定指示液体积，改变白醋滴数；给每一步颜色编号并画“滴数—颜色”记录带。</p>
+<h3>安全与处理</h3>
+<p>只测试食材，不测试洁厕剂、漂白剂、洗衣液或任何混合清洁剂。少量食品级液体可用大量清水冲入下水道。</p>
+<hr />
+<h2>C2 维生素 C 侦探——蓝黑色为什么消失</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：B；45–60 分钟</li>
+<li><strong>核心问题</strong>：哪一种透明饮料或果汁能用更少的滴数让碘—淀粉颜色消失？</li>
+<li><strong>材料</strong>：玉米淀粉、热水、成分明确的稀碘液或碘伏、维生素 C 片、清水；透明果汁样品；滴管、反应板。</li>
+<li><strong>成人提前准备</strong>：用热水调制很稀的淀粉液并放凉；将碘液预稀释到“加入淀粉后呈清楚但不发黑的蓝紫色”。不同品牌碘伏配方不同，必须先预试。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>每孔放入相同体积的稀碘液和淀粉液，得到相近的蓝紫色。</li>
+<li>用清水作阴性对照，用已知维生素 C 溶液作阳性对照。</li>
+<li>向各孔逐滴加入等浓度或等体积样品，轻摇；记录颜色刚好消失所需滴数。</li>
+<li>每种样品重复 3 次，比较中位数或平均值。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>碘分子进入淀粉的螺旋结构后会呈蓝黑色。维生素 C 能把碘变成另一种不再显蓝色的粒子。这是氧化还原反应。若每一孔起始条件相同，所需样品越少，通常表示每滴样品还原碘的能力越强；但其他成分也可能干扰，所以结论应写成“在本实验条件下”。</p>
+<h3>安全与处理</h3>
+<p>碘会刺激眼睛并染色，成人分装，孩子戴护目镜和手套；实验材料不得饮用。微量反应液用大量清水稀释后冲走，染色耗材装袋丢弃。</p>
+<hr />
+<h2>C3 把牛奶里的蛋白质“叫出来”——看得见的絮状沉淀</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：A；50–60 分钟，另需 1–2 天干燥</li>
+<li><strong>核心问题</strong>：加入多少白醋时，牛奶能分离出最多的固体？</li>
+<li><strong>材料</strong>：牛奶、白醋、透明杯、滴管或量筒、漏斗、滤纸、电子秤。</li>
+<li><strong>成人提前准备</strong>：将牛奶隔水温热到约 50–60°C 后移开热源；孩子不接触热源。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>三杯各取 30 mL 温牛奶，分别加入 1、2、3 mL 白醋；第四杯不加醋作对照。</li>
+<li>用同样方式轻搅 30 秒，静置 5 分钟，观察白色凝块和较清的乳清。</li>
+<li>用预先称量的滤纸过滤，少量清水洗涤凝块。</li>
+<li>同样时间后观察；若要比较质量，必须完全干燥后连滤纸称量，再减去滤纸质量。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>牛奶里的酪蛋白原来以很小的颗粒分散在水中。加酸后，颗粒表面的电性改变，彼此更容易聚在一起，形成肉眼能看见的凝块。这里的“沉淀”是蛋白质从分散状态聚集出来，不等同于 C4 中由离子组成的新固体。</p>
+<h3>安全与处理</h3>
+<p>实验后的牛奶不可食用；当天装袋丢弃，器皿及时用洗涤剂清洗，不留到发臭或长霉。</p>
+<hr />
+<h2>C4 两杯透明液体变“白云”——真正的沉淀反应</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：C；35–45 分钟</li>
+<li><strong>启用条件</strong>：成人必须看到完整原标签，确认是 <strong>氯化钙（calcium chloride, CaCl₂）</strong> 和 <strong>碳酸钠（sodium carbonate, Na₂CO₃）</strong>。碳酸氢钠（小苏打）不是同一种物质。任一标签不清就跳过本实验。</li>
+<li><strong>核心问题</strong>：两种透明溶液混合后，为什么会出现原来没有的白色固体？</li>
+<li><strong>材料</strong>：成人配制的 1% 氯化钙溶液和 1% 碳酸钠溶液；滴管、反应板、试管、漏斗、滤纸。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>在反应板三孔中分别设置：水＋氯化钙、水＋碳酸钠、氯化钙＋碳酸钠。</li>
+<li>每种液体只用 1 mL，使用专属滴管；比较三个孔。</li>
+<li>把第三孔的混合物过滤，观察白色固体留在滤纸上、较清液体通过滤纸。</li>
+<li>用微距照片比较混合前、混合后和过滤后的证据。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>两种溶液中都有看不见的带电粒子。混合后，钙离子和碳酸根离子重新组合成很难溶于水的碳酸钙小颗粒；许多颗粒聚在一起，看起来像白云并逐渐沉下去。可用符号概括：<code>Ca²⁺ + CO₃²⁻ → CaCO₃↓</code>。</p>
+<h3>安全与处理</h3>
+<p>全程护目镜、手套、托盘操作，不触摸、不品尝。只做上述微量、低浓度组合；滤出的少量固体连滤纸装袋丢弃，液体用大量清水冲走。若试剂标签给出不同处置要求，以标签为准。</p>
+<hr />
+<h2>C5 彩色墨水其实不止一种颜色——纸色谱</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：A；35–45 分钟</li>
+<li><strong>核心问题</strong>：看起来相同的黑色水性笔，里面的颜料组成也相同吗？</li>
+<li><strong>材料</strong>：滤纸、铅笔、两三种水性彩色笔、透明杯、少量清水、夹子或玻璃棒。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>将滤纸剪成相同纸条，用铅笔在距底端 2 cm 处画起始线。</li>
+<li>在线上点一个很小的墨点，晾干后重复点 2–3 次，使样品集中。</li>
+<li>杯底放 0.5–1 cm 深的水；墨点必须高于水面。</li>
+<li>垂直悬挂纸条，水上升到距顶端约 1 cm 时取出，立刻用铅笔标出水到达的位置。</li>
+<li>比较色带数量、颜色和移动距离。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>水沿纸纤维向上移动。不同颜料“喜欢水”和“黏住纸”的程度不同，所以移动速度不同，原来混在一起的颜色被分开。这主要是混合物的分离，不是生成新物质。</p>
+<h3>可测变量</h3>
+<p>测量每种色带移动距离与水前沿距离，计算 <code>色带距离 ÷ 水前沿距离</code>，比较不同品牌黑色笔。</p>
+<hr />
+<h2>四、生物与显微镜实验</h2>
+<h2>B1 洋葱表皮里的“砖墙”——第一次观察植物细胞</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：B；45–60 分钟</li>
+<li><strong>核心问题</strong>：一片看起来光滑的洋葱薄膜，放大后由什么组成？</li>
+<li><strong>材料</strong>：显微镜、载玻片、盖玻片、滴管、镊子、洋葱内表皮、清水；可选稀碘液。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>在载玻片中央滴一滴清水，用镊子取一小片透明洋葱内表皮，铺平。</li>
+<li>让盖玻片一边先接触水滴，再缓慢放下，减少气泡。</li>
+<li>先用最低倍物镜找像并调焦，再转到中倍；需要时才到高倍。</li>
+<li>画出 5–10 个相邻细胞，标出细胞壁、细胞质和较大的中央液泡区域。</li>
+<li>可由成人在盖玻片一侧加一小滴稀碘液、另一侧用纸巾吸引，使细胞结构更清楚。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>洋葱不是一整块连续材料，而是由许多细胞构成。规则边界主要是坚固的细胞壁；细胞膜贴在壁内侧，普通光学显微镜下往往不容易单独分辨。洋葱鳞片长在地下，通常看不到绿色叶绿体。</p>
+<h3>显微镜规则</h3>
+<p>搬动时双手托拿；从低倍开始；高倍只用细准焦；玻片破损时不徒手捡碎片。</p>
+<hr />
+<h2>B2 紫皮洋葱的细胞“缩水又复原”——渗透作用</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：B；50–60 分钟</li>
+<li><strong>核心问题</strong>：外界盐浓度改变时，植物细胞里的水会向哪里移动？</li>
+<li><strong>材料</strong>：紫皮洋葱内表皮、清水、10% 食盐水、载玻片、盖玻片、滴管、吸水纸、显微镜。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>先在清水装片中找到紫色表皮细胞，拍一张基线照片。</li>
+<li>在盖玻片一侧滴 10% 食盐水，另一侧用吸水纸吸，使盐水流过装片。</li>
+<li>每 1 分钟观察一次，共 5 分钟；记录紫色细胞内容物是否向内收缩、与细胞壁出现间隙。</li>
+<li>再用同样方法换入清水，观察部分细胞是否逐渐恢复。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>细胞膜允许水较容易通过。外面盐水更浓时，水从细胞内向外移动，液泡变小，细胞膜和内部物质从细胞壁处缩回，叫质壁分离。换回清水后，水重新进入，说明这不是细胞壁本身缩小。</p>
+<h3>可测变量</h3>
+<p>选择同一视野，统计 20 个细胞中出现明显质壁分离的个数，画“时间—百分比”图。</p>
+<hr />
+<h2>B3 水草叶里的绿色“小工厂”——叶绿体与细胞质流动</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：B；40–50 分钟</li>
+<li><strong>核心问题</strong>：水草的绿色来自细胞外面，还是来自细胞内部的小结构？</li>
+<li><strong>材料</strong>：新鲜黑藻、伊乐藻或另一种叶片很薄的沉水植物；显微镜、载玻片、盖玻片、清水。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>取靠近嫩梢的一小片薄叶，水封装片，不染色。</li>
+<li>低倍找到叶片边缘较薄、细胞不重叠的位置，再转中倍或高倍。</li>
+<li>观察许多绿色小颗粒位于每个细胞内部，并比较靠近叶脉和叶缘的位置。</li>
+<li>固定观察同一个细胞 2–3 分钟；状态合适时可看到叶绿体缓慢移动。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>绿色小颗粒是叶绿体，含有吸收光能的叶绿素，是植物制造有机物的重要场所。若看到它们移动，主要是细胞质流动带着叶绿体移动；不要把盖玻片漂动造成的整片移动误认为细胞质流动。</p>
+<h3>安全与处理</h3>
+<p>只使用水族店或家养的干净水草，不采集或培养未知污水样品；观察后当天密封丢弃或放回原水族箱。</p>
+<hr />
+<h2>B4 酵母既是“粉”也是细胞——显微镜与发酵证据</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：A/B；50–70 分钟</li>
+<li><strong>核心问题</strong>：干酵母遇到温水和糖后，怎样证明它由活细胞组成并在进行生命活动？</li>
+<li><strong>材料</strong>：活性干酵母、5% 糖水、约 30–35°C 温水；透明小瓶、气球或排水集气装置；显微镜、载玻片、盖玻片。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>设置三组：酵母＋糖水、酵母＋清水、糖水但无酵母；体积和温度相同。</li>
+<li>容器保持开放，或只用能自由膨胀的气球收集气体，绝不使用刚性密闭瓶。</li>
+<li>每 5 分钟记录泡沫高度或气球周长，共 30 分钟。</li>
+<li>取一滴酵母悬液做水封装片，从低倍转高倍，观察椭圆形细胞；寻找较小芽体连在母细胞旁的出芽现象。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>酵母是单细胞真菌。适宜温度下，它利用糖获得能量，并产生二氧化碳；气泡是看不见的代谢过程留下的可见证据。看到出芽能说明一些酵母细胞正在繁殖，但没有看到也不代表所有酵母都死了。</p>
+<h3>安全与处理</h3>
+<p>实验物不可食用。当天用洗涤剂清洗，不长期培养，不把样品留到长出霉菌。</p>
+<hr />
+<h2>B5 土豆泡沫工厂——酶也有合适的工作条件</h2>
+<ul>
+<li><strong>级别 / 时间</strong>：B；45–60 分钟</li>
+<li><strong>核心问题</strong>：同样大小的土豆块，在不同温度处理后分解过氧化氢的速度相同吗？</li>
+<li><strong>材料</strong>：新鲜土豆、药店 3% 过氧化氢、相同试管、量筒、秒表；冰水、室温水、约 40°C 温水；可选少量洗洁精用于稳定泡沫。</li>
+<li><strong>成人提前准备</strong>：切好相同尺寸的土豆块并分装 3% 过氧化氢；不使用更高浓度。</li>
+</ul>
+<h3>操作</h3>
+<ol>
+<li>将相同土豆块分别放在冰水、室温水和约 40°C 温水中 5 分钟。</li>
+<li>每支试管加入相同体积 3% 过氧化氢；可各加 1 滴同品牌洗洁精。</li>
+<li>同时投入土豆块，30 秒和 60 秒读取泡沫高度；每个条件重复 3 次。</li>
+<li>设置“过氧化氢但无土豆”对照。若要展示高温破坏酶，只由成人提前准备煮熟并完全冷却的土豆块。</li>
+</ol>
+<h3>孩子可以理解的解释</h3>
+<p>土豆细胞中的过氧化氢酶能加快过氧化氢分解，生成水和氧气；泡沫里的气体主要是氧气。酶不是被反应大量消耗的“燃料”，而是帮助反应更快发生的蛋白质。低温常让反应变慢，过高温度会改变蛋白质形状，使它难以工作。</p>
+<h3>安全与处理</h3>
+<p>必须戴护目镜，避免接触眼睛和皮肤；不密封试管。反应结束后充分加水稀释并冲走，土豆块装袋丢弃。</p>
+<h2>五、推荐的 6 次栏目安排</h2>
+<p>每次可做 60–90 分钟；显微镜课可把两个短实验组合起来。</p>
+<table>
+<thead>
+<tr>
+<th>次序</th>
+<th>主题</th>
+<th>主实验</th>
+<th>本节要讲清楚的模型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>颜色不是魔法</td>
+<td>C1 紫甘蓝指示剂</td>
+<td>分子所处环境改变，颜色会改变</td>
+</tr>
+<tr>
+<td>2</td>
+<td>看不见的成分可以比较</td>
+<td>C2 维生素 C 侦探＋C5 色谱</td>
+<td>化学反应与物理分离提供不同证据</td>
+</tr>
+<tr>
+<td>3</td>
+<td>两种“沉淀”</td>
+<td>C3 牛奶蛋白＋C4 碳酸钙</td>
+<td>聚集出来与生成新固体并不完全相同</td>
+</tr>
+<tr>
+<td>4</td>
+<td>第一次看见细胞</td>
+<td>B1 洋葱细胞＋B2 渗透</td>
+<td>细胞壁、细胞膜、液泡与水的移动</td>
+</tr>
+<tr>
+<td>5</td>
+<td>绿色细胞和真菌细胞</td>
+<td>B3 水草＋B4 酵母显微观察</td>
+<td>多细胞植物与单细胞真菌的共同点和差异</td>
+</tr>
+<tr>
+<td>6</td>
+<td>生命里的化学反应</td>
+<td>B4 发酵数据＋B5 土豆酶</td>
+<td>生命活动也能用对照、测量和反应速率研究</td>
+</tr>
+</tbody>
+</table>
+<h2>六、每次课统一记录页</h2>
+<ol>
+<li><strong>问题</strong>：今天要比较什么？</li>
+<li><strong>预测</strong>：我认为会发生什么，为什么？</li>
+<li><strong>变量</strong>：改变什么、测量什么、保持什么相同？</li>
+<li><strong>对照</strong>：哪一组帮助我判断“没有这个条件会怎样”？</li>
+<li><strong>数据</strong>：表格、照片、显微图、颜色编号或泡沫高度。</li>
+<li><strong>结论</strong>：我的主张是什么？哪条证据最支持它？</li>
+<li><strong>限制</strong>：颜色判断、滴大小、温度、焦距或样品差异会怎样影响结果？</li>
+<li><strong>新问题</strong>：下一次只改变哪个条件？</li>
+</ol>
+<h2>七、开始前的试剂核验表</h2>
+<p>把实验箱内可能用到的瓶子逐一拍清楚正面、背面和警示标志，再填写；<strong>空白不猜</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>中文名称</th>
+<th>英文/化学式</th>
+<th>浓度或纯度</th>
+<th>警示图标</th>
+<th>到期日</th>
+<th>本栏目是否使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>只要名称、浓度、储存状态或标签完整性有一项不确定，就把该瓶标为“暂不使用”，单独放入儿童无法接触的带盖收纳箱。</p>
+</article></main>
+<main class="document-preview" id="md-preview-f4d2fcdcaec3" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 新增-趣味化学与生物短课.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\旧课程方案\新增-趣味化学与生物短课.md</code></details><article><h1>新增：趣味化学与生物短课</h1>
+<p>每节 40–60 分钟。每个实验都从一个可检验的问题开始，最后要留下一张数据表、照片或科学绘图。</p>
+<h2>1. 紫甘蓝的“酸碱彩虹”</h2>
+<p><strong>问题：</strong> 同一种紫色液体为什么会在不同液体中变成不同颜色？</p>
+<p><strong>材料：</strong> 紫甘蓝 2–3 片、热水、透明小杯或反应板、白醋、柠檬汁、清水、食用小苏打、滴管。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>成人把切碎的紫甘蓝用热水浸泡 10 分钟，过滤并放凉，得到紫色指示液。</li>
+<li>每个小杯加入 5 mL 指示液。</li>
+<li>分别加入等量白醋、柠檬汁、清水和小苏打水。</li>
+<li>将颜色按红、紫、蓝、绿排序；每种液体重复两次。</li>
+<li>任选一种厨房液体，先写预测，再测试。</li>
+</ol>
+<p><strong>记录：</strong> 液体名称、预测、颜色、酸性/接近中性/碱性判断。</p>
+<p><strong>解释：</strong> 紫甘蓝中的花青素会随周围酸碱性改变结构，因此显现不同颜色。</p>
+<hr />
+<h2>2. 颜色回到紫色——酸和碱的中和接力</h2>
+<p><strong>问题：</strong> 粉红色的酸性溶液，加入多少小苏打水后会接近紫色？</p>
+<p><strong>材料：</strong> 上一节制得的紫甘蓝指示液、白醋、小苏打水、滴管、反应板或透明小杯。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>每杯加入 5 mL 紫甘蓝指示液和 2 mL 白醋，得到粉红色液体。</li>
+<li>用滴管逐滴加入小苏打水；每加 1 滴，轻轻摇匀并记录颜色。</li>
+<li>记录第一次由粉红色变成紫色附近所需的滴数；继续加入，观察颜色是否转向蓝绿。</li>
+<li>三次重复，比较平均滴数。</li>
+</ol>
+<p><strong>记录：</strong> 小苏打水滴数—颜色变化带。</p>
+<p><strong>解释：</strong> 白醋提供酸性环境，小苏打水提供碱性环境；它们逐渐相互抵消，指示剂颜色随之改变，同时会出现少量二氧化碳气泡。</p>
+<hr />
+<h2>3. 蓝黑色的“隐身术”——淀粉、碘和维生素 C</h2>
+<p><strong>问题：</strong> 为什么维生素 C 能让蓝黑色液体消失？</p>
+<p><strong>材料：</strong> 玉米淀粉或现有淀粉、热水、新购碘液/碘伏、维生素 C 片、清水、滴管、反应板。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>成人用热水调制稀淀粉液并放凉。</li>
+<li>每孔加入相同体积的淀粉液和已预先稀释的新碘液，形成蓝黑色。</li>
+<li>一孔滴入清水作对照；其余各孔滴入等浓度维生素 C 溶液。</li>
+<li>记录蓝黑色完全消失所需滴数；每个条件做三次。</li>
+</ol>
+<p><strong>记录：</strong> 样品名称、消色滴数、是否出现颜色变化。</p>
+<p><strong>解释：</strong> 碘和淀粉结合显蓝黑色；维生素 C 会让碘转变成不再显色的形式。结论应写成“在本实验条件下，所需滴数较少的样品消色能力更强”。</p>
+<hr />
+<h2>4. 酵母泡沫喷泉——酶让反应加速</h2>
+<p><strong>问题：</strong> 为什么加入酵母后，双氧水会迅速冒出大量泡沫？</p>
+<p><strong>材料：</strong> 新购、标签完整的药店 3% 过氧化氢，活性干酵母，温水，洗洁精，透明塑料瓶或量筒，食用色素，秒表。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>成人向两个相同容器各加入 30 mL 3% 过氧化氢、1 mL 洗洁精和 1 滴食用色素。</li>
+<li>将 1 茶匙酵母用 10 mL 温水调成悬液；清水作另一组对照。</li>
+<li>同时把酵母悬液和清水分别倒入两个容器，开始计时。</li>
+<li>每 10 秒记录泡沫高度，持续 1 分钟。</li>
+<li>比较两组曲线；可把酵母预先放在冷水、室温水和约 35°C 温水中 5 分钟，比较温度条件。</li>
+</ol>
+<p><strong>记录：</strong> 时间—泡沫高度图；酵母组与清水组对照。</p>
+<p><strong>解释：</strong> 酵母细胞中有能加快双氧水分解的酶，产生的氧气被洗洁精泡沫捕捉，于是形成“喷泉”。</p>
+<p><strong>成人操作：</strong> 分装双氧水，佩戴护目镜；实验液和泡沫不接触眼睛，结束后用大量清水冲洗容器。</p>
+<hr />
+<h2>5. 二氧化碳气球赛——哪种条件产气更快？</h2>
+<p><strong>问题：</strong> 温度会怎样影响小苏打和白醋产生气体的速度？</p>
+<p><strong>材料：</strong> 食用小苏打、白醋、3 个相同小瓶、3 个气球、冷水/室温水/温水水浴、温度计、量勺、秒表。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>每个气球装入 1 平茶匙小苏打；每个瓶子装入相同体积白醋。</li>
+<li>将三瓶白醋分别放入冷水、室温水和温水水浴 5 分钟，记录温度。</li>
+<li>把气球套到瓶口后，再让小苏打全部落入瓶中，同时计时。</li>
+<li>每 30 秒测一次气球周长，持续 5 分钟；每种温度重复两次。</li>
+</ol>
+<p><strong>记录：</strong> 温度—气球周长图。</p>
+<p><strong>解释：</strong> 白醋与小苏打反应生成二氧化碳；在适当范围内，较高温度通常会让反应更快。气球装的是产生的气体，因此不能用刚性密闭容器替代。</p>
+<hr />
+<h2>6. 叶片的“呼吸孔”——气孔拓印</h2>
+<p><strong>问题：</strong> 叶片的正面和背面，哪一面有更多气孔？</p>
+<p><strong>材料：</strong> 新鲜叶片、透明指甲油、透明胶带、显微镜、载玻片、盖玻片、记号笔。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>成人在同一片叶子的正面和背面各涂一小块透明指甲油，完全晾干。</li>
+<li>用透明胶带轻压并揭下干膜，将膜贴在载玻片上并标记“正面/背面”。</li>
+<li>从低倍开始找像，再换中倍；在每个样本任选 3 个视野计数气孔。</li>
+<li>比较每个视野的平均气孔数。</li>
+</ol>
+<p><strong>记录：</strong> 叶片正面/背面的气孔计数表和科学绘图。</p>
+<p><strong>解释：</strong> 气孔是叶片与空气交换气体、同时散失水分的小开口。许多陆生植物的背面气孔更多，可减少阳光直晒造成的失水。</p>
+<hr />
+<h2>7. 芹菜的彩色水路——木质部运输</h2>
+<p><strong>问题：</strong> 叶片会不会影响茎把水向上运输的速度？</p>
+<p><strong>材料：</strong> 芹菜或白菜叶柄、食用色素、透明杯、清水、直尺、小刀、显微镜、载玻片。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>选取粗细相近的两根芹菜；一根保留叶片，另一根剪去大部分叶片。</li>
+<li>两杯加入相同体积、相同颜色浓度的色素水，插入芹菜。</li>
+<li>每 30 分钟测量茎中最高着色位置，持续 2–3 小时；隔夜可得到更明显结果。</li>
+<li>成人从茎的不同高度切薄横截面，学生在显微镜下寻找着色的运输组织。</li>
+</ol>
+<p><strong>记录：</strong> 时间—最高着色高度图；横截面科学绘图。</p>
+<p><strong>解释：</strong> 水主要通过木质部向上运输。叶片蒸腾会帮助拉动水柱，因此保留较多叶片的样本常出现更快的着色上升。</p>
+<hr />
+<h2>8. 香蕉 DNA 取丝——把看不见的遗传物质变得可见</h2>
+<p><strong>问题：</strong> 一根香蕉里能不能取到肉眼可见的 DNA？</p>
+<p><strong>材料：</strong> 熟香蕉、食盐、洗洁精、温水、滤纸和漏斗、透明杯、冰冷的 75% 医用酒精、木签。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>压碎约 1/3 根香蕉，加入 20 mL 温水、1/2 茶匙食盐和 1 茶匙洗洁精，轻轻搅拌 2 分钟。</li>
+<li>通过滤纸过滤到透明杯中。</li>
+<li>成人沿杯壁缓慢倒入等体积冰冷酒精，形成上下两层。</li>
+<li>静置 2 分钟后，用木签从两层交界处轻轻卷起白色丝状物。</li>
+</ol>
+<p><strong>记录：</strong> 各步骤照片；丝状物出现的位置和外观描述。</p>
+<p><strong>解释：</strong> 洗洁精帮助打开细胞膜，盐帮助 DNA 聚集；DNA 在冰冷酒精中不易溶解，于是在交界处形成可见丝状物。</p>
+<p><strong>成人操作：</strong> 倒酒精并远离火源；完成后密封处置实验液。</p>
+</article></main>
+<main class="document-preview" id="md-preview-baa1d41ea426" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 化学与生物课程更新建议-试剂盘点后.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\arxiv\旧课程方案\化学与生物课程更新建议-试剂盘点后.md</code></details><article><h1>五年级化学与生命科学课程更新建议（只用状态可靠的材料）</h1>
+<p>适用对象：五年级学生；每节 60–75 分钟；成人全程在场。本方案已排除“可有限使用”、明显变质和高风险试剂；双氧水、碘伏、硫代硫酸钠、锌粒、柠檬酸、氢氧化钙、KDP 等均<strong>不作为正式课程材料</strong>。</p>
+<p>每种试剂约 3 g 时，适合反应板或小试管的微型实验：每组只用约 0.1–0.5 g 固体。不要为追求更剧烈的现象而扩大用量。</p>
+<h2>一、课程实际可用材料</h2>
+<table>
+<thead>
+<tr>
+<th>状态可靠的现有材料</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大理石、碳酸钙</td>
+<td>与新鲜白醋反应，研究产气和反应速率</td>
+</tr>
+<tr>
+<td>碱式碳酸铜</td>
+<td>成人热分解演示</td>
+</tr>
+<tr>
+<td>铁钉、粗盐、凡士林</td>
+<td>锈蚀与防锈长期实验</td>
+</tr>
+<tr>
+<td>石墨、铜丝、黄铜片、聚乙烯、石蜡</td>
+<td>导电性、导体/绝缘体、材料性质</td>
+</tr>
+<tr>
+<td>琼脂、淀粉、蒸馏水</td>
+<td>凝胶与扩散模型；不做培养基</td>
+</tr>
+<tr>
+<td>显微镜、载玻片、盖玻片、滴管、电子秤、温度计</td>
+<td>显微观察、科学绘图、定量记录</td>
+</tr>
+</tbody>
+</table>
+<h3>明确不使用</h3>
+<ul>
+<li>已明显分解的双氧水，以及依赖双氧水的催化/酶实验；</li>
+<li>碘伏、硫代硫酸钠、锌粒、柠檬酸、氢氧化钙、KDP 等“可有限使用”的瓶装材料；</li>
+<li>氢氧化钡、氧化钙、氯化锌、草酸、标签不明试剂；</li>
+<li>任何铜盐、铁盐、锰盐的学生动手操作。</li>
+</ul>
+<h2>二、推荐 8 节课程</h2>
+<table>
+<thead>
+<tr>
+<th>节次</th>
+<th>问题与学校衔接</th>
+<th>实验设计</th>
+<th>学生证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>大理石里的气体从哪来？</strong> 对应 chemical change、evidence</td>
+<td>用同一瓶新鲜白醋分别作用于少量大理石和碳酸钙粉末。气球或集气装置只作柔性收集，绝不刚性密封。</td>
+<td>固体、气泡、气球周长的前后记录。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>表面积会怎样影响反应速度？</strong> 对应 reaction rate、控制变量</td>
+<td>延续第 1 节，只改变颗粒大小；固定碳酸钙质量、白醋体积、温度和容器。每 30 秒记录产气体积或气球周长，做 3 次重复。</td>
+<td>时间—产气量图与基于数据的结论。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>绿色粉末为什么加热后会变黑？</strong> 对应 chemical change、decomposition</td>
+<td>成人在通风处以约 0.1 g 碱式碳酸铜做热分解演示。学生在安全距离观察绿色固体变黑、试管内水雾和气体生成。</td>
+<td>加热前后定性观察表；“受热后生成多种物质”的解释。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>铁为什么生锈，怎样保护它？</strong> 对应 oxidation、variables、engineering</td>
+<td>铁钉设置干燥空气、清水、盐水、凡士林涂层＋盐水四组；成人提前 5–7 天制备一套时间平移样品。</td>
+<td>每日锈蚀等级、照片、最佳防锈方案。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>为什么有些材料能导电？</strong> 对应 physical properties、energy transfer</td>
+<td>用低压电池盒和万用表/LED 比较石墨、铜丝、黄铜片、聚乙烯和石蜡的导通情况。</td>
+<td>材料—导通表；导体/绝缘体分类。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>细胞里的水会怎样移动？</strong> 对应 cell theory、structure and function</td>
+<td>紫皮洋葱表皮在清水和食盐水中的质壁分离与恢复；显微镜固定同一视野，每分钟记录一次。</td>
+<td>时间—明显收缩细胞比例图；清水恢复作反证。</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>酵母只是粉末吗？</strong> 对应 living things、energy acquisition</td>
+<td>活性干酵母＋糖水、酵母＋清水、糖水无酵母三组；记录泡沫高度/气球周长，并做酵母水封装片。</td>
+<td>三组对照数据、酵母细胞绘图。</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>水怎样从根走到叶？</strong> 对应 vascular plants、xylem、transpiration</td>
+<td>用新鲜芹菜/白菜叶柄插入食用色素水，设置有叶和去叶两组；课后切横截面，在显微镜下寻找着色的运输组织。</td>
+<td>颜色上升距离—时间图、横截面科学绘图。</td>
+</tr>
+</tbody>
+</table>
+<h2>三、操作与安全边界</h2>
+<ol>
+<li>第 1–2 节使用<strong>新鲜白醋</strong>作为外加、低风险酸源；它不是库存状态不明试剂。产气装置只能使用气球、敞口排水集气或气体注射器。</li>
+<li>第 3 节是成人演示：成人称量、加热、处理残渣；学生不触碰碱式碳酸铜及加热后固体。加热必须通风，残渣单独收集。</li>
+<li>第 4 节不需要“全新铁钉”；现有铁钉的真实表面状态正好能用于讨论材料为何会锈蚀及涂层的意义。</li>
+<li>第 6–8 节只观察干净的家庭食材或水族植物；不培养细菌、霉菌或未知水样。所有酵母实验样品当天清洗并丢弃。</li>
+<li>蒸馏装置只由成人用于制备第 8 节的对照水、展示蒸发—冷凝模型；只蒸馏水，绝不蒸馏含酸、碱、金属盐、酒精或未知液体。</li>
+</ol>
+<h2>四、需要补充的低风险耗材</h2>
+<ul>
+<li>新鲜白醋、气球（或气体注射器）、食盐；</li>
+<li>紫皮洋葱、活性干酵母、白砂糖、芹菜或白菜叶柄、食用色素；</li>
+<li>低压电池盒、导线、LED 或数字万用表；</li>
+<li>一次性透明杯、吸水纸、标签纸、记号笔。</li>
+</ul>
+<h2>五、与学校内容的对应</h2>
+<ul>
+<li>Unit 2：第 1–3 节用实际反应区分物理变化与化学变化，并从“气泡/颜色变化”推进到可重复的数据。</li>
+<li>Unit 3：第 5 节衔接电能、材料性质和能量转移。</li>
+<li>Unit 4：第 6–8 节对应细胞结构、生命活动、维管植物和蒸腾运输。</li>
+<li>Unit 1：每节均保留观察/推论分栏、一个对照组和可测量的证据。</li>
+</ul>
+<p>所有库存判定以 <a href="#md-preview-8023dbf2f1bd" data-md-preview="md-preview-8023dbf2f1bd">试剂识别与保存状态评估</a> 为准；若某瓶状态重新确认或更换新试剂，再另行设计扩展课。</p>
+</article></main>
+<script>
+(() => {
+  function revealDocument() {
+    const id = location.hash.slice(1);
+    if (id !== 'lesson-content' && !id.startsWith('md-preview-')) return;
+    requestAnimationFrame(() => {
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({block: 'start', behavior: 'instant'});
+    });
+  }
+  window.addEventListener('hashchange', revealDocument);
+  window.addEventListener('pageshow', revealDocument);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760" role="img" aria-labelledby="title desc">
+  <title id="title">空饮料瓶实验小车的正确横轴结构</title>
+  <desc id="desc">俯视图中，空饮料瓶水平放置，前后各有一根吸管横跨瓶身左右，两根竹签穿过吸管作为前后车轴，每根车轴连接左右两个瓶盖车轮。瓶身上方固定载重托盘、追踪旗和居中牵引点。</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif; fill: #17324d; }
+      .title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 21px; font-weight: 650; }
+      .small { font-size: 18px; }
+      .guide { stroke: #718597; stroke-width: 2.5; stroke-dasharray: 8 7; fill: none; }
+      .arrow { stroke: #e66d3f; stroke-width: 6; fill: none; marker-end: url(#orange); }
+    </style>
+    <marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e66d3f"/></marker>
+  </defs>
+
+  <text x="550" y="46" text-anchor="middle" class="title">空瓶版“牛顿一号”：前、后两根车轴都横向连接左右车轮</text>
+  <rect x="45" y="78" width="1010" height="620" rx="24" fill="#f7fbfd" stroke="#b7c7d3" stroke-width="3"/>
+
+  <text x="365" y="118" text-anchor="middle" class="label">俯视结构</text>
+  <g transform="translate(95,135)">
+    <path d="M120 150 Q120 95 190 80 L445 80 Q500 95 515 155 L515 215 L575 230 L575 295 L515 310 L515 370 Q500 430 445 445 L190 445 Q120 430 120 370 Z" fill="#d9edf4" fill-opacity="0.72" stroke="#4b7c91" stroke-width="5"/>
+    <rect x="570" y="226" width="48" height="73" rx="9" fill="#d95353" stroke="#8c3030" stroke-width="4"/>
+
+    <line x1="210" y1="30" x2="210" y2="495" stroke="#607d8b" stroke-width="24" stroke-linecap="round"/>
+    <line x1="458" y1="30" x2="458" y2="495" stroke="#607d8b" stroke-width="24" stroke-linecap="round"/>
+    <line x1="210" y1="18" x2="210" y2="507" stroke="#b48a53" stroke-width="9"/>
+    <line x1="458" y1="18" x2="458" y2="507" stroke="#b48a53" stroke-width="9"/>
+
+    <g fill="#4c92bd" stroke="#245d82" stroke-width="5">
+      <circle cx="210" cy="28" r="55"/><circle cx="210" cy="497" r="55"/>
+      <circle cx="458" cy="28" r="55"/><circle cx="458" cy="497" r="55"/>
+    </g>
+    <g fill="#d7e5ec" stroke="#245d82" stroke-width="3">
+      <circle cx="210" cy="28" r="10"/><circle cx="210" cy="497" r="10"/>
+      <circle cx="458" cy="28" r="10"/><circle cx="458" cy="497" r="10"/>
+    </g>
+
+    <rect x="245" y="210" width="180" height="112" rx="13" fill="#fffaf0" stroke="#a98a52" stroke-width="4"/>
+    <text x="335" y="252" text-anchor="middle" class="small">载重托盘</text>
+    <text x="335" y="280" text-anchor="middle" class="small">固定质量片</text>
+    <line x1="172" y1="175" x2="172" y2="96" stroke="#c65555" stroke-width="5"/>
+    <polygon points="172,96 230,112 172,130" fill="#f2c94c" stroke="#9b7422" stroke-width="3"/>
+    <text x="95" y="155" class="small">追踪旗</text>
+
+    <path d="M620 242 C655 242 655 283 620 283" fill="none" stroke="#505d64" stroke-width="6"/>
+    <text x="520" y="200" class="small">瓶颈朝前</text>
+    <path d="M625 262 L690 262" class="arrow"/>
+    <text x="652" y="232" class="small">运动方向</text>
+
+    <text x="8" y="30" class="small">左侧车轮</text>
+    <text x="8" y="505" class="small">右侧车轮</text>
+    <path d="M55 242 L190 242" class="guide"/>
+    <text x="8" y="232" class="small">后轴</text>
+    <path d="M480 242 L590 242" class="guide"/>
+    <text x="595" y="250" class="small">前轴</text>
+  </g>
+
+  <g transform="translate(760,160)">
+    <text x="135" y="0" text-anchor="middle" class="label">一根车轴的剖面</text>
+    <circle cx="20" cy="130" r="55" fill="#4c92bd" stroke="#245d82" stroke-width="5"/>
+    <circle cx="250" cy="130" r="55" fill="#4c92bd" stroke="#245d82" stroke-width="5"/>
+    <line x1="20" y1="130" x2="250" y2="130" stroke="#b48a53" stroke-width="9"/>
+    <line x1="70" y1="130" x2="200" y2="130" stroke="#607d8b" stroke-width="26" stroke-linecap="round"/>
+    <line x1="70" y1="130" x2="200" y2="130" stroke="#d9edf4" stroke-width="12" stroke-linecap="round"/>
+    <text x="135" y="188" text-anchor="middle" class="small">竹签在吸管轴承内转动</text>
+    <text x="20" y="225" text-anchor="middle" class="small">左轮</text>
+    <text x="250" y="225" text-anchor="middle" class="small">右轮</text>
+
+    <rect x="12" y="285" width="252" height="140" rx="16" fill="#fffaf0" stroke="#d6bd86" stroke-width="3"/>
+    <text x="138" y="320" text-anchor="middle" class="label">装配检查</text>
+    <text x="34" y="355" class="small">① 前、后吸管彼此平行</text>
+    <text x="34" y="385" class="small">② 瓶盖中心孔保持居中</text>
+    <text x="34" y="415" class="small">③ 轮盖与瓶身留 2–3 mm</text>
+  </g>
+
+  <rect x="195" y="710" width="710" height="36" rx="18" fill="#e8f1f7"/>
+  <text x="550" y="735" text-anchor="middle" class="small">验收：轻推滚行 ≥ 1 m · 横向偏移 ≤ 10 cm · 稳定承载 18 个质量片</text>
+</svg>

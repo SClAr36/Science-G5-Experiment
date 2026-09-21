@@ -3,12 +3,17 @@
 
 from __future__ import annotations
 
+import base64
 import html
+import mimetypes
 import re
+import subprocess
 import sys
 from pathlib import Path
 
 from markdown_it import MarkdownIt
+
+from local_document_links import prepare_document_links
 
 
 HEADING_RE = re.compile(r"<h([34])(?:\s[^>]*)?>(.*?)</h\1>", flags=re.DOTALL)
@@ -39,6 +44,8 @@ def collapsible_heading(level: int, text: str) -> tuple[str, str] | None:
         return "notes", "笔记 / Notes"
     if text.startswith("离堂记录"):
         return "record", f"{text} / Exit record & answers"
+    if text.startswith("记录与板书"):
+        return "record", text
     if text.startswith("记录"):
         return "record", f"{text} / Record"
     return None
@@ -90,6 +97,37 @@ def wrap_collapsible_sections(rendered_body: str) -> str:
     return "".join(parts)
 
 
+def embed_local_images(rendered_body: str, base_dir: Path) -> str:
+    """Embed lesson-local image files as data URLs for standalone HTML."""
+
+    resolved_base = base_dir.resolve()
+
+    def replace_src(match: re.Match[str]) -> str:
+        quote = match.group("quote")
+        source = html.unescape(match.group("source"))
+        if source.startswith(("data:", "http://", "https://", "//", "#")):
+            return match.group(0)
+
+        image_path = (resolved_base / source).resolve()
+        if not image_path.is_relative_to(resolved_base) or not image_path.is_file():
+            return match.group(0)
+
+        media_type, _ = mimetypes.guess_type(image_path.name)
+        if media_type is None or not media_type.startswith("image/"):
+            return match.group(0)
+
+        encoded = base64.b64encode(image_path.read_bytes()).decode("ascii")
+        data_url = f"data:{media_type};base64,{encoded}"
+        return f"src={quote}{data_url}{quote}"
+
+    return re.sub(
+        r"""src=(?P<quote>["'])(?P<source>.*?)(?P=quote)""",
+        replace_src,
+        rendered_body,
+        flags=re.IGNORECASE,
+    )
+
+
 def main() -> int:
     if len(sys.argv) not in (3, 4):
         print(
@@ -136,6 +174,19 @@ def main() -> int:
     renderer.enable("strikethrough")
     rendered_body = renderer.render(body_source.strip() + "\n")
     rendered_body = wrap_collapsible_sections(rendered_body)
+    rendered_body = embed_local_images(rendered_body, input_path.parent)
+    rendered_body, markdown_previews, preview_styles = prepare_document_links(
+        rendered_body,
+        input_path,
+        Path(__file__).resolve().parents[1],
+        lambda source: wrap_collapsible_sections(renderer.render(source)),
+        embed_local_images,
+    )
+    style_blocks += preview_styles
+    index_marker = (
+        ' data-document-preview-index="true"'
+        if input_path.name.lower() == "readme.md" else ""
+    )
 
     document = f"""<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
@@ -146,12 +197,13 @@ def main() -> int:
   <title>{html.escape(title)}</title>
 {style_blocks}
 </head>
-<body>
+<body{index_marker}>
 <header id="title-block-header">
 <h1 class="title">{html.escape(title)}</h1>
 </header>
-<main>
+<main id="lesson-content" tabindex="-1">
 {rendered_body}</main>
+{markdown_previews}
 </body>
 </html>
 """
@@ -159,6 +211,20 @@ def main() -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(document, encoding="utf-8")
     print(f"Rendered {input_path} -> {output_path}")
+    index_source = input_path.parent / "README.md"
+    index_output = output_path.parent / "README.html"
+    if (
+        input_path.name.lower() != "readme.md"
+        and input_path.parent == output_path.parent
+        and index_source.is_file()
+        and index_output.is_file()
+        and 'data-document-preview-index="true"' in index_output.read_text(encoding="utf-8")
+    ):
+        subprocess.run(
+            [sys.executable, str(Path(__file__).resolve()), str(index_source),
+             str(index_output), str(template_path)],
+            check=True,
+        )
     return 0
 
 

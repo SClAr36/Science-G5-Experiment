@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 5 节：光遇到物质会发生什么？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 5 节：光遇到物质会发生什么？</h1>
+</header>
+<main>
+<p><strong>Lesson 5: What Happens When Light Meets Matter?</strong></p>
+<p><strong>授课状态</strong>：已完成；实际授课第 5 节。</p>
+<p><strong>同日衔接</strong>：完成本节 60 分钟光学主课后，可继续进行 <a href="08-%E6%98%BE%E5%BE%AE%E9%95%9C%E4%B8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7.html">第 8 节：显微镜下的生命是什么样？</a>，用 60 分钟观察洋葱表皮与口腔上皮细胞。</p>
+<h2>家长课前准备（Materials for Parents）</h2>
+<h3>器材清单</h3>
+<table>
+<thead>
+<tr>
+<th>器材</th>
+<th style="text-align:right">数量</th>
+<th>具体要求与来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>玻璃三棱镜</td>
+<td style="text-align:right">1 个</td>
+<td>长约 8–10 cm，透明、边缘完整；本节唯一需要专门准备的光学器材</td>
+</tr>
+<tr>
+<td>小平面镜</td>
+<td style="text-align:right">1 面</td>
+<td>梳妆镜、方形小镜片均可；镜面宽约 5–10 cm，能竖直固定</td>
+</tr>
+<tr>
+<td>红色激光笔</td>
+<td style="text-align:right">1 支</td>
+<td>普通演示激光笔或宠物激光笔；光点清楚、开关稳定</td>
+</tr>
+<tr>
+<td>黑色绝缘胶带</td>
+<td style="text-align:right">1 卷</td>
+<td>制作三棱镜实验的窄缝，并固定纸张与器材</td>
+</tr>
+<tr>
+<td>白色 A3 纸</td>
+<td style="text-align:right">4 张</td>
+<td>接收光谱、绘制反射与折射光路</td>
+</tr>
+<tr>
+<td>黑色卡纸</td>
+<td style="text-align:right">2 张</td>
+<td>三棱镜实验遮光；激光实验中放在光束终点作挡光板</td>
+</tr>
+<tr>
+<td>红、绿、蓝、白、黑色哑光纸片</td>
+<td style="text-align:right">各 1 张</td>
+<td>每张裁成约 8 cm × 8 cm；普通彩纸、便签纸或包装纸均可，表面颜色均匀、反光较少</td>
+</tr>
+<tr>
+<td>红、绿、蓝透明片</td>
+<td style="text-align:right">各 1 片</td>
+<td>每片约 5 cm × 5 cm；可从透明文件袋、糖纸或彩色透明包装片裁取，颜色饱和、透光清楚</td>
+</tr>
+<tr>
+<td>量角器</td>
+<td style="text-align:right">1 个</td>
+<td>画法线、20°、40°、60°入射线并读取角度</td>
+</tr>
+<tr>
+<td>直尺、铅笔、彩色铅笔</td>
+<td style="text-align:right">各 1 份</td>
+<td>画光路、标光谱边缘与记录颜色</td>
+</tr>
+<tr>
+<td>长尾夹或橡皮泥</td>
+<td style="text-align:right">4 个或 1 小块</td>
+<td>竖直固定镜子、白纸和三棱镜</td>
+</tr>
+<tr>
+<td>透明方形保鲜盒</td>
+<td style="text-align:right">1 个</td>
+<td>盒壁平直，装水深度约 4–6 cm；用于观察折射光路</td>
+</tr>
+<tr>
+<td>透明塑料饮料瓶</td>
+<td style="text-align:right">1 个，500–600 mL</td>
+<td>瓶身平直透明；在靠近底部约 3 cm 处制作直径约 2 mm 的圆孔</td>
+</tr>
+<tr>
+<td>清水</td>
+<td style="text-align:right">约 1 L</td>
+<td>透明方盒和水流全反射实验</td>
+</tr>
+<tr>
+<td>牛奶</td>
+<td style="text-align:right">约 2 mL</td>
+<td>加 2–3 滴显示激光路径；没有牛奶时，可用牙签尖大小的白色水粉颜料、玉米淀粉或普通面粉，先用少量水调开</td>
+</tr>
+<tr>
+<td>深托盘或脸盆</td>
+<td style="text-align:right">1 个</td>
+<td>接住塑料瓶流出的水</td>
+</tr>
+<tr>
+<td>纸巾或吸水布</td>
+<td style="text-align:right">1 份</td>
+<td>实验结束后整理桌面</td>
+</tr>
+</tbody>
+</table>
+<h3>器材说明</h3>
+<p><strong>三棱镜实验中的“单缝”是什么？</strong></p>
+<p>单缝是一条很窄的透光缝。在一小块黑色卡纸上开出光窗口，再把两条黑色绝缘胶带平行贴在窗口两侧，中间留下约 <strong>1–2 mm 宽、10–15 mm 长的竖缝</strong>。实验时把这块“窄缝卡”放在手电筒出光口前方。窄缝把宽光斑变成细长光带，三棱镜展开后的颜色边界会更清楚。</p>
+<pre><code class="language-text">黑胶带 █████│ 1–2 mm 竖缝 │█████ 黑胶带
+                    ↓
+                  三棱镜
+</code></pre>
+<p><strong>红、绿、蓝纸片有什么标准？</strong></p>
+<p>三张纸片使用哑光、颜色均匀的普通彩纸，裁成相同大小。红色接近正红，绿色接近鲜绿，蓝色接近深蓝；白纸和黑纸用作亮度参照。三张透明片用于把白光变成红、绿、蓝照明光，大小能完整盖住手电筒出光口即可。</p>
+<p><strong>激光笔在本课中做什么？</strong></p>
+<p>激光笔提供细而方向明确的红色光束，用于测量反射角、观察折射方向和演示水流全反射。三棱镜色散使用白光手电筒。</p>
+<h2>一、课程定位与知识主线</h2>
+<ul>
+<li><strong>对应学校单元</strong>：Unit 3 Energy and Its Forms — 03 Electromagnetic Spectrum</li>
+<li><strong>课时</strong>：60 分钟</li>
+<li><strong>驱动问题</strong>：白光里有什么？光与物质相遇后，传播方向和进入眼睛的颜色怎样改变？</li>
+</ul>
+<p>本节按一条连续主线推进：</p>
+<pre><code class="language-text">电磁波谱中的可见光
+        ↓
+白光包含多种可见波长——三棱镜色散
+        ↓
+光源提供的波长不同——物体颜色随照明改变
+        ↓
+光从界面返回——反射角等于入射角
+        ↓
+光进入另一介质——折射、临界角与全反射
+        ↓
+统一模型：reflection / transmission / absorption
+</code></pre>
+<h3>学生应能</h3>
+<ol>
+<li>把可见光放在电磁波谱中，说明波长与频率的关系，并用“不同频率的光在玻璃中的折射率不同”解释色散。</li>
+<li>用三棱镜展开白光，依据光谱说明白光可以包含多种可见波长。</li>
+<li>用“白光经透明片选择性透射形成彩色照明，再由彩纸选择性反射进入眼睛”解释物体颜色。</li>
+<li>从法线测量三组入射角和反射角，用数据检验反射定律。</li>
+<li>观察光跨过空气—水界面时的折射，并用水流中的光路解释全反射。</li>
+<li>用“输入光—物质作用—输出光”组织四组实验的证据。</li>
+</ol>
+<h2>二、60 分钟安排</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>实验与知识串讲</th>
+<th>知识落点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–20</td>
+<td>实验 1：光的色散——三棱镜展开白光</td>
+<td>光谱；波长与频率；折射率与频率</td>
+</tr>
+<tr>
+<td style="text-align:right">20–32</td>
+<td>实验 2：彩色照明改变物体颜色</td>
+<td>选择性透射；选择性反射；进入眼睛的光</td>
+</tr>
+<tr>
+<td style="text-align:right">32–45</td>
+<td>实验 3：用三组数据检验反射定律</td>
+<td>法线；入射角与反射角；<code>i ≈ r</code></td>
+</tr>
+<tr>
+<td style="text-align:right">45–58</td>
+<td>实验 4：空气进入水的折射与水流全反射</td>
+<td>空气—水界面；向法线偏折；水—空气全反射</td>
+</tr>
+<tr>
+<td style="text-align:right">58–60</td>
+<td>统一模型与离堂记录</td>
+<td>输入光—物质作用—输出光</td>
+</tr>
+</tbody>
+</table>
+<h2>三、课堂脚本</h2>
+<h3>0–20 分钟：实验 1——光的色散</h3>
+<h4>知识点</h4>
+<ol>
+<li><strong>光谱（spectrum）</strong>：电磁波谱依次包括无线电波、微波、红外线、可见光、紫外线、X 射线和伽马射线。可见光只占其中很窄的一段，位于红外线与紫外线之间；展开后可看到红、橙、黄、绿、蓝、靛、紫等颜色。</li>
+<li><strong>波长与频率（wavelength and frequency）</strong>：在真空中，光速 <code>c</code> 不变，波长 <code>λ</code> 与频率 <code>f</code> 满足 <code>c = λf</code>；因此波长越短，频率越高，波长越长，频率越低。</li>
+<li><strong>折射率与频率（refractive index and frequency）</strong>：同一块玻璃对不同频率的可见光具有不同折射率，因此各颜色的偏折角不同。常见玻璃中，红光偏折较小，紫光偏折较大，这种分开形成光谱的现象叫<strong>色散（dispersion）</strong>。</li>
+</ol>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE0MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+55S156OB5rOi6LCx5LiO5Y+v6KeB5YWJ5L2N572u5Zu+PC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5LuO5peg57q/55S15rOi5Yiw5Ly96ams5bCE57q/55qE5a6M5pW055S156OB5rOi6LCx77yM5Y+v6KeB5YWJ5L2N5LqO57qi5aSW57q/5LiO57Sr5aSW57q/5LmL6Ze077yM5bm25Zyo5LiL5pa55bGV5byA5Li657qi5qmZ6buE57u/6JOd6Z2b57Sr6Imy5bim44CCPC9kZXNjPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJ2aXNpYmxlIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNkNTJiMWUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxNiUiIHN0b3AtY29sb3I9IiNmMDZiMjEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIzMiUiIHN0b3AtY29sb3I9IiNmZmQ0M2IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMzOWE4NTIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI2OCUiIHN0b3AtY29sb3I9IiMyMTg1ZDAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI4NCUiIHN0b3AtY29sb3I9IiMzOTQ5YWIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjN2IxZmEyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPG1hcmtlciBpZD0iYXJyb3ciIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOCIgcmVmWT0iNSIgb3JpZW50PSJhdXRvIj4KICAgICAgPHBhdGggZD0iTTAsMCBMMTAsNSBMMCwxMCBaIiBmaWxsPSIjMjQzNDQ3Ii8+CiAgICA8L21hcmtlcj4KICAgIDxzdHlsZT4KICAgICAgdGV4dCB7IGZvbnQtZmFtaWx5OiAiTm90byBTYW5zIFNDIiwgIk1pY3Jvc29mdCBZYUhlaSIsIEFyaWFsLCBzYW5zLXNlcmlmOyBmaWxsOiAjMTcyMTJiOyB9CiAgICAgIC5iYW5kLWxhYmVsIHsgZm9udC1zaXplOiAyMnB4OyBmb250LXdlaWdodDogNzAwOyB9CiAgICAgIC5lbiB7IGZvbnQtc2l6ZTogMTVweDsgZm9udC13ZWlnaHQ6IDUwMDsgfQogICAgICAuYXhpcyB7IGZvbnQtc2l6ZTogMjBweDsgZm9udC13ZWlnaHQ6IDcwMDsgZmlsbDogIzI0MzQ0NzsgfQogICAgICAudGljayB7IGZvbnQtc2l6ZTogMTdweDsgZm9udC13ZWlnaHQ6IDY1MDsgfQogICAgICAuY29sb3ItbGFiZWwgeyBmb250LXNpemU6IDIwcHg7IGZvbnQtd2VpZ2h0OiA3NTA7IH0KICAgICAgLmxpZ2h0IHsgZmlsbDogI2ZmZmZmZjsgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iNTAwIiByeD0iMjQiIGZpbGw9IiNmN2ZhZmMiLz4KICA8dGV4dCB4PSI3MDAiIHk9IjQyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iODAwIj7nlLXno4Hms6LosLHvvIhFbGVjdHJvbWFnbmV0aWMgc3BlY3RydW3vvIk8L3RleHQ+CiAgPGxpbmUgeDE9IjEyMCIgeTE9Ijc5IiB4Mj0iMTI4MCIgeTI9Ijc5IiBzdHJva2U9IiMyNDM0NDciIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KICA8dGV4dCBjbGFzcz0iYXhpcyIgeD0iMTIwIiB5PSI2OSI+5rOi6ZW/6L6D6ZW/PC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJheGlzIiB4PSIxMjgwIiB5PSI2OSIgdGV4dC1hbmNob3I9ImVuZCI+6aKR546H6L6D6auYPC90ZXh0PgogIDxnIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIzIj4KICAgIDxyZWN0IHg9IjgwIiB5PSIxMDUiIHdpZHRoPSIyNTAiIGhlaWdodD0iMTA1IiByeD0iMTIiIGZpbGw9IiNiYWM4ZDgiLz4KICAgIDxyZWN0IHg9IjMzMCIgeT0iMTA1IiB3aWR0aD0iMTc1IiBoZWlnaHQ9IjEwNSIgZmlsbD0iIzkyYTdiZCIvPgogICAgPHJlY3QgeD0iNTA1IiB5PSIxMDUiIHdpZHRoPSIxODUiIGhlaWdodD0iMTA1IiBmaWxsPSIjZGI2YTY0Ii8+CiAgICA8cmVjdCB4PSI2OTAiIHk9IjEwNSIgd2lkdGg9IjU0IiBoZWlnaHQ9IjEwNSIgZmlsbD0idXJsKCN2aXNpYmxlKSIvPgogICAgPHJlY3QgeD0iNzQ0IiB5PSIxMDUiIHdpZHRoPSIxODUiIGhlaWdodD0iMTA1IiBmaWxsPSIjOWI3MmNmIi8+CiAgICA8cmVjdCB4PSI5MjkiIHk9IjEwNSIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxMDUiIGZpbGw9IiM3MTgzYzgiLz4KICAgIDxyZWN0IHg9IjExMDkiIHk9IjEwNSIgd2lkdGg9IjIxMSIgaGVpZ2h0PSIxMDUiIHJ4PSIxMiIgZmlsbD0iIzU5NmFhOCIvPgogIDwvZz4KICA8dGV4dCBjbGFzcz0iYmFuZC1sYWJlbCIgeD0iMjA1IiB5PSIxNTEiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuaXoOe6v+eUteazojx0c3BhbiBjbGFzcz0iZW4iIHg9IjIwNSIgZHk9IjI1Ij5SYWRpbyB3YXZlczwvdHNwYW4+PC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJiYW5kLWxhYmVsIiB4PSI0MTgiIHk9IjE1MSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+5b6u5rOiPHRzcGFuIGNsYXNzPSJlbiIgeD0iNDE4IiBkeT0iMjUiPk1pY3Jvd2F2ZXM8L3RzcGFuPjwvdGV4dD4KICA8dGV4dCBjbGFzcz0iYmFuZC1sYWJlbCIgeD0iNTk4IiB5PSIxNTEiIHRleHQtYW5jaG9yPSJtaWRkbGUiPue6ouWklue6vzx0c3BhbiBjbGFzcz0iZW4iIHg9IjU5OCIgZHk9IjI1Ij5JbmZyYXJlZDwvdHNwYW4+PC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJsaWdodCIgeD0iNzE3IiB5PSIxNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI5MDAiIHRyYW5zZm9ybT0icm90YXRlKC05MCA3MTcgMTYwKSI+5Y+v6KeB5YWJPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJiYW5kLWxhYmVsIiB4PSI4MzciIHk9IjE1MSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+57Sr5aSW57q/PHRzcGFuIGNsYXNzPSJlbiIgeD0iODM3IiBkeT0iMjUiPlVsdHJhdmlvbGV0PC90c3Bhbj48L3RleHQ+CiAgPHRleHQgY2xhc3M9ImJhbmQtbGFiZWwiIHg9IjEwMTkiIHk9IjE1MSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+WCDlsITnur88dHNwYW4gY2xhc3M9ImVuIiB4PSIxMDE5IiBkeT0iMjUiPlgtcmF5czwvdHNwYW4+PC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJiYW5kLWxhYmVsIGxpZ2h0IiB4PSIxMjE1IiB5PSIxNTEiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuS8vemprOWwhOe6vzx0c3BhbiBjbGFzcz0iZW4gbGlnaHQiIHg9IjEyMTUiIGR5PSIyNSI+R2FtbWEgcmF5czwvdHNwYW4+PC90ZXh0PgogIDxsaW5lIHgxPSI2OTIiIHkxPSIyMTQiIHgyPSIzMTUiIHkyPSIyOTQiIHN0cm9rZT0iIzU5NjU3OSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGxpbmUgeDE9Ijc0MiIgeTE9IjIxNCIgeDI9IjEwODUiIHkyPSIyOTQiIHN0cm9rZT0iIzU5NjU3OSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHRleHQgeD0iNzAwIiB5PSIyNjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjMiIGZvbnQtd2VpZ2h0PSI4MDAiPuWPr+ingeWFie+8iFZpc2libGUgbGlnaHTvvIk8L3RleHQ+CiAgPHJlY3QgeD0iMzE1IiB5PSIzMDAiIHdpZHRoPSI3NzAiIGhlaWdodD0iOTIiIHJ4PSIxNSIgZmlsbD0idXJsKCN2aXNpYmxlKSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8ZyBjbGFzcz0iY29sb3ItbGFiZWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPgogICAgPHRleHQgY2xhc3M9ImxpZ2h0IiB4PSIzNzAiIHk9IjM1MyI+57qiPC90ZXh0PgogICAgPHRleHQgY2xhc3M9ImxpZ2h0IiB4PSI0ODAiIHk9IjM1MyI+5qmZPC90ZXh0PgogICAgPHRleHQgeD0iNTkwIiB5PSIzNTMiPum7hDwvdGV4dD4KICAgIDx0ZXh0IGNsYXNzPSJsaWdodCIgeD0iNzAwIiB5PSIzNTMiPue7vzwvdGV4dD4KICAgIDx0ZXh0IGNsYXNzPSJsaWdodCIgeD0iODEwIiB5PSIzNTMiPuiTnTwvdGV4dD4KICAgIDx0ZXh0IGNsYXNzPSJsaWdodCIgeD0iOTIwIiB5PSIzNTMiPumdmzwvdGV4dD4KICAgIDx0ZXh0IGNsYXNzPSJsaWdodCIgeD0iMTAzMCIgeT0iMzUzIj7ntKs8L3RleHQ+CiAgPC9nPgogIDxnIHN0cm9rZT0iIzI2MzQ0MiIgc3Ryb2tlLXdpZHRoPSIyIj4KICAgIDxsaW5lIHgxPSIzMTUiIHkxPSIzOTciIHgyPSIzMTUiIHkyPSI0MTEiLz4KICAgIDxsaW5lIHgxPSI3MDAiIHkxPSIzOTciIHgyPSI3MDAiIHkyPSI0MTEiLz4KICAgIDxsaW5lIHgxPSIxMDg1IiB5MT0iMzk3IiB4Mj0iMTA4NSIgeTI9IjQxMSIvPgogIDwvZz4KICA8dGV4dCBjbGFzcz0idGljayIgeD0iMzE1IiB5PSI0MzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPue6piA3MDAgbm08L3RleHQ+CiAgPHRleHQgY2xhc3M9InRpY2siIHg9IjcwMCIgeT0iNDM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7nuqYgNTUwIG5tPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJ0aWNrIiB4PSIxMDg1IiB5PSI0MzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPue6piA0MDAgbm08L3RleHQ+CiAgPGxpbmUgeDE9IjMxNSIgeTE9IjQ2OCIgeDI9IjEwODUiIHkyPSI0NjgiIHN0cm9rZT0iIzI0MzQ0NyIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogIDx0ZXh0IGNsYXNzPSJheGlzIiB4PSIzMTUiIHk9IjQ2MCI+5rOi6ZW/5Y+Y55+t77yIzrsg4oaT77yJPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJheGlzIiB4PSIxMDg1IiB5PSI0NjAiIHRleHQtYW5jaG9yPSJlbmQiPumikeeOh+WPmOmrmO+8iGYg4oaR77yJPC90ZXh0Pgo8L3N2Zz4K" alt="电磁波谱中可见光的位置，以及红到紫的可见光谱" /></p>
+<h4>实验内容</h4>
+<p><strong>实验目的</strong>：先把白光展开成可见光谱，直接观察白光中不同颜色的光。</p>
+<p><strong>实验步骤</strong></p>
+<ol>
+<li>在一小块黑色卡纸上用两条黑胶带做出 <strong>1–2 mm 宽的竖缝</strong>，把窄缝卡紧贴在手电筒出光口前方。</li>
+<li>调暗实验桌附近的灯光，让手电筒发出的竖直窄光带投到白纸上。</li>
+<li>先测量白色窄光带的宽度，作为基线。</li>
+<li>把三棱镜放在窄光带中，白色接收纸放在三棱镜后方约 40–80 cm 处。</li>
+<li>缓慢转动三棱镜和接收纸，直到纸上出现展开清楚的彩色光带。</li>
+<li>用彩色铅笔标出红端、绿区和紫端，写出颜色次序并测量光谱总宽度。</li>
+<li>移开三棱镜观察白色窄光带，随后把三棱镜放回原位，再次形成彩色光谱。</li>
+</ol>
+<p><strong>保持相同</strong>：同一白光、同一窄缝、三棱镜到接收纸的距离和房间亮度。<br />
+<strong>改变变量</strong>：三棱镜角度。<br />
+<strong>观察结果</strong>：颜色次序、各颜色位置、光谱宽度。</p>
+<p><strong>预期现象</strong>：白光展开为红、橙、黄、绿、蓝、靛、紫依次排列的光带。常见玻璃中红光偏转较小，紫光偏转较大。</p>
+<p><strong>记录</strong></p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>光带外观</th>
+<th style="text-align:right">光带宽度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>白光基线</td>
+<td></td>
+<td style="text-align:right">____ cm</td>
+</tr>
+<tr>
+<td>通过三棱镜</td>
+<td></td>
+<td style="text-align:right">____ cm</td>
+</tr>
+<tr>
+<td>三棱镜放回原位</td>
+<td></td>
+<td style="text-align:right">____ cm</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">偏转较小 → __________________________________ → 偏转较大
+证据：白光通过三棱镜后________________________________。
+解释：三棱镜对不同________________的折射程度不同。
+</code></pre>
+<p><strong>课堂结论</strong></p>
+<pre><code class="language-text">白光 white light → 三棱镜 prism → 光谱 spectrum
+频率不同 → 玻璃折射率不同 → 偏折角不同 → 色散 dispersion
+</code></pre>
+<h3>20–32 分钟：实验 2——彩色照明改变物体颜色</h3>
+<h4>知识点</h4>
+<ol>
+<li><strong>光源提供的波长（source wavelengths）</strong>：白光包含多种可见波长；红、绿、蓝透明片会选择性地透过一部分波长，使照到纸片上的光发生改变。</li>
+<li><strong>光与物质的三种作用（three interactions of light with matter）</strong>：光到达物质后，可以被<strong>反射（reflection）</strong>、<strong>透射（transmission）<strong>或</strong>吸收（absorption）</strong>。本实验观察的是最终进入眼睛的反射光或透射光。</li>
+<li><strong>本实验的光路（light path in this experiment）</strong>：透明片先<strong>选择性透射（selective transmission）<strong>白光中的一部分波长，形成红、绿或蓝照明；彩纸再把其中一部分波长</strong>选择性反射（selective reflection）<strong>进眼睛。因此，观察不透明彩纸时，最后决定所见颜色的是</strong>进入眼睛的反射光</strong>。红纸在红光下通常较亮，在绿光或蓝光下通常较暗；白纸能反射多种可见光，因此会随照明光改变颜色。</li>
+</ol>
+<h4>实验内容</h4>
+<p><strong>实验目的</strong>：比较同一组彩纸在白光、红光、绿光和蓝光下的颜色与亮度，观察光源改变怎样影响所见颜色。</p>
+<p><strong>实验步骤</strong></p>
+<ol>
+<li>把红、绿、蓝、白、黑五张 <strong>8 cm × 8 cm 哑光纸片</strong>并排放在黑色卡纸上。</li>
+<li>在白光下先记录五张纸片的颜色和相对亮度。</li>
+<li>把红色透明片平整盖在手电筒出光口前，透明片完整覆盖光源；手电筒距纸片约 20 cm。</li>
+<li>调暗附近灯光，用红光照亮五张纸片，按 <code>0–5</code> 记录相对亮度。</li>
+<li>用相同方法依次换成绿色透明片和蓝色透明片；每次保持手电筒位置、纸片位置、透明片层数和房间亮度一致。</li>
+<li>把红、绿、蓝透明片分别放在白光与白纸之间，观察透过光的颜色。</li>
+</ol>
+<p><strong>预期现象</strong>：白纸随照明呈现红、绿或蓝；红纸在红光下较亮，在绿光和蓝光下较暗；黑纸在各组中都较暗。红、绿、蓝透明片透过的光分别以相应颜色为主。</p>
+<p><strong>记录</strong></p>
+<p>亮度等级：<code>0 = 最暗，5 = 最亮</code></p>
+<table>
+<thead>
+<tr>
+<th>纸片</th>
+<th>白光下</th>
+<th>红光下</th>
+<th>绿光下</th>
+<th>蓝光下</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>红纸</td>
+<td>颜色___ / 亮度___</td>
+<td>颜色___ / 亮度___</td>
+<td>颜色___ / 亮度___</td>
+<td>颜色___ / 亮度___</td>
+</tr>
+<tr>
+<td>绿纸</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>蓝纸</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>白纸</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>黑纸</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>课堂结论</strong></p>
+<pre><code class="language-text">光路：白光 → 透明片选择性透射 → 彩色照明光 → 彩纸选择性反射 → 眼睛
+结论：观察不透明彩纸时，所见颜色由进入眼睛的反射光决定。
+证据：同一张________纸在________光和________光下，
+      颜色或亮度________________________________。
+</code></pre>
+<h3>32–45 分钟：实验 3——用三组数据检验反射定律</h3>
+<h4>知识点</h4>
+<ol>
+<li><strong>法线（normal）</strong>：光射到镜面的点叫入射点；通过入射点、垂直镜面的线叫法线。</li>
+<li><strong>两个角的量法</strong>：入射光与法线的夹角叫<strong>入射角（angle of incidence, <code>i</code>）</strong>；反射光与法线的夹角叫<strong>反射角（angle of reflection, <code>r</code>）</strong>。两个角都从法线量，不从镜面量。</li>
+<li><strong>反射定律（law of reflection）</strong>：光被平面镜反射时，反射角等于入射角，即 <code>i = r</code>。本实验用 20°、40°和60°三组数据检验这一规律。</li>
+</ol>
+<h4>实验内容</h4>
+<p><strong>实验目的</strong>：改变入射角，测量对应的反射角，用三组数据判断二者是否相等。</p>
+<p><strong>实验步骤</strong></p>
+<ol>
+<li>把一张 A3 白纸铺平，画一条镜面基线，在中点标出入射点，并画一条垂直镜面的法线。</li>
+<li>用量角器从法线向同一侧画出 20°、40°、60°三条入射线。</li>
+<li>用长尾夹或橡皮泥把小平面镜竖直固定在镜面基线上，使镜面中央正对入射点。</li>
+<li>在预计出现反射光的一侧竖直放一张较大的黑色挡光板；它只负责终止光束。</li>
+<li>教师把激光笔贴近桌面，让光沿 20°入射线射到入射点。</li>
+<li>在镜子与黑色挡光板之间移动一小块竖直白纸，找到反射光点；在桌面 A3 纸上标记白纸所在位置，把该点与入射点连接成反射光线。</li>
+<li>从法线量出反射角并记录。再用 40°和60°入射线重复，每次保持镜子和入射点不动。</li>
+<li>计算三组 <code>|i − r|</code>，比较它们是否接近 0°。</li>
+</ol>
+<p><strong>预期现象</strong>：三组测量中，反射角都与对应的入射角接近相等。</p>
+<p><strong>记录</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">组次</th>
+<th style="text-align:right">入射角 i</th>
+<th style="text-align:right">反射角 r</th>
+<th style="text-align:right">|i − r|</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">20°</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">40°</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">60°</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>课堂结论</strong></p>
+<pre><code class="language-text">规律：反射角等于入射角，即 i = r；两个角都从法线量。
+证据：三组测量的 |i − r| 都接近________°。
+</code></pre>
+<h3>45–58 分钟：实验 4——空气进入水的折射与水流全反射</h3>
+<h4>知识点</h4>
+<ol>
+<li><strong>折射（refraction）</strong>：光从空气斜着进入水时，在空气—水界面改变方向，水中的折射光向法线偏折。</li>
+<li><strong>全反射（total internal reflection）</strong>：光从水射向水—空气界面且入射角足够大时，会被反射回水中，因此可以沿弯曲水流传播。</li>
+</ol>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijc2MCIgdmlld0JveD0iMCAwIDE0MDAgNzYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+56m65rCU6L+b5YWl5rC055qE5oqY5bCE5a6e6aqM5L6n6KeG5Zu+PC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+57qi6Imy5r+A5YWJ5LuO5rC06Z2i5LiK5pa555qE56m65rCU5pac5bCE5YWl5rC077yM5Zyo56m65rCU5rC055WM6Z2i5aSE5ZCR5rOV57q/5YGP5oqY77yb55m957q45Y+q5L2c6IOM5pmv77yM6buR6Imy5oyh5YWJ5p2/5Y+q57uI5q2i5YWJ5p2f44CCPC9kZXNjPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0icmVkLWFycm93IiBtYXJrZXJXaWR0aD0iMTIiIG1hcmtlckhlaWdodD0iMTIiIHJlZlg9IjEwIiByZWZZPSI2IiBvcmllbnQ9ImF1dG8iPgogICAgICA8cGF0aCBkPSJNMCwwIEwxMiw2IEwwLDEyIFoiIGZpbGw9IiNlMTI2MWMiLz4KICAgIDwvbWFya2VyPgogICAgPHN0eWxlPgogICAgICB0ZXh0IHsgZm9udC1mYW1pbHk6ICJOb3RvIFNhbnMgU0MiLCAiTWljcm9zb2Z0IFlhSGVpIiwgQXJpYWwsIHNhbnMtc2VyaWY7IGZpbGw6ICMxNzIxMmI7IH0KICAgICAgLnRpdGxlIHsgZm9udC1zaXplOiAzMHB4OyBmb250LXdlaWdodDogODAwOyB9CiAgICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMjJweDsgZm9udC13ZWlnaHQ6IDcwMDsgfQogICAgICAubm90ZSB7IGZvbnQtc2l6ZTogMThweDsgZm9udC13ZWlnaHQ6IDYwMDsgfQogICAgICAuc21hbGwgeyBmb250LXNpemU6IDE3cHg7IGZvbnQtd2VpZ2h0OiA2MDA7IH0KICAgICAgLmxpZ2h0IHsgZmlsbDogI2ZmZmZmZjsgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE0MDAiIGhlaWdodD0iNzYwIiByeD0iMjQiIGZpbGw9IiNmNWY4ZmIiLz4KICA8dGV4dCBjbGFzcz0idGl0bGUiIHg9IjcwMCIgeT0iNDgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuepuuawlOi/m+WFpeawtOeahOaKmOWwhO+8muijhee9ruS+p+inhuWbvjwvdGV4dD4KCiAgPHJlY3QgeD0iMzUwIiB5PSIxMDAiIHdpZHRoPSI4MzAiIGhlaWdodD0iNTcwIiByeD0iMTYiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzlhYTliOCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtZGFzaGFycmF5PSIxMCA4Ii8+CiAgPHRleHQgY2xhc3M9Im5vdGUiIHg9IjExMjUiIHk9IjEyOCIgdGV4dC1hbmNob3I9ImVuZCI+56uW55u0IEEzIOeZvee6uO+8muiDjOaZr+S4jueUu+e6vzwvdGV4dD4KCiAgPHJlY3QgeD0iNDMwIiB5PSIyMzAiIHdpZHRoPSI2NTAiIGhlaWdodD0iMzkwIiByeD0iMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzUyNzU4ZiIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPHJlY3QgeD0iNDM4IiB5PSIzNTAiIHdpZHRoPSI2MzQiIGhlaWdodD0iMjYyIiBmaWxsPSIjYmZlOGY1IiBvcGFjaXR5PSIwLjgyIi8+CiAgPGxpbmUgeDE9IjQzOCIgeTE9IjM1MCIgeDI9IjEwNzIiIHkyPSIzNTAiIHN0cm9rZT0iIzIzODliOCIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSIxMDAwIiB5PSIzMzAiIHRleHQtYW5jaG9yPSJlbmQiPuepuuawlCBhaXI8L3RleHQ+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSIxMDAwIiB5PSIzOTIiIHRleHQtYW5jaG9yPSJlbmQiPuawtCB3YXRlcjwvdGV4dD4KICA8dGV4dCBjbGFzcz0ibm90ZSIgeD0iMTAwMCIgeT0iNDI0IiB0ZXh0LWFuY2hvcj0iZW5kIj7liqAgMuKAkzMg5ru054mb5aW25pi+56S65rC05Lit5YWJ6LevPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJub3RlIiB4PSI3NTUiIHk9IjM0MCI+5rC06Z2iID0g56m65rCU4oCU5rC055WM6Z2iPC90ZXh0PgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjAgNTUpIHJvdGF0ZSgyOCkiPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSI2MiIgcng9IjE4IiBmaWxsPSIjMzQ0OTVlIi8+CiAgICA8cmVjdCB4PSIyMDUiIHk9IjE3IiB3aWR0aD0iNDgiIGhlaWdodD0iMjgiIHJ4PSI2IiBmaWxsPSIjMjAyZDM5Ii8+CiAgICA8Y2lyY2xlIGN4PSIyNTIiIGN5PSIzMSIgcj0iNyIgZmlsbD0iI2UxMjYxYyIvPgogICAgPHRleHQgY2xhc3M9Im5vdGUgbGlnaHQiIHg9IjEwNSIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPue6ouiJsua/gOWFieeslDwvdGV4dD4KICA8L2c+CgogIDxsaW5lIHgxPSI0OTAiIHkxPSIxODAiIHgyPSI2NTAiIHkyPSIzNTAiIHN0cm9rZT0iI2UxMjYxYyIgc3Ryb2tlLXdpZHRoPSI4IiBtYXJrZXItZW5kPSJ1cmwoI3JlZC1hcnJvdykiLz4KICA8bGluZSB4MT0iNjUwIiB5MT0iMzUwIiB4Mj0iNzkwIiB5Mj0iNjEwIiBzdHJva2U9IiNlMTI2MWMiIHN0cm9rZS13aWR0aD0iOCIgbWFya2VyLWVuZD0idXJsKCNyZWQtYXJyb3cpIi8+CiAgPGNpcmNsZSBjeD0iNDkwIiBjeT0iMTgwIiByPSIxMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMTcyMTJiIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2NTAiIGN5PSIzNTAiIHI9IjEwIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiMxNzIxMmIiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxjaXJjbGUgY3g9Ijc5MCIgY3k9IjYxMCIgcj0iMTAiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzE3MjEyYiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSI1MDUiIHk9IjE3NCI+UDwvdGV4dD4KICA8dGV4dCBjbGFzcz0ibGFiZWwiIHg9IjYyNSIgeT0iMzQwIj5PPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJsYWJlbCIgeD0iODA1IiB5PSI2MDYiPlE8L3RleHQ+CgogIDxsaW5lIHgxPSI2NTAiIHkxPSIxNzAiIHgyPSI2NTAiIHkyPSI2MTAiIHN0cm9rZT0iIzJmM2U0ZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtZGFzaGFycmF5PSIxMiAxMCIvPgogIDx0ZXh0IGNsYXNzPSJsYWJlbCIgeD0iNjcwIiB5PSIyMDUiPuazlee6vyBub3JtYWw8L3RleHQ+CiAgPHRleHQgY2xhc3M9Im5vdGUiIHg9IjQzMCIgeT0iMjU1Ij7ku47nm5Llj6PkuIrmlrnnm7TlsITmsLTpnaLvvJpQ4oCUTzwvdGV4dD4KICA8dGV4dCBjbGFzcz0ibm90ZSIgeD0iODA1IiB5PSI1MDAiPuawtOS4reeahOaKmOWwhOWFiSBP4oCUUTwvdGV4dD4KICA8dGV4dCBjbGFzcz0ibm90ZSIgeD0iODA1IiB5PSI1MzAiPuabtOmdoOi/keazlee6vzwvdGV4dD4KCiAgPHBhdGggZD0iTTY1MCAyOTIgQTU4IDU4IDAgMCAwIDU5NyAzMjYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZjNGNjZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSI1ODUiIHk9IjI4NSI+5YWl5bCE6KeSIGk8L3RleHQ+CiAgPHBhdGggZD0iTTY1MCA0MDggQTU4IDU4IDAgMCAxIDY3OCA0MDEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE1ODE1ZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSI2ODMiIHk9IjQzMCI+5oqY5bCE6KeSIHI8L3RleHQ+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSI2ODUiIHk9IjQ2NSI+ciAmbHQ7IGk8L3RleHQ+CgogIDxyZWN0IHg9IjY5MCIgeT0iNjMwIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjQyIiByeD0iOCIgZmlsbD0iIzIyMmIzNSIvPgogIDx0ZXh0IGNsYXNzPSJub3RlIGxpZ2h0IiB4PSI4MTUiIHk9IjY1NyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+6buR6Imy5oyh5YWJ5p2/PC90ZXh0PgogIDxsaW5lIHgxPSI5NjAiIHkxPSI2NTAiIHgyPSIxMTM1IiB5Mj0iNjUwIiBzdHJva2U9IiMzZjRlNWQiIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IGNsYXNzPSJzbWFsbCIgeD0iMTE0NSIgeT0iNjQ0Ij7lj6rnu4jmraLmv4DlhYk8L3RleHQ+CiAgPHRleHQgY2xhc3M9InNtYWxsIiB4PSIxMTQ1IiB5PSI2NjciPuS4jeWPguS4juaKmOWwhOaIlua1i+mHjzwvdGV4dD4KCiAgPHJlY3QgeD0iOTAiIHk9IjY4NSIgd2lkdGg9IjEyMjAiIGhlaWdodD0iNTQiIHJ4PSIxMiIgZmlsbD0iI2U4ZjFmNyIvPgogIDx0ZXh0IGNsYXNzPSJsYWJlbCIgeD0iNzAwIiB5PSI3MjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuWFieS7juepuuawlOi/m+WFpeawtO+8jOWcqOawtOmdoiBPIOeCueaKmOWwhO+8m+WFpeWwhOWFieS4jeWFiOepv+i/h+WhkeaWmeebkuWjgTwvdGV4dD4KPC9zdmc+Cg==" alt="空气斜射入水的折射装置侧视示意图" /></p>
+<h4>实验内容</h4>
+<p><strong>实验目的</strong>：观察空气进入水的折射，以及光沿弯曲水流传播的现象。</p>
+<p><strong>A. 空气进入水</strong></p>
+<ol>
+<li>透明方盒中加入 4–6 cm 深的水和 <strong>2–3 滴牛奶</strong>（没有牛奶时，可用牙签尖大小的<strong>白色水粉颜料、玉米淀粉或普通面粉</strong>，先用少量水调开）；盒后竖直放 A3 白纸，在纸上标出水面和法线。</li>
+<li>教师把激光笔放在盒口上方，以约 40° 入射角直接斜射水面，不让激光先穿过塑料盒壁。</li>
+<li>标出激光笔出光口 <code>P</code>、入水点 <code>O</code> 和水中光路点 <code>Q</code>，连接 <code>P—O</code> 与 <code>O—Q</code>，比较它们与法线的夹角；光束终点用黑色挡光板遮挡。</li>
+</ol>
+<p><strong>预期现象</strong>：光进入水后向法线偏折。</p>
+<p><strong>B. 光沿水流传播</strong></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijc2MCIgdmlld0JveD0iMCAwIDE0MDAgNzYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+5r+A5YWJ5rK/5byv5puy5rC05rWB5Lyg5pKt55qE5YWo5Y+N5bCE5a6e6aqMPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5L6n6KeG5Zu+5pi+56S657qi6Imy5r+A5YWJ56m/6L+H6YCP5piO55O25aOB6L+b5YWl55O25YaF55qE5rC077yM556E5YeG55O26Lqr5bCP5a2U77yM6ZqP5ZCO6L+b5YWl5LuO5bCP5a2U5rWB5Ye655qE5byv5puy5rC05p+x77yM5Zyo5rC05rWB5YaF6YOo5aSa5qyh5YWo5Y+N5bCE5bm25Yiw6L6+5omY55uY5Lit55qE55m957q444CCPC9kZXNjPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0icmVkLWFycm93IiBtYXJrZXJXaWR0aD0iMTIiIG1hcmtlckhlaWdodD0iMTIiIHJlZlg9IjEwIiByZWZZPSI2IiBvcmllbnQ9ImF1dG8iPgogICAgICA8cGF0aCBkPSJNMCwwIEwxMiw2IEwwLDEyIFoiIGZpbGw9IiNlMTI2MWMiLz4KICAgIDwvbWFya2VyPgogICAgPG1hcmtlciBpZD0iYmx1ZS1hcnJvdyIgbWFya2VyV2lkdGg9IjEyIiBtYXJrZXJIZWlnaHQ9IjEyIiByZWZYPSIxMCIgcmVmWT0iNiIgb3JpZW50PSJhdXRvIj4KICAgICAgPHBhdGggZD0iTTAsMCBMMTIsNiBMMCwxMiBaIiBmaWxsPSIjMTY4YmI0Ii8+CiAgICA8L21hcmtlcj4KICAgIDxzdHlsZT4KICAgICAgdGV4dCB7IGZvbnQtZmFtaWx5OiAiTm90byBTYW5zIFNDIiwgIk1pY3Jvc29mdCBZYUhlaSIsIEFyaWFsLCBzYW5zLXNlcmlmOyBmaWxsOiAjMTcyMTJiOyB9CiAgICAgIC50aXRsZSB7IGZvbnQtc2l6ZTogMzBweDsgZm9udC13ZWlnaHQ6IDgwMDsgfQogICAgICAubGFiZWwgeyBmb250LXNpemU6IDIycHg7IGZvbnQtd2VpZ2h0OiA3NTA7IH0KICAgICAgLm5vdGUgeyBmb250LXNpemU6IDE4cHg7IGZvbnQtd2VpZ2h0OiA2MDA7IH0KICAgICAgLnNtYWxsIHsgZm9udC1zaXplOiAxN3B4OyBmb250LXdlaWdodDogNjAwOyB9CiAgICAgIC5saWdodCB7IGZpbGw6ICNmZmZmZmY7IH0KICAgICAgLm51bSB7IGZpbGw6ICNmZmZmZmY7IGZvbnQtc2l6ZTogMjBweDsgZm9udC13ZWlnaHQ6IDgwMDsgdGV4dC1hbmNob3I6IG1pZGRsZTsgZG9taW5hbnQtYmFzZWxpbmU6IG1pZGRsZTsgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CgogIDxyZWN0IHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijc2MCIgcng9IjI0IiBmaWxsPSIjZjVmOGZiIi8+CiAgPHRleHQgY2xhc3M9InRpdGxlIiB4PSI3MDAiIHk9IjQ4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7msLTmtYHlhajlj43lsITlrp7pqozvvJroo4Xnva7kvqfop4blm748L3RleHQ+CgogIDwhLS0gTGFzZXIgcG9pbnRlciAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NSAzNDApIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjIiIHJ4PSIxOCIgZmlsbD0iIzM0NDk1ZSIvPgogICAgPHJlY3QgeD0iMjA1IiB5PSIxNyIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI4IiByeD0iNiIgZmlsbD0iIzIwMmQzOSIvPgogICAgPGNpcmNsZSBjeD0iMjUyIiBjeT0iMzEiIHI9IjciIGZpbGw9IiNlMTI2MWMiLz4KICAgIDx0ZXh0IGNsYXNzPSJub3RlIGxpZ2h0IiB4PSIxMDMiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7nuqLoibLmv4DlhYnnrJQ8L3RleHQ+CiAgPC9nPgogIDxjaXJjbGUgY3g9Ijc1IiBjeT0iMzAwIiByPSIyMiIgZmlsbD0iIzJmN2Y5ZiIvPgogIDx0ZXh0IGNsYXNzPSJudW0iIHg9Ijc1IiB5PSIzMDAiPjE8L3RleHQ+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSIxMTAiIHk9IjMwNiI+5r+A5YWJ556E5YeG5bCP5a2UPC90ZXh0PgoKICA8IS0tIEJvdHRsZSAtLT4KICA8cGF0aCBkPSJNMzMwIDEyMCBRMzMwIDkyIDM2MCA5MiBINTQwIFE1NzAgOTIgNTcwIDEyMCBWMTU4IFE2MjAgMTg1IDYzNSAyMzUgVjU2NSBRNjM1IDYwMCA2MDAgNjAwIEgzMDAgUTI2NSA2MDAgMjY1IDU2NSBWMjM1IFEyODAgMTg1IDMzMCAxNTggWiIKICAgICAgICBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuNDgiIHN0cm9rZT0iIzUyNzU4ZiIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPHBhdGggZD0iTTI4MiAyMzAgUTI5MiAxOTggMzMyIDE4MCBINTY4IFE2MDggMTk4IDYxOCAyMzAgVjU2NSBRNjE4IDU4MCA2MDAgNTgwIEgzMDAgUTI4MiA1ODAgMjgyIDU2NSBaIgogICAgICAgIGZpbGw9IiNiZmU4ZjUiIG9wYWNpdHk9IjAuODIiLz4KICA8bGluZSB4MT0iMjg0IiB5MT0iMjMwIiB4Mj0iNjE2IiB5Mj0iMjMwIiBzdHJva2U9IiMyMzg5YjgiIHN0cm9rZS13aWR0aD0iNCIvPgogIDx0ZXh0IGNsYXNzPSJsYWJlbCIgeD0iNDUwIiB5PSIyNzQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPueTtuWGheeahOawtDwvdGV4dD4KICA8dGV4dCBjbGFzcz0ibm90ZSIgeD0iNDUwIiB5PSIzMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPua/gOWFieWFiOi/m+WFpeawtO+8jOWGjeWvueWHhuWwj+WtlDwvdGV4dD4KCiAgPCEtLSBCZWFtIHRocm91Z2ggYm90dGxlIHRvIGhvbGUgLS0+CiAgPGxpbmUgeDE9IjI5OCIgeTE9IjM3MSIgeDI9IjYzMiIgeTI9IjQ2OCIgc3Ryb2tlPSIjZTEyNjFjIiBzdHJva2Utd2lkdGg9IjgiIG1hcmtlci1lbmQ9InVybCgjcmVkLWFycm93KSIvPgogIDxjaXJjbGUgY3g9IjYzNCIgY3k9IjQ2OSIgcj0iMTEiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzE3MjEyYiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgY2xhc3M9ImxhYmVsIiB4PSI1ODQiIHk9IjQ0NyI+57qmIDIgbW0g5bCP5a2UPC90ZXh0PgogIDxjaXJjbGUgY3g9IjUyMCIgY3k9IjM4MiIgcj0iMjIiIGZpbGw9IiMyZjdmOWYiLz4KICA8dGV4dCBjbGFzcz0ibnVtIiB4PSI1MjAiIHk9IjM4MiI+MjwvdGV4dD4KCiAgPCEtLSBDdXJ2ZWQgd2F0ZXIgc3RyZWFtIC0tPgogIDxwYXRoIGQ9Ik02NDcgNDcwIEM3NjAgNDc4IDg1MCA1MTUgOTQwIDU2NSBDMTAzMCA2MTYgMTEwMCA2NDAgMTE5MCA2NTIiCiAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzZjY2U1IiBzdHJva2Utd2lkdGg9IjcyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuODIiLz4KICA8cGF0aCBkPSJNNjQ3IDQ3MCBDNzYwIDQ3OCA4NTAgNTE1IDk0MCA1NjUgQzEwMzAgNjE2IDExMDAgNjQwIDExOTAgNjUyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2OGJiNCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIG1hcmtlci1lbmQ9InVybCgjYmx1ZS1hcnJvdykiLz4KICA8dGV4dCBjbGFzcz0ibGFiZWwiIHg9IjgzNSIgeT0iNDUyIj7lvK/mm7LmsLTmtYE8L3RleHQ+CiAgPHRleHQgY2xhc3M9Im5vdGUiIHg9IjgzNSIgeT0iNDc4Ij7lpJbkvqfovrnnlYzmmK/msLTigJTnqbrmsJTnlYzpnaI8L3RleHQ+CgogIDwhLS0gWmlnLXphZyBiZWFtIHNob3dpbmcgVElSIC0tPgogIDxwb2x5bGluZSBwb2ludHM9IjY0Niw0NzAgNzE2LDQ1MCA3NTgsNTAwIDgxNSw0ODcgODYwLDU0MiA5MjUsNTM1IDk3MCw1OTAgMTAzNSw1ODIgMTA4MCw2MjggMTE0Miw2MjAgMTE5MCw2NTIiCiAgICAgICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UxMjYxYyIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiIG1hcmtlci1lbmQ9InVybCgjcmVkLWFycm93KSIvPgogIDxnIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iI2UxMjYxYyIgc3Ryb2tlLXdpZHRoPSIzIj4KICAgIDxjaXJjbGUgY3g9IjcxNiIgY3k9IjQ1MCIgcj0iNyIvPgogICAgPGNpcmNsZSBjeD0iNzU4IiBjeT0iNTAwIiByPSI3Ii8+CiAgICA8Y2lyY2xlIGN4PSI4MTUiIGN5PSI0ODciIHI9IjciLz4KICAgIDxjaXJjbGUgY3g9Ijg2MCIgY3k9IjU0MiIgcj0iNyIvPgogICAgPGNpcmNsZSBjeD0iOTI1IiBjeT0iNTM1IiByPSI3Ii8+CiAgICA8Y2lyY2xlIGN4PSI5NzAiIGN5PSI1OTAiIHI9IjciLz4KICAgIDxjaXJjbGUgY3g9IjEwMzUiIGN5PSI1ODIiIHI9IjciLz4KICAgIDxjaXJjbGUgY3g9IjEwODAiIGN5PSI2MjgiIHI9IjciLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iODMwIiBjeT0iNTg1IiByPSIyMiIgZmlsbD0iIzJmN2Y5ZiIvPgogIDx0ZXh0IGNsYXNzPSJudW0iIHg9IjgzMCIgeT0iNTg1Ij4zPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJsYWJlbCIgeD0iNjg1IiB5PSI2MTIiPue6ouWFieWcqOawtOa1geWGhemDqOWkmuasoeWFqOWPjeWwhDwvdGV4dD4KCiAgPCEtLSBUcmF5IGFuZCB3aGl0ZSBjYXJkIC0tPgogIDxwYXRoIGQ9Ik03MDAgNjg1IEgxMzAwIEwxMjY1IDczNSBINzM1IFoiIGZpbGw9IiNjN2QxZGEiIHN0cm9rZT0iIzY2Nzc4NyIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgPHBhdGggZD0iTTEwODUgNjQ0IEwxMjQ4IDY2MSBMMTIyNSA3MDggTDEwNjUgNjg3IFoiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzg5OThhNiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPGNpcmNsZSBjeD0iMTE4OSIgY3k9IjY1MyIgcj0iMTMiIGZpbGw9IiNlMTI2MWMiLz4KICA8Y2lyY2xlIGN4PSIxMjE4IiBjeT0iNTkwIiByPSIyMiIgZmlsbD0iIzJmN2Y5ZiIvPgogIDx0ZXh0IGNsYXNzPSJudW0iIHg9IjEyMTgiIHk9IjU5MCI+NDwvdGV4dD4KICA8dGV4dCBjbGFzcz0ibGFiZWwiIHg9IjEyNDgiIHk9IjYwMiI+55m957q45LiK5Ye6546w57qi54K5PC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJub3RlIiB4PSIxMDA1IiB5PSI3MjgiPua3seaJmOebmOaOpeawtDwvdGV4dD4KCiAgPCEtLSBCb3R0b20gc3VtbWFyeSAtLT4KICA8cmVjdCB4PSI3MCIgeT0iNjU1IiB3aWR0aD0iNTYwIiBoZWlnaHQ9Ijc2IiByeD0iMTQiIGZpbGw9IiNlOGYxZjciLz4KICA8dGV4dCBjbGFzcz0ibm90ZSIgeD0iOTUiIHk9IjY4NSI+5YWJ6Lev77ya5r+A5YWJ56yUIOKGkiDnk7blhoXmsLQg4oaSIOWwj+WtlDwvdGV4dD4KICA8dGV4dCBjbGFzcz0ibm90ZSIgeD0iOTUiIHk9IjcxNCI+44CA44CA44CA4oaSIOW8r+absuawtOa1gSDihpIg55m957q457qi54K5PC90ZXh0Pgo8L3N2Zz4K" alt="激光沿弯曲水流传播的全反射装置侧视示意图" /></p>
+<ol>
+<li>在透明塑料瓶近底部开约 2 mm 小孔，用胶带封住；装满水后放入深托盘。</li>
+<li>教师从瓶子另一侧用激光瞄准小孔，使光先进入瓶内的水。</li>
+<li>揭开胶带形成弯曲水流，在落点放白纸，观察红光是否随水流到达托盘。</li>
+</ol>
+<p><strong>预期现象</strong>：红光沿弯曲水流传播，水流落点出现红色亮点。</p>
+<p><strong>记录</strong></p>
+<table>
+<thead>
+<tr>
+<th>实验</th>
+<th>观察到的光路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空气进入水</td>
+<td></td>
+</tr>
+<tr>
+<td>光沿水流传播</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>课堂结论</strong></p>
+<pre><code class="language-text">折射：光从空气进入水时，向法线偏折。
+全反射：光在水流内部多次发生全反射，因此能沿弯曲水流传播。
+</code></pre>
+<h3>58–60 分钟：统一模型与离堂记录</h3>
+<table>
+<thead>
+<tr>
+<th>实验</th>
+<th>输入光</th>
+<th>物质怎样作用</th>
+<th>输出证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三棱镜</td>
+<td>多波长白光</td>
+<td>不同波长发生不同程度折射</td>
+<td>有序彩色光谱</td>
+</tr>
+<tr>
+<td>彩纸与透明片</td>
+<td>白光、红光、绿光、蓝光</td>
+<td>透明片选择性透射；彩纸选择性反射</td>
+<td>进入眼睛的反射光改变，颜色与亮度随之改变</td>
+</tr>
+<tr>
+<td>平面镜</td>
+<td>红色细光束</td>
+<td>镜面反射</td>
+<td>三组 <code>i ≈ r</code></td>
+</tr>
+<tr>
+<td>水与弯曲水流</td>
+<td>红色细光束</td>
+<td>折射与全反射</td>
+<td>光路偏折并沿水流传播</td>
+</tr>
+</tbody>
+</table>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">离堂记录与参考答案 / Exit record &amp; answers</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：用一句话概括光与物质相遇后可能发生的变化。</strong></p>
+<p><strong>参考答案：</strong> 光与物质相遇后可以被反射、透射或吸收；进入另一介质的光会发生折射，材料对不同波长的作用差异还会形成色散和颜色变化。</p>
+</div>
+</details>
+<h2>四、教师科学备忘</h2>
+<ol>
+<li>在真空中，电磁波满足 <code>c = λf</code>；波长越短，频率越高。</li>
+<li>三棱镜色散来自折射率随波长变化；常见玻璃中紫光偏折通常大于红光。</li>
+<li>物体颜色由光源光谱、材料反射谱和视觉系统共同决定。</li>
+<li>反射角和入射角都从法线测量；多组数据用于检验 <code>i = r</code>。</li>
+<li>折射可由 <code>n₁ sin θ₁ = n₂ sin θ₂</code> 描述。光从空气进入水时向法线偏折。</li>
+<li>全反射发生在光从光学较密介质射向光学较疏介质的过程中，并对应大于临界角的入射角。水—空气临界角约为 49°。</li>
+</ol>
+<h2>五、关键术语（Key Vocabulary）</h2>
+<ul>
+<li>电磁波谱：electromagnetic spectrum</li>
+<li>可见光：visible light</li>
+<li>波长：wavelength</li>
+<li>频率：frequency</li>
+<li>白光：white light</li>
+<li>光谱：spectrum</li>
+<li>色散：dispersion</li>
+<li>反射：reflection</li>
+<li>透射：transmission</li>
+<li>吸收：absorption</li>
+<li>选择性反射：selective reflection</li>
+<li>选择性透射：selective transmission</li>
+<li>法线：normal</li>
+<li>入射角：angle of incidence</li>
+<li>反射角：angle of reflection</li>
+<li>反射定律：law of reflection</li>
+<li>折射：refraction</li>
+<li>折射率：refractive index</li>
+<li>临界角：critical angle</li>
+<li>全反射：total internal reflection</li>
+</ul>
+<h2>六、教师备课来源</h2>
+<ul>
+<li><a href="../School/02%20Class%20Materials/Unit%203%20Energy%20and%20its%20Forms/01%20Notes/03%20Electromagnetic%20Spectrum%20Notes.pdf">学校 03 Electromagnetic Spectrum Notes</a></li>
+<li><a href="https://www.iop.cas.cn/kxcb/kpdt/201312/t20131209_3993013.html">中国科学院物理研究所光学科普活动</a></li>
+<li><a href="https://www.ciomp.ac.cn/kxcb/kpzd/shkp_181722/201512/t20151215_4495266.html">中国科学院长春光机所：从牛顿到三棱镜色散</a></li>
+</ul>
+</main>
+</body>
+</html>

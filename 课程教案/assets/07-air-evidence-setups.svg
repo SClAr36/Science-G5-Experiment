@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">空气证据实验的四个装置</title>
+  <desc id="desc">纸巾不湿、气球衣架天平、倒扣水杯与冷却压瘪塑料瓶的空间关系和力的方向。</desc>
+  <defs>
+    <marker id="blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#167ea3"/></marker>
+    <marker id="red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#c9483b"/></marker>
+    <style>
+      text{font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;fill:#17212b}.panel{fill:#fff;stroke:#9bb5bf;stroke-width:3}
+      .title{font-size:28px;font-weight:800;fill:#124a61}.label{font-size:21px;font-weight:700}.note{font-size:17px;font-weight:600}
+      .water{fill:#bde7f4;opacity:.86}.glass{fill:#f9fdff;fill-opacity:.58;stroke:#537987;stroke-width:6}.air{fill:#fff6c7;opacity:.78}
+      .force{stroke:#167ea3;stroke-width:7;marker-end:url(#blue)}.change{stroke:#c9483b;stroke-width:7;marker-end:url(#red)}
+    </style>
+  </defs>
+  <rect width="1400" height="860" rx="28" fill="#f3f7f9"/>
+  <text x="700" y="48" class="title" text-anchor="middle">空气看不见，但它会留下可观察的证据</text>
+  <g transform="translate(45 75)">
+    <rect class="panel" width="630" height="340" rx="22"/><text x="25" y="40" class="title">A  倒扣杯里的纸巾为什么不湿</text>
+    <rect x="55" y="105" width="520" height="195" rx="14" fill="none" stroke="#668b99" stroke-width="5"/><rect x="61" y="180" width="508" height="114" class="water"/>
+    <path d="M225 270 L225 115 Q225 95 245 95 L390 95 Q410 95 410 115 L410 270" class="glass"/><rect x="254" y="108" width="126" height="22" rx="5" fill="#e7e1d5"/>
+    <rect x="232" y="132" width="171" height="136" class="air"/><text x="316" y="195" class="label" text-anchor="middle">被困住的空气</text><text x="316" y="222" class="note" text-anchor="middle">占据杯内空间</text>
+    <text x="425" y="285" class="note">杯口在水下</text><text x="35" y="322" class="note">杯底也要没入水中；倾斜后空气冒泡逃出，水才进入。</text>
+  </g>
+  <g transform="translate(725 75)">
+    <rect class="panel" width="630" height="340" rx="22"/><text x="25" y="40" class="title">B  衣架“空气天平”</text>
+    <line x1="315" y1="67" x2="315" y2="106" stroke="#354d59" stroke-width="5"/><path d="M315 104 L115 235 L515 235 Z" fill="none" stroke="#526e79" stroke-width="10" stroke-linejoin="round"/>
+    <ellipse cx="118" cy="255" rx="70" ry="55" fill="#f49b99" stroke="#9b3f3a" stroke-width="4"/><ellipse cx="512" cy="255" rx="70" ry="55" fill="#88c9ef" stroke="#316e91" stroke-width="4"/>
+    <text x="118" y="262" class="label" text-anchor="middle">放气</text><text x="512" y="262" class="label" text-anchor="middle">充气</text><line x1="512" y1="292" x2="512" y2="326" class="change"/>
+    <text x="315" y="325" class="note" text-anchor="middle">先调平，再只改变一边气球中的空气量</text>
+  </g>
+  <g transform="translate(45 465)">
+    <rect class="panel" width="630" height="340" rx="22"/><text x="25" y="40" class="title">C  倒扣水杯与硬卡片</text>
+    <path d="M205 82 L205 250 Q205 267 222 267 L410 267 Q427 267 427 250 L427 82" class="glass"/><rect x="213" y="89" width="206" height="166" class="water"/>
+    <rect x="174" y="264" width="285" height="18" rx="5" fill="#d6b77a" stroke="#866d3b" stroke-width="3"/>
+    <line x1="245" y1="330" x2="245" y2="288" class="force"/><line x1="316" y1="330" x2="316" y2="288" class="force"/><line x1="387" y1="330" x2="387" y2="288" class="force"/>
+    <line x1="316" y1="150" x2="316" y2="230" class="change"/><text x="55" y="319" class="label">外界空气压力向上</text><text x="337" y="175" class="note">水的重力向下</text>
+  </g>
+  <g transform="translate(725 465)">
+    <rect class="panel" width="630" height="340" rx="22"/><text x="25" y="40" class="title">D  冷却后塑料瓶被压瘪</text>
+    <path d="M235 88 Q235 65 265 65 L365 65 Q395 65 395 88 L400 120 Q455 155 435 270 Q420 305 315 308 Q210 305 195 270 Q175 155 230 120 Z" fill="#e8f7fb" stroke="#537987" stroke-width="7"/>
+    <path d="M230 155 Q315 200 400 155 M215 235 Q315 190 420 235" fill="none" stroke="#79a7b8" stroke-width="6"/>
+    <line x1="115" y1="195" x2="205" y2="195" class="force"/><line x1="515" y1="195" x2="425" y2="195" class="force"/><line x1="315" y1="330" x2="315" y2="300" class="force"/>
+    <text x="315" y="142" class="label" text-anchor="middle">气体冷却，水蒸气凝结</text><text x="315" y="169" class="note" text-anchor="middle">内部压强降低</text><text x="315" y="326" class="label" text-anchor="middle">外部空气把瓶壁向内推</text>
+  </g>
+</svg>

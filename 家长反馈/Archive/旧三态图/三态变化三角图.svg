@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1160" viewBox="0 80 1800 1160"><rect width="100%" height="100%" fill="white"/>
+<path d="M450.0,253.0 L1350.0,253.0" fill="none" stroke="#536575" stroke-width="7"/><polygon points="1350.0,253.0 1322.0,266.0 1322.0,240.0" fill="#536575"/>
+<g transform="translate(900.0 174.0) rotate(0.00)" text-anchor="middle" fill="#243447" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="48">熔化</text><text y="36" font-size="43">melting</text></g>
+<path d="M1350.0,327.0 L450.0,327.0" fill="none" stroke="#536575" stroke-width="7"/><polygon points="450.0,327.0 478.0,314.0 478.0,340.0" fill="#536575"/>
+<g transform="translate(900.0 406.0) rotate(0.00)" text-anchor="middle" fill="#243447" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="48">凝固</text><text y="36" font-size="43">freezing</text></g>
+<path d="M360.3,444.3 L762.8,928.0" fill="none" stroke="#536575" stroke-width="7"/><polygon points="762.8,928.0 734.9,914.8 754.9,898.2" fill="#536575"/>
+<g transform="translate(500.8 736.7) rotate(50.23)" text-anchor="middle" fill="#243447" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="48">升华</text><text y="36" font-size="43">sublimation</text></g>
+<path d="M819.7,880.7 L417.2,397.0" fill="none" stroke="#536575" stroke-width="7"/><polygon points="417.2,397.0 445.1,410.2 425.1,426.8" fill="#536575"/>
+<g transform="translate(679.2 588.3) rotate(50.23)" text-anchor="middle" fill="#243447" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="48">凝华</text><text y="36" font-size="43">deposition</text></g>
+<path d="M1439.7,444.3 L1037.2,928.0" fill="none" stroke="#536575" stroke-width="7"/><polygon points="1037.2,928.0 1045.1,898.2 1065.1,914.8" fill="#536575"/>
+<g transform="translate(1299.2 736.7) rotate(-50.23)" text-anchor="middle" fill="#243447" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="48">汽化</text><text y="36" font-size="43">vaporization</text></g>
+<path d="M980.3,880.7 L1382.8,397.0" fill="none" stroke="#536575" stroke-width="7"/><polygon points="1382.8,397.0 1374.9,426.8 1354.9,410.2" fill="#536575"/>
+<g transform="translate(1120.8 588.3) rotate(-50.23)" text-anchor="middle" fill="#243447" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="48">凝结</text><text y="36" font-size="43">condensation</text></g>
+<rect x="148" y="211" width="264" height="158" rx="24" fill="#F5F8FA" stroke="#234E78" stroke-width="4"/>
+<g transform="translate(280.0 303.0) rotate(0.00)" text-anchor="middle" fill="#234E78" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="58">固态</text><text y="36" font-size="53">solid</text></g>
+<rect x="1388" y="211" width="264" height="158" rx="24" fill="#F5F8FA" stroke="#234E78" stroke-width="4"/>
+<g transform="translate(1520.0 303.0) rotate(0.00)" text-anchor="middle" fill="#234E78" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="58">液态</text><text y="36" font-size="53">liquid</text></g>
+<rect x="768" y="956" width="264" height="158" rx="24" fill="#F5F8FA" stroke="#234E78" stroke-width="4"/>
+<g transform="translate(900.0 1048.0) rotate(0.00)" text-anchor="middle" fill="#234E78" font-family="Microsoft YaHei, sans-serif"><text y="-24" font-size="58">气态</text><text y="36" font-size="53">gas</text></g>
+</svg>

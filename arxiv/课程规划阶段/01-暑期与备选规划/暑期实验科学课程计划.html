@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="五年级实验科学课程计划：用11次60–120分钟课程，在实验、展示和模型中复习五年级科学五个单元。">
+  <title>五年级实验科学课程计划｜在实验中复习全年重点</title>
+  <style>
+    :root {
+      --ink: #17302e;
+      --muted: #62716d;
+      --paper: #f5f0e7;
+      --surface: #fffdf8;
+      --line: #d9dfd8;
+      --teal: #0f766e;
+      --teal-dark: #0b514d;
+      --teal-pale: #dff2ee;
+      --amber: #d98a27;
+      --amber-pale: #fff0cf;
+      --coral: #d9604c;
+      --coral-pale: #fbe6df;
+      --blue: #416f94;
+      --blue-pale: #e6eff7;
+      --violet: #6d5d90;
+      --violet-pale: #eee9f5;
+      --green: #557b52;
+      --green-pale: #e7f0df;
+      --shadow: 0 18px 48px rgba(25, 49, 46, .08);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 6% 2%, rgba(217, 138, 39, .13), transparent 28rem),
+        radial-gradient(circle at 98% 19%, rgba(15, 118, 110, .12), transparent 32rem),
+        var(--paper);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+      line-height: 1.72;
+    }
+
+    a { color: inherit; }
+    button, summary { font: inherit; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(23, 48, 46, .08);
+      background: rgba(245, 240, 231, .91);
+      backdrop-filter: blur(16px);
+    }
+    .nav {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { color: var(--teal-dark); font-size: 13px; font-weight: 900; letter-spacing: .13em; }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 20px; color: var(--muted); font-size: 13px; }
+    .navlinks a { text-decoration: none; }
+    .navlinks a:hover { color: var(--teal); }
+
+    section { padding: 72px 0; }
+    .hero { padding: 94px 0 74px; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 62px; align-items: center; }
+    .eyebrow, .kicker {
+      margin: 0 0 12px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 0; max-width: 760px; font-size: clamp(45px, 7vw, 82px); line-height: 1.03; letter-spacing: -.045em; }
+    .hero-lead { margin: 26px 0 0; max-width: 760px; color: var(--muted); font-size: 18px; }
+    .hero-lead strong { color: var(--ink); }
+    .hero-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--amber);
+      border-radius: 0 16px 16px 0;
+      background: rgba(255, 253, 248, .72);
+      color: var(--teal-dark);
+      font-weight: 750;
+    }
+    .hero-panel {
+      padding: 28px;
+      border: 1px solid rgba(15, 118, 110, .18);
+      border-radius: 28px;
+      background: rgba(255, 253, 248, .84);
+      box-shadow: var(--shadow);
+    }
+    .hero-panel h2 { margin: 0 0 18px; font-size: 18px; }
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .stat { padding: 16px; border-radius: 16px; background: var(--teal-pale); }
+    .stat:nth-child(2) { background: var(--amber-pale); }
+    .stat:nth-child(3) { background: var(--blue-pale); }
+    .stat:nth-child(4) { background: var(--green-pale); }
+    .stat b { display: block; font-size: 26px; line-height: 1.1; }
+    .stat span { color: var(--muted); font-size: 12px; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 36px;
+      margin-bottom: 30px;
+    }
+    h2 { margin: 0; font-size: clamp(30px, 4vw, 46px); line-height: 1.15; letter-spacing: -.025em; }
+    .section-intro { max-width: 610px; margin: 0; color: var(--muted); }
+
+    .coverage { background: rgba(255, 253, 248, .68); border-top: 1px solid rgba(23, 48, 46, .07); border-bottom: 1px solid rgba(23, 48, 46, .07); }
+    .coverage-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 13px; }
+    .unit-tile {
+      min-height: 190px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+    }
+    .unit-code { display: inline-block; margin-bottom: 15px; padding: 4px 9px; border-radius: 99px; background: var(--teal-pale); color: var(--teal-dark); font-size: 11px; font-weight: 900; }
+    .unit-tile:nth-child(2) .unit-code { background: var(--amber-pale); color: #805011; }
+    .unit-tile:nth-child(3) .unit-code { background: var(--blue-pale); color: #315b7c; }
+    .unit-tile:nth-child(4) .unit-code { background: var(--green-pale); color: #3f673d; }
+    .unit-tile:nth-child(5) .unit-code { background: var(--violet-pale); color: #5a4a7a; }
+    .unit-tile h3 { margin: 0 0 8px; font-size: 18px; }
+    .unit-tile p { margin: 0; color: var(--muted); font-size: 13px; }
+    .original-name { display: block; margin: -8px 0 10px; color: var(--teal); font-size: 10px; font-weight: 900; letter-spacing: .055em; text-transform: uppercase; }
+    .unit-lessons { margin-top: 14px !important; color: var(--ink) !important; font-weight: 800; }
+
+    .syllabus-map { padding-top: 62px; background: #f0f4ef; }
+    .map-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .map-card { padding: 22px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+    .map-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 13px; }
+    .map-card h3 { margin: 0; font-size: 19px; }
+    .map-card-head span { color: var(--teal); font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+    .map-list { display: grid; gap: 8px; }
+    .map-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 9px 11px; border-radius: 11px; background: #f3f5f1; color: var(--muted); font-size: 12px; }
+    .map-row b { color: var(--ink); font-weight: 700; }
+    .lesson-link { padding: 3px 8px; border-radius: 99px; background: var(--teal-pale); color: var(--teal-dark); font-size: 10px; font-weight: 900; white-space: nowrap; }
+
+    .format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .format-card { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+    .format-num { display: grid; width: 36px; height: 36px; margin-bottom: 16px; place-items: center; border-radius: 12px; background: var(--teal-pale); color: var(--teal-dark); font-size: 13px; font-weight: 900; }
+    .format-card:nth-child(2) .format-num { background: var(--amber-pale); color: #805011; }
+    .format-card:nth-child(3) .format-num { background: var(--blue-pale); color: #315b7c; }
+    .format-card h3 { margin: 0 0 8px; font-size: 19px; }
+    .format-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .course { padding-top: 40px; }
+    .toolbar { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 18px; }
+    .tool-button {
+      cursor: pointer;
+      padding: 8px 14px;
+      border: 1px solid rgba(15, 118, 110, .23);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--teal-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .tool-button:hover { background: var(--teal-pale); }
+
+    .unit-block { margin-top: 48px; }
+    .unit-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .unit-number { display: grid; width: 58px; height: 58px; place-items: center; border-radius: 18px; background: var(--teal); color: white; font-size: 12px; font-weight: 900; line-height: 1.1; text-align: center; }
+    .u2 .unit-number { background: var(--amber); }
+    .u3 .unit-number { background: var(--blue); }
+    .u4 .unit-number { background: var(--green); }
+    .u5 .unit-number { background: var(--violet); }
+    .unit-header h3 { margin: 0 0 3px; font-size: 25px; }
+    .unit-header p { margin: 0; color: var(--muted); font-size: 14px; }
+    .unit-original { display: block; margin-bottom: 3px; color: var(--teal); font-size: 10px; font-weight: 900; letter-spacing: .075em; text-transform: uppercase; }
+    .lesson-list { display: grid; gap: 14px; }
+    details.lesson {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    details.lesson[open] { border-color: rgba(15, 118, 110, .35); box-shadow: var(--shadow); }
+    details.lesson summary {
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr) auto 30px;
+      align-items: center;
+      gap: 17px;
+      padding: 20px 22px;
+      list-style: none;
+    }
+    details.lesson summary::-webkit-details-marker { display: none; }
+    .lesson-no { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 16px; background: #edf1ec; color: var(--teal-dark); font-size: 14px; font-weight: 900; }
+    .lesson-title { margin: 0 0 4px; font-size: 19px; line-height: 1.35; }
+    .lesson-line { margin: 0; color: var(--muted); font-size: 13px; }
+    .school-ref { margin: 4px 0 0; color: var(--blue); font-size: 10.5px; font-weight: 800; line-height: 1.45; }
+    .school-ref::before { content: "学校课程 · "; color: var(--muted); font-weight: 700; }
+    .status { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 99px; font-size: 11px; font-weight: 900; white-space: nowrap; }
+    .status.done { background: var(--teal-pale); color: var(--teal-dark); }
+    .status.done::before { content: "✓"; }
+    .status.next { background: #edf0ed; color: var(--muted); }
+    .status.next::before { content: "○"; }
+    .chevron { color: var(--teal); font-size: 22px; transition: transform .2s ease; }
+    details[open] .chevron { transform: rotate(45deg); }
+    .lesson-body { padding: 0 22px 24px 97px; }
+    .question { margin-bottom: 18px; padding: 13px 16px; border-radius: 14px; background: #f0f5f1; font-weight: 800; }
+    .question::before { content: "本节问题 · "; color: var(--teal); font-size: 12px; }
+    .two-lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .lane { padding: 19px; border: 1px solid var(--line); border-radius: 17px; background: #fbfaf6; }
+    .lane.knowledge { border-color: #efd19d; background: #fff9ea; }
+    .lane-label { margin: 0 0 8px; color: var(--teal); font-size: 11px; font-weight: 900; letter-spacing: .08em; }
+    .knowledge .lane-label { color: #9b6418; }
+    .lane h4 { margin: 0 0 9px; font-size: 17px; }
+    .lane ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: 13px; }
+    .lane li + li { margin-top: 5px; }
+    .school-focus { margin-top: 14px; padding: 16px 18px; border-radius: 16px; background: var(--teal-dark); color: white; }
+    .school-focus b { display: block; margin-bottom: 5px; color: #aee5db; font-size: 11px; letter-spacing: .08em; }
+    .school-focus p { margin: 0; font-size: 13px; }
+    .keywords { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+    .keyword { padding: 4px 9px; border: 1px solid rgba(15, 118, 110, .16); border-radius: 99px; background: var(--teal-pale); color: var(--teal-dark); font-size: 11px; font-weight: 750; }
+    .done-note { margin-top: 12px; color: var(--teal-dark); font-size: 12px; font-weight: 800; }
+    .catchup {
+      margin-top: 15px;
+      padding: 21px;
+      border: 1px dashed rgba(217, 138, 39, .55);
+      border-radius: 19px;
+      background: var(--amber-pale);
+    }
+    .catchup h4 { margin: 0 0 6px; color: #805011; font-size: 17px; }
+    .catchup > p { margin: 0; color: #765a30; font-size: 13px; }
+    .catchup-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; margin-top: 13px; }
+    .catchup-item { padding: 11px; border-radius: 12px; background: rgba(255,255,255,.58); font-size: 12px; }
+    .catchup-item b { display: block; color: #805011; }
+
+    .timing { background: var(--teal-dark); color: white; }
+    .timing .kicker { color: #8fd6cc; }
+    .timing .section-intro { color: #c7d9d6; }
+    .timeline { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+    .time-step { padding: 18px 15px; border: 1px solid rgba(255,255,255,.15); border-radius: 17px; background: rgba(255,255,255,.07); }
+    .time-step b { display: block; margin-bottom: 7px; color: #f9c878; font-size: 12px; }
+    .time-step span { font-size: 13px; }
+
+    .outcome { margin: 72px auto; padding: 42px; border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
+    .outcome-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 24px; }
+    .outcome-item { padding: 18px; border-radius: 17px; background: #eff4f0; }
+    .outcome-item b { display: block; margin-bottom: 5px; }
+    .outcome-item span { color: var(--muted); font-size: 13px; }
+
+    footer { padding: 26px 0 42px; color: var(--muted); font-size: 12px; text-align: center; }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .coverage-grid { grid-template-columns: repeat(2, 1fr); }
+      .format-grid, .outcome-grid, .map-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 26px, 1160px); }
+      .navlinks { display: none; }
+      section { padding: 52px 0; }
+      .hero { padding: 62px 0 48px; }
+      .section-head { display: block; }
+      .section-intro { margin-top: 12px; }
+      .coverage-grid, .format-grid, .outcome-grid, .timeline, .two-lanes, .catchup-grid, .map-grid { grid-template-columns: 1fr; }
+      .map-row { grid-template-columns: 1fr; gap: 5px; }
+      .lesson-link { justify-self: start; }
+      details.lesson summary { grid-template-columns: 46px minmax(0, 1fr) 24px; gap: 11px; padding: 16px; }
+      .lesson-no { width: 44px; height: 44px; border-radius: 13px; }
+      .status { grid-column: 2; justify-self: start; }
+      .chevron { grid-column: 3; grid-row: 1; }
+      .lesson-body { padding: 0 16px 18px; }
+      .outcome { padding: 26px; }
+    }
+    @media print {
+      body { background: white; font-size: 10.5pt; }
+      .topbar, .toolbar { display: none; }
+      section { padding: 24px 0; }
+      details { break-inside: avoid; }
+      details > *:not(summary) { display: block !important; }
+      .chevron { display: none; }
+      .timing { color: var(--ink); background: white; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .timing .section-intro { color: var(--muted); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">GRADE 5 SCIENCE LAB</div>
+      <nav class="navlinks" aria-label="页面导航">
+        <a href="#coverage">课程覆盖</a>
+        <a href="#syllabus-map">逐课对应</a>
+        <a href="#format">每节课怎么上</a>
+        <a href="#course">11 次课程</a>
+        <a href="#outcomes">学习结果</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">五年级 · 实验科学课程</p>
+          <h1>在实验中<br>复习全年重点</h1>
+          <p class="hero-lead">这不是把学校讲义再讲一遍，而是让孩子先看现象、做实验、记录证据，再用学校五年级科学的概念解释结果。<strong>原计划第 6、7 节合并为一次 120 分钟力学课；Unit 4 的第 8、9、10 次课分别为 105、60、120 分钟，整套课程实际授课共 11 次。</strong></p>
+          <div class="hero-note">主实验负责“亲手发现”，知识补充负责“把实验做不到的课内难点讲清楚”。</div>
+        </div>
+        <aside class="hero-panel">
+          <h2>课程一览</h2>
+          <div class="stats">
+            <div class="stat"><b>10</b><span>次实际授课</span></div>
+            <div class="stat"><b>60–120m</b><span>单节灵活课时</span></div>
+            <div class="stat"><b>3</b><span>节已经上过</span></div>
+            <div class="stat"><b>5</b><span>个校内单元</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="coverage" class="coverage">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">FULL YEAR COVERAGE</p><h2>五个单元，都过一遍</h2></div>
+          <p class="section-intro">不是平均分配时间，而是把课内最难、最容易混淆的地方放进实验、展示和模型中。</p>
+        </div>
+        <div class="coverage-grid">
+          <article class="unit-tile"><span class="unit-code">UNIT 1</span><h3>科学的本质</h3><small class="original-name">Nature of Science</small><p>控制变量、重复测量、定性与定量数据、根据证据修改想法。</p><p class="unit-lessons">第 1 节＋全程贯穿</p></article>
+          <article class="unit-tile"><span class="unit-code">UNIT 2</span><h3>物质的性质</h3><small class="original-name">Properties of Matter</small><p>混合物与溶液、物态与变化、原子结构、元素周期表和玻尔模型。</p><p class="unit-lessons">第 2–3 节＋课前短回顾</p></article>
+          <article class="unit-tile"><span class="unit-code">UNIT 3</span><h3>能量与运动</h3><small class="original-name">Energy and its Forms</small><p>能量形式、热和光、速率与方向、加速度、牛顿运动定律。</p><p class="unit-lessons">第 4、5 节＋第 6–7 合并课</p></article>
+          <article class="unit-tile"><span class="unit-code">UNIT 4</span><h3>生命科学</h3><small class="original-name">Life Science</small><p>细胞、种子与植物运输、人体系统、生命层级与生物分类。</p><p class="unit-lessons">第 8–10 节</p></article>
+          <article class="unit-tile"><span class="unit-code">UNIT 5</span><h3>空间科学</h3><small class="original-name">Space Science</small><p>昼夜与季节、月相、恒星、小天体和系外行星的间接证据。</p><p class="unit-lessons">原天文第 10 节＋第 11 节</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="format">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">ONE LESSON · TWO LANES</p><h2>每节课都有两条线</h2></div>
+          <p class="section-intro">既保留动手实验的完整过程，又确保学校讲过但不容易做成实验的知识不会漏掉。</p>
+        </div>
+        <div class="format-grid">
+          <article class="format-card"><span class="format-num">01</span><h3>主实验</h3><p>提出一个能测量的问题，先预测，再控制条件、记录数据，用结果判断原来的想法是否成立。</p></article>
+          <article class="format-card"><span class="format-num">02</span><h3>知识补充</h3><p>用一个简单展示、生活例子、模型或分类任务，讲清实验无法完整覆盖的课内知识。</p></article>
+          <article class="format-card"><span class="format-num">03</span><h3>课内对接</h3><p>最后用中英文关键词、辨析题和一小段证据解释，确认孩子不只“做得开心”，也真正理解。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="course" class="course">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">10 CLASSES · FLEXIBLE LENGTH</p><h2>完整课程安排</h2></div>
+          <p class="section-intro">第 6、7 主题合并成一次 120 分钟课；生命科学新增第 10 节，原天文第 10 节保留为独立文件，因此实际授课共 11 次，最终排课时再统一编号。</p>
+        </div>
+        <div class="toolbar">
+          <button class="tool-button" type="button" data-action="open">全部展开</button>
+          <button class="tool-button" type="button" data-action="close">全部收起</button>
+        </div>
+
+        <div class="unit-block u1">
+          <div class="unit-header"><span class="unit-number">UNIT<br>1</span><div><small class="unit-original">School Unit 1 · Nature of Science</small><h3>科学的本质</h3><p>先建立一套以后每节课都要继续使用的实验方法。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson" open>
+              <summary><span class="lesson-no">01</span><span><h4 class="lesson-title">摆钟会听谁的话？</h4><p class="lesson-line">怎样让一次实验比较公平、结果值得相信</p><p class="school-ref">Unit 1 Notes 01 Observation &amp; Inference · 02 Data · 03 Testable Questions</p></span><span class="status done">已上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">摆长、摆锤质量和放手角度，哪些会改变摆动一次所需的时间？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>单摆周期调查</h4><ul><li>一次只改变一个条件。</li><li>测量 10 次摆动，每种条件重复多次。</li><li>比较平均值、数据波动和明显趋势。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>一条好证据是怎样得到的</h4><ul><li>区分观察、推断和个人意见。</li><li>区分定性描述和定量测量。</li><li>练习自变量、因变量和控制变量。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>可检验问题、公平实验、重复测量、误差，以及“数据不同于猜想时应该修改想法”。</p></div>
+                <div class="keywords"><span class="keyword">observation</span><span class="keyword">inference</span><span class="keyword">independent variable</span><span class="keyword">fair test</span></div>
+                <p class="done-note">✓ 已完成：控制变量、重复测量与实验误差。</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="unit-block u2">
+          <div class="unit-header"><span class="unit-number">UNIT<br>2</span><div><small class="unit-original">School Unit 2 · Properties of Matter</small><h3>物质的性质</h3><p>从看得见的变化，走到看不见的粒子解释。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson">
+              <summary><span class="lesson-no">02</span><span><h4 class="lesson-title">盐真的消失了吗？</h4><p class="lesson-line">溶液、混合物与“看不见但仍然存在”的物质</p><p class="school-ref">Unit 2 Notes 02 Mixtures and Solutions</p></span><span class="status done">已上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">盐溶进水以后去了哪里？还能不能把它找回来？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>溶解、过滤与结晶</h4><ul><li>比较粗盐和食盐在水中的变化。</li><li>用过滤寻找不能通过滤纸的物质。</li><li>通过蒸发和结晶重新得到固体。</li><li>观察不同物质溶解时的温度变化。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>混合物家族</h4><ul><li>pure substance 和 mixture。</li><li>solution、suspension 和 colloid。</li><li>solute、solvent、solubility。</li><li>“溶得快”不等于“最终溶得多”。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>清澈不等于纯净；溶液是均一混合物；过滤不能分开已经溶解的盐和水。</p></div>
+                <div class="keywords"><span class="keyword">solution</span><span class="keyword">solute</span><span class="keyword">solvent</span><span class="keyword">mixture</span><span class="keyword">particle model</span></div>
+                <p class="done-note">✓ 已完成：溶解、过滤、结晶及相关温度变化。</p>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">03</span><span><h4 class="lesson-title">改变外形，还是变成了新物质？</h4><p class="lesson-line">用多条证据判断物理变化和化学变化</p><p class="school-ref">Unit 2 Notes 01 Phases of Matter · 03 Atoms and Period Square（粒子与变化）</p></span><span class="status done">已上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">出现气泡、变色或温度变化，就一定说明生成了新物质吗？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>变化证据站</h4><ul><li>比较熔化、溶解、混合和化学反应。</li><li>记录气体、温度、沉淀、颜色等变化。</li><li>用不止一条证据支持判断。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>宏观变化与粒子模型</h4><ul><li>物理性质和化学性质。</li><li>相变时物质身份不变。</li><li>化学变化中原子重新组合。</li><li>元素、分子和化合物的基本区别。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>判断关键不是“看起来变化很大”，而是有没有形成具有不同性质的新物质。</p></div>
+                <div class="keywords"><span class="keyword">physical change</span><span class="keyword">chemical change</span><span class="keyword">new substance</span><span class="keyword">property</span></div>
+                <p class="done-note">✓ 已完成：物理变化、化学变化与新物质证据。</p>
+              </div>
+            </details>
+          </div>
+          <aside class="catchup">
+            <h4>Unit 2 未覆盖知识：不硬塞进第 4 节</h4>
+            <p>第 2、3 节已经完成物质变化实验。根据实际授课节奏，第 4 节只用 2–3 分钟回忆“是否形成新物质”，不再安排原子词汇课前讲授；第 5–7 节的短回顾只在不挤占主实验时采用。</p>
+            <div class="catchup-grid">
+              <div class="catchup-item"><b>第 4 节</b>只回忆：物理变化没有新物质；化学变化形成新物质</div>
+              <div class="catchup-item"><b>第 5 节可选</b>matter、atom、element、molecule、compound</div>
+              <div class="catchup-item"><b>第 6 节可选</b>proton、neutron、electron 与 atomic number</div>
+              <div class="catchup-item"><b>第 7 节可选</b>读元素格、group、period；玻尔模型另行决定</div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="unit-block u3">
+          <div class="unit-header"><span class="unit-number">UNIT<br>3</span><div><small class="unit-original">School Unit 3 · Energy and its Forms</small><h3>能量及其形式</h3><p>这是跨度最大的一单元，分成热、光、运动和力四节课完成。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson" open>
+              <summary><span class="lesson-no">04</span><span><h4 class="lesson-title">热能怎样传递？</h4><p class="lesson-line">用 general energy 作入口，重点解释传导、对流和辐射怎样发生</p><p class="school-ref">Unit 3 Notes 01 Energy Forms and Transfers · 02 Thermal Energy Transfer</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">热能可以通过哪三种形式传递？每一种是怎样发生的？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">四组连续证据</p><h4>三种形式是课程主线</h4><ul><li>先混合温水和冷水，建立高温到低温的共同方向。</li><li>比较不锈钢、竹木和塑料筷，解释接触传导。</li><li>用有色暖水和冷水，分别观察流体运动形成的对流。</li><li>使用60 W宠物晒背加热灯和双温度计，验证无需接触的辐射传递。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">10–12 分钟入口</p><h4>用小球建立 general energy 概念</h4><ul><li>用落下的小球说明能量能够转移和转化。</li><li>调用上节蜡烛：chemical energy → light + thermal energy。</li><li>从一般能量进入本课的 thermal energy transfer。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>传导通过接触并沿物质逐步传递能量；对流由液体或气体的整体运动携带能量；辐射以电磁波传递，不要求接触。三者的净传递方向都由温度差决定。source / destination 只作为学校讲义中的方向标签顺带介绍。</p></div>
+                <div class="keywords"><span class="keyword">energy</span><span class="keyword">thermal energy transfer</span><span class="keyword">conduction</span><span class="keyword">convection</span><span class="keyword">radiation</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">05</span><span><h4 class="lesson-title">光遇到物质会发生什么？</h4><p class="lesson-line">60 分钟：白光组成、物体颜色、反射定律、折射与全反射</p><p class="school-ref">Unit 3 Notes 03 Electromagnetic Spectrum · Light Energy Book</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">白光里有什么？光与物质相遇后，传播方向和进入眼睛的颜色怎样改变？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">0–32 分钟 · 组成与颜色</p><h4>从白光光谱走到所见颜色</h4><ul><li>从电磁波谱收紧到可见光，连接波长、频率和单个光子能量。</li><li>用黑卡与黑胶带制作 1–2 mm 窄缝，用三棱镜展开手电筒白光。</li><li>把红、绿、蓝透明包装片盖在白光前，比较五张哑光彩纸的颜色与亮度。</li><li>用反射、透射、吸收建立“光源—物质—眼睛”的颜色模型。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">32–60 分钟 · 光路与界面</p><h4>从反射定律走到全反射</h4><ul><li>用小平面镜、激光笔、白纸和量角器测量三组反射角。</li><li>在透明方盒的牛奶水中观察空气—水界面的折射光路。</li><li>让激光进入透明塑料瓶流出的弯曲水柱，观察红光随水流传播。</li><li>用折射、临界角和全反射解释水流“光纤”。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>学生能用“输入光—物质作用—输出光”组织四组证据，用光谱、颜色矩阵、角度数据和临界角现象解释光的行为。</p></div>
+                <div class="keywords"><span class="keyword">electromagnetic spectrum</span><span class="keyword">dispersion</span><span class="keyword">selective reflection</span><span class="keyword">law of reflection</span><span class="keyword">refraction</span><span class="keyword">total internal reflection</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">06–07</span><span><h4 class="lesson-title">造一辆车，再用它发现牛顿定律</h4><p class="lesson-line">120 分钟：自制空瓶小车、伽利略单斜面、视觉时间码与等时点带、三条件动力学实验与气球动力改装</p><p class="school-ref">Unit 3 Notes 04 Vectors, Velocity, Acceleration · 05–07 Newton’s Laws</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">怎样用一辆自己造的小车，既测出加速度，又公平检验力和质量怎样改变加速度？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">0–64 分钟 · 造车、惯性与测量</p><h4>把家用材料变成可测量的装置</h4><ul><li>用 5 分钟讲清 distance、displacement、velocity 与 acceleration。</li><li>硬币—卡片只做 2 分钟惯性演示。</li><li>用空饮料瓶、吸管、竹签和瓶盖造车，并完成滚行、直线性和承载验收。</li><li>用单斜面实车观察与白板坡度推演建立牛顿第一定律。</li><li>固定手机、自制黑白标尺和画面内视觉时间码，从基准视频转写每 0.10 秒一个点的等时点带。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">71–120 分钟 · 一套装置，两次公平比较</p><h4>R/F/M 三条件与气球动力终局</h4><ul><li>R↔F 保持小车空载，只把悬挂硬币从 2 枚增加到 5 枚。</li><li>R↔M 保持杯中 2 枚硬币，只在小车托盘内固定放 3 枚 1 元硬币。</li><li>读取小车通过起终点时的画面时间码计算时间，并用重复数据支持 F_net = ma 的两个趋势。</li><li>把同一辆车改成气球动力车，标出作用在空气和气球上的第三定律力对。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>制作、测量和受力研究共用同一辆车；通过 R↔F 控制小车质量、R↔M 控制悬挂设置的两次比较，明确“怎样测”与“为什么变”之间的关系。</p></div>
+                <div class="keywords"><span class="keyword">video analysis</span><span class="keyword">velocity</span><span class="keyword">acceleration</span><span class="keyword">net force</span><span class="keyword">mass</span><span class="keyword">F = ma</span><span class="keyword">action–reaction</span></div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="unit-block u4">
+          <div class="unit-header"><span class="unit-number">UNIT<br>4</span><div><small class="unit-original">School Unit 4 · Life Science</small><h3>生命科学</h3><p>用“结构有什么用、物质怎样移动”串起大量生物词汇。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson">
+              <summary><span class="lesson-no">08</span><span><h4 class="lesson-title">显微镜下的细胞怎样开始一段生命？</h4><p class="lesson-line">105 分钟：洋葱与口腔细胞装片＋质壁分离＋杯壁豆类萌发</p><p class="school-ref">Unit 4 Notes 01 Characteristics of Living Things · 02–03 Cell Structure</p></span><span class="status done">已上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">洋葱、口腔和种子看起来完全不同，能用哪些证据说明它们都由细胞构成并完成生命活动？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">0–72 分钟 · 显微镜实验</p><h4>植物细胞与动物细胞</h4><ul><li>先用印刷点练低倍找像，再制作洋葱和自己的口腔上皮装片。</li><li>在相同倍率下比较形状、排列、细胞壁和细胞膜边界。</li><li>只给核心细胞器配一句功能，不要求背复杂蛋白质工作链。</li><li>原装片与显微镜操作教程已单独保存为可打印 HTML。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">70–105 分钟 · 细胞学说与长期证据</p><h4>从视野走到一颗发芽的种子</h4><ul><li>用两张装片支持 cell theory。</li><li>设置 A1/A2 湿润重复组与 B1/B2 干燥对照。</li><li>原计划每天记录萌发数、胚根长度和固定角度照片。</li><li>实际间隔两周且没有持续照料，豆苗已经死亡；第 9 节据此转入证据诊断。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>学生能制作并观察两类真核细胞装片，掌握少量核心结构功能，并用有重复组的萌发实验把“生命活动”变成连续证据。</p></div>
+                <div class="keywords"><span class="keyword">cell theory</span><span class="keyword">cell membrane</span><span class="keyword">cell wall</span><span class="keyword">germination</span><span class="keyword">replicates</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">09</span><span><h4 class="lesson-title">有水、有阳光，绿豆为什么还是会死？</h4><p class="lesson-line">60 分钟：死绿豆证据诊断＋白花／西芹示踪＋维管束与气孔显微观察</p><p class="school-ref">Unit 4 Notes 01, 05–07 · Characteristics, Vascular Tissue &amp; Seed Reserves</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">水和阳光明明都出现过，为什么绿豆仍然死了？植物怎样让水、气体和糖在正确时间到达正确位置？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">0–32 分钟 · 病例与水路证据</p><h4>从死绿豆到染色木质部</h4><ul><li>先把绿豆的“已知、可能解释、还缺证据”分开，不把死亡结果倒推成唯一原因。</li><li>孩子启动红蓝分茎西芹与蓝水白花；教师预处理的清水／蓝水样本负责课堂立即显现。</li><li>横切、纵剖西芹寻找有色路径，再把薄切片放到显微镜下观察重复维管束。</li><li>明确染色直接追踪 water path，不直接追踪 phloem 中的 sugar。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">32–60 分钟 · 叶片出口与系统诊断</p><h4>从气孔走回“为什么会死”</h4><ul><li>揭取同一片叶的 upper／lower 表面印迹，在相同 100× 下寻找并计数 stomata。</li><li>用有叶袋与空袋启动 transpiration 对照，课堂只花 5 分钟设置，1–4 小时后回传证据。</li><li>用根—xylem—叶—phloem 路线连接 water、CO₂、sugar 与 oxygen。</li><li>以条件句解释绿豆可能的断水、积水缺氧或其他压力，并列出确认所需数据。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>sunlight 提供能量而不是现成食物；xylem 主要运水和矿物质，phloem 主要运糖；stomata 同时关联 CO₂ 进入与水蒸气散失。没有连续记录时，不能给死绿豆指定唯一死因。</p></div>
+                <div class="keywords"><span class="keyword">xylem</span><span class="keyword">phloem</span><span class="keyword">stomata</span><span class="keyword">transpiration</span><span class="keyword">photosynthesis</span><span class="keyword">cellular respiration</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">10</span><span><h4 class="lesson-title">人体怎样运输并保护每一个细胞？</h4><p class="lesson-line">120 分钟：人工心脏瓣膜迭代、氧气路线与 UV 屏蔽挑战</p><p class="school-ref">Unit 4 Notes 08–11 Body Organization &amp; Human Systems</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">哪些系统合作把氧气和养分送到细胞，又怎样保护细胞免受外界伤害？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">0–92 分钟 · 运输系统工程</p><h4>人工瓣膜与氧气往返路线</h4><ul><li>把八个主要系统与一句核心功能配对。</li><li>设计人工单向瓣膜，用 100 mL、10 秒统一标准测试正向通过和反向漏水。</li><li>按 V1 数据改版并复测，记录性能权衡。</li><li>用路线卡走完肺循环和体循环，连接呼吸、循环和消化系统。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">92–120 分钟 · 保护细胞</p><h4>UV 屏蔽材料挑战</h4><ul><li>让裸露、棉布、透明塑料、铝箔和防晒霜五组 UV 珠同时曝光。</li><li>用 0–5 颜色等级比较相对屏蔽效果。</li><li>没有 UV 珠时改做彩纸日晒 3–4 小时的长期方案。</li><li>用系统网络解释 homeostasis，而不是背孤立器官名称。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>cell → tissue → organ → organ system → organism；人体系统相互合作；瓣膜的单向性和 UV 屏蔽都必须用公平测试的数据评价。</p></div>
+                <div class="keywords"><span class="keyword">organ system</span><span class="keyword">valve</span><span class="keyword">circulatory</span><span class="keyword">respiratory</span><span class="keyword">UV shielding</span><span class="keyword">homeostasis</span></div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="unit-block u5">
+          <div class="unit-header"><span class="unit-number">UNIT<br>5</span><div><small class="unit-original">School Unit 5 · Space Science</small><h3>空间科学</h3><p>不能把天体搬进教室，就用模型、周期变化和留下的痕迹寻找证据。</p></div></div>
+          <div class="lesson-list">
+            <details class="lesson">
+              <summary><span class="lesson-no">10</span><span><h4 class="lesson-title">为什么会有昼夜、季节和月相？</h4><p class="lesson-line">75 分钟：入射角光斑、倾斜地球与八个月相模型</p><p class="school-ref">Unit 5 Notes 01 Earth’s Movement · 02 Earth’s Moon</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">季节是不是因为地球有时离太阳近、有时离太阳远？月相是不是地球的影子？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>地球—月球—太阳模型</h4><ul><li>用灯和地球仪模拟自转、公转与昼夜。</li><li>保持地轴倾斜方向不变，比较南北半球光照。</li><li>从“地球”位置观察月球不同位置的受光部分。</li><li>对比普通月相和月食的位置关系。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>从月球证据到科学判断</h4><ul><li>认识大撞击假说、环形山和月球表面环境。</li><li>用同步转动模型理解 tidal locking。</li><li>区分约 27.3 天与约 29.5 天两种周期。</li><li>讨论潮汐和“满月影响行为”的证据质量。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>季节来自地轴倾斜和公转；月相来自我们看到的受光部分改变，不是地球影子遮挡。</p></div>
+                <div class="keywords"><span class="keyword">rotation</span><span class="keyword">revolution</span><span class="keyword">axial tilt</span><span class="keyword">lunar phases</span><span class="keyword">tidal locking</span></div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary><span class="lesson-no">11</span><span><h4 class="lesson-title">看不见的天体，怎么证明它存在？</h4><p class="lesson-line">90 分钟：撞击坑数据、凌日光变曲线与恒星证据卡</p><p class="school-ref">Unit 5 Notes 03 Asteroids/Meteors/Comets · 04 Stars · 05 Exoplanets</p></span><span class="status next">待上</span><span class="chevron">＋</span></summary>
+              <div class="lesson-body">
+                <div class="question">科学家不能直接触碰遥远天体，怎样知道它们是什么、怎样运动？</div>
+                <div class="two-lanes">
+                  <div class="lane"><p class="lane-label">主实验</p><h4>太空留下的间接证据</h4><ul><li>让小球落入粉末表面，测量撞击坑。</li><li>区分 asteroid、meteoroid、meteor、meteorite 和 comet。</li><li>用小球从灯前经过，记录模拟恒星亮度变化。</li><li>从重复的亮度下降推断系外行星。</li></ul></div>
+                  <div class="lane knowledge"><p class="lane-label">知识补充</p><h4>恒星的一生与寻找行星</h4><ul><li>认识恒星中的 nuclear fusion，不把它说成普通燃烧。</li><li>区分 light-year 与 AU，以及 apparent / absolute magnitude。</li><li>理解蓝白恒星通常比红色恒星更热。</li><li>用恒星质量卡排列两条不同演化路线。</li><li>比较 transit、radial velocity、microlensing 和 pulsar timing。</li><li>说明 habitable zone 不等于已经发现生命。</li></ul></div>
+                </div>
+                <div class="school-focus"><b>五年级重点</b><p>“不能直接看见”不等于“没有证据”；恒星亮度、颜色、运动和周期变化都能帮助科学家作出有根据的推断。</p></div>
+                <div class="keywords"><span class="keyword">nuclear fusion</span><span class="keyword">light-year</span><span class="keyword">star life cycle</span><span class="keyword">transit method</span><span class="keyword">exoplanet</span><span class="keyword">habitable zone</span></div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="syllabus-map" class="syllabus-map">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">SCHOOL NOTES → OUR LESSONS</p><h2>学校每一课，放在哪里讲</h2></div>
+          <p class="section-intro">以下名称直接沿用学校原 Notes。右侧标出对应的实验课；由主实验讲不完整的内容，会放在同一节的知识补充中。</p>
+        </div>
+        <div class="map-grid">
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 1 · 科学的本质</h3><span>Nature of Science</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Observation and Inference</b><span class="lesson-link">第 1 节＋全程</span></div>
+              <div class="map-row"><b>02 Quantitative and Qualitative Data</b><span class="lesson-link">第 1 节＋全程</span></div>
+              <div class="map-row"><b>03 Testable Questions</b><span class="lesson-link">第 1 节＋全程</span></div>
+            </div>
+          </article>
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 2 · 物质的性质</h3><span>Properties of Matter</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Phases of Matter</b><span class="lesson-link">第 3 节</span></div>
+              <div class="map-row"><b>02 Mixtures and Solutions</b><span class="lesson-link">第 2 节</span></div>
+              <div class="map-row"><b>03 Atoms and Period Square</b><span class="lesson-link">第 3 节＋第 4–7 节课前</span></div>
+            </div>
+          </article>
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 3 · 能量及其形式</h3><span>Energy and its Forms</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Energy Forms and Transfers</b><span class="lesson-link">第 4 节</span></div>
+              <div class="map-row"><b>02 Thermal Energy Transfer</b><span class="lesson-link">第 4 节</span></div>
+              <div class="map-row"><b>03 Electromagnetic Spectrum</b><span class="lesson-link">第 5 节</span></div>
+              <div class="map-row"><b>04 Vectors, Velocity, Acceleration</b><span class="lesson-link">第 6–7 合并课</span></div>
+              <div class="map-row"><b>05 Newton’s Laws 1</b><span class="lesson-link">第 6–7 合并课</span></div>
+              <div class="map-row"><b>06 Newton’s Laws 2</b><span class="lesson-link">第 6–7 合并课</span></div>
+              <div class="map-row"><b>07 Newton’s Laws 3</b><span class="lesson-link">第 6–7 合并课</span></div>
+            </div>
+          </article>
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 4 · 生命科学</h3><span>Life Science</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Characteristics of Living Things</b><span class="lesson-link">第 8 节</span></div>
+              <div class="map-row"><b>02 Cell Structure</b><span class="lesson-link">第 8 节</span></div>
+              <div class="map-row"><b>03 Cell Supplementary Notes</b><span class="lesson-link">第 8 节</span></div>
+              <div class="map-row"><b>04 Taxonomy</b><span class="lesson-link">学校 Notes 复习</span></div>
+              <div class="map-row"><b>05 Plant and Animal Characteristics</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>06 Vascular and Non-Vascular Plants</b><span class="lesson-link">第 9 节</span></div>
+              <div class="map-row"><b>07 Gymnosperms and Angiosperms</b><span class="lesson-link">学校 Notes 复习</span></div>
+              <div class="map-row"><b>08 Body Organization</b><span class="lesson-link">生命科学第 10 节</span></div>
+              <div class="map-row"><b>09 Circulatory System</b><span class="lesson-link">生命科学第 10 节</span></div>
+              <div class="map-row"><b>10 Respiratory System</b><span class="lesson-link">生命科学第 10 节</span></div>
+              <div class="map-row"><b>11 Integumentary System</b><span class="lesson-link">生命科学第 10 节</span></div>
+            </div>
+          </article>
+          <article class="map-card">
+            <div class="map-card-head"><h3>Unit 5 · 空间科学</h3><span>Space Science</span></div>
+            <div class="map-list">
+              <div class="map-row"><b>01 Earth’s Movement</b><span class="lesson-link">原天文第 10 节（保留）</span></div>
+              <div class="map-row"><b>02 Earth’s Moon</b><span class="lesson-link">原天文第 10 节（保留）</span></div>
+              <div class="map-row"><b>03 Asteroids, Meteors and Comets</b><span class="lesson-link">第 11 节</span></div>
+              <div class="map-row"><b>04 Stars</b><span class="lesson-link">第 11 节</span></div>
+              <div class="map-row"><b>05 Exoplanets</b><span class="lesson-link">第 11 节</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="timing">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">FLEXIBLE RHYTHM</p><h2>60–120 分钟怎么装进去</h2></div>
+          <p class="section-intro">一般课程在 60–90 分钟收束；第 6–7 合并课和生命科学第 8–10 节使用完整 120 分钟，让制作、测量、延时现象与知识收束都留出足够时间。</p>
+        </div>
+        <div class="timeline">
+          <div class="time-step"><b>0–8 分钟</b><span>现象、回顾与核心问题</span></div>
+          <div class="time-step"><b>8–18 分钟</b><span>预测、变量与装置</span></div>
+          <div class="time-step"><b>18–45 分钟</b><span>主实验与即时记录</span></div>
+          <div class="time-step"><b>45–55 分钟</b><span>数据、图表与解释</span></div>
+          <div class="time-step"><b>55–75 分钟</b><span>模型或第二组证据</span></div>
+          <div class="time-step"><b>75–90 分钟</b><span>可选延伸、课内题与收束</span></div>
+          <div class="time-step"><b>90–120 分钟</b><span>第二组证据、工程改版或长期实验设置与总收束</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="outcomes">
+      <div class="wrap outcome">
+        <p class="kicker">LEARNING OUTCOMES</p>
+        <h2>课程结束时，孩子不只是“都听过”</h2>
+        <div class="outcome-grid">
+          <div class="outcome-item"><b>会做公平实验</b><span>能找出变量、重复测量，并诚实处理数据波动。</span></div>
+          <div class="outcome-item"><b>会辨认重点概念</b><span>能区分势能与动能、热的三种传递、速度与加速度等。</span></div>
+          <div class="outcome-item"><b>会用模型解释</b><span>能用粒子、能量、细胞和地月日模型解释看见的现象。</span></div>
+          <div class="outcome-item"><b>会根据证据表达</b><span>能用简单中英文术语完成“结论—证据—解释”。</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">五年级实验科学课程 · Unit 1–5 全年重点复习</div></footer>
+
+  <script>
+    const lessons = [...document.querySelectorAll('details.lesson')];
+    document.querySelector('[data-action="open"]').addEventListener('click', () => lessons.forEach(item => item.open = true));
+    document.querySelector('[data-action="close"]').addEventListener('click', () => lessons.forEach(item => item.open = false));
+  </script>
+</body>
+</html>

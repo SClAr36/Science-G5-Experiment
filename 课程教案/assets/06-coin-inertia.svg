@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">硬币卡片惯性实验</title>
+  <desc id="desc">左图慢拉卡片时摩擦作用较久，硬币随卡片移动；右图快速水平弹走卡片时硬币保持原位并落入纸杯。</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif; fill: #17324d; }
+      .title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 22px; font-weight: 650; }
+      .small { font-size: 18px; }
+      .move { stroke: #e66d3f; stroke-width: 8; fill: none; marker-end: url(#arrow-orange); }
+      .fall { stroke: #3b8f65; stroke-width: 8; fill: none; stroke-dasharray: 12 8; marker-end: url(#arrow-green); }
+    </style>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e66d3f"/></marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3b8f65"/></marker>
+  </defs>
+
+  <text x="550" y="46" text-anchor="middle" class="title">实验 2：慢拉与快弹，只有卡片的受力时间改变</text>
+  <rect x="55" y="78" width="475" height="510" rx="24" fill="#fffaf0" stroke="#d9c89d" stroke-width="3"/>
+  <rect x="570" y="78" width="475" height="510" rx="24" fill="#f5fbf8" stroke="#abd0bb" stroke-width="3"/>
+
+  <text x="292" y="125" text-anchor="middle" class="label">A. 慢慢拉卡片 Slow pull</text>
+  <text x="807" y="125" text-anchor="middle" class="label">B. 快速水平弹走 Quick flick</text>
+
+  <g transform="translate(0,10)">
+    <path d="M185 360 L215 515 Q220 540 245 540 L345 540 Q370 540 375 515 L405 360 Z" fill="#d8edf5" stroke="#55768c" stroke-width="5"/>
+    <rect x="145" y="335" width="300" height="26" rx="7" fill="#e7b477" stroke="#8b6338" stroke-width="3"/>
+    <circle cx="295" cy="315" r="31" fill="#d4a72c" stroke="#7f661d" stroke-width="4"/>
+    <path d="M215 260 L385 260" class="move"/>
+    <text x="300" y="238" text-anchor="middle" class="small">摩擦作用较久</text>
+    <path d="M245 290 L370 290" class="move"/>
+    <text x="295" y="585" text-anchor="middle" class="small">卡片与硬币一起改变水平速度</text>
+  </g>
+
+  <g transform="translate(515,10)">
+    <path d="M185 360 L215 515 Q220 540 245 540 L345 540 Q370 540 375 515 L405 360 Z" fill="#d8edf5" stroke="#55768c" stroke-width="5"/>
+    <rect x="265" y="335" width="180" height="26" rx="7" fill="#e7b477" stroke="#8b6338" stroke-width="3"/>
+    <circle cx="205" cy="315" r="31" fill="#d4a72c" stroke="#7f661d" stroke-width="4"/>
+    <path d="M260 270 L430 270" class="move"/>
+    <text x="345" y="247" text-anchor="middle" class="small">卡片迅速离开</text>
+    <path d="M205 355 C205 405 250 430 290 490" class="fall"/>
+    <text x="208" y="220" text-anchor="middle" class="small">硬币水平速度来不及明显改变</text>
+    <text x="295" y="585" text-anchor="middle" class="small">随后重力使硬币落入杯中</text>
+  </g>
+
+  <rect x="290" y="605" width="520" height="34" rx="17" fill="#e8f1f7"/>
+  <text x="550" y="629" text-anchor="middle" class="small">惯性 inertia 不是向下的力；向下加速来自重力 gravity</text>
+</svg>

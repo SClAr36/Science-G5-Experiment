@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">植物物质运输和生存系统</title>
+  <desc id="desc">土壤中的水和矿物质经根进入木质部并向上到叶片，叶片气孔让二氧化碳进入并让水蒸气离开。光合作用在叶片制造糖，韧皮部把糖送往根、芽和储存部位。根也需要氧气。底部说明植物存活取决于资源数量、时间、位置和运输结构共同合适。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f5ff"/>
+      <stop offset="1" stop-color="#f9fff2"/>
+    </linearGradient>
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a86f48"/>
+      <stop offset="1" stop-color="#71442f"/>
+    </linearGradient>
+    <marker id="blueArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2782c4"/>
+    </marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#d48525"/>
+    </marker>
+    <marker id="grayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#435f70"/>
+    </marker>
+    <filter id="s3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#24415a" flood-opacity=".15"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#sky)"/>
+  <rect y="525" width="1200" height="235" fill="url(#soil)"/>
+  <path d="M0 525C180 505 300 541 465 520C650 497 790 541 955 519C1050 506 1123 510 1200 525V760H0Z" fill="url(#soil)"/>
+  <text x="54" y="60" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="31" font-weight="700" fill="#173d31">植物存活不是“有水 + 有阳光”的清单</text>
+  <text x="54" y="94" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#486273">Resources must arrive in the right amount, at the right time, through working structures.</text>
+
+  <g filter="url(#s3)">
+    <circle cx="1030" cy="145" r="66" fill="#ffd86c" stroke="#e7a62c" stroke-width="5"/>
+    <g stroke="#e7a62c" stroke-width="6">
+      <path d="M1030 56V25"/><path d="M1030 265V234"/><path d="M941 145H910"/><path d="M1150 145H1119"/>
+      <path d="M967 82L945 60"/><path d="M1115 230L1093 208"/><path d="M1093 82L1115 60"/><path d="M945 230L967 208"/>
+    </g>
+  </g>
+  <text x="945" y="244" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#8e5c12">sunlight = energy</text>
+
+  <path d="M600 575C595 487 600 375 598 234" stroke="#4f8c48" stroke-width="44" stroke-linecap="round" fill="none"/>
+  <path d="M588 574C585 475 586 370 586 245" stroke="#2782c4" stroke-width="11" fill="none" marker-end="url(#blueArrow)"/>
+  <path d="M612 247C614 350 616 445 615 566" stroke="#d48525" stroke-width="11" fill="none" marker-end="url(#greenArrow)"/>
+  <path d="M598 575C525 610 490 647 455 708" stroke="#7b5b3e" stroke-width="17" stroke-linecap="round"/>
+  <path d="M598 575C670 610 715 650 750 708" stroke="#7b5b3e" stroke-width="17" stroke-linecap="round"/>
+  <path d="M588 575C550 632 540 674 535 735" stroke="#7b5b3e" stroke-width="12" stroke-linecap="round"/>
+  <path d="M610 575C646 634 655 684 660 735" stroke="#7b5b3e" stroke-width="12" stroke-linecap="round"/>
+
+  <path d="M595 296C520 232 420 226 342 273C392 358 506 381 595 323Z" fill="#65aa58" stroke="#367c49" stroke-width="5"/>
+  <path d="M605 324C690 247 798 233 884 289C826 376 700 395 605 350Z" fill="#65aa58" stroke="#367c49" stroke-width="5"/>
+  <path d="M595 390C525 337 447 345 392 398C451 466 531 472 597 418Z" fill="#79b864" stroke="#367c49" stroke-width="5"/>
+  <path d="M605 427C674 366 754 374 811 428C750 493 671 494 604 455Z" fill="#79b864" stroke="#367c49" stroke-width="5"/>
+  <path d="M590 300C503 304 420 315 354 331" stroke="#d8efc8" stroke-width="5" fill="none"/>
+  <path d="M612 334C700 335 790 323 872 300" stroke="#d8efc8" stroke-width="5" fill="none"/>
+  <path d="M592 405C520 408 454 417 404 427" stroke="#d8efc8" stroke-width="4" fill="none"/>
+  <path d="M608 442C675 441 739 443 797 439" stroke="#d8efc8" stroke-width="4" fill="none"/>
+
+  <g filter="url(#s3)">
+    <rect x="52" y="132" width="310" height="160" rx="18" fill="#fff" stroke="#b8cbd5" stroke-width="2"/>
+    <text x="76" y="169" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#173d31">叶片 leaf：制造与交换</text>
+    <text x="76" y="204" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">CO₂ 经 stomata 进入</text>
+    <text x="76" y="232" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">H₂O vapor 经 stomata 离开</text>
+    <text x="76" y="260" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">light + CO₂ + H₂O → sugar + O₂</text>
+  </g>
+  <path d="M370 208C424 223 460 247 495 280" stroke="#435f70" stroke-width="3" fill="none" marker-end="url(#grayArrow)"/>
+
+  <g filter="url(#s3)">
+    <rect x="820" y="338" width="330" height="154" rx="18" fill="#fff" stroke="#b8cbd5" stroke-width="2"/>
+    <text x="844" y="375" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#173d31">两条运输路线</text>
+    <path d="M850 408H936" stroke="#2782c4" stroke-width="8" marker-end="url(#blueArrow)"/>
+    <text x="950" y="414" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">xylem：water + minerals ↑</text>
+    <path d="M850 450H936" stroke="#d48525" stroke-width="8" marker-end="url(#greenArrow)"/>
+    <text x="950" y="456" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">phloem：sugar → sinks</text>
+  </g>
+  <path d="M810 420C760 426 710 430 660 435" stroke="#435f70" stroke-width="3" fill="none" marker-end="url(#grayArrow)"/>
+
+  <g filter="url(#s3)">
+    <rect x="56" y="570" width="330" height="128" rx="18" fill="#fffaf3" stroke="#d6b58e" stroke-width="2"/>
+    <text x="80" y="607" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#6e452c">根区 root zone</text>
+    <text x="80" y="640" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#654f42">吸收 water + minerals</text>
+    <text x="80" y="670" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#654f42">根细胞仍需要 O₂ 做 respiration</text>
+  </g>
+  <path d="M392 635C430 628 468 622 504 615" stroke="#435f70" stroke-width="3" fill="none" marker-end="url(#grayArrow)"/>
+
+  <g transform="translate(455 150)">
+    <ellipse cx="0" cy="0" rx="18" ry="35" fill="#b4da91" stroke="#39734a" stroke-width="4"/>
+    <ellipse cx="34" cy="0" rx="18" ry="35" fill="#b4da91" stroke="#39734a" stroke-width="4"/>
+    <ellipse cx="17" cy="0" rx="7" ry="22" fill="#f8fff3" stroke="#39734a" stroke-width="3"/>
+    <text x="-35" y="61" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700" fill="#173d31">stoma</text>
+    <path d="M-50 -10H-96" stroke="#435f70" stroke-width="3" marker-end="url(#grayArrow)"/>
+    <text x="-145" y="-16" font-family="Arial, sans-serif" font-size="16" fill="#486273">CO₂ in</text>
+    <path d="M86 10H48" stroke="#435f70" stroke-width="3" marker-end="url(#grayArrow)"/>
+    <text x="90" y="16" font-family="Arial, sans-serif" font-size="16" fill="#486273">H₂O out</text>
+  </g>
+
+  <rect x="420" y="704" width="730" height="40" rx="12" fill="#173d31"/>
+  <text x="785" y="730" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" font-weight="700" fill="#fff">too little water → supply breaks · too much water → root-zone oxygen may fall</text>
+</svg>

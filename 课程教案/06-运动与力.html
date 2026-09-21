@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 6–7 节合并课：造一辆车，再用它发现牛顿定律</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 6–7 节合并课：造一辆车，再用它发现牛顿定律</h1>
+</header>
+<main>
+<p><strong>Combined Lessons 6–7: Build a Car and Discover Newton's Laws</strong></p>
+<p><strong>授课状态</strong>：已完成；实际授课第 6 节，共 120 分钟。</p>
+<h2>家长课前准备（Materials for Parents）</h2>
+<p>本课的小车和视频标尺均由家用材料制作，硬币同时用作悬挂物和小车载荷。学生先完成可测量的小车，再把它改装成气球动力车。以下数量按 <strong>1 辆主车 + 少量备用件</strong> 计算。</p>
+<h3>必须额外准备</h3>
+<table>
+<thead>
+<tr>
+<th>材料 Material</th>
+<th style="text-align:right">建议数量 Amount</th>
+<th>具体要求与用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透明空饮料瓶 clear PET bottle</td>
+<td style="text-align:right">2 个，350–500 mL</td>
+<td>1 个主用、1 个备用；瓶身较直、无明显凹陷，清洗并晾干</td>
+</tr>
+<tr>
+<td>硬纸板 stiff cardboard</td>
+<td style="text-align:right">1 块，约 20 × 10 cm</td>
+<td>制作载重托盘和追踪旗</td>
+</tr>
+<tr>
+<td>平直硬板 rigid board</td>
+<td style="text-align:right">1 块，长 60–80 cm、宽至少 15 cm</td>
+<td>课堂搭建伽利略单斜面</td>
+</tr>
+<tr>
+<td>厚书或稳定木块 books / blocks</td>
+<td style="text-align:right">2–3 本或块</td>
+<td>将斜面高端垫至 10–15 cm</td>
+</tr>
+<tr>
+<td>塑料文件夹片或薄硬卡 flexible sheet</td>
+<td style="text-align:right">1 张，长约 20–30 cm</td>
+<td>铺平坡底与地面的过渡处</td>
+</tr>
+<tr>
+<td>同规格塑料瓶盖 identical bottle caps</td>
+<td style="text-align:right">6 个</td>
+<td>4 个做车轮、2 个备用；尽量圆、无破损、大小相同</td>
+</tr>
+<tr>
+<td>竹签 bamboo skewers</td>
+<td style="text-align:right">2 根</td>
+<td>制作前、后车轴；成人先剪去尖端</td>
+</tr>
+<tr>
+<td>直吸管 straight straws</td>
+<td style="text-align:right">3 根</td>
+<td>2 根做车轴轴承、1 根固定在桌边作导向；选择光滑、硬挺的塑料吸管</td>
+</tr>
+<tr>
+<td>可弯吸管 flexible straw</td>
+<td style="text-align:right">1 根</td>
+<td>连接气球，喷口向后</td>
+</tr>
+<tr>
+<td>气球 balloons</td>
+<td style="text-align:right">3 个</td>
+<td>普通圆气球即可；1 个主用、2 个备用</td>
+</tr>
+<tr>
+<td>橡皮筋 rubber bands</td>
+<td style="text-align:right">4–6 根</td>
+<td>固定气球—吸管模块或车轴备用</td>
+</tr>
+<tr>
+<td>透明胶带、纸胶带 clear / masking tape</td>
+<td style="text-align:right">各约 2 m</td>
+<td>固定轴承、桌边导向吸管、模块、标尺与起终点</td>
+</tr>
+<tr>
+<td>回形针或扎带 paper clip / cable tie</td>
+<td style="text-align:right">2 个</td>
+<td>制作车头中央牵引环</td>
+</tr>
+<tr>
+<td>细绳 strong thin string</td>
+<td style="text-align:right">约 2 m</td>
+<td>连接小车和悬挂杯；使用无弹性细绳</td>
+</tr>
+<tr>
+<td>小纸杯 small paper cups</td>
+<td style="text-align:right">2 个</td>
+<td>一个做惯性演示接杯，一个做悬挂质量篮</td>
+</tr>
+<tr>
+<td>硬卡片 stiff card</td>
+<td style="text-align:right">1 张</td>
+<td>用于 2 分钟惯性演示；硬币从主实验的 5 枚 1 元硬币中复用</td>
+</tr>
+<tr>
+<td>1 元人民币硬币 1-yuan coins</td>
+<td style="text-align:right">5 枚</td>
+<td>R 条件杯中放 2 枚，F 条件杯中放 5 枚；M 条件将其中 3 枚固定放在小车托盘内</td>
+</tr>
+<tr>
+<td>橡皮泥或成人热熔胶 modeling clay / hot glue</td>
+<td style="text-align:right">少量</td>
+<td>把瓶盖固定在竹签上；热熔胶只由成人操作</td>
+</tr>
+<tr>
+<td>直尺、剪刀、黑色粗记号笔 ruler / scissors / marker</td>
+<td style="text-align:right">各 1</td>
+<td>裁载重托盘、制作追踪旗和高对比视频标尺</td>
+</tr>
+<tr>
+<td>A4 纸或纸条 A4 paper / paper strips</td>
+<td style="text-align:right">8–10 张</td>
+<td>做 0–40 cm 黑白视频标尺、等时点带和记录纸</td>
+</tr>
+<tr>
+<td>手机及稳定支架 phone and stable stand</td>
+<td style="text-align:right">1 套</td>
+<td>固定侧拍；能拍慢动作并在手机上暂停、拖动回放</td>
+</tr>
+<tr>
+<td>电脑、平板或第二部手机 computer / tablet / second phone</td>
+<td style="text-align:right">1 台</td>
+<td>打开<a href="06-%E8%A7%86%E8%A7%89%E8%AE%A1%E6%97%B6%E5%99%A8.html">课堂视觉计时器（显示到 0.01 s）</a>，屏幕与轨道同时进入录像画面</td>
+</tr>
+<tr>
+<td>毛巾 towel</td>
+<td style="text-align:right">1 条</td>
+<td>桌边缓冲悬挂杯与小车</td>
+</tr>
+</tbody>
+</table>
+<h3>成人课前完成</h3>
+<ol>
+<li>成人用手钻或锥子在空瓶前后各制作一对左右对应的吸管孔，并在瓶盖正中心打轴孔；操作时把材料垫在废木板上。</li>
+<li>剪去竹签尖端，确认边缘光滑。</li>
+<li>把气球套在可弯吸管一端，用橡皮筋扎紧；吹气后捏住喷口，检查连接处密封。</li>
+<li>拍摄手机确认可以录制和回放慢动作；第二台设备打开<a href="06-%E8%A7%86%E8%A7%89%E8%AE%A1%E6%97%B6%E5%99%A8.html">课堂视觉计时器（显示到 0.01 s）</a>，关闭自动锁屏、调高亮度并完成一次试拍。</li>
+</ol>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>对应学校单元</strong>：Unit 3 Energy and its Forms</li>
+<li><strong>对应课堂 Notes</strong>：04 Vectors, Velocity, Acceleration；05–07 Newton's Laws 1–3</li>
+<li><strong>课时</strong>：120 分钟，含 7 分钟休息</li>
+<li><strong>核心任务</strong>：造出一辆合格小车，用它推演惯性运动、测量加速度，并检验力和质量怎样改变加速度。
+<em>How can one car reveal inertia, measure acceleration, and test how force and mass change motion?</em></li>
+</ul>
+<p>全课沿一条连续任务线推进：</p>
+<pre><code class="language-text">5 分钟讲清运动语言 → 2 分钟惯性演示 → 造车并调校 → 伽利略推演
+                                      ↓
+一套小车—悬挂质量装置：R 基准 → F 增力 → M 增质量
+             ↓                           ↓
+       视觉时间码等时点带看出加速       两次公平比较解释 F_net = ma
+                                      ↓
+                         同一辆车改装为气球动力车
+</code></pre>
+<h3>六个实验／任务的目的总览</h3>
+<table>
+<thead>
+<tr>
+<th>实验／任务</th>
+<th>目的与证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>硬币—卡片演示</td>
+<td>观察硬币保持原运动状态的趋势，区分惯性、摩擦力和重力</td>
+</tr>
+<tr>
+<td>自制空瓶“牛顿一号”小车</td>
+<td>制作可调校、可载重、可直线滚动的实验车</td>
+</tr>
+<tr>
+<td>伽利略单斜面与水平面推演</td>
+<td>观察小车下坡后继续运动，并从坡度变化推出惯性运动</td>
+</tr>
+<tr>
+<td>视觉时间码与等时点带</td>
+<td>用相等时间间隔的位置变化判断小车是否加速</td>
+</tr>
+<tr>
+<td>R/F/M 三条件主实验</td>
+<td>分别检验牵引作用和小车质量对加速度的影响</td>
+</tr>
+<tr>
+<td>气球动力改装</td>
+<td>找出分别作用在空气和气球上的第三定律力对</td>
+</tr>
+</tbody>
+</table>
+<h3>学生应能</h3>
+<ol>
+<li>口头区分路程（distance）、位移（displacement）、速度（velocity）和加速度（acceleration）。</li>
+<li>用空饮料瓶、吸管、竹签和瓶盖制作能直线滚动并承载 3 枚 1 元硬币的小车。</li>
+<li>从单斜面实车运动和逐渐放平的假想斜面，表述牛顿第一定律。</li>
+<li>用画面内显示到 0.01 秒、每 0.10 秒改变背景的视觉时间码和同平面标尺读取位置，说明点间距增大就是速度增大。</li>
+<li>在同一个三条件实验里完成两次公平比较：
+<ul>
+<li><code>R ↔ F</code>：小车保持空载，悬挂硬币由 2 枚增加到 5 枚；</li>
+<li><code>R ↔ M</code>：悬挂杯保持 2 枚硬币，小车托盘内固定增加 3 枚 1 元硬币。</li>
+</ul>
+</li>
+<li>用数据支持 <code>net force ↑ → acceleration ↑</code> 与 <code>mass ↑ → acceleration ↓</code>。</li>
+<li>在气球动力车上正确指出牛顿第三定律的一对力作用在不同物体上。</li>
+</ol>
+<h2>二、课堂内容（按时间顺序）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>教学活动</th>
+<th>本段必须留下的证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–5</td>
+<td>运动语言概念讲解</td>
+<td>能区分 distance / displacement 与 velocity / acceleration</td>
+</tr>
+<tr>
+<td style="text-align:right">5–7</td>
+<td>硬币—卡片惯性演示</td>
+<td>“惯性是物体的性质；重力使硬币下落”</td>
+</tr>
+<tr>
+<td style="text-align:right">7–29</td>
+<td>制作空瓶“牛顿一号”小车</td>
+<td>空瓶—吸管—竹签—瓶盖结构完成</td>
+</tr>
+<tr>
+<td style="text-align:right">29–37</td>
+<td>1 m 维修站挑战</td>
+<td>滚行、直线性、承载三项验收记录</td>
+</tr>
+<tr>
+<td style="text-align:right">37–45</td>
+<td>伽利略单斜面与水平面推演</td>
+<td>实车观察、坡度推演与牛顿第一定律表述</td>
+</tr>
+<tr>
+<td style="text-align:right">45–53</td>
+<td>自制视频标尺、固定桌边导向吸管、手机和计时屏</td>
+<td>尺、车、计时屏与镜头位置固定</td>
+</tr>
+<tr>
+<td style="text-align:right">53–64</td>
+<td>拍 R 基准试次 1，制作等时点带</td>
+<td>每 0.10 s 的位置与点距变化</td>
+</tr>
+<tr>
+<td style="text-align:right">64–71</td>
+<td>休息；教师检查绳线与视频</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align:right">71–78</td>
+<td>介绍 R/F/M，预测两次比较</td>
+<td>写下 <code>R↔F</code> 与 <code>R↔M</code> 的预测</td>
+</tr>
+<tr>
+<td style="text-align:right">78–98</td>
+<td>三条件各 3 次测量</td>
+<td>起止时间码、运动时间与异常试次记录</td>
+</tr>
+<tr>
+<td style="text-align:right">98–108</td>
+<td>换算时间、比较或估算加速度</td>
+<td>两个只改一个变量的数据结论</td>
+</tr>
+<tr>
+<td style="text-align:right">108–116</td>
+<td>气球动力车改装与发射</td>
+<td>正确标出第三定律力对</td>
+</tr>
+<tr>
+<td style="text-align:right">116–120</td>
+<td>离堂短答</td>
+<td>用一条证据回答核心问题</td>
+</tr>
+</tbody>
+</table>
+<h3>0–5 分钟：只讲必要概念</h3>
+<p>教师用三句话直接讲清概念：</p>
+<pre><code class="language-text">绕操场一圈：distance &gt; 0，displacement = 0
+velocity：速度大小 + 方向
+acceleration：velocity 随时间的改变；变快、变慢或转弯都可以
+</code></pre>
+<p><strong>讲解落点</strong>：起点与终点重合时位移为 0，实际路径仍计入路程；速度大小保持不变而方向改变时，速度矢量发生变化，因此存在加速度。</p>
+<h3>5–7 分钟：硬币—卡片只演示一次</h3>
+<blockquote>
+<p><strong>实验目的（先看这一句）</strong>：用一个两分钟的反直觉现象观察物体保持原运动状态的趋势，区分惯性、摩擦力和重力，并建立牛顿第一定律所需的惯性概念。</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9IjY1MCIgdmlld0JveD0iMCAwIDExMDAgNjUwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+56Gs5biB5Y2h54mH5oOv5oCn5a6e6aqMPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5bem5Zu+5oWi5ouJ5Y2h54mH5pe25pGp5pOm5L2c55So6L6D5LmF77yM56Gs5biB6ZqP5Y2h54mH56e75Yqo77yb5Y+z5Zu+5b+r6YCf5rC05bmz5by56LWw5Y2h54mH5pe256Gs5biB5L+d5oyB5Y6f5L2N5bm26JC95YWl57q45p2v44CCPC9kZXNjPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICB0ZXh0IHsgZm9udC1mYW1pbHk6ICJOb3RvIFNhbnMgU0MiLCAiTWljcm9zb2Z0IFlhSGVpIiwgQXJpYWwsIHNhbnMtc2VyaWY7IGZpbGw6ICMxNzMyNGQ7IH0KICAgICAgLnRpdGxlIHsgZm9udC1zaXplOiAzMHB4OyBmb250LXdlaWdodDogNzAwOyB9CiAgICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMjJweDsgZm9udC13ZWlnaHQ6IDY1MDsgfQogICAgICAuc21hbGwgeyBmb250LXNpemU6IDE4cHg7IH0KICAgICAgLm1vdmUgeyBzdHJva2U6ICNlNjZkM2Y7IHN0cm9rZS13aWR0aDogODsgZmlsbDogbm9uZTsgbWFya2VyLWVuZDogdXJsKCNhcnJvdy1vcmFuZ2UpOyB9CiAgICAgIC5mYWxsIHsgc3Ryb2tlOiAjM2I4ZjY1OyBzdHJva2Utd2lkdGg6IDg7IGZpbGw6IG5vbmU7IHN0cm9rZS1kYXNoYXJyYXk6IDEyIDg7IG1hcmtlci1lbmQ6IHVybCgjYXJyb3ctZ3JlZW4pOyB9CiAgICA8L3N0eWxlPgogICAgPG1hcmtlciBpZD0iYXJyb3ctb3JhbmdlIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjkiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0byI+PHBhdGggZD0iTTAgMCBMMTAgNSBMMCAxMCB6IiBmaWxsPSIjZTY2ZDNmIi8+PC9tYXJrZXI+CiAgICA8bWFya2VyIGlkPSJhcnJvdy1ncmVlbiIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI5IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDEwIDUgTDAgMTAgeiIgZmlsbD0iIzNiOGY2NSIvPjwvbWFya2VyPgogIDwvZGVmcz4KCiAgPHRleHQgeD0iNTUwIiB5PSI0NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InRpdGxlIj7lrp7pqowgMu+8muaFouaLieS4juW/q+W8ue+8jOWPquacieWNoeeJh+eahOWPl+WKm+aXtumXtOaUueWPmDwvdGV4dD4KICA8cmVjdCB4PSI1NSIgeT0iNzgiIHdpZHRoPSI0NzUiIGhlaWdodD0iNTEwIiByeD0iMjQiIGZpbGw9IiNmZmZhZjAiIHN0cm9rZT0iI2Q5Yzg5ZCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHJlY3QgeD0iNTcwIiB5PSI3OCIgd2lkdGg9IjQ3NSIgaGVpZ2h0PSI1MTAiIHJ4PSIyNCIgZmlsbD0iI2Y1ZmJmOCIgc3Ryb2tlPSIjYWJkMGJiIiBzdHJva2Utd2lkdGg9IjMiLz4KCiAgPHRleHQgeD0iMjkyIiB5PSIxMjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+QS4g5oWi5oWi5ouJ5Y2h54mHIFNsb3cgcHVsbDwvdGV4dD4KICA8dGV4dCB4PSI4MDciIHk9IjEyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj5CLiDlv6vpgJ/msLTlubPlvLnotbAgUXVpY2sgZmxpY2s8L3RleHQ+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMTApIj4KICAgIDxwYXRoIGQ9Ik0xODUgMzYwIEwyMTUgNTE1IFEyMjAgNTQwIDI0NSA1NDAgTDM0NSA1NDAgUTM3MCA1NDAgMzc1IDUxNSBMNDA1IDM2MCBaIiBmaWxsPSIjZDhlZGY1IiBzdHJva2U9IiM1NTc2OGMiIHN0cm9rZS13aWR0aD0iNSIvPgogICAgPHJlY3QgeD0iMTQ1IiB5PSIzMzUiIHdpZHRoPSIzMDAiIGhlaWdodD0iMjYiIHJ4PSI3IiBmaWxsPSIjZTdiNDc3IiBzdHJva2U9IiM4YjYzMzgiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPGNpcmNsZSBjeD0iMjk1IiBjeT0iMzE1IiByPSIzMSIgZmlsbD0iI2Q0YTcyYyIgc3Ryb2tlPSIjN2Y2NjFkIiBzdHJva2Utd2lkdGg9IjQiLz4KICAgIDxwYXRoIGQ9Ik0yMTUgMjYwIEwzODUgMjYwIiBjbGFzcz0ibW92ZSIvPgogICAgPHRleHQgeD0iMzAwIiB5PSIyMzgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5pGp5pOm5L2c55So6L6D5LmFPC90ZXh0PgogICAgPHBhdGggZD0iTTI0NSAyOTAgTDM3MCAyOTAiIGNsYXNzPSJtb3ZlIi8+CiAgICA8dGV4dCB4PSIyOTUiIHk9IjU4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7ljaHniYfkuI7noazluIHkuIDotbfmlLnlj5jmsLTlubPpgJ/luqY8L3RleHQ+CiAgPC9nPgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MTUsMTApIj4KICAgIDxwYXRoIGQ9Ik0xODUgMzYwIEwyMTUgNTE1IFEyMjAgNTQwIDI0NSA1NDAgTDM0NSA1NDAgUTM3MCA1NDAgMzc1IDUxNSBMNDA1IDM2MCBaIiBmaWxsPSIjZDhlZGY1IiBzdHJva2U9IiM1NTc2OGMiIHN0cm9rZS13aWR0aD0iNSIvPgogICAgPHJlY3QgeD0iMjY1IiB5PSIzMzUiIHdpZHRoPSIxODAiIGhlaWdodD0iMjYiIHJ4PSI3IiBmaWxsPSIjZTdiNDc3IiBzdHJva2U9IiM4YjYzMzgiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPGNpcmNsZSBjeD0iMjA1IiBjeT0iMzE1IiByPSIzMSIgZmlsbD0iI2Q0YTcyYyIgc3Ryb2tlPSIjN2Y2NjFkIiBzdHJva2Utd2lkdGg9IjQiLz4KICAgIDxwYXRoIGQ9Ik0yNjAgMjcwIEw0MzAgMjcwIiBjbGFzcz0ibW92ZSIvPgogICAgPHRleHQgeD0iMzQ1IiB5PSIyNDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5Y2h54mH6L+F6YCf56a75byAPC90ZXh0PgogICAgPHBhdGggZD0iTTIwNSAzNTUgQzIwNSA0MDUgMjUwIDQzMCAyOTAgNDkwIiBjbGFzcz0iZmFsbCIvPgogICAgPHRleHQgeD0iMjA4IiB5PSIyMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+56Gs5biB5rC05bmz6YCf5bqm5p2l5LiN5Y+K5piO5pi+5pS55Y+YPC90ZXh0PgogICAgPHRleHQgeD0iMjk1IiB5PSI1ODUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+6ZqP5ZCO6YeN5Yqb5L2/56Gs5biB6JC95YWl5p2v5LitPC90ZXh0PgogIDwvZz4KCiAgPHJlY3QgeD0iMjkwIiB5PSI2MDUiIHdpZHRoPSI1MjAiIGhlaWdodD0iMzQiIHJ4PSIxNyIgZmlsbD0iI2U4ZjFmNyIvPgogIDx0ZXh0IHg9IjU1MCIgeT0iNjI5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuaDr+aApyBpbmVydGlhIOS4jeaYr+WQkeS4i+eahOWKm++8m+WQkeS4i+WKoOmAn+adpeiHqumHjeWKmyBncmF2aXR5PC90ZXh0Pgo8L3N2Zz4K" alt="快速水平弹走卡片时硬币落入杯中的惯性演示" /></p>
+<p>纸杯上放卡片，卡片中央放一枚 1 元硬币；快速、水平弹走卡片，硬币落入杯中。</p>
+<p><strong>现象解释</strong>：快速弹卡片时，摩擦作用时间很短，硬币基本保持原来的静止状态；卡片离开后，重力使硬币向下加速并落入杯中。惯性描述物体保持原运动状态的性质。</p>
+<h3>7–37 分钟：制作并验收空瓶“牛顿一号”</h3>
+<blockquote>
+<p><strong>实验目的（先看这一句）</strong>：用空饮料瓶、吸管、竹签和瓶盖快速造出一辆滚动顺畅、能直线行驶、可以承载 3 枚 1 元硬币并从车头中央牵引的实验车，为后面的所有测量提供同一个可靠研究对象。</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9Ijc2MCIgdmlld0JveD0iMCAwIDExMDAgNzYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+56m66aWu5paZ55O25a6e6aqM5bCP6L2m55qE5q2j56Gu5qiq6L2057uT5p6EPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5L+v6KeG5Zu+5Lit77yM56m66aWu5paZ55O25rC05bmz5pS+572u77yM5YmN5ZCO5ZCE5pyJ5LiA5qC55ZC4566h5qiq6Leo55O26Lqr5bem5Y+z77yM5Lik5qC556u5562+56m/6L+H5ZC4566h5L2c5Li65YmN5ZCO6L2m6L2077yM5q+P5qC56L2m6L206L+e5o6l5bem5Y+z5Lik5Liq55O255uW6L2m6L2u44CC55O26Lqr5LiK5pa55Zu65a6a6L296YeN5omY55uY44CB6L+96Liq5peX5ZKM5bGF5Lit54m15byV54K544CCPC9kZXNjPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICB0ZXh0IHsgZm9udC1mYW1pbHk6ICJOb3RvIFNhbnMgU0MiLCAiTWljcm9zb2Z0IFlhSGVpIiwgQXJpYWwsIHNhbnMtc2VyaWY7IGZpbGw6ICMxNzMyNGQ7IH0KICAgICAgLnRpdGxlIHsgZm9udC1zaXplOiAzMHB4OyBmb250LXdlaWdodDogNzAwOyB9CiAgICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMjFweDsgZm9udC13ZWlnaHQ6IDY1MDsgfQogICAgICAuc21hbGwgeyBmb250LXNpemU6IDE4cHg7IH0KICAgICAgLmd1aWRlIHsgc3Ryb2tlOiAjNzE4NTk3OyBzdHJva2Utd2lkdGg6IDIuNTsgc3Ryb2tlLWRhc2hhcnJheTogOCA3OyBmaWxsOiBub25lOyB9CiAgICAgIC5hcnJvdyB7IHN0cm9rZTogI2U2NmQzZjsgc3Ryb2tlLXdpZHRoOiA2OyBmaWxsOiBub25lOyBtYXJrZXItZW5kOiB1cmwoI29yYW5nZSk7IH0KICAgIDwvc3R5bGU+CiAgICA8bWFya2VyIGlkPSJvcmFuZ2UiIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIHoiIGZpbGw9IiNlNjZkM2YiLz48L21hcmtlcj4KICA8L2RlZnM+CgogIDx0ZXh0IHg9IjU1MCIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJ0aXRsZSI+56m655O254mI4oCc54mb6aG/5LiA5Y+34oCd77ya5YmN44CB5ZCO5Lik5qC56L2m6L206YO95qiq5ZCR6L+e5o6l5bem5Y+z6L2m6L2uPC90ZXh0PgogIDxyZWN0IHg9IjQ1IiB5PSI3OCIgd2lkdGg9IjEwMTAiIGhlaWdodD0iNjIwIiByeD0iMjQiIGZpbGw9IiNmN2ZiZmQiIHN0cm9rZT0iI2I3YzdkMyIgc3Ryb2tlLXdpZHRoPSIzIi8+CgogIDx0ZXh0IHg9IjM2NSIgeT0iMTE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPuS/r+inhue7k+aehDwvdGV4dD4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5NSwxMzUpIj4KICAgIDxwYXRoIGQ9Ik0xMjAgMTUwIFExMjAgOTUgMTkwIDgwIEw0NDUgODAgUTUwMCA5NSA1MTUgMTU1IEw1MTUgMjE1IEw1NzUgMjMwIEw1NzUgMjk1IEw1MTUgMzEwIEw1MTUgMzcwIFE1MDAgNDMwIDQ0NSA0NDUgTDE5MCA0NDUgUTEyMCA0MzAgMTIwIDM3MCBaIiBmaWxsPSIjZDllZGY0IiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iIzRiN2M5MSIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgICA8cmVjdCB4PSI1NzAiIHk9IjIyNiIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjczIiByeD0iOSIgZmlsbD0iI2Q5NTM1MyIgc3Ryb2tlPSIjOGMzMDMwIiBzdHJva2Utd2lkdGg9IjQiLz4KCiAgICA8bGluZSB4MT0iMjEwIiB5MT0iMzAiIHgyPSIyMTAiIHkyPSI0OTUiIHN0cm9rZT0iIzYwN2Q4YiIgc3Ryb2tlLXdpZHRoPSIyNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8bGluZSB4MT0iNDU4IiB5MT0iMzAiIHgyPSI0NTgiIHkyPSI0OTUiIHN0cm9rZT0iIzYwN2Q4YiIgc3Ryb2tlLXdpZHRoPSIyNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8bGluZSB4MT0iMjEwIiB5MT0iMTgiIHgyPSIyMTAiIHkyPSI1MDciIHN0cm9rZT0iI2I0OGE1MyIgc3Ryb2tlLXdpZHRoPSI5Ii8+CiAgICA8bGluZSB4MT0iNDU4IiB5MT0iMTgiIHgyPSI0NTgiIHkyPSI1MDciIHN0cm9rZT0iI2I0OGE1MyIgc3Ryb2tlLXdpZHRoPSI5Ii8+CgogICAgPGcgZmlsbD0iIzRjOTJiZCIgc3Ryb2tlPSIjMjQ1ZDgyIiBzdHJva2Utd2lkdGg9IjUiPgogICAgICA8Y2lyY2xlIGN4PSIyMTAiIGN5PSIyOCIgcj0iNTUiLz48Y2lyY2xlIGN4PSIyMTAiIGN5PSI0OTciIHI9IjU1Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjQ1OCIgY3k9IjI4IiByPSI1NSIvPjxjaXJjbGUgY3g9IjQ1OCIgY3k9IjQ5NyIgcj0iNTUiLz4KICAgIDwvZz4KICAgIDxnIGZpbGw9IiNkN2U1ZWMiIHN0cm9rZT0iIzI0NWQ4MiIgc3Ryb2tlLXdpZHRoPSIzIj4KICAgICAgPGNpcmNsZSBjeD0iMjEwIiBjeT0iMjgiIHI9IjEwIi8+PGNpcmNsZSBjeD0iMjEwIiBjeT0iNDk3IiByPSIxMCIvPgogICAgICA8Y2lyY2xlIGN4PSI0NTgiIGN5PSIyOCIgcj0iMTAiLz48Y2lyY2xlIGN4PSI0NTgiIGN5PSI0OTciIHI9IjEwIi8+CiAgICA8L2c+CgogICAgPHJlY3QgeD0iMjQ1IiB5PSIyMTAiIHdpZHRoPSIxODAiIGhlaWdodD0iMTEyIiByeD0iMTMiIGZpbGw9IiNmZmZhZjAiIHN0cm9rZT0iI2E5OGE1MiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgICA8dGV4dCB4PSIzMzUiIHk9IjI1MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7ovb3ph43miZjnm5g8L3RleHQ+CiAgICA8dGV4dCB4PSIzMzUiIHk9IjI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7lm7rlrprotKjph4/niYc8L3RleHQ+CiAgICA8bGluZSB4MT0iMTcyIiB5MT0iMTc1IiB4Mj0iMTcyIiB5Mj0iOTYiIHN0cm9rZT0iI2M2NTU1NSIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgICA8cG9seWdvbiBwb2ludHM9IjE3Miw5NiAyMzAsMTEyIDE3MiwxMzAiIGZpbGw9IiNmMmM5NGMiIHN0cm9rZT0iIzliNzQyMiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8dGV4dCB4PSI5NSIgeT0iMTU1IiBjbGFzcz0ic21hbGwiPui/vei4quaXlzwvdGV4dD4KCiAgICA8cGF0aCBkPSJNNjIwIDI0MiBDNjU1IDI0MiA2NTUgMjgzIDYyMCAyODMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzUwNWQ2NCIgc3Ryb2tlLXdpZHRoPSI2Ii8+CiAgICA8dGV4dCB4PSI1MjAiIHk9IjIwMCIgY2xhc3M9InNtYWxsIj7nk7bpoojmnJ3liY08L3RleHQ+CiAgICA8cGF0aCBkPSJNNjI1IDI2MiBMNjkwIDI2MiIgY2xhc3M9ImFycm93Ii8+CiAgICA8dGV4dCB4PSI2NTIiIHk9IjIzMiIgY2xhc3M9InNtYWxsIj7ov5DliqjmlrnlkJE8L3RleHQ+CgogICAgPHRleHQgeD0iOCIgeT0iMzAiIGNsYXNzPSJzbWFsbCI+5bem5L6n6L2m6L2uPC90ZXh0PgogICAgPHRleHQgeD0iOCIgeT0iNTA1IiBjbGFzcz0ic21hbGwiPuWPs+S+p+i9pui9rjwvdGV4dD4KICAgIDxwYXRoIGQ9Ik01NSAyNDIgTDE5MCAyNDIiIGNsYXNzPSJndWlkZSIvPgogICAgPHRleHQgeD0iOCIgeT0iMjMyIiBjbGFzcz0ic21hbGwiPuWQjui9tDwvdGV4dD4KICAgIDxwYXRoIGQ9Ik00ODAgMjQyIEw1OTAgMjQyIiBjbGFzcz0iZ3VpZGUiLz4KICAgIDx0ZXh0IHg9IjU5NSIgeT0iMjUwIiBjbGFzcz0ic21hbGwiPuWJjei9tDwvdGV4dD4KICA8L2c+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDc2MCwxNjApIj4KICAgIDx0ZXh0IHg9IjEzNSIgeT0iMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7kuIDmoLnovabovbTnmoTliZbpnaI8L3RleHQ+CiAgICA8Y2lyY2xlIGN4PSIyMCIgY3k9IjEzMCIgcj0iNTUiIGZpbGw9IiM0YzkyYmQiIHN0cm9rZT0iIzI0NWQ4MiIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgICA8Y2lyY2xlIGN4PSIyNTAiIGN5PSIxMzAiIHI9IjU1IiBmaWxsPSIjNGM5MmJkIiBzdHJva2U9IiMyNDVkODIiIHN0cm9rZS13aWR0aD0iNSIvPgogICAgPGxpbmUgeDE9IjIwIiB5MT0iMTMwIiB4Mj0iMjUwIiB5Mj0iMTMwIiBzdHJva2U9IiNiNDhhNTMiIHN0cm9rZS13aWR0aD0iOSIvPgogICAgPGxpbmUgeDE9IjcwIiB5MT0iMTMwIiB4Mj0iMjAwIiB5Mj0iMTMwIiBzdHJva2U9IiM2MDdkOGIiIHN0cm9rZS13aWR0aD0iMjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPGxpbmUgeDE9IjcwIiB5MT0iMTMwIiB4Mj0iMjAwIiB5Mj0iMTMwIiBzdHJva2U9IiNkOWVkZjQiIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPHRleHQgeD0iMTM1IiB5PSIxODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+56u5562+5Zyo5ZC4566h6L205om/5YaF6L2s5YqoPC90ZXh0PgogICAgPHRleHQgeD0iMjAiIHk9IjIyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7lt6bova48L3RleHQ+CiAgICA8dGV4dCB4PSIyNTAiIHk9IjIyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7lj7Pova48L3RleHQ+CgogICAgPHJlY3QgeD0iMTIiIHk9IjI4NSIgd2lkdGg9IjI1MiIgaGVpZ2h0PSIxNDAiIHJ4PSIxNiIgZmlsbD0iI2ZmZmFmMCIgc3Ryb2tlPSIjZDZiZDg2IiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDx0ZXh0IHg9IjEzOCIgeT0iMzIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPuijhemFjeajgOafpTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM0IiB5PSIzNTUiIGNsYXNzPSJzbWFsbCI+4pGgIOWJjeOAgeWQjuWQuOeuoeW9vOatpOW5s+ihjDwvdGV4dD4KICAgIDx0ZXh0IHg9IjM0IiB5PSIzODUiIGNsYXNzPSJzbWFsbCI+4pGhIOeTtuebluS4reW/g+WtlOS/neaMgeWxheS4rTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM0IiB5PSI0MTUiIGNsYXNzPSJzbWFsbCI+4pGiIOi9ruebluS4jueTtui6q+eVmSAy4oCTMyBtbTwvdGV4dD4KICA8L2c+CgogIDxyZWN0IHg9IjE5NSIgeT0iNzEwIiB3aWR0aD0iNzEwIiBoZWlnaHQ9IjM2IiByeD0iMTgiIGZpbGw9IiNlOGYxZjciLz4KICA8dGV4dCB4PSI1NTAiIHk9IjczNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7pqozmlLbvvJrovbvmjqjmu5rooYwg4omlIDEgbSDCtyDmqKrlkJHlgY/np7sg4omkIDEwIGNtIMK3IOeos+WumuaJv+i9vSAxOCDkuKrotKjph4/niYc8L3RleHQ+Cjwvc3ZnPgo=" alt="空饮料瓶、横向吸管轴承、竹签和瓶盖组成的实验小车" /></p>
+<h4>制作步骤（7–29 分钟）</h4>
+<ol>
+<li>将晾干的 350–500 mL 空瓶水平放置，瓶颈作为车头；在瓶身前、后位置各标出一条横向车轴线。</li>
+<li>成人在每条车轴线的左右两侧制作对应孔，把两根约 9 cm 的直吸管横向穿过瓶身并固定；两根吸管彼此平行。</li>
+<li>将两根去尖竹签分别穿过吸管，作为前轴和后轴；竹签在吸管内自由转动。</li>
+<li>把 4 个中心已打孔的瓶盖固定在竹签两端；轮盖与瓶身之间留约 2–3 mm。</li>
+<li>用硬纸板折出约 <code>12 × 6 cm</code> 的浅托盘，以两根橡皮筋或胶带固定在瓶身上方；托盘中心对齐瓶身中线。</li>
+<li>在瓶颈下方安装回形针或扎带牵引环；在托盘旁竖起高对比追踪旗，视频统一读取追踪旗前缘。</li>
+</ol>
+<p><strong>教师提示</strong>：吸管孔、瓶盖轴孔和热熔胶固定由成人完成；橡皮泥加胶带可作为车轮固定方式。</p>
+<h4>赛道验收（29–37 分钟）</h4>
+<p>小车完成后进行三项工程验收：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align:right">合格线</th>
+<th>调校重点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>滚行距离</td>
+<td style="text-align:right">轻推后至少滚行 1 m</td>
+<td>轮盖是否蹭车身、竹签是否被胶粘住</td>
+</tr>
+<tr>
+<td>直线性</td>
+<td style="text-align:right">1 m 内横向偏移 ≤ 10 cm</td>
+<td>两根吸管是否平行、轮孔是否明显偏心</td>
+</tr>
+<tr>
+<td>承载</td>
+<td style="text-align:right">托盘内固定放 3 枚 1 元硬币后仍能滚动</td>
+<td>瓶身是否凹陷、托盘是否居中</td>
+</tr>
+</tbody>
+</table>
+<h3>37–45 分钟：伽利略单斜面与水平面推演</h3>
+<blockquote>
+<p><strong>实验目的（先看这一句）</strong>：让自制小车从斜面进入水平面，观察它在坡底后继续运动；再将假想的右侧斜面逐渐放平，从运动距离的变化推演合力为零时物体保持原有速度和方向。</p>
+</blockquote>
+<p><strong>牛顿第一定律 Newton’s First Law：只要物体所受的力是平衡的，它就会保持原来的速度。 / As long as the forces on an object are balanced, it will continue at the same velocity.</strong></p>
+<blockquote>
+<p><strong>科学史与思想实验</strong>：伽利略从真实的斜面运动出发，通过逐渐减小坡度、设想没有摩擦的理想情况，帮助人们建立了惯性思想；后来笛卡尔和牛顿继续修正和发展，最终形成牛顿第一定律。思想实验是从真实观察出发，暂时排除干扰，再用有根据的想象和逻辑，让现实中不容易直接看见的规律显现出来。</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9IjcyMCIgdmlld0JveD0iMCAwIDExMDAgNzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+5Ly95Yip55Wl5Y2V5pac6Z2i5a6e6L2m5ryU56S65LiO5rC05bmz6Z2i5oCd5oOz5o6o5ryUPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5bem5L6n5bGV56S66Ieq5Yi25bCP6L2m5LuO5Lmm5pys5Z6r6auY55qE5Y2V5pac6Z2i5LiL5ruR77yM57uP5bmz5ruR6L+H5rih6L+b5YWl5rC05bmz6Z2i77yb5Y+z5L6n5bGV56S65YGH5oOz55qE56ys5LqM5L6n5pac6Z2i6YCQ5riQ5Y+Y57yT77yM6L6+5Yiw55u46L+R6auY5bqm5omA6ZyA55qE6Led56a76YCQ5riQ5aKe5Yqg77yM5pyA57uI5o6o5ryU5Yiw55CG5oOz5rC05bmz6Z2i5LiK55qE5YyA6YCf6L+Q5Yqo44CCPC9kZXNjPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICB0ZXh0IHsgZm9udC1mYW1pbHk6ICJOb3RvIFNhbnMgU0MiLCAiTWljcm9zb2Z0IFlhSGVpIiwgQXJpYWwsIHNhbnMtc2VyaWY7IGZpbGw6ICMxNzMyNGQ7IH0KICAgICAgLnRpdGxlIHsgZm9udC1zaXplOiAzMHB4OyBmb250LXdlaWdodDogNzAwOyB9CiAgICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMjFweDsgZm9udC13ZWlnaHQ6IDY1MDsgfQogICAgICAuc21hbGwgeyBmb250LXNpemU6IDE3cHg7IH0KICAgICAgLnRyYWNrIHsgc3Ryb2tlOiAjNjU3OTg2OyBzdHJva2Utd2lkdGg6IDg7IGZpbGw6IG5vbmU7IHN0cm9rZS1saW5lY2FwOiByb3VuZDsgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsgfQogICAgICAuZ3VpZGUgeyBzdHJva2U6ICM5Yjc0MjI7IHN0cm9rZS13aWR0aDogMzsgc3Ryb2tlLWRhc2hhcnJheTogOSA3OyBmaWxsOiBub25lOyB9CiAgICAgIC5tb3Rpb24geyBzdHJva2U6ICNlNjZkM2Y7IHN0cm9rZS13aWR0aDogNzsgZmlsbDogbm9uZTsgbWFya2VyLWVuZDogdXJsKCNvcmFuZ2UpOyB9CiAgICAgIC5pbmZlciB7IHN0cm9rZTogIzNiOGY2NTsgc3Ryb2tlLXdpZHRoOiA2OyBmaWxsOiBub25lOyBtYXJrZXItZW5kOiB1cmwoI2dyZWVuKTsgfQogICAgPC9zdHlsZT4KICAgIDxtYXJrZXIgaWQ9Im9yYW5nZSIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI5IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDEwIDUgTDAgMTAgeiIgZmlsbD0iI2U2NmQzZiIvPjwvbWFya2VyPgogICAgPG1hcmtlciBpZD0iZ3JlZW4iIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIHoiIGZpbGw9IiMzYjhmNjUiLz48L21hcmtlcj4KICA8L2RlZnM+CgogIDx0ZXh0IHg9IjU1MCIgeT0iNDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJ0aXRsZSI+5Ly95Yip55Wl5o6o5ryU77ya5Z2h6LaK57yT77yM5Yiw6L6+55u46L+R6auY5bqm6ZyA6KaB6LWw5b6X6LaK6L+cPC90ZXh0PgoKICA8cmVjdCB4PSI0NSIgeT0iNzgiIHdpZHRoPSI0NjAiIGhlaWdodD0iNTgwIiByeD0iMjQiIGZpbGw9IiNmN2ZiZmQiIHN0cm9rZT0iI2I3YzdkMyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHRleHQgeD0iMjc1IiB5PSIxMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+5a6e54mp5pCt5bu677ya5LiA5Z2X5pac6Z2i5o6l5rC05bmz6Z2iPC90ZXh0PgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3NSwxNTUpIj4KICAgIDxyZWN0IHg9IjE4IiB5PSIyOTIiIHdpZHRoPSIxMTAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSIjZDhjMjk5IiBzdHJva2U9IiM4NDZiNDMiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgPHJlY3QgeD0iMzQiIHk9IjI2NiIgd2lkdGg9IjEwNSIgaGVpZ2h0PSIzMiIgcng9IjYiIGZpbGw9IiNlN2Q1YjMiIHN0cm9rZT0iIzg0NmI0MyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8cGF0aCBkPSJNOTAgMjQ4IEwzMDAgMzkwIEw0MDAgMzkwIiBjbGFzcz0idHJhY2siLz4KICAgIDxwYXRoIGQ9Ik0yNzggMzc2IFEzMDAgMzkwIDMyNiAzOTAiIHN0cm9rZT0iI2Q4Yjk1ZiIgc3Ryb2tlLXdpZHRoPSIxMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICA8bGluZSB4MT0iNDIiIHkxPSIyNDgiIHgyPSIxNTAiIHkyPSIyNDgiIGNsYXNzPSJndWlkZSIvPgogICAgPGxpbmUgeDE9IjQyIiB5MT0iMzkwIiB4Mj0iNDIiIHkyPSIyNDgiIHN0cm9rZT0iIzliNzQyMiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8cGF0aCBkPSJNMzQgMjU4IEw0MiAyNDggTDUwIDI1OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOWI3NDIyIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDx0ZXh0IHg9IjI2IiB5PSIzMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+aDwvdGV4dD4KCiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzUsMjU0KSByb3RhdGUoMzQpIj4KICAgICAgPHBhdGggZD0iTTUgNCBRMCAxMCA0IDMyIFE4IDQwIDIwIDQwIEw3MiA0MCBMNzIgMzMgTDk0IDI5IEw5NCAxNiBMNzIgMTEgTDcyIDQgWiIgZmlsbD0iI2Q5ZWRmNCIgZmlsbC1vcGFjaXR5PSIwLjgyIiBzdHJva2U9IiM0YjdjOTEiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjQ1IiByPSIxNiIgZmlsbD0iIzRjOTJiZCIgc3Ryb2tlPSIjMjQ1ZDgyIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgICAgPGNpcmNsZSBjeD0iNzQiIGN5PSI0NSIgcj0iMTYiIGZpbGw9IiM0YzkyYmQiIHN0cm9rZT0iIzI0NWQ4MiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8L2c+CiAgICA8cGF0aCBkPSJNMjEwIDMxMCBDMjQ1IDM0MCAyNzUgMzY3IDMxNSAzNzgiIGNsYXNzPSJtb3Rpb24iLz4KICAgIDxwYXRoIGQ9Ik0zMjYgMzUwIEwzOTAgMzUwIiBjbGFzcz0ibW90aW9uIi8+CiAgICA8dGV4dCB4PSIyNDgiIHk9IjQ0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7kuIvlnaHlkI7nu6fnu63msr/msLTlubPpnaLov5Dliqg8L3RleHQ+CiAgICA8dGV4dCB4PSIyNDgiIHk9IjQ3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7lm7rlrprph4rmlL7pq5jluqYgwrcg6Z2Z5q2i6YeK5pS+IMK3IOmHjeWkjSAyIOasoTwvdGV4dD4KICA8L2c+CgogIDxyZWN0IHg9IjUzNSIgeT0iNzgiIHdpZHRoPSI1MjAiIGhlaWdodD0iNTgwIiByeD0iMjQiIGZpbGw9IiNmZmZhZjAiIHN0cm9rZT0iI2Q2YmQ4NiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHRleHQgeD0iNzk1IiB5PSIxMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+55m95p2/5o6o5ryU77ya5Y+z5L6n5Z2h5bqm6YCQ5riQ5YeP5bCPPC90ZXh0PgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NzUsMTU1KSI+CiAgICA8bGluZSB4MT0iMTAiIHkxPSI3NSIgeDI9IjQzMCIgeTI9Ijc1IiBjbGFzcz0iZ3VpZGUiLz4KICAgIDx0ZXh0IHg9IjQzOCIgeT0iODEiIGNsYXNzPSJzbWFsbCI+55u46L+R6auY5bqmIGg8L3RleHQ+CiAgICA8cGF0aCBkPSJNMjAgNzUgTDEzNSAxNzAgTDIzNSA3NSIgY2xhc3M9InRyYWNrIi8+CiAgICA8cGF0aCBkPSJNMTUwIDE1NSBMMjEwIDk4IiBjbGFzcz0iaW5mZXIiLz4KICAgIDx0ZXh0IHg9IjMzMCIgeT0iMTQwIiBjbGFzcz0ic21hbGwiPui+g+mZoe+8mui3neemu+i+g+efrTwvdGV4dD4KCiAgICA8bGluZSB4MT0iMTAiIHkxPSIyMzUiIHgyPSI0MzAiIHkyPSIyMzUiIGNsYXNzPSJndWlkZSIvPgogICAgPHBhdGggZD0iTTIwIDIzNSBMMTM1IDMzMCBMNDEwIDIzNSIgY2xhc3M9InRyYWNrIi8+CiAgICA8cGF0aCBkPSJNMTcwIDMxOCBMMzUwIDI1NSIgY2xhc3M9ImluZmVyIi8+CiAgICA8dGV4dCB4PSIyNzAiIHk9IjM2MCIgY2xhc3M9InNtYWxsIj7ovoPnvJPvvJrot53nprvmm7Tplb88L3RleHQ+CgogICAgPHBhdGggZD0iTTIwIDM5NSBMMTM1IDQ5MCBMNDQwIDQ5MCIgY2xhc3M9InRyYWNrIi8+CiAgICA8cGF0aCBkPSJNMTY1IDQ2MiBMNDEwIDQ2MiIgY2xhc3M9ImluZmVyIi8+CiAgICA8dGV4dCB4PSIyNzUiIHk9IjUzNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7nkIbmg7PmsLTlubPpnaLvvJpGX25ldCA9IDAg4oaSIHZlbG9jaXR5IOS/neaMgTwvdGV4dD4KICA8L2c+CgogIDxyZWN0IHg9IjIxNSIgeT0iNjc1IiB3aWR0aD0iNjcwIiBoZWlnaHQ9IjM0IiByeD0iMTYiIGZpbGw9IiNlOGYxZjciLz4KICA8dGV4dCB4PSI1NTAiIHk9IjY5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7op4Llr5/lrp7pmYXov5Dliqgg4oaSIOaUueWPmOWBh+aDs+WdoeW6piDihpIg5o6o5Yiw5rC05bmz5p6B6ZmQIOKGkiDooajov7DniZvpob/nrKzkuIDlrprlvos8L3RleHQ+Cjwvc3ZnPgo=" alt="自制小车从单斜面进入水平面，并推演右侧斜面逐渐放平" /></p>
+<h4>课堂搭建（37–39 分钟）</h4>
+<ol>
+<li>在地面铺设 60–80 cm 平直硬板，用厚书或稳定木块把高端垫至 10–15 cm。</li>
+<li>用塑料文件夹片或薄硬卡覆盖坡底接缝，形成约 20–30 cm 的平滑过渡。</li>
+<li>在斜面上标出固定释放位置，在水平跑道末端放置毛巾软挡板。</li>
+</ol>
+<h4>实车观察（39–42 分钟）</h4>
+<ol>
+<li>把小车前缘对齐释放线，从静止状态释放。</li>
+<li>观察小车经过坡底后在水平面继续运动，并用纸胶带标出停止位置。</li>
+<li>重复 2 次，记录两次水平运动距离。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>试次</th>
+<th>释放位置</th>
+<th style="text-align:right">水平运动距离/cm</th>
+<th>观察</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>固定刻线</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>固定刻线</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>思想推演（42–45 分钟）</h4>
+<ol>
+<li>在白板上补画右侧上坡，并画出与释放点相同的垂直高度线。</li>
+<li>右侧坡度较陡时，到达相近高度所需的轨道距离较短。</li>
+<li>右侧坡度变缓时，到达相近高度所需的轨道距离增加。</li>
+<li>右侧坡度趋近水平时，所需距离持续增加；理想水平面上 <code>F_net = 0</code>，小车保持原来的速度和方向。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">Galileo: opposing slope becomes flatter → travel distance increases
+Newton’s First Law: balanced forces → same velocity
+现实小车的滚动阻力、轮轴摩擦和形变会改变它的速度
+</code></pre>
+</div>
+</details>
+<h3>45–64 分钟：视频标尺、视觉时间码与等时点带</h3>
+<blockquote>
+<p><strong>实验目的（先看这一句）</strong>：在 R 基准条件的一次运动中，每隔相同时间读取一次小车位置，用“后面的点距越来越大”作为小车速度增加、存在加速度的直接证据，并建立后续三条件实验的测量方法。</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9Ijc2MCIgdmlld0JveD0iMCAwIDExMDAgNzYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+55So55S76Z2i5YaF6KeG6KeJ5pe26Ze056CB5rWL6YeP5bCP6L2m6L+Q5YqoPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5Zu65a6a5omL5py65ZCM5pe25ouN5Yiw5bCP6L2m6L2o6YGT44CB5Y6Y57Gz5qCH5bC65ZKM5pi+56S65Yiw55m+5YiG5LmL5LiA56eS55qE6K6h5pe25Zmo44CC5pWw5a2X5q+P55m+5YiG5LmL5LiA56eS5pu05paw77yM6IOM5pmv5q+P6Zu254K55LiA56eS5YiH5o2i77yb6K+75Y+W5bCP6L2m6YCa6L+H6LW354K55ZKM57uI54K55pe255qE5pe26Ze056CB77yM5bm25oyJ6L+e57ut5pe26Ze056CB5Yi25L2c562J5pe254K55bim44CCPC9kZXNjPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJkZXNrIiB4MT0iMCIgeDI9IjAiIHkxPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZjdlZGQ4Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZTdkMmFjIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9InNoYWRvdyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+PGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjUiIHN0ZERldmlhdGlvbj0iNiIgZmxvb2Qtb3BhY2l0eT0iLjE4Ii8+PC9maWx0ZXI+CiAgICA8bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI1IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDBMMTAgNUwwIDEwWiIgZmlsbD0iIzI0NGI2OCIvPjwvbWFya2VyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTEwMCIgaGVpZ2h0PSI3NjAiIHJ4PSIyOCIgZmlsbD0iI2Y3ZmFmYiIvPgogIDx0ZXh0IHg9IjU1MCIgeT0iNTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwnTWljcm9zb2Z0IFlhSGVpJyxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTczMjRhIj7op4bop4nml7bpl7TnoIHvvJrorqnigJznnJ/lrp7ml7bpl7TigJ3nm7TmjqXlh7rnjrDlnKjmhaLliqjkvZznlLvpnaLph4w8L3RleHQ+CgogIDxyZWN0IHg9IjQ2IiB5PSI4OCIgd2lkdGg9IjEwMDgiIGhlaWdodD0iMzY1IiByeD0iMjQiIGZpbGw9InVybCgjZGVzaykiIHN0cm9rZT0iI2M2YWI3YiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHRleHQgeD0iNzQiIHk9IjEyMyIgZm9udC1mYW1pbHk9IkFyaWFsLCdNaWNyb3NvZnQgWWFIZWknLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM2MDRjMmYiPuaJi+acuuaLjeaRhOiMg+WbtDwvdGV4dD4KICA8cmVjdCB4PSI2NCIgeT0iMTM2IiB3aWR0aD0iNzE4IiBoZWlnaHQ9IjI4NiIgcng9IjE4IiBmaWxsPSIjZmZmIiBzdHJva2U9IiMzMTVmN2QiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTMgOSIvPgoKICA8ZyBmaWx0ZXI9InVybCgjc2hhZG93KSI+CiAgICA8cmVjdCB4PSI4MTQiIHk9IjEzMCIgd2lkdGg9IjIwNSIgaGVpZ2h0PSIyNzAiIHJ4PSIyMCIgZmlsbD0iIzI1MmIzMSIvPgogICAgPGNpcmNsZSBjeD0iOTE2IiBjeT0iMTU0IiByPSI1IiBmaWxsPSIjNzc3Ii8+CiAgICA8cmVjdCB4PSI4MzAiIHk9IjE3NCIgd2lkdGg9IjE3MyIgaGVpZ2h0PSIxNDIiIHJ4PSI4IiBmaWxsPSIjZmZmIi8+CiAgICA8dGV4dCB4PSI5MTYiIHk9IjI1OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNjEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTEiPjIuMTA8L3RleHQ+CiAgICA8dGV4dCB4PSI5MTYiIHk9IjI5MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiMxMTEiPnM8L3RleHQ+CiAgICA8cmVjdCB4PSI4NDkiIHk9IjMzNCIgd2lkdGg9IjEzNCIgaGVpZ2h0PSIzOCIgcng9IjEwIiBmaWxsPSIjZWI1ZDNmIi8+CiAgICA8dGV4dCB4PSI5MTYiIHk9IjM2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCdNaWNyb3NvZnQgWWFIZWknLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiPuaVsOWtl+WIsCAwLjAxIHM8L3RleHQ+CiAgICA8dGV4dCB4PSI5MTYiIHk9IjM5MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCdNaWNyb3NvZnQgWWFIZWknLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNmZmYiPuiDjOaZr+avjyAwLjEwIHMg5o2i6ImyPC90ZXh0PgogIDwvZz4KICA8cGF0aCBkPSJNNzk1IDI1N0g3NDIiIHN0cm9rZT0iIzI0NGI2OCIgc3Ryb2tlLXdpZHRoPSI0IiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogIDx0ZXh0IHg9Ijg5NyIgeT0iNDIzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsJ01pY3Jvc29mdCBZYUhlaScsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzI0NGI2OCI+6K6h5pe25Zmo5bGP5bmV5Lmf6L+b5YWl55S76Z2iPC90ZXh0PgoKICA8cmVjdCB4PSI5MSIgeT0iMzQwIiB3aWR0aD0iNjU0IiBoZWlnaHQ9IjQ4IiByeD0iNyIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjNGI0YjRiIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8ZyBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+CiAgICA8dGV4dCB4PSIxMTMiIHk9IjQxNCI+MDwvdGV4dD48dGV4dCB4PSIyNjYiIHk9IjQxNCI+MTA8L3RleHQ+PHRleHQgeD0iNDE5IiB5PSI0MTQiPjIwPC90ZXh0Pjx0ZXh0IHg9IjU3MiIgeT0iNDE0Ij4zMDwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjQxNCI+NDAgY208L3RleHQ+CiAgPC9nPgogIDxnIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIzIj4KICAgIDxwYXRoIGQ9Ik0xMTMgMzQwdjQ4TTI2NiAzNDB2NDhNNDE5IDM0MHY0OE01NzIgMzQwdjQ4TTcyNSAzNDB2NDgiLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDY4IDI0NSkiIGZpbHRlcj0idXJsKCNzaGFkb3cpIj4KICAgIDxwYXRoIGQ9Ik0tNzQgMTZDLTc0LTE0LTQzLTM0IDMtMzRoNjljMjUgMCA0MyAxNyA0MyAzOXY0M0gtNzRaIiBmaWxsPSIjNzJjNGQ1IiBzdHJva2U9IiMxNzRlNjQiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgPHBhdGggZD0iTS03MCAwYzM0IDE1IDczIDExIDk4LTEzIiBmaWxsPSJub25lIiBzdHJva2U9IiNkZmY2ZmIiIHN0cm9rZS13aWR0aD0iNyIgb3BhY2l0eT0iLjgiLz4KICAgIDxyZWN0IHg9Ii01MyIgeT0iNDgiIHdpZHRoPSIxNDYiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjMjczYTQ1Ii8+CiAgICA8Y2lyY2xlIGN4PSItMzQiIGN5PSI2MyIgcj0iMjIiIGZpbGw9IiMyNjMyM2EiLz48Y2lyY2xlIGN4PSItMzQiIGN5PSI2MyIgcj0iOCIgZmlsbD0iI2QzZGRlMSIvPgogICAgPGNpcmNsZSBjeD0iNzUiIGN5PSI2MyIgcj0iMjIiIGZpbGw9IiMyNjMyM2EiLz48Y2lyY2xlIGN4PSI3NSIgY3k9IjYzIiByPSI4IiBmaWxsPSIjZDNkZGUxIi8+CiAgICA8cmVjdCB4PSItNCIgeT0iLTcwIiB3aWR0aD0iOSIgaGVpZ2h0PSI0MCIgZmlsbD0iI2VmNmI0OSIvPgogICAgPHBhdGggZD0iTTUtNzBoMzhsLTExIDEzIDExIDEzSDVaIiBmaWxsPSIjZWY2YjQ5Ii8+CiAgPC9nPgogIDx0ZXh0IHg9IjUwMSIgeT0iMTg0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsJ01pY3Jvc29mdCBZYUhlaScsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE3NGU2NCI+6L+96Liq5peX5YmN57yY5L2c5Li657uf5LiA6K+75pWw54K5PC90ZXh0PgogIDxwYXRoIGQ9Ik01MDEgMTk0VjIyMCIgc3Ryb2tlPSIjMjQ0YjY4IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYyIDE3MCkiIGZpbHRlcj0idXJsKCNzaGFkb3cpIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI4NSIgaGVpZ2h0PSIxNDIiIHJ4PSIxNiIgZmlsbD0iIzI1MzEzYiIvPgogICAgPHJlY3QgeD0iOCIgeT0iMTgiIHdpZHRoPSI2OSIgaGVpZ2h0PSIxMDQiIHJ4PSI3IiBmaWxsPSIjYjllMmViIi8+CiAgICA8Y2lyY2xlIGN4PSI0MyIgY3k9IjEzMSIgcj0iNiIgZmlsbD0iIzgwOTA5YiIvPgogICAgPHBhdGggZD0iTTQyIDE0MnYzNU0xMCAyMDdsMzItMzAgMzQgMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1MzEzYiIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8L2c+CiAgPHBhdGggZD0iTTE2MCAyMjJIMjEwIiBzdHJva2U9IiMyNDRiNjgiIHN0cm9rZS13aWR0aD0iNCIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KICA8dGV4dCB4PSIxOTYiIHk9IjIwNyIgZm9udC1mYW1pbHk9IkFyaWFsLCdNaWNyb3NvZnQgWWFIZWknLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMyNDRiNjgiPuWbuuWumuS+p+aLjTwvdGV4dD4KCiAgPHJlY3QgeD0iNDgiIHk9IjQ4MiIgd2lkdGg9IjEwMDQiIGhlaWdodD0iMjMyIiByeD0iMjMiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2JmZDJkYyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHRleHQgeD0iNzYiIHk9IjUyMiIgZm9udC1mYW1pbHk9IkFyaWFsLCdNaWNyb3NvZnQgWWFIZWknLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxNzMyNGEiPuS7juWQjOS4gOauteinhumikeivu+WHuuS4pOexu+ivgeaNrjwvdGV4dD4KCiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODIgNTQ4KSI+CiAgICA8Y2lyY2xlIGN4PSIyMCIgY3k9IjEzIiByPSIxMyIgZmlsbD0iI2VmNmI0OSIvPjx0ZXh0IHg9IjIwIiB5PSIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiPjE8L3RleHQ+CiAgICA8dGV4dCB4PSI0OCIgeT0iMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwnTWljcm9zb2Z0IFlhSGVpJyxzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMjIzZDUwIj7pgJrov4cgMCBjbe+8mjEuMzAgc+OAgOOAgOmAmui/hyA0MCBjbe+8mjIuMTAgczwvdGV4dD4KICAgIDxyZWN0IHg9IjQ4IiB5PSI0MCIgd2lkdGg9IjQwNSIgaGVpZ2h0PSI1MiIgcng9IjEyIiBmaWxsPSIjZWFmNGY3Ii8+CiAgICA8dGV4dCB4PSIyNTAiIHk9Ijc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsJ01pY3Jvc29mdCBZYUhlaScsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE3NGU2NCI+6L+Q5Yqo5pe26Ze0ID0gMi4xMCDiiJIgMS4zMCA9IDAuODAgczwvdGV4dD4KICA8L2c+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU4MyA1NDgpIj4KICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iMTMiIHI9IjEzIiBmaWxsPSIjZWY2YjQ5Ii8+PHRleHQgeD0iMjAiIHk9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiI+MjwvdGV4dD4KICAgIDx0ZXh0IHg9IjQ4IiB5PSIyMCIgZm9udC1mYW1pbHk9IkFyaWFsLCdNaWNyb3NvZnQgWWFIZWknLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMyMjNkNTAiPui/nue7reivu+WPlu+8mjEuMzDjgIExLjQw44CBMS41MOOAgTEuNjAgcyDigKY8L3RleHQ+CiAgICA8bGluZSB4MT0iNTIiIHkxPSI4MiIgeDI9IjQxNCIgeTI9IjgyIiBzdHJva2U9IiM3ZDk4YTYiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPGcgZmlsbD0iI2VmNmI0OSIgc3Ryb2tlPSIjYjYzZTI3IiBzdHJva2Utd2lkdGg9IjIiPgogICAgICA8Y2lyY2xlIGN4PSI2OCIgY3k9IjgyIiByPSI4Ii8+PGNpcmNsZSBjeD0iMTA1IiBjeT0iODIiIHI9IjgiLz48Y2lyY2xlIGN4PSIxNjQiIGN5PSI4MiIgcj0iOCIvPjxjaXJjbGUgY3g9IjI0OCIgY3k9IjgyIiByPSI4Ii8+PGNpcmNsZSBjeD0iMzgyIiBjeT0iODIiIHI9IjgiLz4KICAgIDwvZz4KICAgIDx0ZXh0IHg9IjIzMyIgeT0iMTI2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsJ01pY3Jvc29mdCBZYUhlaScsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzE3NGU2NCI+55u46YK754K56Led5aKe5aSnIOKGkiDnm7jlkIzml7bpl7TlhoXotbDlvpfmm7Tov5wg4oaSIOmAn+W6puWinuWkpzwvdGV4dD4KICA8L2c+CiAgPHRleHQgeD0iNTUwIiB5PSI3NDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwnTWljcm9zb2Z0IFlhSGVpJyxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjNWM2ZTc4Ij7mhaLliqjkvZzlj6rmlLnlj5jlm57mlL7pgJ/luqbvvJvnlLvpnaLph4znmoTml7bpl7TnoIHkv53nlZnnnJ/lrp7nu4/ov4fml7bpl7TjgII8L3RleHQ+Cjwvc3ZnPgo=" alt="固定手机同时拍摄黑白标尺、小车和显示到百分之一秒的视觉时间码" /></p>
+<h4>搭建（45–53 分钟）</h4>
+<ol>
+<li>用 A4 纸拼成至少 50 cm 长的纸带，在 <code>0、10、20、30、40 cm</code> 处画粗线；每 5 cm 交替涂黑，形成高对比标尺。</li>
+<li>把标尺粘在赛道旁，标尺刻度面与小车追踪旗处于同一竖直平面。</li>
+<li>手机固定在轨道侧面，镜头中央正对 20 cm 刻度，画面同时包含 <code>0–40 cm</code>、追踪旗和视觉计时器屏幕。</li>
+<li>在电脑、平板或第二部手机上打开<a href="06-%E8%A7%86%E8%A7%89%E8%AE%A1%E6%97%B6%E5%99%A8.html">课堂视觉计时器（显示到 0.01 s）</a>，全屏显示并调到录像中能清楚读数的位置。</li>
+<li>拍摄手机设为慢动作并全程固定。用闸门或捏住绳子，使小车从静止状态释放。</li>
+</ol>
+<h4>计时方法</h4>
+<ol>
+<li>先开始慢动作录像，再启动视觉计时器，随后释放小车。</li>
+<li>回放时暂停并拖动进度条，读取追踪旗前缘通过 0 cm 时的画面时间码 <code>t₀</code>。</li>
+<li>继续拖动，读取追踪旗前缘通过 40 cm 时的画面时间码 <code>t₁</code>。</li>
+<li>两个读数相减，得到小车通过 40 cm 的真实时间：</li>
+</ol>
+<pre><code class="language-text">运动时间 t = t₁ − t₀
+例：1.30 s 通过起点，2.10 s 通过终点，t = 2.10 − 1.30 = 0.80 s
+</code></pre>
+<p>计时器数字显示到 0.01 s，并在每个 0.01 s 时刻更新；背景明暗每 0.10 s 切换一次。末位数字为 0 的时刻就是 0.10 s 的整数倍，例如 1.30、1.40、1.50 s。慢动作延长的是回放过程，画面中两个时间码的差仍是实际经过时间。</p>
+<h4>基准试次同时完成两件事（53–64 分钟）</h4>
+<ol>
+<li>按 R 条件在杯中放 2 枚 1 元硬币，小车保持空载，拍摄第一次完整运动。</li>
+<li>找到追踪旗前缘通过 0 cm 的画面，记录此刻时间码，作为相对时刻 <code>0.00 s</code>。</li>
+<li>依次找到时间码增加 <code>0.10、0.20、0.30 s……</code> 的画面，读出追踪旗前缘相对标尺的位置。</li>
+<li>在一条纸带上按同一比例标出这些位置，得到学生自己制作的“等时点带”。</li>
+<li>同一段视频读出小车通过 0 cm 和 40 cm 时的时间码，计算运动时间，供后面的三条件比较使用。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">相对时刻 Time/s</th>
+<th style="text-align:right">0.00</th>
+<th style="text-align:right">0.10</th>
+<th style="text-align:right">0.20</th>
+<th style="text-align:right">0.30</th>
+<th style="text-align:right">0.40</th>
+<th style="text-align:right">0.50</th>
+<th style="text-align:right">0.60</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">画面时间码/s</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">位置 Position/cm</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">相邻点距/cm</td>
+<td style="text-align:right">—</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<h4>判读依据</h4>
+<ul>
+<li>每一段都是 0.10 s；相邻位置间距逐渐增大，表示相同时间内路程增加，速度持续增大。</li>
+<li>标尺刻度面与追踪旗位于同一平面，可减小透视造成的视差误差。</li>
+</ul>
+<h3>64–71 分钟：休息与装置检查</h3>
+<p>学生休息；教师回看 R 基准视频，检查绳线、吸管导向、起终点和手机画面。</p>
+<h3>71–108 分钟：R/F/M 三条件主实验</h3>
+<blockquote>
+<p><strong>实验目的（先看这一句）</strong>：用同一辆车完成两次单变量比较——R↔F 保持小车空载，只增加悬挂硬币；R↔M 保持悬挂杯中硬币不变，只给小车增加固定载荷，并用数据比较力和质量对加速度的影响。</p>
+</blockquote>
+<p><strong>牛顿第二定律 Newton’s Second Law：合力等于质量乘以加速度。 / Net force is equal to mass times acceleration.</strong></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9Ijc5MCIgdmlld0JveD0iMCAwIDExMDAgNzkwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+5LiA5Liq5Yqo5Yqb5a2m5a6e6aqM55qE5LiJ56eN5p2h5Lu2PC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5LiJ56eN5p2h5Lu25YWx55So5ZCM5LiA6L6G6Ieq5Yi25bCP6L2m44CB5qGM6L655Zu65a6a5ZC4566h5ZKM5oKs5oyC6KOF572u44CC5Z+65YeG57uE5p2v5Lit5pS+5Lik5p6a5LiA5YWD56Gs5biB44CB5bCP6L2m56m66L2977yb5aKe5aSn6amx5Yqo5Yqb57uE5p2v5Lit5pS+5LqU5p6a5LiA5YWD56Gs5biB44CB5bCP6L2m5LuN56m66L2977yb5aKe5Yqg6LSo6YeP57uE5p2v5Lit5LuN5Li65Lik5p6a77yM5Y+q5Zyo5bCP6L2m5omY55uY5YaF5Zu65a6a5aKe5Yqg5LiJ5p6a5LiA5YWD56Gs5biB44CCPC9kZXNjPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICB0ZXh0IHsgZm9udC1mYW1pbHk6ICJOb3RvIFNhbnMgU0MiLCAiTWljcm9zb2Z0IFlhSGVpIiwgQXJpYWwsIHNhbnMtc2VyaWY7IGZpbGw6ICMxNzMyNGQ7IH0KICAgICAgLnRpdGxlIHsgZm9udC1zaXplOiAzMHB4OyBmb250LXdlaWdodDogNzAwOyB9CiAgICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMjFweDsgZm9udC13ZWlnaHQ6IDY1MDsgfQogICAgICAuc21hbGwgeyBmb250LXNpemU6IDE3cHg7IH0KICAgICAgLmZvcmNlIHsgc3Ryb2tlOiAjZTY2ZDNmOyBzdHJva2Utd2lkdGg6IDc7IGZpbGw6IG5vbmU7IG1hcmtlci1lbmQ6IHVybCgjb3JhbmdlKTsgfQogICAgICAuY29tcGFyZSB7IHN0cm9rZTogIzNiOGY2NTsgc3Ryb2tlLXdpZHRoOiA1OyBmaWxsOiBub25lOyBzdHJva2UtZGFzaGFycmF5OiAxMSA3OyBtYXJrZXItZW5kOiB1cmwoI2dyZWVuKTsgfQogICAgPC9zdHlsZT4KICAgIDxtYXJrZXIgaWQ9Im9yYW5nZSIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI5IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDEwIDUgTDAgMTAgeiIgZmlsbD0iI2U2NmQzZiIvPjwvbWFya2VyPgogICAgPG1hcmtlciBpZD0iZ3JlZW4iIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIHoiIGZpbGw9IiMzYjhmNjUiLz48L21hcmtlcj4KICA8L2RlZnM+CiAgPHRleHQgeD0iNTUwIiB5PSI0NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InRpdGxlIj5SL0Yg5o6n5Yi25bCP6L2m6LSo6YeP77ybUi9NIOaOp+WItuaCrOaMguehrOW4gTwvdGV4dD4KCiAgPGcgaWQ9InBhbmVsLXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwLDkwKSI+CiAgICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzEwIiBoZWlnaHQ9IjUyMCIgcng9IjIyIiBmaWxsPSIjZjdmYmZkIiBzdHJva2U9IiM5ZmI5YzgiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPHRleHQgeD0iMTU1IiB5PSI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj5SIMK3IOWfuuWHhiBSZWZlcmVuY2U8L3RleHQ+CiAgICA8bGluZSB4MT0iMzUiIHkxPSIyNjAiIHgyPSIyNDUiIHkyPSIyNjAiIHN0cm9rZT0iIzYzN2I4OSIgc3Ryb2tlLXdpZHRoPSI3Ii8+CiAgICA8bGluZSB4MT0iMjQ1IiB5MT0iMjYwIiB4Mj0iMjQ1IiB5Mj0iMzMwIiBzdHJva2U9IiM2MzdiODkiIHN0cm9rZS13aWR0aD0iNyIvPgogICAgPHBhdGggZD0iTTc1IDE5MCBRNjggMjAwIDc0IDIyNiBRODAgMjM5IDk4IDIzOSBMMTY1IDIzOSBMMTY1IDIzMCBMMTkyIDIyNCBMMTkyIDIwNiBMMTY1IDIwMCBMMTY1IDE5MCBaIiBmaWxsPSIjZDllZGY0IiBmaWxsLW9wYWNpdHk9IjAuODIiIHN0cm9rZT0iIzRiN2M5MSIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjI0NCIgcj0iMTgiIGZpbGw9IiM0YzkyYmQiLz48Y2lyY2xlIGN4PSIxNzAiIGN5PSIyNDQiIHI9IjE4IiBmaWxsPSIjNGM5MmJkIi8+CiAgICA8dGV4dCB4PSIxMzMiIHk9IjE2NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7lsI/ovabnqbrovb08L3RleHQ+CiAgICA8Y2lyY2xlIGN4PSIyNjAiIGN5PSIyMjAiIHI9IjEyIiBmaWxsPSIjZDllZGY0IiBzdHJva2U9IiM1NTc3OGUiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPHBhdGggZD0iTTE5NSAyMDUgTDIzNSAyMDUgUTI2MCAyMDUgMjYwIDIzMCBMMjYwIDM1NSIgc3Ryb2tlPSIjMzQ0YzVjIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0yMzUgMzU1IEwyNDUgNDMwIFEyNDggNDQ4IDI2NSA0NDggUTI4MiA0NDggMjg1IDQzMCBMMjk1IDM1NSBaIiBmaWxsPSIjZjNlYWQ3IiBzdHJva2U9IiM4YjZjNDIiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPGNpcmNsZSBjeD0iMjU3IiBjeT0iNDEwIiByPSIxMSIgZmlsbD0iI2Q0YTcyYyIvPjxjaXJjbGUgY3g9IjI3OCIgY3k9IjQxMCIgcj0iMTEiIGZpbGw9IiNkNGE3MmMiLz4KICAgIDx0ZXh0IHg9IjE1NSIgeT0iNDg1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuadr+S4rSAyIOaemu+8m+Wwj+i9puepuui9vTwvdGV4dD4KICA8L2c+CgogIDxnIGlkPSJwYW5lbC1mIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzOTUsOTApIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIzMTAiIGhlaWdodD0iNTIwIiByeD0iMjIiIGZpbGw9IiNmZmZhZjAiIHN0cm9rZT0iI2Q2YmQ4NiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8dGV4dCB4PSIxNTUiIHk9IjQyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPkYgwrcg5aKe5aSn6amx5Yqo5YqbPC90ZXh0PgogICAgPGxpbmUgeDE9IjM1IiB5MT0iMjYwIiB4Mj0iMjQ1IiB5Mj0iMjYwIiBzdHJva2U9IiM2MzdiODkiIHN0cm9rZS13aWR0aD0iNyIvPgogICAgPGxpbmUgeDE9IjI0NSIgeTE9IjI2MCIgeDI9IjI0NSIgeTI9IjMzMCIgc3Ryb2tlPSIjNjM3Yjg5IiBzdHJva2Utd2lkdGg9IjciLz4KICAgIDxwYXRoIGQ9Ik03NSAxOTAgUTY4IDIwMCA3NCAyMjYgUTgwIDIzOSA5OCAyMzkgTDE2NSAyMzkgTDE2NSAyMzAgTDE5MiAyMjQgTDE5MiAyMDYgTDE2NSAyMDAgTDE2NSAxOTAgWiIgZmlsbD0iI2Q5ZWRmNCIgZmlsbC1vcGFjaXR5PSIwLjgyIiBzdHJva2U9IiM0YjdjOTEiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgPGNpcmNsZSBjeD0iOTYiIGN5PSIyNDQiIHI9IjE4IiBmaWxsPSIjNGM5MmJkIi8+PGNpcmNsZSBjeD0iMTcwIiBjeT0iMjQ0IiByPSIxOCIgZmlsbD0iIzRjOTJiZCIvPgogICAgPHRleHQgeD0iMTMzIiB5PSIxNjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5bCP6L2m56m66L29PC90ZXh0PgogICAgPGNpcmNsZSBjeD0iMjYwIiBjeT0iMjIwIiByPSIxMiIgZmlsbD0iI2Q5ZWRmNCIgc3Ryb2tlPSIjNTU3NzhlIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxwYXRoIGQ9Ik0xOTUgMjA1IEwyMzUgMjA1IFEyNjAgMjA1IDI2MCAyMzAgTDI2MCAzNTUiIHN0cm9rZT0iIzM0NGM1YyIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNMjM1IDM1NSBMMjQ1IDQzMCBRMjQ4IDQ0OCAyNjUgNDQ4IFEyODIgNDQ4IDI4NSA0MzAgTDI5NSAzNTUgWiIgZmlsbD0iI2YzZWFkNyIgc3Ryb2tlPSIjOGI2YzQyIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxnIGZpbGw9IiNkNGE3MmMiIHN0cm9rZT0iIzdmNjYxZCIgc3Ryb2tlLXdpZHRoPSIyIj48Y2lyY2xlIGN4PSIyNDgiIGN5PSI0MTYiIHI9IjExIi8+PGNpcmNsZSBjeD0iMjcwIiBjeT0iNDE2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjI0OCIgY3k9IjM5NCIgcj0iMTEiLz48Y2lyY2xlIGN4PSIyNzAiIGN5PSIzOTQiIHI9IjExIi8+PGNpcmNsZSBjeD0iMjU5IiBjeT0iMzcyIiByPSIxMSIvPjwvZz4KICAgIDx0ZXh0IHg9IjE1NSIgeT0iNDg1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuadr+S4rSA1IOaemu+8m+Wwj+i9puS7jeepuui9vTwvdGV4dD4KICA8L2c+CgogIDxnIGlkPSJwYW5lbC1tIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3NDAsOTApIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIzMTAiIGhlaWdodD0iNTIwIiByeD0iMjIiIGZpbGw9IiNmNWZiZjgiIHN0cm9rZT0iIzlkYzlhZSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8dGV4dCB4PSIxNTUiIHk9IjQyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPk0gwrcg5aKe5Yqg5bCP6L2m6LSo6YePPC90ZXh0PgogICAgPGxpbmUgeDE9IjM1IiB5MT0iMjYwIiB4Mj0iMjQ1IiB5Mj0iMjYwIiBzdHJva2U9IiM2MzdiODkiIHN0cm9rZS13aWR0aD0iNyIvPgogICAgPGxpbmUgeDE9IjI0NSIgeTE9IjI2MCIgeDI9IjI0NSIgeTI9IjMzMCIgc3Ryb2tlPSIjNjM3Yjg5IiBzdHJva2Utd2lkdGg9IjciLz4KICAgIDxwYXRoIGQ9Ik03NSAxOTAgUTY4IDIwMCA3NCAyMjYgUTgwIDIzOSA5OCAyMzkgTDE2NSAyMzkgTDE2NSAyMzAgTDE5MiAyMjQgTDE5MiAyMDYgTDE2NSAyMDAgTDE2NSAxOTAgWiIgZmlsbD0iI2Q5ZWRmNCIgZmlsbC1vcGFjaXR5PSIwLjgyIiBzdHJva2U9IiM0YjdjOTEiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgPGNpcmNsZSBjeD0iOTYiIGN5PSIyNDQiIHI9IjE4IiBmaWxsPSIjNGM5MmJkIi8+PGNpcmNsZSBjeD0iMTcwIiBjeT0iMjQ0IiByPSIxOCIgZmlsbD0iIzRjOTJiZCIvPgogICAgPGcgZmlsbD0iI2Q0YTcyYyIgc3Ryb2tlPSIjN2Y2NjFkIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEwNCIgY3k9IjE1MiIgcj0iMTYiLz48Y2lyY2xlIGN4PSIxMzMiIGN5PSIxNTIiIHI9IjE2Ii8+PGNpcmNsZSBjeD0iMTYyIiBjeT0iMTUyIiByPSIxNiIvPjwvZz4KICAgIDx0ZXh0IHg9IjEzMyIgeT0iMTEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPui9puS4iiAzIOaemjwvdGV4dD4KICAgIDxjaXJjbGUgY3g9IjI2MCIgY3k9IjIyMCIgcj0iMTIiIGZpbGw9IiNkOWVkZjQiIHN0cm9rZT0iIzU1Nzc4ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8cGF0aCBkPSJNMTk1IDIwNSBMMjM1IDIwNSBRMjYwIDIwNSAyNjAgMjMwIEwyNjAgMzU1IiBzdHJva2U9IiMzNDRjNWMiIHN0cm9rZS13aWR0aD0iNCIgZmlsbD0ibm9uZSIvPgogICAgPHBhdGggZD0iTTIzNSAzNTUgTDI0NSA0MzAgUTI0OCA0NDggMjY1IDQ0OCBRMjgyIDQ0OCAyODUgNDMwIEwyOTUgMzU1IFoiIGZpbGw9IiNmM2VhZDciIHN0cm9rZT0iIzhiNmM0MiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSIyNTciIGN5PSI0MTAiIHI9IjExIiBmaWxsPSIjZDRhNzJjIi8+PGNpcmNsZSBjeD0iMjc4IiBjeT0iNDEwIiByPSIxMSIgZmlsbD0iI2Q0YTcyYyIvPgogICAgPHRleHQgeD0iMTU1IiB5PSI0ODUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5p2v5LitIDIg5p6a77yb6L2m5LiKIDMg5p6aPC90ZXh0PgogIDwvZz4KCiAgPHBhdGggZD0iTTMxNSA2NTAgQzM5MCA3MDAgNDc1IDcwMCA1MjUgNjUwIiBjbGFzcz0iY29tcGFyZSIvPgogIDx0ZXh0IHg9IjQyMCIgeT0iNzMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPlIg4oaUIEbvvJrlsI/ovabotKjph4/nm7jlkIzvvIzlj6rmlLnlj5jmgqzmjILnoazluIE8L3RleHQ+CiAgPHBhdGggZD0iTTc4NSA2NTAgQzcxMCA3MDAgNjMwIDcwMCA1NzUgNjUwIiBjbGFzcz0iY29tcGFyZSIvPgogIDx0ZXh0IHg9IjcyMCIgeT0iNzY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPlIg4oaUIE3vvJrmgqzmjILnoazluIHnm7jlkIzvvIzlj6rmlLnlj5jlsI/ovabotKjph488L3RleHQ+CiAgPHBhdGggZD0iTTQ2NSAzMDUgTDYwMCAzMDUiIGNsYXNzPSJmb3JjZSIvPgogIDxwYXRoIGQ9Ik04MTAgMzA1IEw5NDUgMzA1IiBjbGFzcz0iZm9yY2UiLz4KPC9zdmc+Cg==" alt="同一装置的基准、增大驱动力和增加小车质量三种条件" /></p>
+<h4>研究对象与施力装置</h4>
+<p>本实验研究的物体是<strong>自制小车</strong>；细绳、桌边固定吸管和悬挂杯组成施力装置。杯中硬币越多，对小车的牵引作用越强。</p>
+<p>用胶带把一小段光滑硬吸管横向固定在圆钝桌边，让细绳从吸管外侧绕过后垂下。</p>
+<h4>三个条件</h4>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th style="text-align:right">杯中 1 元硬币</th>
+<th style="text-align:right">车上固定载荷</th>
+<th>变量安排</th>
+<th>比较对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R · 基准 Reference</td>
+<td style="text-align:right">2 枚</td>
+<td style="text-align:right">0 枚</td>
+<td>小车空载</td>
+<td>共同基准</td>
+</tr>
+<tr>
+<td>F · 增大驱动力 Force</td>
+<td style="text-align:right">5 枚</td>
+<td style="text-align:right">0 枚</td>
+<td>小车仍空载，只增加悬挂硬币</td>
+<td><strong>R ↔ F</strong></td>
+</tr>
+<tr>
+<td>M · 增加小车质量 Cart Mass</td>
+<td style="text-align:right">2 枚</td>
+<td style="text-align:right">3 枚</td>
+<td>杯中仍为 2 枚，只在小车托盘内固定增加 3 枚 1 元硬币</td>
+<td><strong>R ↔ M</strong></td>
+</tr>
+</tbody>
+</table>
+<p>R 与 F 使用同一辆空载小车，因此小车质量保持一致；R 与 M 使用同样的 2 枚悬挂硬币，因此施力装置的设置保持一致。</p>
+<p><strong>课前预试规则</strong>：先用 2 枚 1 元硬币悬挂，确认 R 条件能从静止启动。运行顺畅时采用 R=2、F=5；R 启动困难时采用 R=3、F=5，并让 M 与 R 使用相同的 3 枚悬挂硬币。M 条件把 3 枚 1 元硬币平放在托盘中央，用一条胶带跨过硬币固定。</p>
+<h4>变量</h4>
+<ul>
+<li><strong>R↔F 的自变量 independent variable</strong>：杯中 1 元硬币数量，即悬挂驱动力设置；小车均保持空载。</li>
+<li><strong>R↔M 的自变量 independent variable</strong>：小车上的固定载荷；杯中 1 元硬币数量保持相同。</li>
+<li><strong>因变量 dependent variable</strong>：0–40 cm 运动时间，以及由时间估算的加速度。</li>
+<li><strong>共同控制变量 controlled variables</strong>：同一辆车、同一轨道、同一吸管导向与细绳、同一起终点、同一释放方法、同一手机位置和相同重复次数。</li>
+</ul>
+<h4>预测（71–78 分钟）</h4>
+<table>
+<thead>
+<tr>
+<th>比较</th>
+<th>学生预测</th>
+<th>预测理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R ↔ F</td>
+<td>F 先到终点</td>
+<td>小车质量相同，F 的悬挂硬币更多，牵引作用更强</td>
+</tr>
+<tr>
+<td>R ↔ M</td>
+<td>R 先到终点</td>
+<td>悬挂硬币相同，M 的小车质量更大</td>
+</tr>
+</tbody>
+</table>
+<h4>采集数据（78–98 分钟）</h4>
+<ol>
+<li>每次把追踪旗前缘对齐 0 cm，小车和悬挂杯都静止，绳子轻轻拉直。</li>
+<li>开始录像后释放闸门；释放瞬间双手离开小车和细线。</li>
+<li>小车通过 40 cm 后立即用软挡板拦住；纸杯落在毛巾上。</li>
+<li>每个条件完成 3 次。基准试次 1 已在休息前拍摄，因此剩余 8 次。</li>
+<li>轮子卡住、车上硬币移位、硬币掉出杯子、绳子脱槽、手碰车或纸杯提前落地的试次标记为异常并补测；分析表记录每个条件的 3 次有效数据。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th style="text-align:right">杯中 1 元 / 枚</th>
+<th style="text-align:right">车上 1 元 / 枚</th>
+<th style="text-align:right">试次 1 时间/s</th>
+<th style="text-align:right">试次 2 时间/s</th>
+<th style="text-align:right">试次 3 时间/s</th>
+<th style="text-align:right">平均时间/s</th>
+<th style="text-align:right"><code>a ≈ 2d/t²</code> /(m/s²)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>F</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>M</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<p>其中 <code>d = 0.40 m</code>。从静止释放且加速度近似恒定时：</p>
+<pre><code class="language-text">d ≈ 1/2 at²  →  a ≈ 2d/t²
+</code></pre>
+<p>基础版本直接比较同一路程上的平均时间：时间越短，说明加速效果越强；进阶版本再用公式估算加速度。</p>
+<h4>分析与证据表达（98–108 分钟）</h4>
+<table>
+<thead>
+<tr>
+<th>比较</th>
+<th>数据证据</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R ↔ F</td>
+<td>F 的平均时间更短、估算加速度更大</td>
+<td>小车质量相同时，牵引作用增大，加速度增大</td>
+</tr>
+<tr>
+<td>R ↔ M</td>
+<td>M 的平均时间更长、估算加速度更小</td>
+<td>悬挂设置相同时，小车质量增大，加速度减小</td>
+</tr>
+</tbody>
+</table>
+<p>轮轴与桌边吸管处的摩擦、轮孔偏心、起止时间码判断和标尺视差会影响数值比例；三次重复数据用于判断趋势和波动范围。</p>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">R ↔ F：same cart mass；pulling force ↑ → acceleration ↑
+R ↔ M：same hanging-load setting；cart mass ↑ → acceleration ↓
+
+Newton's second law: F_net = ma
+F_net 是同一研究对象所受力的矢量和
+</code></pre>
+</div>
+</details>
+<h3>108–116 分钟：同一辆车的气球动力终局</h3>
+<blockquote>
+<p><strong>实验目的（先看这一句）</strong>：让学生从气球向后排出空气、小车向前运动的现象中找出牛顿第三定律力对，并明确两个力大小相等、方向相反，分别作用在空气和气球上。</p>
+</blockquote>
+<p><strong>牛顿第三定律 Newton’s Third Law：每一个作用力，都有一个大小相等、方向相反的反作用力。 / For every action, there’s an equal but opposite reaction.</strong></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9IjY1MCIgdmlld0JveD0iMCAwIDExMDAgNjUwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+6Ieq5Yi25bCP6L2m5pS56KOF5oiQ5rCU55CD5Yqo5Yqb6L2mPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5ZCM5LiA6L6G57q45p2/55O255uW5bCP6L2m6aG26YOo5Zu65a6a5rCU55CD5ZKM5ZCR5ZCO5Ly45Ye655qE5ZC4566h77yb56m65rCU5LuO5ZC4566h5ZCR5ZCO5Za35Ye677yM56m65rCU5ZCM5pe25ZCR5YmN5o6o5rCU55CD5ZKM5bCP6L2m44CCPC9kZXNjPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICB0ZXh0IHsgZm9udC1mYW1pbHk6ICJOb3RvIFNhbnMgU0MiLCAiTWljcm9zb2Z0IFlhSGVpIiwgQXJpYWwsIHNhbnMtc2VyaWY7IGZpbGw6ICMxNzMyNGQ7IH0KICAgICAgLnRpdGxlIHsgZm9udC1zaXplOiAzMHB4OyBmb250LXdlaWdodDogNzAwOyB9CiAgICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMjJweDsgZm9udC13ZWlnaHQ6IDY1MDsgfQogICAgICAuc21hbGwgeyBmb250LXNpemU6IDE4cHg7IH0KICAgICAgLmFpciB7IHN0cm9rZTogIzJmODZiNzsgc3Ryb2tlLXdpZHRoOiA5OyBmaWxsOiBub25lOyBtYXJrZXItZW5kOiB1cmwoI2JsdWUpOyB9CiAgICAgIC5jYXIgeyBzdHJva2U6ICNlNjZkM2Y7IHN0cm9rZS13aWR0aDogOTsgZmlsbDogbm9uZTsgbWFya2VyLWVuZDogdXJsKCNvcmFuZ2UpOyB9CiAgICAgIC5mb3JjZSB7IHN0cm9rZTogIzNiOGY2NTsgc3Ryb2tlLXdpZHRoOiA2OyBmaWxsOiBub25lOyBzdHJva2UtZGFzaGFycmF5OiAxMiA3OyBtYXJrZXItZW5kOiB1cmwoI2dyZWVuKTsgfQogICAgPC9zdHlsZT4KICAgIDxtYXJrZXIgaWQ9ImJsdWUiIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIHoiIGZpbGw9IiMyZjg2YjciLz48L21hcmtlcj4KICAgIDxtYXJrZXIgaWQ9Im9yYW5nZSIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI5IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDEwIDUgTDAgMTAgeiIgZmlsbD0iI2U2NmQzZiIvPjwvbWFya2VyPgogICAgPG1hcmtlciBpZD0iZ3JlZW4iIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIHoiIGZpbGw9IiMzYjhmNjUiLz48L21hcmtlcj4KICA8L2RlZnM+CiAgPHRleHQgeD0iNTUwIiB5PSI0NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InRpdGxlIj7nu4jlsYDmlLnoo4XvvJrmiorigJzniZvpob/kuIDlj7figJ3lj5jmiJDmsJTnkIPliqjlipvovaY8L3RleHQ+CiAgPHJlY3QgeD0iNTUiIHk9IjgwIiB3aWR0aD0iOTkwIiBoZWlnaHQ9IjQ5MCIgcng9IjI0IiBmaWxsPSIjZjdmYmZkIiBzdHJva2U9IiNiN2M3ZDMiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxsaW5lIHgxPSI5NSIgeTE9IjQ1NSIgeDI9IjEwMDUiIHkyPSI0NTUiIHN0cm9rZT0iIzY1Nzk4NiIgc3Ryb2tlLXdpZHRoPSI3Ii8+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM4NSwzMzApIj4KICAgIDxwYXRoIGQ9Ik0xNCAxMCBRMCAyMiA4IDcwIFExNiA4OCA1MiA4OCBMMjQwIDg4IEwyNDAgNzIgTDI5NiA2NCBMMjk2IDMwIEwyNDAgMjAgTDI0MCAxMCBaIiBmaWxsPSIjZDllZGY0IiBmaWxsLW9wYWNpdHk9IjAuODIiIHN0cm9rZT0iIzRiN2M5MSIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgICA8Y2lyY2xlIGN4PSI2MiIgY3k9Ijk1IiByPSI0MiIgZmlsbD0iIzRjOTJiZCIgc3Ryb2tlPSIjMjQ1ZDgyIiBzdHJva2Utd2lkdGg9IjUiLz4KICAgIDxjaXJjbGUgY3g9IjIzOCIgY3k9Ijk1IiByPSI0MiIgZmlsbD0iIzRjOTJiZCIgc3Ryb2tlPSIjMjQ1ZDgyIiBzdHJva2Utd2lkdGg9IjUiLz4KICAgIDxjaXJjbGUgY3g9IjYyIiBjeT0iOTUiIHI9IjEwIiBmaWxsPSIjZDdlNWVjIi8+PGNpcmNsZSBjeD0iMjM4IiBjeT0iOTUiIHI9IjEwIiBmaWxsPSIjZDdlNWVjIi8+CiAgPC9nPgogIDxlbGxpcHNlIGN4PSI1NjAiIGN5PSIyNjAiIHJ4PSIxODAiIHJ5PSI5MiIgZmlsbD0iI2YwOWI3OSIgc3Ryb2tlPSIjYTY0ZTMyIiBzdHJva2Utd2lkdGg9IjUiLz4KICA8cGF0aCBkPSJNMzkwIDI2MCBMMzQ1IDI0MiBMMzQ1IDI3OCBaIiBmaWxsPSIjZjA5Yjc5IiBzdHJva2U9IiNhNjRlMzIiIHN0cm9rZS13aWR0aD0iNSIvPgogIDxyZWN0IHg9IjMzNSIgeT0iMjcwIiB3aWR0aD0iMjMwIiBoZWlnaHQ9IjI0IiByeD0iMTAiIGZpbGw9IiNkYmUzZTgiIHN0cm9rZT0iIzZhN2Q4OSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHBhdGggZD0iTTMzNSAyODIgTDIwNSAyODIiIGNsYXNzPSJhaXIiLz4KICA8dGV4dCB4PSIyMzUiIHk9IjMyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7nqbrmsJTlkJHlkI48L3RleHQ+CiAgPHBhdGggZD0iTTcyMCAzMDAgTDk0MCAzMDAiIGNsYXNzPSJjYXIiLz4KICA8dGV4dCB4PSI4MzUiIHk9IjM0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7lsI/ovablkJHliY08L3RleHQ+CiAgPHJlY3QgeD0iNDg1IiB5PSIyOTgiIHdpZHRoPSIxNTAiIGhlaWdodD0iMjgiIHJ4PSI4IiBmaWxsPSIjZThkMTljIiBzdHJva2U9IiM5ZTdlMzciIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IHg9IjU2MCIgeT0iMzY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuS4pOadoeiDtuW4puaIluapoeearueti+WbuuWumuawlOeQg+KAlOWQuOeuoeaooeWdlzwvdGV4dD4KCiAgPHBhdGggZD0iTTQ2MCA1MTUgTDMwMCA1MTUiIGNsYXNzPSJmb3JjZSIvPgogIDx0ZXh0IHg9IjMwMCIgeT0iNTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuawlOeQg+WvueepuuawlOeahOWKmzwvdGV4dD4KICA8cGF0aCBkPSJNNjQwIDUxNSBMODAwIDUxNSIgY2xhc3M9ImZvcmNlIi8+CiAgPHRleHQgeD0iODAwIiB5PSI1NTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+56m65rCU5a+55rCU55CD55qE5YqbPC90ZXh0PgogIDx0ZXh0IHg9IjU1MCIgeT0iNjEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPuWkp+Wwj+ebuOetiSDCtyDmlrnlkJHnm7jlj40gwrcg5ZCM5pe25Y+R55SfIMK3IOS9nOeUqOWcqOS4jeWQjOeJqeS9kzwvdGV4dD4KPC9zdmc+Cg==" alt="气球向后喷气、空气向前推动同一辆自制小车" /></p>
+<ol>
+<li>将课前扎好的气球—可弯吸管模块沿小车中线固定，吸管喷口朝后，并与车轮保持间距。</li>
+<li>充气后捏住喷口，把车放在 1.5–2 m 平直跑道上；松开喷口，让气球中的空气驱动车。</li>
+<li>第一次跑偏时，调整喷口方向或模块居中位置，再试一次。</li>
+</ol>
+<h4>证据解释</h4>
+<p>气球对空气施加向后的力，空气同时对气球施加大小相等、方向相反的向前力；两个力分别作用在空气和气球上。分析气球—小车系统时，空气对气球的向前作用推动小车运动。</p>
+<h3>116–120 分钟：离堂短答</h3>
+<p>只写 3 句：</p>
+<ol>
+<li>点带上哪一项观察说明小车在加速？</li>
+<li>R↔F 或 R↔M 中，哪一项数据支持哪条结论？</li>
+<li>气球动力车的第三定律力对分别作用在哪两个物体上？</li>
+</ol>
+<h2>三、教师参考：严谨性、误差与故障处理</h2>
+<h3>视觉时间码法的精度</h3>
+<ul>
+<li>视觉计时器显示到 0.01 s，背景每 0.10 s 切换一次；起点和终点都以追踪旗前缘刚通过粗刻线的画面为准，时间按画面时间码记录到 0.01 s。</li>
+<li>每个条件完成 3 次并报告平均值和范围；三次差异明显时，先检查装置并补测。</li>
+<li>录像中同时保留完整标尺、追踪旗和计时器数字，回放时由同一名学生按同一标准读取三种条件。</li>
+<li>计时器屏幕尽量与轨道处于相近距离，使用大屏设备、全屏显示和较高亮度；课前试拍确认数字边缘与背景明暗变化清楚。</li>
+</ul>
+<h3>常见故障</h3>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>最可能原因</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R 条件用 2 枚硬币时小车保持静止</td>
+<td>静摩擦过大或吸管导向处阻力大</td>
+<td>调整吸管位置，确认细线能顺畅滑过；随后把 R 和 M 改为 3 枚、F 保持 5 枚</td>
+</tr>
+<tr>
+<td>小车左右蛇行</td>
+<td>轴线角度偏差、轮孔偏心、牵引点偏心</td>
+<td>先修轴线，再换备用轮，最后校正牵引环</td>
+</tr>
+<tr>
+<td>纸杯先于小车到终点落地</td>
+<td>悬挂高度偏小或细线太长</td>
+<td>缩短跑道或细线，以纸杯全程悬空的试次计时</td>
+</tr>
+<tr>
+<td>视频刻度模糊</td>
+<td>快门拖影、光线暗或标尺太细</td>
+<td>增加照明、改粗黑线、镜头靠近但保持完整画面</td>
+</tr>
+<tr>
+<td>时间码模糊或屏幕出现条纹</td>
+<td>屏幕太小、亮度不足或拍摄角度不合适</td>
+<td>改用电脑或平板全屏显示，调整亮度与角度后重新试拍</td>
+</tr>
+<tr>
+<td>R/F 差异很小</td>
+<td>轮轴或吸管导向处摩擦波动较大</td>
+<td>保持 R=2、F=5，先调校轮轴并固定吸管，再补测异常试次</td>
+</tr>
+<tr>
+<td>气球车保持静止</td>
+<td>喷口碰车身、漏气、车轴摩擦大</td>
+<td>先验收底盘，再检查密封和喷口方向</td>
+</tr>
+</tbody>
+</table>
+<h3>安全边界</h3>
+<ul>
+<li>成人完成切纸板、瓶盖打孔、剪竹签和热熔胶操作；学生组装已经处理好的零件。</li>
+<li>斜面板用厚书和纸胶带固定，水平跑道前方设置空旷缓冲区与毛巾软挡板。</li>
+<li>计时统一采用固定手机拍摄视觉时间码；设备电源线贴桌边固定，保持轨道和操作区整洁。</li>
+<li>小车终点离桌边至少 20 cm并设置毛巾软挡板；学生双脚位于悬挂杯落点之外。</li>
+<li>气球只充空气；乳胶过敏者使用无乳胶替代品或负责录像。破裂碎片立即装入回收袋。</li>
+<li>气球车在地面或低桌面发射，方向朝向空旷缓冲区。</li>
+</ul>
+<h3>备用方案</h3>
+<ol>
+<li>40 分钟验收节点启用教师课前制作的同结构纸板瓶盖备用车，学生车留到课后继续调校。</li>
+<li>第二台显示设备临时缺失时，教师提供课前录好的“轨道 + 视觉计时器”视频，学生继续完成读尺、点带和计算。</li>
+<li>课堂时间紧张时，优先保留起止时间码、平均时间、重复测量和两次公平比较，加速度公式作为课后延伸。</li>
+</ol>
+<h2>四、来源与延伸</h2>
+<ul>
+<li><a href="https://www.sciencebuddies.org/stem-activities/balloon-car">Science Buddies：Build a Balloon Car</a>：瓶身、吸管、竹签、瓶盖和气球动力车的常见家用材料结构。</li>
+<li><a href="https://www.jpl.nasa.gov/edu/resources/lesson-plan/simple-rocket-science/">NASA JPL：Simple Rocket Science</a>：用气球喷气建立作用—反作用解释。</li>
+<li><a href="https://www.grc.nasa.gov/www/k-12/TRC/Rockets/rocket_car.html">NASA Glenn：Rocket Car</a>：气球动力车和牛顿第三定律活动参考。</li>
+</ul>
+<h2>五、核心词汇</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>本课中的准确含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>路程</td>
+<td>distance</td>
+<td>实际路径总长度，标量</td>
+</tr>
+<tr>
+<td>位移</td>
+<td>displacement</td>
+<td>从起点指向终点的位置变化，矢量</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>velocity</td>
+<td>运动快慢和方向</td>
+</tr>
+<tr>
+<td>加速度</td>
+<td>acceleration</td>
+<td>速度随时间的改变</td>
+</tr>
+<tr>
+<td>惯性</td>
+<td>inertia</td>
+<td>物体保持原有运动状态趋势的性质；其大小与质量相关</td>
+</tr>
+<tr>
+<td>合力</td>
+<td>net force</td>
+<td>同一研究对象所受力的矢量和</td>
+</tr>
+<tr>
+<td>质量</td>
+<td>mass</td>
+<td>物体惯性大小的量度之一</td>
+</tr>
+<tr>
+<td>控制变量</td>
+<td>controlled variable</td>
+<td>公平比较中保持不变的条件</td>
+</tr>
+<tr>
+<td>可视时间码</td>
+<td>visual timecode</td>
+<td>录像画面中显示到 0.01 秒、背景每 0.10 秒切换一次的数字时间标记</td>
+</tr>
+<tr>
+<td>作用—反作用力对</td>
+<td>action–reaction pair</td>
+<td>两物体相互作用时同时产生、大小相等、方向相反且作用在不同物体上的两个力</td>
+</tr>
+</tbody>
+</table>
+</main>
+</body>
+</html>

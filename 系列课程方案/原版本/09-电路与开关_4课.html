@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>电路与开关：从一盏灯到独立控制（4课）</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">电路与开关：从一盏灯到独立控制（4课）</h1>
+</header>
+<main id="lesson-content" tabindex="-1">
+<p><strong>五年级一对一实验课｜每课 45–60 分钟｜物理电学系列方向稿。</strong></p>
+<p><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">返回总目录</a> ｜ <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/01-%E7%94%B5%E5%8C%96%E5%AD%A6_4%E8%AF%BE.html">相关：01 电化学</a></p>
+<h2>贯穿四课的模型</h2>
+<p>电源提供能量，完整的电路允许电流通过，用电器把电能转成光、声或运动。开关改变通路是否接通；串联和并联改变通路的组织方式，因此改变各用电器是否会一起受到某处断开的影响。</p>
+<p>儿童用实物接线和简图追踪通路，不以电子转移、欧姆定律或总电阻计算为起点。电流不能被说成在经过第一个灯时被“用完”；用电器转化的是能量。</p>
+<table>
+<thead>
+<tr>
+<th>课次</th>
+<th>本课建立什么</th>
+<th>怎样连接下一课</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>找到让一盏灯工作的完整回路</td>
+<td>能识别通路，才能控制它的断开与接通</td>
+</tr>
+<tr>
+<td>2</td>
+<td>用导体与绝缘体做一个可靠开关</td>
+<td>将开关放到不同位置，才有可能控制多条通路</td>
+</tr>
+<tr>
+<td>3</td>
+<td>用两灯比较串联与并联</td>
+<td>理解独立支路，为独立控制作准备</td>
+</tr>
+<tr>
+<td>4</td>
+<td>组合总开关与分路开关</td>
+<td>用实际功能检验是否能读懂和设计电路</td>
+</tr>
+</tbody>
+</table>
+<h2>与电化学系列的分工</h2>
+<p>01 研究材料怎样供电，以及通电怎样改变物质；09 研究电路怎样连接和控制。若孩子尚不熟悉接线，09 可放在 01 前面。两条都上时，已经掌握的单灯接通操作缩为复习，不重复算新内容。</p>
+<h3>D1 · 单灯闭合回路与断路排查</h3>
+<p><strong>核心问题</strong>：电池、导线和灯都在，为什么有时灯还是不亮？</p>
+<p><strong>实际实验与材料</strong>：使用带保护或适宜限流的低压教学电源／AA电池盒、匹配的小灯泡与灯座、连接线。孩子自己让灯亮起来，再用简图判断教师设置的少量断路或接触错误，并逐一排查。</p>
+<p><strong>物理本质</strong>：灯的两个接点需接入完整回路才能持续工作；断路或接触不良会阻断电流。电源、连接与用电器共同构成系统。</p>
+<p><strong>预期现象</strong>：接成回路时灯亮，断开一处时熄灭；看起来靠在一起的接头也可能接触不良。</p>
+<p><strong>孩子要学会</strong>：沿着完整路径检查电路，区分“零件齐全”与“连接正确”。能用一张简单图解释灯为何亮或不亮。</p>
+<p><strong>前后连接</strong>：D2把暂时断开的动作做成可重复使用的开关。</p>
+<p><strong>45–60分钟实施</strong>：以孩子搭建和排查为主。教师先匹配电源与灯泡；本系列使用稳定教学电源，不把水果电池能否驱动普通灯泡混入这节问题。</p>
+<p>依据：<a href="https://www.exploratorium.edu/sites/default/files/tinkering/files/Instructions/circuit_boards.pdf">Exploratorium：Circuit Boards</a>。</p>
+<h3>D2 · 导体、绝缘体与自制开关</h3>
+<p><strong>核心问题</strong>：怎样让电路按一个动作稳定地接通或断开？</p>
+<p><strong>实际实验与材料</strong>：把金属片、塑料片、干木片等材料分别接在单灯电路的测试缺口，比较表现；再用导电接触片与绝缘底板制作开关，应用到小纸门的开合动作中。</p>
+<p><strong>物理本质</strong>：合适的导体可连接缺口，绝缘材料可将导电部分隔开；开关通过改变接触来控制回路。门的“开”与电路的“断开”不是同一个概念，需要看实际接触关系。</p>
+<p><strong>预期现象</strong>：不同材料连接缺口时，灯可能亮或不亮；调整接触片后可以实现开门亮灯或关门亮灯的一种目标。</p>
+<p><strong>孩子要学会</strong>：用材料性质完成控制功能；能预测机械动作怎样改变电路，而不是只记开关外观。</p>
+<p><strong>前后连接</strong>：掌握单路开关后，D3研究两盏灯之间的通路关系。</p>
+<p><strong>45–60分钟实施</strong>：45分钟做测试和一个可靠开关；60分钟加纸门应用。导电测试始终串入匹配的灯或测试模块，不将金属直接跨接电池两端。</p>
+<p>依据：<a href="https://www.exploratorium.edu/sites/default/files/tinkering/files/Instructions/circuit_boards.pdf">Exploratorium：Circuit Boards 的开关与材料探索</a>、<a href="https://edu.rsc.org/practical/using-a-microscale-conductivity-meter/540.article">RSC：材料导电比较</a>。本课采用干燥固体材料部分。</p>
+<h3>D3 · 两盏灯的串联与并联</h3>
+<p><strong>核心问题</strong>：拆掉一盏灯，另一盏一定会灭吗？</p>
+<p><strong>实际实验与材料</strong>：用同一低压电源和两只相同、适宜的灯泡，分别搭建串联和并联电路。画出路径，取下一只灯或断开一条支路，观察另一只灯，再恢复连接验证。</p>
+<p><strong>物理本质</strong>：串联只有一条贯穿两灯的通路，某处断开会影响整条回路；并联具有独立支路，断开其中一条，另一条仍可能完整。连接关系决定电路类型，不由实物摆在一排还是并排决定。</p>
+<p><strong>预期现象</strong>：串联中移去一灯后另一灯熄灭；并联中断开一条支路，另一盏通常继续亮。亮度也可能不同，但受电源与灯泡特性影响，不作为唯一判据。</p>
+<p><strong>孩子要学会</strong>：通过追踪路径预测故障影响，理解一条路和多条路。能把实物接线对应到简图。</p>
+<p><strong>前后连接</strong>：D4使用独立支路，实现每盏灯各自控制，再加入总控制。</p>
+<p><strong>45–60分钟实施</strong>：教师先选择能同时支持两种比较的电源和灯泡，优先避免 LED 导通阈值造成“串联完全不亮”的干扰。电池可能存在内阻，不把并联说成永远互不影响。</p>
+<p>依据：<a href="https://www.teachengineering.org/activities/cub_electricity_lesson06_activity1">TeachEngineering：Bulbs &amp; Batteries Side by Side，3–5年级</a>、<a href="https://www.teachengineering.org/content/cub_/activities/cub_electricity/cub_electricity_lesson05_activity1_worksheet.pdf">串联电路活动记录</a>。</p>
+<h3>D4 · 两盏灯独立控制，并增加总开关</h3>
+<p><strong>核心问题</strong>：怎样让两盏灯分别开关，还能一键全部关闭？</p>
+<p><strong>实际实验与材料</strong>：沿用前课两灯与低压电源，在纸板上画两个房间，设计带两个分路开关和一个总开关的照明板。孩子先画图、再接线，用所有开关组合检查是否满足目标。</p>
+<p><strong>物理本质</strong>：分路开关控制对应支路，总开关位于两条支路共用的通路上；电路结构决定控制范围。</p>
+<p><strong>预期现象</strong>：可以单独点亮任一灯、同时点亮两灯，并用总开关关闭全部。若接线不合目标，就根据通路定位问题。</p>
+<p><strong>孩子要学会</strong>：将闭合回路、开关与并联关系一起用于设计；以实际功能检验自己的图，能解释每个开关控制哪里。</p>
+<p><strong>前后连接</strong>：综合前三课。完成后可将电路图经验带入01电化学，但不替换其已认可的化学实验。</p>
+<p><strong>45–60分钟实施</strong>：45分钟完成两路、总开关的搭建与一次完整功能测试；60分钟增加故障诊断或改进接线布局。若用预制底板，仍保留主要接线和功能判断给孩子。</p>
+<p>本课为依据前述电路规律设计的工程任务，具体底板与元件组合需预试。</p>
+<h2>实施边界</h2>
+<p>只用合适的低压电源与匹配负载，避免短路发热，不使用市电。灯座、导线、开关与电源是否齐备需按实物确认；不能只凭电压低就忽略短路风险。当前文件是系列设计，尚未做整套器材与孩子操作用时验证。</p>
+</main>
+
+</body>
+</html>

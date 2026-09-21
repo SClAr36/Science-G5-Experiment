@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="500" viewBox="0 0 1400 500" role="img" aria-labelledby="title desc">
+  <title id="title">电磁波谱与可见光位置图</title>
+  <desc id="desc">从无线电波到伽马射线的完整电磁波谱，可见光位于红外线与紫外线之间，并在下方展开为红橙黄绿蓝靛紫色带。</desc>
+  <defs>
+    <linearGradient id="visible" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d52b1e"/>
+      <stop offset="16%" stop-color="#f06b21"/>
+      <stop offset="32%" stop-color="#ffd43b"/>
+      <stop offset="50%" stop-color="#39a852"/>
+      <stop offset="68%" stop-color="#2185d0"/>
+      <stop offset="84%" stop-color="#3949ab"/>
+      <stop offset="100%" stop-color="#7b1fa2"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#243447"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif; fill: #17212b; }
+      .band-label { font-size: 22px; font-weight: 700; }
+      .en { font-size: 15px; font-weight: 500; }
+      .axis { font-size: 20px; font-weight: 700; fill: #243447; }
+      .tick { font-size: 17px; font-weight: 650; }
+      .color-label { font-size: 20px; font-weight: 750; }
+      .light { fill: #ffffff; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="1400" height="500" rx="24" fill="#f7fafc"/>
+  <text x="700" y="42" text-anchor="middle" font-size="28" font-weight="800">电磁波谱（Electromagnetic spectrum）</text>
+  <line x1="120" y1="79" x2="1280" y2="79" stroke="#243447" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="axis" x="120" y="69">波长较长</text>
+  <text class="axis" x="1280" y="69" text-anchor="end">频率较高</text>
+  <g stroke="#ffffff" stroke-width="3">
+    <rect x="80" y="105" width="250" height="105" rx="12" fill="#bac8d8"/>
+    <rect x="330" y="105" width="175" height="105" fill="#92a7bd"/>
+    <rect x="505" y="105" width="185" height="105" fill="#db6a64"/>
+    <rect x="690" y="105" width="54" height="105" fill="url(#visible)"/>
+    <rect x="744" y="105" width="185" height="105" fill="#9b72cf"/>
+    <rect x="929" y="105" width="180" height="105" fill="#7183c8"/>
+    <rect x="1109" y="105" width="211" height="105" rx="12" fill="#596aa8"/>
+  </g>
+  <text class="band-label" x="205" y="151" text-anchor="middle">无线电波<tspan class="en" x="205" dy="25">Radio waves</tspan></text>
+  <text class="band-label" x="418" y="151" text-anchor="middle">微波<tspan class="en" x="418" dy="25">Microwaves</tspan></text>
+  <text class="band-label" x="598" y="151" text-anchor="middle">红外线<tspan class="en" x="598" dy="25">Infrared</tspan></text>
+  <text class="light" x="717" y="160" text-anchor="middle" font-size="18" font-weight="900" transform="rotate(-90 717 160)">可见光</text>
+  <text class="band-label" x="837" y="151" text-anchor="middle">紫外线<tspan class="en" x="837" dy="25">Ultraviolet</tspan></text>
+  <text class="band-label" x="1019" y="151" text-anchor="middle">X 射线<tspan class="en" x="1019" dy="25">X-rays</tspan></text>
+  <text class="band-label light" x="1215" y="151" text-anchor="middle">伽马射线<tspan class="en light" x="1215" dy="25">Gamma rays</tspan></text>
+  <line x1="692" y1="214" x2="315" y2="294" stroke="#596579" stroke-width="3"/>
+  <line x1="742" y1="214" x2="1085" y2="294" stroke="#596579" stroke-width="3"/>
+  <text x="700" y="265" text-anchor="middle" font-size="23" font-weight="800">可见光（Visible light）</text>
+  <rect x="315" y="300" width="770" height="92" rx="15" fill="url(#visible)" stroke="#ffffff" stroke-width="4"/>
+  <g class="color-label" text-anchor="middle">
+    <text class="light" x="370" y="353">红</text>
+    <text class="light" x="480" y="353">橙</text>
+    <text x="590" y="353">黄</text>
+    <text class="light" x="700" y="353">绿</text>
+    <text class="light" x="810" y="353">蓝</text>
+    <text class="light" x="920" y="353">靛</text>
+    <text class="light" x="1030" y="353">紫</text>
+  </g>
+  <g stroke="#263442" stroke-width="2">
+    <line x1="315" y1="397" x2="315" y2="411"/>
+    <line x1="700" y1="397" x2="700" y2="411"/>
+    <line x1="1085" y1="397" x2="1085" y2="411"/>
+  </g>
+  <text class="tick" x="315" y="435" text-anchor="middle">约 700 nm</text>
+  <text class="tick" x="700" y="435" text-anchor="middle">约 550 nm</text>
+  <text class="tick" x="1085" y="435" text-anchor="middle">约 400 nm</text>
+  <line x1="315" y1="468" x2="1085" y2="468" stroke="#243447" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="axis" x="315" y="460">波长变短（λ ↓）</text>
+  <text class="axis" x="1085" y="460" text-anchor="end">频率变高（f ↑）</text>
+</svg>

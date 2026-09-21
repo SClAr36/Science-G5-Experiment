@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>电化学进阶参考：铜的变化与电子转移</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">电化学进阶参考：铜的变化与电子转移</h1>
+</header>
+<main>
+<p><strong>定位：教师背景或未来进阶参考，非当前五年级默认路线。</strong> 用户认可的水果电池、通电显色、电解水和图案设计四课已恢复；当前方案见 <a href="../../../%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.md">系列课程方案总目录</a>。</p>
+<p>以下保留原五课构想，便于以后查阅。</p>
+<p>本系列从一个解释模型出发确定课序，再选实验提供证据。课堂结束时，孩子应能解释：铜怎样从溶液中成为金属；同一个反应怎样产生外电路电流；为什么电池还需要液体中的导电通路；外接电源怎样控制铜沉积的位置。</p>
+<h2>一、贯穿五课的核心模型</h2>
+<p><strong>同一个对象：铜。</strong> 在本系列的体系中，铜可以以金属铜的形式存在，也可以以水中的铜离子形式存在。两者颜色、外观和电荷状态不同；溶液里的铜离子不是悬浮着的微小金属铜片。</p>
+<p><strong>同一个关键变化：铜离子得到电子成为金属铜；金属铜失去电子成为铜离子。</strong></p>
+<p><code>Cu²⁺＋2e⁻ ⇌ Cu</code></p>
+<p><strong>同一组约束：物质和电荷都要有来处、有去处。</strong> 铜原子不会凭空产生或消失；电子从哪里来、经过哪里、被谁接收，都要在图上说清。金属导线主要靠电子导电，溶液和盐桥主要靠离子迁移导电。</p>
+<p>孩子用“铜离子收到电子，变成铜；铜交出电子，进入溶液”的粒子图和箭头建立认识。半反应式是教师把握模型的工具，课堂重点是用模型作预测。</p>
+<h2>二、课程为什么按这个顺序展开</h2>
+<table>
+<thead>
+<tr>
+<th>课次</th>
+<th>本课解决的模型问题</th>
+<th>用到前课的什么认识</th>
+<th>为后课提供什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 · 锌置换铜</td>
+<td>铜离子怎样变成金属铜？电子由谁提供？</td>
+<td>从观察新固体建立本系列的初始模型</td>
+<td>知道锌失去电子、铜离子得到电子这两个相互配合的变化</td>
+</tr>
+<tr>
+<td>2 · 铜锌原电池</td>
+<td>把两个变化分在不同位置，电子能经过导线吗？</td>
+<td>第 1 课的同一组氧化还原变化</td>
+<td>建立化学反应可以驱动外电路电流的认识，并留下盐桥作用的问题</td>
+</tr>
+<tr>
+<td>3 · 盐桥与溶液导电</td>
+<td>为什么只有外面的金属导线，还不能维持电流？</td>
+<td>第 2 课已经能工作的电池装置</td>
+<td>补全金属中电子移动、液体中离子迁移的完整通路</td>
+</tr>
+<tr>
+<td>4 · 铜的电解沉积与再溶解</td>
+<td>由外接电源控制电子的供给和移走，会怎样改变铜？</td>
+<td>前三课的铜／铜离子模型与导电通路</td>
+<td>理解电极连接怎样决定铜在哪一侧沉积或溶解</td>
+</tr>
+<tr>
+<td>5 · 铜沉积图案</td>
+<td>能否根据模型，提前设计铜出现的位置？</td>
+<td>前四课的完整模型</td>
+<td>用一个新任务检验是否真的会预测、选择条件与解释结果</td>
+</tr>
+</tbody>
+</table>
+<p>这里的递进是：<strong>认识电子转移 → 把转移引到导线 → 补全溶液通路 → 用电源控制转移 → 根据模型设计。</strong> 实验换了装置，核心对象和解释始终相同。</p>
+<h2>三、每课具体做什么</h2>
+<h3>第 1 课：锌与硫酸铜溶液的置换反应</h3>
+<p><strong>核心问题</strong>：蓝色溶液里的铜，怎样变成看得见的金属？</p>
+<p><strong>实际实验</strong>：使用清洁锌片、教师预配的小量硫酸铜溶液和透明容器。比较加入锌片与未加入锌片的样品，观察锌片表面和溶液变化；保留照片供后续课程调用。</p>
+<p><strong>反应本质</strong>：锌被氧化为锌离子，铜离子被还原为金属铜。两个变化在接触区域配合发生。</p>
+<p><code>Zn → Zn²⁺＋2e⁻</code></p>
+<p><code>Cu²⁺＋2e⁻ → Cu</code></p>
+<p><code>总反应：Zn＋Cu²⁺ → Zn²⁺＋Cu</code></p>
+<p><strong>现象</strong>：锌片表面逐渐出现红棕色铜沉积；反应充分进行时，蓝色可变浅，锌也逐渐被消耗。颜色是观察证据，铜的身份与电子模型还需结合已知反应进行解释，不能只凭颜色断定物质身份。</p>
+<p><strong>孩子要学会</strong>：铜原先在溶液中，并非锌变成了铜；“锌失去电子”与“铜离子得到电子”是一对配合的变化。能在图上标出铜和锌的前后去向。</p>
+<p><strong>通向下一课</strong>：把失去电子和得到电子的过程分到两处，是否还能继续？电子将经过哪里？</p>
+<p><strong>课堂可行性</strong>：用锌片而非锌粉；教师先确定能在课堂内明显看到沉积的小规模条件。孩子完成取放、对照、观察与记录。</p>
+<p>依据：<a href="https://edu.rsc.org/download?ac=546501">RSC：金属与盐溶液的置换反应</a>。</p>
+<h3>第 2 课：铜锌原电池——让同一个反应经过导线</h3>
+<p><strong>核心问题</strong>：锌和铜离子不直接接触，还能发生第 1 课的变化并产生电流吗？</p>
+<p><strong>实际实验</strong>：把锌片放入硫酸锌溶液，把铜片放入硫酸铜溶液。两杯用适宜电解质浸湿的纸桥连接，两金属经导线、合适电阻与微电流测量装置连接。孩子搭建、接通与断开外电路，并比较电流；电压测量作为补充。</p>
+<p><strong>反应本质</strong>：总反应仍然是 <code>Zn＋Cu²⁺ → Zn²⁺＋Cu</code>。锌端失去的电子经过外部导线到达铜端，铜离子在铜电极表面得到电子。反应体系的化学能可以对外做电功。</p>
+<p><strong>现象</strong>：没有外接电池，接好装置后仍能测到电压，并在合适负载下测到持续电流。锌端和铜端的物质变化可能较慢，不承诺一节课内出现明显厚镀层。</p>
+<p><strong>孩子要学会</strong>：电池需要具体的物质变化；导线把两处的电子转移连接起来。与第 1 课相比，改变的是反应发生的位置与电子路径，基本反应没有换。</p>
+<p><strong>通向下一课</strong>：两杯之间的湿纸桥为什么必不可少？它传递的是电子，还是别的带电粒子？</p>
+<p><strong>课堂可行性</strong>：采用教师先试通的装置，孩子保留电极放置、纸桥连接和电路通断操作。把“测到电流”作为基础目标，不默认单个高内阻实验电池能点亮普通 LED。微电流计需配合适电阻；不能只用空载电压判断持续供电能力。</p>
+<p>依据：<a href="https://edu.rsc.org/download?ac=515964">RSC：铜锌原电池装置</a>、<a href="https://edu.rsc.org/ideas/take-a-microscale-approach-to-electrochemical-cells/4015537.article">RSC：微量原电池教学</a>。盐桥工作液、尺度与测量范围按家庭微量版预试确定。</p>
+<h3>第 3 课：盐桥断开／恢复与溶液导电比较</h3>
+<p><strong>核心问题</strong>：外面的导线已经接好，为什么液体之间还需要一条通路？</p>
+<p><strong>实际实验</strong>：沿用第 2 课电池，保持金属导线连接，取走并恢复纸桥，观察稳定电流。再用电导测量装置比较同种水配制的糖水与硫酸钠溶液，或用同尺寸新纸桥作对应比较。溶液预先配好，本课研究导电，不重复溶解操作课。</p>
+<p><strong>反应或过程本质</strong>：电池总反应不变。锌端持续生成正离子，铜端持续消耗正离子；盐桥允许离子迁移，使体系能维持连续工作。糖主要以中性分子溶于水，硫酸钠溶液含有可移动的离子；电子并不是从金属导线钻进纸桥并绕完一圈。</p>
+<p><strong>现象</strong>：在适宜装置中，断开纸桥后持续电流显著减弱或停止，恢复后回升；硫酸钠溶液通常比同种水配制的糖水更容易形成可测的导电通路。短暂残余读数、杂质与污染都可能影响结果。</p>
+<p><strong>孩子要学会</strong>：能画出两类导电通路——金属中的电子移动和液体中的离子迁移；用它解释“导线没断，电池却停止持续工作”。</p>
+<p><strong>通向下一课</strong>：既然电子到达的位置会影响铜的变化，能否由外接电源控制它？</p>
+<p><strong>课堂可行性</strong>：观察带负载的电流，避免把仍存在的空载电压当作持续通电。糖水／盐溶液比较用新纸桥或洁净探头，主要判断通路差异，不作精确电导率排名。</p>
+<p>依据：<a href="https://edu.rsc.org/download?ac=516023">RSC：盐桥维持电荷平衡的解释</a>、<a href="https://edu.rsc.org/practical/using-a-microscale-conductivity-meter/540.article">RSC：微量电导比较</a>。</p>
+<h3>第 4 课：硫酸铜电解中的铜沉积与再溶解</h3>
+<p><strong>核心问题</strong>：如果不用锌提供电子，改用外接电源，铜会在哪里出现？改变极性又会怎样？</p>
+<p><strong>实际实验</strong>：在硫酸铜溶液中，用铜片作阳极、适宜石墨片作阴极，连接经预试的低压限流电源。先比较通电与断电，再观察石墨表面的铜沉积；在薄镀层和适宜条件下，改变极性，观察原镀层的变化。</p>
+<p><strong>反应本质</strong>：负极连接的一端得到电子，铜离子还原沉积；正极连接的一端失去电子，铜阳极溶解。改变极性后，原沉积的铜可被氧化回铜离子。</p>
+<p><code>沉积的一端：Cu²⁺＋2e⁻ → Cu</code></p>
+<p><code>溶解的一端：Cu → Cu²⁺＋2e⁻</code></p>
+<p>本装置主要把铜从一个位置转到另一个位置；它不是把第 2 课铜锌电池的全部总反应直接倒过来。两种装置共享铜／铜离子这一半反应，但另一电极的反应与能量来源不同。</p>
+<p><strong>现象</strong>：通电时石墨表面出现红棕色铜层；在适宜条件下，反转极性后原铜层逐渐减薄或消退。镀层可能粗糙，不预设为光亮而牢固的装饰镀层。</p>
+<p><strong>孩子要学会</strong>：能根据电子到达或离开的方向，预测哪里沉积铜、哪里溶解铜；能说明蓝色溶液中的铜不是整块“漂移”到了另一个电极。</p>
+<p><strong>通向下一课</strong>：若只想让铜出现在指定图形里，需要让哪些位置与电路和溶液连通？</p>
+<p><strong>课堂可行性</strong>：用合适石墨基材使通断电对照清楚；不随意用铁钉替代，因为铁本身也可能与铜离子发生置换。教师先确定可见沉积、极性反转和终止观察的条件。</p>
+<p>依据：<a href="https://edu.rsc.org/experiments/electrolysis-of-copperii-sulfate-solution/476.article">RSC：硫酸铜电解、铜电极与反转极性</a>。</p>
+<h3>第 5 课：绝缘遮挡控制铜沉积的位置</h3>
+<p><strong>核心问题</strong>：能否先预测铜出现的区域，再做出对应图案？</p>
+<p><strong>实际实验</strong>：沿用第 4 课已验证的铜电解沉积装置。在石墨片上用适宜绝缘膜遮挡部分区域，留下一个简单图案，把石墨片接在铜沉积的一端。孩子先画预测图，再通电、观察、揭去遮挡并比较结果；有时间时调整一处设计再验证。</p>
+<p><strong>反应或过程本质</strong>：铜离子仍通过 <code>Cu²⁺＋2e⁻ → Cu</code> 沉积。图案的形成需要暴露的导电表面同时与溶液和外电路连通；完整遮挡阻止相应界面反应。铜阳极仍通过失去电子补充溶液中的铜离子。</p>
+<p><strong>现象</strong>：裸露区域出现铜沉积，完整遮挡区域保留基材颜色，形成具有边界的图形。膜下渗液和边缘效应可能使边界与预测有差异。</p>
+<p><strong>孩子要学会</strong>：把物质来源、电子路径、接触界面和极性一起用于预测。能解释成功与偏差，提出一次有理由的修改。</p>
+<p><strong>结课证据</strong>：交付一件样品或照片，以及一张图：铜从哪里来、电子由哪条路到达、铜为什么出现在这里。再预测“断电”“换极性”“遮住某处”中的一种变化并验证。</p>
+<p><strong>课堂可行性</strong>：这是同一电解过程的应用课，不新增化学体系。图案以小而清楚为目标；绝缘膜、石墨基材及附着效果需要先做实物预试。45 分钟完成一次预测—操作—解释，60 分钟再增加一轮改进。</p>
+<p>沉积机理沿用第 4 课；遮挡图案是本方案的工程改编，尚未完成实物验证。</p>
+<h2>四、为什么这里可以形成一个体系</h2>
+<p>这五课始终围绕同一种变化：铜离子与金属铜之间的电子得失。每节改变的，是电子由谁提供、经过什么通路、在哪个位置被接收或移走。</p>
+<ul>
+<li>第 1、2 课用同一总反应，比较直接接触与通过外电路完成转移。</li>
+<li>第 3 课补全第 2 课装置中液体导电的必要条件。</li>
+<li>第 4 课调用同一铜半反应，由外接电源控制沉积与溶解。</li>
+<li>第 5 课让孩子用此前模型预测一个新设计，而非另换一个反应看现象。</li>
+</ul>
+<p>趣味性来自红棕色金属出现、电流读数响应通断、镀层出现与消退，以及最后的铜图案；这些现象各自承担模型中的证据任务。</p>
+<h2>五、教师准备与实际边界</h2>
+<ul>
+<li>铜盐、锌盐由教师按正式教案预配小量溶液，使用护目镜、专用器具与废液回收容器。孩子保留安全范围内的电极取放、搭建、通断、观察和判断。</li>
+<li>需要补充或确认硫酸铜、硫酸锌、清洁铜锌片、适宜石墨基材、电解质纸桥、微电流测量与低压限流装置。现有库存不直接当作已经齐备；硫酸铜在此前盘点中已用完。</li>
+<li>本稿是从核心模型建立的五课方向，不是已经验证的操作配方。学校来源多面向更高年级；一对一五年级教学采用粒子图与具体预测，方程式留给教师参考。实际理解进度决定是否需要调整课数。</li>
+<li>不再安排酸与小苏打的重复实验。也不为凑齐旧方案中的现象而在本系列加入无关内容。</li>
+</ul>
+</main>
+</body>
+</html>

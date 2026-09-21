@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>简洁教案模板</title>
+<style>
+* { box-sizing: border-box; }
+html, body { background: #fff; color: #222; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+header#title-block-header, main#lesson-content {
+  width: calc(100% - 48px);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+header#title-block-header { padding-top: 28px; padding-bottom: 12px; }
+main#lesson-content { padding-bottom: 40px; }
+h1 { margin: 0; font-size: 30px; line-height: 1.35; }
+h2, h3 { margin: 28px 0 12px; font-size: 21px; line-height: 1.4; color: #222; }
+p { margin: 10px 0 14px; }
+ol, ul { padding-left: 1.5em; }
+li { margin: 5px 0; }
+strong { font-weight: 700; }
+a, a:visited { color: #333; text-underline-offset: 3px; }
+table {
+  display: block;
+  width: 100%;
+  margin: 14px 0 20px;
+  border-collapse: collapse;
+  overflow-x: auto;
+  font-size: 16px;
+  line-height: 1.55;
+}
+th, td { padding: 9px 11px; border: 1px solid #ccc; text-align: left; vertical-align: top; }
+th { background: #f3f3f3; color: #222; }
+code { font-family: Consolas, monospace; }
+img, svg { max-width: 100%; height: auto; }
+#lesson-content .lesson-collapsible {
+  --collapsible-accent: #555;
+  --collapsible-border: #ccc;
+  --collapsible-bg: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+#lesson-content .lesson-collapsible-hint { display: none !important; }
+@media (max-width: 720px) {
+  body { font-size: 17px; }
+  header#title-block-header, main#lesson-content { width: calc(100% - 32px); }
+  h1 { font-size: 26px; }
+  h3 { font-size: 20px; }
+}
+@media print {
+  header#title-block-header, main#lesson-content { width: 100%; max-width: none; }
+  h3 { break-after: avoid; }
+  body { font-size: 11pt; }
+}
+</style>
+</head>
+<body></body>
+</html>

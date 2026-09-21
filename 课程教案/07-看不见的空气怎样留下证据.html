@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 07 节：看不见的空气，怎样留下证据？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 07 节：看不见的空气，怎样留下证据？</h1>
+</header>
+<main>
+<p><strong>Lesson 07: How Can Invisible Air Leave Visible Evidence?</strong></p>
+<p><strong>授课状态</strong>：已完成；实际授课第 7 节，共 120 分钟。</p>
+<h2>家长课前准备（Materials for Parents）</h2>
+<p>只列需要提前确认、可能需要购买的材料。数量按 1 名孩子并留少量重做余量计算。</p>
+<table>
+<thead>
+<tr>
+<th>材料 Material</th>
+<th style="text-align:right">建议数量 Amount</th>
+<th>用途与要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>蜡烛 candle</td>
+<td style="text-align:right">2 支</td>
+<td>短蜡烛或茶蜡；1 支主用、1 支备用</td>
+</tr>
+<tr>
+<td>紫甘蓝 red cabbage</td>
+<td style="text-align:right">3–4 片大叶</td>
+<td>新鲜并提前洗净；制作酸碱指示剂</td>
+</tr>
+<tr>
+<td>白砂糖 white sugar</td>
+<td style="text-align:right">约 1 小勺</td>
+<td>配糖水</td>
+</tr>
+<tr>
+<td>柠檬 lemon</td>
+<td style="text-align:right">1 个</td>
+<td>现挤柠檬汁；成人切开</td>
+</tr>
+<tr>
+<td>食用小苏打 baking soda</td>
+<td style="text-align:right">约 1 小勺</td>
+<td>配小苏打水；不是瓶装“苏打水”</td>
+</tr>
+<tr>
+<td>白醋 white vinegar</td>
+<td style="text-align:right">约 30 mL</td>
+<td>酸性样品</td>
+</tr>
+<tr>
+<td>雪碧 Sprite</td>
+<td style="text-align:right">约 100 mL</td>
+<td>尽量现开；倒出后等大泡沫消失</td>
+</tr>
+<tr>
+<td>原味白色肥皂 plain white soap</td>
+<td style="text-align:right">1 小块</td>
+<td>配肥皂水；可用 2–3 滴透明洗洁精代替</td>
+</tr>
+</tbody>
+</table>
+<p>气球家中已有，不需另买。清水、热水、冰块、纸巾、胶带、杯碗、水盆、塑料衣架、空饮料瓶、硬卡片、轻卡纸、吸管、线绳、吹风机、剪刀、尺子和点火工具按普通家用品处理，不列为家长专门采购材料。热水和明火由教师负责，不需家长提前送来。</p>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>课时</strong>：120 分钟，含 6 分钟休息。</li>
+<li><strong>形式</strong>：1 对 1 家庭实验课；孩子完成预测、搭建、充气、调平、取样、观察和记录。</li>
+<li><strong>对应学校内容</strong>：Unit 2 Properties of Matter 中的气体与混合物；Unit 4 Respiratory System 中吸入氧气、排出二氧化碳。</li>
+<li><strong>核心问题</strong>：看不见的空气具有什么性质、含有哪些气体？我们怎样让它们留下可见证据？
+<em>What properties and gases does invisible air have, and how can we make them leave visible evidence?</em></li>
+</ul>
+<p>全课沿一条证据线推进：</p>
+<pre><code class="language-text">纸巾不湿 → 空气占据空间
+气球天平 → 空气是有质量的物质
+倒扣水杯 + 压瘪塑料瓶 → 压强差能产生力
+弧形纸翼沿线升起 → 流动空气在翼面周围形成压力差
+蜡烛罩杯后熄灭、水面上升 → 空气中的氧气支持燃烧
+六种液体建立颜色标尺 → 紫甘蓝显示呼出气体中的二氧化碳
+</code></pre>
+<h3>孩子应能</h3>
+<ol>
+<li>用实验现象说明空气占据空间、具有质量并会产生压力。</li>
+<li>分清纸巾被固定靠摩擦或胶带，纸巾不湿则因为杯内空气占据空间。</li>
+<li>在倒扣水杯和冷却塑料瓶中画出外界空气压力的方向，不用“吸力”代替压强差。</li>
+<li>用纸翼升起说明压力分布不均能形成向上的合力。</li>
+<li>说明空气是<strong>均一混合物（homogeneous mixture）</strong>，氧气支持燃烧。</li>
+<li>先用六种液体读懂紫甘蓝<strong>酸碱指示剂（acid–base indicator）</strong>，再用颜色变化检测呼出气体中的二氧化碳。</li>
+<li>用“观察—证据—解释—边界”表达一个实验结论。</li>
+</ol>
+<h2>二、教师课前准备</h2>
+<ol>
+<li>确认现场有深水盆、透明杯、轻质塑料衣架、薄壁塑料瓶、硬卡片、轻卡纸、吸管、线绳、吹风机、透明玻璃罐、浅碗、10 个透明小杯、护目镜和吸水布。</li>
+<li>预试衣架天平：先让两个未充气气球平衡，再取下一只用嘴吹大并装回原位。若挂钩摩擦大，用细线穿过挂钩悬吊；若没有轻衣架，把 A4 纸沿对角线卷成约 35 cm 的纸棒。</li>
+<li>预试塑料瓶：使用 500 mL–1 L 薄壁 PET 瓶；热水约 70–80℃，不用沸水直接软化瓶壁。</li>
+<li>预制一个纸翼样品，确认吸管能沿竖直线绳自由滑动；吹风机使用冷风或低温档。确认玻璃罐无裂纹，罐口能浸入浅碗的水中，罐高大于蜡烛。</li>
+<li>给 10 个小杯贴标签：原液、糖水、柠檬汁、小苏打水、白醋、肥皂水、雪碧、空气对照、呼气组、备用。</li>
+<li>课前预试呼气显色：用低矿物质饮用水把指示剂稀释至浅紫色，吹泡 60–90 秒应能看出呼气组比空气对照偏粉紫；正式课仍由孩子配液和吹气。</li>
+<li>明火、热水、切柠檬和移动发热玻璃罐由教师完成，其余步骤默认由孩子操作。</li>
+</ol>
+<h2>三、一眼速查（Quick Timeline）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>活动</th>
+<th>必须留下的证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–3</td>
+<td>“空杯真的空吗？”预测</td>
+<td>先写预测，不先讲答案</td>
+</tr>
+<tr>
+<td style="text-align:right">3–15</td>
+<td>实验 1：杯中纸巾不湿</td>
+<td>空气占据空间；倾斜后气泡逃出</td>
+</tr>
+<tr>
+<td style="text-align:right">15–33</td>
+<td>实验 2：衣架“空气天平”（DK 3）</td>
+<td>未充气时调平；一只吹大并装回原位后平衡改变</td>
+</tr>
+<tr>
+<td style="text-align:right">33–45</td>
+<td>实验 3：倒扣水杯与卡片（DK 2）</td>
+<td>外界空气压力向上托住卡片</td>
+</tr>
+<tr>
+<td style="text-align:right">45–59</td>
+<td>实验 4：冷却后压瘪塑料瓶（DK 1）</td>
+<td>内压降低后，外界空气把瓶壁向内推</td>
+</tr>
+<tr>
+<td style="text-align:right">59–71</td>
+<td>实验 5：让机翼飞起来（DK 7）</td>
+<td>弧形纸翼沿竖线升起</td>
+</tr>
+<tr>
+<td style="text-align:right">71–77</td>
+<td>休息与换台</td>
+<td>教师收热水并布置耐热托盘</td>
+</tr>
+<tr>
+<td style="text-align:right">77–92</td>
+<td>实验 6：发现空气中的气体（DK 4）</td>
+<td>火焰熄灭，罐内水面上升</td>
+</tr>
+<tr>
+<td style="text-align:right">92–117</td>
+<td>实验 7：紫甘蓝检测呼出二氧化碳</td>
+<td>六种液体先建立颜色标尺；呼气组是必做结论实验</td>
+</tr>
+<tr>
+<td style="text-align:right">117–120</td>
+<td>证据链收束</td>
+<td>用一条现象和一句解释回答核心问题</td>
+</tr>
+</tbody>
+</table>
+<h2>四、课堂脚本（按时间顺序）</h2>
+<h3>0–3 分钟：“空杯”真的空吗？</h3>
+<p><strong>做</strong>：把一个看似空的透明杯交给孩子，请孩子写一句预测：“杯里有什么？倒扣进水里会怎样？”</p>
+<p><strong>讲</strong>：今天不以“直接看到物体”为唯一证据，而看它是否造成稳定、可重复的变化。</p>
+<h3>3–15 分钟：实验 1——杯中纸巾不湿</h3>
+<blockquote>
+<p><strong>实验目的 Objective：空气占据空间。 Air takes up space.</strong></p>
+</blockquote>
+<p><strong>重要知识点</strong>：</p>
+<ul>
+<li><strong>空气占据空间（air occupies space）</strong>：杯口向下竖直入水时，杯内空气被困住，水不能同时占据同一空间。</li>
+<li>纸巾不掉靠摩擦或胶带；这不是纸巾不湿的原因。</li>
+<li>杯子倾斜后，空气以气泡逃出，水才进入杯中。</li>
+</ul>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格或浓度</th>
+<th style="text-align:right">每次用量</th>
+<th>来源或备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>纸巾</td>
+<td>干燥，可团成杯底大小</td>
+<td style="text-align:right">2 小团</td>
+<td>1 团主用，1 团重做</td>
+</tr>
+<tr>
+<td>清水</td>
+<td>常温</td>
+<td style="text-align:right">约 1.5 L</td>
+<td>水深要能没过杯底</td>
+</tr>
+<tr>
+<td>胶带</td>
+<td>透明胶带</td>
+<td style="text-align:right">2 小段</td>
+<td>只防止纸巾掉落</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>规格</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透明塑料杯</td>
+<td style="text-align:right">1 个</td>
+<td>杯口平整</td>
+<td>困住空气</td>
+</tr>
+<tr>
+<td>深透明水盆</td>
+<td style="text-align:right">1 个</td>
+<td>水深至少 12–15 cm</td>
+<td>让杯口和杯底都没入水中</td>
+</tr>
+<tr>
+<td>干毛巾</td>
+<td style="text-align:right">1 条</td>
+<td>家用</td>
+<td>擦干杯外侧后检查纸巾</td>
+</tr>
+</tbody>
+</table>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijg2MCIgdmlld0JveD0iMCAwIDE0MDAgODYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+56m65rCU6K+B5o2u5a6e6aqM55qE5Zub5Liq6KOF572uPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+57q45be+5LiN5rm/44CB5rCU55CD6KGj5p625aSp5bmz44CB5YCS5omj5rC05p2v5LiO5Ya35Y205Y6L55iq5aGR5paZ55O255qE56m66Ze05YWz57O75ZKM5Yqb55qE5pa55ZCR44CCPC9kZXNjPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0iYmx1ZSIgbWFya2VyV2lkdGg9IjEyIiBtYXJrZXJIZWlnaHQ9IjEyIiByZWZYPSIxMCIgcmVmWT0iNiIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEwxMiA2IEwwIDEyIFoiIGZpbGw9IiMxNjdlYTMiLz48L21hcmtlcj4KICAgIDxtYXJrZXIgaWQ9InJlZCIgbWFya2VyV2lkdGg9IjEyIiBtYXJrZXJIZWlnaHQ9IjEyIiByZWZYPSIxMCIgcmVmWT0iNiIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEwxMiA2IEwwIDEyIFoiIGZpbGw9IiNjOTQ4M2IiLz48L21hcmtlcj4KICAgIDxzdHlsZT4KICAgICAgdGV4dHtmb250LWZhbWlseToiTm90byBTYW5zIFNDIiwiTWljcm9zb2Z0IFlhSGVpIixzYW5zLXNlcmlmO2ZpbGw6IzE3MjEyYn0ucGFuZWx7ZmlsbDojZmZmO3N0cm9rZTojOWJiNWJmO3N0cm9rZS13aWR0aDozfQogICAgICAudGl0bGV7Zm9udC1zaXplOjI4cHg7Zm9udC13ZWlnaHQ6ODAwO2ZpbGw6IzEyNGE2MX0ubGFiZWx7Zm9udC1zaXplOjIxcHg7Zm9udC13ZWlnaHQ6NzAwfS5ub3Rle2ZvbnQtc2l6ZToxN3B4O2ZvbnQtd2VpZ2h0OjYwMH0KICAgICAgLndhdGVye2ZpbGw6I2JkZTdmNDtvcGFjaXR5Oi44Nn0uZ2xhc3N7ZmlsbDojZjlmZGZmO2ZpbGwtb3BhY2l0eTouNTg7c3Ryb2tlOiM1Mzc5ODc7c3Ryb2tlLXdpZHRoOjZ9LmFpcntmaWxsOiNmZmY2Yzc7b3BhY2l0eTouNzh9CiAgICAgIC5mb3JjZXtzdHJva2U6IzE2N2VhMztzdHJva2Utd2lkdGg6NzttYXJrZXItZW5kOnVybCgjYmx1ZSl9LmNoYW5nZXtzdHJva2U6I2M5NDgzYjtzdHJva2Utd2lkdGg6NzttYXJrZXItZW5kOnVybCgjcmVkKX0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijg2MCIgcng9IjI4IiBmaWxsPSIjZjNmN2Y5Ii8+CiAgPHRleHQgeD0iNzAwIiB5PSI0OCIgY2xhc3M9InRpdGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7nqbrmsJTnnIvkuI3op4HvvIzkvYblroPkvJrnlZnkuIvlj6/op4Llr5/nmoTor4Hmja48L3RleHQ+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDUgNzUpIj4KICAgIDxyZWN0IGNsYXNzPSJwYW5lbCIgd2lkdGg9IjYzMCIgaGVpZ2h0PSIzNDAiIHJ4PSIyMiIvPjx0ZXh0IHg9IjI1IiB5PSI0MCIgY2xhc3M9InRpdGxlIj5BICDlgJLmiaPmna/ph4znmoTnurjlt77kuLrku4DkuYjkuI3mub88L3RleHQ+CiAgICA8cmVjdCB4PSI1NSIgeT0iMTA1IiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjE5NSIgcng9IjE0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NjhiOTkiIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjYxIiB5PSIxODAiIHdpZHRoPSI1MDgiIGhlaWdodD0iMTE0IiBjbGFzcz0id2F0ZXIiLz4KICAgIDxwYXRoIGQ9Ik0yMjUgMjcwIEwyMjUgMTE1IFEyMjUgOTUgMjQ1IDk1IEwzOTAgOTUgUTQxMCA5NSA0MTAgMTE1IEw0MTAgMjcwIiBjbGFzcz0iZ2xhc3MiLz48cmVjdCB4PSIyNTQiIHk9IjEwOCIgd2lkdGg9IjEyNiIgaGVpZ2h0PSIyMiIgcng9IjUiIGZpbGw9IiNlN2UxZDUiLz4KICAgIDxyZWN0IHg9IjIzMiIgeT0iMTMyIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjEzNiIgY2xhc3M9ImFpciIvPjx0ZXh0IHg9IjMxNiIgeT0iMTk1IiBjbGFzcz0ibGFiZWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuiiq+WbsOS9j+eahOepuuawlDwvdGV4dD48dGV4dCB4PSIzMTYiIHk9IjIyMiIgY2xhc3M9Im5vdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuWNoOaNruadr+WGheepuumXtDwvdGV4dD4KICAgIDx0ZXh0IHg9IjQyNSIgeT0iMjg1IiBjbGFzcz0ibm90ZSI+5p2v5Y+j5Zyo5rC05LiLPC90ZXh0Pjx0ZXh0IHg9IjM1IiB5PSIzMjIiIGNsYXNzPSJub3RlIj7mna/lupXkuZ/opoHmsqHlhaXmsLTkuK3vvJvlgL7mlpzlkI7nqbrmsJTlhpLms6HpgIPlh7rvvIzmsLTmiY3ov5vlhaXjgII8L3RleHQ+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcyNSA3NSkiPgogICAgPHJlY3QgY2xhc3M9InBhbmVsIiB3aWR0aD0iNjMwIiBoZWlnaHQ9IjM0MCIgcng9IjIyIi8+PHRleHQgeD0iMjUiIHk9IjQwIiBjbGFzcz0idGl0bGUiPkIgIOiho+aetuKAnOepuuawlOWkqeW5s+KAnTwvdGV4dD4KICAgIDxsaW5lIHgxPSIzMTUiIHkxPSI2NyIgeDI9IjMxNSIgeTI9IjEwNiIgc3Ryb2tlPSIjMzU0ZDU5IiBzdHJva2Utd2lkdGg9IjUiLz48cGF0aCBkPSJNMzE1IDEwNCBMMTE1IDIzNSBMNTE1IDIzNSBaIiBmaWxsPSJub25lIiBzdHJva2U9IiM1MjZlNzkiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxlbGxpcHNlIGN4PSIxMTgiIGN5PSIyNTUiIHJ4PSI3MCIgcnk9IjU1IiBmaWxsPSIjZjQ5Yjk5IiBzdHJva2U9IiM5YjNmM2EiIHN0cm9rZS13aWR0aD0iNCIvPjxlbGxpcHNlIGN4PSI1MTIiIGN5PSIyNTUiIHJ4PSI3MCIgcnk9IjU1IiBmaWxsPSIjODhjOWVmIiBzdHJva2U9IiMzMTZlOTEiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgPHRleHQgeD0iMTE4IiB5PSIyNjIiIGNsYXNzPSJsYWJlbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+5pS+5rCUPC90ZXh0Pjx0ZXh0IHg9IjUxMiIgeT0iMjYyIiBjbGFzcz0ibGFiZWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuWFheawlDwvdGV4dD48bGluZSB4MT0iNTEyIiB5MT0iMjkyIiB4Mj0iNTEyIiB5Mj0iMzI2IiBjbGFzcz0iY2hhbmdlIi8+CiAgICA8dGV4dCB4PSIzMTUiIHk9IjMyNSIgY2xhc3M9Im5vdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuWFiOiwg+W5s++8jOWGjeWPquaUueWPmOS4gOi+ueawlOeQg+S4reeahOepuuawlOmHjzwvdGV4dD4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDUgNDY1KSI+CiAgICA8cmVjdCBjbGFzcz0icGFuZWwiIHdpZHRoPSI2MzAiIGhlaWdodD0iMzQwIiByeD0iMjIiLz48dGV4dCB4PSIyNSIgeT0iNDAiIGNsYXNzPSJ0aXRsZSI+QyAg5YCS5omj5rC05p2v5LiO56Gs5Y2h54mHPC90ZXh0PgogICAgPHBhdGggZD0iTTIwNSA4MiBMMjA1IDI1MCBRMjA1IDI2NyAyMjIgMjY3IEw0MTAgMjY3IFE0MjcgMjY3IDQyNyAyNTAgTDQyNyA4MiIgY2xhc3M9ImdsYXNzIi8+PHJlY3QgeD0iMjEzIiB5PSI4OSIgd2lkdGg9IjIwNiIgaGVpZ2h0PSIxNjYiIGNsYXNzPSJ3YXRlciIvPgogICAgPHJlY3QgeD0iMTc0IiB5PSIyNjQiIHdpZHRoPSIyODUiIGhlaWdodD0iMTgiIHJ4PSI1IiBmaWxsPSIjZDZiNzdhIiBzdHJva2U9IiM4NjZkM2IiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPGxpbmUgeDE9IjI0NSIgeTE9IjMzMCIgeDI9IjI0NSIgeTI9IjI4OCIgY2xhc3M9ImZvcmNlIi8+PGxpbmUgeDE9IjMxNiIgeTE9IjMzMCIgeDI9IjMxNiIgeTI9IjI4OCIgY2xhc3M9ImZvcmNlIi8+PGxpbmUgeDE9IjM4NyIgeTE9IjMzMCIgeDI9IjM4NyIgeTI9IjI4OCIgY2xhc3M9ImZvcmNlIi8+CiAgICA8bGluZSB4MT0iMzE2IiB5MT0iMTUwIiB4Mj0iMzE2IiB5Mj0iMjMwIiBjbGFzcz0iY2hhbmdlIi8+PHRleHQgeD0iNTUiIHk9IjMxOSIgY2xhc3M9ImxhYmVsIj7lpJbnlYznqbrmsJTljovlipvlkJHkuIo8L3RleHQ+PHRleHQgeD0iMzM3IiB5PSIxNzUiIGNsYXNzPSJub3RlIj7msLTnmoTph43lipvlkJHkuIs8L3RleHQ+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcyNSA0NjUpIj4KICAgIDxyZWN0IGNsYXNzPSJwYW5lbCIgd2lkdGg9IjYzMCIgaGVpZ2h0PSIzNDAiIHJ4PSIyMiIvPjx0ZXh0IHg9IjI1IiB5PSI0MCIgY2xhc3M9InRpdGxlIj5EICDlhrfljbTlkI7loZHmlpnnk7booqvljovnmKo8L3RleHQ+CiAgICA8cGF0aCBkPSJNMjM1IDg4IFEyMzUgNjUgMjY1IDY1IEwzNjUgNjUgUTM5NSA2NSAzOTUgODggTDQwMCAxMjAgUTQ1NSAxNTUgNDM1IDI3MCBRNDIwIDMwNSAzMTUgMzA4IFEyMTAgMzA1IDE5NSAyNzAgUTE3NSAxNTUgMjMwIDEyMCBaIiBmaWxsPSIjZThmN2ZiIiBzdHJva2U9IiM1Mzc5ODciIHN0cm9rZS13aWR0aD0iNyIvPgogICAgPHBhdGggZD0iTTIzMCAxNTUgUTMxNSAyMDAgNDAwIDE1NSBNMjE1IDIzNSBRMzE1IDE5MCA0MjAgMjM1IiBmaWxsPSJub25lIiBzdHJva2U9IiM3OWE3YjgiIHN0cm9rZS13aWR0aD0iNiIvPgogICAgPGxpbmUgeDE9IjExNSIgeTE9IjE5NSIgeDI9IjIwNSIgeTI9IjE5NSIgY2xhc3M9ImZvcmNlIi8+PGxpbmUgeDE9IjUxNSIgeTE9IjE5NSIgeDI9IjQyNSIgeTI9IjE5NSIgY2xhc3M9ImZvcmNlIi8+PGxpbmUgeDE9IjMxNSIgeTE9IjMzMCIgeDI9IjMxNSIgeTI9IjMwMCIgY2xhc3M9ImZvcmNlIi8+CiAgICA8dGV4dCB4PSIzMTUiIHk9IjE0MiIgY2xhc3M9ImxhYmVsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7msJTkvZPlhrfljbTvvIzmsLTokrjmsJTlh53nu5M8L3RleHQ+PHRleHQgeD0iMzE1IiB5PSIxNjkiIGNsYXNzPSJub3RlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7lhoXpg6jljovlvLrpmY3kvY48L3RleHQ+PHRleHQgeD0iMzE1IiB5PSIzMjYiIGNsYXNzPSJsYWJlbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+5aSW6YOo56m65rCU5oqK55O25aOB5ZCR5YaF5o6oPC90ZXh0PgogIDwvZz4KPC9zdmc+Cg==" alt="空气占空间、有质量和压强差的四个实验装置" /></p>
+<p><strong>做</strong>：</p>
+<ol>
+<li>孩子把干纸巾固定在杯底内侧，倒转检查它不会掉落。</li>
+<li>确认纸巾干燥。杯口竖直向下、不倾斜地压入水中。</li>
+<li>继续下压，直到杯底也完全没入水中；停留 3 秒后竖直提出。</li>
+<li>擦干杯外侧，再取下纸巾检查。</li>
+<li>做对照：再次入水后故意倾斜，观察气泡；让水进入，再检查纸巾。</li>
+</ol>
+<p><strong>预期现象</strong>：竖直入水时纸巾干燥；倾斜时气泡逃出，水进入后纸巾变湿。</p>
+<p><strong>失败判据</strong>：若杯底没有没入水中，即使纸巾不湿也不算有效证据；若入水时明显冒泡，该次重做。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>气泡</th>
+<th>纸巾结果</th>
+<th>证据说明什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>杯口竖直向下</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>杯子在水中倾斜</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">固定纸巾：摩擦或胶带
+保持干燥：杯内空气占据空间
+关键对照：空气冒泡逃出 → 水进入 → 纸巾变湿
+</code></pre>
+</div>
+</details>
+<h3>15–33 分钟：实验 2——衣架“空气天平”（DK 3）</h3>
+<blockquote>
+<p><strong>实验目的 Objective：空气具有质量。 Air has mass.</strong></p>
+</blockquote>
+<p><strong>重要知识点</strong>：</p>
+<ul>
+<li><strong>质量（mass）</strong>：空气是物质；同种密闭容器含有更多空气时，质量会增加。</li>
+<li><strong>平衡（balance）</strong>：两边的重量效应和到悬点的距离共同决定横梁是否倾斜。</li>
+<li>现象很小；装置不灵敏时，失败不能推出“空气没有质量”。</li>
+</ul>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格或浓度</th>
+<th style="text-align:right">每次用量</th>
+<th>来源或备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>气球</td>
+<td>同品牌、同尺寸</td>
+<td style="text-align:right">3 个</td>
+<td>2 个主用，1 个备用</td>
+</tr>
+<tr>
+<td>胶带</td>
+<td>透明胶带</td>
+<td style="text-align:right">约 30 cm</td>
+<td>标记挂点、微调平衡</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>规格</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>轻质塑料衣架</td>
+<td style="text-align:right">1 个</td>
+<td>左右尽量对称</td>
+<td>作天平横梁</td>
+</tr>
+<tr>
+<td>悬挂细线</td>
+<td style="text-align:right">1 段</td>
+<td>穿过挂钩</td>
+<td>减少挂钩摩擦</td>
+</tr>
+</tbody>
+</table>
+<p><strong>做</strong>：</p>
+<ol>
+<li>把两个未充气的气球分别贴在衣架两端。</li>
+<li>用细线悬起衣架。轻移一个气球，直到衣架平衡；用胶带标出两个气球的位置。</li>
+<li>取下其中一个气球，用嘴把它吹大并系紧气球口。</li>
+<li>把吹大的气球贴回刚才的标记处；另一只气球保持未充气。</li>
+<li>松开衣架。等摆动停止后，观察哪一边较低。</li>
+<li>若结果不清楚，检查悬点能否自由转动、气球是否装回原位，再重做一次。</li>
+</ol>
+<p><strong>预期现象</strong>：吹大的气球一边通常下沉，未充气气球一边上升。</p>
+<p><strong>证据边界</strong>：这是定性比较，不能由倾斜角计算空气质量。充气气球同时排开更多外界空气，装置不够灵敏时现象可能很弱。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">开始：两个未充气气球，衣架已调平并标好位置
+只改变：取下一只气球，用嘴吹大，再装回原位置
+观察：________________一边更低
+结论：空气是物质，具有质量。
+边界：结果不明显时先检查灵敏度，不修改真实记录。
+</code></pre>
+</div>
+</details>
+<h3>33–45 分钟：实验 3——倒扣水杯与卡片（DK 2）</h3>
+<blockquote>
+<p><strong>实验目的 Objective：空气向各个方向施加压力。 Air exerts pressure in all directions.</strong></p>
+</blockquote>
+<p><strong>重要知识点</strong>：**压强（pressure）<strong>表示单位面积受到的垂直作用；气体向各方向施压。卡片下方的</strong>大气压（atmospheric pressure）**向上作用，水和卡片的重力向下。水封阻止外界空气快速进入。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格或浓度</th>
+<th style="text-align:right">每次用量</th>
+<th>来源或备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清水</td>
+<td>常温</td>
+<td style="text-align:right">约 250 mL</td>
+<td>加至杯口略溢出</td>
+</tr>
+<tr>
+<td>硬卡片</td>
+<td>光滑、无折痕</td>
+<td style="text-align:right">2 张</td>
+<td>比杯口大；1 张备用</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>规格</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透明塑料杯</td>
+<td style="text-align:right">1 个</td>
+<td>杯口平整</td>
+<td>装水并倒扣</td>
+</tr>
+<tr>
+<td>水盆</td>
+<td style="text-align:right">1 个</td>
+<td>沿用实验 1</td>
+<td>接水</td>
+</tr>
+</tbody>
+</table>
+<p><strong>做</strong>：</p>
+<ol>
+<li>在水盆上方把杯子加满水。</li>
+<li>把卡片平放在杯口，按住卡片，使它贴紧整个杯口。</li>
+<li>一手按住卡片，把杯子倒过来。</li>
+<li>慢慢松开托住卡片的手，观察卡片和水。</li>
+</ol>
+<p><strong>预期现象</strong>：卡片留在杯口，大部分水不流出。</p>
+<p><strong>失败判据</strong>：杯口不平、水未装满、卡片折弯或倒转时密封破坏，都会让空气进入。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">向上：外界大气压对卡片的作用
+向下：水和卡片的重力
+压强差产生的向上作用可以托住卡片。
+不用“卡片被吸住了”作为最终解释。
+</code></pre>
+</div>
+</details>
+<h3>45–59 分钟：实验 4——冷却后压瘪塑料瓶（DK 1）</h3>
+<blockquote>
+<p><strong>实验目的 Objective：空气内外的压强差能够使物体变形。 A difference in air pressure can deform objects.</strong></p>
+</blockquote>
+<p><strong>重要知识点</strong>：</p>
+<ul>
+<li>**气体压强（gas pressure）**来自气体粒子与容器壁碰撞。</li>
+<li>冷却时粒子平均运动变慢；部分**水蒸气凝结（water vapor condenses）**成液水，瓶内气体粒子数减少，内压下降。</li>
+<li>瓶子不是被“里面吸瘪”，而是外界大气压把瓶壁向内推。</li>
+</ul>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格或浓度</th>
+<th style="text-align:right">每次用量</th>
+<th>来源或备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>薄壁 PET 瓶及原盖</td>
+<td>500 mL–1 L</td>
+<td style="text-align:right">2 个</td>
+<td>1 个主用、1 个备用</td>
+</tr>
+<tr>
+<td>热水</td>
+<td>约 70–80℃</td>
+<td style="text-align:right">150–200 mL</td>
+<td>教师操作</td>
+</tr>
+<tr>
+<td>冰水</td>
+<td>冰块加冷水</td>
+<td style="text-align:right">约 1 L</td>
+<td>孩子淋在密封瓶外</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>规格</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>漏斗、保温壶</td>
+<td style="text-align:right">各 1</td>
+<td>耐热</td>
+<td>安全倒取热水</td>
+</tr>
+<tr>
+<td>深水盆</td>
+<td style="text-align:right">1 个</td>
+<td>沿用</td>
+<td>接水并冷却瓶身</td>
+</tr>
+<tr>
+<td>隔热手套</td>
+<td style="text-align:right">1 副</td>
+<td>成人使用</td>
+<td>防烫</td>
+</tr>
+</tbody>
+</table>
+<p><strong>做</strong>：</p>
+<ol>
+<li>教师把塑料瓶立在水盆里，倒入约 150–200 mL 热水，静置约 30 秒。</li>
+<li>不倒出热水，直接拧紧瓶盖。</li>
+<li>把密封的瓶子横放在水盆里。孩子把冰水淋在瓶身外侧。</li>
+<li>再把瓶子立起来，观察瓶壁怎样变化。</li>
+</ol>
+<p><strong>预期现象</strong>：瓶壁冷却后明显向内瘪陷。</p>
+<p><strong>失败判据</strong>：瓶盖漏气、瓶壁太厚或冷却不足会使现象很弱。若瓶子在加热时已经软化，换备用瓶并降低水温。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">密封冷却：气体冷却 + 水蒸气凝结 → 内压下降
+外压 &gt; 内压 → 瓶壁被外界空气向内推
+</code></pre>
+</div>
+</details>
+<h3>59–71 分钟：实验 5——让机翼飞起来（DK 7）</h3>
+<blockquote>
+<p><strong>实验目的 Objective：流动空气能够产生升力。 Moving air can produce lift.</strong></p>
+</blockquote>
+<p><strong>重要知识点</strong>：</p>
+<ul>
+<li>**升力（lift）**来自机翼周围不均匀的压力分布和气流偏转。</li>
+<li>吹风机的气流经过弧形上表面时，纸翼上下形成压力差，合力把纸翼推高。</li>
+<li>真实机翼还受翼形、迎角等因素影响，本模型只展示其中一部分。</li>
+</ul>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格或浓度</th>
+<th style="text-align:right">每次用量</th>
+<th>来源或备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>轻卡纸</td>
+<td>轻而稍硬</td>
+<td style="text-align:right">约 12 × 20 cm</td>
+<td>做弧形机翼</td>
+</tr>
+<tr>
+<td>吸管</td>
+<td>普通直吸管</td>
+<td style="text-align:right">约 5–7 cm</td>
+<td>竖直穿过机翼</td>
+</tr>
+<tr>
+<td>胶带</td>
+<td>透明胶带</td>
+<td style="text-align:right">约 20 cm</td>
+<td>粘合纸翼并固定吸管</td>
+</tr>
+<tr>
+<td>线绳</td>
+<td>细而光滑</td>
+<td style="text-align:right">约 1 m</td>
+<td>穿过吸管，作竖直轨道</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>规格</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>剪刀、尖铅笔</td>
+<td style="text-align:right">各 1</td>
+<td>成人看护</td>
+<td>裁纸、打孔</td>
+</tr>
+<tr>
+<td>吹风机</td>
+<td style="text-align:right">1 台</td>
+<td>冷风或低温档</td>
+<td>让空气流过机翼上表面</td>
+</tr>
+</tbody>
+</table>
+<p><strong>做</strong>：</p>
+<ol>
+<li>把纸轻轻对折，不压出死折；让一面稍长、一面稍短。</li>
+<li>翻过纸，用胶带粘住两条开口边，做成前端圆弧、后端较尖的机翼。</li>
+<li>在机翼中部从上到下打两个对齐的孔。</li>
+<li>剪一小段吸管，竖直穿过两个孔，再用胶带固定。</li>
+<li>把线绳穿过吸管并竖直拉紧；确认吸管能在线上自由滑动。</li>
+<li>用吹风机沿水平方向吹过机翼的弧形上表面，观察机翼沿线升起。</li>
+</ol>
+<p><strong>预期现象</strong>：纸翼沿线绳向上升；关掉吹风机后落下。</p>
+<p><strong>失败判据</strong>：若纸被压成扁片、吸管卡在线上，或风从机翼下方向上直吹，均需调整后重做。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>纸翼是否升起</th>
+<th style="text-align:right">最高位置/cm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不吹风</td>
+<td></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>低档吹上表面</td>
+<td></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>较强风吹上表面</td>
+<td></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">纸翼上下压力分布不同 + 气流发生偏转 → 向上的合力 lift
+实验 3、4：静态压强差也能推动物体
+实验 5：流动空气周围的压力分布也能产生力
+</code></pre>
+</div>
+</details>
+<h3>71–77 分钟：休息与换台</h3>
+<p>孩子休息、喝水。教师收起热水，擦干桌面，在耐热托盘上放好蜡烛，并把玻璃罐置于远离桌边的安全区。</p>
+<h3>77–92 分钟：实验 6——发现空气中的气体（DK 4）</h3>
+<blockquote>
+<p><strong>实验目的 Objective：空气是混合物，其中的氧气支持燃烧。 Air is a mixture, and its oxygen supports combustion.</strong></p>
+</blockquote>
+<p><strong>重要知识点</strong>：</p>
+<ul>
+<li><strong>空气是均一混合物（air is a homogeneous mixture）</strong>：干燥空气约含 78% 氮气、21% 氧气和约 1% 其他气体；实际空气还含可变的水蒸气。</li>
+<li><strong>氧气支持燃烧（oxygen supports combustion）</strong>；蜡烛燃烧消耗氧气并产生二氧化碳和水。</li>
+<li>罐内水面上升还受热空气冷却、水蒸气凝结和二氧化碳溶于水影响，不能简单说成“水只替代了用掉的氧气”。</li>
+<li>火焰熄灭时罐内仍有氧气；本实验不能精确测出氧气占 21%。</li>
+</ul>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格或浓度</th>
+<th style="text-align:right">每次用量</th>
+<th>来源或备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>短蜡烛</td>
+<td>低于玻璃罐</td>
+<td style="text-align:right">1 支</td>
+<td>另备 1 支</td>
+</tr>
+<tr>
+<td>清水</td>
+<td>常温</td>
+<td style="text-align:right">约 150 mL</td>
+<td>有食用色素可滴 1 滴，不必购买</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>规格</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透明玻璃罐</td>
+<td style="text-align:right">1 个</td>
+<td>罐口平整、罐高大于蜡烛</td>
+<td>倒扣罩住蜡烛</td>
+</tr>
+<tr>
+<td>浅碗或深盘</td>
+<td style="text-align:right">1 个</td>
+<td>罐口能完全放入</td>
+<td>盛水并形成水封</td>
+</tr>
+<tr>
+<td>烛台或少量橡皮泥</td>
+<td style="text-align:right">1 个</td>
+<td>能固定蜡烛</td>
+<td>防止蜡烛倾倒</td>
+</tr>
+<tr>
+<td>长柄点火器、隔热手套、金属盖</td>
+<td style="text-align:right">各 1</td>
+<td>成人使用</td>
+<td>点火、移罐和紧急盖灭</td>
+</tr>
+</tbody>
+</table>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjcwMCIgdmlld0JveD0iMCAwIDE0MDAgNzAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+6Jyh54Ob572p5p2v5LiO57Sr55SY6JOd5oyH56S65YmCPC90aXRsZT48ZGVzYyBpZD0iZGVzYyI+6Jyh54Ob5Zyo5rWF56KX5Lit572p5LiK546755KD572Q5ZCO54aE54Gt44CB572Q5YaF5rC06Z2i5LiK5Y2H77yM5Lul5Y+K57Sr55SY6JOd5oyH56S65YmC5LuO6YW45oCn5Yiw56Kx5oCn55qE5Y+Y6Imy5pa55ZCR44CCPC9kZXNjPgogIDxzdHlsZT50ZXh0e2ZvbnQtZmFtaWx5OiJOb3RvIFNhbnMgU0MiLCJNaWNyb3NvZnQgWWFIZWkiLHNhbnMtc2VyaWY7ZmlsbDojMTcyMTJifS50aXRsZXtmb250LXNpemU6MjlweDtmb250LXdlaWdodDo4MDA7ZmlsbDojMTI0YTYxfS5sYWJlbHtmb250LXNpemU6MjFweDtmb250LXdlaWdodDo3MDB9Lm5vdGV7Zm9udC1zaXplOjE3cHg7Zm9udC13ZWlnaHQ6NjAwfS5qYXJ7ZmlsbDojZjdmZGZmO2ZpbGwtb3BhY2l0eTouNTU7c3Ryb2tlOiM1ODdiODg7c3Ryb2tlLXdpZHRoOjd9PC9zdHlsZT4KICA8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI3MDAiIHJ4PSIyOCIgZmlsbD0iI2YzZjdmOSIvPjx0ZXh0IHg9IjcwMCIgeT0iNTAiIGNsYXNzPSJ0aXRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+55So5Y+v6KeB5Y+Y5YyW5o6o5pat55yL5LiN6KeB55qE5oCn6LSoPC90ZXh0PgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ1IDgwKSI+PHJlY3Qgd2lkdGg9IjYyMCIgaGVpZ2h0PSI1NjUiIHJ4PSIyMiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjOWJiNWJmIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyOCIgeT0iNDIiIGNsYXNzPSJ0aXRsZSI+56m65rCU5oiQ5YiG77ya572p5p2v5ZCO6KeC5a+f5rC06Z2iPC90ZXh0PgogICAgPHJlY3QgeD0iNTUiIHk9IjQwNSIgd2lkdGg9IjUxMCIgaGVpZ2h0PSI4MCIgcng9IjI0IiBmaWxsPSIjZDdlZWY3IiBzdHJva2U9IiM0ZDhkYTYiIHN0cm9rZS13aWR0aD0iNCIvPjxyZWN0IHg9IjE0NSIgeT0iMzQ1IiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2E3ZDllYiIgZmlsbC1vcGFjaXR5PSIuNzgiLz4KICAgIDxwYXRoIGQ9Ik0xNDUgNDU1IEwxNDUgMTU1IFExNDUgMTE1IDE5MCAxMTUgTDQzMCAxMTUgUTQ3NSAxMTUgNDc1IDE1NSBMNDc1IDQ1NSIgY2xhc3M9ImphciIvPgogICAgPHJlY3QgeD0iMjkyIiB5PSIzNTUiIHdpZHRoPSIzNiIgaGVpZ2h0PSI5NSIgcng9IjciIGZpbGw9IiNlYWQ1YTgiIHN0cm9rZT0iIzhlNmYzNSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTMxMCAzNTUgQzI4MCAzMjYgMjk4IDI5MCAzMTAgMjY1IEMzMjIgMjkwIDM0MCAzMjYgMzEwIDM1NSBaIiBmaWxsPSIjZjI5YzM4IiBzdHJva2U9IiNkMjViMmQiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgPGxpbmUgeDE9IjE1NSIgeTE9IjM0NSIgeDI9IjQ2NSIgeTI9IjM0NSIgc3Ryb2tlPSIjMjI3ZDlmIiBzdHJva2Utd2lkdGg9IjUiLz48bGluZSB4MT0iNTUiIHkxPSI0MDUiIHgyPSI1NjUiIHkyPSI0MDUiIHN0cm9rZT0iIzRkOGRhNiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtZGFzaGFycmF5PSIxMCA4Ii8+CiAgICA8cGF0aCBkPSJNNTA1IDM5NSBMNTA1IDM1NSBMNDkyIDM3MiBNNTA1IDM1NSBMNTE4IDM3MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzM0YTRhIiBzdHJva2Utd2lkdGg9IjUiLz48dGV4dCB4PSI1MjUiIHk9IjM3MCIgY2xhc3M9Im5vdGUiPue9kOWGheawtOmdouWNh+mrmDwvdGV4dD4KICAgIDx0ZXh0IHg9IjMxMCIgeT0iNTIwIiBjbGFzcz0ibm90ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+572Q5Y+j5rW45Zyo5rC05Lit77yb54Gr54Sw5Y+Y5bCP5ZCO54aE54GtPC90ZXh0Pjx0ZXh0IHg9IjMxMCIgeT0iNTQ4IiBjbGFzcz0ibm90ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+5rC06Z2i5LiK5Y2H5LiN562J5LqO55u05o6l6YeP5Ye65rCn5rCU5q+U5L6LPC90ZXh0PgogIDwvZz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MTUgODApIj48cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjU2NSIgcng9IjIyIiBmaWxsPSIjZmZmIiBzdHJva2U9IiM5YmI1YmYiIHN0cm9rZS13aWR0aD0iMyIvPjx0ZXh0IHg9IjI4IiB5PSI0MiIgY2xhc3M9InRpdGxlIj7phbjnorHmgKfvvJrntKvnlJjok53popzoibLmlrnlkJE8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCIgeT0iMTAwIiBjbGFzcz0ibGFiZWwiPumFuOaApyBhY2lkaWM8L3RleHQ+PHRleHQgeD0iNTEwIiB5PSIxMDAiIGNsYXNzPSJsYWJlbCI+56Kx5oCnIGJhc2ljPC90ZXh0PgogICAgPHJlY3QgeD0iNTAiIHk9IjEzNSIgd2lkdGg9IjkwIiBoZWlnaHQ9IjExNSIgcng9IjEyIiBmaWxsPSIjYzgyZjYzIi8+PHJlY3QgeD0iMTQwIiB5PSIxMzUiIHdpZHRoPSI5MCIgaGVpZ2h0PSIxMTUiIHJ4PSIxMiIgZmlsbD0iI2RkNWM4YyIvPjxyZWN0IHg9IjIzMCIgeT0iMTM1IiB3aWR0aD0iOTAiIGhlaWdodD0iMTE1IiByeD0iMTIiIGZpbGw9IiM3OTUyYTMiLz48cmVjdCB4PSIzMjAiIHk9IjEzNSIgd2lkdGg9IjkwIiBoZWlnaHQ9IjExNSIgcng9IjEyIiBmaWxsPSIjNGU2OWIyIi8+PHJlY3QgeD0iNDEwIiB5PSIxMzUiIHdpZHRoPSI5MCIgaGVpZ2h0PSIxMTUiIHJ4PSIxMiIgZmlsbD0iIzM5OGQ5YSIvPjxyZWN0IHg9IjUwMCIgeT0iMTM1IiB3aWR0aD0iOTAiIGhlaWdodD0iMTE1IiByeD0iMTIiIGZpbGw9IiM0ZDlhNjEiLz4KICAgIDx0ZXh0IHg9Ijk1IiB5PSIyODUiIGNsYXNzPSJub3RlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7nuqIv57KJPC90ZXh0Pjx0ZXh0IHg9IjI3NSIgeT0iMjg1IiBjbGFzcz0ibm90ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+57SrPC90ZXh0Pjx0ZXh0IHg9IjM2NSIgeT0iMjg1IiBjbGFzcz0ibm90ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+6JOdPC90ZXh0Pjx0ZXh0IHg9IjU0NSIgeT0iMjg1IiBjbGFzcz0ibm90ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+6JOd57u/L+e7vzwvdGV4dD4KICAgIDx0ZXh0IHg9IjMyMCIgeT0iMzM4IiBjbGFzcz0ibGFiZWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPumFuOaApyAg4oaQICDmjqXov5HkuK3mgKcgIOKGkiAg56Kx5oCnPC90ZXh0PgogICAgPHRleHQgeD0iMzIwIiB5PSIzODgiIGNsYXNzPSJub3RlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7mn6DmqqzmsYHjgIHnmb3phovjgIHpm6rnoqcg4oaSIOmFuOaAp+aWueWQkTwvdGV4dD48dGV4dCB4PSIzMjAiIHk9IjQyMiIgY2xhc3M9Im5vdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuezluawtCDihpIg6YCa5bi45o6l6L+R5Lit5oCnPC90ZXh0Pjx0ZXh0IHg9IjMyMCIgeT0iNDU2IiBjbGFzcz0ibm90ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+5bCP6IuP5omT5rC044CB6IKl55qC5rC0IOKGkiDnorHmgKfmlrnlkJE8L3RleHQ+CiAgICA8cmVjdCB4PSI1OCIgeT0iNDkwIiB3aWR0aD0iNTI0IiBoZWlnaHQ9IjUwIiByeD0iMTIiIGZpbGw9IiNmZmY1ZDkiIHN0cm9rZT0iI2M3OWIzYiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMzIwIiB5PSI1MjEiIGNsYXNzPSJub3RlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7lj6rmmK/lj5joibLmlrnlkJHvvJvmtZPluqblkozlk4HniYzkvJrmlLnlj5jlhbfkvZPpopzoibLjgII8L3RleHQ+CiAgPC9nPgo8L3N2Zz4K" alt="用蜡烛和紫甘蓝显示看不见的性质" /></p>
+<p><strong>装置要求</strong>：</p>
+<ul>
+<li>蜡烛固定在浅碗中央，四周不放纸张、气球或织物。</li>
+<li>碗内水深约 1 cm；玻璃罐倒扣后，整个罐口都浸在水中。</li>
+</ul>
+<p><strong>做</strong>：</p>
+<ol>
+<li>把短蜡烛固定在浅碗中央。</li>
+<li>往碗里倒入约 1 cm 深的水。</li>
+<li>教师点燃蜡烛。</li>
+<li>教师把玻璃罐倒扣在蜡烛上，使罐口完全浸入水中。</li>
+<li>观察火焰和罐内水面，直到火焰熄灭、水面停止变化。</li>
+</ol>
+<p><strong>预期现象</strong>：火焰先变小再熄灭；罐内水面比罐外水面高。</p>
+<p><strong>失败判据</strong>：若罐口没有完全浸水、蜡烛太高或玻璃罐漏气，水面变化会很小。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>火焰</th>
+<th>罐内水面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>刚罩住</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>火焰熄灭后</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">air ≈ 78% nitrogen + 21% oxygen + about 1% other gases
+oxygen supports combustion
+罩住后：可用氧气减少 → 火焰熄灭；冷却等因素 → 罐内水面上升
+本实验不能直接测得氧气占 21%。
+</code></pre>
+</div>
+</details>
+<h3>92–117 分钟：实验 7——紫甘蓝与六种样品</h3>
+<blockquote>
+<p><strong>实验目的 Objective：呼出空气含有较多二氧化碳，溶于水会使水变酸。 Exhaled air contains more carbon dioxide, which makes water more acidic.</strong></p>
+</blockquote>
+<p><strong>重要知识点</strong>：</p>
+<ul>
+<li>**酸（acid）**的水溶液 pH 通常小于 7，**中性（neutral）**接近 7，**碱（base）**通常大于 7。</li>
+<li>紫甘蓝在酸性时趋向红或粉，接近中性时趋向紫，碱性时趋向蓝绿或绿。</li>
+<li>六种样品不保证出现六种完全不同的颜色。</li>
+<li>呼出的**二氧化碳（carbon dioxide）**溶于水形成弱酸性体系，可能使颜色向酸性方向变化。</li>
+</ul>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格或浓度</th>
+<th style="text-align:right">每次用量</th>
+<th>来源或备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>紫甘蓝叶、温水</td>
+<td>3–4 片；40–50℃</td>
+<td style="text-align:right">水 150 mL</td>
+<td>孩子揉取指示剂</td>
+</tr>
+<tr>
+<td>糖水</td>
+<td>1/2 小勺糖 + 20 mL 水</td>
+<td style="text-align:right">取 1 mL</td>
+<td>通常接近中性</td>
+</tr>
+<tr>
+<td>柠檬汁</td>
+<td>新鲜挤汁、过滤</td>
+<td style="text-align:right">取 1 mL</td>
+<td>酸性</td>
+</tr>
+<tr>
+<td>小苏打水</td>
+<td>1/4 小勺 + 20 mL 水</td>
+<td style="text-align:right">取 1 mL</td>
+<td>碱性</td>
+</tr>
+<tr>
+<td>白醋</td>
+<td>原液</td>
+<td style="text-align:right">取 1 mL</td>
+<td>酸性</td>
+</tr>
+<tr>
+<td>肥皂水</td>
+<td>少量肥皂屑 + 20 mL 温水</td>
+<td style="text-align:right">取 1 mL</td>
+<td>通常呈碱性</td>
+</tr>
+<tr>
+<td>雪碧</td>
+<td>现开，泡沫基本消失</td>
+<td style="text-align:right">取 1 mL</td>
+<td>酸性</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>规格</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>厚密封袋</td>
+<td style="text-align:right">2 个</td>
+<td>不漏水</td>
+<td>揉压紫甘蓝；1 个备用</td>
+</tr>
+<tr>
+<td>透明小杯</td>
+<td style="text-align:right">9 个</td>
+<td>30–60 mL</td>
+<td>原液、6 样品、呼气组和备用</td>
+</tr>
+<tr>
+<td>小勺、小滤网</td>
+<td style="text-align:right">3 把、1 个</td>
+<td>每次取样后冲洗</td>
+<td>配液、分装和过滤</td>
+</tr>
+<tr>
+<td>白纸</td>
+<td style="text-align:right">1 张</td>
+<td>A4</td>
+<td>垫杯比较颜色</td>
+</tr>
+<tr>
+<td>干净吸管</td>
+<td style="text-align:right">1 根</td>
+<td>只用于呼气组</td>
+<td>成人只向外吹气</td>
+</tr>
+<tr>
+<td>护目镜</td>
+<td style="text-align:right">2 副</td>
+<td>教师与孩子各 1</td>
+<td>防液滴入眼</td>
+</tr>
+</tbody>
+</table>
+<p><strong>做：92–102 分钟制作指示剂</strong></p>
+<ol>
+<li>孩子戴护目镜，把甘蓝叶撕成 2–3 cm 小片，装入密封袋。</li>
+<li>加 150 mL 温水，封严后持续揉压 3–4 分钟，直到水明显变紫。</li>
+<li>过滤到“原液”杯。孩子配糖水、小苏打水和肥皂水；教师切柠檬，孩子挤汁并过滤。</li>
+</ol>
+<p><strong>做：102–117 分钟比较样品</strong></p>
+<ol>
+<li>在 6 个标记杯中各加约 10 mL 指示剂，保留原液杯作颜色对照。</li>
+<li>分别加入约 1 mL（约 20 滴）相应样品，轻摇。勺子每次冲洗并擦干。</li>
+<li>按实际颜色排列，再标记酸性、接近中性或碱性；不按预期修改记录。</li>
+<li>有 2–3 分钟余量时，成人用干净吸管向独立的 10 mL 指示剂中缓慢吹泡 30–60 秒，孩子与未吹气原液比色。</li>
+</ol>
+<p><strong>预期现象</strong>：柠檬汁、白醋和雪碧向红/粉紫方向；糖水接近原液紫色；小苏打水和肥皂水向蓝、蓝绿或绿色。呼气组可能轻微向酸性方向变化。</p>
+<p><strong>失败判据</strong>：全部颜色相近时，检查勺子串液、指示剂过浓或样品太少。呼气组无变化时可稀释指示剂并延长吹气，不编造颜色。</p>
+<p><strong>安全边界</strong>：不品尝，不把样品相互混合，不使用消毒水、漂白水、氨水或石灰水。呼气吸管只向外吹，用后丢弃。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>样品</th>
+<th>预测</th>
+<th>实际颜色</th>
+<th>酸 / 接近中性 / 碱</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>糖水</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>柠檬汁</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>小苏打水</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>白醋</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>肥皂水</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>雪碧</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>呼气组（若完成）</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">acidic → 红 / 粉紫方向
+near neutral → 紫色方向
+basic → 蓝 / 蓝绿 / 绿色方向
+指示剂给出酸碱性的证据，不是精确 pH 仪。
+CO₂ + water → weakly acidic system
+</code></pre>
+</div>
+</details>
+<h3>117–120 分钟：用证据链收束</h3>
+<p><strong>做</strong>：孩子从 7 个实验中选一个，只说两句：“我观察到什么？”“它支持什么解释？”</p>
+<p><strong>讲</strong>：“看不见”不等于“无法研究”。只要它能稳定改变可观察结果，并且能排除其他解释，就可以留下证据。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">observation 观察 → evidence 证据 → explanation 解释 → limitation 边界
+我观察到________________________________________。
+它支持____________________________________的解释。
+这项证据不能直接说明____________________________。
+</code></pre>
+</div>
+</details>
+<h2>五、教师故障备用与安全边界</h2>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>最可能原因</th>
+<th>当场处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>纸巾立即变湿</td>
+<td>杯子倾斜，空气提前逃出</td>
+<td>换干纸巾，竖直压入并从侧面看杯口</td>
+</tr>
+<tr>
+<td>衣架天平不灵敏</td>
+<td>挂钩摩擦大、气球小或挂点移动</td>
+<td>改用细线悬吊，吹大气球并重标挂点</td>
+</tr>
+<tr>
+<td>倒扣水杯失败</td>
+<td>水未装满或卡片不平</td>
+<td>换硬卡，加水至略溢出后重做</td>
+</tr>
+<tr>
+<td>塑料瓶不瘪</td>
+<td>瓶厚、漏气或冷却不足</td>
+<td>换薄壁瓶，检查原盖，冰水浸没瓶身</td>
+</tr>
+<tr>
+<td>纸翼不升</td>
+<td>吸管卡线、线不直或风向错误</td>
+<td>拉直线绳，确认吸管能滑动，让冷风沿弧形上表面通过</td>
+</tr>
+<tr>
+<td>罩杯后水面不升</td>
+<td>罐口未浸水、罐体漏气或蜡烛太高</td>
+<td>加水形成完整水封，换矮蜡烛或完好玻璃罐</td>
+</tr>
+<tr>
+<td>紫甘蓝颜色太深</td>
+<td>指示剂过浓</td>
+<td>每杯加 5 mL 水；对照杯同样稀释</td>
+</tr>
+<tr>
+<td>所有样品颜色相似</td>
+<td>串液或样品浓度低</td>
+<td>换备用杯，先用柠檬汁与小苏打水建两端对照</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>热水、明火、刀具和发热玻璃罐只由教师操作。</li>
+<li>蜡烛周围 30 cm 内不放纸张、气球、酒精、消毒剂或织物；金属盖始终在手边。</li>
+<li>吹风机只用冷风或低温档；先擦干桌面，并与水盆、湿手和明火保持距离。</li>
+<li>显色阶段教师和孩子都戴护目镜；所有实验液均不品尝。</li>
+<li>不使用消毒水、漂白水、氨水和石灰水，不把实验后的六种液体混在一起。</li>
+<li>玻璃罐有裂纹、缺口或受热后明显变形时立即停用。</li>
+</ul>
+<h2>六、备课依据</h2>
+<ul>
+<li>DK《101 个趣味科学实验》实验 1–4 与实验 7；保留原实验的核心装置和动作顺序，并按 1 对 1 家庭课、安全边界与现有材料作适配。</li>
+<li>School Unit 2 <em>Phases of Matter</em>：气体无固定形状和体积，可压缩。</li>
+<li>School Unit 2 <em>Mixtures and Solutions</em>：空气是均一混合物。</li>
+<li>School Unit 4 <em>Respiratory System</em>：呼吸中吸入氧气、排出二氧化碳。</li>
+</ul>
+</main>
+</body>
+</html>

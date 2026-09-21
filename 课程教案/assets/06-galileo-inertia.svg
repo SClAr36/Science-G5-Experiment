@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720" role="img" aria-labelledby="title desc">
+  <title id="title">伽利略单斜面实车演示与水平面思想推演</title>
+  <desc id="desc">左侧展示自制小车从书本垫高的单斜面下滑，经平滑过渡进入水平面；右侧展示假想的第二侧斜面逐渐变缓，达到相近高度所需的距离逐渐增加，最终推演到理想水平面上的匀速运动。</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif; fill: #17324d; }
+      .title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 21px; font-weight: 650; }
+      .small { font-size: 17px; }
+      .track { stroke: #657986; stroke-width: 8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .guide { stroke: #9b7422; stroke-width: 3; stroke-dasharray: 9 7; fill: none; }
+      .motion { stroke: #e66d3f; stroke-width: 7; fill: none; marker-end: url(#orange); }
+      .infer { stroke: #3b8f65; stroke-width: 6; fill: none; marker-end: url(#green); }
+    </style>
+    <marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e66d3f"/></marker>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3b8f65"/></marker>
+  </defs>
+
+  <text x="550" y="44" text-anchor="middle" class="title">伽利略推演：坡越缓，到达相近高度需要走得越远</text>
+
+  <rect x="45" y="78" width="460" height="580" rx="24" fill="#f7fbfd" stroke="#b7c7d3" stroke-width="3"/>
+  <text x="275" y="118" text-anchor="middle" class="label">实物搭建：一块斜面接水平面</text>
+
+  <g transform="translate(75,155)">
+    <rect x="18" y="292" width="110" height="96" rx="8" fill="#d8c299" stroke="#846b43" stroke-width="4"/>
+    <rect x="34" y="266" width="105" height="32" rx="6" fill="#e7d5b3" stroke="#846b43" stroke-width="3"/>
+    <path d="M90 248 L300 390 L400 390" class="track"/>
+    <path d="M278 376 Q300 390 326 390" stroke="#d8b95f" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <line x1="42" y1="248" x2="150" y2="248" class="guide"/>
+    <line x1="42" y1="390" x2="42" y2="248" stroke="#9b7422" stroke-width="3"/>
+    <path d="M34 258 L42 248 L50 258" fill="none" stroke="#9b7422" stroke-width="3"/>
+    <text x="26" y="324" text-anchor="middle" class="small">h</text>
+
+    <g transform="translate(135,254) rotate(34)">
+      <path d="M5 4 Q0 10 4 32 Q8 40 20 40 L72 40 L72 33 L94 29 L94 16 L72 11 L72 4 Z" fill="#d9edf4" fill-opacity="0.82" stroke="#4b7c91" stroke-width="4"/>
+      <circle cx="22" cy="45" r="16" fill="#4c92bd" stroke="#245d82" stroke-width="3"/>
+      <circle cx="74" cy="45" r="16" fill="#4c92bd" stroke="#245d82" stroke-width="3"/>
+    </g>
+    <path d="M210 310 C245 340 275 367 315 378" class="motion"/>
+    <path d="M326 350 L390 350" class="motion"/>
+    <text x="248" y="445" text-anchor="middle" class="label">下坡后继续沿水平面运动</text>
+    <text x="248" y="478" text-anchor="middle" class="small">固定释放高度 · 静止释放 · 重复 2 次</text>
+  </g>
+
+  <rect x="535" y="78" width="520" height="580" rx="24" fill="#fffaf0" stroke="#d6bd86" stroke-width="3"/>
+  <text x="795" y="118" text-anchor="middle" class="label">白板推演：右侧坡度逐渐减小</text>
+
+  <g transform="translate(575,155)">
+    <line x1="10" y1="75" x2="430" y2="75" class="guide"/>
+    <text x="438" y="81" class="small">相近高度 h</text>
+    <path d="M20 75 L135 170 L235 75" class="track"/>
+    <path d="M150 155 L210 98" class="infer"/>
+    <text x="330" y="140" class="small">较陡：距离较短</text>
+
+    <line x1="10" y1="235" x2="430" y2="235" class="guide"/>
+    <path d="M20 235 L135 330 L410 235" class="track"/>
+    <path d="M170 318 L350 255" class="infer"/>
+    <text x="270" y="360" class="small">较缓：距离更长</text>
+
+    <path d="M20 395 L135 490 L440 490" class="track"/>
+    <path d="M165 462 L410 462" class="infer"/>
+    <text x="275" y="535" text-anchor="middle" class="label">理想水平面：F_net = 0 → velocity 保持</text>
+  </g>
+
+  <rect x="215" y="675" width="670" height="34" rx="16" fill="#e8f1f7"/>
+  <text x="550" y="699" text-anchor="middle" class="small">观察实际运动 → 改变假想坡度 → 推到水平极限 → 表述牛顿第一定律</text>
+</svg>

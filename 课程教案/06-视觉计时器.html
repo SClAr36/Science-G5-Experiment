@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>0.01 秒视觉计时器</title>
+  <style>
+    :root { color-scheme: light dark; font-family: Arial, "Microsoft YaHei", sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; }
+    body {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      overflow: hidden;
+      background: #f7f7f2;
+      color: #111;
+    }
+    body.dark { background: #101418; color: #fff; }
+    main {
+      display: grid;
+      place-items: center;
+      min-height: 0;
+      padding: 2vh 3vw;
+    }
+    #time {
+      font-size: clamp(7rem, 27vw, 24rem);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    #unit {
+      margin-left: 0.08em;
+      font-size: 0.22em;
+      letter-spacing: 0;
+    }
+    #status {
+      position: absolute;
+      top: max(12px, env(safe-area-inset-top));
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-weight: 700;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom));
+      background: rgba(128, 128, 128, 0.22);
+    }
+    button {
+      min-width: 112px;
+      min-height: 52px;
+      padding: 10px 20px;
+      border: 2px solid currentColor;
+      border-radius: 12px;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    main, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+    button:focus-visible { outline: 4px solid #ff9f1c; outline-offset: 3px; }
+    .script-warning {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: grid;
+      place-items: center;
+      padding: 8vw;
+      background: #fff4d6;
+      color: #7a2d00;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    @media (max-width: 520px) {
+      .controls { gap: 8px; }
+      button { min-width: 90px; min-height: 46px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main aria-label="显示到百分之一秒的视觉计时器">
+    <div id="status">数字显示到 0.01 s · 背景每 0.10 s 换色 · 轻触数字开始／暂停</div>
+    <div id="time" aria-live="off">0.00<span id="unit">s</span></div>
+  </main>
+  <nav class="controls" aria-label="计时控制">
+    <button id="start" type="button">开始</button>
+    <button id="pause" type="button">暂停</button>
+    <button id="reset" type="button">归零</button>
+  </nav>
+  <noscript><div class="script-warning">当前打开方式没有运行计时程序。请在 iPad 上用支持 JavaScript 的网页方式打开。</div></noscript>
+  <script>
+    (function () {
+      var timeEl = document.getElementById("time");
+      var statusEl = document.getElementById("status");
+      var mainEl = document.querySelector("main");
+      var startButton = document.getElementById("start");
+      var pauseButton = document.getElementById("pause");
+      var resetButton = document.getElementById("reset");
+      var requestFrame = window.requestAnimationFrame || function (callback) {
+        return window.setTimeout(callback, 16);
+      };
+      var cancelFrame = window.cancelAnimationFrame || window.clearTimeout;
+
+      var running = false;
+      var startedAt = 0;
+      var storedMilliseconds = 0;
+      var animationId = 0;
+      var shownHundredths = -1;
+
+      function elapsedMilliseconds() {
+        return storedMilliseconds + (running ? Date.now() - startedAt : 0);
+      }
+
+      function paint() {
+        var hundredths = Math.floor(elapsedMilliseconds() / 10);
+        if (hundredths !== shownHundredths) {
+          shownHundredths = hundredths;
+          timeEl.firstChild.nodeValue = (hundredths / 100).toFixed(2);
+          document.body.classList.toggle("dark", Math.floor(hundredths / 10) % 2 === 1);
+        }
+        if (running) {
+          animationId = requestFrame(paint);
+        }
+      }
+
+      function start() {
+        if (running) return;
+        running = true;
+        startedAt = Date.now();
+        statusEl.textContent = "计时中 · 轻触数字暂停";
+        animationId = requestFrame(paint);
+      }
+
+      function pause() {
+        if (!running) return;
+        storedMilliseconds = elapsedMilliseconds();
+        running = false;
+        cancelFrame(animationId);
+        statusEl.textContent = "已暂停 · 轻触数字继续";
+        paint();
+      }
+
+      function reset() {
+        running = false;
+        cancelFrame(animationId);
+        storedMilliseconds = 0;
+        shownHundredths = -1;
+        statusEl.textContent = "数字显示到 0.01 s · 背景每 0.10 s 换色 · 轻触数字开始／暂停";
+        paint();
+      }
+
+      function toggle() {
+        if (running) pause(); else start();
+      }
+
+      startButton.addEventListener("click", start, false);
+      pauseButton.addEventListener("click", pause, false);
+      resetButton.addEventListener("click", reset, false);
+      mainEl.addEventListener("click", toggle, false);
+      document.addEventListener("keydown", function (event) {
+        var key = event.key || "";
+        if (event.code === "Space" || key === " ") {
+          event.preventDefault();
+          toggle();
+        } else if (key.toLowerCase() === "r") {
+          reset();
+        }
+      }, false);
+
+      paint();
+    }());
+  </script>
+</body>
+</html>

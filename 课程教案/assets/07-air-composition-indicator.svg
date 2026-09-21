@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-labelledby="title desc">
+  <title id="title">蜡烛罩杯与紫甘蓝指示剂</title><desc id="desc">蜡烛在浅碗中罩上玻璃罐后熄灭、罐内水面上升，以及紫甘蓝指示剂从酸性到碱性的变色方向。</desc>
+  <style>text{font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;fill:#17212b}.title{font-size:29px;font-weight:800;fill:#124a61}.label{font-size:21px;font-weight:700}.note{font-size:17px;font-weight:600}.jar{fill:#f7fdff;fill-opacity:.55;stroke:#587b88;stroke-width:7}</style>
+  <rect width="1400" height="700" rx="28" fill="#f3f7f9"/><text x="700" y="50" class="title" text-anchor="middle">用可见变化推断看不见的性质</text>
+  <g transform="translate(45 80)"><rect width="620" height="565" rx="22" fill="#fff" stroke="#9bb5bf" stroke-width="3"/><text x="28" y="42" class="title">空气成分：罩杯后观察水面</text>
+    <rect x="55" y="405" width="510" height="80" rx="24" fill="#d7eef7" stroke="#4d8da6" stroke-width="4"/><rect x="145" y="345" width="330" height="140" fill="#a7d9eb" fill-opacity=".78"/>
+    <path d="M145 455 L145 155 Q145 115 190 115 L430 115 Q475 115 475 155 L475 455" class="jar"/>
+    <rect x="292" y="355" width="36" height="95" rx="7" fill="#ead5a8" stroke="#8e6f35" stroke-width="3"/><path d="M310 355 C280 326 298 290 310 265 C322 290 340 326 310 355 Z" fill="#f29c38" stroke="#d25b2d" stroke-width="4"/>
+    <line x1="155" y1="345" x2="465" y2="345" stroke="#227d9f" stroke-width="5"/><line x1="55" y1="405" x2="565" y2="405" stroke="#4d8da6" stroke-width="4" stroke-dasharray="10 8"/>
+    <path d="M505 395 L505 355 L492 372 M505 355 L518 372" fill="none" stroke="#c34a4a" stroke-width="5"/><text x="525" y="370" class="note">罐内水面升高</text>
+    <text x="310" y="520" class="note" text-anchor="middle">罐口浸在水中；火焰变小后熄灭</text><text x="310" y="548" class="note" text-anchor="middle">水面上升不等于直接量出氧气比例</text>
+  </g>
+  <g transform="translate(715 80)"><rect width="640" height="565" rx="22" fill="#fff" stroke="#9bb5bf" stroke-width="3"/><text x="28" y="42" class="title">酸碱性：紫甘蓝颜色方向</text>
+    <text x="50" y="100" class="label">酸性 acidic</text><text x="510" y="100" class="label">碱性 basic</text>
+    <rect x="50" y="135" width="90" height="115" rx="12" fill="#c82f63"/><rect x="140" y="135" width="90" height="115" rx="12" fill="#dd5c8c"/><rect x="230" y="135" width="90" height="115" rx="12" fill="#7952a3"/><rect x="320" y="135" width="90" height="115" rx="12" fill="#4e69b2"/><rect x="410" y="135" width="90" height="115" rx="12" fill="#398d9a"/><rect x="500" y="135" width="90" height="115" rx="12" fill="#4d9a61"/>
+    <text x="95" y="285" class="note" text-anchor="middle">红/粉</text><text x="275" y="285" class="note" text-anchor="middle">紫</text><text x="365" y="285" class="note" text-anchor="middle">蓝</text><text x="545" y="285" class="note" text-anchor="middle">蓝绿/绿</text>
+    <text x="320" y="338" class="label" text-anchor="middle">酸性  ←  接近中性  →  碱性</text>
+    <text x="320" y="388" class="note" text-anchor="middle">柠檬汁、白醋、雪碧 → 酸性方向</text><text x="320" y="422" class="note" text-anchor="middle">糖水 → 通常接近中性</text><text x="320" y="456" class="note" text-anchor="middle">小苏打水、肥皂水 → 碱性方向</text>
+    <rect x="58" y="490" width="524" height="50" rx="12" fill="#fff5d9" stroke="#c79b3b" stroke-width="2"/><text x="320" y="521" class="note" text-anchor="middle">只是变色方向；浓度和品牌会改变具体颜色。</text>
+  </g>
+</svg>

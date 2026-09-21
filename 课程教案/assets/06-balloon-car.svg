@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">自制小车改装成气球动力车</title>
+  <desc id="desc">同一辆纸板瓶盖小车顶部固定气球和向后伸出的吸管；空气从吸管向后喷出，空气同时向前推气球和小车。</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif; fill: #17324d; }
+      .title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 22px; font-weight: 650; }
+      .small { font-size: 18px; }
+      .air { stroke: #2f86b7; stroke-width: 9; fill: none; marker-end: url(#blue); }
+      .car { stroke: #e66d3f; stroke-width: 9; fill: none; marker-end: url(#orange); }
+      .force { stroke: #3b8f65; stroke-width: 6; fill: none; stroke-dasharray: 12 7; marker-end: url(#green); }
+    </style>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2f86b7"/></marker>
+    <marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e66d3f"/></marker>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3b8f65"/></marker>
+  </defs>
+  <text x="550" y="46" text-anchor="middle" class="title">终局改装：把“牛顿一号”变成气球动力车</text>
+  <rect x="55" y="80" width="990" height="490" rx="24" fill="#f7fbfd" stroke="#b7c7d3" stroke-width="3"/>
+  <line x1="95" y1="455" x2="1005" y2="455" stroke="#657986" stroke-width="7"/>
+
+  <g transform="translate(385,330)">
+    <path d="M14 10 Q0 22 8 70 Q16 88 52 88 L240 88 L240 72 L296 64 L296 30 L240 20 L240 10 Z" fill="#d9edf4" fill-opacity="0.82" stroke="#4b7c91" stroke-width="5"/>
+    <circle cx="62" cy="95" r="42" fill="#4c92bd" stroke="#245d82" stroke-width="5"/>
+    <circle cx="238" cy="95" r="42" fill="#4c92bd" stroke="#245d82" stroke-width="5"/>
+    <circle cx="62" cy="95" r="10" fill="#d7e5ec"/><circle cx="238" cy="95" r="10" fill="#d7e5ec"/>
+  </g>
+  <ellipse cx="560" cy="260" rx="180" ry="92" fill="#f09b79" stroke="#a64e32" stroke-width="5"/>
+  <path d="M390 260 L345 242 L345 278 Z" fill="#f09b79" stroke="#a64e32" stroke-width="5"/>
+  <rect x="335" y="270" width="230" height="24" rx="10" fill="#dbe3e8" stroke="#6a7d89" stroke-width="3"/>
+  <path d="M335 282 L205 282" class="air"/>
+  <text x="235" y="325" text-anchor="middle" class="label">空气向后</text>
+  <path d="M720 300 L940 300" class="car"/>
+  <text x="835" y="340" text-anchor="middle" class="label">小车向前</text>
+  <rect x="485" y="298" width="150" height="28" rx="8" fill="#e8d19c" stroke="#9e7e37" stroke-width="3"/>
+  <text x="560" y="365" text-anchor="middle" class="small">两条胶带或橡皮筋固定气球—吸管模块</text>
+
+  <path d="M460 515 L300 515" class="force"/>
+  <text x="300" y="550" text-anchor="middle" class="small">气球对空气的力</text>
+  <path d="M640 515 L800 515" class="force"/>
+  <text x="800" y="550" text-anchor="middle" class="small">空气对气球的力</text>
+  <text x="550" y="610" text-anchor="middle" class="label">大小相等 · 方向相反 · 同时发生 · 作用在不同物体</text>
+</svg>

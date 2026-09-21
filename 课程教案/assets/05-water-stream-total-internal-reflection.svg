@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">激光沿弯曲水流传播的全反射实验</title>
+  <desc id="desc">侧视图显示红色激光穿过透明瓶壁进入瓶内的水，瞄准瓶身小孔，随后进入从小孔流出的弯曲水柱，在水流内部多次全反射并到达托盘中的白纸。</desc>
+  <defs>
+    <marker id="red-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#e1261c"/>
+    </marker>
+    <marker id="blue-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#168bb4"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif; fill: #17212b; }
+      .title { font-size: 30px; font-weight: 800; }
+      .label { font-size: 22px; font-weight: 750; }
+      .note { font-size: 18px; font-weight: 600; }
+      .small { font-size: 17px; font-weight: 600; }
+      .light { fill: #ffffff; }
+      .num { fill: #ffffff; font-size: 20px; font-weight: 800; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="760" rx="24" fill="#f5f8fb"/>
+  <text class="title" x="700" y="48" text-anchor="middle">水流全反射实验：装置侧视图</text>
+
+  <!-- Laser pointer -->
+  <g transform="translate(45 340)">
+    <rect x="0" y="0" width="230" height="62" rx="18" fill="#34495e"/>
+    <rect x="205" y="17" width="48" height="28" rx="6" fill="#202d39"/>
+    <circle cx="252" cy="31" r="7" fill="#e1261c"/>
+    <text class="note light" x="103" y="40" text-anchor="middle">红色激光笔</text>
+  </g>
+  <circle cx="75" cy="300" r="22" fill="#2f7f9f"/>
+  <text class="num" x="75" y="300">1</text>
+  <text class="label" x="110" y="306">激光瞄准小孔</text>
+
+  <!-- Bottle -->
+  <path d="M330 120 Q330 92 360 92 H540 Q570 92 570 120 V158 Q620 185 635 235 V565 Q635 600 600 600 H300 Q265 600 265 565 V235 Q280 185 330 158 Z"
+        fill="#ffffff" fill-opacity="0.48" stroke="#52758f" stroke-width="8"/>
+  <path d="M282 230 Q292 198 332 180 H568 Q608 198 618 230 V565 Q618 580 600 580 H300 Q282 580 282 565 Z"
+        fill="#bfe8f5" opacity="0.82"/>
+  <line x1="284" y1="230" x2="616" y2="230" stroke="#2389b8" stroke-width="4"/>
+  <text class="label" x="450" y="274" text-anchor="middle">瓶内的水</text>
+  <text class="note" x="450" y="304" text-anchor="middle">激光先进入水，再对准小孔</text>
+
+  <!-- Beam through bottle to hole -->
+  <line x1="298" y1="371" x2="632" y2="468" stroke="#e1261c" stroke-width="8" marker-end="url(#red-arrow)"/>
+  <circle cx="634" cy="469" r="11" fill="#ffffff" stroke="#17212b" stroke-width="4"/>
+  <text class="label" x="584" y="447">约 2 mm 小孔</text>
+  <circle cx="520" cy="382" r="22" fill="#2f7f9f"/>
+  <text class="num" x="520" y="382">2</text>
+
+  <!-- Curved water stream -->
+  <path d="M647 470 C760 478 850 515 940 565 C1030 616 1100 640 1190 652"
+        fill="none" stroke="#76cce5" stroke-width="72" stroke-linecap="round" opacity="0.82"/>
+  <path d="M647 470 C760 478 850 515 940 565 C1030 616 1100 640 1190 652"
+        fill="none" stroke="#168bb4" stroke-width="3" stroke-linecap="round" marker-end="url(#blue-arrow)"/>
+  <text class="label" x="835" y="452">弯曲水流</text>
+  <text class="note" x="835" y="478">外侧边界是水—空气界面</text>
+
+  <!-- Zig-zag beam showing TIR -->
+  <polyline points="646,470 716,450 758,500 815,487 860,542 925,535 970,590 1035,582 1080,628 1142,620 1190,652"
+            fill="none" stroke="#e1261c" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#red-arrow)"/>
+  <g fill="#ffffff" stroke="#e1261c" stroke-width="3">
+    <circle cx="716" cy="450" r="7"/>
+    <circle cx="758" cy="500" r="7"/>
+    <circle cx="815" cy="487" r="7"/>
+    <circle cx="860" cy="542" r="7"/>
+    <circle cx="925" cy="535" r="7"/>
+    <circle cx="970" cy="590" r="7"/>
+    <circle cx="1035" cy="582" r="7"/>
+    <circle cx="1080" cy="628" r="7"/>
+  </g>
+  <circle cx="830" cy="585" r="22" fill="#2f7f9f"/>
+  <text class="num" x="830" y="585">3</text>
+  <text class="label" x="685" y="612">红光在水流内部多次全反射</text>
+
+  <!-- Tray and white card -->
+  <path d="M700 685 H1300 L1265 735 H735 Z" fill="#c7d1da" stroke="#667787" stroke-width="5"/>
+  <path d="M1085 644 L1248 661 L1225 708 L1065 687 Z" fill="#ffffff" stroke="#8998a6" stroke-width="4"/>
+  <circle cx="1189" cy="653" r="13" fill="#e1261c"/>
+  <circle cx="1218" cy="590" r="22" fill="#2f7f9f"/>
+  <text class="num" x="1218" y="590">4</text>
+  <text class="label" x="1248" y="602">白纸上出现红点</text>
+  <text class="note" x="1005" y="728">深托盘接水</text>
+
+  <!-- Bottom summary -->
+  <rect x="70" y="655" width="560" height="76" rx="14" fill="#e8f1f7"/>
+  <text class="note" x="95" y="685">光路：激光笔 → 瓶内水 → 小孔</text>
+  <text class="note" x="95" y="714">　　　→ 弯曲水流 → 白纸红点</text>
+</svg>

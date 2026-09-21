@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>浮力单课 B：怎样让水托住更多东西？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">浮力单课 B：怎样让水托住更多东西？</h1>
+</header>
+<main id="lesson-content" tabindex="-1">
+<p><strong>沿用户实验思路设计｜已核对 DK 第 13–15 项｜五年级一对一｜50 分钟｜待材料确认与实物预试。</strong></p>
+<p><a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/%E6%B5%AE%E5%8A%9B%E5%8D%95%E8%AF%BE_A_%E6%B0%B4%E5%88%B0%E5%BA%95%E6%89%98%E4%BD%8F%E4%BA%86%E5%A4%9A%E5%B0%91.html">另一版：独立设计，测量水的托力</a> · <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E6%96%B9%E6%A1%88/README.html">返回总目录</a></p>
+<h2>设计思路</h2>
+<p>核心问题：<strong>要让东西浮住，水需要提供多少托力，怎样才能得到这份托力？</strong></p>
+<p>改变液体让蛋浮起 → 剥皮反例 → 弹珠与橡皮泥球分别沉水 → 同一团泥捏成船后浮起 → 装弹珠、测排水 → 预测加货结果。</p>
+<p><strong>主实验采用橡皮泥船＋弹珠，铝箔只作缺材料时的备用。</strong> 保留“同一团泥，球沉、船浮”的对照，再把载货与排水测量合并。盐水改变液体，捏船改变物体形状；两条路径最终汇合到排开液体的重量。</p>
+<p>完成时能解释盐水浮蛋；比较静止漂浮船的总质量与排开水的质量；预测加货后下沉更深、排水增多，并用这一关系说明承载限制。</p>
+<h2>DK 原书核对与本课采用方式</h2>
+<p>本次核对 Neil Ardley《101 Great Science Experiments》英文版，ISBN 9781465428264。下列页码是所核对版本的印刷页码；在线翻页器另计封面，用户手中中文版页码可能不同。</p>
+<table>
+<thead>
+<tr>
+<th>实验编号／印刷页</th>
+<th>英文题名</th>
+<th>核对结果与本课采用方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13／19</td>
+<td>Remove a lime’s life jacket</td>
+<td>用 lime（酸橙）比较去皮前后沉浮；本课可用预试有效的橘子替代</td>
+</tr>
+<tr>
+<td>14／20</td>
+<td>Make things sink, then float!</td>
+<td>材料明确是造型泥、弹珠和水容器；保留先沉、改形、载货的对照顺序</td>
+</tr>
+<tr>
+<td>15／21</td>
+<td>Find out about floating</td>
+<td>收集漂浮容器排出的水并称量；本课将漂浮对象改为同一艘泥船，增加体积读数和第二档载荷</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.penguinrandomhouse.com/books/765009/101-great-science-experiments-by-neil-ardley/">出版社书目</a>核对书名与 ISBN；<a href="https://books.google.com/books/about/101_Great_Science_Experiments.html?id=N8EbBgAAQBAJ">Google Books 目录</a>核对第 14、15 项页码；操作内容核对<a href="https://fliphtml5.com/qjtrd/bblt/101_Great_Science_Experiments/">英文原书公开翻页本</a>，对应翻页器第 21–23 页。翻页本由第三方上传，不是 DK 官方发布页。</p>
+<p>原书的关键教学价值是用同一材料改形建立反例，再追问需要排开多少水。本课将这条递进放进一对一的 50 分钟时间线。用量、船体起步尺寸、两档数据与时间分配为本次改编。</p>
+<h2>课前准备</h2>
+<h3>生活材料与耗材</h3>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>建议用量与用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>带壳鸡蛋</td>
+<td>2 个，一个课堂用、一个备用；课堂蛋在清水中应下沉</td>
+</tr>
+<tr>
+<td>酸橙，或橘子／橙子</td>
+<td>2 个，同批次；一个课堂用、一个预试。DK 原书用酸橙，其他柑橘作材料替代</td>
+</tr>
+<tr>
+<td>食盐</td>
+<td>约 100 g，课堂逐次加盐及配备用盐水；库存记录中氯化钠已用完，另备</td>
+</tr>
+<tr>
+<td>油性、不干型橡皮泥</td>
+<td><strong>是否有尚未确认，列为需备</strong>；课堂取同一团约 80–100 g，另备一团供预试或材料故障替换</td>
+</tr>
+<tr>
+<td>铝箔（备用）</td>
+<td>20 × 20 cm 两张；仅在没有适用橡皮泥时启用</td>
+</tr>
+<tr>
+<td>玻璃弹珠</td>
+<td>约 15–20 颗，直径约 15–16 mm、同规格；第二档先用约 4 颗，实际总质量须称量；没有时可用同规格垫圈替代</td>
+</tr>
+<tr>
+<td>清水</td>
+<td>约 3 L，用于浮蛋、清水槽、溢水复位</td>
+</tr>
+<tr>
+<td>抹布、纸巾、标签</td>
+<td>少量</td>
+</tr>
+</tbody>
+</table>
+<h3>实验工具</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>数量与关键规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透明容器、备用溶液杯</td>
+<td>各 1 个；浮蛋容器约 600 mL</td>
+</tr>
+<tr>
+<td>宽口水槽或盆</td>
+<td>1 个，水深约 10 cm，始终用清水</td>
+</tr>
+<tr>
+<td>溢水容器</td>
+<td>1 个，口部净宽至少 14–15 cm，能容船自由漂浮</td>
+</tr>
+<tr>
+<td>接水杯、量筒</td>
+<td>接水杯 1–2 个，至少 250 mL；量筒约 250 mL、分度 1–2 mL，须容纳泥船自身排水与载荷增加量</td>
+</tr>
+<tr>
+<td>电子秤</td>
+<td>1 台，分度不大于 1 g；关键器材，课前核对并补齐</td>
+</tr>
+<tr>
+<td>勺、搅拌棒、托盘</td>
+<td>各 1 个</td>
+</tr>
+</tbody>
+</table>
+<p>课前约 15–20 分钟预试：</p>
+<ol>
+<li>确认课堂蛋在清水中下沉，用同批备用蛋估计加盐量。另备 200 g 水加 50 g 盐，完全溶解，作为约 20% 质量分数的备用浓盐水。</li>
+<li>用备用柑橘检查剥皮结果。常见带皮浮、剥皮后沉或露出水面部分减少；品种与白色海绵层保留量会影响结果。</li>
+<li>用备用泥预试：实心球会沉，浸水 5–10 分钟不溶散、不明显吸水变软；捏成船后不渗漏，能稳定承载约 4 颗弹珠。课堂那团只预先揉软，保留孩子从球到船的塑形过程。</li>
+<li>检查接水、量筒与船体搬运；选择两档都能稳定漂浮的载荷。弹珠不必每颗完全一样重，两档总质量用秤测。</li>
+</ol>
+<p><strong>选泥按材料表现，不只看“橡皮泥”名称。</strong> 优先油性／蜡基、不干型造型泥；超轻黏土、面团类彩泥或遇水软化的陶泥不能直接当成同等替代。实心球本身就浮的材料不适合本课的“球沉—船浮”对照。厂家关于油蜡基造型泥耐水性的说明见 <a href="https://www.crayola.com/products/clay-and-modeling-compounds/modeling-clay-natural-colors-570400">Crayola 材料页</a>，具体手头材料仍须预试。</p>
+<p>实验用过的蛋、水果与容器不用于课中进食。生鸡蛋轻放；破裂即换备用蛋、清理洗手。也可用预试可行的带壳熟蛋。</p>
+<h2>一眼速查</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>活动</th>
+<th>承上启下</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–3 分钟</td>
+<td>复习密度与公平实验</td>
+<td>改液体能否改沉浮？</td>
+</tr>
+<tr>
+<td>3–12 分钟</td>
+<td>同一鸡蛋，逐次加盐</td>
+<td>改液体能浮起，只减轻物体呢？</td>
+</tr>
+<tr>
+<td>12–16 分钟</td>
+<td>柑橘带皮与剥皮对照</td>
+<td>还要看质量与体积的关系</td>
+</tr>
+<tr>
+<td>16–29 分钟</td>
+<td>弹珠和泥球沉水；同一团泥捏船、试浮、放一颗弹珠</td>
+<td>材料和质量基本相同，形状改变沉浮</td>
+</tr>
+<tr>
+<td>29–42 分钟</td>
+<td>空船、船加弹珠：称质量并测排水</td>
+<td>把“托得住”变成数字关系</td>
+</tr>
+<tr>
+<td>42–46 分钟</td>
+<td>逐颗加弹珠，看水线与承载限制</td>
+<td>检验排水规律的预测</td>
+</tr>
+<tr>
+<td>46–50 分钟</td>
+<td>串起解释、收拾</td>
+<td>一条模型解释整节现象</td>
+</tr>
+</tbody>
+</table>
+<h2>0–3 分钟｜从液体分层接到浮蛋</h2>
+<p>调用 Week 2：**密度（density）**是单位体积的质量；不相溶液体分层时，密度小的在上层。密度不同本身不保证永久分层，盐水和清水可以混匀。</p>
+<p>提出<strong>可检验问题（testable question）</strong>：“增加溶解在水里的盐，会怎样影响同一鸡蛋的沉浮？”预测结果，指出保持同一个蛋、同一容器、相近温度。</p>
+<h2>3–12 分钟｜改一改水，让鸡蛋浮起来</h2>
+<p><strong>实验目的</strong>：比较同一物体在不同盐浓度溶液中的沉浮。</p>
+<p><strong>重要知识点</strong>：食盐溶解使溶液密度增加；<strong>排水体积相同时，液体密度越大，浮力越大</strong>。短时间实验中蛋的质量和体积近似不变。</p>
+<ol>
+<li>透明容器加 300 mL 常温水，轻放鸡蛋，记录起始状态。</li>
+<li>用勺取出蛋，加约 10 g 食盐，搅拌到完全溶解。放回同一个蛋，等水静止后观察。</li>
+<li>重复，累计盐量约为 10、20、30、40 g。接近浮起可改用约 5 g 的小份量。记录实际几次变化，无需做满全部档位。</li>
+<li>浮起后观察露出部分。蛋可能先改变姿态再上升，不保证每加一份盐都平稳升高一点，也不追求长时间悬在中央。</li>
+</ol>
+<p><strong>自变量（independent variable）</strong>：累计溶解的盐量，用来逐步提高浓度。<strong>因变量（dependent variable）</strong>：沉浮状态。固定起始水量、蛋、容器与观察时机；加盐后最终溶液体积会改变，不能写成“溶液体积始终不变”。</p>
+<p>若第 10 分钟仍未浮起，用备用浓盐水与清水做端点比较，留两分钟解释。备用比较另记，不接进原来的逐次加盐数据序列。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">累计溶解盐 / g</th>
+<th>沉底、离底上升、浮在水面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">____</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">____</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">____</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>同一个蛋，改变液体密度，可以改变沉浮。</strong> 最后静止漂浮时浮力与重力平衡，露出水面后浸水体积减少。</p>
+<p>现象依据：<a href="https://www.sfu.ca/physics/about-us/outreach/activities/activity/understanding-buoyancy.html">Simon Fraser University：Understanding Buoyancy</a>。本教案加盐步长与时间安排需按蛋的状态预试。</p>
+</div>
+</details>
+<h2>12–16 分钟｜变轻了，为什么反而可能沉？</h2>
+<p><strong>实验目的</strong>：用剥皮反例发现只看轻重不足以解释沉浮。</p>
+<p><strong>重要知识点</strong>：**平均密度（average density）**取决于整体质量与体积；柑橘皮的海绵层含空气，提供较大体积而只增加较少质量。</p>
+<ol>
+<li>将完整橘子放进清水槽，观察露出部分。</li>
+<li>取出，先预测，再亲手剥皮，保留果肉完整，放回同一槽清水。</li>
+<li>比较结果，再放入一块果皮观察。</li>
+<li>解释：剥皮同时减少质量与体积，也去掉了低密度外层，所以可能更容易下沉。转入造船：“能否用很少的材料，围出更大的、不让水进入的空间？”</li>
+</ol>
+<p>若剥皮仍浮，照实记录露出部分变化；没有明显差异就结束，不现场换多个水果寻找规定答案。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p>带皮：<strong><strong>；剥皮：</strong></strong>；果皮：____。</p>
+<p><strong>变轻，不一定更容易浮；还要看质量与体积怎样一起改变。</strong></p>
+<p>DK 第 13 项用酸橙；这里可用预试有效的橘子或橙子替代。剥皮前后方向仍以实测为准。橘子替代依据：<a href="https://www.chem.ox.ac.uk/files/floatandsinkpdf">牛津大学化学系：Floating and Sinking</a>。</p>
+</div>
+</details>
+<h2>16–29 分钟｜同一团橡皮泥：球会沉，船能浮</h2>
+<p><strong>实验目的</strong>：在同一份材料、质量基本不变的条件下，亲自改变形状，建立沉浮反例，再尝试运送同样会沉的弹珠。</p>
+<p><strong>重要知识点</strong>：**控制变量（controlled variables）**包括泥的用量和水的条件。**船体形状（hull shape）**影响进水前能排开的水量；造型泥材料自身的密度没有因捏船改变。</p>
+<ol>
+<li><strong>约 2 分钟</strong>：称约 80–100 g 泥，揉成紧实球。把一颗弹珠和泥球分别放进清水，观察下沉，随后取出。弹珠放入托盘，避免滚落。</li>
+<li><strong>约 7 分钟</strong>：吸去泥表面水，使用整团泥压成片，从中央向四周推捏，做成底部较宽、边缘连续的浅船。可从约 7–8 cm 底宽、约 2–3 cm 船边、约 3–5 mm 均匀壁厚起步；尺寸按材料预试调整，不剪掉材料，不往船里添加轻质填充物。</li>
+<li><strong>约 3 分钟</strong>：轻放试浮。若边缘过低、裂缝或歪斜导致失败，取出吸干积水，再修平底、补裂缝或调整船边。只用同一团泥改形，成功后取出吸去表面水，复核船重。</li>
+<li><strong>约 1 分钟</strong>：在船底中央轻放刚才那颗弹珠，观察船下沉一些但仍能漂浮。取出这颗弹珠，准备下一段空船和载货两档测量。</li>
+</ol>
+<p>先保留失败与修整机会，再落实解释：泥和弹珠都没有变成新材料；船形能在进水前排开足够重量的水，因此能够浮起并运货。按弹珠容易滚动的特点保持船底平整、轻放货物，不把弹珠压入薄船底。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th style="text-align:right">泥的质量 / g</th>
+<th>观察</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>实心泥球</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td>同一团泥捏成空船，表面吸干后</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td>船加一颗弹珠</td>
+<td style="text-align:right">泥量不变，另加货物</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>同一团泥：质量基本不变，改变形状，可以从沉变浮。</strong> 记录质量变化时考虑表面附水或材料丢失，不能预先把两次读数写成相等。</p>
+</div>
+</details>
+<h2>29–42 分钟｜船和货物有多重，需要排开多少水？</h2>
+<p><strong>实验目的</strong>：测排水体积，比较静止漂浮时总质量与排开水质量。</p>
+<p><strong>重要知识点</strong>：<strong>静止漂浮时，浮力等于重力（for an object floating at rest, buoyant force equals weight）</strong>。结合<strong>阿基米德原理（Archimedes’ principle）</strong>，得到漂浮物体总质量等于排开液体的质量。</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img" aria-label="溢水装置：物体排出的水流入接水杯"><rect width="760" height="260" fill="#f5f9fc" rx="12"/><g font-family="sans-serif" font-size="18" fill="#19354d"><path d="M50 83V228H329V112H360" fill="none" stroke="#19354d" stroke-width="3"/><path d="M52 115H327V226H52Z" fill="#b6ddf6"/><path d="M103 88L129 151H255L280 88" fill="#f2e2bd" stroke="#806d4b" stroke-width="3"/><circle cx="173" cy="140" r="10" fill="#749fce"/><circle cx="195" cy="140" r="10" fill="#749fce"/><circle cx="217" cy="140" r="10" fill="#749fce"/><path d="M329 115H361L397 169" fill="none" stroke="#3689bd" stroke-width="3"/><path d="M377 157V228H462V157" fill="none" stroke="#19354d" stroke-width="3"/><path d="M379 204H460V226H379Z" fill="#b6ddf6"/><text x="490" y="80">起始水位在溢水口</text><text x="490" y="121">等滴流停止，再开始接水</text><text x="490" y="162">完整收集排出的水</text><text x="58" y="254">船装好货物，轻放后松手</text></g></svg></p>
+<p><strong>第一轮，空船，约 5 分钟。</strong></p>
+<ol>
+<li>使用上一段吸干表面水后的船重，空船总质量就是这份泥的质量。</li>
+<li>把溢水容器补到出口，等滴流停止，再放空接水杯。</li>
+<li>空船轻放水面并松手。接完排水，先移开接水杯再取船。船须自由漂浮、未进水、不碰壁或底。</li>
+<li>接到的水倒入量筒，平视读体积。</li>
+</ol>
+<p><strong>第二轮，船加弹珠，约 5 分钟。</strong></p>
+<ol start="5">
+<li>称约 4 颗弹珠的总质量，按课前试浮可行数量调整；加船重算新总质量，先预测需要多排开多少水。轻放弹珠，均匀分布在船底中央区域。</li>
+<li>重新补水到出口，等滴流停止，倒空接水杯。按同样方法量第二轮全部排水；记的是总量，不是增量。</li>
+<li>看新水线是否更高。载荷尽量居中、均匀放置。</li>
+</ol>
+<p><strong>比较与命名，约 3 分钟。</strong></p>
+<ol start="8">
+<li>室温清水近似按 <strong>1 mL 水的质量约为 1 g</strong> 换算。比较两轮中，船与货物总质量是否接近排开水的质量。</li>
+<li>先找数字关系，再解释：船静止浮着时，向上浮力平衡船与货物的重力；阿基米德原理说，浮力等于排开水的重量。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th style="text-align:right">弹珠数</th>
+<th style="text-align:right">船＋弹珠总质量 / g</th>
+<th style="text-align:right">排水体积 / mL</th>
+<th style="text-align:right">换算排水质量约 / g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空船</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>船加弹珠</td>
+<td style="text-align:right">____</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>静止漂浮：排开水的质量 ≈ 船与货物总质量。</strong></p>
+<p>例如泥船 90 g、加上总质量 20 g 的弹珠后为 110 g，对应排水约 90 mL、110 mL。这是预期关系示例，不是实测数据；接水与读数误差会产生几毫升偏差。</p>
+<p>两层关系讲清即可：浮力等于排开水的重量；静止漂浮时，这份力又等于船和货物的重力。不要写“浮力＝80 g”。本实验检验静止漂浮的质量关系，没有独立测量以牛顿表示的浮力。</p>
+<p>科学关系依据：<a href="https://www.teachengineering.org/lessons/uoh_fluidmechanics_lesson01">TeachEngineering：Archimedes’ Principle</a>。</p>
+</div>
+</details>
+<h2>42–46 分钟｜船还能装多少？</h2>
+<p><strong>实验目的</strong>：用规律预测加货结果，观察承载限制。</p>
+<p><strong>重要知识点</strong>：加货后下沉更深、排水增加，达到新的平衡；船边进水、破损或倾覆会使船不能继续正常漂浮。</p>
+<ol>
+<li>将船放回清水槽，保留稳定载荷。用刚才称过的弹珠质量作预测：例如增加共 10 g 弹珠，若仍静止漂浮，需多排开约 10 mL 清水。</li>
+<li>每次轻放一颗弹珠，观察水线与船边离水面距离。本段只记录载荷和现象，不重新测每一次排水。</li>
+<li>记录最后成功承载的弹珠数和弹珠总质量，以及首个失败原因：进水、漏水、弹珠滚动引起偏载翻倒。</li>
+<li>若偏载翻倒，把相同货物均匀放置再试一次；若时间到仍未失败，记“至少能承载这些货物”，按时收束。</li>
+</ol>
+<p>最后成功载荷是本次测试值，不宣称精确找到了最大值。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p>最后成功弹珠数：____ 颗；弹珠总质量：____ g；失败或结束状态：____。</p>
+<p><strong>加货 → 船下沉更深 → 排水增多 → 浮力增大，直到重新平衡。</strong></p>
+</div>
+</details>
+<h2>46–50 分钟｜串起解释，收拾</h2>
+<p>边收拾边用三句说明：鸡蛋因液体密度改变而浮起；剥皮改变整体结构，同一团泥捏船则保持材料用量、改变排水能力；船加货后需要排开更多水才能保持漂浮。</p>
+<p>最后预测：同一艘船、相同货物，在更浓的盐水中静止漂浮，会浸得更深还是更浅？应更浅：需要排开液体的质量相同，而盐水每毫升质量更大，所需体积更小。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>水能托多重，看排开液体有多重；东西能否浮住，还要看自身总重量和能排开多少液体。</strong></p>
+<p>倒水，清点弹珠，吸干并收好造型泥，擦干台面与器材。</p>
+</div>
+</details>
+<h2>教师实施备注</h2>
+<ul>
+<li><strong>50 分钟以预试可靠为前提</strong>：球—船对照与塑形 13 分钟，两档排水 13 分钟，加弹珠验证 4 分钟；浮蛋与剥皮共 13 分钟，复习与收拾共 7 分钟。比铝箔方案增加了塑形时间，缩短加盐与承载比赛。</li>
+<li><strong>45 分钟基础版</strong>：省去橘子 4 分钟，开场减 1 分钟，保留浮蛋—造船—两档排水—载重预测；橘子移到下次作开场反例。</li>
+<li><strong>有 60 分钟</strong>：增加 10 分钟，取同一团泥重新设计船形，装相同弹珠比较；不增加泥量。记录几何与放重方式的伴随变化，不把工程改造声称为严格单变量实验。</li>
+<li>排水测量慢时压缩承载极限挑战，优先保留第二档数据与解释。若只有一组可靠数据，明确证据范围，不把预测填成第二次实测。</li>
+<li>无合适溢水容器，课前可改用容得下船、刻度经校准的直壁量水容器，读放船前后体积差。过宽、刻度太粗时难测，不能凭水位高度直接估毫升数。</li>
+<li>讲解原书时把“轻重不能单独决定沉浮”说清楚，物体总重量仍决定漂浮时需要多大的浮力。</li>
+<li>同一总质量的船在清水和盐水中静止漂浮，浮力相同而排水体积不同。“盐水浮力更大”须加上排水体积相同这一条件。</li>
+</ul>
+<h3>缺材料时的备用路线</h3>
+<ul>
+<li><strong>有适用橡皮泥</strong>：优先执行上面的球—船—弹珠路线；尚未确认库存不等于取消首选。</li>
+<li><strong>没有适用橡皮泥</strong>：16–29 分钟改用 20 × 20 cm 铝箔做船，先看弹珠沉水，再由船承载同一颗弹珠，随后测空船与载货排水。空铝箔船排水太少难读时，两档都带货，载荷按试浮选取并计入总质量。这条备用路线少了“实心球变空心船”的可靠同材料对照，不把铝箔团的沉浮当成必然结果。</li>
+<li><strong>没有弹珠</strong>：换同规格垫圈或硬币，记录数量与实测总质量，不能混用不同物品后只比较个数。</li>
+<li>泥船到第 29 分钟仍未稳定漂浮时，记录其失败原因，启用课前预试的备用小容器完成排水测量；本次只获得该漂浮容器的数据，不宣称孩子已成功完成泥船。备用小容器需在课前另外备齐。</li>
+</ul>
+<p>本次已核对原书选题及操作顺序；现有材料可用性和一对一操作时间尚未完成实物预试。</p>
+</main>
+
+</body>
+</html>

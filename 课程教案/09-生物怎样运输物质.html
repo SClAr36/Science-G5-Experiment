@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 9 节：植物怎样运输水和糖？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 9 节：植物怎样运输水和糖？</h1>
+</header>
+<main>
+<p><strong>Lesson 9: How Do Plants Transport Water and Sugar?</strong></p>
+<p><strong>授课状态</strong>：已完成；实际授课第 9 节，共 60 分钟。</p>
+<h2>课前材料与准备</h2>
+<h3>材料清单</h3>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新鲜带叶西芹</td>
+<td style="text-align:right">2 根</td>
+<td>1 根提前染色；1 根课堂染色</td>
+</tr>
+<tr>
+<td>白色康乃馨</td>
+<td style="text-align:right">1 枝</td>
+<td>课堂染色并课后观察</td>
+</tr>
+<tr>
+<td>吊竹梅等薄而透光的叶片</td>
+<td style="text-align:right">2 片</td>
+<td>上、下表面直接湿装；1 片备用</td>
+</tr>
+<tr>
+<td>健康带叶盆栽</td>
+<td style="text-align:right">1 盆</td>
+<td>蒸腾套袋实验</td>
+</tr>
+<tr>
+<td>蓝色液体食用色素</td>
+<td style="text-align:right">1 小瓶</td>
+<td>显示水的运输路径</td>
+</tr>
+<tr>
+<td>透明杯</td>
+<td style="text-align:right">3 个</td>
+<td>提前染色西芹、课堂西芹、白花</td>
+</tr>
+<tr>
+<td>清水</td>
+<td style="text-align:right">约 500 mL</td>
+<td>配制蓝色水和湿装片</td>
+</tr>
+<tr>
+<td>透明速干指甲油、透明胶带（备选）</td>
+<td style="text-align:right">各 1 份</td>
+<td>直接湿装失败时制作叶表印迹</td>
+</tr>
+<tr>
+<td>透明保鲜袋</td>
+<td style="text-align:right">2 个</td>
+<td>有叶袋与空袋对照</td>
+</tr>
+<tr>
+<td>橡皮筋或扎带</td>
+<td style="text-align:right">2 个</td>
+<td>扎紧袋口</td>
+</tr>
+<tr>
+<td>厨房纸、标签、记号笔</td>
+<td style="text-align:right">各 1 份</td>
+<td>防洒、标记样本</td>
+</tr>
+<tr>
+<td>显微镜</td>
+<td style="text-align:right">1 台</td>
+<td>40×、100×观察</td>
+</tr>
+<tr>
+<td>载玻片、盖玻片</td>
+<td style="text-align:right">各 4 张</td>
+<td>制作装片</td>
+</tr>
+<tr>
+<td>滴管、镊子、塑料刀</td>
+<td style="text-align:right">各 1</td>
+<td>取水、移片、粗切</td>
+</tr>
+<tr>
+<td>锋利小刀、白托盘、护目镜</td>
+<td style="text-align:right">各 1</td>
+<td>修剪和制作薄切片</td>
+</tr>
+<tr>
+<td>手机、笔记本、铅笔</td>
+<td style="text-align:right">各 1</td>
+<td>拍照、记录、绘图</td>
+</tr>
+</tbody>
+</table>
+<h3>今晚完成</h3>
+<ol>
+<li>将一根西芹底端切去约 <code>1 cm</code>，立即放入 <code>100 mL 水 + 10–15 滴蓝色色素</code>。</li>
+<li>标记“提前染色西芹”和开始时间，静置 <code>6–12 h</code>。</li>
+<li>给盆栽浇水，保持叶面干燥。</li>
+<li>白花和另一根西芹保持原样，课堂再染。</li>
+</ol>
+<h3>上课前 30–60 分钟完成</h3>
+<ol>
+<li>横切提前染色西芹的底端，确认横切面出现蓝点；保留其余部分课堂使用。</li>
+<li>从吊竹梅等薄叶上剪一块约 <code>3 mm × 5 mm</code> 的小片，下表面朝上做湿装，确认 <code>100×</code> 能找到气孔。另留一片备用叶；若有透明指甲油，在该叶上、下表面各预制一处印迹并完全晾干。</li>
+<li>检查显微镜、玻片、刀具和手机。</li>
+<li>将两个保鲜袋擦干。</li>
+</ol>
+<h3>课前约 2 分钟：回应绿豆问题</h3>
+<p>绿豆幼苗死亡可能有几个原因：</p>
+<ul>
+<li><strong>水太多 / Too much water</strong>：纸巾一直泡在水里，根缺少氧气，可能腐烂。</li>
+<li><strong>水太少 / Too little water</strong>：纸巾变干，根无法吸收足够的水。</li>
+<li><strong>光照或温度不合适 / Unsuitable light or temperature</strong>：光太弱、阳光暴晒或温度变化太大，都会影响幼苗生长。</li>
+<li><strong>空间和养分不足 / Not enough space or nutrients</strong>：纸巾适合观察萌发，但不适合长期生长；种子里的养分逐渐用完后，幼苗还需要更多空间和矿物质。</li>
+</ul>
+<p>绿豆死亡通常不是一个原因造成的。没有连续记录，我们只能找出可能的原因，不能确定唯一死因。<br />
+<em>A seedling may die for more than one reason. Without regular observations, we cannot know the exact cause.</em></p>
+<p>随后进入本课问题：植物怎样把水送到叶片，又怎样把糖送到其他部位？</p>
+<h2>一、课程定位与主线</h2>
+<ul>
+<li><strong>对应学校内容</strong>：Unit 4 Life Science — 06 Vascular and Non-Vascular Plants</li>
+<li><strong>课时</strong>：60 分钟</li>
+<li><strong>驱动问题</strong>：水和矿物质怎样到达叶片？叶片制造的糖怎样送到其他部位？</li>
+</ul>
+<pre><code class="language-text">有色水进入西芹和白花
+        ↓
+颜色沿茎内特定路径上升
+        ↓
+木质部 xylem 运输水和矿物质
+        ↓
+叶片通过气孔 stomata 散失水蒸气
+        ↓
+蒸腾 transpiration 帮助水向上运输
+        ↓
+韧皮部 phloem 把糖送到植物其他部位
+</code></pre>
+<h3>学习目标</h3>
+<ol>
+<li>区分<strong>维管植物（vascular plants）</strong>和<strong>非维管植物（non-vascular plants）</strong>：前者有 xylem 和 phloem，后者没有。</li>
+<li>说明<strong>木质部（xylem）</strong>运输水和矿物质，<strong>韧皮部（phloem）</strong>运输糖。</li>
+<li>用西芹染色、横切和显微观察说明水沿特定结构向上运输。</li>
+<li>用薄叶湿装和套袋实验解释<strong>蒸腾作用（transpiration）</strong>。</li>
+</ol>
+<h2>二、一眼速查</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>课堂内容</th>
+<th>课后继续</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–6</td>
+<td>启动西芹和白花染色</td>
+<td>2–4 h、睡前、次日拍照</td>
+</tr>
+<tr>
+<td style="text-align:right">6–10</td>
+<td>启动有叶袋与空袋对照</td>
+<td>1–4 h 拍最终照片并拆袋</td>
+</tr>
+<tr>
+<td style="text-align:right">10–30</td>
+<td>观察提前染色西芹：横切、纵切、显微镜</td>
+<td>课堂完成</td>
+</tr>
+<tr>
+<td style="text-align:right">30–43</td>
+<td>薄叶湿装与气孔观察</td>
+<td>课堂完成</td>
+</tr>
+<tr>
+<td style="text-align:right">43–50</td>
+<td>连接 xylem、phloem、stomata、transpiration</td>
+<td>课堂完成</td>
+</tr>
+<tr>
+<td style="text-align:right">50–56</td>
+<td>第一次读取套袋结果</td>
+<td>课后完成最终读取</td>
+</tr>
+<tr>
+<td style="text-align:right">56–60</td>
+<td>总结并安排课后观察</td>
+<td>按记录表回传照片</td>
+</tr>
+</tbody>
+</table>
+<h2>三、60 分钟课堂时间线</h2>
+<h3>0–6 分钟：实验 1A——启动西芹和白花染色</h3>
+<p style="color: #1565C0;">今天我们要找出：水怎样到达叶和花？水从叶片离开后，怎样帮助更多水向上移动？<br><span lang="en">Today we will find out: How does water reach the leaves and flowers? How does water leaving the leaves help pull more water up?</span></p>
+<p><strong>重要知识点</strong>：食用色素随水移动，是本实验的<strong>示踪物（tracer）</strong>。它显示水经过的路线，不是植物产生的新颜色。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格</th>
+<th style="text-align:right">用量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新鲜带叶西芹</td>
+<td>底端新切</td>
+<td style="text-align:right">1 根</td>
+</tr>
+<tr>
+<td>白色康乃馨</td>
+<td>花茎新切</td>
+<td style="text-align:right">1 枝</td>
+</tr>
+<tr>
+<td>清水</td>
+<td>室温</td>
+<td style="text-align:right"><code>160 mL</code></td>
+</tr>
+<tr>
+<td>蓝色液体食用色素</td>
+<td>水溶性</td>
+<td style="text-align:right">20–30 滴</td>
+</tr>
+<tr>
+<td>标签、厨房纸</td>
+<td>—</td>
+<td style="text-align:right">各 1 份</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透明杯</td>
+<td style="text-align:right">2 个</td>
+<td>分装蓝色水</td>
+</tr>
+<tr>
+<td>量杯、滴管</td>
+<td style="text-align:right">各 1</td>
+<td>量水、加色素</td>
+</tr>
+<tr>
+<td>小刀、托盘</td>
+<td style="text-align:right">各 1</td>
+<td>修剪茎端</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">1 台</td>
+<td>拍起始照片</td>
+</tr>
+</tbody>
+</table>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjYyMCIgdmlld0JveD0iMCAwIDEyMDAgNjIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+5p+T6Imy6KW/6Iq544CB55m96Iqx5ZKM6KW/6Iq55qiq5YiH54mH5pi+5b6u6KeC5a+f5rWB56iLPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5a2p5a2Q5YWI6K6+572u57qi6JOd5YiG6IyO6KW/6Iq55ZKM6JOd5rC055m96Iqx77yM5YaN5q+U6L6D6aKE5aSE55CG5riF5rC05LiO6JOd5rC05qC35pys77yM5pyA5ZCO5oqK5p+T6Imy6KW/6Iq55qiq5YiH6JaE54mH5pS+5Yiw6L29546754mH5LiK77yM5Zyo5Zub5Y2B5YCN5ZKM5LiA55m+5YCN5LiL6KeC5a+f57u0566h5p2f44CCPC9kZXNjPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmNmZiZjgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWVmNWZmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzdGVtIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzc0YjM2YSIvPgogICAgICA8c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjYjhkYzhjIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzVkOWY2MCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxtYXJrZXIgaWQ9ImFycm93IiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj4KICAgICAgPHBhdGggZD0iTTAgMEwxMCA1TDAgMTBaIiBmaWxsPSIjMzU1MzZkIi8+CiAgICA8L21hcmtlcj4KICAgIDxmaWx0ZXIgaWQ9InNoYWRvdyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICAgIDxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIzIiBzdGREZXZpYXRpb249IjQiIGZsb29kLWNvbG9yPSIjMjQ0MTVhIiBmbG9vZC1vcGFjaXR5PSIuMTgiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MjAiIHJ4PSIyOCIgZmlsbD0idXJsKCNiZykiLz4KICA8dGV4dCB4PSI2MCIgeT0iNjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxNzNkMzEiPuWunumqjCAx77ya6K6p6aKc6Imy5oqK5rC06Lev55WZ5LiL5p2lPC90ZXh0PgogIDx0ZXh0IHg9IjYwIiB5PSI5MiIgZm9udC1mYW1pbHk9IkFyaWFsLCAnTWljcm9zb2Z0IFlhSGVpJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzQ4NjI3MyI+RGF5IDAgc2V0dXAg4oaSIG1hY3Jvc2NvcGljIHBhdGgg4oaSIGNyb3NzIHNlY3Rpb24g4oaSIG1pY3Jvc2NvcGUgZXZpZGVuY2U8L3RleHQ+CgogIDxnIGZpbHRlcj0idXJsKCNzaGFkb3cpIj4KICAgIDxyZWN0IHg9IjQ1IiB5PSIxMjUiIHdpZHRoPSIyNTAiIGhlaWdodD0iNDEwIiByeD0iMjAiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2M4ZDlkMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cmVjdCB4PSIzMzUiIHk9IjEyNSIgd2lkdGg9IjI1MCIgaGVpZ2h0PSI0MTAiIHJ4PSIyMCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjYzhkOWQwIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxyZWN0IHg9IjYyNSIgeT0iMTI1IiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjQxMCIgcng9IjIwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNjOGQ5ZDAiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHJlY3QgeD0iOTE1IiB5PSIxMjUiIHdpZHRoPSIyNDAiIGhlaWdodD0iNDEwIiByeD0iMjAiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2M4ZDlkMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPC9nPgoKICA8dGV4dCB4PSI3MCIgeT0iMTY1IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTczZDMxIj4xIMK3IOWtqeWtkOiuvue9rjwvdGV4dD4KICA8dGV4dCB4PSI3MCIgeT0iMTk1IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjNDg2MjczIj5zcGxpdCBjZWxlcnkgKyB3aGl0ZSBmbG93ZXI8L3RleHQ+CiAgPHBhdGggZD0iTTE2MCAyMzBDMTUwIDI5MCAxNTAgMzM1IDE1MSAzOTAiIHN0cm9rZT0idXJsKCNzdGVtKSIgc3Ryb2tlLXdpZHRoPSIyOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTE1MSAzMjBDMTM1IDM1NyAxMjUgMzkwIDEyMSA0MzIiIHN0cm9rZT0iI2Q1NDI0MiIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTE1MSAzMjBDMTY4IDM1NyAxNzggMzkwIDE4MyA0MzIiIHN0cm9rZT0iIzJmNjljOSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+CiAgPGVsbGlwc2UgY3g9IjEyNCIgY3k9IjI1MCIgcng9IjQ4IiByeT0iMjIiIGZpbGw9IiM3M2FhNjEiIHRyYW5zZm9ybT0icm90YXRlKC0yOCAxMjQgMjUwKSIvPgogIDxlbGxpcHNlIGN4PSIxOTAiIGN5PSIyNDUiIHJ4PSI0OCIgcnk9IjIyIiBmaWxsPSIjNzNhYTYxIiB0cmFuc2Zvcm09InJvdGF0ZSgyOCAxOTAgMjQ1KSIvPgogIDxwYXRoIGQ9Ik04NiA0MjVIMTYwVjQ5Mkg4NloiIGZpbGw9IiNmN2Q5ZDkiIHN0cm9rZT0iI2M5NWU1ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHBhdGggZD0iTTE0NSA0MjVIMjE5VjQ5MkgxNDVaIiBmaWxsPSIjZDllN2ZiIiBzdHJva2U9IiM0Yzc3YzciIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IHg9IjEwMyIgeT0iNDcwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNhODMzMzMiPlI8L3RleHQ+CiAgPHRleHQgeD0iMTc3IiB5PSI0NzAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzMxNWRhOCI+QjwvdGV4dD4KICA8dGV4dCB4PSI3NiIgeT0iNTIwIiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1IiBmaWxsPSIjNDg2MjczIj44MCBtTCArIDjigJMxMCBkcm9wczwvdGV4dD4KCiAgPHRleHQgeD0iMzYwIiB5PSIxNjUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxNzNkMzEiPjIgwrcg6K+75Y+W6aKE5aSE55CG5qC35pysPC90ZXh0PgogIDx0ZXh0IHg9IjM2MCIgeT0iMTk1IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjNDg2MjczIj5jbGVhciBjb250cm9sIOKGlCBibHVlIHRyYWNlcjwvdGV4dD4KICA8cGF0aCBkPSJNNDAzIDQ1MEM0MDQgMzU1IDQxNCAyODUgNDI0IDIzMCIgc3Ryb2tlPSIjNzJhZDY3IiBzdHJva2Utd2lkdGg9IjIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNNTEwIDQ1MEM1MTAgMzU1IDUwMCAyODUgNDkwIDIzMCIgc3Ryb2tlPSIjNzJhZDY3IiBzdHJva2Utd2lkdGg9IjIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNNDk3IDQ0MEM0OTYgMzU1IDQ5MiAzMDAgNDkxIDIzNiIgc3Ryb2tlPSIjMmY2OWM5IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMTUgOCIvPgogIDxlbGxpcHNlIGN4PSI0MDAiIGN5PSIyMzUiIHJ4PSI0NiIgcnk9IjIyIiBmaWxsPSIjNzVhYjYzIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTggNDAwIDIzNSkiLz4KICA8ZWxsaXBzZSBjeD0iNTEwIiBjeT0iMjM1IiByeD0iNDYiIHJ5PSIyMiIgZmlsbD0iIzc1YWI2MyIgdHJhbnNmb3JtPSJyb3RhdGUoMTggNTEwIDIzNSkiLz4KICA8cGF0aCBkPSJNMzczIDQ0NEg0MzVWNDkySDM3M1oiIGZpbGw9IiNlOWY0ZmIiIHN0cm9rZT0iIzczOTZhOCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHBhdGggZD0iTTQ4MCA0NDRINTQyVjQ5Mkg0ODBaIiBmaWxsPSIjZDllN2ZiIiBzdHJva2U9IiM0Yzc3YzciIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IHg9IjM3MyIgeT0iNTIwIiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1IiBmaWxsPSIjNDg2MjczIj7mr5TovoPoirHnk6PjgIHlj7bohInjgIHojI7nq688L3RleHQ+CiAgPGNpcmNsZSBjeD0iNTE4IiBjeT0iMjY5IiByPSI2IiBmaWxsPSIjMmY2OWM5Ii8+CiAgPGNpcmNsZSBjeD0iNTA4IiBjeT0iMjkzIiByPSI1IiBmaWxsPSIjMmY2OWM5Ii8+CiAgPGNpcmNsZSBjeD0iNTAwIiBjeT0iMzE4IiByPSI1IiBmaWxsPSIjMmY2OWM5Ii8+CgogIDx0ZXh0IHg9IjY1MCIgeT0iMTY1IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTczZDMxIj4zIMK3IOaoquWIh+S4jue6teWIhzwvdGV4dD4KICA8dGV4dCB4PSI2NTAiIHk9IjE5NSIgZm9udC1mYW1pbHk9IkFyaWFsLCAnTWljcm9zb2Z0IFlhSGVpJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzQ4NjI3MyI+Y29sb3Igc3RheXMgaW4gc2VsZWN0ZWQgYnVuZGxlczwvdGV4dD4KICA8ZWxsaXBzZSBjeD0iNzUwIiBjeT0iMzE1IiByeD0iODgiIHJ5PSIxMTUiIGZpbGw9IiNkOGViYmIiIHN0cm9rZT0iIzZjOWQ1OSIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgPGVsbGlwc2UgY3g9Ijc1MCIgY3k9IjMxNSIgcng9IjcwIiByeT0iOTYiIGZpbGw9IiNlOWY0Y2QiIHN0cm9rZT0iIzkxYjc3OSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGcgZmlsbD0iIzJmNjljOSIgc3Ryb2tlPSIjMjE0Zjk0IiBzdHJva2Utd2lkdGg9IjIiPgogICAgPGNpcmNsZSBjeD0iNzUwIiBjeT0iMjM2IiByPSIxMCIvPjxjaXJjbGUgY3g9IjcwMCIgY3k9IjI1OCIgcj0iMTAiLz48Y2lyY2xlIGN4PSI2ODQiIGN5PSIzMTQiIHI9IjEwIi8+CiAgICA8Y2lyY2xlIGN4PSI3MDQiIGN5PSIzNzEiIHI9IjEwIi8+PGNpcmNsZSBjeD0iNzU0IiBjeT0iMzk0IiByPSIxMCIvPjxjaXJjbGUgY3g9IjgwMyIgY3k9IjM2NyIgcj0iMTAiLz4KICAgIDxjaXJjbGUgY3g9IjgxOCIgY3k9IjMxMCIgcj0iMTAiLz48Y2lyY2xlIGN4PSI3OTkiIGN5PSIyNTYiIHI9IjEwIi8+CiAgPC9nPgogIDxwYXRoIGQ9Ik04NDAgMjQ4VjQwNSIgc3Ryb2tlPSIjMzU1MzZkIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CiAgPHRleHQgeD0iNjU2IiB5PSI0NzAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM0ODYyNzMiPuiTneiJsueCue+8j+adn+WMuiA9IHdhdGVyIHBhdGg8L3RleHQ+CiAgPHRleHQgeD0iNjU2IiB5PSI0OTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM0ODYyNzMiPuS4jeaYr+aVtOagueiMjuWdh+WMgOafk+iJsjwvdGV4dD4KCiAgPHRleHQgeD0iOTQwIiB5PSIxNjUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxNzNkMzEiPjQgwrcg6JaE5YiH5rm/6KOF54mHPC90ZXh0PgogIDx0ZXh0IHg9Ijk0MCIgeT0iMTk1IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjNDg2MjczIj40MMOXIGZpbmQg4oaSIDEwMMOXIGluc3BlY3Q8L3RleHQ+CiAgPHJlY3QgeD0iOTQ3IiB5PSIyNDIiIHdpZHRoPSIxNzAiIGhlaWdodD0iNjQiIHJ4PSI4IiBmaWxsPSIjZGNlYmYyIiBzdHJva2U9IiM2NTg2OWEiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxyZWN0IHg9Ijk3NyIgeT0iMjUyIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjQ0IiByeD0iNSIgZmlsbD0iI2Y3ZmJmZCIgc3Ryb2tlPSIjYTdjMGNjIi8+CiAgPGNpcmNsZSBjeD0iMTAzMiIgY3k9IjI3NCIgcj0iMTgiIGZpbGw9IiNkN2ViYmEiIHN0cm9rZT0iIzZjOWQ1OSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGcgZmlsbD0iIzJmNjljOSI+CiAgICA8Y2lyY2xlIGN4PSIxMDIyIiBjeT0iMjcwIiByPSIzIi8+PGNpcmNsZSBjeD0iMTAzNSIgY3k9IjI2MiIgcj0iMyIvPjxjaXJjbGUgY3g9IjEwNDEiIGN5PSIyNzgiIHI9IjMiLz4KICA8L2c+CiAgPHBhdGggZD0iTTEwMzAgMzE1VjM1MCIgc3Ryb2tlPSIjMzU1MzZkIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CiAgPHBhdGggZD0iTTk4NiA0MzJIMTA4NkwxMDcyIDM1OEgxMDE4TDEwMDcgMzg5SDk4MVoiIGZpbGw9IiNlN2VkZjIiIHN0cm9rZT0iIzRmNjY3NyIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPGNpcmNsZSBjeD0iMTA0NCIgY3k9IjM3NCIgcj0iMTYiIGZpbGw9IiNiZGQ4ZTkiIHN0cm9rZT0iIzRmNjY3NyIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHJlY3QgeD0iMTAxNyIgeT0iNDMyIiB3aWR0aD0iNzgiIGhlaWdodD0iMTQiIHJ4PSI3IiBmaWxsPSIjNTI2YjdkIi8+CiAgPHRleHQgeD0iOTQ1IiB5PSI0ODAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTUiIGZpbGw9IiM0ODYyNzMiPuaJvumHjeWkjee7tOeuoeadn+S4jui+g+Wkp+WvvOeuoeepuuiFlDwvdGV4dD4KICA8dGV4dCB4PSI5NDUiIHk9IjUwNiIgZm9udC1mYW1pbHk9IkFyaWFsLCAnTWljcm9zb2Z0IFlhSGVpJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSIgZmlsbD0iI2EzNGI0MCI+5Y+q5qCH55yf5q2j55yL6KeB55qE57uT5p6EPC90ZXh0PgoKICA8cGF0aCBkPSJNMzAwIDMzMEgzMjgiIHN0cm9rZT0iIzM1NTM2ZCIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogIDxwYXRoIGQ9Ik01OTAgMzMwSDYxOCIgc3Ryb2tlPSIjMzU1MzZkIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CiAgPHBhdGggZD0iTTg4MCAzMzBIOTA4IiBzdHJva2U9IiMzNTUzNmQiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KICA8cmVjdCB4PSI0NSIgeT0iNTU4IiB3aWR0aD0iMTExMCIgaGVpZ2h0PSI0MiIgcng9IjEyIiBmaWxsPSIjMTczZDMxIi8+CiAgPHRleHQgeD0iNjAwIiB5PSI1ODYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiPkNvbG9yZWQgd2F0ZXIgaXMgYSB0cmFjZXI6IGl0IHNob3dzIHRoZSB3YXRlciByb3V0ZSwgbm90IHRoZSBzdWdhciByb3V0ZS48L3RleHQ+Cjwvc3ZnPgo=" alt="西芹、白花染色和西芹横切湿装片" /></p>
+<ol>
+<li>两个杯分别标记 <code>celery</code>、<code>flower</code>。</li>
+<li>每杯加入 <code>80 mL</code> 水和 <code>10–15 滴</code>蓝色色素。</li>
+<li>将西芹和花茎底端各切去约 <code>1 cm</code>，立即插入对应杯中。</li>
+<li>记录开始时间、液面高度，拍摄 <code>0 h</code> 照片。</li>
+<li>放在明亮散射光处继续吸色。</li>
+</ol>
+<p style="color: #1565C0;">先拍照，稍后再比较颜色的变化。<br><span lang="en">Take a photo now. Later, compare how the color changes.</span></p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>样本</th>
+<th>开始时间</th>
+<th>起始颜色</th>
+<th>预测最先变色的位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>西芹</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>白花</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h3>6–10 分钟：实验 2A——启动蒸腾套袋</h3>
+<p><strong>重要知识点</strong>：水蒸气看不见，遇到袋壁后凝结成可见水滴。若有叶袋比空袋水滴更多，就支持叶片发生了<strong>蒸腾作用（transpiration）</strong>。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格</th>
+<th style="text-align:right">用量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>健康带叶盆栽</td>
+<td>土壤湿润、叶面干燥</td>
+<td style="text-align:right">1 盆</td>
+</tr>
+<tr>
+<td>透明保鲜袋</td>
+<td>内壁干燥、同规格</td>
+<td style="text-align:right">2 个</td>
+</tr>
+<tr>
+<td>橡皮筋或扎带、标签</td>
+<td>—</td>
+<td style="text-align:right">各 2 个</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>手机</td>
+<td style="text-align:right">1 台</td>
+<td>拍摄对照照片</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>一只袋套住一簇叶片并扎紧，标记 <code>leaf</code>。</li>
+<li>另一只空袋装入少量同房间空气并扎紧，标记 <code>empty</code>。</li>
+<li>两袋并排放置，拍摄 <code>0 min</code> 照片。</li>
+<li>放在明亮处，不在烈日下暴晒。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>有叶袋</th>
+<th>空袋</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 min</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>40–50 min</td>
+<td>稍后填写</td>
+<td>稍后填写</td>
+</tr>
+<tr>
+<td>1–4 h</td>
+<td>课后填写</td>
+<td>课后填写</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h3>10–30 分钟：实验 1B——观察西芹中的水路</h3>
+<p><strong>重要知识点</strong>：<strong>木质部（xylem）</strong>是由多种细胞组成的运输组织；<strong>木质部导管（xylem vessel）</strong>是其中一种输水结构。蓝色区域定位木质部，较大的空腔可能是导管腔。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格</th>
+<th style="text-align:right">用量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提前染色西芹</td>
+<td>已吸色 <code>6–12 h</code></td>
+<td style="text-align:right">1 根</td>
+</tr>
+<tr>
+<td>新鲜西芹小片</td>
+<td>未染色</td>
+<td style="text-align:right">1 片</td>
+</tr>
+<tr>
+<td>清水</td>
+<td>湿装片</td>
+<td style="text-align:right">1–2 滴</td>
+</tr>
+<tr>
+<td>厨房纸</td>
+<td>—</td>
+<td style="text-align:right">1 份</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>塑料刀、镊子</td>
+<td style="text-align:right">各 1</td>
+<td>粗切、分离纤维束</td>
+</tr>
+<tr>
+<td>锋利小刀、托盘</td>
+<td style="text-align:right">各 1</td>
+<td>纵切、制作薄切片</td>
+</tr>
+<tr>
+<td>载玻片、盖玻片、滴管</td>
+<td style="text-align:right">各 1</td>
+<td>制作湿装片</td>
+</tr>
+<tr>
+<td>显微镜、手机</td>
+<td style="text-align:right">各 1</td>
+<td>40×、100×观察和拍照</td>
+</tr>
+</tbody>
+</table>
+<h4>10–18 分钟：横切与纵切</h4>
+<ol>
+<li>比较新鲜西芹和提前染色西芹。</li>
+<li>横切 <code>3–5 mm</code> 厚的西芹片，寻找蓝点或蓝色束区。</li>
+<li>纵切约 <code>3 cm</code>，寻找向上的蓝色线条。</li>
+<li>用镊子分离一束蓝色纤维。</li>
+</ol>
+<h4>18–28 分钟：显微观察</h4>
+<ol>
+<li>切取薄横片，放入载玻片中央的一滴清水。</li>
+<li>盖上盖玻片。</li>
+<li>用 <code>40×</code> 找到重复分布的维管束。</li>
+<li>用 <code>100×</code> 观察蓝色区域和较大的导管轮廓。</li>
+<li>拍摄最佳视野，画出 2–4 个维管束的位置。</li>
+</ol>
+<h4>28–30 分钟：记录与板书（Record &amp; Board Notes）</h4>
+<table>
+<thead>
+<tr>
+<th>观察位置</th>
+<th>看见的颜色与形状</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>粗横切</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>纵切</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>40×</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>100×</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p style="color: #1565C0;">蓝色出现在木质部。这说明水沿木质部向上运输。<br><span lang="en">The blue color appears in the xylem. This shows that water moves up through the xylem.</span></p>
+<pre><code class="language-text">xylem 木质部：运输 water + minerals
+蓝色沿特定束区上升，显示水的运输路径。
+</code></pre>
+<h3>30–43 分钟：实验 3——观察叶片气孔</h3>
+<p style="color: #1565C0;">我们来找气孔，看看水蒸气从哪里离开叶片。<br><span lang="en">Let’s find the stomata and see where water vapor leaves the leaf.</span></p>
+<p><strong>重要知识点</strong>：<strong>气孔（stoma；复数 stomata）</strong>由一对保卫细胞围成。二氧化碳经气孔进入，水蒸气主要经气孔离开；这种失水过程叫蒸腾。</p>
+<p><strong>必要耗材与试剂（Consumables &amp; Reagents）</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>规格或浓度</th>
+<th style="text-align:right">每次用量</th>
+<th>来源或备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吊竹梅等薄而透光的叶片</td>
+<td>新鲜、无明显叶毛</td>
+<td style="text-align:right">1 片</td>
+<td>避开主叶脉取样</td>
+</tr>
+<tr>
+<td>清水</td>
+<td>湿装片</td>
+<td style="text-align:right">2 滴</td>
+<td>上、下表面各 1 滴</td>
+</tr>
+<tr>
+<td>标签</td>
+<td><code>U</code>、<code>L</code></td>
+<td style="text-align:right">2 张</td>
+<td>区分上、下表面</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实验工具（Equipment &amp; Tools）</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align:right">数量</th>
+<th>规格</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>载玻片、盖玻片</td>
+<td style="text-align:right">各 2 张</td>
+<td>清洁、完整</td>
+<td>制作上、下表面湿装片</td>
+</tr>
+<tr>
+<td>镊子、剪刀、滴管</td>
+<td style="text-align:right">各 1</td>
+<td>小型</td>
+<td>剪取、移动叶片和加水</td>
+</tr>
+<tr>
+<td>显微镜、手机</td>
+<td style="text-align:right">各 1</td>
+<td><code>40×</code>、<code>100×</code></td>
+<td>观察和拍照</td>
+</tr>
+</tbody>
+</table>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjUyMCIgdmlld0JveD0iMCAwIDEyMDAgNTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+6JaE5Y+255u05o6l5rm/6KOF6KeC5a+f5rCU5a2UPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5LuO5ZCK56u55qKF562J6JaE5Y+25LiK6YG/5byA5Li75Y+26ISJ5Ymq5Y+W5Lik5Z2X5bCP54mH77yM5YiG5Yir6K6p5LiK6KGo6Z2i5ZKM5LiL6KGo6Z2i5pyd5LiK77yM5Yqg5rC05bm255uW55uW546754mH77yM5Zyo5Zub5Y2B5YCN5ZKM5LiA55m+5YCN5pi+5b6u6ZWc5LiL6KeC5a+f5rCU5a2U44CCPC9kZXNjPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmYmZmZjYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjJmN2ZmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsZWFmIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzhkYzU2ZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0ZDk0NTYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bWFya2VyIGlkPSJhcnJvdyIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPgogICAgICA8cGF0aCBkPSJNMCAwTDEwIDVMMCAxMFoiIGZpbGw9IiMzYjUzNmEiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KCiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNTIwIiByeD0iMjgiIGZpbGw9InVybCgjYmcpIi8+CiAgPHRleHQgeD0iNTQiIHk9IjU4IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTczZDMxIj7lrp7pqowgM++8muiWhOWPtuebtOaOpea5v+ijheinguWvn+awlOWtlDwvdGV4dD4KICA8dGV4dCB4PSI1NCIgeT0iOTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM0ODYyNzMiPnRoaW4gbGVhZiDCtyBvYnNlcnZlZCBzdXJmYWNlIGZhY2VzIHVwIMK3IHdldCBtb3VudDwvdGV4dD4KCiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTQgMTI1KSI+CiAgICA8cmVjdCB3aWR0aD0iMjUwIiBoZWlnaHQ9IjMxMCIgcng9IjIwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNjZmRkZDIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMjAiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIxIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTczZDMxIj4xIMK3IOWJquS4pOWdl+iWhOWPtjwvdGV4dD4KICAgIDxwYXRoIGQ9Ik0zMCAxODBDNzggNzggMTkzIDc4IDIyNSAxNjRDMTc0IDIyNCA4NyAyMzYgMzAgMTgwWiIgZmlsbD0idXJsKCNsZWFmKSIgc3Ryb2tlPSIjMzg3ZDQ5IiBzdHJva2Utd2lkdGg9IjQiLz4KICAgIDxwYXRoIGQ9Ik00NyAxNzhDMTA0IDE2NiAxNjMgMTM5IDIxNiAxMTEiIHN0cm9rZT0iI2RjZWZjOCIgc3Ryb2tlLXdpZHRoPSI1IiBmaWxsPSJub25lIi8+CiAgICA8cmVjdCB4PSI5MyIgeT0iMTExIiB3aWR0aD0iNjgiIGhlaWdodD0iNDYiIHJ4PSI2IiBmaWxsPSIjZTlmNmZmIiBmaWxsLW9wYWNpdHk9Ii42NSIgc3Ryb2tlPSIjNjdhNmM5IiBzdHJva2UtZGFzaGFycmF5PSI2IDQiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPHRleHQgeD0iNDQiIHk9IjI1NiIgZm9udC1mYW1pbHk9IkFyaWFsLCAnTWljcm9zb2Z0IFlhSGVpJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzQ4NjI3MyI+5ZCE57qmIDMgbW0gw5cgNSBtbTwvdGV4dD4KICAgIDx0ZXh0IHg9IjQ0IiB5PSIyODEiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNhMzRiNDAiPumBv+W8gOS4u+WPtuiEiTwvdGV4dD4KICA8L2c+CgogIDxwYXRoIGQ9Ik0zMjAgMjgwSDM2NSIgc3Ryb2tlPSIjM2I1MzZhIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3NSAxMjUpIj4KICAgIDxyZWN0IHdpZHRoPSIyNTAiIGhlaWdodD0iMzEwIiByeD0iMjAiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2NmZGRkMiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSIyMCIgeT0iMzgiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxNzNkMzEiPjIgwrcg6KeC5a+f6Z2i5pyd5LiKPC90ZXh0PgogICAgPHJlY3QgeD0iMzgiIHk9IjkxIiB3aWR0aD0iMTc0IiBoZWlnaHQ9IjYzIiByeD0iOCIgZmlsbD0iIzc3Yjk2MSIgc3Ryb2tlPSIjMzg3ZDQ5IiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjU3IiBjeT0iMTIyIiByPSIxNiIgZmlsbD0iI2UzYTg0ZSIvPgogICAgPHRleHQgeD0iNTciIHk9IjEyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmIj5VPC90ZXh0PgogICAgPHRleHQgeD0iODkiIHk9IjEyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCAnTWljcm9zb2Z0IFlhSGVpJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzE3M2QzMSI+5LiK6KGo6Z2i5pyd5LiKPC90ZXh0PgogICAgPHJlY3QgeD0iMzgiIHk9IjE4MyIgd2lkdGg9IjE3NCIgaGVpZ2h0PSI2MyIgcng9IjgiIGZpbGw9IiM4ZDZkYjAiIHN0cm9rZT0iIzY3NDg4YyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSI1NyIgY3k9IjIxNCIgcj0iMTYiIGZpbGw9IiMzYzlhNzgiLz4KICAgIDx0ZXh0IHg9IjU3IiB5PSIyMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiI+TDwvdGV4dD4KICAgIDx0ZXh0IHg9Ijg5IiB5PSIyMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiNmZmYiPuS4i+ihqOmdouacneS4ijwvdGV4dD4KICAgIDxwYXRoIGQ9Ik0xMjUgNzZWNTciIHN0cm9rZT0iIzNiNTM2YSIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogICAgPHRleHQgeD0iMTI1IiB5PSIyODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM0ODYyNzMiPueJqemVnOS7juS4iuaWueinguWvnzwvdGV4dD4KICA8L2c+CgogIDxwYXRoIGQ9Ik02NDEgMjgwSDY4NiIgc3Ryb2tlPSIjM2I1MzZhIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY5NiAxMjUpIj4KICAgIDxyZWN0IHdpZHRoPSIyMjAiIGhlaWdodD0iMzEwIiByeD0iMjAiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2NmZGRkMiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSIyMCIgeT0iMzgiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxNzNkMzEiPjMgwrcg5YGa5rm/6KOF54mHPC90ZXh0PgogICAgPHJlY3QgeD0iMjgiIHk9IjE5MyIgd2lkdGg9IjE2NCIgaGVpZ2h0PSI1NSIgcng9IjciIGZpbGw9IiNlNmYwZjYiIHN0cm9rZT0iIzY1ODY5YSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8cmVjdCB4PSI2OCIgeT0iMjA3IiB3aWR0aD0iODQiIGhlaWdodD0iMjUiIHJ4PSI0IiBmaWxsPSIjNzhiOTYyIi8+CiAgICA8cGF0aCBkPSJNMTEwIDgwQzkwIDEwOSA4NCAxMjMgODQgMTM3Qzg0IDE1MyA5NiAxNjQgMTEwIDE2NEMxMjQgMTY0IDEzNiAxNTMgMTM2IDEzN0MxMzYgMTIzIDEzMCAxMDkgMTEwIDgwWiIgZmlsbD0iIzliZDRlZiIgc3Ryb2tlPSIjNGE5NGI3IiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxyZWN0IHg9IjU3IiB5PSIxNzQiIHdpZHRoPSIxMDYiIGhlaWdodD0iOSIgcng9IjMiIGZpbGw9IiNkOGVmZjgiIGZpbGwtb3BhY2l0eT0iLjgiIHN0cm9rZT0iIzVkOGRhMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cGF0aCBkPSJNMTEwIDE2OFYxNTEiIHN0cm9rZT0iIzNiNTM2YSIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogICAgPHRleHQgeD0iMzkiIHk9IjI3OSIgZm9udC1mYW1pbHk9IkFyaWFsLCAnTWljcm9zb2Z0IFlhSGVpJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzQ4NjI3MyI+MSDmu7TmsLQgKyDnm5bnjrvniYc8L3RleHQ+CiAgPC9nPgoKICA8cGF0aCBkPSJNOTMyIDI4MEg5NzAiIHN0cm9rZT0iIzNiNTM2YSIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5ODAgMTI1KSI+CiAgICA8cmVjdCB3aWR0aD0iMTc1IiBoZWlnaHQ9IjMxMCIgcng9IjIwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNjZmRkZDIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMTgiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIxIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTczZDMxIj40IMK3IOaJvuawlOWtlDwvdGV4dD4KICAgIDxjaXJjbGUgY3g9Ijg4IiBjeT0iMTQxIiByPSI2NyIgZmlsbD0iI2VhZjRkYyIgc3Ryb2tlPSIjNzg5ZjY1IiBzdHJva2Utd2lkdGg9IjQiLz4KICAgIDxnIGZpbGw9IiNiNWQ5OWIiIHN0cm9rZT0iIzQ4N2E1MyIgc3Ryb2tlLXdpZHRoPSIzIj4KICAgICAgPHBhdGggZD0iTTUyIDEyMEMzMiAxMDAgMzUgNzUgNTggNzdDNzYgODAgODAgMTA2IDYzIDEyMkM1OCAxMjcgNTYgMTI3IDUyIDEyMFoiLz4KICAgICAgPHBhdGggZD0iTTY2IDEzMkM4NiAxMTIgODMgODcgNjAgODlDNDIgOTIgMzggMTE4IDU1IDEzNEM2MCAxMzkgNjIgMTM5IDY2IDEzMloiLz4KICAgICAgPHBhdGggZD0iTTEwNCAxNTFDODQgMTMxIDg3IDEwNiAxMTAgMTA4QzEyOCAxMTEgMTMyIDEzNyAxMTUgMTUzQzExMCAxNTggMTA4IDE1OCAxMDQgMTUxWiIvPgogICAgICA8cGF0aCBkPSJNMTE4IDE2M0MxMzggMTQzIDEzNSAxMTggMTEyIDEyMEM5NCAxMjMgOTAgMTQ5IDEwNyAxNjVDMTEyIDE3MCAxMTQgMTcwIDExOCAxNjNaIi8+CiAgICA8L2c+CiAgICA8ZWxsaXBzZSBjeD0iNTkiIGN5PSIxMDUiIHJ4PSI1IiByeT0iMTQiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzQ4N2E1MyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTExIiBjeT0iMTM2IiByeD0iNSIgcnk9IjE0IiBmaWxsPSIjZmZmIiBzdHJva2U9IiM0ODdhNTMiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMzAiIHk9IjIzNiIgZm9udC1mYW1pbHk9IkFyaWFsLCAnTWljcm9zb2Z0IFlhSGVpJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzQ4NjI3MyI+NDDDlyDlrprkvY08L3RleHQ+CiAgICA8dGV4dCB4PSIzMCIgeT0iMjYyIiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjNDg2MjczIj4xMDDDlyDop4Llr588L3RleHQ+CiAgICA8dGV4dCB4PSIzMCIgeT0iMjg4IiBmb250LWZhbWlseT0iQXJpYWwsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjYTM0YjQwIj7pq5jlgI3lj6rosIPnu4blh4bnhKY8L3RleHQ+CiAgPC9nPgoKICA8cmVjdCB4PSI1NCIgeT0iNDYzIiB3aWR0aD0iMTEwMSIgaGVpZ2h0PSIzOCIgcng9IjExIiBmaWxsPSIjMTczZDMxIi8+CiAgPHRleHQgeD0iNjA0IiB5PSI0ODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgJ01pY3Jvc29mdCBZYUhlaScsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiPuimgeinguWvn+WTquS4gOmdou+8jOWwseiuqeWTquS4gOmdouacneS4iu+8m+ebtOaOpea5v+ijhSAyIG1pbiDku43kuI3muIXmpZrvvIzlho3mjaLlpIfnlKjljbDov7njgII8L3RleHQ+Cjwvc3ZnPgo=" alt="薄叶上、下表面直接湿装与气孔观察" /></p>
+<ol>
+<li>将两张玻片标为 <code>U</code> 和 <code>L</code>。</li>
+<li>避开主叶脉，剪两块约 <code>3 mm × 5 mm</code> 的薄叶小片。</li>
+<li><code>U</code> 片上表面朝上，<code>L</code> 片下表面朝上；各加 1 滴水并盖上盖玻片。</li>
+<li>用 <code>40×</code> 找到朝上表面的表皮纹理，再用 <code>100×</code> 寻找气孔。</li>
+<li>两个表面各观察两个视野，计数并拍照。</li>
+</ol>
+<p><strong>备选方案：透明指甲油印迹</strong></p>
+<p>直接湿装 <code>2 min</code> 仍看不清表皮时，改用课前完全晾干的印迹。在叶片上、下表面各涂约 <code>1 cm × 1 cm</code> 透明指甲油；干后用透明胶带揭起薄膜，直接贴在 <code>U</code>、<code>L</code> 载玻片上。不加水，不加盖玻片；课堂不等待指甲油干燥。</p>
+<p><strong>预期现象</strong>：下表面的气孔通常较多。</p>
+<p style="color: #1565C0;">气孔是叶片上的小开口。水蒸气主要从这里离开。<br><span lang="en">Stomata are small openings in a leaf. Most water vapor leaves through them.</span></p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>叶面</th>
+<th style="text-align:right">视野 1</th>
+<th style="text-align:right">视野 2</th>
+<th style="text-align:right">平均数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U · upper</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>L · lower</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">stomata 气孔：CO₂ enters；water vapor exits
+transpiration 蒸腾：水从叶片散失为水蒸气
+</code></pre>
+</div>
+</details>
+<h3>43–50 分钟：连接学校 Notes</h3>
+<p style="color: #1565C0;">木质部向上运输水。水蒸气从气孔离开叶片，这叫蒸腾作用。它能帮助更多水向上移动。<br><span lang="en">Xylem transports water up. Water vapor leaves the leaf through the stomata. This is transpiration. It helps pull more water up.</span></p>
+<ol>
+<li><strong>Vascular plants transport materials using special structures.</strong></li>
+<li><strong>Non-vascular plants do not contain xylem and phloem.</strong></li>
+<li><strong>Xylem transports water and minerals from the roots to the stalks and leaves.</strong></li>
+<li><strong>Phloem transports sugars made in photosynthesis to the rest of the plant.</strong></li>
+<li><strong>Evaporating water from the leaves (transpiration) makes a difference in pressure</strong>, helping pull water up the xylem.</li>
+</ol>
+<p><strong>关键易错点</strong>：有色水显示木质部的水路；韧皮部运输糖来自学校 Notes，本实验不直接追踪糖。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>结构或过程</th>
+<th>运输什么</th>
+<th>方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xylem</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>phloem</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>stomata / transpiration</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h3>50–56 分钟：实验 2B——第一次读取蒸腾结果</h3>
+<ol>
+<li>比较有叶袋和空袋。</li>
+<li>记录雾气、水滴数量和位置。</li>
+<li>拍摄两袋同框照片。</li>
+<li>保留装置，课后继续观察。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书（Record &amp; Board Notes） / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">有叶袋：________________
+空袋：________________
+证据：有叶袋出现更多水滴，支持叶片释放水蒸气。
+</code></pre>
+</div>
+</details>
+<h3>56–60 分钟：总结与课后观察</h3>
+<p style="color: #1565C0;">木质部向上运输水。韧皮部把糖从叶片运到植物的其他部分。<br><span lang="en">Xylem transports water up. Phloem transports sugar from the leaves to the rest of the plant.</span></p>
+<p>完成三句：</p>
+<ol>
+<li>木质部运输________________。</li>
+<li>韧皮部运输________________。</li>
+<li>蒸腾作用是________________。</li>
+</ol>
+<h4>课后观察与回传</h4>
+<table>
+<thead>
+<tr>
+<th>样本</th>
+<th>观察时间</th>
+<th>拍什么</th>
+<th>记录什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>课堂染色西芹</td>
+<td>2–4 h、次日</td>
+<td>叶脉、茎外观、次日横切面</td>
+<td>蓝色最先出现的位置和路径</td>
+</tr>
+<tr>
+<td>白色康乃馨</td>
+<td>2–4 h、睡前、次日</td>
+<td>同角度拍花瓣</td>
+<td>第一处颜色、颜色范围</td>
+</tr>
+<tr>
+<td>有叶袋与空袋</td>
+<td>1–4 h</td>
+<td>两袋同框</td>
+<td>哪一袋水滴更多</td>
+</tr>
+<tr>
+<td>套袋实验结束</td>
+<td>最迟 4 h</td>
+<td>最终照片</td>
+<td>拆袋时间</td>
+</tr>
+</tbody>
+</table>
+<h2>四、关键提醒</h2>
+<ul>
+<li>仅启用备选方案时使用透明指甲油；在通风处操作，远离火源，完全干燥后再揭取。</li>
+<li>锋利小刀在托盘内使用；戴护目镜，手指离开刀路。</li>
+<li>食用色素和实验后的植物不入口。</li>
+<li>载玻片或盖玻片破损时立即更换。</li>
+<li>套袋植物不在烈日下暴晒，最迟 4 小时拆袋。</li>
+</ul>
+<h2>五、核心词汇（Key Vocabulary）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>维管植物</td>
+<td>vascular plant</td>
+<td>含木质部和韧皮部</td>
+</tr>
+<tr>
+<td>非维管植物</td>
+<td>non-vascular plant</td>
+<td>不含木质部和韧皮部</td>
+</tr>
+<tr>
+<td>维管组织</td>
+<td>vascular tissue</td>
+<td>植物体内的运输组织</td>
+</tr>
+<tr>
+<td>木质部</td>
+<td>xylem</td>
+<td>运输水和矿物质</td>
+</tr>
+<tr>
+<td>韧皮部</td>
+<td>phloem</td>
+<td>运输糖</td>
+</tr>
+<tr>
+<td>气孔</td>
+<td>stoma / stomata</td>
+<td>叶表进行气体交换的小孔</td>
+</tr>
+<tr>
+<td>蒸腾作用</td>
+<td>transpiration</td>
+<td>水从叶片散失为水蒸气</td>
+</tr>
+</tbody>
+</table>
+<h2>六、备课来源</h2>
+<ul>
+<li><a href="../School/02%20Class%20Materials/Unit%204%20Life%20Science/01%20Notes/05%20Plant%20and%20Animal%20Characteristics%20Notes.pdf">学校 05 Plant and Animal Characteristics Notes</a></li>
+<li><a href="../School/02%20Class%20Materials/Unit%204%20Life%20Science/01%20Notes/06%20Vascular%20and%20Non%20Vascular%20Plants.pdf">学校 06 Vascular and Non Vascular Plants</a></li>
+<li><a href="../School/02%20Class%20Materials/Unit%204%20Life%20Science/01%20Notes/07%20Gymnosperms%20and%20Angiosperms.pdf">学校 07 Gymnosperms and Angiosperms</a></li>
+<li><a href="https://extension.uga.edu/content/dam/extension/programs-and-services/science-behind-our-food/documents/movingfluidplantscelery.pdf">University of Georgia: Moving Fluid in Plants</a></li>
+<li><a href="https://www.jpl.nasa.gov/edu/resources/lesson-plan/transpiration-demo/">NASA/JPL: Transpiration Demo</a></li>
+</ul>
+</main>
+</body>
+</html>

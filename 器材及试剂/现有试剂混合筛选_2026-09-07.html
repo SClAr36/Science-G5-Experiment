@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>现有试剂混合筛选：保存状态、明显现象与无明显现象</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">现有试剂混合筛选：保存状态、明显现象与无明显现象</h1>
+</header>
+<main>
+<p><strong>调研日期：2026-09-07。用途：从家中旧试剂中选择值得继续开发的实验。</strong></p>
+<p>库存依据：<a href="%E8%AF%95%E5%89%82%E8%AF%86%E5%88%AB%E4%B8%8E%E4%BF%9D%E5%AD%98%E7%8A%B6%E6%80%81%E8%AF%84%E4%BC%B0.md">试剂识别与保存状态评估</a>，其中最新实物反馈为 2026-07-14。用户本次确认：48 硫酸铜、42 氯化钙、41 氯化钠、4 尿素、34 二氧化硅均未补充，继续按无库存处理。</p>
+<p>本次已核对历史清单、保存条件和公开化学资料；<strong>没有检查现在的实物或完成反应预试</strong>。下面的“较高把握”是指名称正确、无污染、按适宜条件配液时，该反应对半年至一年储存造成的常见变化比较耐受，不是实际测得的成功率。旧照片不能证明今天的瓶内状态，也不能把分装瓶等同于供应商的合格原包装。</p>
+<h2>1. 最值得先拿出来核验的组合</h2>
+<p><strong>优先找：25 明矾、60 小苏打、49 无水硫酸铜、80 铁钉、84 硫酸铁、24 淀粉、19 碘伏、46 硫代硫酸钠。</strong></p>
+<p>前三项最适合先做小样核验；第四项取决于硫酸铁能否配成可用的澄清液；第五、六项共用旧碘伏，须先验证显色能力。表中的时间只是安排观察窗口的估计，不是旧试剂的实测结果。</p>
+<table>
+<thead>
+<tr>
+<th>顺位</th>
+<th>确切组合与编号</th>
+<th>能看到什么</th>
+<th>旧试剂适用性与通过条件</th>
+<th>动手安排</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td><strong>25 明矾溶液＋60 碳酸氢钠溶液</strong></td>
+<td>两种清液变成白色絮状、胶状沉淀，可能伴随小气泡；通常在数秒至数分钟内可见</td>
+<td>**较高把握。**两种固体都比较耐放，普通结块或结晶水变化通常不妨碍定性反应。分别溶解后应能取得清液；小样须新出现白色絮状物，而非把未溶粉末倒进去</td>
+<td>核验合格后，可由孩子在监护下滴加预配稀液</td>
+</tr>
+<tr>
+<td>A2</td>
+<td><strong>49 硫酸铜溶液＋60 碳酸氢钠溶液</strong></td>
+<td>清澈蓝液中出现蓝色至蓝绿色沉淀，可有小气泡；通常较快</td>
+<td>**较高把握。**49 即使已经吸水变蓝，通常仍能提供铜离子；须标签明确、无异常污染，并能配出清澈蓝液。不能改用已耗尽的 48</td>
+<td>教师配液，控制为滴量；合适浓度及废液收集就绪后可让孩子滴加</td>
+</tr>
+<tr>
+<td>A3</td>
+<td><strong>49 硫酸铜溶液＋80 铁钉</strong></td>
+<td>铁表面出现红棕色铜层或铜粉，蓝液逐渐变浅；观察约 1–10 分钟</td>
+<td>**较高把握。**铜盐受潮不破坏此用途；铁钉的锈层、镀层或油污会使效果变差。应确认是普通铁钉，清洁局部表面后先试；不保证析出平整、光亮的铜镀层</td>
+<td>教师配液及处理铁钉尖端；孩子可用工具放入、取出观察</td>
+</tr>
+<tr>
+<td>A4</td>
+<td><strong>84 硫酸铁溶液＋60 碳酸氢钠溶液</strong></td>
+<td>黄至黄褐色清液形成橙棕／红褐色絮状沉淀，可有气泡</td>
+<td>**中至较高把握。**它本来就是三价铁盐，不存在“二价铁被氧化了就失去这个用途”的问题。但若已经严重水解，无法配出足够清澈的工作液，就不选作现场从清到浑的主实验</td>
+<td>教师配制并先做滴量示范；是否交给孩子滴加由最终稀液与防护确定</td>
+</tr>
+<tr>
+<td>A5</td>
+<td><strong>24 淀粉＋19 碘伏稀液</strong></td>
+<td>淀粉出现深蓝、蓝紫至蓝黑色，通常很快</td>
+<td>**条件候选。**干淀粉只要无霉变通常仍可用，旧淀粉液则不沿用；用固体新配。旧碘伏仍呈棕色不能证明足量有效，必须实测与淀粉明显显色，水对照不能出现同样蓝黑色</td>
+<td>成分、浓度可核对且小样通过后，孩子滴加预配稀液</td>
+</tr>
+<tr>
+<td>A6</td>
+<td><strong>19 碘伏稀液＋46 硫代硫酸钠溶液</strong>；也可先完成 A5，再加入 46</td>
+<td>棕色褪去；加入已显色的碘—淀粉体系，可见蓝黑色迅速褪去</td>
+<td>**条件候选。**干燥的硫代硫酸钠通常还有此用途，风化影响称量关系多于定性褪色。须新配清液；与等量水对照比较，确认褪色远超单纯稀释。A5 不通过时，不把整条显色—褪色链算可靠</td>
+<td>核验后可由孩子滴加预配稀液；此组与酸类工作液分开</td>
+</tr>
+</tbody>
+</table>
+<p><strong>这些反应分别意味着什么：</strong></p>
+<ul>
+<li>**A1、A4：生成难溶氢氧化物。**简化净变化分别为 <code>Al³⁺＋3HCO₃⁻ → Al(OH)₃↓＋3CO₂</code>、<code>Fe³⁺＋3HCO₃⁻ → Fe(OH)₃↓＋3CO₂</code>。A4 的棕色固体用氢氧化铁／水合氧化铁作课堂近似，不写成“碳酸铁”。铝盐、铁盐与碳酸氢钠的反应可见 <a href="https://www.watertechnologies.com/handbook/chapter-05-clarification">Veolia 原技术手册</a>；将铝离子规律用于钾明矾，是基于其组成的推断。</li>
+<li>**A2：形成含铜碱式碳酸盐沉淀。**实际颜色、含水量和组成随条件变化，不把它一概当作纯 <code>CuCO₃</code>。小苏打配铜盐的教学组合见 <a href="https://johnelfick.github.io/school-science-lessons-web/topics/topicIndexSodium/">John Elfcik 原教学资料，12.1.19</a>；沉淀的组成边界见 <a href="https://edu.rsc.org/download?ac=17360">RSC 金属离子与碳酸盐说明</a>。后者使用的是碳酸钠，不能拿它的配方直接代替本项小苏打配方。</li>
+<li>**A3：形成新的金属铜。**简化净变化是 <code>Fe＋Cu²⁺ → Fe²⁺＋Cu</code>。主要看铁表面，而不是要求短时间内整杯蓝液完全消失。依据：<a href="https://edu.rsc.org/experiments/displacement-reactions-between-metals-and-their-salts/720.article">RSC 金属置换实验</a>。</li>
+<li>**A5：碘与淀粉形成深色显色体系。A6：硫代硫酸根把碘还原成碘离子。**褪色不代表淀粉消失；显色和褪色是两个过程，三者先后加入不是第三个独立反应。原理依据：<a href="https://edu.rsc.org/experiments/iodine-clock-reaction-demonstration-method/744.article">RSC 碘与淀粉、硫代硫酸盐的反应说明</a>。该来源的完整碘钟配方不属于本次推荐；这里不加入酸或旧双氧水。</li>
+</ul>
+<p>**优先深入的两条观察线：**A1、A2、A4 可以比较“同一种小苏打，遇到不同金属盐，为什么长出不同颜色的固体”；A2、A3 可以比较“同一份蓝色铜盐，遇小苏打形成沉淀，遇铁却析出金属”。若旧碘伏通过，再开发 A5→A6 的显色与消色。这只是筛选方向，不表示这些候选已经实际授课。</p>
+<h2>2. 有意思，但放在第二轮核验</h2>
+<table>
+<thead>
+<tr>
+<th>组合</th>
+<th>可能出现的现象</th>
+<th>为什么没有排在第一轮</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>14 石蕊＋23 硼砂溶液／21 柠檬酸溶液</strong></td>
+<td>偏碱时蓝色，偏酸时红色；可比较和改变颜色</td>
+<td>两种固体通常耐放，瓶中旧石蕊的配方与显色能力需核对。已有紫甘蓝显色授课记录，这属于同类规律的延伸。硼砂原粉由教师处理，不用于徒手玩胶</td>
+</tr>
+<tr>
+<td><strong>16 酚酞＋23 硼砂溶液，之后用21柠檬酸改变酸碱性</strong></td>
+<td>无色→粉红→无色</td>
+<td>指示剂溶剂与浓度可能变，须先核对标签并预检。硼砂—酚酞显粉红有 <a href="https://testing.mri.psu.edu/content/antibodies-procedure">宾州州立大学的实际演示依据</a>；这里只借用化学事实，不采用其免疫学类比</td>
+</tr>
+<tr>
+<td><strong>49 硫酸铜溶液＋7 锌粒</strong></td>
+<td>红棕色铜析出、蓝色变浅；可能比铁反应快</td>
+<td>锌表面状态影响启动，反应更可能升温。已有 A3，新增解释价值有限，教师控制的小样备选；不用锌粉替代。依据同上 RSC 置换实验</td>
+</tr>
+<tr>
+<td><strong>50 硫酸镁溶液＋65 新配澄清石灰水</strong></td>
+<td>白色浑浊／沉淀</td>
+<td>硫酸镁通常还可用，65 可能已经碳酸化。碱足够时会形成氢氧化镁；视浓度还可能涉及硫酸钙，不能宣称得到纯氢氧化镁。这是基于溶解度与酸碱规律的候选推断，须用实际工作液验证，教师配石灰水</td>
+</tr>
+<tr>
+<td><strong>56 硫酸锌溶液＋60 碳酸氢钠溶液</strong></td>
+<td>白色含锌碳酸盐／碱式盐沉淀</td>
+<td>固体通常耐放，但最终显现受浓度等影响，且须收集含锌废液。白色沉淀主题已有 A1，不优先增加金属盐种类；教师微量备选。组合依据同上 John Elfcik 教学资料</td>
+</tr>
+<tr>
+<td><strong>10 活性炭＋少量14石蕊水等已核对成分的稀有色液</strong></td>
+<td>接触后过滤，滤液颜色可能明显变浅</td>
+<td>活性炭本体耐放，但吸附能力会受先前吸附、受潮和污染影响。染料太浓或炭粉漏过滤纸会掩盖效果。属于吸附与分离，不是“所有颜色都能被消灭”；不同染料必须分别预试。依据：<a href="https://edu.rsc.org/experiments/carbon-filtration-and-activated-charcoal/412.article">RSC 活性炭过滤实验</a>；将一般染料吸附用于这瓶石蕊是待验证的推断</td>
+</tr>
+</tbody>
+</table>
+<p>酚酞的显色区间约为 pH 8.2–10，而常见小苏打水接近这个区间的下缘；**小苏打水没让酚酞明显变红，不能单独证明酚酞坏了。**用标签明确的已知酸、适宜碱液做对照，不能让两瓶状态未知的旧试剂互相“证明合格”。依据：<a href="https://intro.chem.okstate.edu/ChemSource/Acidandbase/acidPage4.html">Oklahoma State University 指示剂表</a>。</p>
+<h2>3. 效果吸引人，但不计入“旧库存大概率现成可做”</h2>
+<table>
+<thead>
+<tr>
+<th>组合／想法</th>
+<th>真实吸引力</th>
+<th>此次判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>9 硅酸钠＋49 硫酸铜／84 硫酸铁等适当金属盐晶粒</strong></td>
+<td>形成管状、枝状结构，即化学花园</td>
+<td>**条件不足。**旧水玻璃可能已胶化，浓度和硅碱比未知；粉末铜盐即使仍有效，也不等同于合适晶粒。可能只得到一团沉淀，无法承诺“长花园”。教师掌握溶液状态和晶粒条件后再选，主要生长可跨数小时至隔夜。依据：<a href="https://edu.rsc.org/experiments/making-a-crystal-garden/416.article">RSC 化学花园</a></td>
+</tr>
+<tr>
+<td><strong>9 硅酸钠溶液＋21 柠檬酸溶液</strong></td>
+<td>出现乳光、浑浊，适当条件下成凝胶</td>
+<td>**条件不足。**溶胶形成、整杯成胶和凝胶强度不是一回事。旧液已半凝固不能作为漂亮成形的可靠起点，成胶时间强烈依赖配比与 pH。研究确实使用这两种材料，但不能由此承诺几秒成胶：<a href="https://journal.ugm.ac.id/ijc/article/view/21834">原始研究</a></td>
+</tr>
+<tr>
+<td><strong>35 二氧化锰＋无编号旧双氧水</strong></td>
+<td>冒泡、氧气产生</td>
+<td>**旧双氧水退出。**35 通常稳定，问题在未知浓度和储存史的双氧水。不要靠催化冒泡测试来确认未知原液的安全浓度；以后若选此题，另用标签完整的新鲜低浓度产品</td>
+</tr>
+<tr>
+<td><strong>44／86 旧“无水”乙酸钠＋水，准备热冰</strong></td>
+<td>触发后快速结晶并放热</td>
+<td>**不能凭原瓶直接保证。**吸水改变水合状态、溶解关系和配比；物质未必坏了，但不等于已有合格过饱和体系。结晶也是物理变化。依据：<a href="https://edu.rsc.org/exhibition-chemistry/hot-ice/2000049.article">RSC Hot ice</a></td>
+</tr>
+<tr>
+<td><strong>51 硫酸亚铁或33硫酸亚铁铵＋适宜碱液</strong></td>
+<td>浅色／绿灰色沉淀随后氧化变棕</td>
+<td>**不作为稳定颜色顺序的主实验。**二价铁比例未知，可能一开始就是棕色混合物；33 还含铵根，不放入自由配对盘</td>
+</tr>
+<tr>
+<td><strong>63 碱式碳酸铜＋21 柠檬酸</strong>；或给 A2 沉淀加柠檬酸</td>
+<td>有色固体变化、可能溶解并冒泡</td>
+<td>**深化候选。**两种固体本体通常耐放，但柠檬酸络合及可能形成其他含铜固相会影响最终外观，不承诺固定蓝色或完全澄清。与已做过的酸—碳酸盐产气有部分机制重复，只有要研究沉淀去向时再预试</td>
+</tr>
+</tbody>
+</table>
+<p>现有清单没有可靠确认硫氰酸盐、合适铁氰络合物、银盐等，不能据此补出“血红”“普鲁士蓝”“银镜”等组合。69 号尤其不能靠猜字套入显色实验。也不能把85磷酸二氢钾当成磷酸三钠，把60小苏打当成纯碱。</p>
+<h2>4. 哪些组合基本没有明显新现象</h2>
+<p>下表以<strong>分别预先溶解、室温、较稀、短时间观察</strong>为前提。每一项都是具体组合，不代表同类所有试剂可以任意互混。溶解本身造成的冷热、加水导致的颜色变浅，也应与混合后是否发生反应分开。</p>
+<table>
+<thead>
+<tr>
+<th>具体组合</th>
+<th>预期观察</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>40 氯化钾＋47／52 硫酸钠</strong></td>
+<td>保持无色澄清</td>
+<td>在此条件下通常没有明显净离子反应，可作为溶液混合的对照</td>
+</tr>
+<tr>
+<td><strong>40 氯化钾＋50 硫酸镁</strong></td>
+<td>保持无色澄清</td>
+<td>主要是可溶离子共存</td>
+</tr>
+<tr>
+<td><strong>47／52 硫酸钠＋50 硫酸镁</strong></td>
+<td>通常保持澄清</td>
+<td>稀溶液下通常没有新沉淀；浓缩结晶另论</td>
+</tr>
+<tr>
+<td><strong>18 蔗糖水＋40 氯化钾水／50 硫酸镁水</strong></td>
+<td>通常保持无色澄清</td>
+<td>糖分子与盐的离子混合；不是糖变成了盐</td>
+</tr>
+<tr>
+<td><strong>49 硫酸铜溶液＋47 硫酸钠溶液</strong></td>
+<td>仍为蓝色，通常因稀释变浅</td>
+<td>一般不会出现新的明显沉淀；用同体积水对照判断稀释</td>
+</tr>
+<tr>
+<td><strong>81 铜丝＋56 硫酸锌溶液</strong></td>
+<td>通常不见锌层析出</td>
+<td>铜不能在普通条件下置换出锌；这条限制比“都是金属所以都会反应”更有价值</td>
+</tr>
+<tr>
+<td><strong>24 淀粉＋18 蔗糖水，冷态</strong></td>
+<td>可能本来就浑浊，无新的特征显色</td>
+<td>冷水中的淀粉颗粒不能自动算作反应生成的沉淀</td>
+</tr>
+<tr>
+<td><strong>59 碳酸钙／13 石英砂／92 高岭土＋水或40氯化钾稀液</strong></td>
+<td>原颗粒分散、悬浮或沉降</td>
+<td>是已有不溶固体的行为，不是两种清液生成新固体</td>
+</tr>
+</tbody>
+</table>
+<p>上述无明显净反应判断依据溶解度和金属活动性，是对指定条件的化学推断。不是逐瓶实测报告。</p>
+<p>还有一类必须单独区分：**有反应，但肉眼可能看不出来。**例如21柠檬酸与23硼砂，或21柠檬酸与44／86乙酸钠，溶液的酸碱平衡会改变；没有指示剂时仍可能澄清、无色。这些不能教成“完全没有反应”。</p>
+<p>同样，<strong>50 硫酸镁＋60 小苏打</strong>不适合作为保证“立刻白浊”或保证“绝无反应”的样品。镁盐的碳酸盐生成受浓度、温度、时间和酸碱状态影响。ACS 常见的快速演示用的是<strong>碳酸钠</strong>与硫酸镁，并非本库存的碳酸氢钠：<a href="https://www.acs.org/middleschoolchemistry/lessonplans/chapter6/lesson3.html">ACS Forming a Precipitate</a>。</p>
+<h2>5. 半年至一年保存后，各类材料怎样判定</h2>
+<p>“成分仍在”“还能产生目标现象”“适合孩子操作”是三个判断。受潮、结块、失去结晶水、表面锈蚀，不应一律叫“完全报废”。SDS 的稳定性描述只给出合理预期，不能证明家中分装样品合格。</p>
+<table>
+<thead>
+<tr>
+<th>对应编号与材料</th>
+<th>保存后更可能怎样</th>
+<th>本次用途判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>18蔗糖、21柠檬酸、25明矾、40氯化钾、47硫酸钠、50硫酸镁、56硫酸锌、60小苏打、83硫酸锰、85磷酸二氢钾</strong></td>
+<td>常见问题是受潮、结块或水合状态改变；不等于主要成分消失</td>
+<td>身份和外观正常时，普通溶解、指定定性反应通常值得预试；56、83由教师控制。85的酸式盐性质不能忽略</td>
+</tr>
+<tr>
+<td><strong>49无水硫酸铜、52无水硫酸钠</strong></td>
+<td>可能已经吸水，原来的“无水”身份不可靠</td>
+<td>49优先改作铜盐来源；52改作普通硫酸钠。不沿用检水、干燥能力或精确含水量用途</td>
+</tr>
+<tr>
+<td><strong>44无水乙酸钠、86无水醋酸钠</strong></td>
+<td>两个名称为同一种盐的同义名，可能水合、潮湿</td>
+<td>不把两个瓶号算作两种独立反应原料；普通溶解可，热冰另配另验</td>
+</tr>
+<tr>
+<td><strong>46硫代硫酸钠</strong></td>
+<td>固体可能风化；旧溶液的浓度和稳定性另论</td>
+<td>若为干净固体，可新配并核验碘褪色；不与32亚硫酸钠混淆</td>
+</tr>
+<tr>
+<td><strong>5还原铁粉、7锌粒、80铁钉、81铜丝、93铁屑、95黄铜片</strong></td>
+<td>表面氧化／锈蚀、油污影响反应速率；主体未必失效</td>
+<td>适合材料观察。置换优先80，条件适合可备选7；不用粉末来追求更快、更热的反应</td>
+</tr>
+<tr>
+<td><strong>84硫酸铁</strong></td>
+<td>吸湿、水解，溶液可能预先混浊</td>
+<td>可配出合适清液才采用A4；严重水解时不靠强酸修复来硬做</td>
+</tr>
+<tr>
+<td><strong>51硫酸亚铁、33硫酸亚铁铵</strong></td>
+<td>二价铁可能被氧化；33干燥晶体通常比普通亚铁盐更耐保存，但分装史未知</td>
+<td>不保证二价铁比例及绿→棕序列；33还属于含铵材料</td>
+</tr>
+<tr>
+<td><strong>32无水亚硫酸钠</strong></td>
+<td>对空气、湿气敏感，氧化会使还原能力下降</td>
+<td>不把它当可靠还原剂或显色—褪色链首选；不能凭仍是白粉判定有效</td>
+</tr>
+<tr>
+<td><strong>65氢氧化钙、38氧化钙</strong></td>
+<td>吸收水／二氧化碳，变为其他钙化合物的混合物</td>
+<td>65须检验新配澄清石灰水是否仍有足够碱性；38退出孩子操作及放热主实验</td>
+</tr>
+<tr>
+<td><strong>9硅酸钠</strong></td>
+<td>固体或溶液必须先分清；水玻璃可能表面结皮、胶化、浓度改变</td>
+<td>无法从瓶龄估计“花园”成功率；教师有条件核验后才使用</td>
+</tr>
+<tr>
+<td><strong>14石蕊、16酚酞、19碘伏、6洋红、15品红</strong></td>
+<td>配方、溶剂、浓度、光照及污染影响使用表现；仅名称不一定能确定完整成分</td>
+<td>优先核验14、19。16须核对溶剂；6、15不因颜色漂亮就放入孩子自由混合盘，也不假定为安全食用色素</td>
+</tr>
+<tr>
+<td><strong>24淀粉、87琼脂、8脱脂棉</strong></td>
+<td>干燥时可保存；受潮后可能霉变。旧水溶液／凝胶更易污染</td>
+<td>干粉、棉无霉变才考虑；旧淀粉液、旧琼脂凝胶不沿用。87可做加热溶解后冷却成胶，但不是两种试剂即混即成胶</td>
+</tr>
+<tr>
+<td><strong>2木炭、10活性炭、64石墨</strong></td>
+<td>碳材料本体通常稳定；活性炭吸附性能可能降低</td>
+<td>材料、吸附、导电观察；不与氧化剂随意配对，不扬尘</td>
+</tr>
+<tr>
+<td><strong>36三氧化二铁、37氧化铜、39氧化铝、68四氧化三铁、35二氧化锰</strong></td>
+<td>固体通常稳定</td>
+<td>多数冷态加水无强反应；35缺可靠双氧水，37等不安排混粉加热还原</td>
+</tr>
+<tr>
+<td><strong>12粗盐、13石英砂、59碳酸钙、63碱式碳酸铜、71磷矿粉、76氢氧化铝、89大理石、91滑石粉、92高岭土</strong></td>
+<td>多为较耐放固体；粗盐、矿粉不是高纯单一试剂</td>
+<td>颗粒、沉降和溶解性观察；63含铜、粉尘类材料受控。59／89加酸会产气，但与已做实验机制重复，不列新主选题</td>
+</tr>
+<tr>
+<td><strong>11聚乙烯、17袋装石蜡、26凡士林、75硬脂酸</strong></td>
+<td>主体通常稳定</td>
+<td>冷态多为不溶、疏水或漂浮；不把它们当能与普通盐水剧烈反应的材料，不烧来闻</td>
+</tr>
+<tr>
+<td><strong>17瓶装葡萄糖、20硼酸、23硼砂</strong></td>
+<td>主体通常耐放，可能受潮／水合状态变</td>
+<td>17须按标签确认，不能凭编号把石蜡当葡萄糖；20、23不是可入口材料，原粉由教师管理</td>
+</tr>
+<tr>
+<td><strong>28蒸馏水、90硬水</strong></td>
+<td>开封污染、蒸发、气体交换可能改变品质和组成</td>
+<td>28仅身份清楚且无污染时作普通实验水，不再视为高纯；90不作标准硬水，不保证与小苏打马上出现白浊</td>
+</tr>
+<tr>
+<td><strong>43氯化铵、62碳酸氢铵</strong></td>
+<td>43常见受潮；62可能缓慢分解、损失</td>
+<td>不加入酸碱自由配对盘；62不作保证产气量、吸热幅度的样品；不靠闻瓶口判断</td>
+</tr>
+<tr>
+<td><strong>70溴化钾</strong></td>
+<td>主体通常稳定</td>
+<td>冷态与普通中性盐溶液没有特别值得新增的现象，不与未知氧化剂混用</td>
+</tr>
+<tr>
+<td><strong>27草酸、45氯化锌、66氢氧化钡、疑似氢氧化钾</strong></td>
+<td>毒性／腐蚀性不能因存放久了就忽略；45易潮解，66及强碱还可能碳酸化</td>
+<td>退出本次儿童混合探索；这不是断言它们化学上已完全失效</td>
+</tr>
+<tr>
+<td><strong>22号冲突样品、69号不明钠盐</strong></td>
+<td>身份不可靠，无法作反应预测</td>
+<td>封存待核对；不利用与其他药品反应来猜身份</td>
+</tr>
+<tr>
+<td><strong>无编号过氧化氢</strong></td>
+<td>光、热、杂质可加速分解；实际剩余浓度未知</td>
+<td>本次不用；“还冒泡”不是安全浓度或可靠效力证明</td>
+</tr>
+<tr>
+<td><strong>4尿素、34二氧化硅、41氯化钠、42氯化钙、48硫酸铜</strong></td>
+<td>已用完，用户确认没有补充</td>
+<td>不计入可用库存；12粗盐不能自动视为纯41，49与48分开记账</td>
+</tr>
+</tbody>
+</table>
+<p>保存依据与适用范围：</p>
+<ul>
+<li><a href="https://www.fishersci.com/store/msds?countryCode=US&amp;language=en&amp;partNumber=AC450620050&amp;productDescription=SODIUM+THIOSULFATE+5KG&amp;vendorId=VN00032119">Fisher 硫代硫酸钠 SDS</a>：密闭、干燥储存，并与酸、强氧化剂分开。不能据此为旧水溶液指定统一保质期。</li>
+<li><a href="https://www.fishersci.com/shop/products/sodium-sulfite-anhydrous-98-thermo-scientific/AAA179330C">Fisher 亚硫酸钠资料</a>：对空气、湿气敏感。与46硫代硫酸钠不能混为同一种物质。</li>
+<li><a href="https://www.flinnsci.com/globalassets/flinn-scientific/all-free-pdfs/sds285_copperii-sulfate-pentahydrate.pdf">Flinn 五水硫酸铜 SDS</a>及 <a href="https://edu.rsc.org/download?ac=543736">RSC 水合／无水硫酸铜材料</a>：水合状态变化影响颜色和称量，但不应自动解释为铜盐成分全部消失。</li>
+<li><a href="https://mae-nas.eng.usu.edu/Peroxide_Web_Page/documents/H2O2_Handling%20and%20Storage-191789.pdf">Solvay 原厂双氧水储存资料，大学存档</a>：光、热和污染会影响分解；没有提供家中这瓶分装样品的实际浓度。</li>
+</ul>
+<h2>6. 明确退出这次自由混合的组合</h2>
+<table>
+<thead>
+<tr>
+<th>组合／材料</th>
+<th>退出原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>32亚硫酸钠＋酸；46硫代硫酸钠＋酸</strong></td>
+<td>可能释放刺激呼吸道的二氧化硫；46还可生成硫浑浊。看见“白雾／浑浊”不是适合孩子操作的依据</td>
+</tr>
+<tr>
+<td><strong>43氯化铵、62碳酸氢铵、33硫酸亚铁铵＋碱性材料</strong></td>
+<td>可能释放氨；不以闻味为观察目标，也不加入含碱的混合废液</td>
+</tr>
+<tr>
+<td><strong>66氢氧化钡＋其他试剂；27草酸、45氯化锌、疑似强碱</strong></td>
+<td>存在毒性、腐蚀性或浓度不明问题；本次有更合适的沉淀和变色组合</td>
+</tr>
+<tr>
+<td><strong>旧双氧水＋金属粉末、金属盐、二氧化锰等</strong></td>
+<td>剩余浓度未知，催化后速度和放热不可由瓶龄判断</td>
+</tr>
+<tr>
+<td><strong>任何不明编号、不同实验的剩液汇总、任意混粉加热</strong></td>
+<td>无法可靠判断混合物组成和反应；两两合适也不代表全部合在一起合适</td>
+</tr>
+</tbody>
+</table>
+<p>关于硫代硫酸盐加酸的风险，依据：<a href="https://edu.rsc.org/download?ac=522804">RSC 反应速率教师说明</a>。旧盘点中将其笼统写成“加稀酸变浑浊”的用途，应以上述限制为准。</p>
+<p>已清楚列为未识别的21个编号仍保留：<strong>1、3、29、30、31、53、54、55、57、58、61、67、72、73、74、77、78、79、82、88、94</strong>。加上22号冲突及69号不明，均不参与本轮反应配对。17号重复依照具体瓶／袋标签区分。95个编号位不是95瓶均已鉴定合格。</p>
+<h2>7. 怎样把筛选落实成“上课大概率有效”</h2>
+<ol>
+<li>**先核对身份与包装。**记录实际标签、固体／溶液、瓶盖、霉变、明显污染和异常结皮。不尝、不闻瓶口；漏液、鼓胀、结晶堵盖的未知样品不由孩子开启。</li>
+<li>**只为选中的组合准备工作液。**从合格固体新配少量稀液，使用新鲜、来源清楚的实验用水。仅为颗粒过滤或“看起来清澈”不能洗白身份不明／疑似污染的旧样品。</li>
+<li>**每种做水对照，再做目标配对。**用预配的适宜稀液进行滴量至约1 mL的小样；这不是拿任意浓度原液按统一体积混合。沉淀组确认两种原液本身清澈；褪色组确认变化超过等量加水。</li>
+<li>**用课堂同一批液、同一顺序连续复现两次。**记录是否通过、等待时间和最终外观。只有实测通过的组合进入孩子的配对表；没有变化就保留观察结果，不靠不断加料、加热或加入第三种未知材料挽救。</li>
+<li>**孩子只操作当次列明的配对。**佩戴合身护目镜，在托盘里操作，每瓶专用滴管。原粉、高风险配液与表面处理由教师完成；留给孩子预测、滴加、比较和记录。</li>
+<li>**每个反应单独收尾。**含铜、含锌残液和沉淀收集为有标签的实验废物，按当地合适渠道处置，不倒入水槽；其他实验余液也不跨组汇总后随意“中和”。</li>
+</ol>
+<p>最适合保留孩子“想逐个混起来看看”的方式，是让他面对一张<strong>已筛选的具体配对表</strong>，观察哪些生沉淀、哪些显色／褪色、哪些与水对照近似。现阶段先从A1、A2、A3核验，A4合格后加入；A5与A6在旧碘伏实际显色通过后加入。</p>
+</main>
+</body>
+</html>

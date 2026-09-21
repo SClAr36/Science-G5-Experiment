@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">叶片上表面和下表面气孔印迹制作流程</title>
+  <desc id="desc">教师课前在同一片叶的上下表面涂少量透明指甲油并晾干，孩子用透明胶带揭取薄膜，分别贴到标有U和L的载玻片上，在四十倍和一百倍显微镜下比较气孔。</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfff6"/>
+      <stop offset="1" stop-color="#f2f7ff"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8dc56f"/>
+      <stop offset="1" stop-color="#4d9456"/>
+    </linearGradient>
+    <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#3b536a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" rx="28" fill="url(#bg2)"/>
+  <text x="54" y="58" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="30" font-weight="700" fill="#173d31">实验 2：给叶片表面做“指纹”</text>
+  <text x="54" y="90" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#486273">same leaf · upper vs lower · same magnification</text>
+
+  <g transform="translate(54 125)">
+    <rect width="250" height="310" rx="20" fill="#fff" stroke="#cfddd2" stroke-width="2"/>
+    <text x="20" y="38" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="21" font-weight="700" fill="#173d31">1 · 教师课前完成</text>
+    <path d="M38 170C80 75 190 75 220 158C170 215 92 231 38 170Z" fill="url(#leaf)" stroke="#387d49" stroke-width="4"/>
+    <path d="M52 170C105 161 158 141 211 112" stroke="#dcefc8" stroke-width="5" fill="none"/>
+    <rect x="92" y="117" width="75" height="55" rx="8" fill="#e9f6ff" fill-opacity=".75" stroke="#67a6c9" stroke-dasharray="6 4" stroke-width="3"/>
+    <text x="43" y="255" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" fill="#486273">U / L 各涂 1 cm²</text>
+    <text x="43" y="279" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" fill="#486273">完全干燥后再上课</text>
+  </g>
+
+  <path d="M320 280H365" stroke="#3b536a" stroke-width="3" marker-end="url(#a2)"/>
+
+  <g transform="translate(375 125)">
+    <rect width="250" height="310" rx="20" fill="#fff" stroke="#cfddd2" stroke-width="2"/>
+    <text x="20" y="38" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="21" font-weight="700" fill="#173d31">2 · 孩子揭取印迹</text>
+    <path d="M35 190C80 100 188 95 220 170C176 220 93 235 35 190Z" fill="url(#leaf)" stroke="#387d49" stroke-width="4"/>
+    <path d="M70 126L210 90L229 161L89 196Z" fill="#d9eff9" fill-opacity=".65" stroke="#5d8da3" stroke-width="3"/>
+    <path d="M206 97C215 118 218 135 220 155" stroke="#3b536a" stroke-width="3" fill="none" marker-end="url(#a2)"/>
+    <text x="37" y="255" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" fill="#486273">透明胶带压平后慢慢揭起</text>
+    <text x="37" y="279" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" fill="#486273">不要混淆 upper / lower</text>
+  </g>
+
+  <path d="M641 280H686" stroke="#3b536a" stroke-width="3" marker-end="url(#a2)"/>
+
+  <g transform="translate(696 125)">
+    <rect width="220" height="310" rx="20" fill="#fff" stroke="#cfddd2" stroke-width="2"/>
+    <text x="20" y="38" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="21" font-weight="700" fill="#173d31">3 · 分别贴片</text>
+    <rect x="38" y="92" width="145" height="58" rx="7" fill="#e6f0f6" stroke="#65869a" stroke-width="3"/>
+    <rect x="68" y="102" width="85" height="38" rx="5" fill="#d8eff8" fill-opacity=".75"/>
+    <circle cx="52" cy="120" r="16" fill="#e3a84e"/>
+    <text x="52" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">U</text>
+    <rect x="38" y="184" width="145" height="58" rx="7" fill="#e6f0f6" stroke="#65869a" stroke-width="3"/>
+    <rect x="68" y="194" width="85" height="38" rx="5" fill="#d8eff8" fill-opacity=".75"/>
+    <circle cx="52" cy="212" r="16" fill="#3c9a78"/>
+    <text x="52" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">L</text>
+    <text x="27" y="278" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" fill="#a34b40">不加盖玻片</text>
+  </g>
+
+  <path d="M932 280H970" stroke="#3b536a" stroke-width="3" marker-end="url(#a2)"/>
+
+  <g transform="translate(980 125)">
+    <rect width="175" height="310" rx="20" fill="#fff" stroke="#cfddd2" stroke-width="2"/>
+    <text x="18" y="38" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="21" font-weight="700" fill="#173d31">4 · 同倍率比较</text>
+    <circle cx="88" cy="141" r="67" fill="#eaf4dc" stroke="#789f65" stroke-width="4"/>
+    <g fill="#b5d99b" stroke="#487a53" stroke-width="3">
+      <path d="M52 120C32 100 35 75 58 77C76 80 80 106 63 122C58 127 56 127 52 120Z"/>
+      <path d="M66 132C86 112 83 87 60 89C42 92 38 118 55 134C60 139 62 139 66 132Z"/>
+      <path d="M104 151C84 131 87 106 110 108C128 111 132 137 115 153C110 158 108 158 104 151Z"/>
+      <path d="M118 163C138 143 135 118 112 120C94 123 90 149 107 165C112 170 114 170 118 163Z"/>
+    </g>
+    <ellipse cx="59" cy="105" rx="5" ry="14" fill="#fff" stroke="#487a53" stroke-width="2"/>
+    <ellipse cx="111" cy="136" rx="5" ry="14" fill="#fff" stroke="#487a53" stroke-width="2"/>
+    <text x="30" y="236" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">40× 找像</text>
+    <text x="30" y="262" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">100× 计数</text>
+    <text x="30" y="288" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#a34b40">不用 400×</text>
+  </g>
+
+  <rect x="54" y="463" width="1101" height="38" rx="11" fill="#173d31"/>
+  <text x="604" y="488" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" font-weight="700" fill="#fff">Record only this leaf: “lower had more” ≠ “every plant has stomata only underneath.”</text>
+</svg>

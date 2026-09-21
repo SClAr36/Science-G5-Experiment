@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">V形透明片毛细水墙</title>
+  <desc id="desc">两片透明硬塑料一侧贴合，另一侧由牙签撑开。底边浸入浅水后，窄端水位较高，宽端水位较低。</desc>
+  <defs>
+    <style>
+      text { font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; fill:#17212b; }
+      .title { font-size:29px; font-weight:800; }
+      .label { font-size:21px; font-weight:700; }
+      .small { font-size:17px; }
+    </style>
+  </defs>
+  <rect width="1200" height="620" rx="26" fill="#f1f7f9"/>
+  <text x="600" y="48" text-anchor="middle" class="title">V 形透明片水墙：缝越窄，水爬得越高</text>
+
+  <rect x="45" y="85" width="410" height="485" rx="22" fill="#fff" stroke="#b8cbd4" stroke-width="3"/>
+  <text x="250" y="125" text-anchor="middle" class="title">从上面看</text>
+  <polygon points="105,245 385,180 385,225 105,270" fill="#dff1f7" fill-opacity=".75" stroke="#4f788b" stroke-width="5"/>
+  <polygon points="105,330 385,395 385,440 105,355" fill="#dff1f7" fill-opacity=".75" stroke="#4f788b" stroke-width="5"/>
+  <line x1="105" y1="245" x2="105" y2="355" stroke="#263d49" stroke-width="10"/>
+  <line x1="375" y1="215" x2="375" y2="405" stroke="#b88a46" stroke-width="16" stroke-linecap="round"/>
+  <text x="105" y="205" text-anchor="middle" class="label">贴合窄端</text>
+  <text x="375" y="475" text-anchor="middle" class="label">牙签撑开</text>
+  <text x="250" y="530" text-anchor="middle" class="small">两片之间形成从窄到宽的缝</text>
+
+  <rect x="485" y="85" width="670" height="485" rx="22" fill="#fff" stroke="#b8cbd4" stroke-width="3"/>
+  <text x="820" y="125" text-anchor="middle" class="title">从正面看</text>
+  <rect x="555" y="160" width="530" height="340" fill="#e9f7fb" fill-opacity=".42" stroke="#4f788b" stroke-width="6"/>
+  <rect x="525" y="475" width="590" height="65" rx="10" fill="#8dd1ec" opacity=".75"/>
+  <path d="M565 210C625 245 700 305 785 350S960 425 1075 445L1075 495H565Z" fill="#68b8df" opacity=".58"/>
+  <path d="M565 210C625 245 700 305 785 350S960 425 1075 445" fill="none" stroke="#137cac" stroke-width="7"/>
+  <line x1="565" y1="165" x2="565" y2="500" stroke="#263d49" stroke-width="7"/>
+  <line x1="1075" y1="165" x2="1075" y2="500" stroke="#b88a46" stroke-width="12"/>
+  <text x="585" y="190" class="label">窄端：水位高</text>
+  <text x="1045" y="465" text-anchor="end" class="label">宽端：水位低</text>
+  <text x="820" y="555" text-anchor="middle" class="small">底边只浸入约 5 mm；后方垫白纸更容易看清水线</text>
+</svg>

@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 4 节：溶解与析出：颗粒如何进入水中？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+<style id="science-g5-document-previews">
+.document-preview { display: none; }
+.document-preview:target, .document-preview:has(:target) { display: block; }
+body:has(.document-preview:target, .document-preview :target) > #title-block-header,
+body:has(.document-preview:target, .document-preview :target) > #lesson-content { display: none; }
+.document-preview-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .7rem 1rem;
+  margin: 0 0 1rem; padding: .8rem 1rem; border: 1px solid #d7e1df;
+  border-radius: .65rem; background: #f3f8f6;
+}
+.document-preview-bar a { font-weight: 600; }
+.document-preview-label { color: #536863; font-size: .9rem; }
+.document-preview-path { margin: 0 0 1.4rem; }
+.document-preview-path summary { cursor: pointer; color: #536863; }
+.document-preview-path code {
+  display: block; margin-top: .5rem; padding: .7rem;
+  white-space: pre-wrap; overflow-wrap: anywhere; user-select: all;
+}
+.document-preview article > h1:first-child { margin-top: 1rem; }
+@media print {
+  .document-preview-bar, .document-preview-path { display: none; }
+}
+</style>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 4 节：溶解与析出：颗粒如何进入水中？</h1>
+</header>
+<main id="lesson-content" tabindex="-1">
+<p><strong>Lesson 4: Dissolving and Precipitation: How Particles Enter Water</strong></p>
+<p><strong>授课状态</strong>：已完成；实际授课第 2 节。</p>
+<blockquote>
+<p><strong>库存提示（2026-07-18）</strong>：本节当时使用的氯化钙等耗材已经消耗或状态不再可靠。若以后复课，不直接按旧清单取用库存，须先查看最新的<a href="#md-preview-8023dbf2f1bd" data-md-preview="md-preview-8023dbf2f1bd">《试剂识别与保存状态评估》</a>并重新采购或改用替代方案。</p>
+</blockquote>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>主题</strong>：溶解与不溶解、过滤、析出/结晶与溶解时的温度变化
+<em>Dissolving and insolubility, filtration, precipitation/crystallization, and temperature change during dissolving</em></li>
+<li><strong>建议课时</strong>：80–90 分钟</li>
+<li><strong>核心问题</strong>：有些固体为什么能溶进水里，有些为什么不能？已经溶解的物质为什么不能被普通滤纸滤出来？不同物质溶解时的温度变化相同吗？
+<em>Why do some solids dissolve in water while others do not? Why can't dissolved substances be separated by ordinary filter paper? Do different substances cause the same temperature change when they dissolve?</em></li>
+</ul>
+<p>本节分成两个大的实验任务，并建立两条证据链：</p>
+<ol>
+<li>探究溶解与不溶解的差别：食盐溶于水后，组成食盐的钠离子和氯离子分散到水中；石英砂主要以较大的固体颗粒留在水中。过滤不能把已经分散到水中的离子截留下来，但能截留较大的不溶固体颗粒；蒸发滤液后可以重新得到晶体。</li>
+<li>探究溶解时的温度变化：在相同条件下，氯化钙、尿素和食盐溶解时的温度变化不同。</li>
+</ol>
+<p>学生应能区分溶质、溶剂、溶液和不溶物，能用“颗粒分散”“离子/分子”“过滤”“蒸发析出”和温度数据解释实验现象。</p>
+<h2>二、重要概念与中英文参考</h2>
+<ul>
+<li><strong>溶质（solute）</strong>：被溶解的物质，本课中是食盐、尿素或氯化钙。</li>
+<li><strong>溶剂（solvent）</strong>：用来溶解其他物质的物质，本课中是水。</li>
+<li><strong>溶液（solution）</strong>：溶质均匀分散在溶剂中形成的混合物。</li>
+<li><strong>溶解（dissolving / dissolution）</strong>：溶质的微粒离开原来的固体，均匀分散到溶剂中。像氯化钠这样的离子化合物溶于水时，主要以钠离子（Na⁺）和氯离子（Cl⁻）分散；像尿素这样的分子物质溶于水时，主要以尿素分子分散。</li>
+<li><strong>为什么会溶解</strong>：水分子有带部分正电和部分负电的两端，能吸引并包围某些离子或分子。当“水分子吸引并分散这些微粒”的作用足够强时，固体就能溶解。不是所有固体都会被水这样分散。</li>
+<li><strong>不溶物（insoluble solid）</strong>：在本实验条件下不能明显溶解在水中的固体，例如石英砂。它主要以较大的固体颗粒存在，会沉降，也可以被滤纸截留。</li>
+<li><strong>过滤（filtration）</strong>：滤纸像很细的筛网，可以截留较大的不溶性固体颗粒；已经溶解的离子或分子太小，并且和水一起通过滤纸，所以普通过滤不能把盐水中的食盐滤出来。</li>
+<li><strong>滤液（filtrate）</strong>：通过滤纸后收集到的液体。</li>
+<li><strong>蒸发（evaporation）与析出/结晶（precipitation / crystallization）</strong>：水逐渐离开溶液，能包围并分散溶质微粒的水变少；当溶液中溶质超过能稳定分散的量时，微粒会重新聚集成固体，从溶液中析出。形成规则晶体时也叫结晶。</li>
+<li><strong>放热溶解（exothermic dissolving）</strong>：溶液温度明显升高，例如无水氯化钙溶解。</li>
+<li><strong>吸热溶解（endothermic dissolving）</strong>：溶液温度明显降低，例如尿素溶解。</li>
+<li>温度变化是能量转移的证据，但温度不等于“能量的多少”。</li>
+</ul>
+<h2>三、实验材料</h2>
+<h3>试剂与耗材</h3>
+<ul>
+<li>食盐/氯化钠（sodium chloride, NaCl）约 10 g</li>
+<li>石英砂/二氧化硅砂（quartz sand / silica sand, SiO₂）约 3 g，作为不溶物对比</li>
+<li>尿素（urea, CO(NH₂)₂）约 3 g</li>
+<li>成分和无水/水合状态明确的氯化钙（calcium chloride, CaCl₂）约 3 g；若为分装保存过的氯化钙，必须课前预检升温是否明显</li>
+<li>水（water, H₂O）约 300 mL；观察晶体时优先用蒸馏水（distilled water）或去离子水（deionized water）</li>
+<li>直径约 90 mm 的定性滤纸（qualitative filter paper）2 张</li>
+<li>称量纸（weighing paper）或称量舟（weighing boat）若干；没有时使用干燥表面皿</li>
+<li>标签纸（label paper）、记号笔（marker）和吸水纸（absorbent paper）</li>
+</ul>
+<h3>器材</h3>
+<ul>
+<li>电子秤（electronic balance / digital scale）1 台，分度值 0.1 g 或更细</li>
+<li>25 mL 或 50 mL 量筒（graduated cylinder）1 支</li>
+<li>塑料药匙（plastic spatula / scoopula）4 把，每种固体专用 1 把</li>
+<li>表面皿（watch glass）1 个，没有称量纸或称量舟时用于称量</li>
+<li>100 mL 烧杯（beaker）4 个</li>
+<li>长颈漏斗或塑料漏斗（funnel）1 个</li>
+<li>玻璃搅拌棒（glass stirring rod）5 根</li>
+<li>瓷蒸发皿（porcelain evaporating dish）1 个</li>
+<li>酒精灯（alcohol burner / spirit lamp）1 盏</li>
+<li>铁架台（iron stand / ring stand）1 套，配匹配铁圈（iron ring）1 个：过滤时支撑漏斗，蒸发时支撑石棉网</li>
+<li>石棉网（wire gauze with ceramic center / asbestos wire gauze）1 张</li>
+<li>点火器（lighter）1 个、坩埚钳（crucible tongs）1 把、耐热垫（heat-resistant mat）1 块</li>
+<li>相同规格的 100 mL 双层保温杯（insulated cup / foam cup calorimeter）4 个，最好配带温度计孔的盖子</li>
+<li>无汞实验温度计（mercury-free laboratory thermometer）1 支，量程至少 0–100°C，分度值 1°C 或更细</li>
+<li>温度计夹（thermometer clamp）1 个；有带孔杯盖时可不用</li>
+<li>秒表（stopwatch）1 个</li>
+</ul>
+<h2>四、实验过程</h2>
+<h3>实验 1：食盐溶解前后的总质量</h3>
+<p><strong>用量</strong>：水 50.0 g，食盐 5.0 g。</p>
+<ol>
+<li>将干燥的 100 mL 烧杯放在电子秤上，按去皮键归零。缓慢加入 50.0 g 水。</li>
+<li>记录“烧杯 + 水”的质量；若刚才使用了去皮功能，可先取下再重新称量一次作为记录。</li>
+<li>将干燥表面皿放在电子秤中央，按去皮键归零。用食盐专用药匙加入 5.0 g 食盐并记录。</li>
+<li>计算溶解前总质量：<code>烧杯 + 水</code> 的质量 + <code>食盐</code> 的质量。</li>
+<li>将表面皿中的食盐全部转入烧杯，用玻璃搅拌棒轻轻搅拌，直到看不见明显食盐晶粒。检查表面皿上是否有明显残留；如有残留，不开始比较，先完成全部转移。</li>
+<li>擦干烧杯外壁，用同一台秤称量“烧杯 + 盐水”，记为溶解后总质量。</li>
+<li>若需要短暂停放，可用表面皿临时盖在烧杯上，减少水滴溅出或灰尘落入。</li>
+<li>计算“溶解后总质量 - 溶解前总质量”。</li>
+</ol>
+<p><strong>预期结果</strong>：溶解前后读数应在电子秤的波动范围内接近。如果相差 0.1–0.2 g，先检查秤的读数波动、烧杯外壁水滴、搅拌棒或表面皿上的残留，不把小差值解释为化学变化。</p>
+<h3>实验 2：过滤对比——溶解的食盐与不溶的石英砂</h3>
+<p><strong>用量</strong>：从实验 1 的盐水中取 15–20 mL；另取水 20.0 g，石英砂 2.0 g。</p>
+<ol>
+<li>在一个烧杯中加入 20.0 g 水和 2.0 g 石英砂，搅拌 30 s。观察液体是否均一透明、静置后是否沉降。</li>
+<li>另取 15–20 mL 实验 1 得到的盐水，观察它是否均一透明。</li>
+<li>将第一张滤纸对折两次，打开成“一层对三层”的锥形，放入漏斗。滤纸上缘应低于漏斗口。</li>
+<li>用少量水润湿滤纸，使滤纸贴紧漏斗内壁。将漏斗固定在支架上，使漏斗颈下端贴住接液烧杯内壁。</li>
+<li>先过滤石英砂和水的混合物。一手持烧杯，一手持玻璃搅拌棒，使混合物沿搅拌棒缓慢流入漏斗。液面始终低于滤纸边缘，不用搅拌棒戳压滤纸。</li>
+<li>分别观察两处：
+<ul>
+<li><strong>滤纸上</strong>：是否截留了石英砂？</li>
+<li><strong>接液烧杯中</strong>：滤液是否明显变清？</li>
+</ul>
+</li>
+<li>更换干净滤纸和接液烧杯，按同样方法过滤 15–20 mL 盐水。</li>
+<li>再分别观察两处：
+<ul>
+<li><strong>滤纸上</strong>：有没有被截留的白色食盐晶粒？</li>
+<li><strong>接液烧杯中</strong>：滤液是否仍然清澈、无色？</li>
+</ul>
+</li>
+<li>保留盐水过滤后得到的滤液，供实验 3 蒸发结晶使用。石英砂滤纸和滤液不用于结晶实验。</li>
+</ol>
+<p><strong>预期结果</strong>：石英砂不能形成均一透明的溶液，静置后会沉降，过滤时被滤纸截留；盐水过滤后滤纸上没有明显白色晶粒，滤液仍然清澈、无色。这说明普通滤纸能截留较大的不溶固体颗粒，但不能把已经溶解并分散成 Na⁺ 和 Cl⁻ 的食盐从水中分离出来。滤液看起来清澈并不证明里面没有食盐；要证明食盐仍在滤液中，继续做实验 3。</p>
+<h3>实验 3：蒸发滤液并观察晶体</h3>
+<p><strong>用量</strong>：滤液 5–10 mL。</p>
+<ol>
+<li>在未点火时组装加热装置：将铁圈固定在铁架台上，把石棉网平稳放在铁圈上，再将蒸发皿放在石棉网中央，酒精灯放在下方。</li>
+<li>用量筒量取 5–10 mL 滤液，倒入蒸发皿。</li>
+<li>教师点燃酒精灯。学生在安全距离观察水量变化；教师用玻璃棒轻轻搅拌，避免局部过热和液滴飞溅。</li>
+<li>当蒸发皿边缘开始出现小晶体，或只剩少量液体时，教师用灯帽覆盖熄火；不用嘴吹灭。</li>
+<li>教师用坩埚钳将蒸发皿移到耐热垫上，待完全冷却后观察。不将溶液加热至完全干涸。</li>
+</ol>
+<p><strong>预期结果</strong>：水量减少后，蒸发皿中出现白色晶体。这说明食盐通过了滤纸，一直存在于滤液中。这里的“析出”（precipitation）指溶解在水中的微粒重新聚集成固体；如果形成有规则形状的晶体，也可以说发生了“结晶”（crystallization）。</p>
+<h3>实验 4：比较不同物质溶解时的温度变化</h3>
+<p><strong>用量</strong>：每杯水 20.0 g；食盐、尿素和氯化钙各 2.0 g。</p>
+<p><strong>实验顺序</strong>：空白杯 → 食盐 → 尿素 → 氯化钙。</p>
+<ol>
+<li>将水、三种固体、四个保温杯和温度计放在同一房间至少 30 分钟，使初始温度尽量相同。</li>
+<li>标记四个保温杯：空白、食盐、尿素、氯化钙。</li>
+<li>将干燥的称量专用表面皿放在电子秤上去皮，分别称取 2.0 g 食盐、2.0 g 尿素和 2.0 g 氯化钙。每称完一种都要将表面皿洗净、完全擦干后再称下一种。</li>
+<li>用电子秤或量筒分别向四个保温杯加入 20.0 g 水。若使用量筒，可近似取 20.0 mL 水。</li>
+<li>将温度计穿过杯盖或固定在温度计夹上，使感温泡完全浸入水中，但不接触杯底或杯壁。</li>
+<li>等待液柱稳定约 30 s。读数时视线与液柱顶端齐平，记录初温。</li>
+<li>空白杯不加固体。开始计时后用玻璃搅拌棒搅拌 30 s，在 30、60、90、120 和 180 s 读取温度。普通温度计有响应时间，不需要每 10 s 读取一次。</li>
+<li>洗净、擦干温度计，待读数回到室温附近，再测食盐杯。记录初温后，在 <code>t = 0</code> 时加入 2.0 g 食盐，立即搅拌 30 s，按相同时刻读数。</li>
+<li>按同样方法完成尿素杯。</li>
+<li>最后完成氯化钙杯。氯化钙由教师加入；学生读取温度，不触摸杯壁或溶液。</li>
+<li>每杯计算 <code>ΔT = 最高或最低温度 - 初温</code>，并与空白杯的温度波动比较。使用 1°C 分度的温度计时，变化至少达到 2°C 且超过空白杯波动，再判定为本装置可检出的吸热或放热。</li>
+</ol>
+<p><strong>预期结果</strong>：</p>
+<ul>
+<li>空白杯的温度只有小幅自然波动。</li>
+<li>食盐的温度变化可能小于 1°C，普通温度计可能检测不出。记录为“本装置未检出明显变化”，不写“完全没有吸放热”。</li>
+<li>尿素杯通常明显降温，20.0 g 水配 2.0 g 尿素时，课堂中常见降温约 3–5°C；若温度计响应慢，以 60–120 s 内的最低温作为主要数据。</li>
+<li>状态良好的氯化钙杯通常明显升温，20.0 g 水配 2.0 g 氯化钙时，课堂中常见升温约 5–15°C。若分装保存后的氯化钙已经明显吸水或水合，升温可能只剩 2–6°C，甚至不够明显；课前预检若升温不到约 3°C，建议更换新鲜氯化钙。</li>
+</ul>
+<h2>五、板书与记录框架</h2>
+<h3>板书主线</h3>
+<pre><code class="language-text">问题 1：溶解和不溶解的微粒状态有什么不同？
+Question 1: What is different about particles in dissolving and insolubility?
+
+证据链：总质量接近 → 不溶颗粒可过滤、溶解的离子/分子不能被普通滤纸截留 → 蒸发后析出晶体
+Evidence: mass → filtration comparison → precipitation/crystallization
+
+问题 2：不同物质溶解时的温度变化相同吗？
+Question 2: Do different solutes cause the same temperature change?
+
+改变：溶质种类
+测量：温度随时间的变化
+保持不变：水量、固体质量、初温、容器、搅拌时间、读数时刻
+空白杯：判断环境造成的温度波动
+</code></pre>
+<h3>记录 1：溶解前后质量</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">质量/g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>烧杯 + 水</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>食盐</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>溶解前总质量（上述两项相加）</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>溶解后总质量（烧杯 + 盐水）</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>前后差值</td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<h3>记录 2：过滤与结晶</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>观察</th>
+<th>说明什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>溶解后</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>石英砂加水并搅拌后</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>石英砂过滤后的滤纸</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>石英砂过滤后的滤液</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>盐水过滤后的滤纸</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>盐水过滤后的滤液</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>盐水滤液蒸发后</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>记录 3：温度随时间的变化</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间/s</th>
+<th style="text-align:right">空白/°C</th>
+<th style="text-align:right">食盐/°C</th>
+<th style="text-align:right">尿素/°C</th>
+<th style="text-align:right">氯化钙/°C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">30</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">90</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">120</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">180</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>杯子</th>
+<th style="text-align:right">初温/°C</th>
+<th style="text-align:right">最高或最低温/°C</th>
+<th style="text-align:right"><code>ΔT</code>/°C</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空白</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td>自然波动</td>
+</tr>
+<tr>
+<td>食盐</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td>尿素</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td>氯化钙</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>结论句式</h3>
+<pre><code class="language-text">食盐溶解时，氯化钠晶体中的__________和__________分散到水中。
+普通滤纸能截留__________，但不能截留已经溶解的__________或__________。
+石英砂和食盐的过滤结果不同，说明__________和__________不是同一回事。
+水分减少后，溶液中的食盐重新形成晶体，这个过程可以叫__________或__________。
+
+在相同条件下，氯化钙溶解时__________，尿素溶解时__________，食盐__________。
+因此，不能说所有物质溶解时都__________。
+</code></pre>
+<h2>六、课堂流程串讲</h2>
+<h3>0–8 分钟：导入</h3>
+<p>将一小勺食盐加入水中搅拌，再展示少量石英砂加水后的样子。让学生先用自己的话描述两杯水的差别：哪一杯均匀、哪一杯会沉降、哪一杯可能通过过滤分开。此时引入溶质、溶剂、溶液和不溶物，并提醒溶解不是食盐熔化成液体，而是微粒分散到水中。</p>
+<h3>8–23 分钟：实验 1——总质量</h3>
+<p>按实验 1 分别称量烧杯与水、食盐，计算溶解前总质量，再与溶解后总质量比较。混合前让学生预测总质量会变大、变小还是接近不变。称量后追问：“如果食盐没有全部倒进去，或有水滴溅出，前后还能直接比较吗？”</p>
+<h3>23–42 分钟：实验 2——不溶物与过滤对比</h3>
+<p>先让学生分别预测石英砂和盐水经过滤纸后会发生什么。先过滤石英砂和水的混合物，让学生看到不溶颗粒被滤纸截留；再过滤盐水，重点解释普通滤纸的孔远大于水中的离子或分子，因此过滤能分离“颗粒比较大的不溶物”，不能分离“已经以离子或分子分散的溶质”。</p>
+<h3>42–52 分钟：实验 3——蒸发结晶</h3>
+<p>学生完成未点火的装置识别和滤液量取；教师负责点火、加热、熄火和移动热蒸发皿。当晶体出现时，追问：“水变少以后，原来分散在水里的离子为什么会重新聚集？”引出析出/结晶：水少了，能稳定分散的溶质量减少，多出来的溶质微粒重新形成固体。</p>
+<h3>52–60 分钟：设计温度比较</h3>
+<p>展示三种白色固体：食盐、尿素和氯化钙。让学生预测哪一杯升温、降温或变化不明显。共同确认自变量、因变量、控制变量和空白杯的作用，完成第二部分板书。</p>
+<h3>60–78 分钟：实验 4——温度变化</h3>
+<p>按既定顺序依次测量四杯，学生读温度并口述，教师可帮助在 30、60、90、120 和 180 s 记录。提醒学生普通温度计有响应时间，不需要每 10 s 读数；测食盐时强调“没有读出明显变化”只是当前仪器的结果，不是“绝对没有能量转移”。氯化钙由教师加料并放在最后。</p>
+<h3>78–88 分钟：数据与结论</h3>
+<p>计算三种溶质的 <code>ΔT</code>，先与空白杯比较，再完成结论句式。追问：“石英砂和食盐进入水中后的微粒状态有什么不同？”“为什么盐水过滤后仍然可能含有食盐？”和“能不能说所有溶解都吸热或都放热？”</p>
+<h3>88–90 分钟：收尾</h3>
+<p>回收试剂和溶液，清洗器材。让学生用一句话回答：“如果糖溶进水里，你会怎样从微粒角度解释它为什么过滤不出来？”</p>
+<h2>七、关键术语（Key vocabulary）</h2>
+<ul>
+<li>溶解：dissolution / dissolving</li>
+<li>溶解的：dissolved</li>
+<li>析出：precipitation</li>
+<li>溶质：solute</li>
+<li>溶剂：solvent</li>
+<li>溶液：solution</li>
+<li>不溶物：insoluble solid</li>
+<li>离子：ion</li>
+<li>分子：molecule</li>
+<li>钠离子：sodium ion, Na⁺</li>
+<li>氯离子：chloride ion, Cl⁻</li>
+<li>过滤：filtration</li>
+<li>滤纸：filter paper</li>
+<li>漏斗：funnel</li>
+<li>滤液：filtrate</li>
+<li>蒸发：evaporation</li>
+<li>晶体：crystal</li>
+<li>结晶：crystallization</li>
+<li>氯化钠/食盐：sodium chloride, NaCl</li>
+<li>氯化钙：calcium chloride, CaCl₂</li>
+<li>尿素：urea, CO(NH₂)₂</li>
+<li>石英砂/二氧化硅砂：quartz sand / silica sand, SiO₂</li>
+<li>烧杯：beaker</li>
+<li>量筒：graduated cylinder</li>
+<li>玻璃搅拌棒：glass stirring rod</li>
+<li>表面皿：watch glass</li>
+<li>蒸发皿：evaporating dish</li>
+<li>酒精灯：alcohol burner / spirit lamp</li>
+<li>铁架台：iron stand / ring stand</li>
+<li>铁圈：iron ring</li>
+<li>石棉网：wire gauze with ceramic center / asbestos wire gauze</li>
+<li>坩埚钳：crucible tongs</li>
+<li>放热：exothermic</li>
+<li>吸热：endothermic</li>
+<li>温度变化：temperature change</li>
+<li>初温：initial temperature</li>
+<li>能量转移：energy transfer</li>
+</ul>
+</main>
+<main class="document-preview" id="md-preview-8023dbf2f1bd" tabindex="-1"><nav class="document-preview-bar" aria-label="文档预览导航"><a href="#lesson-content">返回目录</a><span class="document-preview-label">Markdown 预览 · 试剂识别与保存状态评估.md</span></nav><details class="document-preview-path"><summary>本地 Markdown 路径</summary><code>C:\Users\12845\Desktop\Science G5\Science G5\器材及试剂\试剂识别与保存状态评估.md</code></details><article><h1>试剂识别与保存状态评估</h1>
+<h2>本次复核补充（2026-09-07）</h2>
+<p>用户确认：4 尿素、34 二氧化硅、41 氯化钠、42 氯化钙、48 硫酸铜均没有补充，继续按无库存处理。已完成基于原清单和公开资料的保存／混合用途复核，详见 <a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%99%A8%E6%9D%90%E5%8F%8A%E8%AF%95%E5%89%82/%E7%8E%B0%E6%9C%89%E8%AF%95%E5%89%82%E6%B7%B7%E5%90%88%E7%AD%9B%E9%80%89_2026-09-07.html">现有试剂混合筛选</a>／<a href="file:///C:/Users/12845/Desktop/Science%20G5/Science%20G5/%E5%99%A8%E6%9D%90%E5%8F%8A%E8%AF%95%E5%89%82/%E7%8E%B0%E6%9C%89%E8%AF%95%E5%89%82%E6%B7%B7%E5%90%88%E7%AD%9B%E9%80%89_2026-09-07.html">HTML</a>。<strong>本次未检查当前实物、未进行反应预试，没有新增任何“实测合格”状态。</strong></p>
+<p>下面保留原盘点，涉及以下事项时以本次补充为准：</p>
+<ul>
+<li>49 无水硫酸铜即使吸水变蓝，身份明确且无污染时，仍值得核验铜盐沉淀与铁置换用途；不能据此恢复“无水检水”资格。</li>
+<li>46 硫代硫酸钠加酸会在形成硫浑浊的同时产生二氧化硫，退出本次家庭儿童混合探索；32 亚硫酸钠同样不与酸自由配对。</li>
+<li>无编号旧双氧水的浓度未知，本次不用；不能靠催化冒泡试验确认它的安全浓度或可靠效力。</li>
+<li>碘伏仍棕色不是合格证明，须与新配淀粉实际显色；小苏打水未使酚酞明显变红，也不能单独判定酚酞失效。</li>
+<li>不尝、不闻瓶口来判断任何旧试剂。受潮、水合状态改变与真正成分失活应分开判断，但身份不明或疑似污染的样品不靠试反应来鉴定后交给孩子。</li>
+</ul>
+<p>评估条件：根据 <code>试剂1.jpg</code> 到 <code>试剂13.jpg</code> 的可读标签整理。默认这些试剂已经从原包装转移到普通小白分装瓶或小样品袋中，保存约半年；瓶子算是有盖密封，但密封性不按专业试剂瓶处理。</p>
+<p>重要限制：</p>
+<ul>
+<li>本表只根据照片标签和常见保存稳定性判断，不能替代原瓶标签、SDS 或实物检查。</li>
+<li>标签、浓度、状态、气味或颜色有任何一项不确定时，不用于学生动手实验。</li>
+<li>“还能用”只指微量、课堂定性实验；不指食品、医用、定量分析或开放加热。</li>
+<li>未清楚识别的编号：<code>1</code>、<code>3</code>、<code>29</code>、<code>30</code>、<code>31</code>、<code>53</code>、<code>54</code>、<code>55</code>、<code>57</code>、<code>58</code>、<code>61</code>、<code>67</code>、<code>72</code>、<code>73</code>、<code>74</code>、<code>77</code>、<code>78</code>、<code>79</code>、<code>82</code>、<code>88</code>、<code>94</code>。如实物存在，需要重新拍近照或直接核对瓶身。</li>
+</ul>
+<h2>最新盘点（2026-07-14）</h2>
+<p><strong>计数更正：<strong>照片中的样品按 <code>1–95</code> 编号，共有 <strong>95 个编号位</strong>。其中 <strong>74 个编号</strong>已至少读出名称，<strong>21 个编号</strong>尚未从照片中可靠读出；另有一瓶写着“过氧化氢”的样品</strong>未见编号</strong>。先前所写的“75 条记录”是把“74 个已识别编号”与“1 瓶无编号过氧化氢”合并后的索引数，<strong>不能理解为照片中只有 75 瓶/75 件</strong>。</p>
+<h3>待你协助确认的 21 个编号</h3>
+<p><code>1</code>、<code>3</code>、<code>29</code>、<code>30</code>、<code>31</code>、<code>53</code>、<code>54</code>、<code>55</code>、<code>57</code>、<code>58</code>、<code>61</code>、<code>67</code>、<code>72</code>、<code>73</code>、<code>74</code>、<code>77</code>、<code>78</code>、<code>79</code>、<code>82</code>、<code>88</code>、<code>94</code>。</p>
+<p>另有三处需要核对，但不计入上面 21 个“未识别编号”：</p>
+<ul>
+<li><code>17</code>：袋装标签为“石蜡”，瓶装标签为“葡萄糖”，出现同号重复；两种物品本身均已读出。</li>
+<li><code>22</code>：照片中可见一瓶为“过磷酸钙”，此前另有一处被读作“柠檬酸钠”，需核对是否贴错号或确有两个同号样品。</li>
+<li><code>69</code>：可读到“……酸钠”，但首字不清，不能据此确定具体物质。</li>
+</ul>
+<p>本次库存判断以“是否还能直接用于课堂”为准；标为“已用掉”的物品暂不计入可用库存。</p>
+<h3>上节课已用掉／不再作为现有库存</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>名称</th>
+<th>本次状态</th>
+<th>后续处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">48</td>
+<td>硫酸铜</td>
+<td>已用掉</td>
+<td>后续若做铜盐颜色、结晶或置换反应，再采购标签完整的硫酸铜。</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>尿素</td>
+<td>已用掉</td>
+<td>若还要做吸热溶解，补充新包装尿素；使用前做小样测温。</td>
+</tr>
+<tr>
+<td style="text-align:right">41</td>
+<td>氯化钠</td>
+<td>已用掉</td>
+<td>以食盐或标签明确的氯化钠补充；用于温度变化小的对照即可。</td>
+</tr>
+<tr>
+<td style="text-align:right">42</td>
+<td>氯化钙</td>
+<td>已用掉；上课时已呈液体</td>
+<td>不将剩余液体当作固体氯化钙使用。后续放热溶解实验应补充干燥、标签明确的固体氯化钙，并在课前预检。</td>
+</tr>
+<tr>
+<td style="text-align:right">34</td>
+<td>二氧化硅</td>
+<td>已用掉</td>
+<td>若要继续作颗粒/过滤介质观察，可补充石英砂或标签明确的二氧化硅；操作时防扬尘。</td>
+</tr>
+</tbody>
+</table>
+<p>**关于氯化钙变成液体：**这在储存不良或密封不严时是合理且常见的。氯化钙强烈吸湿、会潮解，吸收空气中的水分后可由固体变成浓氯化钙溶液；若原本买的就是氯化钙溶液，也可能本来就是液体。但无论是哪种情况，浓度和含水量都不能据此确认，<strong>不能再用于“固体溶于水放热”的课堂实验</strong>。液体再加水时的温度变化主要取决于未知浓度和稀释过程，结果不稳定；应改用新鲜、干燥、标签完整的固体氯化钙。</p>
+<h2>总体结论</h2>
+<h3>优先可继续使用</h3>
+<p>这些试剂在小白瓶里放半年，化学组成通常不会明显改变。使用前仍要看是否受潮、变色、霉变或污染。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>照片识别名称</th>
+<th>可靠性判断</th>
+<th>可用于哪些实验</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">2</td>
+<td>木炭</td>
+<td>稳定</td>
+<td>吸附、燃烧现象、材料性质观察</td>
+<td>不做食品或水净化用途</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>脱脂棉</td>
+<td>稳定，怕受潮污染</td>
+<td>过滤辅助、吸水、毛细现象</td>
+<td>变黄、发霉或有异味则丢弃</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>活性炭</td>
+<td>稳定</td>
+<td>吸附色素、过滤对比</td>
+<td>不作为饮水净化材料</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>聚乙烯</td>
+<td>稳定</td>
+<td>材料分类、密度/浮沉、热塑性演示</td>
+<td>不加热燃烧给学生闻气味</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>粗盐</td>
+<td>稳定</td>
+<td>溶解、过滤、结晶、盐水实验</td>
+<td>粗盐有杂质，做定量或清澈盐水时用氯化钠更好</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>石英砂</td>
+<td>稳定</td>
+<td>过滤层、沉降、颗粒观察</td>
+<td>避免扬尘</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td>石蜡（袋装）</td>
+<td>稳定</td>
+<td>熔化/凝固、密度、疏水性</td>
+<td>加热由教师完成</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td>葡萄糖（瓶装标签）</td>
+<td>基本稳定，可能轻微受潮</td>
+<td>溶解、还原糖演示的预实验</td>
+<td>与袋装“17 石蜡”编号冲突，使用前核对实物标签</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td>蔗糖</td>
+<td>稳定，可能吸潮结块</td>
+<td>溶解、结晶、糖水密度</td>
+<td>结块不影响普通溶解实验</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td>硼酸</td>
+<td>较稳定</td>
+<td>弱酸性观察、硼砂/硼酸对比演示</td>
+<td>不入口；儿童不直接接触粉末</td>
+</tr>
+<tr>
+<td style="text-align:right">23</td>
+<td>硼砂</td>
+<td>较稳定，可能轻微风化/结块</td>
+<td>溶解、硼砂晶体、黏液类演示</td>
+<td>不入口；避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">24</td>
+<td>淀粉</td>
+<td>较稳定，怕受潮霉变</td>
+<td>碘-淀粉显色、糊化</td>
+<td>有霉味、结块发黄则丢弃</td>
+</tr>
+<tr>
+<td style="text-align:right">25</td>
+<td>明矾</td>
+<td>较稳定</td>
+<td>溶解、结晶、絮凝演示</td>
+<td>晶体含水量可能变，别做精确定量</td>
+</tr>
+<tr>
+<td style="text-align:right">26</td>
+<td>凡士林</td>
+<td>稳定</td>
+<td>疏水性、防水层、密封对比</td>
+<td>不用于皮肤护理演示</td>
+</tr>
+<tr>
+<td style="text-align:right">34</td>
+<td>二氧化硅</td>
+<td>稳定</td>
+<td>固体性质、过滤介质对比</td>
+<td>避免扬尘</td>
+</tr>
+<tr>
+<td style="text-align:right">35</td>
+<td>二氧化锰</td>
+<td>稳定</td>
+<td>双氧水分解催化演示</td>
+<td>双氧水必须另行确认有效；粉末避免吸入</td>
+</tr>
+<tr>
+<td style="text-align:right">36</td>
+<td>三氧化二铁</td>
+<td>稳定</td>
+<td>氧化物、磁性/颜色观察</td>
+<td>避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">37</td>
+<td>氧化铜</td>
+<td>稳定</td>
+<td>氧化物颜色、还原演示（教师）</td>
+<td>不做学生加热还原</td>
+</tr>
+<tr>
+<td style="text-align:right">39</td>
+<td>氧化铝</td>
+<td>稳定</td>
+<td>氧化物、难溶性观察</td>
+<td>避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">40</td>
+<td>氯化钾</td>
+<td>稳定</td>
+<td>溶解、盐类对比</td>
+<td>不入口</td>
+</tr>
+<tr>
+<td style="text-align:right">41</td>
+<td>氯化钠</td>
+<td>稳定</td>
+<td>第 4 节溶解、过滤、结晶</td>
+<td>优先用于清澈盐水实验</td>
+</tr>
+<tr>
+<td style="text-align:right">47</td>
+<td>硫酸钠</td>
+<td>较稳定</td>
+<td>溶解、盐类对比</td>
+<td>可能含水量变化，不做称量-化学式计算</td>
+</tr>
+<tr>
+<td style="text-align:right">50</td>
+<td>硫酸镁</td>
+<td>较稳定，水合状态可能变化</td>
+<td>溶解、结晶、盐类对比</td>
+<td>不做“无水/水合物”定量</td>
+</tr>
+<tr>
+<td style="text-align:right">56</td>
+<td>硫酸锌</td>
+<td>较稳定，可能吸湿</td>
+<td>盐类溶解、沉淀演示（教师）</td>
+<td>避免学生接触</td>
+</tr>
+<tr>
+<td style="text-align:right">59</td>
+<td>碳酸钙</td>
+<td>稳定</td>
+<td>酸遇碳酸盐产气、岩石/矿物对比</td>
+<td>可用白醋或柠檬酸做微量产气</td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td>碳酸氢钠</td>
+<td>较稳定，可能结块</td>
+<td>酸碱反应产气、反应速率、溶解降温弱对比</td>
+<td>结块可压碎；不用于食品</td>
+</tr>
+<tr>
+<td style="text-align:right">63</td>
+<td>碱式碳酸铜</td>
+<td>稳定</td>
+<td>铜盐颜色、受热分解演示（教师）</td>
+<td>不做学生加热或接触</td>
+</tr>
+<tr>
+<td style="text-align:right">64</td>
+<td>石墨</td>
+<td>稳定</td>
+<td>导电性、材料性质</td>
+<td>粉末避免吸入</td>
+</tr>
+<tr>
+<td style="text-align:right">68</td>
+<td>四氧化三铁</td>
+<td>稳定</td>
+<td>磁性观察、氧化物对比</td>
+<td>避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">70</td>
+<td>溴化钾</td>
+<td>稳定</td>
+<td>盐类溶解、离子对比（教师）</td>
+<td>不入口；不与强氧化剂混用</td>
+</tr>
+<tr>
+<td style="text-align:right">71</td>
+<td>磷矿粉</td>
+<td>稳定</td>
+<td>矿物观察、难溶性对比</td>
+<td>避免粉尘</td>
+</tr>
+<tr>
+<td style="text-align:right">75</td>
+<td>硬脂酸</td>
+<td>稳定</td>
+<td>熔点、疏水性、酸性很弱的材料观察</td>
+<td>加热由教师完成</td>
+</tr>
+<tr>
+<td style="text-align:right">76</td>
+<td>氢氧化铝</td>
+<td>稳定</td>
+<td>难溶氢氧化物、两性演示（教师）</td>
+<td>不做入口类“胃药”演示</td>
+</tr>
+<tr>
+<td style="text-align:right">83</td>
+<td>硫酸锰</td>
+<td>较稳定</td>
+<td>盐类颜色、溶解观察（教师）</td>
+<td>避免学生接触</td>
+</tr>
+<tr>
+<td style="text-align:right">85</td>
+<td>磷酸二氢钾</td>
+<td>稳定</td>
+<td>溶解、盐类/肥料成分讨论</td>
+<td>不用于种植或食品</td>
+</tr>
+<tr>
+<td style="text-align:right">89</td>
+<td>大理石</td>
+<td>稳定</td>
+<td>酸遇碳酸盐产气、岩石观察</td>
+<td>表面脏污可冲洗</td>
+</tr>
+<tr>
+<td style="text-align:right">91</td>
+<td>滑石粉</td>
+<td>稳定</td>
+<td>粉体性质、润滑/疏水观察</td>
+<td>避免吸入</td>
+</tr>
+<tr>
+<td style="text-align:right">92</td>
+<td>高岭土</td>
+<td>稳定</td>
+<td>泥土/矿物、悬浊液、沉降</td>
+<td>避免吸入</td>
+</tr>
+<tr>
+<td style="text-align:right">95</td>
+<td>黄铜片</td>
+<td>稳定，可能表面氧化</td>
+<td>金属材料、导电性、密度/颜色观察</td>
+<td>表面氧化可轻擦，不做强酸反应</td>
+</tr>
+</tbody>
+</table>
+<h3>会出问题，但原化学性质部分还在，可有限使用</h3>
+<p>这类主要问题是吸水、水合状态变化、表面氧化、轻微风化、指示剂变淡或浓度不准。它们通常还可以做定性观察，但不能做依赖纯度、浓度、含水量、热效应大小或定量数据的实验。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>照片识别名称</th>
+<th>可能出的问题</th>
+<th>还能怎么用</th>
+<th>不建议怎么用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">4</td>
+<td>尿素</td>
+<td>轻微吸湿结块</td>
+<td>第 4 节吸热溶解；只要能称量、能溶解即可</td>
+<td>不做纯度或氮含量相关定量</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>还原铁粉</td>
+<td>表面氧化、吸潮，活性下降</td>
+<td>铁粉磁性、铁生锈、与酸反应的定性演示</td>
+<td>不做反应速率或还原性强弱定量</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>洋红</td>
+<td>染料可能褪色、污染瓶壁</td>
+<td>扩散、染色、色素吸附定性</td>
+<td>不做标准颜色或浓度判断</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>锌粒</td>
+<td>表面氧化，反应变慢</td>
+<td>与稀酸产氢的教师演示，先用砂纸或稀酸快速活化</td>
+<td>不做速率比较数据</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>硅酸钠</td>
+<td>若为溶液，可能吸收二氧化碳、胶化、浓度变</td>
+<td>“水玻璃”凝胶/黏度定性观察</td>
+<td>不做浓度、pH 或硅酸盐定量</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>石蕊</td>
+<td>指示剂可能褪色或受污染</td>
+<td>先用白醋和小苏打水测试，能变色再做酸碱识别</td>
+<td>不做精确 pH 判断</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td>品红</td>
+<td>可能褪色、被污染或吸湿</td>
+<td>扩散、吸附、染色观察</td>
+<td>不做标准颜色对照</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td>酚酞</td>
+<td>溶剂可能挥发，颜色反应变弱</td>
+<td>先用小苏打水/稀碱测试，能显粉红再用作酸碱指示</td>
+<td>不做精确 pH 或浓度判断</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td>碘伏</td>
+<td>有效碘降低、颜色变浅；活性随光和时间下降</td>
+<td>若仍棕色，可做淀粉显色的粗略演示</td>
+<td>不做碘钟、消毒效果或定量氧化还原</td>
+</tr>
+<tr>
+<td style="text-align:right">21</td>
+<td>柠檬酸</td>
+<td>可能吸潮结块</td>
+<td>与碳酸氢钠反应产气、酸味概念替代用语</td>
+<td>不入口；不做精确质量分数</td>
+</tr>
+<tr>
+<td style="text-align:right">22</td>
+<td>柠檬酸钠（照片可见）</td>
+<td>可能吸潮结块</td>
+<td>缓冲盐/盐类溶解讨论</td>
+<td>不做缓冲液精确 pH</td>
+</tr>
+<tr>
+<td style="text-align:right">22?</td>
+<td>过磷酸钙（照片有一瓶标签疑似，编号被遮挡）</td>
+<td>肥料混合物，本身成分不单一；会吸湿结块</td>
+<td>只能作“肥料/混合物/难溶与可溶部分”观察</td>
+<td>不做纯试剂实验；不与未知酸碱混合</td>
+</tr>
+<tr>
+<td style="text-align:right">27</td>
+<td>草酸</td>
+<td>可能含结晶水变化；有毒</td>
+<td>教师微量演示酸性或与钙盐沉淀</td>
+<td>不给学生动手；不加热；不入口</td>
+</tr>
+<tr>
+<td style="text-align:right">28</td>
+<td>蒸馏水</td>
+<td>开封分装后会吸收 CO2，可能有微生物或离子污染</td>
+<td>普通溶解、洗涤、对照水</td>
+<td>不作无菌水或高纯水</td>
+</tr>
+<tr>
+<td style="text-align:right">32</td>
+<td>无水亚硫酸钠</td>
+<td>会吸湿并被空气氧化成硫酸盐，还原性下降</td>
+<td>还原性演示需先预检；也可作“保存导致性质下降”案例</td>
+<td>不做定量还原剂、脱氧剂或标准溶液</td>
+</tr>
+<tr>
+<td style="text-align:right">33</td>
+<td>硫酸亚铁铵</td>
+<td>Fe(II) 会被空气氧化成 Fe(III)，颜色可能变黄褐</td>
+<td>铁盐颜色/氧化变质讨论；Fe(II) 反应需先预检</td>
+<td>不做 Fe(II) 定量或标准滴定</td>
+</tr>
+<tr>
+<td style="text-align:right">42</td>
+<td>氯化钙</td>
+<td>强吸湿，可能变成水合物或半潮湿颗粒，放热变弱</td>
+<td>第 4 节放热溶解可用，但必须课前用 1 g + 10 mL 水测温</td>
+<td>不把升温幅度当纯无水氯化钙数据</td>
+</tr>
+<tr>
+<td style="text-align:right">43</td>
+<td>氯化铵</td>
+<td>可能吸湿结块；与碱会放出氨味</td>
+<td>吸热溶解可作教师备选；盐类溶解</td>
+<td>不与碱混合给学生闻；不密闭加热</td>
+</tr>
+<tr>
+<td style="text-align:right">44</td>
+<td>无水乙酸钠</td>
+<td>会吸水变为水合乙酸钠，影响“热冰”结晶效果</td>
+<td>普通盐类溶解、乙酸盐讨论；热冰实验需重结晶/重配</td>
+<td>不直接做过饱和热冰，成功率不稳</td>
+</tr>
+<tr>
+<td style="text-align:right">45</td>
+<td>氯化锌</td>
+<td>很吸湿、可潮解，水溶液酸性且有腐蚀性</td>
+<td>仅教师用于盐类/腐蚀性讨论，必要时微量</td>
+<td>不给学生动手；不用于开放混合实验</td>
+</tr>
+<tr>
+<td style="text-align:right">46</td>
+<td>硫代硫酸钠</td>
+<td>常见为水合物，可能风化/吸湿；酸中会分解出硫浑浊</td>
+<td>与稀酸产生浑浊、还原碘的定性演示需预检</td>
+<td>不做浓度或反应速率精确实验</td>
+</tr>
+<tr>
+<td style="text-align:right">48</td>
+<td>硫酸铜</td>
+<td>若是蓝色水合物，通常还可用；若受潮/混入杂质会影响质量</td>
+<td>铜盐颜色、结晶、置换反应定性</td>
+<td>不用来计算水合数</td>
+</tr>
+<tr>
+<td style="text-align:right">49</td>
+<td>无水硫酸铜</td>
+<td>极易吸水变蓝，失去“无水检水”可靠性</td>
+<td>如果仍近白色，可预检后作水检测；若已蓝，只当普通硫酸铜用</td>
+<td>不把蓝色样品当无水干燥剂/检水剂</td>
+</tr>
+<tr>
+<td style="text-align:right">51</td>
+<td>硫酸亚铁</td>
+<td>Fe(II) 容易氧化成 Fe(III)，潮湿时更快</td>
+<td>铁盐氧化变质案例；Fe(II) 定性反应需预检</td>
+<td>不做定量或标准还原剂</td>
+</tr>
+<tr>
+<td style="text-align:right">52</td>
+<td>无水硫酸钠</td>
+<td>易吸水转为水合盐，干燥能力下降</td>
+<td>当普通硫酸钠盐类使用</td>
+<td>不作干燥剂或含水量实验</td>
+</tr>
+<tr>
+<td style="text-align:right">62</td>
+<td>碳酸氢铵</td>
+<td>会缓慢分解并放出氨、二氧化碳和水，量会减少、气味变</td>
+<td>可作“易分解盐/闻到氨味说明挥发”的教师演示；也可做吸热溶解预检</td>
+<td>不做定量产气；不让学生闻瓶口</td>
+</tr>
+<tr>
+<td style="text-align:right">65</td>
+<td>氢氧化钙</td>
+<td>会吸收 CO2 生成碳酸钙，碱性下降</td>
+<td>先测 pH；若仍显碱性，可配石灰水做 CO2 浑浊</td>
+<td>不作准确浓度碱液</td>
+</tr>
+<tr>
+<td style="text-align:right">80</td>
+<td>铁钉</td>
+<td>表面生锈</td>
+<td>铁生锈、金属材料、磁性观察</td>
+<td>不做“全新铁表面”对照</td>
+</tr>
+<tr>
+<td style="text-align:right">81</td>
+<td>铜丝</td>
+<td>表面氧化/硫化变暗</td>
+<td>导电性、金属颜色、简单材料观察</td>
+<td>不做表面洁净度要求高的反应</td>
+</tr>
+<tr>
+<td style="text-align:right">84</td>
+<td>硫酸铁</td>
+<td>可能吸湿、水解结块</td>
+<td>Fe(III) 盐颜色、与碱生成沉淀的教师演示</td>
+<td>不做标准溶液或定量</td>
+</tr>
+<tr>
+<td style="text-align:right">86</td>
+<td>无水醋酸钠</td>
+<td>同无水乙酸钠，吸水后热冰效果不稳</td>
+<td>普通乙酸盐溶解；重配后再尝试热冰</td>
+<td>不直接做过饱和结晶成功演示</td>
+</tr>
+<tr>
+<td style="text-align:right">87</td>
+<td>琼脂</td>
+<td>可能吸湿、结块、受微生物污染</td>
+<td>若干燥无霉味，可做凝胶材料演示</td>
+<td>不做微生物培养基或入口</td>
+</tr>
+<tr>
+<td style="text-align:right">90</td>
+<td>硬水</td>
+<td>成分随开封、蒸发、CO2 交换变化</td>
+<td>与肥皂/碳酸盐做定性硬水对比</td>
+<td>不作标准硬度水</td>
+</tr>
+<tr>
+<td style="text-align:right">93</td>
+<td>铁屑</td>
+<td>表面锈蚀、吸潮，反应活性变化</td>
+<td>磁性、铁氧化、材料观察</td>
+<td>不做定量还原或反应速率</td>
+</tr>
+</tbody>
+</table>
+<h3>问题严重或安全风险高，不建议用于学生动手</h3>
+<p>这类要么保存后有效成分很可能明显变化，要么即使没变也不适合五年级学生直接使用。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>照片识别名称</th>
+<th>主要问题</th>
+<th>处理建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">未见编号</td>
+<td>过氧化氢/双氧水</td>
+<td>分装透明小瓶半年后很可能分解，浓度不可知；受光、热、杂质影响会更快失效</td>
+<td>不用于定量或关键实验。若要用，只能课前滴加二氧化锰/酵母测试是否明显冒泡；效果弱就换新 3% 药店双氧水</td>
+</tr>
+<tr>
+<td style="text-align:right">38</td>
+<td>氧化钙</td>
+<td>会吸水、吸 CO2，逐渐变成氢氧化钙/碳酸钙；遇水强放热且腐蚀性强</td>
+<td>不用于学生动手，也不替代氯化钙做放热溶解。若保留，只作教师讲解“变质/吸水”的样品</td>
+</tr>
+<tr>
+<td style="text-align:right">66</td>
+<td>氢氧化钡</td>
+<td>强碱且钡盐有毒；会吸收 CO2 生成碳酸钡，状态不可靠</td>
+<td>不用于五年级学生实验；建议单独封存并贴“教师专用/不使用”</td>
+</tr>
+<tr>
+<td style="text-align:right">疑似未清晰编号</td>
+<td>氢氧化钾</td>
+<td>强碱，强吸湿/潮解，腐蚀性高；普通瓶保存后浓度和形态不可控</td>
+<td>不用于学生动手；不与铵盐混合</td>
+</tr>
+<tr>
+<td style="text-align:right">45</td>
+<td>氯化锌</td>
+<td>潮解后可能形成酸性腐蚀性液体；对皮肤和眼睛风险高</td>
+<td>不给学生动手；若瓶内已潮湿，按高风险试剂封存</td>
+</tr>
+<tr>
+<td style="text-align:right">69</td>
+<td>标签疑似“黄酸钠”或其他黄色钠盐，未能可靠识别</td>
+<td>名称不确定；若是含铬/铁氰络合物等，安全边界不同</td>
+<td>名称未确认前不使用</td>
+</tr>
+<tr>
+<td style="text-align:right">27</td>
+<td>草酸</td>
+<td>有毒，粉末和溶液均不适合学生随意接触</td>
+<td>只保留教师微量演示；优先用柠檬酸替代酸性实验</td>
+</tr>
+<tr>
+<td style="text-align:right">6/15/16/19</td>
+<td>洋红、品红、酚酞、碘伏等染料/指示剂</td>
+<td>虽不一定失效，但浓度、溶剂和染料稳定性不可控；有染色污染风险</td>
+<td>只能预检后微量使用，学生不直接分装</td>
+</tr>
+</tbody>
+</table>
+<h2>适合第 4 节“溶解吸热/放热/变化小”的建议</h2>
+<p>在现有保存条件下，建议使用：</p>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>推荐试剂</th>
+<th>理由</th>
+<th>课前预检</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>温度变化小</td>
+<td><code>41 氯化钠</code>（已用掉）</td>
+<td>需补充食盐或标签明确的氯化钠后再作对照</td>
+<td>2.0 g + 10 mL 水，温度变化应很小</td>
+</tr>
+<tr>
+<td>吸热</td>
+<td><code>4 尿素</code>（已用掉）</td>
+<td>需补充新包装尿素；它比小苏打更容易得到明显降温，且比氯化铵更适合五年级</td>
+<td>1.0 g + 10 mL 水应有可测降温</td>
+</tr>
+<tr>
+<td>放热</td>
+<td><code>42 氯化钙</code>（已用掉，原样已液化）</td>
+<td>必须补充干燥、标签完整的<strong>固体</strong>氯化钙；原来的液体不适合此实验</td>
+<td>1.0 g + 10 mL 水若升温不到约 2 °C，就换新鲜氯化钙</td>
+</tr>
+</tbody>
+</table>
+<p>不建议把 <code>43 氯化铵</code> 作为主方案给学生做吸热，因为它与碱类接触会放出氨味，课堂管理风险比尿素高。也不建议用 <code>38 氧化钙</code> 代替氯化钙做放热，虽然现象强，但腐蚀性和放热风险不适合五年级动手。</p>
+<h2>快速预检流程</h2>
+<ol>
+<li>看标签：名称、编号、危险性不清楚的直接不用。</li>
+<li>看外观：潮解成液体、明显变色、发霉、有强烈异味、瓶盖污染的直接不用。</li>
+<li>对溶解温度实验：每种先用 <code>1.0 g</code> 固体 + <code>10 mL</code> 水做教师预实验，记录 2 分钟内最高/最低温。</li>
+<li>对酸碱/指示剂：先用白醋和小苏打水各滴一滴测试，能稳定变色再上课。</li>
+<li>对双氧水：只用新买 3% 双氧水；旧双氧水即使冒泡，也不作为可靠试剂。</li>
+</ol>
+<h2>按照片识别到的试剂索引</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">编号</th>
+<th>名称</th>
+<th>状态归类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">2</td>
+<td>木炭</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>尿素</td>
+<td>已用掉，待补充</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>还原铁粉</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>洋红</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>锌粒</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>脱脂棉</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>硅酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>活性炭</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>聚乙烯</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>粗盐</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>石英砂</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>石蕊</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td>品红</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td>酚酞</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td>石蜡/葡萄糖（照片有编号冲突）</td>
+<td>需核对；两者本身都较稳定</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td>蔗糖</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td>碘伏</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td>硼酸</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">21</td>
+<td>柠檬酸</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">22</td>
+<td>柠檬酸钠；另有疑似过磷酸钙标签</td>
+<td>需核对</td>
+</tr>
+<tr>
+<td style="text-align:right">23</td>
+<td>硼砂</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">24</td>
+<td>淀粉</td>
+<td>可靠，需防霉</td>
+</tr>
+<tr>
+<td style="text-align:right">25</td>
+<td>明矾</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">26</td>
+<td>凡士林</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">27</td>
+<td>草酸</td>
+<td>高风险，教师专用</td>
+</tr>
+<tr>
+<td style="text-align:right">28</td>
+<td>蒸馏水</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">32</td>
+<td>无水亚硫酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">33</td>
+<td>硫酸亚铁铵</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">34</td>
+<td>二氧化硅</td>
+<td>已用掉，待补充</td>
+</tr>
+<tr>
+<td style="text-align:right">35</td>
+<td>二氧化锰</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">36</td>
+<td>三氧化二铁</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">37</td>
+<td>氧化铜</td>
+<td>可靠，教师专用更合适</td>
+</tr>
+<tr>
+<td style="text-align:right">38</td>
+<td>氧化钙</td>
+<td>不建议学生使用</td>
+</tr>
+<tr>
+<td style="text-align:right">39</td>
+<td>氧化铝</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">40</td>
+<td>氯化钾</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">41</td>
+<td>氯化钠</td>
+<td>已用掉，待补充</td>
+</tr>
+<tr>
+<td style="text-align:right">42</td>
+<td>氯化钙</td>
+<td>已用掉；原样已液化，不用于放热溶解实验</td>
+</tr>
+<tr>
+<td style="text-align:right">43</td>
+<td>氯化铵</td>
+<td>可有限使用，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">44</td>
+<td>无水乙酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">45</td>
+<td>氯化锌</td>
+<td>高风险，教师专用/不建议</td>
+</tr>
+<tr>
+<td style="text-align:right">46</td>
+<td>硫代硫酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">47</td>
+<td>硫酸钠</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">48</td>
+<td>硫酸铜</td>
+<td>已用掉，待补充</td>
+</tr>
+<tr>
+<td style="text-align:right">49</td>
+<td>无水硫酸铜</td>
+<td>可有限使用；检水需预检</td>
+</tr>
+<tr>
+<td style="text-align:right">50</td>
+<td>硫酸镁</td>
+<td>可靠但不做含水量定量</td>
+</tr>
+<tr>
+<td style="text-align:right">51</td>
+<td>硫酸亚铁</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">52</td>
+<td>无水硫酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">56</td>
+<td>硫酸锌</td>
+<td>可靠，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">59</td>
+<td>碳酸钙</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td>碳酸氢钠</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">62</td>
+<td>碳酸氢铵</td>
+<td>可有限使用，易分解</td>
+</tr>
+<tr>
+<td style="text-align:right">63</td>
+<td>碱式碳酸铜</td>
+<td>可靠，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">64</td>
+<td>石墨</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">65</td>
+<td>氢氧化钙</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">66</td>
+<td>氢氧化钡</td>
+<td>不建议学生使用</td>
+</tr>
+<tr>
+<td style="text-align:right">68</td>
+<td>四氧化三铁</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">69</td>
+<td>名称不清，疑似黄色钠盐</td>
+<td>不使用，待确认</td>
+</tr>
+<tr>
+<td style="text-align:right">70</td>
+<td>溴化钾</td>
+<td>可靠，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">71</td>
+<td>磷矿粉</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">75</td>
+<td>硬脂酸</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">76</td>
+<td>氢氧化铝</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">80</td>
+<td>铁钉</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">81</td>
+<td>铜丝</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">83</td>
+<td>硫酸锰</td>
+<td>可靠，教师控制</td>
+</tr>
+<tr>
+<td style="text-align:right">84</td>
+<td>硫酸铁</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">85</td>
+<td>磷酸二氢钾</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">86</td>
+<td>无水醋酸钠</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">87</td>
+<td>琼脂</td>
+<td>可靠，需防霉</td>
+</tr>
+<tr>
+<td style="text-align:right">89</td>
+<td>大理石</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">90</td>
+<td>硬水</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">91</td>
+<td>滑石粉</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">92</td>
+<td>高岭土</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">93</td>
+<td>铁屑</td>
+<td>可有限使用</td>
+</tr>
+<tr>
+<td style="text-align:right">95</td>
+<td>黄铜片</td>
+<td>可靠</td>
+</tr>
+<tr>
+<td style="text-align:right">未见编号</td>
+<td>过氧化氢/双氧水</td>
+<td>问题严重，优先换新</td>
+</tr>
+</tbody>
+</table>
+</article></main>
+<script>
+(() => {
+  function revealDocument() {
+    const id = location.hash.slice(1);
+    if (id !== 'lesson-content' && !id.startsWith('md-preview-')) return;
+    requestAnimationFrame(() => {
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({block: 'start', behavior: 'instant'});
+    });
+  }
+  window.addEventListener('hashchange', revealDocument);
+  window.addEventListener('pageshow', revealDocument);
+})();
+</script>
+
+</body>
+</html>

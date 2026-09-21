@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 4 节：热能怎样传递？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 4 节：热能怎样传递？</h1>
+</header>
+<main>
+<p><strong>Lesson 4: How Does Thermal Energy Transfer?</strong></p>
+<p><strong>授课状态</strong>：已完成；实际授课第 4 节。</p>
+<h2>家长课前准备（Materials for Parents）</h2>
+<p>请按下面一张清单一次备齐；同一种材料不重复列出。</p>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>家长需要准备的材料与数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>共用</td>
+<td>清水约 2 L；55–60°C 温水约 1 L（装保温壶）；透明小杯 5 个（150–250 mL）；有边托盘或干净盒盖 3 个；透明胶带 1 卷；学生尺 1 把；剪刀 1 把；吸水布 2 块或厨房纸约 10 张</td>
+</tr>
+<tr>
+<td>导入</td>
+<td>小橡胶球或弹力球 1 个</td>
+</tr>
+<tr>
+<td>实验 1：冷热水混合</td>
+<td>使用共用材料，无需另备</td>
+</tr>
+<tr>
+<td>实验 2：传导</td>
+<td>不锈钢筷、竹/木筷、塑料/密胺筷各 1 根（20–25 cm）；无盐黄油约 2 g；内径约 5 mm 的普通饮料吸管 1 根；牙签 1 根；耐热宽口杯或饭盒 1 个（500–800 mL）；快递箱硬纸板 1 块（约 15 cm × 20 cm）；8 mm × 8 mm 小纸片 3 张</td>
+</tr>
+<tr>
+<td>实验 3：对流</td>
+<td>透明高杯 2 个（400–600 mL）；红、蓝食用色素各约 5 滴；5–10°C 冷藏水约 100 mL（没有时用 4–6 块冰临时降温）</td>
+</tr>
+<tr>
+<td>实验 4：辐射</td>
+<td>哑光黑卡、白卡各 A4 1 张；相同耐热玻璃杯或金属杯 2 只（100–200 mL）；同型号快速电子探针温度计 2 支（建议 ±0.5°C、0.1°C、响应不超过 5 秒）；60 W E27 白炽或卤素反射型宠物晒背加热灯 1 只（不含 UVB、不是 LED）；额定功率不低于 60 W 的陶瓷 E27 配套灯具 1 套；不能倾倒的固定架 1 套；带开关插线板 1 个；美纹纸胶带约 1 m</td>
+</tr>
+</tbody>
+</table>
+<p>未列入上表的实验室现有器材由教师准备。本课不用化学试剂、酒精或酒精灯。</p>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>主题</strong>：热能的三种传递形式：传导、对流和辐射<br />
+<em>Three forms of thermal energy transfer: conduction, convection, and radiation</em></li>
+<li><strong>建议课时</strong>：115–120 分钟</li>
+<li><strong>核心问题</strong>：热能可以通过哪三种形式传递？每一种是怎样发生的？<br />
+<em>What are the three forms of thermal energy transfer, and how does each one work?</em></li>
+</ul>
+<p>本节的核心不是背诵三个英文词，而是能根据“能量怎样移动”辨认并解释三种形式：</p>
+<blockquote>
+<p><strong>传导（conduction）：热能通过接触传递。Conduction transfers thermal energy through direct contact.</strong><br />
+<strong>对流（convection）：移动的液体或气体携带热能。Convection carries thermal energy in a moving liquid or gas.</strong><br />
+<strong>辐射（radiation）：能量以波传播，不需要物体接触。Radiation transfers energy in waves without direct contact.</strong></p>
+</blockquote>
+<p>三种形式共同遵守的方向规律是：热能净传递从温度较高处指向温度较低处。</p>
+<p>开头用小球和上一节蜡烛现象，用约 10–12 分钟认识一般意义上的<strong>能量（energy）</strong>：能量可以储存、转移和转化。</p>
+<p>随后通过四个按时间推进的证据实验研究热能：实验 1 先建立共同的传递方向，实验 2–4 分别研究三种传递形式。</p>
+<ol>
+<li>混合温水和冷水，直接测量热源降温、冷处升温。</li>
+<li>比较家用金属筷、竹/木筷和塑料/密胺筷中的传导表现。</li>
+<li>用有色水观察液体运动怎样传递热能。</li>
+<li>用黑、白表面杯比较吸收辐射后水温的变化。</li>
+</ol>
+<p>本节结束时，学生应能：</p>
+<ol>
+<li>说清传导、对流和辐射各自怎样传递热能。</li>
+<li>根据是否接触、物质状态和观察到的运动，辨认课堂现象主要体现哪一种传递形式。</li>
+<li>用本课三个实验的证据分别解释传导、对流和辐射。</li>
+<li>用箭头表示热能净传递从较高温处指向较低温处。</li>
+<li>根据黑、白杯的温升数据，说明不同表面吸收辐射能量的表现可能不同。</li>
+</ol>
+<h2>二、重要概念与教师核心问答</h2>
+<h3>重要概念（Key concepts）</h3>
+<ul>
+<li><strong>能量（energy）</strong>：能使物体运动、升温、发光、发声或发生其他变化。我们不能直接“看见能量”，但可以从变化和测量结果推断能量的转移或转化。</li>
+<li><strong>能量转移（energy transfer）</strong>：能量从一个物体、位置或系统传到另一个物体、位置或系统。</li>
+<li><strong>能量转化（energy transformation）</strong>：能量从一种形式变为另一种形式。例如蜡烛中储存的化学能转化并转移为光和热。</li>
+<li><strong>温度（temperature）</strong>：表示物体冷热程度的测量量，本课用摄氏度（degrees Celsius, °C）记录。</li>
+<li><strong>热能传递（thermal energy transfer）</strong>：由于存在温度差而发生的能量转移。课堂口语中可以说“热从热处传向冷处”，但不要把热说成一种会流出的物质。</li>
+<li><strong>传导（conduction）</strong>：热能通过接触传递。</li>
+<li><strong>对流（convection）</strong>：移动的液体或气体携带热能。</li>
+<li><strong>辐射（radiation）</strong>：能量以波传播，不要求物体接触。</li>
+<li><strong>导体（conductor）</strong>：能量较容易通过的材料；金属通常是良好的热导体。</li>
+</ul>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">教师核心问答 / Core Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：什么是能量？我们能直接看见能量吗？</strong></p>
+<p><strong>参考回答：</strong> 能量使变化能够发生。我们通常不能直接看见能量，只能看到小球运动、物体升温、灯发光或听到声音，再根据这些变化推断能量发生了转移或转化。</p>
+<p><strong>问题：小球落地并停下来以后，原来的能量消失了吗？</strong></p>
+<p><strong>参考回答：</strong> 没有。部分能量转移到地面、小球和空气中，成为很小的热运动、声音和形变。五年级只需知道“能量没有凭空消失，而是转移或转化了”。</p>
+<p><strong>问题：热能传递需要什么条件？</strong></p>
+<p><strong>参考回答：</strong> 需要温度差。热能净传递从温度较高的一方指向温度较低的一方。</p>
+<p><strong>问题：冷水是不是把“冷”传给了温水？</strong></p>
+<p><strong>参考回答：</strong> 不是。“冷”不是流动的物质。温水把热能传给冷水，所以温水降温、冷水升温。</p>
+<p><strong>问题：温度和热能是不是同一个词？</strong></p>
+<p><strong>参考回答：</strong> 不是。温度表示冷热程度；热能传递描述能量因为温度差而移动。本节主要用温度变化作为热能传递的证据。</p>
+<p><strong>问题：传导、对流和辐射是不是三种不同方向？</strong></p>
+<p><strong>参考回答：</strong> 不是。方向仍由温度差决定，都是从较热处传向较冷处；三个词说明的是能量通过什么路径传递。</p>
+</div>
+</details>
+<h2>三、实验材料与课前准备</h2>
+<p>本课不使用现有旧化学试剂，也不需要学生直接接触明火、沸水或未知材料。器材照片中出现酒精灯和灯芯，但没有确认酒精燃料；本课不启用酒精灯。所有用水最高不超过 55°C。器材照片中也没有可确认的辐射热源；60 W 宠物晒背加热灯、配套灯具及两支同型号探针温度计都必须由家长额外准备。</p>
+<h3>器材照片可确认的现有器材</h3>
+<ul>
+<li>上一节蜡烛的照片、课堂记录或已使用的蜡烛 1 支；本课不必重新点燃</li>
+<li>普通液柱温度计 1 支</li>
+<li>量筒 1 支</li>
+<li>塑料滴管、胶头滴管和红胶头</li>
+<li>烧杯、试管和试管架</li>
+<li>玻璃搅拌棒</li>
+<li>铁架台</li>
+<li>护目镜和橡胶手套</li>
+<li>电子秤 1 台，可选</li>
+</ul>
+<p>器材图片不能确认多套相同杯子、多支温度计、秒表、托盘或三种材质的筷子，因此这些均已列入前面的家长准备。计时可以使用教师手机。</p>
+<h3>教师课前预检</h3>
+<ol>
+<li><strong>温度计检查</strong>：把所有温度计放进同一杯室温水，等待读数稳定。记录各温度计之间的固定偏差；同一实验中不要中途交换温度计。</li>
+<li><strong>传导材料检查</strong>：选择三根长度接近的金属、竹/木和塑料/密胺筷，使用粗端并使浸水深度同为 30 mm。用同一根内径约 5 mm 的吸管制作三枚直径约 5 mm、厚约 4 mm 的黄油圆柱，每枚约 0.06–0.08 g；若使用 0.01 g 电子秤，目标统一为 0.07 g，三份相差不超过 0.01 g。课前用 50–55°C 水测试，确认 6–8 分钟内金属筷上的黄油明显先软化。如果结果不明显，把黄油点从水面上方 30 mm 移到 20 mm，不提高水温。</li>
+<li><strong>对流颜色检查</strong>：暖色水温度控制在 40–45°C，冷藏水控制在 5–10°C。确认滴管能把暖色水轻轻送到杯底、把冷色水轻轻放到水面，避免用力喷射造成假流动。室温蓝水不能替代这一小份冷藏水。</li>
+<li><strong>辐射检查</strong>：使用 60 W 宠物晒背加热灯时，先把灯泡正面到两杯中心的距离固定为 40 cm；两杯处在同一距离弧线上、角度相同，杯中心间距尽量控制在 8–10 cm，并确认都完整落在光斑内。各装 60 mL 同一批室温水，预试 12 分钟。两杯温升都太小时，断电并等灯泡冷却后依次改为 35 cm、30 cm 再试，<strong>不得小于 30 cm</strong>；若光斑太窄不能均匀覆盖两杯，则应增加距离而不是把其中一杯移到光斑中心。确认两杯都升温且黑杯温升通常更大；若差异仍不稳定，保留真实数据并把结论限定为“本次差异不足以判断”，不临时改变公平条件。</li>
+<li>在桌上用胶带标出杯子、筷子定位盖和辐射灯具的位置，减少课堂搭装时间。</li>
+</ol>
+<h2>四、按时间推进的课堂脚本</h2>
+<h3>一眼速查（Quick timeline）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>做什么</th>
+<th>本段只留下的一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–12</td>
+<td>小球 + 上节蜡烛，建立 general energy 概念</td>
+<td>能量可以转移和转化</td>
+</tr>
+<tr>
+<td style="text-align:right">12–32</td>
+<td>实验 1：温水 + 冷水，测量温度</td>
+<td>三种传递形式都遵守：净传递从高温处到低温处</td>
+</tr>
+<tr>
+<td style="text-align:right">32–55</td>
+<td>实验 2：三种家用筷子的传导比较</td>
+<td>传导：通过接触，能量沿物质逐步传递</td>
+</tr>
+<tr>
+<td style="text-align:right">55–65</td>
+<td>休息、换水、整理桌面</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align:right">65–83</td>
+<td>实验 3：有色暖水和冷水</td>
+<td>对流：液体或气体整体运动并携带能量</td>
+</tr>
+<tr>
+<td style="text-align:right">83–106</td>
+<td>实验 4：黑白杯完整辐射实验</td>
+<td>辐射：电磁波传递能量，不要求接触</td>
+</tr>
+<tr>
+<td style="text-align:right">106–120</td>
+<td>比较三种形式、离堂题和口头总结</td>
+<td>看能量怎样移动：传导 / 对流 / 辐射</td>
+</tr>
+</tbody>
+</table>
+<h3>0–12 分钟：用小球建立 general energy 概念</h3>
+<h4>做</h4>
+<ol>
+<li>教师把小球举到肩部高度，学生预测释放后会发生什么。</li>
+<li>松手，让小球落到托盘或地垫上，观察运动、弹起、声音和最后停止。</li>
+<li>回看上一节蜡烛：蜡燃烧时除了形成新物质，还发出光并使周围变热。</li>
+<li>画两条能量链，指出能量发生了转移和转化。</li>
+</ol>
+<pre><code class="language-text">小球：重力势能 → 动能 → 声音 + 很少的热能
+Ball: gravitational potential energy → kinetic energy → sound + a little thermal energy
+
+蜡烛：化学能 → 光能 + 热能
+Candle: chemical energy → light energy + thermal energy
+</code></pre>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：我们怎样知道蜡烛把能量传到了周围？</strong></p>
+<p><strong>参考回答：</strong> 我们看见光，也能测到周围物体或空气温度改变。变化是能量转移的证据。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书与记录 / Board notes &amp; record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">能量 energy：使变化能够发生。
+能量可以转移和转化。
+Energy can be transferred and transformed.
+
+今天只追踪：热能 thermal energy
+</code></pre>
+<p>不安排 general energy 词汇抄写或单独练习，立即进入实验 1。</p>
+</div>
+</details>
+<h3>12–32 分钟｜实验 1：温水和冷水混合——热能往哪边走？</h3>
+<p><strong>用量</strong>：45–50°C 温水 50 mL；室温水 50 mL。这里把相对较冷的室温水简称为“冷水”，不需要冰水。</p>
+<h4>做</h4>
+<ol>
+<li>标记三个透明杯：<code>W 温水</code>、<code>C 冷水</code>、<code>M 混合</code>。</li>
+<li>量取温水和冷水各 50 mL。分别测量初温，记为 <code>T_warm</code> 和 <code>T_cold</code>。</li>
+<li>先记录预测：混合温度会高于温水、低于冷水，还是位于二者之间？</li>
+<li>把两杯水同时倒入 M 杯，轻轻搅拌 5 秒并开始计时。</li>
+<li>在 0、30、60、90 和 120 秒记录 M 杯温度。温度计感温端不碰杯底和杯壁。</li>
+<li>画出从温水指向冷水的热能箭头。教师在这里顺带指出：学校讲义把较高温一方叫 <strong>source</strong>、较低温一方叫 <strong>destination</strong>。</li>
+</ol>
+<p><strong>预期结果</strong>：混合温度位于两杯初温之间并逐渐稳定。温水传出能量而降温，冷水接收能量而升温。终温不必恰好等于两个初温的算术平均，因为杯子、温度计和空气也参与能量传递。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>测量项目</th>
+<th style="text-align:right">温度/°C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>温水初温 <code>T_warm</code></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>冷水初温 <code>T_cold</code></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>预测的混合温度</td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">混合后时间/s</th>
+<th style="text-align:right">0</th>
+<th style="text-align:right">30</th>
+<th style="text-align:right">60</th>
+<th style="text-align:right">90</th>
+<th style="text-align:right">120</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">混合水温度/°C</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">热能方向：__________ → __________
+证据：混合温度是__________°C，位于__________°C 和__________°C 之间。
+</code></pre>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：热能净传递的箭头应该从哪一杯指向哪一杯？</strong></p>
+<p><strong>参考回答：</strong> 从初温较高的温水指向初温较低的冷水。</p>
+<p><strong>问题：哪一条数据最能证明热能发生了传递？</strong></p>
+<p><strong>参考回答：</strong> 混合温度落在 <code>T_warm</code> 和 <code>T_cold</code> 之间。</p>
+<p><strong>问题：两杯水初温相同时，还会有可测的净热能传递吗？</strong></p>
+<p><strong>参考回答：</strong> 不会。没有温度差时，不会出现一个方向上的净热能传递。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">有温差 → 发生热能传递
+较高温一方 → 较低温一方
+校内标签（只认读）：source / destination
+</code></pre>
+<p>这一段只为后三个实验建立共同的方向规律。后三种形式的比较才是全课主线；若时间不足，精简本段记录点，不删实验 2–4 的核心观察和课末比较。</p>
+</div>
+</details>
+<h3>32–55 分钟｜实验 2：传导——能量沿哪种固体传得更快？</h3>
+<p><strong>用量</strong>：50–55°C 温水约 400 mL；黄油 3 枚，每枚直径约 5 mm、厚约 4 mm、约 0.06–0.08 g。</p>
+<h4>家用筷子与装置</h4>
+<p>使用家里容易找到的三根筷子：不锈钢筷、竹/木筷、塑料/密胺筷各一根。优先选择长度约 20–25 cm、粗细接近、表面没有装饰的筷子；不锈钢筷即使是家用空心筷也可以。三根不必完全同型号，但必须使用粗细较接近的一端，并把实验结论限定在“这三根筷子”。</p>
+<ol>
+<li>用快递箱纸板剪一块能盖住杯口的定位盖，平行剪 3 条短缝；缝间距约 30 mm，以刚好卡住筷子为准，不要求量孔径。</li>
+<li>把三根筷子的粗端穿过纸板，调节高度，使每根下端都浸入水中 <strong>30 mm</strong>，三根尽量平行。</li>
+<li>把同一块黄油放到室温下软化到能切取但不流动。将同一根内径约 5 mm 的吸管垂直压入黄油约 4 mm，用平边刮平吸管口，再用牙签推出；连续制作 3 枚相同圆柱。不要用手把三份分别搓成球，以免大小和温度不同。</li>
+<li>若有分辨率 0.01 g 的电子秤，把每枚校到约 0.07 g，三枚相差不超过 0.01 g；没有电子秤时，以同一吸管、同一压入深度和刮平方式控制一致。</li>
+<li>从水面向上量 <strong>30 mm</strong>，把三枚黄油分别轻压在三根筷子朝向学生的一侧；只压到能够粘住，避免把某一枚摊得特别薄。</li>
+<li>把 8 mm × 8 mm 小纸片同一条边插入每枚黄油约 2 mm，方向和角度相同，让纸片像小旗一样向外伸出。胶带只固定纸板和标记水面线，不用来粘黄油或纸旗。</li>
+<li>把三根筷子一起放进同一个 500–800 mL 家用宽口耐热杯或饭盒，加入约 400 mL、50–55°C 温水。共用同一水浴可让三根筷子的下端面对接近的温度条件。</li>
+</ol>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9IjcyMCIgdmlld0JveD0iMCAwIDExMDAgNzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+5a6e6aqMIDIg5LiJ56eN5a6255So56235a2Q55qE5Lyg5a+85q+U6L6DPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5LiN6ZSI6ZKi562344CB56u55pyo56235ZKM5aGR5paZ5a+G6IO6562356m/6L+H5b+r6YCS566x57q45p2/5LiK55qE5LiJ5p2h55+t57yd77yM57KX56uv5ZCM5pe25rW45YWl5LqU5Y2B5Yiw5LqU5Y2B5LqU5pGE5rCP5bqm5rip5rC05LiJ5Y2B5q+r57Gz44CC5q+P5qC556235a2Q5Zyo5rC06Z2i5LiK5pa55LiJ5Y2B5q+r57Gz5aSE55So57Gz57KS5aSn5bCP6buE5rK557KY5YWr5q+r57Gz57q45peX44CCPC9kZXNjPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICB0ZXh0IHsgZm9udC1mYW1pbHk6ICJOb3RvIFNhbnMgU0MiLCAiTWljcm9zb2Z0IFlhSGVpIiwgQXJpYWwsIHNhbnMtc2VyaWY7IGZpbGw6ICMxNzMyNGQ7IH0KICAgICAgLnRpdGxlIHsgZm9udC1zaXplOiAzMHB4OyBmb250LXdlaWdodDogNzAwOyB9CiAgICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMjFweDsgZm9udC13ZWlnaHQ6IDY1MDsgfQogICAgICAuc21hbGwgeyBmb250LXNpemU6IDE4cHg7IH0KICAgICAgLmRpbSB7IHN0cm9rZTogIzU3NmI3ZDsgc3Ryb2tlLXdpZHRoOiAyOyBmaWxsOiBub25lOyBtYXJrZXItc3RhcnQ6IHVybCgjYXJyb3cpOyBtYXJrZXItZW5kOiB1cmwoI2Fycm93KTsgfQogICAgICAuZ3VpZGUgeyBzdHJva2U6ICM4YTlhYWE7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlLWRhc2hhcnJheTogNyA2OyBmaWxsOiBub25lOyB9CiAgICA8L3N0eWxlPgogICAgPG1hcmtlciBpZD0iYXJyb3ciIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iNSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjUiIG1hcmtlckhlaWdodD0iNSIgb3JpZW50PSJhdXRvLXN0YXJ0LXJldmVyc2UiPgogICAgICA8cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIHoiIGZpbGw9IiM1NzZiN2QiLz4KICAgIDwvbWFya2VyPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJ3YXRlciIgeDE9IjAiIHgyPSIwIiB5MT0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNjOWVlZjciLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4NGQzZTYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN0ZWVsIiB4MT0iMCIgeDI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM5ZWFiYjUiLz48c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iI2VlZjNmNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzdkOGQ5OSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CgogIDx0ZXh0IHg9IjU1MCIgeT0iNDgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJ0aXRsZSI+5a6e6aqMIDLvvJrkuInnp43lrrbnlKjnrbflrZDvvIzlhbHnlKjlkIzkuIDmuKnmsLTmtbQ8L3RleHQ+CgogIDxwYXRoIGQ9Ik0xNzUgNDA4IEwyMDUgNjI1IFEyMTAgNjU1IDI0MCA2NTUgTDg2MCA2NTUgUTg5MCA2NTUgODk1IDYyNSBMOTI1IDQwOCBaIiBmaWxsPSIjZjdmYmZkIiBzdHJva2U9IiM1NTc2OGMiIHN0cm9rZS13aWR0aD0iNSIvPgogIDxwYXRoIGQ9Ik0xOTggNDQ4IEwyMjMgNjIyIFEyMjYgNjMyIDI0MCA2MzIgTDg2MCA2MzIgUTg3NCA2MzIgODc3IDYyMiBMOTAyIDQ0OCBaIiBmaWxsPSJ1cmwoI3dhdGVyKSIgb3BhY2l0eT0iLjk0Ii8+CiAgPGxpbmUgeDE9IjE5OCIgeTE9IjQ0OCIgeDI9IjkwMiIgeTI9IjQ0OCIgc3Ryb2tlPSIjMjQ5OGI5IiBzdHJva2Utd2lkdGg9IjQiLz4KICA8dGV4dCB4PSI3ODUiIHk9IjQ5MiIgY2xhc3M9ImxhYmVsIj7nuqYgNDAwIG1MIOa4qeawtDwvdGV4dD4KICA8dGV4dCB4PSI3ODUiIHk9IjUyMiIgY2xhc3M9InNtYWxsIj41MOKAkzU1wrBDPC90ZXh0PgoKICA8cmVjdCB4PSIxNzAiIHk9IjM5NyIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIzMCIgcng9IjgiIGZpbGw9IiNkN2I5OGEiIHN0cm9rZT0iIzhiNmM0MiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGxpbmUgeDE9IjM0NCIgeTE9IjM5NyIgeDI9IjM2NiIgeTI9IjQyNyIgc3Ryb2tlPSIjNzI1YjNjIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8bGluZSB4MT0iNTM5IiB5MT0iMzk3IiB4Mj0iNTYxIiB5Mj0iNDI3IiBzdHJva2U9IiM3MjViM2MiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxsaW5lIHgxPSI3MzQiIHkxPSIzOTciIHgyPSI3NTYiIHkyPSI0MjciIHN0cm9rZT0iIzcyNWIzYyIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgeD0iOTQyIiB5PSI0MTgiIGNsYXNzPSJzbWFsbCI+5b+r6YCS566x57q45p2/5LiJ5p2h55+t57ydPC90ZXh0PgoKICA8cGF0aCBkPSJNMzUwIDkyIEwzNjUgNTEwIiBzdHJva2U9InVybCgjc3RlZWwpIiBzdHJva2Utd2lkdGg9IjE4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNNTQ1IDkyIEw1NjAgNTEwIiBzdHJva2U9IiNjNjkyNTgiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik01NTAgMTEwIEM1NTggMTUwIDU0OCAxOTAgNTU3IDIzNSBDNTQ5IDI4NSA1NjAgMzMwIDU1MiAzODAiIHN0cm9rZT0iIzhmNjAzNCIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBvcGFjaXR5PSIuNyIvPgogIDxwYXRoIGQ9Ik03NDAgOTIgTDc1NSA1MTAiIHN0cm9rZT0iIzU1N2Y5NiIgc3Ryb2tlLXdpZHRoPSIxOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CgogIDxnPgogICAgPGNpcmNsZSBjeD0iMzYwIiBjeT0iMzg1IiByPSI5IiBmaWxsPSIjZjRjNzViIiBzdHJva2U9IiM5Yjc0MjIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHJlY3QgeD0iMzY5IiB5PSIzNzYiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgcng9IjIiIGZpbGw9IiNmZmY4ZGMiIHN0cm9rZT0iI2IxOWI2MiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8Y2lyY2xlIGN4PSI1NTUiIGN5PSIzODUiIHI9IjkiIGZpbGw9IiNmNGM3NWIiIHN0cm9rZT0iIzliNzQyMiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cmVjdCB4PSI1NjQiIHk9IjM3NiIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiByeD0iMiIgZmlsbD0iI2ZmZjhkYyIgc3Ryb2tlPSIjYjE5YjYyIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxjaXJjbGUgY3g9Ijc1MCIgY3k9IjM4NSIgcj0iOSIgZmlsbD0iI2Y0Yzc1YiIgc3Ryb2tlPSIjOWI3NDIyIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxyZWN0IHg9Ijc1OSIgeT0iMzc2IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHJ4PSIyIiBmaWxsPSIjZmZmOGRjIiBzdHJva2U9IiNiMTliNjIiIHN0cm9rZS13aWR0aD0iMiIvPgogIDwvZz4KCiAgPHRleHQgeD0iMzU1IiB5PSI3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7kuI3plIjpkqLnrbc8L3RleHQ+CiAgPHRleHQgeD0iNTUwIiB5PSI3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7nq7nnrbcgLyDmnKjnrbc8L3RleHQ+CiAgPHRleHQgeD0iNzQ1IiB5PSI3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7loZHmlpkgLyDlr4bog7rnrbc8L3RleHQ+CgogIDxsaW5lIHgxPSI4MzAiIHkxPSIzODUiIHgyPSI4MzAiIHkyPSI0NDgiIGNsYXNzPSJkaW0iLz4KICA8dGV4dCB4PSI4MTAiIHk9IjM2MCIgdGV4dC1hbmNob3I9ImVuZCIgY2xhc3M9InNtYWxsIj7msLTpnaLkuIrmlrkgMzAgbW08L3RleHQ+CiAgPGxpbmUgeDE9Ijk0NSIgeTE9IjQ0OCIgeDI9Ijk0NSIgeTI9IjUxMCIgY2xhc3M9ImRpbSIvPgogIDx0ZXh0IHg9Ijk2NSIgeT0iNDg1IiBjbGFzcz0ic21hbGwiPua1uOawtCAzMCBtbTwvdGV4dD4KCiAgPHJlY3QgeD0iODE1IiB5PSIxOTUiIHdpZHRoPSIyNjAiIGhlaWdodD0iMTA4IiByeD0iMTAiIGZpbGw9IiNmZmZhZjAiIHN0cm9rZT0iI2IxOWI2MiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iODQ1IiBjeT0iMjQ3IiByPSIxMCIgZmlsbD0iI2Y0Yzc1YiIgc3Ryb2tlPSIjOWI3NDIyIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cmVjdCB4PSI4NTUiIHk9IjIyOCIgd2lkdGg9IjM2IiBoZWlnaHQ9IjM2IiByeD0iMyIgZmlsbD0iI2ZmZjhkYyIgc3Ryb2tlPSIjYjE5YjYyIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8dGV4dCB4PSI5MDciIHk9IjIyNSIgY2xhc3M9InNtYWxsIj7pu4TmsrnvvJrnsbPnspLlpKflsI88L3RleHQ+CiAgPHRleHQgeD0iOTA3IiB5PSIyNTIiIGNsYXNzPSJzbWFsbCI+57q45peX77yaOCDDlyA4IG1tPC90ZXh0PgogIDx0ZXh0IHg9IjkwNyIgeT0iMjc5IiBjbGFzcz0ic21hbGwiPuS4ieWkhOetiemrmOOAgeetiemHjzwvdGV4dD4KICA8bGluZSB4MT0iNzc3IiB5MT0iMzg1IiB4Mj0iODI1IiB5Mj0iMzAzIiBjbGFzcz0iZ3VpZGUiLz4KCiAgPHRleHQgeD0iNTUwIiB5PSI2OTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+5bC96YeP6YCJ6ZW/5bqm44CB57KX57uG5o6l6L+R55qE56235a2Q77yb57uT6K665Y+q6ZKI5a+56L+Z5LiJ5Liq5YW35L2T54mp5L2TPC90ZXh0Pgo8L3N2Zz4K" alt="实验 2 三种家用筷子与黄油纸旗装置" /></p>
+<h4>做</h4>
+<ol>
+<li>预测哪张纸旗最先下垂或掉落，并说明理由。</li>
+<li>教师加入温水并立即开始计时；学生每 30 秒观察一次。</li>
+<li>记录每个黄油点开始明显变软、纸旗下垂或掉落的时间，不用手触摸筷子上端。</li>
+<li>10 分钟内没有变化就如实写 <code>&gt;600 s</code>，不能写成“不会传热”。</li>
+<li>画能量路径：温水 → 筷子下端 → 筷子上方 → 黄油。</li>
+</ol>
+<p><strong>预期结果</strong>：不锈钢筷上的黄油通常最先软化；竹/木筷和塑料/密胺筷在 10 分钟内可能没有明显变化。三根家用筷子的粗细、空心结构和材质不可能完全一致，因此结论写成“在这套装置中，能量沿这根不锈钢筷传到黄油处最快”，不能把全部差异只归因于材料，也不把秒数当作精确导热系数。</p>
+<h4>讲</h4>
+<p>按照学校讲义的判断方法：较热处和较冷处互相接触，而且至少一方是固体，这种传递叫<strong>传导（conduction）</strong>。筷子没有从杯中跑到黄油旁边；是筷子里的粒子在原来的位置附近运动，并把能量一个接一个传给旁边的粒子。金属通常传得较快，所以金属筷上的黄油往往先软化。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>材料 Material</th>
+<th style="text-align:right">黄油软化或纸片滑落时间/s</th>
+<th>10 分钟内未滑落?</th>
+<th>传热快慢判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>金属 metal</td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>木材 wood</td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>塑料 plastic</td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">路径：__________ → 筷子下端 → 筷子上方 → __________
+传热最快的是__________；证据是__________。
+</code></pre>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：为什么这个实验主要体现传导？</strong></p>
+<p><strong>参考回答：</strong> 温水接触筷子下端，能量再沿固体筷子逐步传到上方黄油处；没有观察到筷子整体移动。</p>
+<p><strong>问题：不锈钢筷是在制造热吗？</strong></p>
+<p><strong>参考回答：</strong> 不是。金属只是让温水中的能量较快传到黄油处。</p>
+<p><strong>问题：一把金属勺放在热汤里，过一会儿勺柄也变热，为什么属于传导？</strong></p>
+<p><strong>参考回答：</strong> 热汤接触勺子，能量从较热的勺头沿固体金属逐步传到较冷的勺柄；勺子本身没有整体移动。</p>
+<p><strong>问题：三根筷子粗细不完全相同，会带来什么限制？</strong></p>
+<p><strong>参考回答：</strong> 我们不能证明差异全部来自材料，只能比较这三个具体物体在这套装置中的表现；所以三根仍要尽量选得接近，并保持浸水深度和黄油位置相同。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">传导 conduction：
+接触时，相邻粒子逐个传递能量；物体不需要整体移动。
+材料影响传递速度；金属通常是较好的 conductor。
+生活例子 examples：
+热汤 → 金属勺柄；热锅 → 接触锅底的食物；手 → 冰块
+</code></pre>
+<p>不要让学生靠触摸判断温度；触感受传热速度影响，也不如实验记录可靠。</p>
+</div>
+</details>
+<h3>55–65 分钟：休息与换场</h3>
+<p>学生离开实验桌休息约 8–10 分钟。教师倒掉传导实验温水，擦干桌面，重新准备两杯静止的室温水和红、蓝色水。休息不安排知识讲解。</p>
+<h3>65–83 分钟｜实验 3：对流——水怎样把能量带到别处？</h3>
+<p><strong>用量</strong>：两个高杯各装室温水约 300 mL；40–45°C 红色水约 15 mL；5–10°C 蓝色冷藏水约 15 mL。实际只需很少冷藏水，家长准备约 100 mL 是为了方便取用和预试。</p>
+<h4>做</h4>
+<ol>
+<li>两个高杯分别装 300 mL 室温水，静置到水面平稳。</li>
+<li>A 杯：用长滴管把红色暖水缓慢送到杯底，轻轻释放。</li>
+<li>B 杯：用另一支滴管把蓝色冷水轻轻放在水面附近。</li>
+<li>各观察 30–60 秒，先画直接看到的移动路径，再写解释。</li>
+</ol>
+<p><strong>预期结果</strong>：红色暖水通常形成向上的羽流；蓝色冷水通常形成向下的羽流。液体或气体整体运动并携带能量叫<strong>对流（convection）</strong>。</p>
+<h4>讲</h4>
+<p>液体和气体能够整体移动。较暖的部分通常密度较小而上升，较冷的部分通常密度较大而下沉；正在移动的流体把热能一起带到别处，这叫<strong>对流（convection）</strong>。红、蓝颜色只是帮助我们看见水的运动路径，不是“热能本身的颜色”。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>直接观察 Observation</th>
+<th>运动方向</th>
+<th>能量解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>红色暖水放在杯底</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>蓝色冷水放在水面</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>在表格下画两幅水流箭头图，不能只写“上升”或“下沉”。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：为什么不能用滴管用力喷？</strong></p>
+<p><strong>参考回答：</strong> 喷射本身会推动水流，无法判断运动主要来自温度、密度差还是手的力。</p>
+<p><strong>问题：暖水是否永远在上面、冷水是否永远在下面？</strong></p>
+<p><strong>参考回答：</strong> 不是绝对位置规则。这里比较的是相对于周围水的温度和密度；温差减小后水流也会减弱。</p>
+<p><strong>问题：对流会改变“高温传向低温”的方向吗？</strong></p>
+<p><strong>参考回答：</strong> 不会。流体运动改变路径，不改变由温差决定的净能量方向。</p>
+<p><strong>问题：一锅汤从下面加热时，为什么会出现上下循环？</strong></p>
+<p><strong>参考回答：</strong> 底部较暖的汤相对密度较小而上升，上方较冷的汤相对密度较大而下沉；液体的整体运动携带能量，形成对流。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">对流 convection：
+移动的液体或气体携带热能。
+较暖部分通常上升，较冷部分通常下沉。
+生活例子 examples：
+锅中水上下循环；暖气附近的暖空气上升；海陆风中的空气运动
+</code></pre>
+</div>
+</details>
+<h3>83–106 分钟｜实验 4：辐射——黑色和白色表面吸收辐射一样吗？</h3>
+<p>本实验同时回答两个问题：辐射不需要接触就能传递能量；在相同照射条件下，不同表面吸收辐射的表现可能不同。</p>
+<h4>装置规格</h4>
+<ul>
+<li>两只相同的 100–200 mL 玻璃杯或金属杯，外壁分别包等面积的哑光黑卡和哑光白卡；卡纸高度、接缝位置相同。</li>
+<li>每杯加入 <strong>60 mL 同一批室温水</strong>。</li>
+<li>使用 <strong>2 支同型号快速电子探针温度计</strong>；探针浸入深度相同，不碰杯底或杯壁。</li>
+<li>使用 <strong>60 W E27 宠物晒背加热灯 + 整灯额定功率不低于 60 W 的耐热陶瓷 E27 配套灯具 + 不能倾倒的固定架</strong>。灯泡必须是白炽或卤素反射型、明确不含 UVB，不另加金属反射灯罩。</li>
+<li>从灯泡正面量到两只杯的中心，初始距离均为 <strong>40 cm</strong>；预试现象太弱才依次改为 <strong>35 cm、30 cm</strong>，不得更近。两杯中心间距约 8–10 cm，放在同一距离弧线上、关于光束中心左右对称且都完整落在光斑内，并用胶带标记位置。</li>
+<li>灯泡、两杯和电线都放在有边托盘之外的干燥桌面；教师可以在远离水杯的位置通过插线板开关断电。</li>
+</ul>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9IjcwMCIgdmlld0JveD0iMCAwIDExMDAgNzAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+5a6e6aqMIDQg5a6k5YaF6L6Q5bCE54Ot5rqQ5LiO562J6Led56a75p2v5L2NPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+5bem5L6n5pi+56S65YWt5Y2B55Om5a6g54mp5pmS6IOM5Yqg54Ot54Gv44CB6Zm255O3RTI36YWN5aWX54Gv5YW35ZKM56iz5a6a5pSv5p6244CC54Gv5rOh5Li65LiN5ZCrVVZC55qE55m954K95oiW5Y2k57Sg5Y+N5bCE5Z6L77yM5LiN5Y+m5Yqg5Y+N5YWJ572p44CC5Y+z5L6n5L+v6KeG5Zu+5pi+56S66buR5p2v5ZKM55m95p2v5pS+5Zyo6Led54Gv5rOh5q2j6Z2i5LiJ5Y2B5Yiw5Zub5Y2B5Y6Y57Gz55qE5ZCM5LiA5ZyG5byn5LiK44CCPC9kZXNjPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICB0ZXh0IHsgZm9udC1mYW1pbHk6ICJOb3RvIFNhbnMgU0MiLCAiTWljcm9zb2Z0IFlhSGVpIiwgQXJpYWwsIHNhbnMtc2VyaWY7IGZpbGw6ICMxNzMyNGQ7IH0KICAgICAgLnRpdGxlIHsgZm9udC1zaXplOiAzMHB4OyBmb250LXdlaWdodDogNzAwOyB9CiAgICAgIC5sYWJlbCB7IGZvbnQtc2l6ZTogMjFweDsgZm9udC13ZWlnaHQ6IDY1MDsgfQogICAgICAuc21hbGwgeyBmb250LXNpemU6IDE4cHg7IH0KICAgICAgLnJheSB7IHN0cm9rZTogI2U0OWIyZjsgc3Ryb2tlLXdpZHRoOiA0OyBmaWxsOiBub25lOyBtYXJrZXItZW5kOiB1cmwoI3JheWFycm93KTsgfQogICAgICAuZGltIHsgc3Ryb2tlOiAjNTc2YjdkOyBzdHJva2Utd2lkdGg6IDIuNTsgZmlsbDogbm9uZTsgbWFya2VyLXN0YXJ0OiB1cmwoI2RpbWFycm93KTsgbWFya2VyLWVuZDogdXJsKCNkaW1hcnJvdyk7IH0KICAgIDwvc3R5bGU+CiAgICA8bWFya2VyIGlkPSJyYXlhcnJvdyIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNiIgbWFya2VySGVpZ2h0PSI2IiBvcmllbnQ9ImF1dG8iPgogICAgICA8cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIHoiIGZpbGw9IiNlNDliMmYiLz4KICAgIDwvbWFya2VyPgogICAgPG1hcmtlciBpZD0iZGltYXJyb3ciIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iNSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjUiIG1hcmtlckhlaWdodD0iNSIgb3JpZW50PSJhdXRvLXN0YXJ0LXJldmVyc2UiPgogICAgICA8cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIHoiIGZpbGw9IiM1NzZiN2QiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KCiAgPHRleHQgeD0iNTUwIiB5PSI0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InRpdGxlIj7lrp7pqowgNO+8mjYwIFcg5a6g54mp5pmS6IOM5Yqg54Ot54Gv77yM5LiN5piv5pmu6YCaIExFRCDlj7Dnga88L3RleHQ+CgogIDwhLS0gZml4dHVyZSBkZXRhaWwgLS0+CiAgPHJlY3QgeD0iNDUiIHk9Ijg4IiB3aWR0aD0iNDI1IiBoZWlnaHQ9IjUwNSIgcng9IjE4IiBmaWxsPSIjZjVmOGZhIiBzdHJva2U9IiNhOWJhYzYiIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IHg9IjI1OCIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPueBr+WFt+S+p+inhu+8mumcgOaVtOWll+WMuemFjTwvdGV4dD4KICA8cmVjdCB4PSI5MCIgeT0iNTIwIiB3aWR0aD0iMjg1IiBoZWlnaHQ9IjI1IiByeD0iOCIgZmlsbD0iIzY5N2E4NyIvPgogIDxyZWN0IHg9IjEzNSIgeT0iMjQ1IiB3aWR0aD0iMjMiIGhlaWdodD0iMjgzIiByeD0iOCIgZmlsbD0iIzc4OGI5OCIvPgogIDxwYXRoIGQ9Ik0xNDcgMjcwIEwyNDUgMjcwIEwzMDAgMzE1IiBzdHJva2U9IiM3ODhiOTgiIHN0cm9rZS13aWR0aD0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxyZWN0IHg9IjI4MCIgeT0iMjkyIiB3aWR0aD0iNjUiIGhlaWdodD0iNTgiIHJ4PSIxMCIgZmlsbD0iI2Y0ZjBlNSIgc3Ryb2tlPSIjOGI3NzYxIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8dGV4dCB4PSIzMTIiIHk9IjI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7iiaU2MCBXIOmZtueTtyBFMjcg54Gv5YW3PC90ZXh0PgogIDxwYXRoIGQ9Ik0zMjkgMjc2IFE0MTAgMjU1IDQ1MCAzMzUgUTQxMCA0MTUgMzI5IDM5MyBaIiBmaWxsPSIjN2E4NThjIiBzdHJva2U9IiM0YjU2NWQiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxlbGxpcHNlIGN4PSI0MDUiIGN5PSIzMzUiIHJ4PSIzMSIgcnk9IjQzIiBmaWxsPSIjZmZkMjdiIiBzdHJva2U9IiNjNDdmMjEiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxwYXRoIGQ9Ik0zODIgMzIwIFE0MDUgMzAwIDQyOCAzMjAiIHN0cm9rZT0iI2ZmZjJiZCIgc3Ryb2tlLXdpZHRoPSI3IiBmaWxsPSJub25lIi8+CiAgPHRleHQgeD0iMjU4IiB5PSIxNzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+NjAgVyDlrqDnianmmZLog4zliqDng63nga88L3RleHQ+CiAgPHRleHQgeD0iMjU4IiB5PSIyMDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+5LiN5ZCrIFVWQiDCtyDlj43lsITlnosgwrcg56iz5Zu65Zu65a6a5p62PC90ZXh0PgogIDx0ZXh0IHg9IjI1OCIgeT0iNTcwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuaVmeW4iOaTjeS9nO+8m+eBr+azoeWSjOS4k+eUqOeBr+WFt+S8mueDqzwvdGV4dD4KCiAgPCEtLSBlcXVhbC1kaXN0YW5jZSB0b3AgdmlldyAtLT4KICA8cmVjdCB4PSI0OTUiIHk9Ijg4IiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjUwNSIgcng9IjE4IiBmaWxsPSIjZmZmZGY3IiBzdHJva2U9IiNkM2JkODciIHN0cm9rZS13aWR0aD0iMyIvPgogIDx0ZXh0IHg9Ijc3NSIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPuahjOmdouS/r+inhu+8muS4pOadr+aUvuWcqOWQjOS4gOi3neemu+W8p+e6v+S4ijwvdGV4dD4KICA8cGF0aCBkPSJNNTUwIDMxNSBRNjAwIDI2NSA2NTAgMzE1IFE2MDAgMzY1IDU1MCAzMTUgWiIgZmlsbD0iIzdhODU4YyIgc3Ryb2tlPSIjNGI1NjVkIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8ZWxsaXBzZSBjeD0iNjQ3IiBjeT0iMzE1IiByeD0iMjUiIHJ5PSIzNCIgZmlsbD0iI2ZmZDI3YiIgc3Ryb2tlPSIjYzQ3ZjIxIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8dGV4dCB4PSI2MDAiIHk9IjM5MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj7nga/ms6HmraPpnaI8L3RleHQ+CgogIDxwYXRoIGQ9Ik05MDAgMTkwIEEyNzUgMjc1IDAgMCAxIDkwMCA0NDAiIHN0cm9rZT0iIzhhOWFhYSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjggNyIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik02NTUgMzE1IEw4NzMgMjA1IiBjbGFzcz0icmF5Ii8+CiAgPHBhdGggZD0iTTY1NSAzMTUgTDg3MyA0MjUiIGNsYXNzPSJyYXkiLz4KCiAgPGNpcmNsZSBjeD0iOTAwIiBjeT0iMTkwIiByPSI2MSIgZmlsbD0iIzI4MzEzYSIgc3Ryb2tlPSIjMTExODIwIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI5MDAiIGN5PSIxOTAiIHI9IjQwIiBmaWxsPSIjOGVkN2U4IiBzdHJva2U9IiMyZjllYjgiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxsaW5lIHgxPSI5MDAiIHkxPSIxMjAiIHgyPSI5MDAiIHkyPSIxOTUiIHN0cm9rZT0iI2M2NDc0NyIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgPGNpcmNsZSBjeD0iOTAwIiBjeT0iMTk1IiByPSI3IiBmaWxsPSIjYzY0NzQ3Ii8+CiAgPHRleHQgeD0iOTgyIiB5PSIxOTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+6buR5Y2h5p2vPC90ZXh0PgoKICA8Y2lyY2xlIGN4PSI5MDAiIGN5PSI0NDAiIHI9IjYxIiBmaWxsPSIjZjRmNWY2IiBzdHJva2U9IiM2ODc1ODAiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxjaXJjbGUgY3g9IjkwMCIgY3k9IjQ0MCIgcj0iNDAiIGZpbGw9IiM4ZWQ3ZTgiIHN0cm9rZT0iIzJmOWViOCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGxpbmUgeDE9IjkwMCIgeTE9IjM3MCIgeDI9IjkwMCIgeTI9IjQ0NSIgc3Ryb2tlPSIjYzY0NzQ3IiBzdHJva2Utd2lkdGg9IjUiLz4KICA8Y2lyY2xlIGN4PSI5MDAiIGN5PSI0NDUiIHI9IjciIGZpbGw9IiNjNjQ3NDciLz4KICA8dGV4dCB4PSI5ODIiIHk9IjQ0NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj7nmb3ljaHmna88L3RleHQ+CgogIDxsaW5lIHgxPSI2NjEiIHkxPSIzMTUiIHgyPSI4NzUiIHkyPSIyMDciIGNsYXNzPSJkaW0iLz4KICA8dGV4dCB4PSI3NjUiIHk9IjIzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj4zMOKAkzQwIGNtPC90ZXh0PgogIDx0ZXh0IHg9Ijc3NSIgeT0iNTY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPuWQjOi3neemuyDCtyDlkIzop5LluqYgwrcg5ZCM5rC06YePIMK3IOS4pOaUr+WQjOWei+WPt+aOoumSiDwvdGV4dD4KCiAgPCEtLSB3YXJuaW5nIC0tPgogIDxyZWN0IHg9IjEwNSIgeT0iNjIwIiB3aWR0aD0iODkwIiBoZWlnaHQ9IjU4IiByeD0iMTMiIGZpbGw9IiNmOGU4ZTgiIHN0cm9rZT0iI2I4NGI0YiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHRleHQgeD0iNTUwIiB5PSI2NTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+w5cgTEVE77ybw5cg5ZCrIFVWQu+8m8OXIOWhkeaWmeeBr+W6p++8m8OXIOi3neeBr+S4jei2syAzMCBjbTwvdGV4dD4KPC9zdmc+Cg==" alt="完整辐射实验装置：60 W 宠物晒背加热灯、陶瓷 E27 配套灯具、两只相距 30–40 cm 的等距黑白杯与两支温度计" /></p>
+<h4>做</h4>
+<ol>
+<li>把两张等面积卡纸分别包在两只相同耐热杯外，保持卡纸高度和覆盖面积相同。</li>
+<li>两杯各加入 60 mL 同一批室温水，把两支同型号探针插到相同深度，确认探针不碰杯底和杯壁。</li>
+<li>把黑杯和白杯放在距灯泡正面 40 cm 的同一距离弧线上，杯中心间距约 8–10 cm，检查两杯受光角度相同且都完整落在光斑内。只有课前预试确认现象太弱时才依次使用 35 cm、30 cm。用胶带固定杯子和灯架位置。</li>
+<li>移走光束范围内除两只实验杯之外的松散纸张、布和塑料物品。等待读数稳定，同时记录两杯的 0 分钟温度。</li>
+<li>教师开灯，学生站在标线外，每隔 3 分钟同时记录一次，直到 12 分钟。若闻到异味、卡纸变色、灯具松动或任一杯温升超过 10°C，立即关灯。</li>
+<li>教师关灯并拔下插头。计算两杯的温升：<code>ΔT = 12 分钟温度 − 初温</code>。</li>
+<li>灯泡、专用灯具和杯子完全冷却前不移动或触摸装置。</li>
+</ol>
+<p><strong>预期结果</strong>：两杯水通常都会升温，黑色表面杯的温升通常更大。真实装置中灯也会加热周围空气，因此结论写成“结果支持黑色表面在本装置中吸收了更多辐射能量”，不能写成“温升只由辐射造成”。</p>
+<h4>讲</h4>
+<p>晒背灯和杯子没有接触，但灯发出的能量仍能以波的形式到达杯子，这叫<strong>辐射（radiation）</strong>。辐射不需要空气或其他物质，也能穿过真空；杯子吸收辐射后升温，再通过接触把能量传给水。这里的 radiation 包括可见光和红外线，不等于危险的核辐射。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间 Time/min</th>
+<th style="text-align:right">黑色杯温度 Black/°C</th>
+<th style="text-align:right">白色杯温度 White/°C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>表面 Surface</th>
+<th style="text-align:right">初温/°C</th>
+<th style="text-align:right">12 分钟温度/°C</th>
+<th style="text-align:right">温升 <code>ΔT</code>/°C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>黑色 black</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>白色 white</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">我的结论：在距离、角度、杯子、水量和照射时间相同时，__________杯温升更大。
+这支持__________表面在本装置中吸收了更多辐射能量。
+</code></pre>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：灯泡没有碰到杯子，杯中的水为什么仍会升温？</strong></p>
+<p><strong>参考回答：</strong> 灯泡发出的电磁辐射到达杯子并被表面吸收，能量再通过杯壁和水之间的接触传给水。辐射这一段传递不要求灯泡与杯子接触。</p>
+<p><strong>问题：为什么两杯必须离灯一样远、角度相同？</strong></p>
+<p><strong>参考回答：</strong> 距离和角度都会影响杯子接收到的辐射量。如果不相同，就不能判断温升差异主要与表面颜色有关。</p>
+<p><strong>问题：这个装置中是不是只有辐射？</strong></p>
+<p><strong>参考回答：</strong> 不是。灯也会加热空气，杯壁还会把能量传给水；真实情境中辐射、对流和传导可以同时发生。本实验通过保持其他条件尽量相同，比较黑、白表面的结果。</p>
+<p><strong>问题：站在没有碰到的篝火旁仍能感到温暖，哪一部分可以用辐射解释？</strong></p>
+<p><strong>参考回答：</strong> 火发出的电磁辐射穿过空气到达并被皮肤吸收；这段能量传递不要求皮肤接触火焰。周围同时也可能存在暖空气对流。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">辐射 radiation：
+能量以波传播，不要求接触，也能穿过真空。
+物体吸收辐射后可能升温。
+生活例子 examples：太阳晒暖地面；站在篝火旁感到热；晒背灯加热杯子
+公平比较：same cup / water / distance / angle / time
+ΔT = final temperature − initial temperature
+</code></pre>
+</div>
+</details>
+<h3>106–120 分钟：比较三种传递形式、离堂题和口头总结</h3>
+<p>先让学生把实验 2–4 分别归入传导、对流或辐射，再说明判断依据。教师重点听孩子是否说出了“接触并沿物质传递”“流体整体运动”“电磁波、无需接触”，而不只检查三个名词是否背对。</p>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">传导 conduction：接触时，相邻粒子逐个传递能量
+对流 convection：移动的液体或气体携带能量
+辐射 radiation：能量以波传播，不要求接触或物质
+
+共同规律：热能净传递从较高温处 → 较低温处
+</code></pre>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>传递形式</th>
+<th>能量怎样移动？</th>
+<th>关键条件</th>
+<th>本课证据</th>
+<th>另一个生活例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>传导 conduction</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>对流 convection</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>辐射 radiation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h4>做</h4>
+<p>独立完成四道离堂题。最后不看板书，说出全课最重要的总结：</p>
+<blockquote>
+<p>热能可以通过传导、对流和辐射传递：传导时，相邻粒子在接触处逐个传递能量；对流时，移动的液体或气体携带能量；辐射时，能量以波传播，不要求接触或物质。</p>
+</blockquote>
+<p>能用自己的话说清三种形式“怎样传”，并各指出一个课堂证据，才达到本课核心目标。高温到低温是三种形式共同遵守的方向规律。</p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">离堂记录与参考答案 / Exit record &amp; answers</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题 1：温水接触金属筷下端，黄油在筷子上方软化。这主要是哪种传递形式？为什么？</strong></p>
+<p><strong>参考答案：</strong> 传导。能量通过接触，从筷子下端沿固体逐步传到上方黄油处。</p>
+<p><strong>问题 2：红色暖水从杯底上升、蓝色冷水从水面下沉。这主要是哪种传递形式？为什么？</strong></p>
+<p><strong>参考答案：</strong> 对流。液体发生整体运动并携带能量；暖水相对周围水密度较小而上升，冷水相对周围水密度较大而下沉。</p>
+<p><strong>问题 3：辐射灯没有接触杯子，杯中的水为什么仍会升温？</strong></p>
+<p><strong>参考答案：</strong> 灯发出的电磁辐射到达杯子并被表面吸收，能量再通过杯壁传给水；辐射传递不要求灯和杯子接触。</p>
+<p><strong>问题 4：传导、对流和辐射有什么共同点？</strong></p>
+<p><strong>参考答案：</strong> 它们都是热能传递的路径；净热能都从较热处传向较冷处。</p>
+</div>
+</details>
+<h2>五、教师参考、预期结果与常见误区</h2>
+<h3>预期结果速查</h3>
+<table>
+<thead>
+<tr>
+<th>活动</th>
+<th>可靠的主要现象</th>
+<th>不应过度解释的地方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冷热水混合</td>
+<td>终温在两者初温之间</td>
+<td>不要求恰好等于算术平均</td>
+</tr>
+<tr>
+<td>筷子传导</td>
+<td>不锈钢筷端黄油通常先软化</td>
+<td>家用筷的粗细、空心结构也会影响结果</td>
+</tr>
+<tr>
+<td>液体对流</td>
+<td>暖色羽流上升，冷色羽流下沉</td>
+<td>不把颜色扩散全部说成对流</td>
+</tr>
+<tr>
+<td>黑白杯辐射</td>
+<td>两杯都升温，黑杯温升通常更大</td>
+<td>空气也被加热；不说成“只有辐射”</td>
+</tr>
+</tbody>
+</table>
+<h3>常见误区</h3>
+<ol>
+<li><strong>“冷传进了热水。”</strong><br />
+修正：能量从温水传给冷水；冷不是一种流动物质。</li>
+<li><strong>“金属本来温度更低，所以摸起来冷。”</strong><br />
+修正：室内放置足够久的金属和木材可能温度相近；金属更快从手带走能量，所以感觉更冷。</li>
+<li><strong>“黑色表面会自己产生更多热。”</strong><br />
+修正：黑色表面没有制造能量；本实验支持它在相同照射条件下吸收了更多辐射能量。</li>
+<li><strong>“暖水上升就是热能只往上走。”</strong><br />
+修正：暖水上升是流体密度差造成的整体运动；能量仍可向各方向从高温处传向低温处。</li>
+<li><strong>“辐射就是危险的核辐射。”</strong><br />
+修正：radiation 是能量以电磁波传播的方式；本实验中的可见光和红外线属于非电离辐射。</li>
+<li><strong>“三种方式一次只会出现一种。”</strong><br />
+修正：真实情境中传导、对流和辐射常同时发生；我们根据研究问题突出其中一种路径。</li>
+</ol>
+<h3>课堂评价标准</h3>
+<ul>
+<li><strong>达到核心目标</strong>：能分别说清传导、对流和辐射怎样传递热能，并为每一种指出本课证据。</li>
+<li><strong>进一步达到</strong>：能判断真实情境中可能同时存在多种传递形式，并说明哪一种是研究重点。</li>
+<li><strong>需要继续复习</strong>：只会背三个名词，却不能用“接触传递、流体运动、电磁波”解释；或把三种形式误认为三个传递方向。</li>
+</ul>
+<h2>六、关键术语（Key vocabulary）</h2>
+<ul>
+<li>能量：energy</li>
+<li>能量转移：energy transfer</li>
+<li>能量转化：energy transformation</li>
+<li>化学能：chemical energy</li>
+<li>光能：light energy</li>
+<li>热能：thermal energy</li>
+<li>热能传递：thermal energy transfer</li>
+<li>温度：temperature</li>
+<li>摄氏度：degree Celsius, °C</li>
+<li>温度差：temperature difference</li>
+<li>较高温一方：source（学校讲义中的方向标签）</li>
+<li>较低温一方：destination（学校讲义中的方向标签）</li>
+<li>传导：conduction</li>
+<li>对流：convection</li>
+<li>对流循环：convection current</li>
+<li>辐射：radiation</li>
+<li>热导体：thermal conductor</li>
+<li>吸收：absorption</li>
+<li>控制变量：controlled variable</li>
+<li>证据：evidence</li>
+</ul>
+</main>
+</body>
+</html>

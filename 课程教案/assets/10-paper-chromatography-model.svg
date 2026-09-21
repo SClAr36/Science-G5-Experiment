@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">水从滤纸中心向外移动并形成彩环</title>
+  <desc id="desc">左侧展示水沿纸纤维小缝移动。右侧展示绿色食用色素和黑色水彩笔的染料被水带到不同距离，形成圆形色带。</desc>
+  <defs>
+    <marker id="out" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#247ea3"/>
+    </marker>
+    <style>
+      text { font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; fill:#17212b; }
+      .title { font-size:30px; font-weight:800; }
+      .label { font-size:21px; font-weight:700; }
+      .small { font-size:17px; }
+    </style>
+  </defs>
+  <rect width="1400" height="620" rx="26" fill="#f2f7f9"/>
+  <text x="700" y="50" text-anchor="middle" class="title">水沿纸移动，并把不同染料带到不同位置</text>
+
+  <rect x="55" y="90" width="540" height="480" rx="22" fill="#fff" stroke="#b8cbd4" stroke-width="3"/>
+  <text x="325" y="130" text-anchor="middle" class="title">纸里有许多小缝</text>
+  <g stroke="#c8b89f" stroke-width="18" stroke-linecap="round" opacity=".8">
+    <path d="M105 500C180 430 115 345 210 270S230 155 310 145"/>
+    <path d="M210 520C275 430 235 355 330 300S380 185 435 145"/>
+    <path d="M365 520C430 440 405 365 500 300S525 195 555 145"/>
+    <path d="M120 205C220 250 300 185 400 235S490 260 555 210"/>
+    <path d="M100 370C210 410 275 345 380 390S485 420 560 360"/>
+  </g>
+  <g fill="#55aee0" stroke="#247ea3" stroke-width="3">
+    <circle cx="165" cy="470" r="18"/><circle cx="205" cy="438" r="18"/>
+    <circle cx="190" cy="395" r="18"/><circle cx="235" cy="370" r="18"/>
+    <circle cx="255" cy="325" r="18"/><circle cx="300" cy="295" r="18"/>
+    <circle cx="330" cy="250" r="18"/><circle cx="380" cy="220" r="18"/>
+  </g>
+  <path d="M150 490C180 420 215 360 270 310S350 235 415 185" fill="none" stroke="#247ea3" stroke-width="6" marker-end="url(#out)"/>
+  <text x="325" y="545" text-anchor="middle" class="label">水沿小缝往前“爬”</text>
+
+  <rect x="625" y="90" width="720" height="480" rx="22" fill="#fff" stroke="#b8cbd4" stroke-width="3"/>
+  <text x="985" y="130" text-anchor="middle" class="title">不同染料走到不同距离</text>
+  <circle cx="820" cy="320" r="150" fill="#fffdf7" stroke="#8d999f" stroke-width="5"/>
+  <circle cx="820" cy="320" r="115" fill="none" stroke="#efce42" stroke-width="28" opacity=".78"/>
+  <circle cx="820" cy="320" r="70" fill="none" stroke="#438bd1" stroke-width="28" opacity=".78"/>
+  <circle cx="820" cy="320" r="20" fill="#4e9656"/>
+  <path d="M820 320L930 250" fill="none" stroke="#247ea3" stroke-width="6" marker-end="url(#out)"/>
+  <circle cx="1130" cy="320" r="150" fill="#fffdf7" stroke="#8d999f" stroke-width="5"/>
+  <circle cx="1130" cy="320" r="115" fill="none" stroke="#3d84bd" stroke-width="26" opacity=".75"/>
+  <circle cx="1130" cy="320" r="75" fill="none" stroke="#7551a6" stroke-width="26" opacity=".78"/>
+  <circle cx="1130" cy="320" r="35" fill="none" stroke="#4c9b65" stroke-width="22" opacity=".75"/>
+  <circle cx="1130" cy="320" r="18" fill="#25282d"/>
+  <path d="M1130 320L1240 250" fill="none" stroke="#247ea3" stroke-width="6" marker-end="url(#out)"/>
+  <text x="820" y="520" text-anchor="middle" class="label">绿色食用色素混合液</text>
+  <text x="1130" y="520" text-anchor="middle" class="label">黑色水彩笔</text>
+</svg>

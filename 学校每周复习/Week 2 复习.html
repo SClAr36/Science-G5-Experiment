@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Week 2 Science bilingual quick review">
+  <title>Week 2 Science — Quick Review</title>
+  <style>
+    :root {
+      --ink: #183153;
+      --muted: #64748b;
+      --paper: #ffffff;
+      --page: #eef6f4;
+      --line: #dbe8e4;
+      --english: #1d6a96;
+      --english-soft: #eaf6fd;
+      --chinese: #13795b;
+      --chinese-soft: #eaf8f2;
+      --accent: #f4a261;
+      --shadow: 0 18px 50px rgba(24, 49, 83, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(29, 106, 150, 0.10), transparent 24rem),
+        radial-gradient(circle at 92% 92%, rgba(19, 121, 91, 0.10), transparent 26rem),
+        var(--page);
+      font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 36px auto;
+      background: var(--paper);
+      border: 1px solid rgba(219, 232, 228, 0.9);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    header {
+      position: relative;
+      padding: 38px 42px 32px;
+      color: #fff;
+      background: linear-gradient(120deg, #173d66 0%, #1d6a96 52%, #13795b 100%);
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      right: -28px;
+      bottom: -64px;
+      width: 230px;
+      height: 230px;
+      border: 34px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.78;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      font-size: 1rem;
+      opacity: 0.88;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      padding: 28px;
+    }
+
+    section {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    section h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 16px 20px;
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+    }
+
+    section h2::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.7);
+    }
+
+    .english h2 {
+      color: var(--english);
+      background: var(--english-soft);
+    }
+
+    .chinese h2 {
+      color: var(--chinese);
+      background: var(--chinese-soft);
+    }
+
+    ul {
+      margin: 0;
+      padding: 8px 20px 16px;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding: 11px 6px 11px 22px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    li:last-child { border-bottom: 0; }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 1.35em;
+      width: 7px;
+      height: 7px;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      background: var(--accent);
+    }
+
+    strong { color: #102a43; }
+
+    footer {
+      padding: 0 28px 26px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        width: min(100% - 20px, 680px);
+        margin: 10px auto;
+        border-radius: 18px;
+      }
+
+      header { padding: 30px 24px 26px; }
+      .review-grid { grid-template-columns: 1fr; padding: 16px; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 10mm; }
+
+      body { background: #fff; }
+
+      main {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      header {
+        padding: 20px 24px 18px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .review-grid {
+        gap: 14px;
+        padding: 16px 0 0;
+      }
+
+      section { break-inside: avoid; }
+      section h2 { padding: 11px 14px; }
+      ul { padding: 5px 13px 10px; }
+      li { padding-top: 7px; padding-bottom: 7px; font-size: 0.84rem; }
+      footer { padding: 12px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Science · Week 2</p>
+      <h1>Quick Review</h1>
+      <p class="subtitle">本周科学复习极简版 · Bilingual Study Sheet</p>
+    </header>
+
+    <div class="review-grid">
+      <section class="english" lang="en">
+        <h2>English</h2>
+        <ul>
+          <li><strong>Testable question:</strong> a question that can be answered with measurements in an experiment</li>
+          <li><strong>Question pattern:</strong> How does changing the <strong>independent variable</strong> affect the <strong>dependent variable</strong>?</li>
+          <li><strong>Variable:</strong> a factor that can change in an experiment</li>
+          <li><strong>Independent variable:</strong> what I change; the cause</li>
+          <li><strong>Dependent variable:</strong> what I measure or observe; the effect / outcome</li>
+          <li><strong>Controlled variables / fair test:</strong> keep other conditions the same and change only one factor</li>
+          <li><strong>Density &amp; buoyancy:</strong> non-mixing liquids form layers; less dense → top, more dense → bottom</li>
+        </ul>
+      </section>
+
+      <section class="chinese" lang="zh-CN">
+        <h2>中文版</h2>
+        <ul>
+          <li><strong>可检验问题：</strong>能通过实验中的测量来回答的问题</li>
+          <li><strong>提问句型：</strong>改变<strong>自变量</strong>会怎样影响<strong>因变量</strong>？</li>
+          <li><strong>变量：</strong>实验中可能发生变化的因素</li>
+          <li><strong>自变量：</strong>主动改变的因素；原因</li>
+          <li><strong>因变量：</strong>测量或观察的结果；结果 / 影响</li>
+          <li><strong>控制变量 / 公平实验：</strong>其余条件保持相同，只改变一个因素</li>
+          <li><strong>密度与浮力：</strong>不相溶的液体会分层；密度小 → 上层，密度大 → 下层</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>Week 2 Science · Quick Review</footer>
+  </main>
+</body>
+</html>

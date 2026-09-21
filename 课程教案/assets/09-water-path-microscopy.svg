@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">染色西芹、白花和西芹横切片显微观察流程</title>
+  <desc id="desc">孩子先设置红蓝分茎西芹和蓝水白花，再比较预处理清水与蓝水样本，最后把染色西芹横切薄片放到载玻片上，在四十倍和一百倍下观察维管束。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6fbf8"/>
+      <stop offset="1" stop-color="#eef5ff"/>
+    </linearGradient>
+    <linearGradient id="stem" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#74b36a"/>
+      <stop offset=".5" stop-color="#b8dc8c"/>
+      <stop offset="1" stop-color="#5d9f60"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#35536d"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#24415a" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="620" rx="28" fill="url(#bg)"/>
+  <text x="60" y="60" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="30" font-weight="700" fill="#173d31">实验 1：让颜色把水路留下来</text>
+  <text x="60" y="92" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#486273">Day 0 setup → macroscopic path → cross section → microscope evidence</text>
+
+  <g filter="url(#shadow)">
+    <rect x="45" y="125" width="250" height="410" rx="20" fill="#fff" stroke="#c8d9d0" stroke-width="2"/>
+    <rect x="335" y="125" width="250" height="410" rx="20" fill="#fff" stroke="#c8d9d0" stroke-width="2"/>
+    <rect x="625" y="125" width="250" height="410" rx="20" fill="#fff" stroke="#c8d9d0" stroke-width="2"/>
+    <rect x="915" y="125" width="240" height="410" rx="20" fill="#fff" stroke="#c8d9d0" stroke-width="2"/>
+  </g>
+
+  <text x="70" y="165" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#173d31">1 · 孩子设置</text>
+  <text x="70" y="195" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">split celery + white flower</text>
+  <path d="M160 230C150 290 150 335 151 390" stroke="url(#stem)" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <path d="M151 320C135 357 125 390 121 432" stroke="#d54242" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M151 320C168 357 178 390 183 432" stroke="#2f69c9" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <ellipse cx="124" cy="250" rx="48" ry="22" fill="#73aa61" transform="rotate(-28 124 250)"/>
+  <ellipse cx="190" cy="245" rx="48" ry="22" fill="#73aa61" transform="rotate(28 190 245)"/>
+  <path d="M86 425H160V492H86Z" fill="#f7d9d9" stroke="#c95e5e" stroke-width="3"/>
+  <path d="M145 425H219V492H145Z" fill="#d9e7fb" stroke="#4c77c7" stroke-width="3"/>
+  <text x="103" y="470" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#a83333">R</text>
+  <text x="177" y="470" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#315da8">B</text>
+  <text x="76" y="520" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#486273">80 mL + 8–10 drops</text>
+
+  <text x="360" y="165" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#173d31">2 · 读取预处理样本</text>
+  <text x="360" y="195" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">clear control ↔ blue tracer</text>
+  <path d="M403 450C404 355 414 285 424 230" stroke="#72ad67" stroke-width="22" stroke-linecap="round"/>
+  <path d="M510 450C510 355 500 285 490 230" stroke="#72ad67" stroke-width="22" stroke-linecap="round"/>
+  <path d="M497 440C496 355 492 300 491 236" stroke="#2f69c9" stroke-width="7" stroke-linecap="round" stroke-dasharray="15 8"/>
+  <ellipse cx="400" cy="235" rx="46" ry="22" fill="#75ab63" transform="rotate(-18 400 235)"/>
+  <ellipse cx="510" cy="235" rx="46" ry="22" fill="#75ab63" transform="rotate(18 510 235)"/>
+  <path d="M373 444H435V492H373Z" fill="#e9f4fb" stroke="#7396a8" stroke-width="3"/>
+  <path d="M480 444H542V492H480Z" fill="#d9e7fb" stroke="#4c77c7" stroke-width="3"/>
+  <text x="373" y="520" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#486273">比较花瓣、叶脉、茎端</text>
+  <circle cx="518" cy="269" r="6" fill="#2f69c9"/>
+  <circle cx="508" cy="293" r="5" fill="#2f69c9"/>
+  <circle cx="500" cy="318" r="5" fill="#2f69c9"/>
+
+  <text x="650" y="165" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#173d31">3 · 横切与纵切</text>
+  <text x="650" y="195" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">color stays in selected bundles</text>
+  <ellipse cx="750" cy="315" rx="88" ry="115" fill="#d8ebbb" stroke="#6c9d59" stroke-width="5"/>
+  <ellipse cx="750" cy="315" rx="70" ry="96" fill="#e9f4cd" stroke="#91b779" stroke-width="3"/>
+  <g fill="#2f69c9" stroke="#214f94" stroke-width="2">
+    <circle cx="750" cy="236" r="10"/><circle cx="700" cy="258" r="10"/><circle cx="684" cy="314" r="10"/>
+    <circle cx="704" cy="371" r="10"/><circle cx="754" cy="394" r="10"/><circle cx="803" cy="367" r="10"/>
+    <circle cx="818" cy="310" r="10"/><circle cx="799" cy="256" r="10"/>
+  </g>
+  <path d="M840 248V405" stroke="#35536d" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="656" y="470" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" fill="#486273">蓝色点／束区 = water path</text>
+  <text x="656" y="495" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="16" fill="#486273">不是整根茎均匀染色</text>
+
+  <text x="940" y="165" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#173d31">4 · 薄切湿装片</text>
+  <text x="940" y="195" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#486273">40× find → 100× inspect</text>
+  <rect x="947" y="242" width="170" height="64" rx="8" fill="#dcebf2" stroke="#65869a" stroke-width="3"/>
+  <rect x="977" y="252" width="110" height="44" rx="5" fill="#f7fbfd" stroke="#a7c0cc"/>
+  <circle cx="1032" cy="274" r="18" fill="#d7ebba" stroke="#6c9d59" stroke-width="3"/>
+  <g fill="#2f69c9">
+    <circle cx="1022" cy="270" r="3"/><circle cx="1035" cy="262" r="3"/><circle cx="1041" cy="278" r="3"/>
+  </g>
+  <path d="M1030 315V350" stroke="#35536d" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M986 432H1086L1072 358H1018L1007 389H981Z" fill="#e7edf2" stroke="#4f6677" stroke-width="4"/>
+  <circle cx="1044" cy="374" r="16" fill="#bdd8e9" stroke="#4f6677" stroke-width="4"/>
+  <rect x="1017" y="432" width="78" height="14" rx="7" fill="#526b7d"/>
+  <text x="945" y="480" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#486273">找重复维管束与较大导管空腔</text>
+  <text x="945" y="506" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#a34b40">只标真正看见的结构</text>
+
+  <path d="M300 330H328" stroke="#35536d" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M590 330H618" stroke="#35536d" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M880 330H908" stroke="#35536d" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="45" y="558" width="1110" height="42" rx="12" fill="#173d31"/>
+  <text x="600" y="586" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#fff">Colored water is a tracer: it shows the water route, not the sugar route.</text>
+</svg>

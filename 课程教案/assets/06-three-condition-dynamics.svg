@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="790" viewBox="0 0 1100 790" role="img" aria-labelledby="title desc">
+  <title id="title">一个动力学实验的三种条件</title>
+  <desc id="desc">三种条件共用同一辆自制小车、桌边固定吸管和悬挂装置。基准组杯中放两枚一元硬币、小车空载；增大驱动力组杯中放五枚一元硬币、小车仍空载；增加质量组杯中仍为两枚，只在小车托盘内固定增加三枚一元硬币。</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif; fill: #17324d; }
+      .title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 21px; font-weight: 650; }
+      .small { font-size: 17px; }
+      .force { stroke: #e66d3f; stroke-width: 7; fill: none; marker-end: url(#orange); }
+      .compare { stroke: #3b8f65; stroke-width: 5; fill: none; stroke-dasharray: 11 7; marker-end: url(#green); }
+    </style>
+    <marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#e66d3f"/></marker>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3b8f65"/></marker>
+  </defs>
+  <text x="550" y="46" text-anchor="middle" class="title">R/F 控制小车质量；R/M 控制悬挂硬币</text>
+
+  <g id="panel-r" transform="translate(50,90)">
+    <rect x="0" y="0" width="310" height="520" rx="22" fill="#f7fbfd" stroke="#9fb9c8" stroke-width="3"/>
+    <text x="155" y="42" text-anchor="middle" class="label">R · 基准 Reference</text>
+    <line x1="35" y1="260" x2="245" y2="260" stroke="#637b89" stroke-width="7"/>
+    <line x1="245" y1="260" x2="245" y2="330" stroke="#637b89" stroke-width="7"/>
+    <path d="M75 190 Q68 200 74 226 Q80 239 98 239 L165 239 L165 230 L192 224 L192 206 L165 200 L165 190 Z" fill="#d9edf4" fill-opacity="0.82" stroke="#4b7c91" stroke-width="4"/>
+    <circle cx="96" cy="244" r="18" fill="#4c92bd"/><circle cx="170" cy="244" r="18" fill="#4c92bd"/>
+    <text x="133" y="165" text-anchor="middle" class="small">小车空载</text>
+    <circle cx="260" cy="220" r="12" fill="#d9edf4" stroke="#55778e" stroke-width="3"/>
+    <path d="M195 205 L235 205 Q260 205 260 230 L260 355" stroke="#344c5c" stroke-width="4" fill="none"/>
+    <path d="M235 355 L245 430 Q248 448 265 448 Q282 448 285 430 L295 355 Z" fill="#f3ead7" stroke="#8b6c42" stroke-width="3"/>
+    <circle cx="257" cy="410" r="11" fill="#d4a72c"/><circle cx="278" cy="410" r="11" fill="#d4a72c"/>
+    <text x="155" y="485" text-anchor="middle" class="small">杯中 2 枚；小车空载</text>
+  </g>
+
+  <g id="panel-f" transform="translate(395,90)">
+    <rect x="0" y="0" width="310" height="520" rx="22" fill="#fffaf0" stroke="#d6bd86" stroke-width="3"/>
+    <text x="155" y="42" text-anchor="middle" class="label">F · 增大驱动力</text>
+    <line x1="35" y1="260" x2="245" y2="260" stroke="#637b89" stroke-width="7"/>
+    <line x1="245" y1="260" x2="245" y2="330" stroke="#637b89" stroke-width="7"/>
+    <path d="M75 190 Q68 200 74 226 Q80 239 98 239 L165 239 L165 230 L192 224 L192 206 L165 200 L165 190 Z" fill="#d9edf4" fill-opacity="0.82" stroke="#4b7c91" stroke-width="4"/>
+    <circle cx="96" cy="244" r="18" fill="#4c92bd"/><circle cx="170" cy="244" r="18" fill="#4c92bd"/>
+    <text x="133" y="165" text-anchor="middle" class="small">小车空载</text>
+    <circle cx="260" cy="220" r="12" fill="#d9edf4" stroke="#55778e" stroke-width="3"/>
+    <path d="M195 205 L235 205 Q260 205 260 230 L260 355" stroke="#344c5c" stroke-width="4" fill="none"/>
+    <path d="M235 355 L245 430 Q248 448 265 448 Q282 448 285 430 L295 355 Z" fill="#f3ead7" stroke="#8b6c42" stroke-width="3"/>
+    <g fill="#d4a72c" stroke="#7f661d" stroke-width="2"><circle cx="248" cy="416" r="11"/><circle cx="270" cy="416" r="11"/><circle cx="248" cy="394" r="11"/><circle cx="270" cy="394" r="11"/><circle cx="259" cy="372" r="11"/></g>
+    <text x="155" y="485" text-anchor="middle" class="small">杯中 5 枚；小车仍空载</text>
+  </g>
+
+  <g id="panel-m" transform="translate(740,90)">
+    <rect x="0" y="0" width="310" height="520" rx="22" fill="#f5fbf8" stroke="#9dc9ae" stroke-width="3"/>
+    <text x="155" y="42" text-anchor="middle" class="label">M · 增加小车质量</text>
+    <line x1="35" y1="260" x2="245" y2="260" stroke="#637b89" stroke-width="7"/>
+    <line x1="245" y1="260" x2="245" y2="330" stroke="#637b89" stroke-width="7"/>
+    <path d="M75 190 Q68 200 74 226 Q80 239 98 239 L165 239 L165 230 L192 224 L192 206 L165 200 L165 190 Z" fill="#d9edf4" fill-opacity="0.82" stroke="#4b7c91" stroke-width="4"/>
+    <circle cx="96" cy="244" r="18" fill="#4c92bd"/><circle cx="170" cy="244" r="18" fill="#4c92bd"/>
+    <g fill="#d4a72c" stroke="#7f661d" stroke-width="2"><circle cx="104" cy="152" r="16"/><circle cx="133" cy="152" r="16"/><circle cx="162" cy="152" r="16"/></g>
+    <text x="133" y="112" text-anchor="middle" class="small">车上 3 枚</text>
+    <circle cx="260" cy="220" r="12" fill="#d9edf4" stroke="#55778e" stroke-width="3"/>
+    <path d="M195 205 L235 205 Q260 205 260 230 L260 355" stroke="#344c5c" stroke-width="4" fill="none"/>
+    <path d="M235 355 L245 430 Q248 448 265 448 Q282 448 285 430 L295 355 Z" fill="#f3ead7" stroke="#8b6c42" stroke-width="3"/>
+    <circle cx="257" cy="410" r="11" fill="#d4a72c"/><circle cx="278" cy="410" r="11" fill="#d4a72c"/>
+    <text x="155" y="485" text-anchor="middle" class="small">杯中 2 枚；车上 3 枚</text>
+  </g>
+
+  <path d="M315 650 C390 700 475 700 525 650" class="compare"/>
+  <text x="420" y="730" text-anchor="middle" class="label">R ↔ F：小车质量相同，只改变悬挂硬币</text>
+  <path d="M785 650 C710 700 630 700 575 650" class="compare"/>
+  <text x="720" y="765" text-anchor="middle" class="label">R ↔ M：悬挂硬币相同，只改变小车质量</text>
+  <path d="M465 305 L600 305" class="force"/>
+  <path d="M810 305 L945 305" class="force"/>
+</svg>

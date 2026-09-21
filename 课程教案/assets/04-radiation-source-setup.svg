@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700" role="img" aria-labelledby="title desc">
+  <title id="title">实验 4 室内辐射热源与等距离杯位</title>
+  <desc id="desc">左侧显示六十瓦宠物晒背加热灯、陶瓷E27配套灯具和稳定支架。灯泡为不含UVB的白炽或卤素反射型，不另加反光罩。右侧俯视图显示黑杯和白杯放在距灯泡正面三十到四十厘米的同一圆弧上。</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif; fill: #17324d; }
+      .title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 21px; font-weight: 650; }
+      .small { font-size: 18px; }
+      .ray { stroke: #e49b2f; stroke-width: 4; fill: none; marker-end: url(#rayarrow); }
+      .dim { stroke: #576b7d; stroke-width: 2.5; fill: none; marker-start: url(#dimarrow); marker-end: url(#dimarrow); }
+    </style>
+    <marker id="rayarrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#e49b2f"/>
+    </marker>
+    <marker id="dimarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#576b7d"/>
+    </marker>
+  </defs>
+
+  <text x="550" y="45" text-anchor="middle" class="title">实验 4：60 W 宠物晒背加热灯，不是普通 LED 台灯</text>
+
+  <!-- fixture detail -->
+  <rect x="45" y="88" width="425" height="505" rx="18" fill="#f5f8fa" stroke="#a9bac6" stroke-width="3"/>
+  <text x="258" y="125" text-anchor="middle" class="label">灯具侧视：需整套匹配</text>
+  <rect x="90" y="520" width="285" height="25" rx="8" fill="#697a87"/>
+  <rect x="135" y="245" width="23" height="283" rx="8" fill="#788b98"/>
+  <path d="M147 270 L245 270 L300 315" stroke="#788b98" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <rect x="280" y="292" width="65" height="58" rx="10" fill="#f4f0e5" stroke="#8b7761" stroke-width="4"/>
+  <text x="312" y="280" text-anchor="middle" class="small">≥60 W 陶瓷 E27 灯具</text>
+  <path d="M329 276 Q410 255 450 335 Q410 415 329 393 Z" fill="#7a858c" stroke="#4b565d" stroke-width="4"/>
+  <ellipse cx="405" cy="335" rx="31" ry="43" fill="#ffd27b" stroke="#c47f21" stroke-width="4"/>
+  <path d="M382 320 Q405 300 428 320" stroke="#fff2bd" stroke-width="7" fill="none"/>
+  <text x="258" y="175" text-anchor="middle" class="label">60 W 宠物晒背加热灯</text>
+  <text x="258" y="205" text-anchor="middle" class="small">不含 UVB · 反射型 · 稳固固定架</text>
+  <text x="258" y="570" text-anchor="middle" class="small">教师操作；灯泡和专用灯具会烫</text>
+
+  <!-- equal-distance top view -->
+  <rect x="495" y="88" width="560" height="505" rx="18" fill="#fffdf7" stroke="#d3bd87" stroke-width="3"/>
+  <text x="775" y="125" text-anchor="middle" class="label">桌面俯视：两杯放在同一距离弧线上</text>
+  <path d="M550 315 Q600 265 650 315 Q600 365 550 315 Z" fill="#7a858c" stroke="#4b565d" stroke-width="4"/>
+  <ellipse cx="647" cy="315" rx="25" ry="34" fill="#ffd27b" stroke="#c47f21" stroke-width="4"/>
+  <text x="600" y="390" text-anchor="middle" class="small">灯泡正面</text>
+
+  <path d="M900 190 A275 275 0 0 1 900 440" stroke="#8a9aaa" stroke-width="2.5" stroke-dasharray="8 7" fill="none"/>
+  <path d="M655 315 L873 205" class="ray"/>
+  <path d="M655 315 L873 425" class="ray"/>
+
+  <circle cx="900" cy="190" r="61" fill="#28313a" stroke="#111820" stroke-width="4"/>
+  <circle cx="900" cy="190" r="40" fill="#8ed7e8" stroke="#2f9eb8" stroke-width="3"/>
+  <line x1="900" y1="120" x2="900" y2="195" stroke="#c64747" stroke-width="5"/>
+  <circle cx="900" cy="195" r="7" fill="#c64747"/>
+  <text x="982" y="197" text-anchor="middle" class="label">黑卡杯</text>
+
+  <circle cx="900" cy="440" r="61" fill="#f4f5f6" stroke="#687580" stroke-width="4"/>
+  <circle cx="900" cy="440" r="40" fill="#8ed7e8" stroke="#2f9eb8" stroke-width="3"/>
+  <line x1="900" y1="370" x2="900" y2="445" stroke="#c64747" stroke-width="5"/>
+  <circle cx="900" cy="445" r="7" fill="#c64747"/>
+  <text x="982" y="447" text-anchor="middle" class="label">白卡杯</text>
+
+  <line x1="661" y1="315" x2="875" y2="207" class="dim"/>
+  <text x="765" y="230" text-anchor="middle" class="label">30–40 cm</text>
+  <text x="775" y="566" text-anchor="middle" class="small">同距离 · 同角度 · 同水量 · 两支同型号探针</text>
+
+  <!-- warning -->
+  <rect x="105" y="620" width="890" height="58" rx="13" fill="#f8e8e8" stroke="#b84b4b" stroke-width="3"/>
+  <text x="550" y="656" text-anchor="middle" class="label">× LED；× 含 UVB；× 塑料灯座；× 距灯不足 30 cm</text>
+</svg>

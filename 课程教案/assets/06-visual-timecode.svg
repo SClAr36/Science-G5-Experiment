@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760" role="img" aria-labelledby="title desc">
+  <title id="title">用画面内视觉时间码测量小车运动</title>
+  <desc id="desc">固定手机同时拍到小车轨道、厘米标尺和显示到百分之一秒的计时器。数字每百分之一秒更新，背景每零点一秒切换；读取小车通过起点和终点时的时间码，并按连续时间码制作等时点带。</desc>
+  <defs>
+    <linearGradient id="desk" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f7edd8"/><stop offset="1" stop-color="#e7d2ac"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity=".18"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#244b68"/></marker>
+  </defs>
+  <rect width="1100" height="760" rx="28" fill="#f7fafb"/>
+  <text x="550" y="54" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="30" font-weight="700" fill="#17324a">视觉时间码：让“真实时间”直接出现在慢动作画面里</text>
+
+  <rect x="46" y="88" width="1008" height="365" rx="24" fill="url(#desk)" stroke="#c6ab7b" stroke-width="3"/>
+  <text x="74" y="123" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#604c2f">手机拍摄范围</text>
+  <rect x="64" y="136" width="718" height="286" rx="18" fill="#fff" stroke="#315f7d" stroke-width="5" stroke-dasharray="13 9"/>
+
+  <g filter="url(#shadow)">
+    <rect x="814" y="130" width="205" height="270" rx="20" fill="#252b31"/>
+    <circle cx="916" cy="154" r="5" fill="#777"/>
+    <rect x="830" y="174" width="173" height="142" rx="8" fill="#fff"/>
+    <text x="916" y="259" text-anchor="middle" font-family="Arial,sans-serif" font-size="61" font-weight="700" fill="#111">2.10</text>
+    <text x="916" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#111">s</text>
+    <rect x="849" y="334" width="134" height="38" rx="10" fill="#eb5d3f"/>
+    <text x="916" y="360" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="19" font-weight="700" fill="#fff">数字到 0.01 s</text>
+    <text x="916" y="392" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#fff">背景每 0.10 s 换色</text>
+  </g>
+  <path d="M795 257H742" stroke="#244b68" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="897" y="423" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" fill="#244b68">计时器屏幕也进入画面</text>
+
+  <rect x="91" y="340" width="654" height="48" rx="7" fill="#fff" stroke="#4b4b4b" stroke-width="2"/>
+  <g font-family="Arial,sans-serif" font-size="17" fill="#333" text-anchor="middle">
+    <text x="113" y="414">0</text><text x="266" y="414">10</text><text x="419" y="414">20</text><text x="572" y="414">30</text><text x="725" y="414">40 cm</text>
+  </g>
+  <g stroke="#222" stroke-width="3">
+    <path d="M113 340v48M266 340v48M419 340v48M572 340v48M725 340v48"/>
+  </g>
+  <g transform="translate(468 245)" filter="url(#shadow)">
+    <path d="M-74 16C-74-14-43-34 3-34h69c25 0 43 17 43 39v43H-74Z" fill="#72c4d5" stroke="#174e64" stroke-width="4"/>
+    <path d="M-70 0c34 15 73 11 98-13" fill="none" stroke="#dff6fb" stroke-width="7" opacity=".8"/>
+    <rect x="-53" y="48" width="146" height="12" rx="6" fill="#273a45"/>
+    <circle cx="-34" cy="63" r="22" fill="#26323a"/><circle cx="-34" cy="63" r="8" fill="#d3dde1"/>
+    <circle cx="75" cy="63" r="22" fill="#26323a"/><circle cx="75" cy="63" r="8" fill="#d3dde1"/>
+    <rect x="-4" y="-70" width="9" height="40" fill="#ef6b49"/>
+    <path d="M5-70h38l-11 13 11 13H5Z" fill="#ef6b49"/>
+  </g>
+  <text x="501" y="184" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#174e64">追踪旗前缘作为统一读数点</text>
+  <path d="M501 194V220" stroke="#244b68" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(62 170)" filter="url(#shadow)">
+    <rect x="0" y="0" width="85" height="142" rx="16" fill="#25313b"/>
+    <rect x="8" y="18" width="69" height="104" rx="7" fill="#b9e2eb"/>
+    <circle cx="43" cy="131" r="6" fill="#80909b"/>
+    <path d="M42 142v35M10 207l32-30 34 30" fill="none" stroke="#25313b" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <path d="M160 222H210" stroke="#244b68" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="196" y="207" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" fill="#244b68">固定侧拍</text>
+
+  <rect x="48" y="482" width="1004" height="232" rx="23" fill="#fff" stroke="#bfd2dc" stroke-width="3"/>
+  <text x="76" y="522" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="23" font-weight="700" fill="#17324a">从同一段视频读出两类证据</text>
+
+  <g transform="translate(82 548)">
+    <circle cx="20" cy="13" r="13" fill="#ef6b49"/><text x="20" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">1</text>
+    <text x="48" y="20" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#223d50">通过 0 cm：1.30 s　　通过 40 cm：2.10 s</text>
+    <rect x="48" y="40" width="405" height="52" rx="12" fill="#eaf4f7"/>
+    <text x="250" y="74" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="25" font-weight="700" fill="#174e64">运动时间 = 2.10 − 1.30 = 0.80 s</text>
+  </g>
+
+  <g transform="translate(583 548)">
+    <circle cx="20" cy="13" r="13" fill="#ef6b49"/><text x="20" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">2</text>
+    <text x="48" y="20" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#223d50">连续读取：1.30、1.40、1.50、1.60 s …</text>
+    <line x1="52" y1="82" x2="414" y2="82" stroke="#7d98a6" stroke-width="3"/>
+    <g fill="#ef6b49" stroke="#b63e27" stroke-width="2">
+      <circle cx="68" cy="82" r="8"/><circle cx="105" cy="82" r="8"/><circle cx="164" cy="82" r="8"/><circle cx="248" cy="82" r="8"/><circle cx="382" cy="82" r="8"/>
+    </g>
+    <text x="233" y="126" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" fill="#174e64">相邻点距增大 → 相同时间内走得更远 → 速度增大</text>
+  </g>
+  <text x="550" y="746" text-anchor="middle" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="17" fill="#5c6e78">慢动作只改变回放速度；画面里的时间码保留真实经过时间。</text>
+</svg>

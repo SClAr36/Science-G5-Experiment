@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第 11 节：看不见的天体，怎么证明它存在？</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第 11 节：看不见的天体，怎么证明它存在？</h1>
+</header>
+<main>
+<p><strong>Lesson 11: How Can We Find Evidence for Objects We Cannot Directly See?</strong></p>
+<p><strong>授课状态</strong>：待上；对应实际第 11 节。</p>
+<h2>家长课前准备（Materials for Parents）</h2>
+<table>
+<thead>
+<tr>
+<th>材料 Material</th>
+<th style="text-align:right">建议数量 Amount</th>
+<th>具体要求与用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>高边塑料整理箱或托盘 high-sided tray</td>
+<td style="text-align:right">1 个</td>
+<td>约 30 cm × 40 cm，边高至少 8 cm；装撞击坑粉末</td>
+</tr>
+<tr>
+<td>普通面粉 plain flour</td>
+<td style="text-align:right">约 1.5–2 kg</td>
+<td>铺 3–4 cm 厚；不用实验室试剂粉末</td>
+</tr>
+<tr>
+<td>无糖可可粉 cocoa powder</td>
+<td style="text-align:right">约 30–50 g</td>
+<td>在面粉上筛薄层，让喷出物更明显</td>
+</tr>
+<tr>
+<td>细筛或茶筛 small sieve</td>
+<td style="text-align:right">1 个</td>
+<td>均匀铺可可粉</td>
+</tr>
+<tr>
+<td>玻璃弹珠 glass marble</td>
+<td style="text-align:right">同规格 3 枚</td>
+<td>直径约 15–20 mm，主实验每次用同一规格</td>
+</tr>
+<tr>
+<td>不同质量但大小接近的球</td>
+<td style="text-align:right">可选 2–3 个</td>
+<td>木球、橡胶球、钢球；只作质量延伸，成人先检查无尖角</td>
+</tr>
+<tr>
+<td>大垃圾袋或旧床单</td>
+<td style="text-align:right">1 张</td>
+<td>铺在托盘下收集粉末</td>
+</tr>
+<tr>
+<td>鞋盒 shoebox</td>
+<td style="text-align:right">1 个</td>
+<td>制作“恒星光盘”暗箱</td>
+</tr>
+<tr>
+<td>烘焙纸或描图纸 baking parchment / tracing paper</td>
+<td style="text-align:right">1 张</td>
+<td>覆盖直径约 8 cm 圆孔，形成均匀发光面</td>
+</tr>
+<tr>
+<td>黑色卡纸 black card</td>
+<td style="text-align:right">1 张</td>
+<td>剪直径 1、2、3 cm 的“行星”圆片</td>
+</tr>
+<tr>
+<td>透明文件片或透明包装片 clear acetate</td>
+<td style="text-align:right">3 条</td>
+<td>每条固定一个黑色圆片，匀速拉过“恒星”</td>
+</tr>
+<tr>
+<td>稳定 LED 手电筒 stable LED flashlight</td>
+<td style="text-align:right">1 个</td>
+<td>放在鞋盒后部照亮圆形发光面；固定亮度</td>
+</tr>
+<tr>
+<td>安卓手机 Android phone</td>
+<td style="text-align:right">可选 1 台</td>
+<td>有环境光传感器时可用 phyphox 读取 lux；必须课前测试</td>
+</tr>
+<tr>
+<td>独立数字照度计 digital lux meter</td>
+<td style="text-align:right">可选 1 台</td>
+<td>若没有可访问光传感器的安卓手机，优先使用照度计</td>
+</tr>
+<tr>
+<td>口罩 masks</td>
+<td style="text-align:right">成人、学生各 1 个</td>
+<td>铺粉和清理时佩戴，避免吸入扬尘</td>
+</tr>
+</tbody>
+</table>
+<p>不需要家长准备望远镜、激光、干冰、燃烧材料或真实陨石。iPhone 的环境光传感器通常不能被第三方应用直接访问；不要临时购买付费软件，教师应准备纸面数据备用。</p>
+<h2>一、课程定位与学习目标</h2>
+<ul>
+<li><strong>对应学校单元</strong>：Unit 5 Space Science</li>
+<li><strong>对应课堂 Notes</strong>：03 Asteroids, Meteors and Comets；04 Stars；05 Exoplanets</li>
+<li><strong>建议课时</strong>：90 分钟</li>
+<li><strong>核心问题</strong>：科学家无法直接触碰遥远天体时，怎样从撞击痕迹、恒星光和周期变化推断它们的存在与性质？<br />
+<em>How can impact traces, starlight, and repeating patterns reveal objects that we cannot directly touch or see?</em></li>
+</ul>
+<p>本课的证据主线：</p>
+<pre><code class="language-text">撞击坑保留一次碰撞的痕迹
+              ↓
+恒星亮度的周期性下降保留行星凌日的信号
+              ↓
+颜色、亮度和变化模式提供恒星性质线索
+              ↓
+indirect evidence → testable inference
+</code></pre>
+<h3>学生应能</h3>
+<ol>
+<li>准确区分 asteroid、meteoroid、meteor、meteorite 和 comet。</li>
+<li>在粉末撞击坑实验中保持弹珠质量和表面条件不变，改变落下高度并重复测量坑径。</li>
+<li>识别撞击坑的 rim、ejecta、rays，并用能量转移解释高度增加时坑径通常增大。</li>
+<li>搭建或使用“发光恒星—行星圆片—照度传感器”模型，记录亮度—时间数据并画出凌日光变曲线（transit light curve）。</li>
+<li>从光变下降深度比较行星相对大小，从重复下降间隔理解轨道周期。</li>
+<li>说明凌日信号必须重复并排除其他原因，不能因一次变暗就宣布发现行星。</li>
+<li>区分恒星的视亮度（apparent brightness）与本征亮度/光度（luminosity），用颜色判断表面温度趋势。</li>
+<li>按初始质量把恒星演化卡分成太阳质量附近和高质量两条路线，并说明恒星发光来自核聚变（nuclear fusion），不是普通燃烧。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">教师核心问答 / Core Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：撞击坑越大，能否只凭这一点判断撞击物一定越大？</strong></p>
+<p><strong>参考回答：</strong> 不能。坑径还受撞击速度、密度、角度、表面材料等影响；需要控制变量或结合更多证据。</p>
+<p><strong>问题：恒星亮度下降一次，是否就证明有系外行星？</strong></p>
+<p><strong>参考回答：</strong> 不能。仪器误差、恒星活动或双星等也会使亮度改变；需要重复、周期性信号和其他方法验证。</p>
+<p><strong>问题：宜居带（habitable zone）是否等于已经发现生命？</strong></p>
+<p><strong>参考回答：</strong> 不等于。宜居带只表示在一定假设下表面可能允许液态水；还要知道大气、组成、恒星活动等，且目前不能由“在宜居带”直接推出有生命。</p>
+</div>
+</details>
+<h2>二、重要概念与实验边界</h2>
+<h3>小天体名称不是同一物体的五种大小</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>定义</th>
+<th>关键判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小行星 asteroid</td>
+<td>绕太阳运行、通常比典型 meteoroid 大的岩石或金属天体</td>
+<td>天体本身；许多位于火星与木星间小行星带</td>
+</tr>
+<tr>
+<td>流星体 meteoroid</td>
+<td>太空中的较小岩石或金属体</td>
+<td>仍在太空</td>
+</tr>
+<tr>
+<td>流星 meteor</td>
+<td>流星体进入大气时产生的发光现象</td>
+<td>是现象，不是落到手里的石头</td>
+</tr>
+<tr>
+<td>陨石 meteorite</td>
+<td>穿过大气后到达地面的碎片</td>
+<td>已到地面</td>
+</tr>
+<tr>
+<td>彗星 comet</td>
+<td>含冰、尘埃和岩石，绕太阳运行；接近太阳时形成 coma 和尾</td>
+<td>尾通常指向远离太阳方向，不等于运动轨迹</td>
+</tr>
+</tbody>
+</table>
+<h3>撞击坑模型</h3>
+<ul>
+<li>落下高度增大，弹珠撞击前速度通常更大，动能 <code>K = 1/2 mv²</code> 增大。</li>
+<li>粉末被加速、抛出并重新落下，显示能量从撞击物转移到表面材料。</li>
+<li>教室中由地球重力下落的低速弹珠与真实高速撞击差别巨大；本课只比较变量关系与坑形特征。</li>
+</ul>
+<h3>凌日法模型</h3>
+<pre><code class="language-text">baseline brightness L0
+→ planet crosses luminous disk
+→ minimum brightness Lmin
+
+transit depth ≈ (L0 - Lmin) / L0 × 100%
+</code></pre>
+<p>在均匀发光且行星远小于恒星的简化模型中：</p>
+<pre><code class="language-text">transit depth ≈ (planet radius / star radius)²
+</code></pre>
+<p>本课黑色圆片相对“恒星”被故意做得很大，使普通传感器能测到明显变化；真实地球凌日太阳只造成约 <code>0.008%</code> 的亮度下降。</p>
+<h3>恒星光给出的不同线索</h3>
+<ul>
+<li>**颜色（color）**主要提供表面温度线索：蓝白色恒星表面通常比红色恒星更热。</li>
+<li>**视亮度（apparent brightness）**受恒星光度和距离共同影响。</li>
+<li>**光度（luminosity）**表示恒星实际发出的总能量速率；不能只看“从地球看多亮”。</li>
+<li>**核聚变（nuclear fusion）**在恒星核心把轻原子核结合成更重原子核并释放能量；不是与氧气发生的普通燃烧。</li>
+</ul>
+<h2>三、实验室材料与课前准备</h2>
+<h3>实验室直接取用</h3>
+<ul>
+<li>电子秤 1 台、米尺 1 把、直尺 2 把</li>
+<li>秒表 1 个、计算器 1 个、记录纸和方格纸</li>
+<li>铁架台、夹具和水平横杆 1 套；帮助统一落点和高度</li>
+<li>白色托盘、护目镜、一次性手套、勺子、刷子、湿布</li>
+<li>可选游标卡尺 1 把；测弹珠和坑径</li>
+<li>恒星颜色卡、恒星演化卡、三组备用光变数据卡</li>
+</ul>
+<h3>课前搭好撞击坑箱</h3>
+<ol>
+<li>在大垃圾袋或旧床单中央放高边整理箱。</li>
+<li>倒入 3–4 cm 厚面粉，轻轻刮平；不要压实。</li>
+<li>用细筛铺约 1–2 mm 薄层可可粉；铺粉时成人和学生戴口罩。</li>
+<li>把米尺竖直固定在箱旁，<code>10、30、60 cm</code> 高度从可可表面起算。</li>
+<li>在铁架台横杆上标出统一落点；弹珠只自由释放，不向下掷。</li>
+<li>用同规格弹珠预试 10、30、60 cm。坑不能重叠，弹珠不能弹出箱外。</li>
+</ol>
+<h3>课前搭好“恒星光盘”</h3>
+<ol>
+<li>在鞋盒一端剪直径 <code>8 cm</code> 圆孔，覆盖一层烘焙纸或描图纸并绷平。</li>
+<li>LED 手电固定在鞋盒内部或另一端，正对圆孔；盒内四周用白纸帮助扩散，不能让灯直接贴到纸上。</li>
+<li>盖好鞋盒，使圆孔呈较均匀的发光圆盘。连续点亮 10 分钟，确认不发热。</li>
+<li>黑卡剪 <code>1、2、3 cm</code> 三个圆片，各固定在透明片条中央；胶带不能超出圆片边缘。</li>
+<li>发光圆盘、透明片轨道和传感器在同一高度。传感器距圆盘约 60–100 cm，能看见完整圆盘。</li>
+<li>遮挡侧面杂光，在桌上贴出所有设备固定位置。</li>
+<li>用安卓手机时，课前打开 phyphox 的 <code>Light</code> 原始传感器并确认读数会随遮挡改变。若设备没有传感器或读数不稳定，改用独立照度计。</li>
+<li>预试 2 cm 圆片：完全经过圆盘中心时应有清楚但不至于归零的亮度下降。</li>
+<li>打印备用光变数据：至少包含稳定基线、一次 U 形下降、三次等间隔下降和一组不规则噪声。</li>
+</ol>
+<h2>四、按时间推进的课堂脚本</h2>
+<h3>一眼速查（Quick timeline）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间</th>
+<th>做什么</th>
+<th>一句话结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0–8</td>
+<td>小天体“身份变化”快排</td>
+<td>名称取决于位置与现象，不只取决于大小</td>
+</tr>
+<tr>
+<td style="text-align:right">8–13</td>
+<td>撞击坑问题、变量与预测</td>
+<td>一次只改变落下高度</td>
+</tr>
+<tr>
+<td style="text-align:right">13–34</td>
+<td>三高度 × 三重复撞击坑</td>
+<td>高度增加时坑径通常增大，喷出物范围也改变</td>
+</tr>
+<tr>
+<td style="text-align:right">34–42</td>
+<td>清理与数据图</td>
+<td>痕迹能反推过程，但结论有边界</td>
+</tr>
+<tr>
+<td style="text-align:right">42–50</td>
+<td>为什么系外行星难直接看到</td>
+<td>行星暗、恒星亮，科学家测“星光眨眼”</td>
+</tr>
+<tr>
+<td style="text-align:right">50–72</td>
+<td>三种行星圆片的光变曲线</td>
+<td>较大圆片产生更深亮度下降</td>
+</tr>
+<tr>
+<td style="text-align:right">72–79</td>
+<td>重复凌日与轨道周期</td>
+<td>周期性重复比一次变暗更强</td>
+</tr>
+<tr>
+<td style="text-align:right">79–86</td>
+<td>恒星证据卡</td>
+<td>颜色、亮度、质量分别提供不同线索</td>
+</tr>
+<tr>
+<td style="text-align:right">86–90</td>
+<td>证据梯与离堂题</td>
+<td>观察 → 模式 → 推论 → 交叉验证</td>
+</tr>
+</tbody>
+</table>
+<h3>0–8 分钟：同一块石头，什么时候叫 meteoroid、meteor、meteorite？</h3>
+<h4>做</h4>
+<p>把 5 张场景卡按顺序或分类：</p>
+<ol>
+<li>太空中的小岩石</li>
+<li>进入地球大气并出现亮迹</li>
+<li>一部分落到地面</li>
+<li>绕太阳运行的较大岩石天体</li>
+<li>接近太阳后出现彗发和尾的冰尘天体</li>
+</ol>
+<p>学生给每张贴上英文名称，再用一句话说明依据。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：meteor 是一块能捡起来的石头吗？</strong></p>
+<p><strong>参考回答：</strong> meteor 是进入大气时的发光现象；落到地面的碎片叫 meteorite。</p>
+<p><strong>问题：彗尾是否永远拖在彗星运动方向后方？</strong></p>
+<p><strong>参考回答：</strong> 不一定。太阳风和辐射压力使彗尾总体指向远离太阳的方向。</p>
+<p><strong>问题：小行星和彗星的共同点是什么？</strong></p>
+<p><strong>参考回答：</strong> 都绕太阳运行，都是太阳系小天体；主要组成和接近太阳时的表现不同。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">space rock → meteoroid
+light in atmosphere → meteor
+fragment on the ground → meteorite
+
+asteroid：rock / metal, orbits Sun
+comet：ice + dust + rock, coma / tails near Sun
+</code></pre>
+</div>
+</details>
+<h3>8–13 分钟：一个公平的撞击坑问题</h3>
+<h4>讲</h4>
+<p><strong>可检验问题</strong>：</p>
+<pre><code class="language-text">同一颗弹珠从不同高度自由落下，
+撞击坑直径怎样改变？
+</code></pre>
+<ul>
+<li>自变量：落下高度 drop height</li>
+<li>因变量：坑缘外径 crater rim diameter</li>
+<li>控制变量：弹珠、表面材料、粉末厚度、落点附近状态、释放方式</li>
+<li>每个高度重复 3 次</li>
+</ul>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：为什么每次撞击后不能直接在同一个坑旁很近处再落一颗？</strong></p>
+<p><strong>参考回答：</strong> 前一次撞击已改变附近粉末的厚度和松紧，会影响下一次坑形。</p>
+<p><strong>问题：为什么只放手，不能向下扔？</strong></p>
+<p><strong>参考回答：</strong> 向下扔会加入无法控制的手部速度，落下高度就不再是唯一变化。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录：预测 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">我预测高度从 10 cm 增加到 60 cm 时，
+坑径会________________，
+因为________________。
+</code></pre>
+</div>
+</details>
+<h3>13–34 分钟：三种高度的撞击坑实验</h3>
+<h4>做</h4>
+<ol>
+<li>用两把直尺轻靠坑缘，示范测量通过坑中心的最长外径；不把喷射线算进坑径。</li>
+<li>从 <code>10 cm</code> 高度让同一规格弹珠自由落下。</li>
+<li>不立刻拔弹珠；先标出 rim、ejecta、ray，拍照或画图。</li>
+<li>轻轻垂直取出弹珠，测最长坑径和与其垂直的坑径，取二者平均。</li>
+<li>换到未扰动区域，完成同高度 3 次。</li>
+<li>轻轻刮平并重新筛薄层可可粉。</li>
+<li>对 <code>30 cm</code> 和 <code>60 cm</code> 重复以上步骤。</li>
+<li>每档计算平均坑径；画 <code>drop height–mean crater diameter</code> 点图。</li>
+</ol>
+<p><strong>预期结果</strong>：同一弹珠从更高处落下时，平均坑径和喷出物范围通常增大，但关系不必线性；重复值会因粉末松紧和读数产生波动。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：坑缘外的浅色或深色放射线说明什么？</strong></p>
+<p><strong>参考回答：</strong> 撞击把表面和下层材料加速抛出，形成喷出物与放射线，是能量转移的痕迹。</p>
+<p><strong>问题：为什么 60 cm 的坑径不一定是 30 cm 的两倍？</strong></p>
+<p><strong>参考回答：</strong> 速度随落下高度的关系不是简单正比，坑形成还受材料流动、压实和测量方法影响。</p>
+<p><strong>问题：坑近似圆形是否表示撞击物一定竖直落下？</strong></p>
+<p><strong>参考回答：</strong> 不能仅凭圆形判断。高速撞击释放能量的方式可形成近圆坑；角度很浅时才更容易出现明显不对称。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">高度/cm</th>
+<th style="text-align:right">坑径 1/cm</th>
+<th style="text-align:right">坑径 2/cm</th>
+<th style="text-align:right">坑径 3/cm</th>
+<th style="text-align:right">平均坑径/cm</th>
+<th>rim / ejecta / rays 观察</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">10</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">30</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">gravitational potential energy
+→ kinetic energy
+→ crushed / displaced / ejected material
+
+impact trace 撞击痕迹
+→ evidence about an earlier event
+</code></pre>
+</div>
+</details>
+<h3>34–42 分钟：清理、作图与“能推到哪里”</h3>
+<h4>做</h4>
+<ol>
+<li>弹珠留在托盘中；先用勺和刷子收拢粉末，不吹、不抖床单。</li>
+<li>擦手、换到干净桌面。</li>
+<li>完成高度—平均坑径点图，圈出趋势和异常点。</li>
+<li>可选质量延伸只做 1 次演示：相同高度落下大小接近、质量不同的球；不与主数据混表。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：我们的数据支持什么结论？</strong></p>
+<p><strong>参考回答：</strong> 在本装置、同一弹珠和相同粉末条件下，落下高度增加时平均坑径通常增大。</p>
+<p><strong>问题：我们的数据不能直接支持什么？</strong></p>
+<p><strong>参考回答：</strong> 不能直接给出真实陨石速度，也不能只凭真实坑径唯一确定撞击物大小。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">claim：height ↑ → mean crater diameter usually ↑
+evidence：our repeated measurements
+limit：classroom model is not full-scale impact physics
+</code></pre>
+</div>
+</details>
+<h3>42–50 分钟：一颗行星为什么会让恒星“眨眼”？</h3>
+<h4>做</h4>
+<ol>
+<li>点亮 8 cm 发光圆盘，传感器固定读出基线亮度。</li>
+<li>把一整本书挡在圆盘前，观察亮度接近大幅下降；再拿开。</li>
+<li>把 2 cm 黑圆片从圆盘前经过，观察只有部分下降。</li>
+<li>学生画出两种情况下预计的亮度—时间图。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：为什么系外行星通常比恒星难直接拍到？</strong></p>
+<p><strong>参考回答：</strong> 行星更小、通常不自己发出可见光，反射光又被附近明亮恒星淹没。</p>
+<p><strong>问题：什么叫 transit？</strong></p>
+<p><strong>参考回答：</strong> 从观察者方向看，一个天体经过另一天体前方；系外行星凌日会遮住恒星光盘的一小部分。</p>
+<p><strong>问题：是不是每颗行星每绕一圈都能被我们看见凌日？</strong></p>
+<p><strong>参考回答：</strong> 不是。轨道平面必须刚好让行星从我们的视线前经过；观察方向不合适就没有凌日。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">transit 凌日：
+planet crosses in front of star
+
+light curve 光变曲线：
+brightness vs. time
+</code></pre>
+</div>
+</details>
+<h3>50–72 分钟：自己制造三条系外行星光变曲线</h3>
+<h4>做</h4>
+<ol>
+<li>暗化环境但保留安全照明；设备位置全贴胶带固定。</li>
+<li>传感器对准完整发光圆盘，等 10 秒；每秒读一次，取 5 个基线值平均为 <code>L0</code>。</li>
+<li>用节拍器或教师口令 <code>0–8 秒</code>。透明片从圆盘左侧匀速拉到右侧：
+<ul>
+<li>0–1 秒：圆片在外</li>
+<li>2–3 秒：进入</li>
+<li>4 秒：经过中心</li>
+<li>5–6 秒：离开</li>
+<li>7–8 秒：回到外部</li>
+</ul>
+</li>
+<li>学生每秒记录一次 lux；先做 1 cm 圆片。</li>
+<li>相同路线和速度分别做 2 cm、3 cm 圆片。</li>
+<li>每组找最低亮度 <code>Lmin</code>，计算：</li>
+</ol>
+<pre><code class="language-text">transit depth = (L0 - Lmin) / L0 × 100%
+</code></pre>
+<ol start="7">
+<li>画三条光变曲线，比较下降深度。</li>
+</ol>
+<p><strong>预期结果</strong>：圆片进入发光圆盘时亮度下降、离开后回到基线；较大圆片通常产生更深下降。由于光盘不完全均匀、圆片轨道和手速有差异，曲线可能不对称。</p>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：为什么要先测 5 次基线？</strong></p>
+<p><strong>参考回答：</strong> 光源和传感器会有波动，多次基线能估计正常亮度范围。</p>
+<p><strong>问题：较大行星的曲线哪一部分最明显改变？</strong></p>
+<p><strong>参考回答：</strong> 下降深度通常更大；经过恒星圆盘的速度相同且路径相同时，持续时间也可能因圆片直径略增加。</p>
+<p><strong>问题：如果 3 cm 圆片没有产生最深下降，先检查什么？</strong></p>
+<p><strong>参考回答：</strong> 是否真正经过圆盘中心、传感器或灯是否移动、环境光是否变化、透明片胶带是否遮光。</p>
+<p><strong>问题：为什么模型中不能让黑圆片贴在传感器前面经过？</strong></p>
+<p><strong>参考回答：</strong> 那会把小圆片变成能遮住几乎全部视野的近处物体，不能模拟行星只遮住恒星光盘的一小部分。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p>基线平均 <code>L0 = ________ lux</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">时间/s</th>
+<th style="text-align:right">1 cm 行星/lux</th>
+<th style="text-align:right">2 cm 行星/lux</th>
+<th style="text-align:right">3 cm 行星/lux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">圆片直径</th>
+<th style="text-align:right"><code>Lmin</code> / lux</th>
+<th style="text-align:right">transit depth / %</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1 cm</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">2 cm</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:right">3 cm</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h3>72–79 分钟：一次“眨眼”为什么还不够？</h3>
+<h4>做</h4>
+<ol>
+<li>固定 2 cm 圆片，按每 10 秒一次的节奏让它经过圆盘中心，共 3 次。</li>
+<li>若传感器能连续记录，直接查看三个下降；若只能手读，每 2 秒记录一次。</li>
+<li>测三个最低点之间的时间间隔，判断是否近似相等。</li>
+<li>与一张不规则变化的数据卡比较：哪一组更像轨道周期信号？</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：重复间隔告诉我们什么？</strong></p>
+<p><strong>参考回答：</strong> 相邻凌日之间的时间可给出行星的轨道周期。</p>
+<p><strong>问题：为什么周期性仍不一定是行星？</strong></p>
+<p><strong>参考回答：</strong> 双星、恒星活动或仪器系统误差也可能周期变化；科学家会比较曲线形状、不同波长和 radial velocity 等证据。</p>
+<p><strong>问题：transit 和 radial velocity 分别看什么？</strong></p>
+<p><strong>参考回答：</strong> transit 看星光是否周期变暗；radial velocity 看恒星因行星引力而朝向/远离观察者轻微摆动造成的光谱多普勒变化。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录 / Record</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">第几次下降</th>
+<th style="text-align:right">最低点时间/s</th>
+<th style="text-align:right">与上一次间隔/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">—</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h3>79–86 分钟：恒星的颜色、亮度和质量各说了什么？</h3>
+<h4>做：三组证据卡</h4>
+<ol>
+<li><strong>颜色卡</strong>：蓝白、黄、橙红三颗恒星。按表面温度从高到低排列。</li>
+<li><strong>亮度卡</strong>：两个完全相同的 LED 灯，一个近、一个远。判断哪个看起来更亮，说明视亮度还受距离影响。</li>
+<li><strong>演化卡</strong>：按初始质量分两路：</li>
+</ol>
+<pre><code class="language-text">Sun-like star:
+nebula → protostar → main sequence
+→ red giant → planetary nebula
+→ white dwarf
+
+massive star:
+nebula → protostar → massive main sequence
+→ red supergiant → supernova
+→ neutron star or black hole
+</code></pre>
+<details class="lesson-collapsible lesson-collapsible-qa">
+<summary>
+<span class="lesson-collapsible-title">问答 / Q&amp;A</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题：红色恒星一定比蓝色恒星暗吗？</strong></p>
+<p><strong>参考回答：</strong> 不能这样判断。颜色主要反映表面温度；总光度还受半径等因素影响，视亮度又受距离影响。</p>
+<p><strong>问题：恒星为什么发光，不说它在“烧煤一样燃烧”？</strong></p>
+<p><strong>参考回答：</strong> 恒星核心通过核聚变释放能量，不是依赖氧气的普通化学燃烧。</p>
+<p><strong>问题：高质量恒星寿命为什么反而较短？</strong></p>
+<p><strong>参考回答：</strong> 它们核心温度和压力更高，消耗核燃料的速率更快。</p>
+</div>
+</details>
+<details class="lesson-collapsible lesson-collapsible-notes">
+<summary>
+<span class="lesson-collapsible-title">板书 / Board notes</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<pre><code class="language-text">color → surface temperature clue
+apparent brightness → luminosity + distance
+initial mass → life-cycle path
+
+stars shine by nuclear fusion
+</code></pre>
+</div>
+</details>
+<h3>86–90 分钟：证据梯与离堂记录</h3>
+<h4>收束</h4>
+<pre><code class="language-text">direct observation 直接观察
+→ repeated pattern 重复模式
+→ inference 推论
+→ alternative explanations 替代解释
+→ independent check 独立验证
+</code></pre>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">离堂记录与参考答案 / Exit record &amp; answers</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<p><strong>问题 1：用本次数据说明落下高度与坑径的关系。</strong></p>
+<p><strong>参考答案：</strong> 填入实际平均坑径；在本装置中，高度增加时平均坑径通常增大，但存在重复测量波动。</p>
+<p><strong>问题 2：光变曲线的“深度”和“重复间隔”分别提供什么线索？</strong></p>
+<p><strong>参考答案：</strong> 下降深度提供行星与恒星相对大小的线索；重复间隔提供轨道周期线索。</p>
+<p><strong>问题 3：为什么“一次星光变暗”不是充分证据？</strong></p>
+<p><strong>参考答案：</strong> 可能来自恒星活动、双星、仪器或环境变化；需要重复的周期模式和其他方法验证。</p>
+<p><strong>问题 4：宜居带为什么不等于有生命？</strong></p>
+<p><strong>参考答案：</strong> 它只表示在一定条件下液态水可能存在；并未证明行星有合适大气、化学条件或生命。</p>
+</div>
+</details>
+<h2>五、教师参考、预期结果与常见误区</h2>
+<h3>数据判断</h3>
+<ul>
+<li>撞击坑三次重复若有一次与另两次相差超过约 20%，检查是否落在旧坑、粉末厚度不同或测错 rim；保留原记录并补测，不擦掉异常值。</li>
+<li>光变基线在 10 秒内波动超过约 5% 时，不开始“行星”实验；先固定灯和传感器、遮挡环境光。</li>
+<li>圆片下降深度不要求接近面积比理论值；重点是方向性趋势、重复性和装置限制。</li>
+<li>若曲线只有一个尖点，可能是读取频率太低；延长圆片通过时间或使用连续记录。</li>
+</ul>
+<h3>常见误区</h3>
+<ul>
+<li><strong>“meteor、meteoroid、meteorite 是大中小三种石头。”</strong> 名称主要由所处阶段和观察现象决定。</li>
+<li><strong>“彗尾总在彗星身后。”</strong> 彗尾总体指向远离太阳方向。</li>
+<li><strong>“真实陨石坑里通常还躺着完整陨石。”</strong> 高速撞击物常破碎、熔化或汽化。</li>
+<li><strong>“坑径直接等于撞击物直径。”</strong> 坑通常远大于撞击物，且受多变量影响。</li>
+<li><strong>“一次变暗就是系外行星。”</strong> 必须看重复、周期和独立验证。</li>
+<li><strong>“最亮的星一定最热。”</strong> 视亮度受光度和距离影响；颜色才是表面温度的重要线索。</li>
+<li><strong>“habitable = inhabited。”</strong> 可能适合液态水不等于已有生命。</li>
+</ul>
+<h2>六、安全、误差与现场备用方案</h2>
+<h3>安全</h3>
+<ul>
+<li>铺粉、撞击和清理时戴护目镜；铺粉与清理额外戴口罩，禁止吹粉末。</li>
+<li>撞击箱放地面或低桌，周围铺垃圾袋；弹珠只从最高 60 cm 自由落下，不投掷。</li>
+<li>弹珠、钢球和小圆片防误吞；实验后清点并洗手。</li>
+<li>面粉和可可粉不食用；对小麦、可可或粉尘敏感者不参与粉末操作，改用湿沙备用。</li>
+<li>只用低温 LED 光源；不使用激光，不直视强光。</li>
+<li>暗化房间前清理电线和通道，保留安全照明。</li>
+</ul>
+<h3>主要误差</h3>
+<ul>
+<li>面粉被压实或厚度不均。</li>
+<li>可可层太厚，喷出物边界不清。</li>
+<li>弹珠落点靠近旧坑或箱边。</li>
+<li>坑径测量没有通过中心，或把 rays 当作 rim。</li>
+<li>发光圆盘亮度不均、手电电量下降。</li>
+<li>圆片没有经过圆盘中心，拉动速度不一致。</li>
+<li>手机自动屏幕亮度或其他灯光变化影响传感器。</li>
+</ul>
+<h3>现场备用</h3>
+<ul>
+<li><strong>粉尘敏感或不能用面粉</strong>：改用略湿、可塑但不积水的细沙；坑形不同，重新做全部高度，不与面粉数据混合。</li>
+<li><strong>弹珠弹出托盘</strong>：降低最高高度到 45 cm，加深粉末并在箱口加透明防护罩。</li>
+<li><strong>坑缘塌陷</strong>：减少面粉压实、降低可可厚度；用照片立即测量，不反复碰坑。</li>
+<li><strong>手机没有光传感器</strong>：使用独立数字照度计；仍没有设备时，使用 NASA <code>Transit Tracks</code> 的打印光变曲线完成分析，并保留肉眼模型。</li>
+<li><strong>lux 数据跳动</strong>：关闭自动变化光源，设备预热 1 分钟，记录 5 次基线；环境仍不稳就改用备用数据。</li>
+<li><strong>圆片造成 100% 遮挡</strong>：让圆片贴近发光圆盘而不是传感器，增大传感器距离并确认能看见完整圆盘。</li>
+<li><strong>课时被压缩到 70 分钟</strong>：撞击坑只做 10/30/60 cm 各 2 次；光变只做 1 cm 和 3 cm，保留重复周期实验与离堂题；恒星演化卡改课后。</li>
+</ul>
+<h2>七、课堂材料依据与实验设计来源</h2>
+<h3>School Notes</h3>
+<ul>
+<li><code>School/02 Class Materials/Unit 5 Space Science/01 Notes/03 asteroids meteors comets .pdf</code></li>
+<li><code>School/02 Class Materials/Unit 5 Space Science/01 Notes/04 Stars.pdf</code></li>
+<li><code>School/02 Class Materials/Unit 5 Space Science/01 Notes/05 Exoplanets.pdf</code></li>
+</ul>
+<h3>外部实验、数据与视频来源</h3>
+<ul>
+<li><a href="https://www.jpl.nasa.gov/_edu/pdfs/impactcraters.pdf">NASA/JPL Exploring Meteorite Mysteries: Impact Craters</a>：粉末层、不同高度/质量、rim/ejecta/rays 和重复测量；本课缩小材料量并强化防尘。</li>
+<li><a href="https://astrobiology.nasa.gov/nai/media/medialibrary/2013/10/TransitTracks-Activity-2010.pdf">NASA Astrobiology: Transit Tracks</a>：灯、珠子、观察方向、光变曲线和可选光传感器；本课改成均匀发光圆盘与三种圆片。</li>
+<li><a href="https://www.jpl.nasa.gov/edu/resources/lesson-plan/exploring-exoplanets-with-kepler/">NASA/JPL Exploring Exoplanets with Kepler</a>：周期性亮度下降、光变曲线和凌日法解释。</li>
+<li><a href="https://phyphox.org/experiment/?hardware=light">phyphox Light Sensor</a>：安卓设备读取环境光传感器原始数据。</li>
+<li><a href="https://phyphox.org/faq/">phyphox FAQ</a>：说明部分设备没有可访问传感器，iPhone 不向第三方应用开放环境光传感器；据此设置独立照度计与纸面数据备用。</li>
+</ul>
+<h2>八、关键术语（Key Vocabulary）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小行星</td>
+<td>asteroid</td>
+<td>流星体</td>
+<td>meteoroid</td>
+</tr>
+<tr>
+<td>流星</td>
+<td>meteor</td>
+<td>陨石</td>
+<td>meteorite</td>
+</tr>
+<tr>
+<td>彗星</td>
+<td>comet</td>
+<td>彗核</td>
+<td>nucleus</td>
+</tr>
+<tr>
+<td>彗发</td>
+<td>coma</td>
+<td>彗尾</td>
+<td>comet tail</td>
+</tr>
+<tr>
+<td>撞击物</td>
+<td>impactor / projectile</td>
+<td>撞击坑</td>
+<td>impact crater</td>
+</tr>
+<tr>
+<td>坑缘</td>
+<td>rim</td>
+<td>喷出物</td>
+<td>ejecta</td>
+</tr>
+<tr>
+<td>放射线</td>
+<td>rays</td>
+<td>动能</td>
+<td>kinetic energy</td>
+</tr>
+<tr>
+<td>质量</td>
+<td>mass</td>
+<td>速度</td>
+<td>velocity</td>
+</tr>
+<tr>
+<td>间接证据</td>
+<td>indirect evidence</td>
+<td>推论</td>
+<td>inference</td>
+</tr>
+<tr>
+<td>系外行星</td>
+<td>exoplanet</td>
+<td>凌日</td>
+<td>transit</td>
+</tr>
+<tr>
+<td>凌日法</td>
+<td>transit method</td>
+<td>光变曲线</td>
+<td>light curve</td>
+</tr>
+<tr>
+<td>基线亮度</td>
+<td>baseline brightness</td>
+<td>凌日深度</td>
+<td>transit depth</td>
+</tr>
+<tr>
+<td>轨道周期</td>
+<td>orbital period</td>
+<td>照度</td>
+<td>illuminance</td>
+</tr>
+<tr>
+<td>勒克斯</td>
+<td>lux</td>
+<td>径向速度</td>
+<td>radial velocity</td>
+</tr>
+<tr>
+<td>多普勒效应</td>
+<td>Doppler effect</td>
+<td>引力微透镜</td>
+<td>gravitational microlensing</td>
+</tr>
+<tr>
+<td>脉冲星计时</td>
+<td>pulsar timing</td>
+<td>宜居带</td>
+<td>habitable zone</td>
+</tr>
+<tr>
+<td>恒星</td>
+<td>star</td>
+<td>等离子体</td>
+<td>plasma</td>
+</tr>
+<tr>
+<td>核聚变</td>
+<td>nuclear fusion</td>
+<td>光年</td>
+<td>light-year</td>
+</tr>
+<tr>
+<td>天文单位</td>
+<td>astronomical unit (AU)</td>
+<td>视亮度</td>
+<td>apparent brightness</td>
+</tr>
+<tr>
+<td>光度</td>
+<td>luminosity</td>
+<td>表面温度</td>
+<td>surface temperature</td>
+</tr>
+<tr>
+<td>星云</td>
+<td>nebula</td>
+<td>原恒星</td>
+<td>protostar</td>
+</tr>
+<tr>
+<td>主序星</td>
+<td>main-sequence star</td>
+<td>红巨星</td>
+<td>red giant</td>
+</tr>
+<tr>
+<td>红超巨星</td>
+<td>red supergiant</td>
+<td>超新星</td>
+<td>supernova</td>
+</tr>
+<tr>
+<td>白矮星</td>
+<td>white dwarf</td>
+<td>中子星</td>
+<td>neutron star</td>
+</tr>
+<tr>
+<td>黑洞</td>
+<td>black hole</td>
+<td>交叉验证</td>
+<td>independent verification</td>
+</tr>
+</tbody>
+</table>
+</main>
+</body>
+</html>

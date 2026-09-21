@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>五年级实验课：电化学、气体与膨胀、声音三个系列</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5e6b77;
+      --accent: #0b6485;
+      --accent-soft: #eaf5f8;
+      --line: #d8e1e7;
+      --paper: #ffffff;
+      --canvas: #f3f6f8;
+      --code: #f1f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    body > header,
+    body > nav,
+    body > main,
+    body > h1,
+    body > p,
+    body > section {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header#title-block-header {
+      margin-top: 28px;
+      padding: 38px clamp(22px, 5vw, 64px) 30px;
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    header#title-block-header h1 {
+      margin: 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    header#title-block-header .subtitle {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    body > h1,
+    body > p,
+    body > section {
+      background: var(--paper);
+      padding-left: clamp(22px, 5vw, 64px);
+      padding-right: clamp(22px, 5vw, 64px);
+    }
+
+    body > h1 {
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding-top: 42px;
+      padding-bottom: 12px;
+      border-radius: 18px 18px 0 0;
+      color: #12394a;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    body > h1 + p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 30px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    section {
+      padding-top: 20px;
+      padding-bottom: 24px;
+    }
+
+    body > section {
+      margin-top: 14px;
+      border-radius: 14px;
+    }
+
+    body > section:last-of-type {
+      margin-bottom: 40px;
+      border-radius: 14px;
+      padding-bottom: 48px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--accent);
+      color: #12394a;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p { margin: 0.65em 0 1em; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 0.32em 0; }
+
+    .question-list {
+      margin: 0.2em 0 0.9em;
+      padding-left: 1.5em;
+    }
+
+    .question-list li {
+      margin: 0.18em 0;
+      font-weight: 400;
+    }
+
+    strong { font-weight: 750; }
+
+    em {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 750;
+    }
+
+    section[id*="key-vocabulary"] li {
+      font-weight: 650;
+    }
+
+    nav#TOC {
+      max-width: 960px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      padding: 18px clamp(22px, 5vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    nav#TOC::before {
+      content: "目录";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    nav#TOC ul {
+      margin: 0;
+      padding-left: 1.15em;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    nav#TOC li { break-inside: avoid; }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      min-width: 92px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--accent-soft);
+      color: #12394a;
+      font-weight: 750;
+    }
+
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+
+    pre {
+      margin: 16px 0 24px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: var(--code);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    code {
+      border-radius: 4px;
+      background: var(--code);
+      padding: 0.08em 0.28em;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    pre code { padding: 0; background: transparent; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; line-height: 1.68; }
+      header#title-block-header { margin-top: 0; border-radius: 0; }
+      body > h1 { margin-top: 0; border-radius: 0; }
+      body > section { margin-top: 10px; border-radius: 0; }
+      body > section:last-of-type { margin-bottom: 0; border-radius: 0; }
+      nav#TOC { margin: 12px; }
+      nav#TOC ul { columns: 1; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 21px; }
+      th, td { min-width: 84px; padding: 9px 10px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav#TOC { display: none; }
+      body > h1, body > p, body > section { max-width: none; padding-left: 0; padding-right: 0; }
+      section { break-inside: auto; }
+    }
+  </style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">五年级实验课：电化学、气体与膨胀、声音三个系列</h1>
+</header>
+<main>
+<p><strong>当前讨论方案｜每个系列 4 课，共 12 个候选课时｜每课 45–60 分钟。</strong></p>
+<p>电化学恢复为用户认可的四个活动：水果电池、通电显色、电解水、电化学图案。另增加两个独立系列。孩子的目标放在能观察、比较、解释和预测的因果关系上；电子转移、盐桥、电极半反应等作为教师背景或以后进阶内容。</p>
+<h2>一、三个系列分别建立什么体系</h2>
+<table>
+<thead>
+<tr>
+<th>系列</th>
+<th>孩子反复使用的核心认识</th>
+<th>四课怎样递进</th>
+<th>结束时能做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电化学：化学能供电，电也能改变物质</td>
+<td>材料组成电池可以给电器供电；接通电路也能使材料发生变化</td>
+<td>化学供电 → 电使颜色变化 → 电使水分解 → 用电控制显色位置</td>
+<td>搭建简单电路，用通断电和对照判断变化是否由通电引起</td>
+</tr>
+<tr>
+<td>气体与膨胀：气体怎样推动和撑起材料</td>
+<td>气体可以原先溶在液体里，也可以在变化中产生；它占空间、推动周围材料，留在材料中就形成气泡或孔洞</td>
+<td>释放已有气体 → 反应产生气体 → 柔软材料留住气体 → 固体留下多孔结构</td>
+<td>面对喷涌或膨胀，分别追踪气体来源、被推动的材料以及留下的结构</td>
+</tr>
+<tr>
+<td>声音：振动怎样变成我们听到的声音</td>
+<td>声源振动，通过空气或其他材料传递；改变振动与传播条件，就能改变听到的声音</td>
+<td>找到振动源 → 追踪传播路径 → 改变音高和响度 → 调整乐器的尾音</td>
+<td>用振动与传播解释乐器差异，并按目标调整一个简单乐器</td>
+</tr>
+</tbody>
+</table>
+<p>体系体现在一条反复使用的解释线索和逐课增加的认识。每课仍有明显现象，但不要求用同一套微观反应式解释全部活动。</p>
+<h2>二、电化学系列：化学能供电，电也能改变物质（4 课）</h2>
+<p><strong>儿童层面的主线</strong>：材料组成电池 → 电路中有电流 → 电可以带来颜色或物质变化 → 自己设计可控制的变化。</p>
+<p><strong>教师把握的边界</strong>：水果电池和电解水可以比较能量转化方向，但不是同一个反应直接倒过来。孩子能用材料、闭合电路和前后对照解释现象即可；本系列不要求孩子理解电子转移或背半反应式。</p>
+<h3>E1 · 铜锌水果电池驱动低电流 LED</h3>
+<p><strong>核心问题</strong>：水果和两种金属能组成一个给灯供电的电池吗？</p>
+<p><strong>实验与主要材料</strong>：柠檬或经预试的水果、铜锌电极、连接线、低电流 LED 和测量工具。教师先试亮完整组合；孩子搭建，比较接通、断开和连接方向变化后的表现。</p>
+<p><strong>本质（教师参考）</strong>：锌参与氧化反应，另一电极发生还原过程，整个体系把化学能转成对外供电的能力。水果汁主要提供电解质环境；不能说水果单独释放了现成的电。</p>
+<p><strong>现象</strong>：合适的组合使 LED 发出微光；断路或连接不合适时不亮，仪表读数帮助排查。</p>
+<p><strong>孩子要学会</strong>：电池需要特定材料组合和完整回路；根据对照判断“灯为什么亮或不亮”。暂时只用能量箭头表示“材料里的化学能 → 电路 → 灯”。</p>
+<p><strong>与前后课的关系</strong>：本课看化学过程怎样供电；下一课反过来用已有电源，看看电能使材料发生什么变化。</p>
+<p><strong>实施条件</strong>：指定 LED 与电极组合须课前试运行，不能把增加水果数量当作唯一排错方法。实验水果不入口。依据：<a href="https://www.acs.org/content/dam/acsorg/education/outreach/kidszone/kids-zone-build-a-lemon-battery.pdf">ACS：Build a Lemon Battery</a>。</p>
+<h3>E2 · 硫酸钠溶液通电显色</h3>
+<p><strong>核心问题</strong>：没有加入新的彩色颜料，为什么电极附近会变色？</p>
+<p><strong>实验与主要材料</strong>：教师预配的稀硫酸钠溶液、溴百里酚蓝指示剂、适宜电极与低压电源。孩子比较通电与未通电样品，记录颜色最先出现的位置；有余力时观察改变连接方向后的变化。</p>
+<p><strong>本质（教师参考）</strong>：水在两极发生电极反应，使一侧局部偏酸、另一侧偏碱，指示剂随之显色。硫酸钠主要帮助导电。这是实际化学变化的可见信号，不是电线带来了颜料。</p>
+<p><strong>现象</strong>：适宜条件下，两极附近出现不同颜色；断电后已有颜色可能保留并继续扩散，不会立即消失。</p>
+<p><strong>孩子要学会</strong>：电能够引起局部变化；颜色可作为观察工具。用“同样材料，有电／无电”的比较说明自己的判断。</p>
+<p><strong>与前后课的关系</strong>：承接 E1 的闭合电路，转向电对材料的作用；E3 用气体产物提供另一类证据。</p>
+<p><strong>实施条件</strong>：以浅层溶液中的显色为基础版本，使用硫酸钠而非食盐水；微量、敞口、低压。依据：<a href="https://edu.rsc.org/experiments/electrolysis-using-a-microscale-hoffman-apparatus/541.article">RSC：硫酸钠电解显色</a>。</p>
+<h3>E3 · 水电解与两极产气观察</h3>
+<p><strong>核心问题</strong>：水没有被烧开，为什么接通电路后也会冒气泡？</p>
+<p><strong>实验与主要材料</strong>：经预试的低压电解与分别集气装置、水、适宜硫酸钠电解质和电极。孩子观察通断电，分别记录两极产气与气体体积；教师可用简单水分子积木模型辅助解释。</p>
+<p><strong>本质（教师参考）</strong>：电能驱动水分解为氢气和氧气。简化总反应为 <code>2H₂O → 2H₂＋O₂</code>；合适条件下两种气体体积接近 2:1，实际读数受溶解、漏气与副反应影响。</p>
+<p><strong>现象</strong>：通电后两极产气，收集体积可能不同。没有充分气体检验时，应区分直接观察的气泡和依据已知反应作出的产物解释。</p>
+<p><strong>孩子要学会</strong>：区分“水变成水蒸气”和“水被分解”；能用前后对照说明电参与了变化。比例可用积木与数气体单位来理解，不引入物质的量计算。</p>
+<p><strong>与前后课的关系</strong>：E2 看颜色，E3 看产气，共同支持电可以使物质变化；E4 用这种认识设计一个受电路控制的效果。</p>
+<p><strong>实施条件</strong>：集气效果和用时先预试；不混合或点燃收集的气体。依据：<a href="https://highschoolenergy.acs.org/how-do-we-use-energy/electrolysis-of-water.html">ACS：Electrolysis of Water</a>。</p>
+<h3>E4 · 电化学显色图案设计</h3>
+<p><strong>核心问题</strong>：能不能让颜色出现在自己预想的位置？</p>
+<p><strong>实验与主要材料</strong>：沿用 E2 的显色体系，在浅盘中布置电极，改变电极位置或通电时间中的一个因素。孩子先画预测区域，再通电观察、拍照和调整。湿纸写字作为完成预试后的可选形式。</p>
+<p><strong>本质（教师参考）</strong>：沿用 E2 的电极反应和指示剂显色；图案范围还受扩散、混合和容器形状影响。它是同一实验的设计应用，不是新增反应。</p>
+<p><strong>现象</strong>：电极附近出现颜色区域，随时间逐渐展开，实际边界可能与预测不同。</p>
+<p><strong>孩子要学会</strong>：把电路、变化位置和可见信号串起来；提出一个具体目标，用结果改进设计。结课作品附一张“电源—电路—材料变化”的图即可。</p>
+<p><strong>与前后课的关系</strong>：调用 E1 的电路和 E2、E3 的变化证据，让孩子独立决定一个条件并检验。</p>
+<p><strong>实施条件</strong>：基础目标是清楚的颜色区域，不承诺一次写出精细文字；45 分钟完成一轮，60 分钟增加改进。机理与材料依据同 E2，图案形式需实物预试。</p>
+<h2>三、新增系列一：气体怎样推动和撑起材料（4 课）</h2>
+<p><strong>儿童层面的主线</strong>：气体从哪里来 → 怎样把周围材料推开 → 怎样被材料留住 → 为什么最后留下孔洞。</p>
+<p>这个系列有喷涌和明显膨胀的效果，但每次都围绕同一个可观察问题。它同时包含物理释气、化学产气和材料结构，不把“看起来猛烈”当作发生同一种反应的证据。</p>
+<h3>G1 · 曼妥思与碳酸饮料释气（可乐喷泉）</h3>
+<p><strong>核心问题</strong>：突然冒出的气体，是新生成的，还是原先已经在饮料里？</p>
+<p><strong>实验与主要材料</strong>：碳酸饮料、曼妥思、透明小杯，以及户外敞口塑料瓶演示。先比较新开封和已明显跑气的同款饮料加入同类材料后的表现，再观察经预试的户外喷涌。</p>
+<p><strong>本质（教师参考）</strong>：主要是物理释气：饮料中原有的溶解二氧化碳在糖表面容易形成气泡，并快速离开溶液。它不是小苏打与酸生成二氧化碳的反应；快速生长与逸出的气泡推动液体。</p>
+<p><strong>现象</strong>：新鲜碳酸饮料出现大量气泡，合适的敞口装置中液体喷出；跑气后的样品通常弱得多。</p>
+<p><strong>孩子要学会</strong>：看不见的气体可以存在于液体中；气体迅速离开溶液能推动液体。先用对照判断来源，不能看到喷涌就认定是爆炸或新化学反应。</p>
+<p><strong>与前后课的关系</strong>：本课释放原先已有的气体；下一课研究真正由变化产生的新气体。</p>
+<p><strong>实施条件</strong>：用户已有可用室外空地。小杯比较保留孩子操作，喷涌环节按预试场地和防溅安排进行；全程保持开口，不堵口、加盖或追求最高喷射。依据：<a href="https://www.acs.org/education/activities/unleashing-carbon-dioxide.html">ACS：Unleashing Carbon Dioxide，7–12 岁活动</a>。</p>
+<h3>G2 · 酵母催化双氧水分解（低浓度大象牙膏）</h3>
+<p><strong>核心问题</strong>：这次的气体从哪里来，为什么它变成了一大团泡沫？</p>
+<p><strong>实验与主要材料</strong>：新鲜 3% 或更低浓度双氧水、酵母、少量洗洁精、可选食用色素和透明容器。孩子在教师分装范围内混合，比较有／无酵母；60 分钟可补充有／无洗洁精的观察。</p>
+<p><strong>本质（教师参考）</strong>：酵母中的过氧化氢酶加快双氧水分解，生成水和氧气：<code>2H₂O₂ → 2H₂O＋O₂</code>。洗洁精形成液膜，把部分氧气留在气泡里。这里的酵母不是通过发酵产生二氧化碳。</p>
+<p><strong>现象</strong>：加入酵母后明显产气；有洗洁精时形成快速增加的泡沫，可能伴随可测温升。</p>
+<p><strong>孩子要学会</strong>：区分“释放已有气体”和“反应生成气体”；知道泡沫需要气体和能留住气体的膜。催化在儿童层面解释为“酵母中的一种物质帮助这个变化更快发生”。</p>
+<p><strong>与前后课的关系</strong>：G1 是物理释气，G2 是化学产气；两者都能推动周围材料。下一课看柔软的面团怎样留住气体。</p>
+<p><strong>实施条件</strong>：小用量、敞口、托盘、护目镜；不采用网络高浓度版本。课堂实际效果先预试。依据：<a href="https://www.acs.org/middleschoolchemistry/lessonplans/chapter6/lesson5.html">ACS：酵母催化分解</a>。</p>
+<h3>G3 · 酵母面团膨胀与气孔观察</h3>
+<p><strong>核心问题</strong>：气体为什么没有全部跑掉，而是把面团撑大了？</p>
+<p><strong>实验与主要材料</strong>：面粉、水、面包酵母、少量糖、透明容器；教师预制有／无酵母及不同发酵时间的样品，并准备面包剖面。孩子配制自己的小面团，标记起始体积，比较阶段样品和孔洞。</p>
+<p><strong>本质（教师参考）</strong>：酵母利用糖的过程中产生二氧化碳，面团中的面筋等结构帮助留住气体，使面团膨胀；烘焙后结构定形并留下气孔。与 G2 不同，本课确实涉及酵母的生命活动和发酵。</p>
+<p><strong>现象</strong>：含活性酵母的合适面团逐渐膨胀，内部可见气泡；面包剖面有许多孔洞。自己的样品在课内可能只出现初步变化。</p>
+<p><strong>孩子要学会</strong>：材料变大可以是内部空间增加；柔软而有一定保持能力的材料能留住气体。把产气者、留住气体的材料和最后结构分开说明。</p>
+<p><strong>与前后课的关系</strong>：把 G2 的液膜留气推进到柔软材料留气；下一课研究更明显的多孔固体形成。</p>
+<p><strong>实施条件</strong>：发酵与烘焙不硬塞进一小时；阶段样品课前准备，孩子样品由教师继续照料和拍照。课堂实验面团不入口，不以未验证的发酵时间保证翻倍。依据：<a href="https://annex.exploratorium.edu/cooking/bread/recipe-basicbread.html">Exploratorium：面团、酵母与留气结构</a>。</p>
+<h3>G4 · 糖版法老之蛇与多孔结构观察</h3>
+<p><strong>核心问题</strong>：为什么少量粉末能长成一大条黑色结构，冷却后却很轻？</p>
+<p><strong>实验与主要材料</strong>：糖与小苏打版本的室外教师演示；孩子预测和记录生长过程，随后用工具及放大镜观察预备的冷却样品，比较孔洞与外形。原料受热、燃料和点火均由教师管理。</p>
+<p><strong>本质（教师参考）</strong>：碳酸氢钠受热分解产生二氧化碳与水蒸气；糖经历热分解及部分燃烧，形成含碳等成分的残留物。气体撑起正在形成的结构，留下大量孔洞。这是热分解等过程的组合，不是被排除的“酸＋小苏打”反应。</p>
+<p><strong>现象</strong>：黑色结构逐渐伸展、弯曲和增大；充分冷却后可观察到疏松、轻而多孔的残留物。</p>
+<p><strong>孩子要学会</strong>：用“产生气体—撑开材料—留下孔洞”解释整个过程；知道体积变大不意味着固体物质按同样比例增多。</p>
+<p><strong>与前后课的关系</strong>：回看 G1–G3：气体能从液体中逸出、被液膜留住、撑起面团，也能参与形成多孔固体。结课让孩子画出其中一个实验的气体来源和去向。</p>
+<p><strong>实施条件</strong>：沿用已确认的室外场地，完成具体糖版流程和防护预试；生长可能需 10–20 分钟，冷却另计，提前备好可观察样品。不采用含汞版本。依据：<a href="https://www.sciencebuddies.org/stem-activities/make-a-fire-snake">Science Buddies：Make a Fire Snake</a>。</p>
+<h2>四、新增系列二：声音怎样产生、传播和改变（4 课）</h2>
+<p><strong>儿童层面的主线</strong>：找到振动源 → 追踪传播路径 → 改变振动特征 → 按目标调整乐器。</p>
+<p>声音兴趣尚未通过实验课验证，可先上第一课观察投入程度。系列与架子鼓有自然联系，但不预设孩子一定喜欢。</p>
+<h3>S1 · 鼓面振动显形与音叉水花</h3>
+<p><strong>核心问题</strong>：声音出现时，物体到底在做什么？</p>
+<p><strong>实验与主要材料</strong>：用容器、适宜薄膜和固定材料制作小鼓，在鼓面放少量米粒；敲击并轻触鼓面比较。音叉触水作为短拓展，把快速振动转成水面运动。</p>
+<p><strong>本质（教师参考）</strong>：没有化学反应。鼓膜或音叉振动，与周围介质相互作用产生声波；米粒运动和水面变化为振动提供可见证据。</p>
+<p><strong>现象</strong>：敲击时米粒跳动，接触并抑制鼓膜振动后声音衰减；振动音叉接触水面会扰动水或溅起小水花。</p>
+<p><strong>孩子要学会</strong>：声音与振动有关；能区分“我看到米粒动了”和“我据此解释鼓面在振动”。</p>
+<p><strong>与前后课的关系</strong>：先找到声音的来源，下一课研究声音怎样从来源到达耳朵。</p>
+<p><strong>实施条件</strong>：孩子保留制鼓、敲击与对照；按舒适音量进行，米粒用量少。依据：<a href="https://annex.exploratorium.edu/wsw/participants/participants1997/susanb/tindrums.html">Exploratorium：Tin Can Drums</a>。</p>
+<h3>S2 · 棉线电话与金属物体传声</h3>
+<p><strong>核心问题</strong>：声音只能穿过空气吗？</p>
+<p><strong>实验与主要材料</strong>：用两个杯子和棉线做线电话，一位教师与一名孩子轮流说话、听声，比较线拉紧、松弛或被捏住时的表现。金属勺或衣架通过线传来的钟声可作拓展。</p>
+<p><strong>本质（教师参考）</strong>：没有化学反应。声源使杯底或金属振动，振动沿线传递，再经接收端到达耳部；接触与材料状态影响传播。</p>
+<p><strong>现象</strong>：在合适的紧线状态下，隔一段距离仍能听见说话；捏住线或松线时声音变弱。金属经线传到耳部时，听感与直接隔空气听不同。</p>
+<p><strong>孩子要学会</strong>：画出“声源—传播材料—接收端”；知道声音也能通过固体传播，传播路径受干扰会改变听到的结果。</p>
+<p><strong>与前后课的关系</strong>：把 S1 的声源与耳朵连接起来；下一课进一步区分听到的高低与强弱。</p>
+<p><strong>实施条件</strong>：杯孔与尖锐边缘课前处理；线和手指只按适宜方式接触耳外，不插入耳道、不绕颈。依据：<a href="https://annex.exploratorium.edu/science-explorer/ear_guitar.html">Exploratorium：Ear Guitar／杯电话</a>、<a href="https://www.exploratorium.edu/snacks/secret-bells">Secret Bells</a>。</p>
+<h3>S3 · 可调振动长度的橡皮筋乐器</h3>
+<p><strong>核心问题</strong>：怎样让声音变高或变低，声音更响又是不是同一回事？</p>
+<p><strong>实验与主要材料</strong>：用冰棒棍、橡皮筋和可移动支点制作简单乐器，比较同一根橡皮筋不同振动长度的音高；再用轻重拨动或吹气比较响度。可用手机录音或波形辅助。</p>
+<p><strong>本质（教师参考）</strong>：没有化学反应。合适条件下，振动部分的长度、张力等影响振动频率，频率与音高有关；振动幅度与听到的响度有关。每轮选一个因素，不同时改长度、张力和材料。</p>
+<p><strong>现象</strong>：缩短振动段通常使音高上升；同一条件下较大的振动可带来更响的声音。实际音色与音高可能也受操作方式影响。</p>
+<p><strong>孩子要学会</strong>：把音高与响度分开；能用“振动快慢”和“振动幅度”解释比较，开始接触频率这一名称但不背公式。</p>
+<p><strong>与前后课的关系</strong>：在已知声源与路径的基础上，研究声音特征如何改变；下一课把这些认识用于真实的乐器调整。</p>
+<p><strong>实施条件</strong>：教师先验证装置能稳定发声并调出差异，孩子自己制作和调节；不以响度竞赛为目标。依据：<a href="https://www.exploratorium.edu/snacks/sound-sandwich">Exploratorium：Sound Sandwich</a>。</p>
+<h3>S4 · 小鼓消音垫与尾音设计</h3>
+<p><strong>核心问题</strong>：怎样让鼓声更短，或保留更长的尾音？</p>
+<p><strong>实验与主要材料</strong>：沿用 S1 的小鼓，比较有／无布垫或海绵接触鼓面的声音，在相同距离录音，并尽量保持敲击方式一致。孩子选“尾音更短”等一个目标，调整接触位置或范围，再演奏固定节奏。</p>
+<p><strong>本质（教师参考）</strong>：没有化学反应。接触材料改变鼓面的振动与能量耗散，通常使振动更快衰减；声音特征还取决于鼓面、容器和耦合方式。阻尼作为教师概念，孩子用“振动更快停下来”解释即可。</p>
+<p><strong>现象</strong>：加入适宜消音材料后，尾音可能缩短，音色和响度也可能改变；不同接触方式得到不同结果。</p>
+<p><strong>孩子要学会</strong>：把振动、传播与听到的效果连成因果链；用对比录音检验自己的调整，而不是只说“我更喜欢这个声音”。</p>
+<p><strong>与前后课的关系</strong>：调用 S1–S3 的认识完成一个与架子鼓直接相关的设计任务。结课作品包括小鼓、固定节奏录音和简短调整说明。</p>
+<p><strong>实施条件</strong>：只选一个主要目标，音量保持舒适；录音比较以相对变化为主，不把普通手机读数当精密声学测量。依据：<a href="https://annex.exploratorium.edu/wsw/participants/participants1997/susanb/tindrums.html">Exploratorium：鼓的材料与声音探究</a>。</p>
+<h2>五、当前取舍</h2>
+<ul>
+<li><strong>电化学四课保留。</strong> 调整的是孩子必须理解的深度；“铜的变化与电子转移”五课稿保留为教师或未来进阶参考，不再作为当前默认路线。</li>
+<li><strong>新增气体与声音各四课。</strong> 共十二个候选课时，三个独立系列可以按兴趣选择顺序。</li>
+<li><strong>趣味性服务于问题。</strong> 喷涌、泡沫、长蛇和乐器变化各自承担具体证据任务；不安排密闭爆破、点燃气体或粉尘火球。</li>
+<li><strong>本质与儿童目标分开。</strong> 教师应知道真实机制，孩子先掌握观察支持的因果关系、功能和可验证预测，不把教师用的微观知识直接变成儿童考核要求。</li>
+<li>现有器材和试剂不默认齐备；需要按选定课程确认材料并预试。发酵阶段样品、户外演示样品、显色工作液和易失败装置可提前准备，关键操作与判断保留给孩子。</li>
+<li>本稿是系列与课题层面的方案，文献依据已核对，具体课堂规模、配方、效果与用时仍需实物预试。</li>
+</ul>
+</main>
+</body>
+</html>
