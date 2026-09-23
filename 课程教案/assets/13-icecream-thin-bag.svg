@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" role="img" aria-labelledby="title desc">
+<title id="title">一个奶袋放在冰盐小碗里</title><desc id="desc">只有一个装牛奶的密封袋。袋口留在碗边，牛奶铺薄的部分夹在碎冰中。冰和盐直接放在小碗里，加约一茶匙水拌湿。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#555"/></marker></defs>
+<rect width="900" height="330" fill="white"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#222" font-size="20">
+<text x="30" y="32">袋口封好，留在碗边</text>
+<path d="M62 122 Q86 258 198 265 H645 Q751 258 776 122" fill="#f5f5f5" stroke="#555" stroke-width="2"/>
+<g fill="white" stroke="#999" stroke-width="1.5">
+<path d="M113 124 L148 115 L164 143 L148 158 L119 151 Z"/><path d="M327 107 L362 116 L354 144 L319 137 Z"/><path d="M507 112 L550 113 L564 142 L523 148 Z"/><path d="M683 126 L714 116 L736 142 L712 159 L687 150 Z"/>
+<path d="M130 209 L157 205 L169 228 L155 245 L132 238 Z"/><path d="M253 211 L290 214 L286 242 L260 246 L245 227 Z"/><path d="M398 211 L430 207 L449 230 L430 250 L396 240 Z"/><path d="M551 211 L584 207 L605 227 L586 249 L553 239 Z"/><path d="M677 210 L708 215 L719 235 L695 245 L674 231 Z"/>
+</g>
+<path d="M177 79 H211 V151 H652 Q669 151 669 169 V181 Q669 199 651 199 H195 Q177 199 177 181 Z" fill="white" stroke="#444" stroke-width="2"/>
+<path d="M182 158 H650 Q664 158 664 171 V181 Q664 193 650 193 H195 Q183 193 183 181 Z" fill="#dedede"/>
+<path d="M182 87 H207 M182 93 H207" stroke="#666" stroke-width="1.5"/>
+<text x="289" y="182" font-size="19">一只奶袋：约15 mL牛奶</text>
+<path d="M224 45 L197 82" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="440" y="58" font-size="18">碎冰放在有牛奶的部分上下</text>
+<path d="M570 66 L546 105" fill="none" stroke="#555" marker-end="url(#arrow)"/>
+<text x="63" y="312" font-size="18">碗里放碎冰、盐和少量水；牛奶留在封好的袋中。</text>
+</g></svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" role="img" aria-labelledby="title desc">
+<title id="title">满水瓶细管温度计</title><desc id="desc">瓶内加满有色水，细管穿过密封瓶盖，下端距瓶底约一厘米，上端开口。细管水柱起始在盖上二至三厘米。试温水浴不超过瓶肩。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#555"/></marker></defs>
+<rect width="900" height="430" fill="white"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#222" font-size="19">
+<path d="M58 245 V390 Q58 405 74 405 H362 Q378 405 378 390 V245" fill="#f5f5f5" stroke="#777" stroke-width="2"/>
+<path d="M58 264 H378" stroke="#999" stroke-dasharray="6 4"/>
+<path d="M167 132 V178 Q105 198 105 228 V370 Q105 384 121 384 H306 Q321 384 321 370 V228 Q321 198 260 178 V132 Z" fill="#dedede" stroke="#444" stroke-width="2"/>
+<rect x="156" y="124" width="116" height="14" rx="3" fill="#bdbdbd" stroke="#444"/>
+<path d="M204 120 Q195 113 200 104 H234 Q239 113 230 120" fill="#b0b0b0" stroke="#555"/>
+<path d="M208 25 V364 M226 25 V364" stroke="#333" stroke-width="2" fill="none"/>
+<rect x="210" y="82" width="14" height="281" fill="#999"/>
+<rect x="210" y="27" width="14" height="55" fill="white"/>
+<path d="M209 82 H225" stroke="#222" stroke-width="2"/>
+<rect x="255" y="30" width="63" height="75" fill="white" stroke="#888"/>
+<path d="M265 45 H292 M265 62 H301 M265 82 H303" stroke="#777"/>
+<text x="348" y="40">细管上端开口</text><path d="M331 37 L228 28" fill="none" stroke="#555" marker-end="url(#arrow)"/>
+<text x="413" y="91">水柱起始：盖上2–3 cm</text><path d="M397 86 L230 82" fill="none" stroke="#555" marker-end="url(#arrow)"/>
+<text x="414" y="150">瓶盖孔周围用胶泥密封</text><path d="M400 144 L238 113" fill="none" stroke="#555" marker-end="url(#arrow)"/>
+<text x="414" y="211">瓶内加满有色水，排掉大气泡</text><path d="M400 206 L303 233" fill="none" stroke="#555" marker-end="url(#arrow)"/>
+<text x="414" y="273">水浴到瓶肩以下，不浸过瓶盖</text><path d="M400 267 L379 264" fill="none" stroke="#555" marker-end="url(#arrow)"/>
+<text x="414" y="338">细管下端距瓶底约1 cm</text><path d="M400 333 L231 365" fill="none" stroke="#555" marker-end="url(#arrow)"/>
+<text x="414" y="389" font-size="17">纸卡标位置；不用自制装置读摄氏温度。</text>
+</g></svg>

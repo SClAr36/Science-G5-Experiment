@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Science G5 lesson renderer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>第13节：温度与水的变化</title>
+<style>
+* { box-sizing: border-box; }
+html, body { background: #fff; color: #222; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+header#title-block-header, main#lesson-content {
+  width: calc(100% - 48px);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+header#title-block-header { padding-top: 28px; padding-bottom: 12px; }
+main#lesson-content { padding-bottom: 40px; }
+h1 { margin: 0; font-size: 30px; line-height: 1.35; }
+h2, h3 { margin: 28px 0 12px; font-size: 21px; line-height: 1.4; color: #222; }
+p { margin: 10px 0 14px; }
+ol, ul { padding-left: 1.5em; }
+li { margin: 5px 0; }
+strong { font-weight: 700; }
+a, a:visited { color: #333; text-underline-offset: 3px; }
+table {
+  display: block;
+  width: 100%;
+  margin: 14px 0 20px;
+  border-collapse: collapse;
+  overflow-x: auto;
+  font-size: 16px;
+  line-height: 1.55;
+}
+th, td { padding: 9px 11px; border: 1px solid #ccc; text-align: left; vertical-align: top; }
+th { background: #f3f3f3; color: #222; }
+code { font-family: Consolas, monospace; }
+img, svg { max-width: 100%; height: auto; }
+#lesson-content .lesson-collapsible {
+  --collapsible-accent: #555;
+  --collapsible-border: #ccc;
+  --collapsible-bg: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+#lesson-content .lesson-collapsible-hint { display: none !important; }
+@media (max-width: 720px) {
+  body { font-size: 17px; }
+  header#title-block-header, main#lesson-content { width: calc(100% - 32px); }
+  h1 { font-size: 26px; }
+  h3 { font-size: 20px; }
+}
+@media print {
+  header#title-block-header, main#lesson-content { width: 100%; max-width: none; }
+  h3 { break-after: avoid; }
+  body { font-size: 11pt; }
+}
+</style>
+<style id="science-g5-responsive">
+/* Science G5 responsive layout override.
+   Keep this after legacy Pandoc styles so wide screens and iPads are not
+   constrained by Pandoc's default body max-width: 36em. */
+
+html,
+body {
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header,
+body > nav,
+body > main,
+body > h1,
+body > p,
+body > section {
+  width: calc(100% - clamp(24px, 5vw, 88px));
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  padding: clamp(26px, 4vw, 58px);
+  border-radius: 18px;
+  background: var(--paper, #ffffff);
+  box-shadow: 0 12px 34px rgba(23, 33, 43, 0.06);
+}
+
+body > main > :first-child {
+  margin-top: 0;
+}
+
+nav#TOC {
+  max-width: 1240px;
+}
+
+table {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+/* Pronunciation is supporting information: visible, but quieter than the term. */
+.ipa {
+  display: inline-block;
+  margin-left: 0.12em;
+  color: #5d7286;
+  font-family: "Segoe UI", "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.state-particle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items: stretch;
+  margin: 20px 0 24px;
+}
+
+.state-particle-grid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px);
+  border: 1px solid rgba(45, 118, 125, 0.22);
+  border-radius: 14px;
+  background: #f7fcfc;
+}
+
+.state-particle-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.state-particle-grid figcaption {
+  margin-top: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lesson-collapsible {
+  --collapsible-accent: #4f8990;
+  --collapsible-border: rgba(79, 137, 144, 0.28);
+  --collapsible-bg: #f7fbfb;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--collapsible-border);
+  border-left: 5px solid var(--collapsible-accent);
+  border-radius: 12px;
+  background: var(--collapsible-bg);
+}
+
+.lesson-collapsible-qa {
+  --collapsible-accent: #7365ad;
+  --collapsible-border: rgba(115, 101, 173, 0.28);
+  --collapsible-bg: #faf9ff;
+}
+
+.lesson-collapsible-notes {
+  --collapsible-accent: #b48332;
+  --collapsible-border: rgba(180, 131, 50, 0.3);
+  --collapsible-bg: #fffaf1;
+}
+
+.lesson-collapsible-record {
+  --collapsible-accent: #39858b;
+  --collapsible-border: rgba(57, 133, 139, 0.28);
+  --collapsible-bg: #f3fbfb;
+}
+
+.lesson-collapsible > summary {
+  display: flex;
+  min-height: 48px;
+  padding: 11px 16px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.lesson-collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-collapsible > summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--collapsible-accent);
+  font-size: 0.82em;
+  transition: transform 0.16s ease;
+}
+
+.lesson-collapsible[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.lesson-collapsible-title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-collapsible-hint {
+  flex: 0 0 auto;
+  color: #68777c;
+  font-size: 0.78em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lesson-collapsible-open {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-closed {
+  display: none;
+}
+
+.lesson-collapsible[open] .lesson-collapsible-open {
+  display: inline;
+}
+
+.lesson-collapsible-content {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--collapsible-border);
+}
+
+.lesson-collapsible-content > :first-child {
+  margin-top: 12px;
+}
+
+.lesson-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* The outer details card is the only container. Board notes and records do
+   not add a second colored box inside it. */
+.lesson-collapsible-notes .lesson-collapsible-content pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-notes .lesson-collapsible-content pre code {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content th,
+.lesson-collapsible-record .lesson-collapsible-content td {
+  border-color: var(--collapsible-border);
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.lesson-collapsible-record .lesson-collapsible-content tbody {
+  border-color: var(--collapsible-border);
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  body {
+    font-size: 18px;
+  }
+
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: calc(100% - 32px);
+  }
+
+  header#title-block-header {
+    margin-top: 16px;
+    padding: 30px clamp(28px, 4vw, 44px) 26px;
+  }
+
+  body > h1,
+  body > p,
+  body > section {
+    padding-left: clamp(28px, 4vw, 44px);
+    padding-right: clamp(28px, 4vw, 44px);
+  }
+
+  body > main {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  nav#TOC ul {
+    column-gap: 24px;
+  }
+
+  table {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 720px) {
+  body > header,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > nav {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 22px 16px 34px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+  .state-particle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .state-particle-grid figure {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lesson-collapsible > summary {
+    padding: 12px 13px;
+  }
+
+  .lesson-collapsible-hint {
+    font-size: 0.7em;
+  }
+
+  .lesson-collapsible-content {
+    padding: 2px 14px 16px;
+  }
+}
+
+@media print {
+  body > header,
+  body > nav,
+  body > main,
+  body > h1,
+  body > p,
+  body > section {
+    width: 100%;
+    max-width: none;
+  }
+
+  body > main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  details.lesson-collapsible:not([open]) > .lesson-collapsible-content {
+    display: block !important;
+  }
+
+  .lesson-collapsible-hint {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">第13节：温度与水的变化</h1>
+</header>
+<main id="lesson-content" tabindex="-1">
+<p><strong>实验材料与试剂</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>本课使用规格与用量</th>
+<th style="text-align:right">备量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原味纯牛奶</td>
+<td>先冷藏；取1汤匙，约15 mL</td>
+<td style="text-align:right">15 mL</td>
+</tr>
+<tr>
+<td>冰</td>
+<td>几块敲碎，够夹住奶袋中有牛奶的部分；另留1块钓冰</td>
+<td style="text-align:right">按小碗取用</td>
+</tr>
+<tr>
+<td>食盐</td>
+<td>奶冰先用1平茶匙，约5 g；钓冰另留一小撮</td>
+<td style="text-align:right">约1–2茶匙</td>
+</tr>
+<tr>
+<td>食用色素</td>
+<td>2滴加入约150 mL室温水</td>
+<td style="text-align:right">1小瓶</td>
+</tr>
+<tr>
+<td>清水</td>
+<td>奶冰用约1茶匙凉水（5 mL）；另备温度计和钓冰用水</td>
+<td style="text-align:right">共约1 L</td>
+</tr>
+</tbody>
+</table>
+<p><strong>需要准备或核对的工具</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>关键要求</th>
+<th style="text-align:right">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>奶袋</td>
+<td>食品用、封口不漏水，能把牛奶铺平</td>
+<td style="text-align:right">1只</td>
+</tr>
+<tr>
+<td>小碗或小饭盒</td>
+<td>刚好放下奶袋和碎冰即可</td>
+<td style="text-align:right">1个</td>
+</tr>
+<tr>
+<td>玻璃瓶</td>
+<td>带盖、硬质透明；50–100 mL</td>
+<td style="text-align:right">1只</td>
+</tr>
+<tr>
+<td>透明细管</td>
+<td>内径约3–4 mm，长约20 cm</td>
+<td style="text-align:right">1根</td>
+</tr>
+<tr>
+<td>密封胶泥</td>
+<td>不干型，能封严瓶盖孔</td>
+<td style="text-align:right">1小块</td>
+</tr>
+<tr>
+<td>参考温度计</td>
+<td>用现有的，能测凉水、室温水和温水</td>
+<td style="text-align:right">1支</td>
+</tr>
+<tr>
+<td>棉线或毛线</td>
+<td>能吸水</td>
+<td style="text-align:right">约40 cm</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p><strong>少量纯牛奶＋冰盐浴 → 出现奶冰薄片或冰粒。</strong><br>
+<span style="color: #234E78;">牛奶把热传给较冷的冰盐浴，其中部分水凝固（freezing）。</span></p>
+</li>
+<li>
+<p><strong>满水瓶＋细管，放进温水和凉水 → 水柱升降。</strong><br>
+<span style="color: #234E78;">水受热后占的空间变大，沿细管上升；冷却后回落，可以显示冷热变化。</span></p>
+</li>
+<li>
+<p><strong>湿棉线＋冰块＋少量盐 → 棉线提起冰块。</strong><br>
+<span style="color: #234E78;">接触处的冰先局部熔化，再重新凝固；新形成的冰把线固定住。</span></p>
+</li>
+<li>
+<p><strong>湿纸包住温度计感温端＋扇风 → 读数下降。</strong><br>
+<span style="color: #234E78;">水蒸发（evaporation）时吸热，可以使周围降温。</span></p>
+</li>
+</ol>
+<h3>课前准备</h3>
+<ol>
+<li>冷藏牛奶。冰临开始时取出，留1块完整冰给钓冰，其余敲成小块。</li>
+<li>教师给温度计瓶盖打孔、处理毛刺，试好细管与胶泥的密封；课堂重新组装。</li>
+<li>备有色水，以及温水、凉水各约250 mL。</li>
+</ol>
+<h3>0–6分钟：把牛奶放进冰盐小碗</h3>
+<p><strong>预期现象</strong>：牛奶逐渐变冷，开始出现奶冰薄片或冰粒。</p>
+<p style="color: #234E78;"><strong>原理：</strong>冰加盐后可以变得更冷。冰融化时吸热，把牛奶的热带走；牛奶中的部分水便凝固成冰。</p>
+<ol>
+<li>把**1汤匙冷牛奶（约15 mL）**倒入一个密封袋，挤出空气、封好，把牛奶铺成薄薄一层。</li>
+<li>用碎冰<strong>铺满小碗底一层</strong>，撒半茶匙盐，加<strong>约1茶匙凉水（5 mL）</strong>，拌几下，让碎冰湿润。</li>
+<li>放上奶袋，再用碎冰盖住有牛奶的部分，撒上余下的半茶匙盐。<strong>上下两层盐合计约1平茶匙（5 g）</strong>；袋口留在碗边。</li>
+<li>每隔几分钟翻一下奶袋，用勺子拨一拨周围的冰，让冰和融水贴住袋子。</li>
+<li>看到奶冰薄片或冰粒，就取出来观察，不等全部冻硬。</li>
+</ol>
+<p><strong>水量看状态</strong>：碗里以碎冰为主，冰缝里有少量盐水即可；不用加到冰块漂起来。</p>
+<p><strong>加快的方法</strong>：牛奶先冷藏、量少、铺薄；选小碗，让有限的冰贴紧有牛奶的位置。奶冰等待时做下面的温度计，过程中顺手查看、翻面。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iMzMwIiB2aWV3Qm94PSIwIDAgOTAwIDMzMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgo8dGl0bGUgaWQ9InRpdGxlIj7kuIDkuKrlpbbooovmlL7lnKjlhrDnm5DlsI/nopfph4w8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj7lj6rmnInkuIDkuKroo4XniZvlpbbnmoTlr4blsIHooovjgILooovlj6PnlZnlnKjnopfovrnvvIzniZvlpbbpk7roloTnmoTpg6jliIblpLnlnKjnoo7lhrDkuK3jgILlhrDlkoznm5Dnm7TmjqXmlL7lnKjlsI/nopfph4zvvIzliqDnuqbkuIDojLbljJnmsLTmi4zmub/jgII8L2Rlc2M+CjxkZWZzPjxtYXJrZXIgaWQ9ImFycm93IiBtYXJrZXJXaWR0aD0iOCIgbWFya2VySGVpZ2h0PSI4IiByZWZYPSI3IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDggNCBMMCA4IiBmaWxsPSJub25lIiBzdHJva2U9IiM1NTUiLz48L21hcmtlcj48L2RlZnM+CjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iMzMwIiBmaWxsPSJ3aGl0ZSIvPgo8ZyBmb250LWZhbWlseT0iTWljcm9zb2Z0IFlhSGVpLCBzYW5zLXNlcmlmIiBmaWxsPSIjMjIyIiBmb250LXNpemU9IjIwIj4KPHRleHQgeD0iMzAiIHk9IjMyIj7ooovlj6PlsIHlpb3vvIznlZnlnKjnopfovrk8L3RleHQ+CjxwYXRoIGQ9Ik02MiAxMjIgUTg2IDI1OCAxOTggMjY1IEg2NDUgUTc1MSAyNTggNzc2IDEyMiIgZmlsbD0iI2Y1ZjVmNSIgc3Ryb2tlPSIjNTU1IiBzdHJva2Utd2lkdGg9IjIiLz4KPGcgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzk5OSIgc3Ryb2tlLXdpZHRoPSIxLjUiPgo8cGF0aCBkPSJNMTEzIDEyNCBMMTQ4IDExNSBMMTY0IDE0MyBMMTQ4IDE1OCBMMTE5IDE1MSBaIi8+PHBhdGggZD0iTTMyNyAxMDcgTDM2MiAxMTYgTDM1NCAxNDQgTDMxOSAxMzcgWiIvPjxwYXRoIGQ9Ik01MDcgMTEyIEw1NTAgMTEzIEw1NjQgMTQyIEw1MjMgMTQ4IFoiLz48cGF0aCBkPSJNNjgzIDEyNiBMNzE0IDExNiBMNzM2IDE0MiBMNzEyIDE1OSBMNjg3IDE1MCBaIi8+CjxwYXRoIGQ9Ik0xMzAgMjA5IEwxNTcgMjA1IEwxNjkgMjI4IEwxNTUgMjQ1IEwxMzIgMjM4IFoiLz48cGF0aCBkPSJNMjUzIDIxMSBMMjkwIDIxNCBMMjg2IDI0MiBMMjYwIDI0NiBMMjQ1IDIyNyBaIi8+PHBhdGggZD0iTTM5OCAyMTEgTDQzMCAyMDcgTDQ0OSAyMzAgTDQzMCAyNTAgTDM5NiAyNDAgWiIvPjxwYXRoIGQ9Ik01NTEgMjExIEw1ODQgMjA3IEw2MDUgMjI3IEw1ODYgMjQ5IEw1NTMgMjM5IFoiLz48cGF0aCBkPSJNNjc3IDIxMCBMNzA4IDIxNSBMNzE5IDIzNSBMNjk1IDI0NSBMNjc0IDIzMSBaIi8+CjwvZz4KPHBhdGggZD0iTTE3NyA3OSBIMjExIFYxNTEgSDY1MiBRNjY5IDE1MSA2NjkgMTY5IFYxODEgUTY2OSAxOTkgNjUxIDE5OSBIMTk1IFExNzcgMTk5IDE3NyAxODEgWiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzQ0NCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0xODIgMTU4IEg2NTAgUTY2NCAxNTggNjY0IDE3MSBWMTgxIFE2NjQgMTkzIDY1MCAxOTMgSDE5NSBRMTgzIDE5MyAxODMgMTgxIFoiIGZpbGw9IiNkZWRlZGUiLz4KPHBhdGggZD0iTTE4MiA4NyBIMjA3IE0xODIgOTMgSDIwNyIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8dGV4dCB4PSIyODkiIHk9IjE4MiIgZm9udC1zaXplPSIxOSI+5LiA5Y+q5aW26KKL77ya57qmMTUgbUzniZvlpbY8L3RleHQ+CjxwYXRoIGQ9Ik0yMjQgNDUgTDE5NyA4MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTU1IiBzdHJva2Utd2lkdGg9IjEuNSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KPHRleHQgeD0iNDQwIiB5PSI1OCIgZm9udC1zaXplPSIxOCI+56KO5Yaw5pS+5Zyo5pyJ54mb5aW255qE6YOo5YiG5LiK5LiLPC90ZXh0Pgo8cGF0aCBkPSJNNTcwIDY2IEw1NDYgMTA1IiBmaWxsPSJub25lIiBzdHJva2U9IiM1NTUiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+Cjx0ZXh0IHg9IjYzIiB5PSIzMTIiIGZvbnQtc2l6ZT0iMTgiPueil+mHjOaUvueijuWGsOOAgeebkOWSjOWwkemHj+awtO+8m+eJm+WltueVmeWcqOWwgeWlveeahOiii+S4reOAgjwvdGV4dD4KPC9nPjwvc3ZnPgo=" alt="一个装奶袋，放在盛冰和盐的小碗里" /></p>
+<h3>6–26分钟：制作满水瓶温度计</h3>
+<p><strong>预期现象</strong>：瓶子放入温水后，细管里的水柱上升；移入凉水后回落。稳定后，可对照正式温度计标出参考温度。</p>
+<p style="color: #234E78;"><strong>原理：</strong>在本次温度范围内，水变暖后占据的空间稍大，叫热膨胀（thermal expansion）。瓶内已经装满，增加的体积使水沿细管上升。细管很窄，小小的变化也能看清楚。</p>
+<ol>
+<li>把细管穿过瓶盖，让下端距瓶底约1 cm。用胶泥封严孔周围，管口保持畅通。</li>
+<li>向瓶中加入室温有色水，加到瓶口。拧紧瓶盖，尽量排掉瓶肩处的大气泡。</li>
+<li>从细管上端补水，让水柱停在盖上约2–3 cm。贴好纸卡，标记起始位置。</li>
+<li>将整套装置放入水浴，<strong>瓶内的水不倒掉、不更换</strong>。正式温度计放在外部水浴、靠近瓶身，感温端不碰瓶壁或盆底。</li>
+<li>先标室温点，再移入35–40℃温水。轻轻搅匀水浴，等水柱和参考读数基本稳定，标出位置及当时的温度。标温度需要比只看升降等得更久。</li>
+<li>移入15–20℃凉水，观察回落。先只标实际测到的点，不把间距直接等分为每1℃。</li>
+</ol>
+<p>若水柱不动，先检查漏水、堵管和大气泡。到本段结束仍未稳定，只记升降方向，不写温度数值。测试结束后擦净正式温度计，放在室温处，留给蒸发实验。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNDMwIiB2aWV3Qm94PSIwIDAgOTAwIDQzMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgo8dGl0bGUgaWQ9InRpdGxlIj7mu6HmsLTnk7bnu4bnrqHmuKnluqborqE8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj7nk7blhoXliqDmu6HmnInoibLmsLTvvIznu4bnrqHnqb/ov4flr4blsIHnk7bnm5bvvIzkuIvnq6/ot53nk7blupXnuqbkuIDljpjnsbPvvIzkuIrnq6/lvIDlj6PjgILnu4bnrqHmsLTmn7Hotbflp4vlnKjnm5bkuIrkuozoh7PkuInljpjnsbPjgILor5XmuKnmsLTmtbTkuI3otoXov4fnk7bogqnjgII8L2Rlc2M+CjxkZWZzPjxtYXJrZXIgaWQ9ImFycm93IiBtYXJrZXJXaWR0aD0iOCIgbWFya2VySGVpZ2h0PSI4IiByZWZYPSI3IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDggNCBMMCA4IiBmaWxsPSJub25lIiBzdHJva2U9IiM1NTUiLz48L21hcmtlcj48L2RlZnM+CjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNDMwIiBmaWxsPSJ3aGl0ZSIvPgo8ZyBmb250LWZhbWlseT0iTWljcm9zb2Z0IFlhSGVpLCBzYW5zLXNlcmlmIiBmaWxsPSIjMjIyIiBmb250LXNpemU9IjE5Ij4KPHBhdGggZD0iTTU4IDI0NSBWMzkwIFE1OCA0MDUgNzQgNDA1IEgzNjIgUTM3OCA0MDUgMzc4IDM5MCBWMjQ1IiBmaWxsPSIjZjVmNWY1IiBzdHJva2U9IiM3NzciIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNNTggMjY0IEgzNzgiIHN0cm9rZT0iIzk5OSIgc3Ryb2tlLWRhc2hhcnJheT0iNiA0Ii8+CjxwYXRoIGQ9Ik0xNjcgMTMyIFYxNzggUTEwNSAxOTggMTA1IDIyOCBWMzcwIFExMDUgMzg0IDEyMSAzODQgSDMwNiBRMzIxIDM4NCAzMjEgMzcwIFYyMjggUTMyMSAxOTggMjYwIDE3OCBWMTMyIFoiIGZpbGw9IiNkZWRlZGUiIHN0cm9rZT0iIzQ0NCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjE1NiIgeT0iMTI0IiB3aWR0aD0iMTE2IiBoZWlnaHQ9IjE0IiByeD0iMyIgZmlsbD0iI2JkYmRiZCIgc3Ryb2tlPSIjNDQ0Ii8+CjxwYXRoIGQ9Ik0yMDQgMTIwIFExOTUgMTEzIDIwMCAxMDQgSDIzNCBRMjM5IDExMyAyMzAgMTIwIiBmaWxsPSIjYjBiMGIwIiBzdHJva2U9IiM1NTUiLz4KPHBhdGggZD0iTTIwOCAyNSBWMzY0IE0yMjYgMjUgVjM2NCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KPHJlY3QgeD0iMjEwIiB5PSI4MiIgd2lkdGg9IjE0IiBoZWlnaHQ9IjI4MSIgZmlsbD0iIzk5OSIvPgo8cmVjdCB4PSIyMTAiIHk9IjI3IiB3aWR0aD0iMTQiIGhlaWdodD0iNTUiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMDkgODIgSDIyNSIgc3Ryb2tlPSIjMjIyIiBzdHJva2Utd2lkdGg9IjIiLz4KPHJlY3QgeD0iMjU1IiB5PSIzMCIgd2lkdGg9IjYzIiBoZWlnaHQ9Ijc1IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjODg4Ii8+CjxwYXRoIGQ9Ik0yNjUgNDUgSDI5MiBNMjY1IDYyIEgzMDEgTTI2NSA4MiBIMzAzIiBzdHJva2U9IiM3NzciLz4KPHRleHQgeD0iMzQ4IiB5PSI0MCI+57uG566h5LiK56uv5byA5Y+jPC90ZXh0PjxwYXRoIGQ9Ik0zMzEgMzcgTDIyOCAyOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTU1IiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgo8dGV4dCB4PSI0MTMiIHk9IjkxIj7msLTmn7Hotbflp4vvvJrnm5bkuIoy4oCTMyBjbTwvdGV4dD48cGF0aCBkPSJNMzk3IDg2IEwyMzAgODIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU1NSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KPHRleHQgeD0iNDE0IiB5PSIxNTAiPueTtuebluWtlOWRqOWbtOeUqOiDtuazpeWvhuWwgTwvdGV4dD48cGF0aCBkPSJNNDAwIDE0NCBMMjM4IDExMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTU1IiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgo8dGV4dCB4PSI0MTQiIHk9IjIxMSI+55O25YaF5Yqg5ruh5pyJ6Imy5rC077yM5o6S5o6J5aSn5rCU5rOhPC90ZXh0PjxwYXRoIGQ9Ik00MDAgMjA2IEwzMDMgMjMzIiBmaWxsPSJub25lIiBzdHJva2U9IiM1NTUiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+Cjx0ZXh0IHg9IjQxNCIgeT0iMjczIj7msLTmtbTliLDnk7bogqnku6XkuIvvvIzkuI3mtbjov4fnk7bnm5Y8L3RleHQ+PHBhdGggZD0iTTQwMCAyNjcgTDM3OSAyNjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU1NSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KPHRleHQgeD0iNDE0IiB5PSIzMzgiPue7hueuoeS4i+err+i3neeTtuW6lee6pjEgY208L3RleHQ+PHBhdGggZD0iTTQwMCAzMzMgTDIzMSAzNjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU1NSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KPHRleHQgeD0iNDE0IiB5PSIzODkiIGZvbnQtc2l6ZT0iMTciPue6uOWNoeagh+S9jee9ru+8m+S4jeeUqOiHquWItuijhee9ruivu+aRhOawj+a4qeW6puOAgjwvdGV4dD4KPC9nPjwvc3ZnPgo=" alt="满水瓶温度计装配关系" /></p>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>水浴</th>
+<th>水柱变化</th>
+<th style="text-align:right">稳定后的参考温度／℃</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>室温</td>
+<td>起始位置</td>
+<td style="text-align:right">____</td>
+</tr>
+<tr>
+<td>温水</td>
+<td>__________</td>
+<td style="text-align:right">____／未稳定</td>
+</tr>
+<tr>
+<td>凉水</td>
+<td>__________</td>
+<td style="text-align:right">—</td>
+</tr>
+</tbody>
+</table>
+<p>细管水柱能显示冷热变化；实际温度要用参考温度计标定。</p>
+</div>
+</details>
+<h3>26–34分钟：棉线钓冰块</h3>
+<p><strong>预期现象</strong>：湿线与冰接触处重新冻结，轻提棉线时能带起冰块。</p>
+<p style="color: #234E78;"><strong>原理：</strong>少量盐使接触处的冰先局部熔化。局部温度和盐分分布继续变化，条件合适时水又结成冰，把线冻住。熔化吸热，重新凝固放热；固定棉线的是冰。</p>
+<ol>
+<li>在小杯中加入<strong>约50 mL冷水和预留的1块冰</strong>，让冰浮起来。</li>
+<li>打湿一段20 cm棉线，一端平搭在冰面，接触长度约2–3 cm。</li>
+<li>接触处撒一小撮盐。静置约3分钟，再提线。</li>
+<li>慢慢提线，让冰离开水面约2 cm，再放回杯中。</li>
+<li>没有固定时，调整接触位置，再等约2分钟；不另开多杯对照。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>等待时间</th>
+<th>是否提起冰块</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一次____分钟</td>
+<td>__________</td>
+</tr>
+<tr>
+<td>调整后____分钟（如有）</td>
+<td>__________</td>
+</tr>
+</tbody>
+</table>
+<p>重新凝固的冰，可以把棉线固定住。</p>
+</div>
+</details>
+<h3>34–40分钟：观察奶冰</h3>
+<p>奶冰提前出现时，先观察，再接着做其他实验。</p>
+<ol>
+<li>取出奶袋，擦净袋外盐水，再打开。</li>
+<li>用小勺取出奶冰薄片或冰粒，观察牛奶从液态到部分凝固的变化；可以品尝。</li>
+<li>若仍是液体，先把牛奶重新铺薄、贴紧剩余碎冰。继续做后面的短实验，结束前再看一次。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>开始时</th>
+<th>后来看到什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>液态牛奶</td>
+<td>奶冰薄片／冰粒／仍是液体</td>
+</tr>
+</tbody>
+</table>
+<p>外面的冰融化吸热；牛奶中的部分水凝固放热。</p>
+</div>
+</details>
+<h3>40–45分钟：湿纸扇风降温</h3>
+<p><strong>预期现象</strong>：湿纸包住感温端后，扇风使读数下降；干燥时变化较小。</p>
+<p style="color: #234E78;"><strong>原理：</strong>水变成水蒸气需要吸热。湿纸里的水蒸发时，从纸和感温端带走热，所以读数下降。扇风带走附近的水蒸气，让水继续蒸发。</p>
+<ol>
+<li>确认正式温度计已回到室温，读数稳定。给干燥感温端扇风约1分钟，读数。</li>
+<li>用室温水打湿小纸条，包住感温端，湿润但不滴水。</li>
+<li>用近似距离和速度扇风约2分钟，再读数。</li>
+</ol>
+<details class="lesson-collapsible lesson-collapsible-record">
+<summary>
+<span class="lesson-collapsible-title">记录与板书</span>
+<span class="lesson-collapsible-hint lesson-collapsible-closed">点击展开 / Tap to open</span>
+<span class="lesson-collapsible-hint lesson-collapsible-open">点击收起 / Tap to close</span>
+</summary>
+<div class="lesson-collapsible-content">
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th style="text-align:right">扇风后温度／℃</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>干燥感温端</td>
+<td style="text-align:right">______</td>
+</tr>
+<tr>
+<td>湿纸包住感温端</td>
+<td style="text-align:right">______</td>
+</tr>
+</tbody>
+</table>
+<p>水蒸发吸热，可以使周围降温。</p>
+</div>
+</details>
+<h3>45–50分钟：记录与收拾</h3>
+<ol>
+<li>最后看一次奶冰，指出哪一部分冰在熔化、哪一部分水在凝固。</li>
+<li>保存温度计纸卡，收回细管和玻璃瓶，倒掉冰盐水。</li>
+<li>清洗食品器具，擦干桌面、洗手。全部观察在本节内结束。</li>
+</ol>
+<h3>教师参考</h3>
+<ul>
+<li><strong>DK原法</strong>：少量奶料装在杯里，杯外围上冰和盐，约一小时内间歇搅拌；没有给出固定的冰奶重量比。本稿只用纯牛奶，把杯子换成薄袋、减小奶量，以便更快看到部分结冰。</li>
+<li><strong>本稿用量</strong>：一汤匙牛奶、几块冰和一茶匙盐，是便于起步的小量改法。备课时尚无实物预试记录，实际课堂现象待补。冰块大小不同，不能仅凭块数保证冻结时间。课堂以看到奶冰为目标，不测起始温度或要求达到某个负温数值。</li>
+<li><strong>用时</strong>：正文按约50分钟安排，另外10分钟留给制作和奶冰观察的实际进度；不留课后等待任务。</li>
+<li><strong>温度计</strong>：采用PBS的满水瓶版本；正式温度计放在外部水浴，等待接近平衡后再标参考温度。</li>
+</ul>
+<p><strong>参考</strong>：<a href="https://fliphtml5.com/qjtrd/bblt/101_Great_Science_Experiments/">DK实验32</a> · <a href="https://www.pbs.org/wgbh/nova/teachers/activities/3501_zero_01.html">PBS满水瓶温度计</a> · <a href="https://www.pbs.org/wgbh/nova/teachers/activities/3501_zero_02.html">PBS标定方法</a> · <a href="https://www.sciencebuddies.org/stem-activities/lift-ice-cubes">棉线钓冰块</a> · <a href="https://highschoolenergy.acs.org/how-can-energy-change/energy-of-evaporation.html">ACS蒸发测温</a></p>
+</main>
+
+</body>
+</html>
